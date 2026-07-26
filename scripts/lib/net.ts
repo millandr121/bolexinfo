@@ -23,9 +23,12 @@ export async function politeFetch(url: string, init?: RequestInit): Promise<Resp
   let lastError: unknown;
   for (let attempt = 0; attempt <= POLITENESS.retries; attempt++) {
     if (attempt > 0) await sleep(POLITENESS.backoffBaseMs * 2 ** (attempt - 1));
+    const timeoutController = new AbortController();
+    const timeout = setTimeout(() => timeoutController.abort(), POLITENESS.requestTimeoutMs);
     try {
       const res = await fetch(url, {
         ...init,
+        signal: timeoutController.signal,
         headers: {
           "user-agent":
             "bolexcollector-preservation/1.0 (+https://github.com/millandr121/bolexinfo; archival mirror with owner permission)",
@@ -47,9 +50,15 @@ export async function politeFetch(url: string, init?: RequestInit): Promise<Resp
       return res;
     } catch (err) {
       if (err instanceof PolicyDeniedError) throw err;
+      if (err instanceof Error && err.name === "AbortError") {
+        lastError = new Error(`Timed out after ${POLITENESS.requestTimeoutMs}ms fetching ${url}`);
+        continue;
+      }
       const message = err instanceof Error ? String(err.cause ?? err.message) : String(err);
       if (/CONNECT.*403|tunnel.*403|proxy.*403/i.test(message)) throw new PolicyDeniedError(url);
       lastError = err;
+    } finally {
+      clearTimeout(timeout);
     }
   }
   throw lastError instanceof Error ? lastError : new Error(`Failed to fetch ${url}`);

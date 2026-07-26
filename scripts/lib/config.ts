@@ -57,6 +57,14 @@ export const POLITENESS = {
   delayMs: 1500,
   retries: 4,
   backoffBaseMs: 2000,
+  /**
+   * Some egress proxies neither return an error nor a policy-denial body for
+   * a blocked host — they silently stall the connection. Without a hard
+   * timeout, that hangs the whole pipeline indefinitely instead of failing
+   * over. This applies per attempt, so a truly stalled host still fails fast
+   * across all retries.
+   */
+  requestTimeoutMs: 20_000,
 } as const;
 
 /** MIME groups used to route recovered assets to their preservation home. */
