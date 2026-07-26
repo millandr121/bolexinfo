@@ -1,6 +1,6 @@
 # BolexCollector.com Recovery Report
 
-Generated: 2026-07-26T15:25:12.690Z
+Generated: 2026-07-26T16:02:09.579Z
 
 ## Summary
 
@@ -14,7 +14,16 @@ Generated: 2026-07-26T15:25:12.690Z
 | Downloads recovered | 0 |
 | Revisions preserved | 0 |
 | Pages still missing | 82 |
-| Download failures | 0 |
+| Download failures | 82 |
+
+## Verification
+
+Integrity check: ✅ passed (0 assets)
+- Corrupt: 0
+- Missing from disk: 0
+- Unresolved internal links: 0
+- Missing images: 0
+- Missing downloads: 0
 
 ## Pages needing recovery or manual review
 

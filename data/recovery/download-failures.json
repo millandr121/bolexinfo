@@ -1,0 +1,333 @@
+{
+  "generated": "2026-07-26T16:02:08.587Z",
+  "failures": [
+    {
+      "urlPath": "/",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/about.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/aboutme.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/accessories.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/accessories/case40.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/accessories/case60.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/accessories/edit40.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/accessories/filter50.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/accessories/filter60.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/accessories/misc50.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/accessories/motor50.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/accessories/motor60.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/accessories/support40.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/accessories/support60.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/accessories/view40.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/accessories/view50.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/archives.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/articles.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/articles/05_12_01.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/articles/06_10_04.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/articles/07_03_21.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/articles/07_05_11.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/cameras.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/cameras/150.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/cameras/155.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/cameras/160.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/cameras/75macro.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/cameras/b8.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/cameras/b8l.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/cameras/b8sl.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/cameras/c8.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/cameras/c8s.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/cameras/d8l.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/cameras/h16.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/cameras/h16m.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/cameras/h16m3.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/cameras/h16m4.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/cameras/h16m5.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/cameras/h16reflex.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/cameras/h16rex.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/cameras/h16rex5.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/cameras/h16s.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/cameras/h16standard.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/cameras/h16supreme.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/cameras/h8.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/cameras/h8rex.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/cameras/l8em.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/cameras/s1.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/ephemera.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/ephemera/ads40_ad001.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/ephemera/ads40_ad002.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/ephemera/ads50_ad003.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/ephemera/ads60_bro002.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/ephemera/catalog40.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/ephemera/catalog50.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/ephemera/volume1.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/ephemera/volume11.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/ephemera/volume4.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/faq.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/glossary.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/lenses.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/lenses/40goerz.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/lenses/40kern.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/lenses/40meyer.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/lenses/40wollensak.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/lenses/50berthiot.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/lenses/50kern.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/lenses/60berthiot.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/lenses/60kern.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/links.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/projectors.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/projectors/185.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/projectors/185super.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/projectors/m8.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/projectors/m8r.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/projectors/model-g.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/projectors/s211.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/projectors/s221.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/projectors/s311.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/projectors/s321.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/projectors/sm8.html",
+      "reason": "no-capture-known"
+    },
+    {
+      "urlPath": "/timeline.html",
+      "reason": "no-capture-known"
+    }
+  ]
+}
