@@ -33,6 +33,8 @@ export interface DiscoveredUrl {
    * digest-bearing Wayback capture over this when both exist.
    */
   commonCrawl?: CommonCrawlCapture;
+  /** True once discover.ts has already searched Common Crawl for this URL — lets download.ts skip re-searching a known miss. */
+  commonCrawlChecked?: boolean;
 }
 
 /**
@@ -92,6 +94,7 @@ async function commonCrawlFallback(discovered: Map<string, DiscoveredUrl>): Prom
   console.log(`Checking Common Crawl for ${needsLookup.length} URLs without a verified Wayback capture…`);
   for (const entry of needsLookup) {
     checked++;
+    entry.commonCrawlChecked = true;
     try {
       const capture = await closestCommonCrawlCapture(entry.urlPath);
       if (!capture) continue;

@@ -89,10 +89,14 @@ async function main() {
     }
 
     if (!asset) {
-      // Look up Common Crawl on the fly for URLs discovered only by this
-      // run's recursive crawl (they never went through discover.ts).
+      // Look up Common Crawl on the fly only for URLs discover.ts never
+      // checked (i.e. found only by this run's recursive crawl) — entries
+      // discover.ts already searched and came up empty for are marked
+      // commonCrawlChecked, so re-querying them here would just repeat a
+      // known miss 70+ times over.
       const ccCapture: CommonCrawlCapture | null =
-        entry.commonCrawl ?? (await closestCommonCrawlCapture(urlPath).catch(() => null));
+        entry.commonCrawl ??
+        (entry.commonCrawlChecked ? null : await closestCommonCrawlCapture(urlPath).catch(() => null));
       if (ccCapture) {
         const ccAsset = await fetchCommonCrawlAsset(ccCapture).catch(() => null);
         if (ccAsset) {
@@ -158,8 +162,12 @@ async function main() {
       storedAt: new Date().toISOString(),
       source: asset.source,
     };
-    if (stored % 25 === 0) {
-      saveManifest(manifest);
+    // Save after every asset, not just every 25: this run's total is small
+    // enough that the I/O cost is negligible, and losing an interrupted
+    // run's progress (e.g. a bounded-time sandbox killing the process) would
+    // cost far more than the extra writes.
+    saveManifest(manifest);
+    if (stored % 5 === 0) {
       console.log(`…${stored} assets stored (queue: ${queue.size - crawled.size} remaining)`);
     }
   }
