@@ -1,5 +1,14 @@
 import { POLITENESS } from "./config";
 
+// Node's built-in fetch does not read HTTPS_PROXY by default (Node >= 22.21
+// requires this flag to opt in); without it, a request to a proxy-blocked
+// host attempts a direct connection instead of going through the proxy,
+// which can hang indefinitely rather than failing fast. Setting it here
+// (rather than as a shell env var prefix in package.json) keeps `npm run
+// pipeline` portable across bash, cmd.exe and PowerShell. Harmless on older
+// Node versions or when no proxy is configured.
+process.env.NODE_USE_ENV_PROXY ??= "1";
+
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 export class PolicyDeniedError extends Error {
