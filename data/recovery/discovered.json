@@ -1,62 +1,142 @@
 {
-  "generated": "2026-07-26T16:02:08.219Z",
+  "generated": "2026-07-26T18:08:04.113Z",
   "totalUrls": 82,
   "urls": [
     {
       "urlPath": "/",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability",
+        "common-crawl"
       ],
       "seedTitle": "Bolex Collector | Classic Movie Cameras and Projectors",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260509194326",
+          "original": "http://bolexcollector.com/",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true,
+      "commonCrawl": {
+        "timestamp": "20260610024714",
+        "original": "http://bolexcollector.com/",
+        "collection": "CC-MAIN-2026-25",
+        "filename": "crawl-data/CC-MAIN-2026-25/segments/1780687572534.97/warc/CC-MAIN-20260610021816-20260610051816-00928.warc.gz",
+        "offset": 1802822,
+        "length": 3765,
+        "digest": "KXZOCLRO4VGCWERATJLRUTGBMGNDQTNQ"
+      }
     },
     {
       "urlPath": "/about.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | About This Site",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20250803232634",
+          "original": "http://bolexcollector.com/about.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/aboutme.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | About The Webmaster",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260217231911",
+          "original": "http://bolexcollector.com/aboutme.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/accessories.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Accessories",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20250622062420",
+          "original": "http://bolexcollector.com/accessories.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/accessories/case40.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Accessories | Cases 1940s",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260313210930",
+          "original": "http://bolexcollector.com/accessories/case40.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/accessories/case60.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Accessories | Cases 1960s",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260313204952",
+          "original": "http://bolexcollector.com/accessories/case60.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/accessories/edit40.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Accessories | Editing Equipment 1940s",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260313202449",
+          "original": "http://bolexcollector.com/accessories/edit40.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/accessories/filter50.html",
@@ -64,127 +144,288 @@
         "search-index-seed"
       ],
       "seedTitle": "Bolex Collector | Accessories | Filters 1950s",
-      "captures": []
+      "captures": [],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/accessories/filter60.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Accessories | Filters 1960s",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260217235858",
+          "original": "http://bolexcollector.com/accessories/filter60.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/accessories/misc50.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Accessories | Miscellaneous 1950s",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260313201311",
+          "original": "http://bolexcollector.com/accessories/misc50.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/accessories/motor50.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Accessories | Motors 1950s",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260313195830",
+          "original": "http://bolexcollector.com/accessories/motor50.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/accessories/motor60.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Accessories | Motors 1960s",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260313192941",
+          "original": "http://bolexcollector.com/accessories/motor60.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/accessories/support40.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Accessories | Tripods and Grips 1940s",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260313202403",
+          "original": "http://bolexcollector.com/accessories/support40.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/accessories/support60.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Accessories | Tripods and Grips 1960s",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260218005844",
+          "original": "http://bolexcollector.com/accessories/support60.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/accessories/view40.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Accessories | Viewfinders 1940s",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260313201945",
+          "original": "http://bolexcollector.com/accessories/view40.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/accessories/view50.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Accessories | Viewfinders 1950s",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260219060808",
+          "original": "http://bolexcollector.com/accessories/view50.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/archives.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Previous Updates - Archives",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260217235823",
+          "original": "http://bolexcollector.com/archives.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/articles.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Articles",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260218011612",
+          "original": "http://bolexcollector.com/articles.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/articles/05_12_01.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Articles | The Bolex Camera (Dec. 1, 2005)",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20251012210541",
+          "original": "http://bolexcollector.com/articles/05_12_01.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/articles/06_10_04.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Articles | The Bolex Reporter Magazine (Oct. 4, 2006)",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260218002832",
+          "original": "http://bolexcollector.com/articles/06_10_04.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/articles/07_03_21.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Articles | Lenses for Bolex 16mm Cameras (Mar. 21, 2007)",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260416211459",
+          "original": "http://bolexcollector.com/articles/07_03_21.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/articles/07_05_11.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Articles | Paillard-Bolex Serial Numbers (May 11, 2007)",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20250917111753",
+          "original": "http://bolexcollector.com/articles/07_05_11.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/cameras.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability",
+        "common-crawl"
       ],
       "seedTitle": "Bolex Collector | Cameras",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260410225311",
+          "original": "http://bolexcollector.com/cameras.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true,
+      "commonCrawl": {
+        "timestamp": "20260607233325",
+        "original": "http://www.bolexcollector.com/cameras.html",
+        "collection": "CC-MAIN-2026-25",
+        "filename": "crawl-data/CC-MAIN-2026-25/segments/1780687572343.29/warc/CC-MAIN-20260607221841-20260608011841-00308.warc.gz",
+        "offset": 24054350,
+        "length": 3653,
+        "digest": "UYEJ5SACCKV3LV6DYC63MTFA4T6UXBB2"
+      }
     },
     {
       "urlPath": "/cameras/150.html",
@@ -192,319 +433,770 @@
         "search-index-seed"
       ],
       "seedTitle": "Bolex Collector | Cameras | 150 Super",
-      "captures": []
+      "captures": [],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/cameras/155.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Cameras | 155 Macrozoom",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260309142618",
+          "original": "http://bolexcollector.com/cameras/155.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/cameras/160.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Cameras | 160 Macrozoom",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260309152306",
+          "original": "http://bolexcollector.com/cameras/160.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/cameras/75macro.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Cameras | 7.5 Macrozoom",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260313195903",
+          "original": "http://bolexcollector.com/cameras/75macro.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/cameras/b8.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Cameras | B-8",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20250815121040",
+          "original": "http://bolexcollector.com/cameras/b8.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/cameras/b8l.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Cameras | B-8L",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260309153342",
+          "original": "http://bolexcollector.com/cameras/b8l.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/cameras/b8sl.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Cameras | B-8SL",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260309151813",
+          "original": "http://bolexcollector.com/cameras/b8sl.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/cameras/c8.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Cameras | C-8",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260309141624",
+          "original": "http://bolexcollector.com/cameras/c8.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/cameras/c8s.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Cameras | C-8S",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260313203427",
+          "original": "http://bolexcollector.com/cameras/c8s.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/cameras/d8l.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Cameras | D-8L",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260115071224",
+          "original": "http://bolexcollector.com/cameras/d8l.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/cameras/h16.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Cameras | H-16",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260122230939",
+          "original": "http://bolexcollector.com/cameras/h16.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/cameras/h16m.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Cameras | H-16 M",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260309150610",
+          "original": "http://bolexcollector.com/cameras/h16m.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/cameras/h16m3.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Cameras | H-16 M-3",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260309143506",
+          "original": "http://bolexcollector.com/cameras/h16m3.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/cameras/h16m4.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability",
+        "common-crawl"
       ],
       "seedTitle": "Bolex Collector | Cameras | H-16 M-4",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260509191438",
+          "original": "http://bolexcollector.com/cameras/h16m4.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true,
+      "commonCrawl": {
+        "timestamp": "20260509191438",
+        "original": "http://bolexcollector.com/cameras/h16m4.html",
+        "collection": "CC-MAIN-2026-21",
+        "filename": "crawl-data/CC-MAIN-2026-21/segments/1778213377198.32/warc/CC-MAIN-20260509190544-20260509220544-00430.warc.gz",
+        "offset": 2908995,
+        "length": 5002,
+        "digest": "RMVPM5U2TUIM6P2DSSMTFMRP6GBQB3KC"
+      }
     },
     {
       "urlPath": "/cameras/h16m5.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Cameras | H-16 M-5",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260309155432",
+          "original": "http://bolexcollector.com/cameras/h16m5.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/cameras/h16reflex.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Cameras | H-16 Reflex",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260217235703",
+          "original": "http://bolexcollector.com/cameras/h16reflex.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/cameras/h16rex.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Cameras | H-16 REX",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260218010942",
+          "original": "http://bolexcollector.com/cameras/h16rex.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/cameras/h16rex5.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Cameras | H-16 REX-5",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260122214640",
+          "original": "http://bolexcollector.com/cameras/h16rex5.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/cameras/h16s.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Cameras | H-16 S",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260309152020",
+          "original": "http://bolexcollector.com/cameras/h16s.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/cameras/h16standard.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Cameras | H-16 Standard",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260309142718",
+          "original": "http://bolexcollector.com/cameras/h16standard.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/cameras/h16supreme.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Cameras | H-16 Supreme",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260309143940",
+          "original": "http://bolexcollector.com/cameras/h16supreme.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/cameras/h8.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability",
+        "common-crawl"
       ],
       "seedTitle": "Bolex Collector | Cameras | H-8",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260509203731",
+          "original": "http://bolexcollector.com/cameras/h8.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true,
+      "commonCrawl": {
+        "timestamp": "20260509203731",
+        "original": "http://bolexcollector.com/cameras/h8.html",
+        "collection": "CC-MAIN-2026-21",
+        "filename": "crawl-data/CC-MAIN-2026-21/segments/1778213377198.32/warc/CC-MAIN-20260509190544-20260509220544-00768.warc.gz",
+        "offset": 2301028,
+        "length": 5305,
+        "digest": "WX2X6MSQDCXAQKBCMGMC45PLXSAVONBP"
+      }
     },
     {
       "urlPath": "/cameras/h8rex.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability",
+        "common-crawl"
       ],
       "seedTitle": "Bolex Collector | Cameras | H-8 REX",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260509192625",
+          "original": "http://bolexcollector.com/cameras/h8rex.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true,
+      "commonCrawl": {
+        "timestamp": "20260509192625",
+        "original": "http://bolexcollector.com/cameras/h8rex.html",
+        "collection": "CC-MAIN-2026-21",
+        "filename": "crawl-data/CC-MAIN-2026-21/segments/1778213377198.32/warc/CC-MAIN-20260509190544-20260509220544-00541.warc.gz",
+        "offset": 17565527,
+        "length": 5949,
+        "digest": "3FGAECMLG7CALYJUMPX2Y3JBDVTSBXOE"
+      }
     },
     {
       "urlPath": "/cameras/l8em.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Cameras | L-8 (early model)",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20250712232625",
+          "original": "http://bolexcollector.com/cameras/l8em.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/cameras/s1.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability",
+        "common-crawl"
       ],
       "seedTitle": "Bolex Collector | Cameras | S1 Automatic",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260509191741",
+          "original": "http://bolexcollector.com/cameras/s1.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true,
+      "commonCrawl": {
+        "timestamp": "20260509191741",
+        "original": "http://bolexcollector.com/cameras/s1.html",
+        "collection": "CC-MAIN-2026-21",
+        "filename": "crawl-data/CC-MAIN-2026-21/segments/1778213377198.32/warc/CC-MAIN-20260509190544-20260509220544-00962.warc.gz",
+        "offset": 6049443,
+        "length": 4759,
+        "digest": "HMM3CYT34AENN3ITVHS6UNYODD2QCM4Q"
+      }
     },
     {
       "urlPath": "/ephemera.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Ephemera",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260122215010",
+          "original": "http://bolexcollector.com/ephemera.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/ephemera/ads40_ad001.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Ephemera | Consistently - Bolex Leads",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20151210053016",
+          "original": "http://bolexcollector.com/ephemera/ads40_ad001.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/ephemera/ads40_ad002.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Ephemera | Bolex Cameras and Projectors for Critical Amateurs",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20151210053002",
+          "original": "http://bolexcollector.com/ephemera/ads40_ad002.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/ephemera/ads50_ad003.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability",
+        "common-crawl"
       ],
       "seedTitle": "Bolex Collector | Ephemera | BOLEXmas Gift Shopper!",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260509192806",
+          "original": "http://bolexcollector.com/ephemera/ads50_ad003.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true,
+      "commonCrawl": {
+        "timestamp": "20260509192806",
+        "original": "http://bolexcollector.com/ephemera/ads50_ad003.html",
+        "collection": "CC-MAIN-2026-21",
+        "filename": "crawl-data/CC-MAIN-2026-21/segments/1778213377198.32/warc/CC-MAIN-20260509190544-20260509220544-00989.warc.gz",
+        "offset": 2817163,
+        "length": 2837,
+        "digest": "ZBZKI2I4WRTY3QSMX76HMJXFICNN7ASU"
+      }
     },
     {
       "urlPath": "/ephemera/ads60_bro002.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Ephemera | Bolex 150 Super Promotional Brochure",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260313204606",
+          "original": "http://bolexcollector.com/ephemera/ads60_bro002.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/ephemera/catalog40.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Ephemera | 1940s Catalogs",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20250911014821",
+          "original": "http://bolexcollector.com/ephemera/catalog40.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/ephemera/catalog50.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Ephemera | 1950s Catalogs",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260218003009",
+          "original": "http://bolexcollector.com/ephemera/catalog50.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/ephemera/volume1.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability",
+        "common-crawl"
       ],
       "seedTitle": "Bolex Collector | Ephemera | Bolex Reporter Vol. 1",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260509191208",
+          "original": "http://bolexcollector.com/ephemera/volume1.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true,
+      "commonCrawl": {
+        "timestamp": "20260509191208",
+        "original": "http://bolexcollector.com/ephemera/volume1.html",
+        "collection": "CC-MAIN-2026-21",
+        "filename": "crawl-data/CC-MAIN-2026-21/segments/1778213377198.32/warc/CC-MAIN-20260509190544-20260509220544-00282.warc.gz",
+        "offset": 2051042,
+        "length": 3813,
+        "digest": "OY2OLFOVW2XU3P4T4GSTIYE6THIYZXHP"
+      }
     },
     {
       "urlPath": "/ephemera/volume11.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Ephemera | Bolex Reporter Vol. 11",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20250911034221",
+          "original": "http://bolexcollector.com/ephemera/volume11.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/ephemera/volume4.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Ephemera | Bolex Reporter Vol. 4",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20250615110343",
+          "original": "http://bolexcollector.com/ephemera/volume4.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/faq.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Frequently Asked Questions",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20250723174621",
+          "original": "http://bolexcollector.com/faq.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/glossary.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Glossary of Bolex and Filmmaking Terminology",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20250513054613",
+          "original": "http://bolexcollector.com/glossary.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/lenses.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Lenses",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260219072216",
+          "original": "http://bolexcollector.com/lenses.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/lenses/40goerz.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Lenses | Goerz",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260313201702",
+          "original": "http://bolexcollector.com/lenses/40goerz.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/lenses/40kern.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Lenses | Kern Paillard 1940s",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260313195143",
+          "original": "http://bolexcollector.com/lenses/40kern.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/lenses/40meyer.html",
@@ -512,31 +1204,62 @@
         "search-index-seed"
       ],
       "seedTitle": "Bolex Collector | Lenses | Hugo Meyer",
-      "captures": []
+      "captures": [],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/lenses/40wollensak.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Lenses | Wollensak",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260313194635",
+          "original": "http://bolexcollector.com/lenses/40wollensak.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/lenses/50berthiot.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Lenses | SOM Berthiot 1950s",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260424051228",
+          "original": "http://bolexcollector.com/lenses/50berthiot.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/lenses/50kern.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Lenses | Kern Paillard 1950s",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260313202200",
+          "original": "http://bolexcollector.com/lenses/50kern.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/lenses/60berthiot.html",
@@ -544,119 +1267,260 @@
         "search-index-seed"
       ],
       "seedTitle": "Bolex Collector | Lenses | SOM Berthiot 1960s",
-      "captures": []
+      "captures": [],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/lenses/60kern.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Lenses | Kern Paillard 1960s",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260313204503",
+          "original": "http://bolexcollector.com/lenses/60kern.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/links.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Links",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260115210612",
+          "original": "http://bolexcollector.com/links.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/projectors.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Projectors",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260122230220",
+          "original": "http://bolexcollector.com/projectors.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/projectors/185.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Projectors | 18-5",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260313201909",
+          "original": "http://bolexcollector.com/projectors/185.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/projectors/185super.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Projectors | 18-5 Super",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20250822055422",
+          "original": "http://bolexcollector.com/projectors/185super.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/projectors/m8.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Projectors | M-8",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260309151043",
+          "original": "http://bolexcollector.com/projectors/m8.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/projectors/m8r.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Projectors | M-8R",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260313211234",
+          "original": "http://bolexcollector.com/projectors/m8r.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/projectors/model-g.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Projectors | Model G",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260218004252",
+          "original": "http://bolexcollector.com/projectors/model-g.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/projectors/s211.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Projectors | S-211",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260313203357",
+          "original": "http://bolexcollector.com/projectors/s211.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/projectors/s221.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Projectors | S-221",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260309155203",
+          "original": "http://bolexcollector.com/projectors/s221.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/projectors/s311.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Projectors | S-311",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260313201224",
+          "original": "http://bolexcollector.com/projectors/s311.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/projectors/s321.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Projectors | S-321",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260309154221",
+          "original": "http://bolexcollector.com/projectors/s321.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/projectors/sm8.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Projectors | SM 8",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260217234200",
+          "original": "http://bolexcollector.com/projectors/sm8.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     },
     {
       "urlPath": "/timeline.html",
       "sources": [
-        "search-index-seed"
+        "search-index-seed",
+        "wayback-availability"
       ],
       "seedTitle": "Bolex Collector | Timeline",
-      "captures": []
+      "captures": [
+        {
+          "timestamp": "20260309155253",
+          "original": "http://bolexcollector.com/timeline.html",
+          "mimetype": "unknown",
+          "digest": "",
+          "length": 0
+        }
+      ],
+      "commonCrawlChecked": true
     }
   ]
 }

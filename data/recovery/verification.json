@@ -1,13 +1,6655 @@
 {
-  "generated": "2026-07-26T16:02:09.288Z",
-  "assetsVerified": 0,
+  "generated": "2026-07-26T18:11:21.615Z",
+  "assetsVerified": 40,
   "integrity": {
     "corrupt": [],
     "missingFromDisk": []
   },
   "gaps": {
-    "brokenInternalLinks": [],
-    "missingImages": [],
+    "brokenInternalLinks": [
+      {
+        "page": "/",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/",
+        "target": "/articles.html"
+      },
+      {
+        "page": "/",
+        "target": "/auctions.html"
+      },
+      {
+        "page": "/",
+        "target": "/timeline.html"
+      },
+      {
+        "page": "/",
+        "target": "/glossary.html"
+      },
+      {
+        "page": "/",
+        "target": "/cameras/h16reflex_instructions.html"
+      },
+      {
+        "page": "/",
+        "target": "/articles/11_09_27.html"
+      },
+      {
+        "page": "/",
+        "target": "/archives.html"
+      },
+      {
+        "page": "/",
+        "target": "/about.html"
+      },
+      {
+        "page": "/",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/",
+        "target": "/links.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/articles/05_12_01.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/autocine-a.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/autocine-b.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/h16.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/h9.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/l8em.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/h8leader.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/h16leader.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/l8lm.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/h8standard.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/h16standard.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/h8deluxe.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/h16deluxe.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/b8.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/h16supreme.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/c8.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/h16reflex.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/b8vs.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/b8l.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/h8t.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/h16t.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/h16m.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/c8s.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/h16rex.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/c8sl.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/b8sl.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/d8l.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/d8la.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/b8la.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/c8la.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/p1.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/p2.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/k1.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/h16s.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/h8s.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/p3.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/k2.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/h16rex3.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/h16m3.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/p4.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/h16rex4.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/h8rex4.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/h16rex5.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/h16m5.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/150.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/155.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/75macro.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/cameras/160.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/cameras.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/autocine-a.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/autocine-b.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/h16.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/h9.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/l8em.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/h8leader.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/h16leader.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/l8lm.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/h8standard.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/h16standard.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/h8deluxe.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/h16deluxe.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/b8.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/h16supreme.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/c8.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/h16reflex.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/b8vs.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/b8l.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/h8t.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/h16t.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/h16m.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/c8s.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/h16rex.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/c8sl.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/b8sl.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/d8l.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/d8la.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/b8la.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/c8la.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/p1.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/p2.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/k1.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/h16s.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/h8s.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/p3.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/k2.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/h16rex3.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/h16m3.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/p4.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/h16rex4.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/h8rex4.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/h16rex5.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/h16m5.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/150.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/155.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/75macro.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/cameras/160.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/autocine-a.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/autocine-b.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/h16.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/h9.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/l8em.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/h8leader.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/h16leader.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/l8lm.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/h8standard.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/h16standard.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/h8deluxe.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/h16deluxe.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/b8.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/h16supreme.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/c8.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/h16reflex.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/b8vs.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/b8l.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/h8t.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/h16t.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/h16m.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/c8s.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/h16rex.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/c8sl.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/b8sl.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/d8l.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/d8la.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/b8la.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/c8la.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/p1.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/p2.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/k1.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/h16s.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/h8s.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/p3.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/k2.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/h16rex3.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/h16m3.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/p4.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/h16rex4.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/h8rex4.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/h16rex5.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/h16m5.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/150.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/155.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/75macro.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/cameras/160.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/accessories/misc40.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/autocine-a.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/autocine-b.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/h16.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/h9.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/l8em.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/h8leader.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/h16leader.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/l8lm.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/h8standard.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/h16standard.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/h8deluxe.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/h16deluxe.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/b8.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/h16supreme.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/c8.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/h16reflex.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/b8vs.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/b8l.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/h8t.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/h16t.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/h16m.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/c8s.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/h16rex.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/c8sl.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/b8sl.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/d8l.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/d8la.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/b8la.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/c8la.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/p1.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/p2.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/k1.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/h16s.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/h8s.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/p3.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/k2.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/h16rex3.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/h16m3.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/p4.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/h16rex4.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/h8rex4.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/h16rex5.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/h16m5.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/150.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/155.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/75macro.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/cameras/160.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/accessories/misc60.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/lenses/60kern.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/autocine-a.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/autocine-b.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/h16.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/h9.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/l8em.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/h8leader.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/h16leader.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/l8lm.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/h8standard.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/h16standard.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/h8deluxe.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/h16deluxe.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/b8.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/h16supreme.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/c8.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/h16reflex.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/b8vs.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/b8l.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/h8t.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/h16t.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/h16m.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/c8s.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/h16rex.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/c8sl.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/b8sl.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/d8l.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/d8la.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/b8la.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/c8la.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/p1.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/p2.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/k1.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/h16s.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/h8s.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/p3.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/k2.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/h16rex3.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/h16m3.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/p4.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/h16rex4.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/h8rex4.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/h16rex5.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/h16m5.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/150.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/155.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/75macro.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/cameras/160.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/ephemera/ads40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/ephemera/catalog40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/ephemera/ads50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/ephemera/books50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/ephemera/catalog50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/ephemera/volume2.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/ephemera/volume3.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/ephemera/volume4.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/ephemera/volume5.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/ephemera/volume6.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/ephemera/volume7.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/ephemera/volume8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/ephemera/ads60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/ephemera/catalog60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/ephemera/volume10.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/ephemera/volume11.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/ephemera/volume12.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/ephemera/volume13.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/ephemera/volume14.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/ephemera/volume15.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/ephemera/volume16.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/ephemera/volume17.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/ephemera/volume18.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/ephemera/volume19.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/ephemera/volume20.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/ephemera/volume21.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/ephemera/volume22.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/ephemera/volume23.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/ephemera/volume24.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/cameras/h16deluxe.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/accessories/support50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/accessories/case50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/projectors/m8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/accessories/edit50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/cameras/l8lm.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/ephemera/ads40.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/ephemera/catalog40.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/ephemera/ads50.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/ephemera/books50.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/ephemera/catalog50.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/ephemera/volume2.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/ephemera/volume3.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/ephemera/volume4.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/ephemera/volume5.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/ephemera/volume6.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/ephemera/volume7.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/ephemera/volume8.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/ephemera/ads60.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/ephemera/catalog60.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/ephemera/volume10.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/ephemera/volume11.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/ephemera/volume12.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/ephemera/volume13.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/ephemera/volume14.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/ephemera/volume15.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/ephemera/volume16.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/ephemera/volume17.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/ephemera/volume18.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/ephemera/volume19.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/ephemera/volume20.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/ephemera/volume21.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/ephemera/volume22.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/ephemera/volume23.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/ephemera/volume24.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/contact.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/contact.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/contact.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/contact.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/contact.html",
+        "target": "/articles.html"
+      },
+      {
+        "page": "/contact.html",
+        "target": "/auctions.html"
+      },
+      {
+        "page": "/contact.html",
+        "target": "/timeline.html"
+      },
+      {
+        "page": "/contact.html",
+        "target": "/glossary.html"
+      },
+      {
+        "page": "/contact.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/contact.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/contact.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/contact.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/autocine-a.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/autocine-b.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/h16.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/h9.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/l8em.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/h8leader.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/h16leader.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/l8lm.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/h8standard.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/h16standard.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/h8deluxe.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/h16deluxe.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/b8.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/h16supreme.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/c8.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/h16reflex.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/b8vs.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/b8l.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/h8t.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/h16t.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/h16m.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/c8s.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/h16rex.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/c8sl.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/b8sl.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/d8l.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/d8la.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/b8la.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/c8la.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/p1.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/p2.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/k1.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/h16s.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/h8s.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/p3.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/k2.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/h16rex3.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/h16m3.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/p4.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/h16rex4.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/h8rex4.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/h16rex5.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/h16m5.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/150.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/155.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/75macro.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/cameras/160.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/autocine-a.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/autocine-b.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/h16.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/h9.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/l8em.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/h8leader.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/h16leader.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/l8lm.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/h8standard.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/h16standard.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/h8deluxe.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/h16deluxe.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/b8.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/h16supreme.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/c8.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/h16reflex.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/b8vs.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/b8l.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/h8t.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/h16t.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/h16m.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/c8s.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/h16rex.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/c8sl.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/b8sl.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/d8l.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/d8la.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/b8la.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/c8la.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/p1.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/p2.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/k1.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/h16s.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/h8s.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/p3.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/k2.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/h16rex3.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/h16m3.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/p4.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/h16rex4.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/h8rex4.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/h16rex5.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/h16m5.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/150.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/155.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/75macro.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/cameras/160.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/accessories/support50.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/ephemera/ads40.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/ephemera/catalog40.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/ephemera/ads50.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/ephemera/books50.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/ephemera/catalog50.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/ephemera/volume2.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/ephemera/volume3.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/ephemera/volume4.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/ephemera/volume5.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/ephemera/volume6.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/ephemera/volume7.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/ephemera/volume8.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/ephemera/ads60.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/ephemera/catalog60.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/ephemera/volume10.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/ephemera/volume11.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/ephemera/volume12.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/ephemera/volume13.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/ephemera/volume14.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/ephemera/volume15.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/ephemera/volume16.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/ephemera/volume17.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/ephemera/volume18.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/ephemera/volume19.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/ephemera/volume20.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/ephemera/volume21.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/ephemera/volume22.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/ephemera/volume23.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/ephemera/volume24.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/ephemera/ads40.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/ephemera/catalog40.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/ephemera/ads50.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/ephemera/books50.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/ephemera/catalog50.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/ephemera/volume2.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/ephemera/volume3.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/ephemera/volume4.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/ephemera/volume5.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/ephemera/volume6.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/ephemera/volume7.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/ephemera/volume8.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/ephemera/ads60.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/ephemera/catalog60.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/ephemera/volume10.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/ephemera/volume11.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/ephemera/volume12.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/ephemera/volume13.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/ephemera/volume14.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/ephemera/volume15.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/ephemera/volume16.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/ephemera/volume17.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/ephemera/volume18.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/ephemera/volume19.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/ephemera/volume20.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/ephemera/volume21.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/ephemera/volume22.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/ephemera/volume23.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/ephemera/volume24.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/articles/06_10_04.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/ephemera/ads40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/ephemera/catalog40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/ephemera/ads50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/ephemera/books50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/ephemera/catalog50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/ephemera/volume2.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/ephemera/volume3.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/ephemera/volume4.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/ephemera/volume5.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/ephemera/volume6.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/ephemera/volume7.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/ephemera/volume8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/ephemera/ads60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/ephemera/catalog60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/ephemera/volume10.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/ephemera/volume11.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/ephemera/volume12.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/ephemera/volume13.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/ephemera/volume14.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/ephemera/volume15.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/ephemera/volume16.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/ephemera/volume17.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/ephemera/volume18.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/ephemera/volume19.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/ephemera/volume20.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/ephemera/volume21.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/ephemera/volume22.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/ephemera/volume23.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/ephemera/volume24.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/cameras/l8lm.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/ephemera/ads40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/ephemera/catalog40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/ephemera/ads50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/ephemera/books50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/ephemera/catalog50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/ephemera/volume2.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/ephemera/volume3.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/ephemera/volume4.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/ephemera/volume5.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/ephemera/volume6.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/ephemera/volume7.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/ephemera/volume8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/ephemera/ads60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/ephemera/catalog60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/ephemera/volume10.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/ephemera/volume11.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/ephemera/volume12.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/ephemera/volume13.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/ephemera/volume14.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/ephemera/volume15.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/ephemera/volume16.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/ephemera/volume17.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/ephemera/volume18.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/ephemera/volume19.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/ephemera/volume20.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/ephemera/volume21.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/ephemera/volume22.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/ephemera/volume23.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/ephemera/volume24.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/cameras/h16deluxe.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/accessories/filter50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/ephemera/ads40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/ephemera/catalog40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/ephemera/ads50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/ephemera/books50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/ephemera/catalog50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/ephemera/volume2.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/ephemera/volume3.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/ephemera/volume4.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/ephemera/volume5.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/ephemera/volume6.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/ephemera/volume7.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/ephemera/volume8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/ephemera/ads60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/ephemera/catalog60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/ephemera/volume10.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/ephemera/volume11.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/ephemera/volume12.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/ephemera/volume13.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/ephemera/volume14.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/ephemera/volume15.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/ephemera/volume16.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/ephemera/volume17.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/ephemera/volume18.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/ephemera/volume19.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/ephemera/volume20.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/ephemera/volume21.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/ephemera/volume22.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/ephemera/volume23.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/ephemera/volume24.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/ephemera/ads40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/ephemera/catalog40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/ephemera/ads50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/ephemera/books50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/ephemera/catalog50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/ephemera/volume2.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/ephemera/volume3.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/ephemera/volume4.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/ephemera/volume5.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/ephemera/volume6.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/ephemera/volume7.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/ephemera/volume8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/ephemera/ads60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/ephemera/catalog60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/ephemera/volume10.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/ephemera/volume11.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/ephemera/volume12.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/ephemera/volume13.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/ephemera/volume14.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/ephemera/volume15.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/ephemera/volume16.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/ephemera/volume17.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/ephemera/volume18.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/ephemera/volume19.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/ephemera/volume20.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/ephemera/volume21.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/ephemera/volume22.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/ephemera/volume23.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/ephemera/volume24.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/ephemera/ads40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/ephemera/catalog40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/ephemera/ads50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/ephemera/books50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/ephemera/catalog50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/ephemera/volume2.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/ephemera/volume3.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/ephemera/volume4.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/ephemera/volume5.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/ephemera/volume6.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/ephemera/volume7.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/ephemera/volume8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/ephemera/ads60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/ephemera/catalog60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/ephemera/volume10.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/ephemera/volume11.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/ephemera/volume12.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/ephemera/volume13.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/ephemera/volume14.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/ephemera/volume15.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/ephemera/volume16.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/ephemera/volume17.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/ephemera/volume18.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/ephemera/volume19.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/ephemera/volume20.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/ephemera/volume21.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/ephemera/volume22.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/ephemera/volume23.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/ephemera/volume24.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/ephemera/ads40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/ephemera/catalog40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/ephemera/ads50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/ephemera/books50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/ephemera/catalog50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/ephemera/volume2.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/ephemera/volume3.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/ephemera/volume4.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/ephemera/volume5.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/ephemera/volume6.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/ephemera/volume7.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/ephemera/volume8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/ephemera/ads60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/ephemera/catalog60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/ephemera/volume10.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/ephemera/volume11.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/ephemera/volume12.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/ephemera/volume13.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/ephemera/volume14.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/ephemera/volume15.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/ephemera/volume16.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/ephemera/volume17.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/ephemera/volume18.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/ephemera/volume19.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/ephemera/volume20.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/ephemera/volume21.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/ephemera/volume22.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/ephemera/volume23.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/ephemera/volume24.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/ephemera/ads40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/ephemera/catalog40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/ephemera/ads50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/ephemera/books50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/ephemera/catalog50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/ephemera/volume2.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/ephemera/volume3.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/ephemera/volume4.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/ephemera/volume5.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/ephemera/volume6.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/ephemera/volume7.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/ephemera/volume8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/ephemera/ads60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/ephemera/catalog60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/ephemera/volume10.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/ephemera/volume11.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/ephemera/volume12.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/ephemera/volume13.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/ephemera/volume14.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/ephemera/volume15.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/ephemera/volume16.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/ephemera/volume17.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/ephemera/volume18.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/ephemera/volume19.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/ephemera/volume20.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/ephemera/volume21.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/ephemera/volume22.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/ephemera/volume23.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/ephemera/volume24.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/cameras/h16deluxe.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/ephemera/ads40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/ephemera/catalog40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/ephemera/ads50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/ephemera/books50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/ephemera/catalog50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/ephemera/volume2.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/ephemera/volume3.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/ephemera/volume4.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/ephemera/volume5.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/ephemera/volume6.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/ephemera/volume7.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/ephemera/volume8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/ephemera/ads60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/ephemera/catalog60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/ephemera/volume10.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/ephemera/volume11.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/ephemera/volume12.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/ephemera/volume13.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/ephemera/volume14.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/ephemera/volume15.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/ephemera/volume16.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/ephemera/volume17.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/ephemera/volume18.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/ephemera/volume19.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/ephemera/volume20.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/ephemera/volume21.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/ephemera/volume22.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/ephemera/volume23.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/ephemera/volume24.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/cameras/l8lm.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/cameras/h16deluxe.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/projectors/m8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/accessories/filter50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/accessories/case50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/accessories/support50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/lenses/50kern.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/lenses/50berthiot.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/ephemera/ads40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/ephemera/catalog40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/ephemera/ads50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/ephemera/books50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/ephemera/catalog50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/ephemera/volume2.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/ephemera/volume3.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/ephemera/volume4.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/ephemera/volume5.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/ephemera/volume6.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/ephemera/volume7.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/ephemera/volume8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/ephemera/ads60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/ephemera/catalog60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/ephemera/volume10.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/ephemera/volume11.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/ephemera/volume12.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/ephemera/volume13.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/ephemera/volume14.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/ephemera/volume15.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/ephemera/volume16.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/ephemera/volume17.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/ephemera/volume18.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/ephemera/volume19.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/ephemera/volume20.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/ephemera/volume21.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/ephemera/volume22.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/ephemera/volume23.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/ephemera/volume24.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/ephemera/ads40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/ephemera/catalog40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/ephemera/ads50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/ephemera/books50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/ephemera/catalog50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/ephemera/volume2.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/ephemera/volume3.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/ephemera/volume4.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/ephemera/volume5.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/ephemera/volume6.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/ephemera/volume7.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/ephemera/volume8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/ephemera/ads60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/ephemera/catalog60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/ephemera/volume10.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/ephemera/volume11.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/ephemera/volume12.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/ephemera/volume13.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/ephemera/volume14.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/ephemera/volume15.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/ephemera/volume16.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/ephemera/volume17.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/ephemera/volume18.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/ephemera/volume19.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/ephemera/volume20.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/ephemera/volume21.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/ephemera/volume22.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/ephemera/volume23.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/ephemera/volume24.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/ephemera/ads40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/ephemera/catalog40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/ephemera/ads50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/ephemera/books50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/ephemera/catalog50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/ephemera/volume2.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/ephemera/volume3.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/ephemera/volume4.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/ephemera/volume5.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/ephemera/volume6.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/ephemera/volume7.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/ephemera/volume8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/ephemera/ads60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/ephemera/catalog60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/ephemera/volume10.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/ephemera/volume11.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/ephemera/volume12.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/ephemera/volume13.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/ephemera/volume14.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/ephemera/volume15.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/ephemera/volume16.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/ephemera/volume17.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/ephemera/volume18.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/ephemera/volume19.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/ephemera/volume20.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/ephemera/volume21.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/ephemera/volume22.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/ephemera/volume23.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/ephemera/volume24.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/ephemera/ads40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/ephemera/catalog40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/ephemera/ads50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/ephemera/books50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/ephemera/catalog50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/ephemera/volume2.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/ephemera/volume3.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/ephemera/volume4.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/ephemera/volume5.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/ephemera/volume6.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/ephemera/volume7.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/ephemera/volume8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/ephemera/ads60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/ephemera/catalog60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/ephemera/volume10.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/ephemera/volume11.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/ephemera/volume12.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/ephemera/volume13.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/ephemera/volume14.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/ephemera/volume15.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/ephemera/volume16.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/ephemera/volume17.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/ephemera/volume18.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/ephemera/volume19.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/ephemera/volume20.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/ephemera/volume21.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/ephemera/volume22.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/ephemera/volume23.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/ephemera/volume24.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/cameras/h16deluxe.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/accessories/filter50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/ephemera/ads40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/ephemera/catalog40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/ephemera/ads50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/ephemera/books50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/ephemera/catalog50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/ephemera/volume2.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/ephemera/volume3.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/ephemera/volume4.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/ephemera/volume5.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/ephemera/volume6.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/ephemera/volume7.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/ephemera/volume8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/ephemera/ads60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/ephemera/catalog60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/ephemera/volume10.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/ephemera/volume11.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/ephemera/volume12.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/ephemera/volume13.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/ephemera/volume14.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/ephemera/volume15.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/ephemera/volume16.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/ephemera/volume17.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/ephemera/volume18.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/ephemera/volume19.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/ephemera/volume20.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/ephemera/volume21.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/ephemera/volume22.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/ephemera/volume23.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/ephemera/volume24.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/ephemera/ads40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/ephemera/catalog40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/ephemera/ads50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/ephemera/books50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/ephemera/catalog50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/ephemera/volume2.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/ephemera/volume3.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/ephemera/volume4.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/ephemera/volume5.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/ephemera/volume6.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/ephemera/volume7.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/ephemera/volume8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/ephemera/ads60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/ephemera/catalog60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/ephemera/volume10.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/ephemera/volume11.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/ephemera/volume12.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/ephemera/volume13.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/ephemera/volume14.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/ephemera/volume15.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/ephemera/volume16.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/ephemera/volume17.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/ephemera/volume18.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/ephemera/volume19.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/ephemera/volume20.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/ephemera/volume21.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/ephemera/volume22.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/ephemera/volume23.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/ephemera/volume24.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/cameras/h16supreme.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/ephemera/ads40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/ephemera/catalog40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/ephemera/ads50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/ephemera/books50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/ephemera/catalog50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/ephemera/volume2.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/ephemera/volume3.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/ephemera/volume4.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/ephemera/volume5.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/ephemera/volume6.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/ephemera/volume7.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/ephemera/volume8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/ephemera/ads60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/ephemera/catalog60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/ephemera/volume10.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/ephemera/volume11.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/ephemera/volume12.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/ephemera/volume13.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/ephemera/volume14.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/ephemera/volume15.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/ephemera/volume16.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/ephemera/volume17.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/ephemera/volume18.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/ephemera/volume19.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/ephemera/volume20.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/ephemera/volume21.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/ephemera/volume22.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/ephemera/volume23.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/ephemera/volume24.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/accessories/filter50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/cameras/h16supreme.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/cameras/h16deluxe.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/ephemera/ads40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/ephemera/catalog40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/ephemera/ads50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/ephemera/books50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/ephemera/catalog50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/ephemera/volume2.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/ephemera/volume3.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/ephemera/volume4.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/ephemera/volume5.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/ephemera/volume6.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/ephemera/volume7.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/ephemera/volume8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/ephemera/ads60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/ephemera/catalog60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/ephemera/volume10.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/ephemera/volume11.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/ephemera/volume12.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/ephemera/volume13.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/ephemera/volume14.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/ephemera/volume15.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/ephemera/volume16.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/ephemera/volume17.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/ephemera/volume18.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/ephemera/volume19.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/ephemera/volume20.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/ephemera/volume21.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/ephemera/volume22.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/ephemera/volume23.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/ephemera/volume24.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/accessories/misc50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/ephemera/ads40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/ephemera/catalog40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/ephemera/ads50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/ephemera/books50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/ephemera/catalog50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/ephemera/volume2.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/ephemera/volume3.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/ephemera/volume4.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/ephemera/volume5.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/ephemera/volume6.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/ephemera/volume7.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/ephemera/volume8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/ephemera/ads60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/ephemera/catalog60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/ephemera/volume10.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/ephemera/volume11.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/ephemera/volume12.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/ephemera/volume13.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/ephemera/volume14.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/ephemera/volume15.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/ephemera/volume16.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/ephemera/volume17.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/ephemera/volume18.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/ephemera/volume19.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/ephemera/volume20.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/ephemera/volume21.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/ephemera/volume22.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/ephemera/volume23.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/ephemera/volume24.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/ephemera/ads40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/ephemera/catalog40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/ephemera/ads50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/ephemera/books50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/ephemera/catalog50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/ephemera/volume2.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/ephemera/volume3.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/ephemera/volume4.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/ephemera/volume5.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/ephemera/volume6.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/ephemera/volume7.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/ephemera/volume8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/ephemera/ads60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/ephemera/catalog60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/ephemera/volume10.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/ephemera/volume11.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/ephemera/volume12.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/ephemera/volume13.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/ephemera/volume14.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/ephemera/volume15.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/ephemera/volume16.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/ephemera/volume17.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/ephemera/volume18.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/ephemera/volume19.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/ephemera/volume20.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/ephemera/volume21.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/ephemera/volume22.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/ephemera/volume23.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/ephemera/volume24.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/cameras/h16supreme.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/cameras/b8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/ephemera/ads40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/ephemera/catalog40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/ephemera/ads50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/ephemera/books50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/ephemera/catalog50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/ephemera/volume2.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/ephemera/volume3.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/ephemera/volume4.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/ephemera/volume5.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/ephemera/volume6.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/ephemera/volume7.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/ephemera/volume8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/ephemera/ads60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/ephemera/catalog60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/ephemera/volume10.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/ephemera/volume11.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/ephemera/volume12.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/ephemera/volume13.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/ephemera/volume14.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/ephemera/volume15.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/ephemera/volume16.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/ephemera/volume17.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/ephemera/volume18.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/ephemera/volume19.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/ephemera/volume20.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/ephemera/volume21.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/ephemera/volume22.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/ephemera/volume23.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/ephemera/volume24.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/cameras/b8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/cameras/c8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/ephemera/ads40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/ephemera/catalog40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/ephemera/ads50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/ephemera/books50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/ephemera/catalog50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/ephemera/volume2.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/ephemera/volume3.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/ephemera/volume4.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/ephemera/volume5.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/ephemera/volume6.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/ephemera/volume7.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/ephemera/volume8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/ephemera/ads60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/ephemera/catalog60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/ephemera/volume10.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/ephemera/volume11.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/ephemera/volume12.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/ephemera/volume13.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/ephemera/volume14.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/ephemera/volume15.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/ephemera/volume16.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/ephemera/volume17.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/ephemera/volume18.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/ephemera/volume19.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/ephemera/volume20.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/ephemera/volume21.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/ephemera/volume22.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/ephemera/volume23.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/ephemera/volume24.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/ephemera/ads40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/ephemera/catalog40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/ephemera/ads50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/ephemera/books50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/ephemera/catalog50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/ephemera/volume2.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/ephemera/volume3.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/ephemera/volume4.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/ephemera/volume5.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/ephemera/volume6.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/ephemera/volume7.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/ephemera/volume8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/ephemera/ads60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/ephemera/catalog60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/ephemera/volume10.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/ephemera/volume11.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/ephemera/volume12.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/ephemera/volume13.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/ephemera/volume14.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/ephemera/volume15.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/ephemera/volume16.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/ephemera/volume17.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/ephemera/volume18.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/ephemera/volume19.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/ephemera/volume20.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/ephemera/volume21.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/ephemera/volume22.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/ephemera/volume23.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/ephemera/volume24.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/cameras/h16supreme.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/cameras/b8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/cameras/c8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/ephemera/ads40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/ephemera/catalog40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/ephemera/ads50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/ephemera/books50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/ephemera/catalog50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/ephemera/volume2.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/ephemera/volume3.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/ephemera/volume4.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/ephemera/volume5.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/ephemera/volume6.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/ephemera/volume7.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/ephemera/volume8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/ephemera/ads60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/ephemera/catalog60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/ephemera/volume10.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/ephemera/volume11.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/ephemera/volume12.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/ephemera/volume13.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/ephemera/volume14.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/ephemera/volume15.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/ephemera/volume16.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/ephemera/volume17.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/ephemera/volume18.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/ephemera/volume19.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/ephemera/volume20.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/ephemera/volume21.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/ephemera/volume22.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/ephemera/volume23.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/ephemera/volume24.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/projectors/m8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/ephemera/ads40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/ephemera/catalog40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/ephemera/ads50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/ephemera/books50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/ephemera/catalog50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/ephemera/volume2.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/ephemera/volume3.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/ephemera/volume4.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/ephemera/volume5.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/ephemera/volume6.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/ephemera/volume7.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/ephemera/volume8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/ephemera/ads60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/ephemera/catalog60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/ephemera/volume10.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/ephemera/volume11.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/ephemera/volume12.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/ephemera/volume13.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/ephemera/volume14.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/ephemera/volume15.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/ephemera/volume16.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/ephemera/volume17.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/ephemera/volume18.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/ephemera/volume19.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/ephemera/volume20.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/ephemera/volume21.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/ephemera/volume22.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/ephemera/volume23.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/ephemera/volume24.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/cameras/b8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/accessories/support50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/ephemera/ads40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/ephemera/catalog40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/ephemera/ads50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/ephemera/books50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/ephemera/catalog50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/ephemera/volume2.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/ephemera/volume3.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/ephemera/volume4.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/ephemera/volume5.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/ephemera/volume6.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/ephemera/volume7.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/ephemera/volume8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/ephemera/ads60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/ephemera/catalog60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/ephemera/volume10.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/ephemera/volume11.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/ephemera/volume12.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/ephemera/volume13.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/ephemera/volume14.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/ephemera/volume15.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/ephemera/volume16.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/ephemera/volume17.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/ephemera/volume18.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/ephemera/volume19.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/ephemera/volume20.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/ephemera/volume21.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/ephemera/volume22.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/ephemera/volume23.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/ephemera/volume24.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/cameras/b8l.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/ephemera/ads40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/ephemera/catalog40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/ephemera/ads50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/ephemera/books50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/ephemera/catalog50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/ephemera/volume2.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/ephemera/volume3.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/ephemera/volume4.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/ephemera/volume5.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/ephemera/volume6.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/ephemera/volume7.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/ephemera/volume8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/ephemera/ads60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/ephemera/catalog60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/ephemera/volume10.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/ephemera/volume11.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/ephemera/volume12.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/ephemera/volume13.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/ephemera/volume14.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/ephemera/volume15.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/ephemera/volume16.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/ephemera/volume17.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/ephemera/volume18.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/ephemera/volume19.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/ephemera/volume20.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/ephemera/volume21.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/ephemera/volume22.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/ephemera/volume23.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/ephemera/volume24.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/lenses/50berthiot.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/ephemera/ads40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/ephemera/catalog40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/ephemera/ads50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/ephemera/books50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/ephemera/catalog50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/ephemera/volume2.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/ephemera/volume3.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/ephemera/volume4.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/ephemera/volume5.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/ephemera/volume6.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/ephemera/volume7.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/ephemera/volume8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/ephemera/ads60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/ephemera/catalog60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/ephemera/volume10.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/ephemera/volume11.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/ephemera/volume12.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/ephemera/volume13.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/ephemera/volume14.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/ephemera/volume15.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/ephemera/volume16.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/ephemera/volume17.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/ephemera/volume18.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/ephemera/volume19.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/ephemera/volume20.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/ephemera/volume21.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/ephemera/volume22.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/ephemera/volume23.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/ephemera/volume24.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "target": "/links.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/projectors.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/lenses.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/accessories.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/ephemera.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/ephemera/ads40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/ephemera/catalog40.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/ephemera/ads50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/ephemera/books50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/ephemera/catalog50.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/ephemera/volume2.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/ephemera/volume3.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/ephemera/volume4.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/ephemera/volume5.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/ephemera/volume6.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/ephemera/volume7.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/ephemera/volume8.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/ephemera/ads60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/ephemera/catalog60.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/ephemera/volume10.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/ephemera/volume11.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/ephemera/volume12.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/ephemera/volume13.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/ephemera/volume14.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/ephemera/volume15.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/ephemera/volume16.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/ephemera/volume17.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/ephemera/volume18.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/ephemera/volume19.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/ephemera/volume20.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/ephemera/volume21.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/ephemera/volume22.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/ephemera/volume23.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/ephemera/volume24.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/ephemera/ads50_ad029.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/about.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/contribute.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/faq.html"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "target": "/links.html"
+      }
+    ],
+    "missingImages": [
+      {
+        "page": "/",
+        "src": "/images/facebook.gif"
+      },
+      {
+        "page": "/",
+        "src": "/images/twitter.gif"
+      },
+      {
+        "page": "/",
+        "src": "/images/feed.gif"
+      },
+      {
+        "page": "/cameras/h16m4.html",
+        "src": "/images/cameras/h16m4_1.jpg"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "src": "/images/cameras/h8_1.jpg"
+      },
+      {
+        "page": "/cameras/h8.html",
+        "src": "/images/cameras/h8_2.jpg"
+      },
+      {
+        "page": "/cameras/h8rex.html",
+        "src": "/images/cameras/h8rex_1.jpg"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "src": "/images/cameras/s1_1.jpg"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "src": "/images/cameras/s1_2.jpg"
+      },
+      {
+        "page": "/cameras/s1.html",
+        "src": "/images/cameras/s1_3.jpg"
+      },
+      {
+        "page": "/ephemera/ads50_ad003.html",
+        "src": "/images/ephemera/50ad003.jpg"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "src": "/images/reporter/01_1.jpg"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "src": "/images/reporter/01_2.jpg"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "src": "/images/reporter/01_3.jpg"
+      },
+      {
+        "page": "/ephemera/volume1.html",
+        "src": "/images/reporter/01_4.jpg"
+      },
+      {
+        "page": "/contact.html",
+        "src": "/images/facebook.gif"
+      },
+      {
+        "page": "/contact.html",
+        "src": "/images/twitter.gif"
+      },
+      {
+        "page": "/contact.html",
+        "src": "/images/name.jpg"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "src": "/images/cameras/h16rex2_1.jpg"
+      },
+      {
+        "page": "/cameras/h16rex2.html",
+        "src": "/images/cameras/h16rex2_2.jpg"
+      },
+      {
+        "page": "/cameras/h8rex3.html",
+        "src": "/images/cameras/h8rex3_1.jpg"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "src": "/images/reporter/09_1.jpg"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "src": "/images/reporter/09_2.jpg"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "src": "/images/reporter/09_3.jpg"
+      },
+      {
+        "page": "/ephemera/volume9.html",
+        "src": "/images/reporter/09_4.jpg"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "src": "/images/ephemera/60book002.jpg"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "src": "/images/ephemera/60book003.jpg"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "src": "/images/ephemera/60book004.jpg"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "src": "/images/ephemera/60book005.jpg"
+      },
+      {
+        "page": "/ephemera/books60.html",
+        "src": "/images/ephemera/60book001.jpg"
+      },
+      {
+        "page": "/ephemera/ads50_ad002.html",
+        "src": "/images/ephemera/50ad002.jpg"
+      },
+      {
+        "page": "/ephemera/ads50_ad004.html",
+        "src": "/images/ephemera/50ad004.jpg"
+      },
+      {
+        "page": "/ephemera/ads50_ad001.html",
+        "src": "/images/ephemera/50ad001.jpg"
+      },
+      {
+        "page": "/ephemera/ads50_ad005.html",
+        "src": "/images/ephemera/50ad005.jpg"
+      },
+      {
+        "page": "/ephemera/ads50_ad006.html",
+        "src": "/images/ephemera/50ad006.jpg"
+      },
+      {
+        "page": "/ephemera/ads50_ad007.html",
+        "src": "/images/ephemera/50ad007.jpg"
+      },
+      {
+        "page": "/ephemera/ads50_ad008.html",
+        "src": "/images/ephemera/50ad008.jpg"
+      },
+      {
+        "page": "/ephemera/ads50_ad009.html",
+        "src": "/images/ephemera/50ad009.jpg"
+      },
+      {
+        "page": "/ephemera/ads50_ad010.html",
+        "src": "/images/ephemera/50ad010.jpg"
+      },
+      {
+        "page": "/ephemera/ads50_ad011.html",
+        "src": "/images/ephemera/50ad011.jpg"
+      },
+      {
+        "page": "/ephemera/ads50_ad012.html",
+        "src": "/images/ephemera/50ad012.jpg"
+      },
+      {
+        "page": "/ephemera/ads50_ad013.html",
+        "src": "/images/ephemera/50ad013.jpg"
+      },
+      {
+        "page": "/ephemera/ads50_ad014.html",
+        "src": "/images/ephemera/50ad014.jpg"
+      },
+      {
+        "page": "/ephemera/ads50_ad015.html",
+        "src": "/images/ephemera/50ad015.jpg"
+      },
+      {
+        "page": "/ephemera/ads50_ad016.html",
+        "src": "/images/ephemera/50ad016.jpg"
+      },
+      {
+        "page": "/ephemera/ads50_ad017.html",
+        "src": "/images/ephemera/50ad017.jpg"
+      },
+      {
+        "page": "/ephemera/ads50_ad018.html",
+        "src": "/images/ephemera/50ad018.jpg"
+      },
+      {
+        "page": "/ephemera/ads50_ad019.html",
+        "src": "/images/ephemera/50ad019.jpg"
+      },
+      {
+        "page": "/ephemera/ads50_ad020.html",
+        "src": "/images/ephemera/50ad020.jpg"
+      },
+      {
+        "page": "/ephemera/ads50_ad021.html",
+        "src": "/images/ephemera/50ad021.jpg"
+      },
+      {
+        "page": "/ephemera/ads50_ad022.html",
+        "src": "/images/ephemera/50ad022.jpg"
+      },
+      {
+        "page": "/ephemera/ads50_ad023.html",
+        "src": "/images/ephemera/50ad023.jpg"
+      },
+      {
+        "page": "/ephemera/ads50_ad024.html",
+        "src": "/images/ephemera/50ad024.jpg"
+      },
+      {
+        "page": "/ephemera/ads50_ad025.html",
+        "src": "/images/ephemera/50ad025.jpg"
+      },
+      {
+        "page": "/ephemera/ads50_ad026.html",
+        "src": "/images/ephemera/50ad026.jpg"
+      },
+      {
+        "page": "/ephemera/ads50_ad027.html",
+        "src": "/images/ephemera/50ad027.jpg"
+      },
+      {
+        "page": "/ephemera/ads50_ad028.html",
+        "src": "/images/ephemera/50ad028.jpg"
+      }
+    ],
     "missingDownloads": []
   },
   "ok": true
