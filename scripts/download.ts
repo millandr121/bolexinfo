@@ -71,14 +71,11 @@ async function main() {
   let consecutiveTransientFailures = 0;
   const MAX_CONSECUTIVE_TRANSIENT_FAILURES = 5;
 
-  for (const [urlPath, entry] of queue) {
-    if (crawled.has(urlPath)) continue;
-    crawled.add(urlPath);
-
+  async function processUrl(urlPath: string, entry: DiscoveredUrl): Promise<void> {
     const best = entry.captures[0];
     const referenceTimestamp = best?.timestamp ?? entry.commonCrawl?.timestamp;
     const existing = manifest.assets[urlPath];
-    if (existing && referenceTimestamp && existing.timestamp === referenceTimestamp) continue;
+    if (existing && referenceTimestamp && existing.timestamp === referenceTimestamp) return;
 
     let asset: FetchedAsset | null = null;
 
@@ -139,7 +136,7 @@ async function main() {
         urlPath,
         reason: best ? `capture-${best.timestamp}-unavailable` : "no-capture-known",
       });
-      continue;
+      return;
     }
 
     writeAsset(urlPath, asset.body);
@@ -192,6 +189,21 @@ async function main() {
     saveManifest(manifest);
     if (stored % 5 === 0) {
       console.log(`…${stored} assets stored (queue: ${queue.size - crawled.size} remaining)`);
+    }
+  }
+
+  for (const [urlPath, entry] of queue) {
+    if (crawled.has(urlPath)) continue;
+    crawled.add(urlPath);
+
+    try {
+      await processUrl(urlPath, entry);
+    } catch (err) {
+      // A single URL failing in an unexpected way (a disk write error, a
+      // malformed path, anything not already handled above) must not abort
+      // the rest of a run that can span 1000+ URLs — record it and move on.
+      failures.push({ urlPath, reason: err instanceof Error ? err.message : String(err) });
+      console.error(`  Unexpected error processing ${urlPath}: ${err instanceof Error ? err.message : err}`);
     }
   }
 

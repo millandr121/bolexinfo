@@ -1,6 +1,29 @@
+import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import { paths } from "./config";
+
+// Characters illegal in Windows filenames (Linux/macOS tolerate all of
+// these) — query-string URLs like `/forums/index.php?c=1&sid=...` crash
+// fs.mkdirSync outright on Windows if used verbatim. Percent-encode them so
+// the mapping stays deterministic and collision-resistant rather than
+// collapsing distinct URLs onto one path.
+const WINDOWS_ILLEGAL_CHARS = /[<>:"|?*\x00-\x1f]/g;
+const WINDOWS_RESERVED_NAMES = /^(CON|PRN|AUX|NUL|COM[1-9]|LPT[1-9])$/i;
+// Windows' historical MAX_PATH is 260 chars; keep individual segments well
+// under that even though this session's original bytes may run longer.
+const MAX_SEGMENT_LENGTH = 150;
+
+function sanitizeSegment(segment: string): string {
+  let safe = segment.replace(WINDOWS_ILLEGAL_CHARS, (ch) => `%${ch.charCodeAt(0).toString(16).padStart(2, "0")}`);
+  safe = safe.replace(/[. ]+$/, ""); // Windows silently strips trailing dots/spaces from segments
+  if (WINDOWS_RESERVED_NAMES.test(safe)) safe = `_${safe}`;
+  if (safe.length > MAX_SEGMENT_LENGTH) {
+    const hash = crypto.createHash("sha1").update(segment).digest("hex").slice(0, 8);
+    safe = `${safe.slice(0, MAX_SEGMENT_LENGTH - 9)}~${hash}`;
+  }
+  return safe || "_";
+}
 
 /**
  * Archive layout: original URL structure is preserved exactly.
@@ -54,7 +77,8 @@ export function saveManifest(manifest: Manifest): void {
 export function archiveLocation(urlPath: string): string {
   const clean = urlPath.replace(/^\/+/, "").replace(/\/+$/, "") || "index.html";
   const withFile = clean.endsWith(".html") || /\.[a-z0-9]{2,4}$/i.test(clean) ? clean : `${clean}/index.html`;
-  return path.join(paths.archiveWayback, withFile);
+  const safeSegments = withFile.split("/").map(sanitizeSegment);
+  return path.join(paths.archiveWayback, ...safeSegments);
 }
 
 export function writeAsset(urlPath: string, body: Buffer): string {
