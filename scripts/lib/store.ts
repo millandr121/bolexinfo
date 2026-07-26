@@ -25,6 +25,8 @@ export interface StoredAsset {
   /** Timestamps of additional preserved revisions. */
   revisions: string[];
   storedAt: string;
+  /** Which archive served the stored bytes. Defaults to "wayback" for older records. */
+  source?: "wayback" | "common-crawl";
 }
 
 export interface Manifest {

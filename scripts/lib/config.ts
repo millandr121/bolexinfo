@@ -21,6 +21,11 @@ export const HOSTS = ["bolexcollector.com", "www.bolexcollector.com"] as const;
 
 export const WAYBACK = {
   cdx: "https://web.archive.org/cdx/search/cdx",
+  // The availability API lives on archive.org (not the web.archive.org
+  // subdomain), so it often remains reachable in sandboxes whose egress
+  // policy blocks web.archive.org. It returns only the closest capture per
+  // URL — a degraded but genuine discovery source.
+  availability: "https://archive.org/wayback/available",
   snapshot: (timestamp: string, url: string, raw: boolean) =>
     // The `id_` flag returns the original bytes without the Wayback toolbar
     // or URL rewriting — essential for faithful preservation.
@@ -31,6 +36,20 @@ export const WAYBACK = {
 export const EXTRA_SOURCES = {
   commonCrawl: "https://index.commoncrawl.org/collinfo.json",
   archiveToday: "https://archive.ph/newest/",
+} as const;
+
+/**
+ * Common Crawl serves original page bytes directly (via ranged reads into
+ * its public WARC files on `data.commoncrawl.org`), independent of the
+ * Wayback Machine. Some sandboxed egress policies allow Common Crawl's hosts
+ * while blocking `web.archive.org`, making it a genuine fallback download
+ * source rather than just a discovery lead.
+ */
+export const COMMON_CRAWL = {
+  collinfo: "https://index.commoncrawl.org/collinfo.json",
+  dataHost: "https://data.commoncrawl.org",
+  /** Collections checked per URL, newest first, before giving up. */
+  maxCollectionsChecked: 3,
 } as const;
 
 /** Politeness: delay between archive requests (ms) and retry policy. */
