@@ -15,6 +15,14 @@ all years, all MIME types), merges the search-index seed inventory
 All captures per URL are retained — not just the newest — so later stages can
 compare snapshots.
 
+If the CDX API is unreachable, discovery falls back to the Wayback
+availability API (`archive.org/wayback/available`, a different host than
+`web.archive.org` — sometimes reachable when the CDX host isn't) for a
+closest-capture timestamp per seed URL, then to Common Crawl's index
+(`index.commoncrawl.org`) for any URL still without a usable capture. Each
+fallback is recorded in that URL's `sources` array so provenance stays
+explicit about which archive actually supplied the lead.
+
 ### 2. Download — `npm run pipeline:download`
 
 For each discovered URL:
@@ -26,11 +34,20 @@ For each discovered URL:
   `<file>.revisions/<timestamp>`;
 - recursively follows internal links, images and downloads found in each page,
   queueing anything the CDX index missed;
-- records everything (URL, timestamp, MIME, size, SHA-1, revisions) in
-  `archive/meta/manifest.json`.
+- records everything (URL, timestamp, MIME, size, SHA-1, revisions, source
+  archive) in `archive/meta/manifest.json`.
 
-Rate-limited (1.5 s between requests), retried with exponential backoff
-(2 s/4 s/8 s/16 s), resumable — interrupted runs pick up where they stopped.
+If Wayback proves unreachable partway through, download switches to fetching
+original bytes from Common Crawl's public WARC files (`data.commoncrawl.org`,
+via ranged HTTP requests) for the rest of the run — real content, but with no
+revision history and sparser coverage of non-HTML assets than Wayback offers.
+Each stored asset's manifest entry records which archive (`wayback` or
+`common-crawl`) it came from.
+
+Rate-limited (1.5 s between requests to archive.org, 400 ms to Common Crawl),
+retried with exponential backoff (2 s/4 s/8 s/16 s) and a 20 s per-attempt
+timeout, resumable — interrupted runs pick up where they stopped (the
+manifest is saved after every asset).
 
 ### 3. Extract — `npm run pipeline:extract`
 
@@ -58,23 +75,32 @@ preserved revisions, missing pages, download failures, verification summary.
 
 ## Network requirements
 
-The pipeline needs HTTPS access to `web.archive.org`. Optional secondary
-sources (Common Crawl, archive.today) are listed in `scripts/lib/config.ts`.
+The pipeline needs HTTPS access to `web.archive.org` for complete, byte-exact
+recovery with full revision history. It also uses Common Crawl
+(`index.commoncrawl.org`, `data.commoncrawl.org`) as a fallback discovery and
+download source — real content, but shallower: no revisions, sparser
+non-HTML coverage, and only whatever Common Crawl happened to crawl.
+`archive.ph` is listed in `scripts/lib/config.ts` as a further candidate
+source but isn't wired into the pipeline yet.
 
-Running inside a sandboxed environment (Claude Code remote, CI) whose egress
-policy blocks archive hosts produces a fast, explicit failure:
+If a host is genuinely unreachable — not just slow — every network call in
+`scripts/lib/net.ts` fails within a bounded number of retries (a 20 s
+per-attempt timeout, 4 retries with exponential backoff) rather than hanging
+indefinitely, and each stage falls back to the next source instead of
+aborting the run.
 
-```
-✗ Egress policy denied access to web.archive.org. Add the host to the
-  environment's network egress allowlist, or run the pipeline from a
-  network-enabled environment.
-```
+Node's built-in `fetch` does not read the `HTTPS_PROXY` environment variable
+by default, so on Node ≥ 22.21 the pipeline scripts set
+`NODE_USE_ENV_PROXY=1` to route through a configured proxy — without it, a
+host blocked by a proxy-level policy can appear to hang forever instead of
+failing with a clear denial.
 
-**Fix:** add `web.archive.org` (and optionally `index.commoncrawl.org`,
-`data.commoncrawl.org`, `archive.ph`) to the environment's allowed network
-egress hosts, then re-run `npm run pipeline`. Alternatively run the pipeline
-from any developer machine and commit the results — every stage is
-deterministic and idempotent.
+**Fix for full recovery:** add `web.archive.org` (and optionally
+`index.commoncrawl.org`, `data.commoncrawl.org`, `archive.ph`) to the
+environment's allowed network egress hosts, then re-run `npm run pipeline`.
+Alternatively run the pipeline from any developer machine and commit the
+results — every stage is deterministic and idempotent, so re-running after
+partial recovery only fills in what's still missing.
 
 ## Beyond the Wayback Machine
 

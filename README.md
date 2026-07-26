@@ -51,9 +51,12 @@ for stage-by-stage details, and **[docs/RECOVERY-STATUS.md](docs/RECOVERY-STATUS
 for exactly what has been recovered so far and what remains.
 
 > **Note for Claude Code / CI environments:** if the environment's network
-> egress policy blocks archive hosts, the pipeline fails fast with a clear
-> policy-denial message instead of fabricating output. Add `web.archive.org`
-> to the environment's allowed hosts to enable recovery.
+> egress policy blocks `web.archive.org`, the pipeline falls back to Common
+> Crawl (`index.commoncrawl.org` / `data.commoncrawl.org`) where reachable —
+> real but shallower coverage (no images, no revisions, no full CDX
+> enumeration). If both are blocked, it fails fast with a clear denial message
+> instead of fabricating output. Add `web.archive.org` to the environment's
+> allowed hosts for complete recovery.
 
 ## Principles
 

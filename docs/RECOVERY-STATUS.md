@@ -8,17 +8,26 @@ _Last updated: 2026-07-26_
 | --- | --- |
 | Site structure & URL inventory | ✅ **82 original URLs verified** (titles + sections) via live search index |
 | Preservation pipeline | ✅ Built, tested, idempotent — ready to run |
-| Wayback Machine download | ⏸ **Blocked by this environment's network egress policy** (see below) |
+| Wayback Machine download | ⏸ **Blocked by this environment's network egress policy**; Common Crawl fallback recovered 40/82 pages instead (see below) |
 | Structured seed datasets | ✅ 25 cameras, 10 projectors, 6 lens makers, 8 accessory categories — every field provenance-marked |
-| Serial number tables | ⏸ Awaiting extraction from `/articles/07_05_11.html` once downloaded (never entered from memory) |
+| Serial number tables | ⏸ `/articles/07_05_11.html` (the page with the master serial tables) not yet recovered — not in Common Crawl's index; needs Wayback access |
 | Modern site | ✅ Builds statically; all routes prerendered; search + serial lookup engines live |
 
 ## The one blocker, and how to clear it
 
-This session's sandbox allows package registries but returns a policy denial
-(`Host not in allowlist: web.archive.org`) for archive hosts, and
-`bolexcollector.com` itself no longer resolves — the site is dead; the Wayback
-Machine is the primary source.
+This session's sandbox denies direct access to `web.archive.org` (the pipeline
+gets `ECONNRESET` from every request), and `bolexcollector.com` itself no
+longer resolves — the site is dead; the Wayback Machine holds by far the most
+complete capture history and is the only source for full CDX enumeration and
+byte-exact snapshots.
+
+As a fallback, the pipeline now also queries Common Crawl (`index.commoncrawl.org`,
+`data.commoncrawl.org`), which *is* reachable from this sandbox and holds a
+genuine (if partial) crawl of the site from June 2026. The latest run recovered
+**40 of 82 pages** this way — real content, not fabricated, but Common Crawl's
+coverage is far shallower than Wayback's: no image assets, no historical
+revisions, and it missed several key pages (including the serial-number
+reference page).
 
 **To complete recovery, either:**
 
@@ -29,7 +38,22 @@ Machine is the primary source.
 
 Everything downstream — extraction, verification, reports, the Archives
 side-by-side view, the serial lookup dataset — activates automatically once
-`/archive` is populated.
+`/archive` is populated, and re-running the pipeline with Wayback access will
+backfill the 42 pages Common Crawl couldn't supply plus all images and
+revisions, without disturbing what's already recovered (idempotent by
+digest/timestamp).
+
+## What was recovered via Common Crawl
+
+40 pages recovered byte-faithfully from Common Crawl's June 2026 crawl of
+bolexcollector.com: the homepage, `cameras.html`, 6 individual camera pages
+(H8, H8 REX, H8 REX-3, H16 M-4, H16 REX-2, S1), `contact.html`, and 28 period
+advertising pages plus 2 Bolex Reporter volume pages under `/ephemera/`.
+Extraction turned these into 37 structured JSON datasets and 6 verbatim
+tables (`data/cameras/`, `data/ephemera/`, `data/tables/`), each carrying its
+original URL, capture timestamp, and source archive (`common-crawl`) in the
+manifest. 1,603 internal links and 57 images referenced by these pages point
+to content Common Crawl didn't have — tracked as gaps, not filled in.
 
 ## What was recovered in this session (no archive access required)
 
@@ -62,7 +86,9 @@ After the first successful `npm run pipeline`:
 - [ ] Spot-check extracted serial ranges against archived originals
 - [ ] Promote `data/models/*` entries from `summary-only` → `full` as pages land
 - [ ] Enable the Archives side-by-side view for recovered pages
-- [ ] Sweep secondary sources for gaps: Common Crawl, archive.today, LIFT
+- [x] Sweep Common Crawl for gaps — wired into the pipeline as an automatic
+      fallback; recovered 40/82 pages this session
+- [ ] Sweep remaining secondary sources: archive.today, LIFT
       (lift.ca/resources-home/bolex-collector), collector forums (8mm Forum,
       cinematography.com), university film-archive links
 - [ ] Optimize recovered images → WebP derivatives (originals untouched)
