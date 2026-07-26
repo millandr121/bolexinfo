@@ -42,7 +42,7 @@ let collectionsCache: CcCollection[] | null = null;
  */
 async function getCollections(): Promise<CcCollection[]> {
   if (collectionsCache) return collectionsCache;
-  const res = await politeFetch(COMMON_CRAWL.collinfo);
+  const res = await politeFetch(COMMON_CRAWL.collinfo, undefined, COMMON_CRAWL.requestDelayMs);
   if (!res.ok) throw new Error(`Common Crawl collinfo returned HTTP ${res.status}`);
   const raw = (await res.json()) as Array<{ id: string; "cdx-api": string }>;
   collectionsCache = raw.map((c) => ({ id: c.id, cdxApi: c["cdx-api"] }));
@@ -51,7 +51,7 @@ async function getCollections(): Promise<CcCollection[]> {
 
 async function queryCollection(cdxApi: string, url: string): Promise<CcIndexRecord[]> {
   const params = new URLSearchParams({ url, output: "json" });
-  const res = await politeFetch(`${cdxApi}?${params}`);
+  const res = await politeFetch(`${cdxApi}?${params}`, undefined, COMMON_CRAWL.requestDelayMs);
   if (res.status === 404) return []; // no captures of this URL in this collection
   if (!res.ok) throw new Error(`Common Crawl index ${cdxApi} returned HTTP ${res.status}`);
   const text = await res.text();
@@ -113,9 +113,11 @@ function splitOnce(buf: Buffer, sep: Buffer): [Buffer, Buffer] | null {
  * both are stripped to recover the original page bytes.
  */
 export async function fetchCommonCrawlAsset(capture: CommonCrawlCapture): Promise<CommonCrawlAsset | null> {
-  const res = await politeFetch(`${COMMON_CRAWL.dataHost}/${capture.filename}`, {
-    headers: { Range: `bytes=${capture.offset}-${capture.offset + capture.length - 1}` },
-  });
+  const res = await politeFetch(
+    `${COMMON_CRAWL.dataHost}/${capture.filename}`,
+    { headers: { Range: `bytes=${capture.offset}-${capture.offset + capture.length - 1}` } },
+    COMMON_CRAWL.requestDelayMs,
+  );
   if (!res.ok && res.status !== 206) return null;
   const compressed = Buffer.from(await res.arrayBuffer());
   const gunzipped = zlib.gunzipSync(compressed);

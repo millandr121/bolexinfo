@@ -49,7 +49,14 @@ export const COMMON_CRAWL = {
   collinfo: "https://index.commoncrawl.org/collinfo.json",
   dataHost: "https://data.commoncrawl.org",
   /** Collections checked per URL, newest first, before giving up. */
-  maxCollectionsChecked: 3,
+  maxCollectionsChecked: 2,
+  /**
+   * Common Crawl's index API tolerates a higher request rate than
+   * archive.org — the default POLITENESS.delayMs (tuned for archive.org)
+   * would make a full-site lookup pass too slow to finish within a bounded
+   * run.
+   */
+  requestDelayMs: 400,
 } as const;
 
 /** Politeness: delay between archive requests (ms) and retry policy. */

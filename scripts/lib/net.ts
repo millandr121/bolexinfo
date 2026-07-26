@@ -14,12 +14,13 @@ export class PolicyDeniedError extends Error {
 }
 
 /**
- * Fetch with retry + exponential backoff and a politeness delay, tuned for
- * archive.org's rate limits. A CONNECT-level 403 from a corporate egress
- * proxy is surfaced as PolicyDeniedError immediately — retrying a policy
- * denial is pointless and impolite.
+ * Fetch with retry + exponential backoff and a politeness delay, tuned by
+ * default for archive.org's rate limits (override `delayMs` for hosts with
+ * more generous limits, e.g. Common Crawl). A CONNECT-level 403 from a
+ * corporate egress proxy is surfaced as PolicyDeniedError immediately —
+ * retrying a policy denial is pointless and impolite.
  */
-export async function politeFetch(url: string, init?: RequestInit): Promise<Response> {
+export async function politeFetch(url: string, init?: RequestInit, delayMs: number = POLITENESS.delayMs): Promise<Response> {
   let lastError: unknown;
   for (let attempt = 0; attempt <= POLITENESS.retries; attempt++) {
     if (attempt > 0) await sleep(POLITENESS.backoffBaseMs * 2 ** (attempt - 1));
@@ -46,7 +47,7 @@ export async function politeFetch(url: string, init?: RequestInit): Promise<Resp
         lastError = new Error(`HTTP ${res.status} for ${url}`);
         continue;
       }
-      await sleep(POLITENESS.delayMs);
+      await sleep(delayMs);
       return res;
     } catch (err) {
       if (err instanceof PolicyDeniedError) throw err;
@@ -65,8 +66,8 @@ export async function politeFetch(url: string, init?: RequestInit): Promise<Resp
 }
 
 /** Fetch JSON with the same retry semantics. */
-export async function fetchJson<T>(url: string): Promise<T> {
-  const res = await politeFetch(url);
+export async function fetchJson<T>(url: string, delayMs?: number): Promise<T> {
+  const res = await politeFetch(url, undefined, delayMs);
   if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
   return (await res.json()) as T;
 }
