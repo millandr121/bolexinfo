@@ -58,11 +58,18 @@ async function main() {
   const crawled = new Set<string>();
   const failures: Array<{ urlPath: string; reason: string }> = [];
   let stored = 0;
-  // Once a Wayback fetch fails at the network level (not just a 404), every
-  // further attempt is almost certainly a doomed multi-retry timeout too —
-  // so stop trying Wayback for the rest of the run and go straight to the
-  // Common Crawl fallback instead of paying that cost 82 times over.
+  // A PolicyDeniedError means Wayback is categorically blocked (e.g. a
+  // sandboxed egress proxy) — retrying is pointless, so give up on it for
+  // the rest of the run immediately. Any other error (a dropped connection,
+  // a timeout, a transient rate limit) is treated as a one-off: log it, fall
+  // back to Common Crawl for that URL, but keep trying Wayback for the next
+  // one. Only if several of those transient failures happen in a row do we
+  // conclude the host is actually down and stop trying — this keeps a real
+  // network's occasional hiccup from silently downgrading an entire run to
+  // Common Crawl's much shallower coverage.
   let waybackReachable = true;
+  let consecutiveTransientFailures = 0;
+  const MAX_CONSECUTIVE_TRANSIENT_FAILURES = 5;
 
   for (const [urlPath, entry] of queue) {
     if (crawled.has(urlPath)) continue;
@@ -81,10 +88,26 @@ async function main() {
         if (body) {
           asset = { body, mimetype: best.mimetype, timestamp: best.timestamp, originalUrl: best.original, source: "wayback" };
         }
+        consecutiveTransientFailures = 0;
       } catch (err) {
-        waybackReachable = false;
-        const reason = err instanceof PolicyDeniedError ? err.message : err instanceof Error ? err.message : String(err);
-        console.error(`✗ Wayback unreachable (${reason}); switching to Common Crawl for the rest of this run.`);
+        if (err instanceof PolicyDeniedError) {
+          waybackReachable = false;
+          console.error(`✗ Wayback blocked (${err.message}); switching to Common Crawl for the rest of this run.`);
+        } else {
+          const reason = err instanceof Error ? err.message : String(err);
+          consecutiveTransientFailures++;
+          console.error(
+            `  Wayback fetch failed for ${urlPath} (${reason}); trying Common Crawl for this URL ` +
+              `[${consecutiveTransientFailures}/${MAX_CONSECUTIVE_TRANSIENT_FAILURES} consecutive].`,
+          );
+          if (consecutiveTransientFailures >= MAX_CONSECUTIVE_TRANSIENT_FAILURES) {
+            waybackReachable = false;
+            console.error(
+              `✗ Wayback failed ${consecutiveTransientFailures} times in a row; treating it as down and ` +
+                "switching to Common Crawl for the rest of this run.",
+            );
+          }
+        }
       }
     }
 
