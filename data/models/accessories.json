@@ -1,0 +1,14 @@
+{
+  "$schema": "../schemas/model.schema.json",
+  "provenance": "Category list and summaries verified against bolexcollector.com page titles and indexed page content (search-index recovery, 2026-07-26). Individual accessory listings are populated by the preservation pipeline from archived pages.",
+  "categories": [
+    { "slug": "filters", "name": "Filters and Lens Accessories", "pages": ["/accessories/filter50.html", "/accessories/filter60.html"], "summary": "Filters and lens accessories by decade.", "recovery": "summary-only" },
+    { "slug": "viewfinders", "name": "Viewfinders", "pages": ["/accessories/view40.html", "/accessories/view50.html"], "summary": "Viewfinders and viewing accessories by decade.", "recovery": "summary-only" },
+    { "slug": "motors", "name": "Motors", "pages": ["/accessories/motor50.html", "/accessories/motor60.html"], "summary": "Electric drive and sync motors. The first sound-synchronous motor for Bolex cameras was manufactured in 1965 by Perfectone of Bienne, Switzerland.", "recovery": "summary-only" },
+    { "slug": "cases", "name": "Cases", "pages": ["/accessories/case40.html", "/accessories/case60.html"], "summary": "Carrying cases, including the Bolex Aluminum Carrying Case — \"strong enough to stand on\" — sized for an H camera with zoom lens, Matte Box and Unimotor attached.", "recovery": "summary-only" },
+    { "slug": "support", "name": "Tripods and Grips", "pages": ["/accessories/support40.html", "/accessories/support60.html"], "summary": "Includes the Reporter Grip (1962) for H-model cameras with quick-set base attachment and fingertip release; the Declic H grip for flat-base H models; and an 11 oz monopod introduced in 1961 for the B, C and D models.", "recovery": "summary-only" },
+    { "slug": "matte-box", "name": "Matte Box", "pages": [], "summary": "Introduced in 1962 for any H camera; produced effects with masks and served as filter holder and lens shade. Dedicated page pending recovery.", "recovery": "pending" },
+    { "slug": "editing", "name": "Editing Equipment", "pages": ["/accessories/edit40.html"], "summary": "Editing equipment by decade.", "recovery": "summary-only" },
+    { "slug": "misc", "name": "Miscellaneous", "pages": ["/accessories/misc50.html"], "summary": "Aftermarket items and modifications alongside Paillard-manufactured accessories.", "recovery": "summary-only" }
+  ]
+}

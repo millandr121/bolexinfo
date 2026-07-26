@@ -1,0 +1,16 @@
+{
+  "$schema": "../schemas/model.schema.json",
+  "provenance": "Model list and summaries verified against bolexcollector.com page titles and indexed page content (search-index recovery, 2026-07-26). Full specifications are populated by the preservation pipeline from archived pages. Null fields are pending recovery.",
+  "models": [
+    { "slug": "model-g", "name": "Model G", "format": "8mm / 9.5mm / 16mm", "introduced": 1936, "originalPath": "/projectors/model-g.html", "summary": "Introduced in 1936 in \"monofilm\" and \"multifilm\" models; the multifilm included a tool-free parts kit of reel spindles, sprockets, gate and guide-rollers to adapt the projector to various film gauges.", "recovery": "summary-only" },
+    { "slug": "185", "name": "18-5", "format": "8mm", "introduced": null, "originalPath": "/projectors/185.html", "summary": "Projected 8mm film at fixed speeds of 18 and 5 frames per second forward, and 18 fps in reverse.", "recovery": "summary-only" },
+    { "slug": "185super", "name": "18-5 Super", "format": "Super 8", "introduced": null, "originalPath": "/projectors/185super.html", "summary": null, "recovery": "pending" },
+    { "slug": "m8", "name": "M-8", "format": "8mm", "introduced": null, "originalPath": "/projectors/m8.html", "summary": "Designed to run off a mains power supply of 110–125 Volts.", "recovery": "summary-only" },
+    { "slug": "m8r", "name": "M-8R", "format": "8mm", "introduced": null, "originalPath": "/projectors/m8r.html", "summary": null, "recovery": "pending" },
+    { "slug": "sm8", "name": "SM 8", "format": "8mm", "introduced": null, "originalPath": "/projectors/sm8.html", "summary": "Magnetic sound projection and recording, with a built-in 2W / 15 Ohm speaker.", "recovery": "summary-only" },
+    { "slug": "s211", "name": "S-211", "format": "16mm", "introduced": null, "originalPath": "/projectors/s211.html", "summary": null, "recovery": "pending" },
+    { "slug": "s221", "name": "S-221", "format": "16mm", "introduced": null, "originalPath": "/projectors/s221.html", "summary": "Plays back silent or sound film with optical or magnetic tracks, and records sound onto 16mm magnetic-striped film.", "recovery": "summary-only" },
+    { "slug": "s311", "name": "S-311", "format": "16mm", "introduced": null, "originalPath": "/projectors/s311.html", "summary": null, "recovery": "pending" },
+    { "slug": "s321", "name": "S-321", "format": "16mm", "introduced": null, "originalPath": "/projectors/s321.html", "summary": null, "recovery": "pending" }
+  ]
+}

@@ -1,0 +1,20 @@
+# dependencies
+/node_modules
+
+# next.js
+/.next/
+/out/
+next-env.d.ts
+
+# misc
+.DS_Store
+*.pem
+npm-debug.log*
+.env*
+
+# typescript
+*.tsbuildinfo
+
+# The /archive directory IS committed — it is the preservation record.
+# Only transient pipeline scratch space is ignored.
+/archive/.tmp/

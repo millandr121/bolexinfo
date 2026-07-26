@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+/*
+ * BolexCollector design tokens.
+ *
+ * The palette is drawn from the materials of the subject itself: warm ivory
+ * paper of 1950s Paillard catalogs, near-black leatherette, machined metal,
+ * and the muted vermilion of the Bolex wordmark. Dark mode is designed, not
+ * inverted: charcoal like a projection room, with imagery allowed to glow.
+ */
+@theme {
+  --font-display: "Fraunces Variable", Georgia, "Times New Roman", serif;
+  --font-sans: "Archivo Variable", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Menlo, monospace;
+
+  --color-paper: #f5f1e8;
+  --color-paper-raised: #fdfbf5;
+  --color-ink: #211d18;
+  --color-ink-soft: #575047;
+  --color-line: #d8d1c2;
+  --color-accent: #8a2f26;
+  --color-accent-soft: #a8503f;
+  --color-brass: #8c6d3f;
+
+  --color-night: #14110e;
+  --color-night-raised: #1d1915;
+  --color-bone: #e9e2d3;
+  --color-bone-soft: #a89f90;
+  --color-night-line: #352f28;
+  --color-ember: #d07a5e;
+}
+
+:root {
+  --bg: var(--color-paper);
+  --bg-raised: var(--color-paper-raised);
+  --fg: var(--color-ink);
+  --fg-soft: var(--color-ink-soft);
+  --line: var(--color-line);
+  --accent: var(--color-accent);
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: var(--color-night);
+    --bg-raised: var(--color-night-raised);
+    --fg: var(--color-bone);
+    --fg-soft: var(--color-bone-soft);
+    --line: var(--color-night-line);
+    --accent: var(--color-ember);
+    color-scheme: dark;
+  }
+}
+
+html {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* Focus visibly, always — WCAG 2.4.7. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Editorial prose for recovered and modern articles. */
+.prose-archive {
+  max-width: 42rem;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+.prose-archive h1,
+.prose-archive h2,
+.prose-archive h3 {
+  font-family: var(--font-display);
+  font-weight: 560;
+  letter-spacing: -0.015em;
+  margin: 2.25em 0 0.6em;
+  line-height: 1.15;
+}
+.prose-archive h1 { font-size: 2.4rem; margin-top: 0; }
+.prose-archive h2 { font-size: 1.55rem; }
+.prose-archive h3 { font-size: 1.2rem; }
+.prose-archive p { margin: 0 0 1.1em; }
+.prose-archive a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+.prose-archive ul,
+.prose-archive ol { margin: 0 0 1.1em; padding-left: 1.4em; }
+.prose-archive li { margin-bottom: 0.35em; }
+.prose-archive blockquote {
+  border-left: 2px solid var(--accent);
+  padding-left: 1.1em;
+  color: var(--fg-soft);
+  font-style: italic;
+  margin: 1.5em 0;
+}
+.prose-archive table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  margin: 1.5em 0;
+}
+.prose-archive th,
+.prose-archive td {
+  border: 1px solid var(--line);
+  padding: 0.5em 0.75em;
+  text-align: left;
+}
+.prose-archive th {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.72rem;
+}
+
+/* Hairline rules in the Swiss tradition. */
+.rule { border-top: 1px solid var(--line); }
