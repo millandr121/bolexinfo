@@ -146,18 +146,21 @@ async function main() {
       discovered.set(urlPath, entry);
     }
   } catch (err) {
-    if (err instanceof PolicyDeniedError) {
-      console.error(`\n✗ ${err.message}`);
-      console.error(
-        "Falling back to the availability API on archive.org — it yields only " +
-          "the closest capture per seed URL (no full enumeration, no MIME/digest " +
-          "metadata). Re-run from an environment with access to web.archive.org " +
-          "for complete enumeration.",
-      );
-      await availabilityFallback(discovered);
-    } else {
-      throw err;
-    }
+    // Treat any failure to reach the CDX API as "host unreachable" and fall
+    // back — not just an explicit PolicyDeniedError. A policy denial on a
+    // CONNECT-based HTTPS proxy often surfaces to the client as a bare
+    // connection reset rather than a readable 403 body, so pattern-matching
+    // every possible manifestation would be brittle; any failure here means
+    // the same thing for our purposes: move on to the next source.
+    const reason = err instanceof Error ? err.message : String(err);
+    console.error(`\n✗ Wayback CDX API unreachable: ${reason}`);
+    console.error(
+      "Falling back to the availability API on archive.org — it yields only " +
+        "the closest capture per seed URL (no full enumeration, no MIME/digest " +
+        "metadata). Re-run from an environment with access to web.archive.org " +
+        "for complete enumeration.",
+    );
+    await availabilityFallback(discovered);
   }
 
   await commonCrawlFallback(discovered);
