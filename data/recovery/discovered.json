@@ -1,0 +1,662 @@
+{
+  "generated": "2026-07-26T15:25:05.485Z",
+  "totalUrls": 82,
+  "urls": [
+    {
+      "urlPath": "/",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Classic Movie Cameras and Projectors",
+      "captures": []
+    },
+    {
+      "urlPath": "/about.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | About This Site",
+      "captures": []
+    },
+    {
+      "urlPath": "/aboutme.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | About The Webmaster",
+      "captures": []
+    },
+    {
+      "urlPath": "/accessories.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Accessories",
+      "captures": []
+    },
+    {
+      "urlPath": "/accessories/case40.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Accessories | Cases 1940s",
+      "captures": []
+    },
+    {
+      "urlPath": "/accessories/case60.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Accessories | Cases 1960s",
+      "captures": []
+    },
+    {
+      "urlPath": "/accessories/edit40.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Accessories | Editing Equipment 1940s",
+      "captures": []
+    },
+    {
+      "urlPath": "/accessories/filter50.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Accessories | Filters 1950s",
+      "captures": []
+    },
+    {
+      "urlPath": "/accessories/filter60.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Accessories | Filters 1960s",
+      "captures": []
+    },
+    {
+      "urlPath": "/accessories/misc50.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Accessories | Miscellaneous 1950s",
+      "captures": []
+    },
+    {
+      "urlPath": "/accessories/motor50.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Accessories | Motors 1950s",
+      "captures": []
+    },
+    {
+      "urlPath": "/accessories/motor60.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Accessories | Motors 1960s",
+      "captures": []
+    },
+    {
+      "urlPath": "/accessories/support40.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Accessories | Tripods and Grips 1940s",
+      "captures": []
+    },
+    {
+      "urlPath": "/accessories/support60.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Accessories | Tripods and Grips 1960s",
+      "captures": []
+    },
+    {
+      "urlPath": "/accessories/view40.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Accessories | Viewfinders 1940s",
+      "captures": []
+    },
+    {
+      "urlPath": "/accessories/view50.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Accessories | Viewfinders 1950s",
+      "captures": []
+    },
+    {
+      "urlPath": "/archives.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Previous Updates - Archives",
+      "captures": []
+    },
+    {
+      "urlPath": "/articles.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Articles",
+      "captures": []
+    },
+    {
+      "urlPath": "/articles/05_12_01.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Articles | The Bolex Camera (Dec. 1, 2005)",
+      "captures": []
+    },
+    {
+      "urlPath": "/articles/06_10_04.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Articles | The Bolex Reporter Magazine (Oct. 4, 2006)",
+      "captures": []
+    },
+    {
+      "urlPath": "/articles/07_03_21.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Articles | Lenses for Bolex 16mm Cameras (Mar. 21, 2007)",
+      "captures": []
+    },
+    {
+      "urlPath": "/articles/07_05_11.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Articles | Paillard-Bolex Serial Numbers (May 11, 2007)",
+      "captures": []
+    },
+    {
+      "urlPath": "/cameras.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Cameras",
+      "captures": []
+    },
+    {
+      "urlPath": "/cameras/150.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Cameras | 150 Super",
+      "captures": []
+    },
+    {
+      "urlPath": "/cameras/155.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Cameras | 155 Macrozoom",
+      "captures": []
+    },
+    {
+      "urlPath": "/cameras/160.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Cameras | 160 Macrozoom",
+      "captures": []
+    },
+    {
+      "urlPath": "/cameras/75macro.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Cameras | 7.5 Macrozoom",
+      "captures": []
+    },
+    {
+      "urlPath": "/cameras/b8.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Cameras | B-8",
+      "captures": []
+    },
+    {
+      "urlPath": "/cameras/b8l.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Cameras | B-8L",
+      "captures": []
+    },
+    {
+      "urlPath": "/cameras/b8sl.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Cameras | B-8SL",
+      "captures": []
+    },
+    {
+      "urlPath": "/cameras/c8.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Cameras | C-8",
+      "captures": []
+    },
+    {
+      "urlPath": "/cameras/c8s.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Cameras | C-8S",
+      "captures": []
+    },
+    {
+      "urlPath": "/cameras/d8l.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Cameras | D-8L",
+      "captures": []
+    },
+    {
+      "urlPath": "/cameras/h16.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Cameras | H-16",
+      "captures": []
+    },
+    {
+      "urlPath": "/cameras/h16m.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Cameras | H-16 M",
+      "captures": []
+    },
+    {
+      "urlPath": "/cameras/h16m3.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Cameras | H-16 M-3",
+      "captures": []
+    },
+    {
+      "urlPath": "/cameras/h16m4.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Cameras | H-16 M-4",
+      "captures": []
+    },
+    {
+      "urlPath": "/cameras/h16m5.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Cameras | H-16 M-5",
+      "captures": []
+    },
+    {
+      "urlPath": "/cameras/h16reflex.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Cameras | H-16 Reflex",
+      "captures": []
+    },
+    {
+      "urlPath": "/cameras/h16rex.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Cameras | H-16 REX",
+      "captures": []
+    },
+    {
+      "urlPath": "/cameras/h16rex5.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Cameras | H-16 REX-5",
+      "captures": []
+    },
+    {
+      "urlPath": "/cameras/h16s.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Cameras | H-16 S",
+      "captures": []
+    },
+    {
+      "urlPath": "/cameras/h16standard.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Cameras | H-16 Standard",
+      "captures": []
+    },
+    {
+      "urlPath": "/cameras/h16supreme.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Cameras | H-16 Supreme",
+      "captures": []
+    },
+    {
+      "urlPath": "/cameras/h8.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Cameras | H-8",
+      "captures": []
+    },
+    {
+      "urlPath": "/cameras/h8rex.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Cameras | H-8 REX",
+      "captures": []
+    },
+    {
+      "urlPath": "/cameras/l8em.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Cameras | L-8 (early model)",
+      "captures": []
+    },
+    {
+      "urlPath": "/cameras/s1.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Cameras | S1 Automatic",
+      "captures": []
+    },
+    {
+      "urlPath": "/ephemera.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Ephemera",
+      "captures": []
+    },
+    {
+      "urlPath": "/ephemera/ads40_ad001.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Ephemera | Consistently - Bolex Leads",
+      "captures": []
+    },
+    {
+      "urlPath": "/ephemera/ads40_ad002.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Ephemera | Bolex Cameras and Projectors for Critical Amateurs",
+      "captures": []
+    },
+    {
+      "urlPath": "/ephemera/ads50_ad003.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Ephemera | BOLEXmas Gift Shopper!",
+      "captures": []
+    },
+    {
+      "urlPath": "/ephemera/ads60_bro002.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Ephemera | Bolex 150 Super Promotional Brochure",
+      "captures": []
+    },
+    {
+      "urlPath": "/ephemera/catalog40.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Ephemera | 1940s Catalogs",
+      "captures": []
+    },
+    {
+      "urlPath": "/ephemera/catalog50.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Ephemera | 1950s Catalogs",
+      "captures": []
+    },
+    {
+      "urlPath": "/ephemera/volume1.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Ephemera | Bolex Reporter Vol. 1",
+      "captures": []
+    },
+    {
+      "urlPath": "/ephemera/volume11.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Ephemera | Bolex Reporter Vol. 11",
+      "captures": []
+    },
+    {
+      "urlPath": "/ephemera/volume4.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Ephemera | Bolex Reporter Vol. 4",
+      "captures": []
+    },
+    {
+      "urlPath": "/faq.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Frequently Asked Questions",
+      "captures": []
+    },
+    {
+      "urlPath": "/glossary.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Glossary of Bolex and Filmmaking Terminology",
+      "captures": []
+    },
+    {
+      "urlPath": "/lenses.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Lenses",
+      "captures": []
+    },
+    {
+      "urlPath": "/lenses/40goerz.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Lenses | Goerz",
+      "captures": []
+    },
+    {
+      "urlPath": "/lenses/40kern.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Lenses | Kern Paillard 1940s",
+      "captures": []
+    },
+    {
+      "urlPath": "/lenses/40meyer.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Lenses | Hugo Meyer",
+      "captures": []
+    },
+    {
+      "urlPath": "/lenses/40wollensak.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Lenses | Wollensak",
+      "captures": []
+    },
+    {
+      "urlPath": "/lenses/50berthiot.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Lenses | SOM Berthiot 1950s",
+      "captures": []
+    },
+    {
+      "urlPath": "/lenses/50kern.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Lenses | Kern Paillard 1950s",
+      "captures": []
+    },
+    {
+      "urlPath": "/lenses/60berthiot.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Lenses | SOM Berthiot 1960s",
+      "captures": []
+    },
+    {
+      "urlPath": "/lenses/60kern.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Lenses | Kern Paillard 1960s",
+      "captures": []
+    },
+    {
+      "urlPath": "/links.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Links",
+      "captures": []
+    },
+    {
+      "urlPath": "/projectors.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Projectors",
+      "captures": []
+    },
+    {
+      "urlPath": "/projectors/185.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Projectors | 18-5",
+      "captures": []
+    },
+    {
+      "urlPath": "/projectors/185super.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Projectors | 18-5 Super",
+      "captures": []
+    },
+    {
+      "urlPath": "/projectors/m8.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Projectors | M-8",
+      "captures": []
+    },
+    {
+      "urlPath": "/projectors/m8r.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Projectors | M-8R",
+      "captures": []
+    },
+    {
+      "urlPath": "/projectors/model-g.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Projectors | Model G",
+      "captures": []
+    },
+    {
+      "urlPath": "/projectors/s211.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Projectors | S-211",
+      "captures": []
+    },
+    {
+      "urlPath": "/projectors/s221.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Projectors | S-221",
+      "captures": []
+    },
+    {
+      "urlPath": "/projectors/s311.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Projectors | S-311",
+      "captures": []
+    },
+    {
+      "urlPath": "/projectors/s321.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Projectors | S-321",
+      "captures": []
+    },
+    {
+      "urlPath": "/projectors/sm8.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Projectors | SM 8",
+      "captures": []
+    },
+    {
+      "urlPath": "/timeline.html",
+      "sources": [
+        "search-index-seed"
+      ],
+      "seedTitle": "Bolex Collector | Timeline",
+      "captures": []
+    }
+  ]
+}

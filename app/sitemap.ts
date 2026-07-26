@@ -1,0 +1,33 @@
+import type { MetadataRoute } from "next";
+import { getCameras, getRecoveredArticles } from "@/lib/content";
+
+export const dynamic = "force-static";
+
+const BASE = "https://bolexcollector.com";
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const staticRoutes = [
+    "",
+    "/cameras",
+    "/projectors",
+    "/lenses",
+    "/accessories",
+    "/serials",
+    "/articles",
+    "/archive",
+    "/timeline",
+    "/about",
+  ].map((route) => ({ url: `${BASE}${route}`, changeFrequency: "weekly" as const }));
+
+  const cameraRoutes = getCameras().models.map((m) => ({
+    url: `${BASE}/cameras/${m.slug}`,
+    changeFrequency: "monthly" as const,
+  }));
+
+  const articleRoutes = getRecoveredArticles().map((a) => ({
+    url: `${BASE}/articles/${a.slug}`,
+    changeFrequency: "yearly" as const,
+  }));
+
+  return [...staticRoutes, ...cameraRoutes, ...articleRoutes];
+}

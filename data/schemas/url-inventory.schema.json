@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "url-inventory.schema.json",
+  "title": "Recovered URL inventory",
+  "type": "object",
+  "required": ["site", "generated", "provenance", "verifiedUrls"],
+  "properties": {
+    "site": { "type": "string" },
+    "generated": { "type": "string" },
+    "provenance": {
+      "type": "object",
+      "required": ["method", "note"],
+      "properties": {
+        "method": { "type": "string" },
+        "note": { "type": "string" },
+        "referenceSnapshot": { "type": "string", "format": "uri" }
+      }
+    },
+    "verifiedUrls": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "title", "section"],
+        "properties": {
+          "path": { "type": "string", "pattern": "^/" },
+          "title": { "type": "string" },
+          "section": { "type": "string" }
+        }
+      }
+    },
+    "candidatePatterns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["pattern", "basis"],
+        "properties": {
+          "pattern": { "type": "string" },
+          "basis": { "type": "string" }
+        }
+      }
+    }
+  }
+}

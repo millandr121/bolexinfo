@@ -1,0 +1,12 @@
+{
+  "$schema": "../schemas/model.schema.json",
+  "provenance": "Manufacturer list and summaries verified against bolexcollector.com page titles and indexed page content (search-index recovery, 2026-07-26). Individual lens listings per manufacturer/decade are populated by the preservation pipeline from archived pages.",
+  "manufacturers": [
+    { "slug": "kern-paillard", "name": "Kern-Paillard", "country": "Switzerland", "pages": ["/lenses/40kern.html", "/lenses/50kern.html", "/lenses/60kern.html"], "summary": "Kern lenses of Aarau, Switzerland were the premier optics supplied for Bolex cameras across the 1940s, 1950s and 1960s, including the RX series computed for the reflex prism of the H-16 Reflex cameras.", "recovery": "summary-only" },
+    { "slug": "hugo-meyer", "name": "Hugo Meyer", "country": "Germany", "pages": ["/lenses/40meyer.html"], "summary": "Pre-war Bolex cameras were often equipped with Hugo Meyer lenses, a German manufacturer of photographic lenses founded in the late 1800s.", "recovery": "summary-only" },
+    { "slug": "goerz", "name": "C.P. Goerz", "country": "Germany / USA", "pages": ["/lenses/40goerz.html"], "summary": "Founded in 1886 by Carl Paul Goerz in Berlin. The Goerz Kino-Hypar was an air-spaced, three-element motion picture lens used by both professional and amateur cinematographers.", "recovery": "summary-only" },
+    { "slug": "wollensak", "name": "Wollensak", "country": "USA", "pages": ["/lenses/40wollensak.html"], "summary": "Established in 1899 in Rochester, NY. Good quality construction priced much lower than Kern lenses; a popular choice with amateurs throughout the 1940s and 1950s.", "recovery": "summary-only" },
+    { "slug": "som-berthiot", "name": "SOM Berthiot", "country": "France", "pages": ["/lenses/50berthiot.html", "/lenses/60berthiot.html"], "summary": "Société d'Optique et de Mécanique Berthiot produced C- and D-mount motion picture lenses for professional and amateur use, as well as the Pan Cinor series of zoom lenses.", "recovery": "summary-only" },
+    { "slug": "angenieux", "name": "Angénieux", "country": "France", "pages": [], "summary": "Documented on the original lens index alongside Kern-Paillard, Hugo Meyer, Goerz, Wollensak and SOM Berthiot; dedicated pages pending recovery.", "recovery": "pending" }
+  ]
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" fill="#211d18"/>
+  <!-- Twin reels of an H-16, reduced to a mark -->
+  <circle cx="22" cy="24" r="11" fill="none" stroke="#f5f1e8" stroke-width="3.5"/>
+  <circle cx="42" cy="24" r="11" fill="none" stroke="#f5f1e8" stroke-width="3.5"/>
+  <rect x="14" y="38" width="36" height="14" rx="2" fill="#f5f1e8"/>
+  <circle cx="45" cy="45" r="4" fill="#8a2f26"/>
+</svg>

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "model.schema.json",
+  "title": "BolexCollector model/category dataset",
+  "type": "object",
+  "required": ["provenance"],
+  "properties": {
+    "provenance": { "type": "string", "minLength": 1 },
+    "models": { "type": "array", "items": { "$ref": "#/$defs/entry" } },
+    "manufacturers": { "type": "array", "items": { "$ref": "#/$defs/entry" } },
+    "categories": { "type": "array", "items": { "$ref": "#/$defs/entry" } }
+  },
+  "$defs": {
+    "entry": {
+      "type": "object",
+      "required": ["slug", "name", "summary", "recovery"],
+      "properties": {
+        "slug": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+        "name": { "type": "string" },
+        "format": { "type": "string" },
+        "country": { "type": "string" },
+        "introduced": { "type": ["integer", "null"], "minimum": 1900, "maximum": 2000 },
+        "originalPath": { "type": "string", "pattern": "^/" },
+        "pages": { "type": "array", "items": { "type": "string", "pattern": "^/" } },
+        "summary": { "type": ["string", "null"] },
+        "recovery": { "enum": ["full", "summary-only", "pending"] }
+      }
+    }
+  }
+}

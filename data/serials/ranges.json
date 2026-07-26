@@ -1,0 +1,7 @@
+{
+  "$schema": "../schemas/serial-ranges.schema.json",
+  "source": "Populated by scripts/extract.ts from the preserved page /articles/07_05_11.html (\"Paillard-Bolex Serial Numbers\", May 11 2007), which the original site credits to the Bolex International S.A. bulletin \"Serial Numbers and Date of Manufacture\" (September 1, 1977) and original Paillard service and repair manuals.",
+  "status": "pending-recovery",
+  "note": "This dataset is intentionally empty until the archived serial tables are downloaded and extracted. Serial data is never entered from memory or secondary sources — preservation fidelity requires extraction from the archived original.",
+  "ranges": []
+}

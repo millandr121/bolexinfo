@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "serial-ranges.schema.json",
+  "title": "Paillard-Bolex serial number ranges",
+  "type": "object",
+  "required": ["source", "ranges"],
+  "properties": {
+    "source": { "type": "string" },
+    "status": { "enum": ["pending-recovery", "extracted", "verified"] },
+    "note": { "type": "string" },
+    "generated": { "type": "string" },
+    "ranges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["year", "from", "to"],
+        "properties": {
+          "year": { "type": "integer", "minimum": 1920, "maximum": 1980 },
+          "from": { "type": "integer", "minimum": 0 },
+          "to": { "type": "integer", "minimum": 0 },
+          "series": { "type": "string", "description": "Model series the range applies to, e.g. 'H/B/C/D main sequence' or 'P/K/S1 1963 sequence'." },
+          "note": { "type": "string" }
+        }
+      }
+    }
+  }
+}

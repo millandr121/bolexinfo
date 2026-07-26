@@ -1,0 +1,31 @@
+{
+  "$schema": "../schemas/model.schema.json",
+  "provenance": "Model list and summaries verified against bolexcollector.com page titles and indexed page content (search-index recovery, 2026-07-26). Full specifications, serial ranges, and imagery are populated by the preservation pipeline (scripts/extract.ts) from archived pages. Fields marked null are pending recovery — they are never guessed.",
+  "models": [
+    { "slug": "h16", "name": "H-16", "format": "16mm", "introduced": 1935, "originalPath": "/cameras/h16.html", "summary": "16mm camera taking 100ft (30m) and 50ft (15m) daylight loading spools, with automatic threading and loop forming, a constant-speed spring motor, and a rotating turret accommodating three interchangeable C-mount lenses.", "recovery": "summary-only" },
+    { "slug": "h16standard", "name": "H-16 Standard", "format": "16mm", "introduced": null, "originalPath": "/cameras/h16standard.html", "summary": null, "recovery": "pending" },
+    { "slug": "h16supreme", "name": "H-16 Supreme", "format": "16mm", "introduced": null, "originalPath": "/cameras/h16supreme.html", "summary": "16mm camera with 100ft (30m) and 50ft (15m) daylight loading spool capacity.", "recovery": "summary-only" },
+    { "slug": "h16s", "name": "H-16 S", "format": "16mm", "introduced": null, "originalPath": "/cameras/h16s.html", "summary": "Non-reflex, turret-style 16mm camera.", "recovery": "summary-only" },
+    { "slug": "h16m", "name": "H-16 M", "format": "16mm", "introduced": null, "originalPath": "/cameras/h16m.html", "summary": "Accommodates a single interchangeable C-mount lens; variable speeds of 8, 16, 24, 32 and 64 frames per second.", "recovery": "summary-only" },
+    { "slug": "h16m3", "name": "H-16 M-3", "format": "16mm", "introduced": null, "originalPath": "/cameras/h16m3.html", "summary": null, "recovery": "pending" },
+    { "slug": "h16m4", "name": "H-16 M-4", "format": "16mm", "introduced": 1965, "originalPath": "/cameras/h16m4.html", "summary": "Began production in 1965.", "recovery": "summary-only" },
+    { "slug": "h16m5", "name": "H-16 M-5", "format": "16mm", "introduced": 1967, "originalPath": "/cameras/h16m5.html", "summary": "Began production in 1967.", "recovery": "summary-only" },
+    { "slug": "h16reflex", "name": "H-16 Reflex", "format": "16mm", "introduced": null, "originalPath": "/cameras/h16reflex.html", "summary": "Rotating turret with three interchangeable RX-type C-mount lenses; reflex viewing through a semi-reflecting prism with groundglass focusing.", "recovery": "summary-only" },
+    { "slug": "h16rex", "name": "H-16 REX", "format": "16mm", "introduced": 1959, "originalPath": "/cameras/h16rex.html", "summary": "Introduced in 1959.", "recovery": "summary-only" },
+    { "slug": "h16rex5", "name": "H-16 REX-5", "format": "16mm", "introduced": 1966, "originalPath": "/cameras/h16rex5.html", "summary": "Began production in 1966; introduced in 1967.", "recovery": "summary-only" },
+    { "slug": "h8", "name": "H-8", "format": "Double 8mm", "introduced": 1938, "originalPath": "/cameras/h8.html", "summary": "Double 8mm model of the H camera line, introduced 1938.", "recovery": "summary-only" },
+    { "slug": "h8rex", "name": "H-8 REX", "format": "Double 8mm", "introduced": null, "originalPath": "/cameras/h8rex.html", "summary": "The first 8mm reflex camera manufactured by Bolex.", "recovery": "summary-only" },
+    { "slug": "l8em", "name": "L-8 (early model)", "format": "Double 8mm", "introduced": 1942, "originalPath": "/cameras/l8em.html", "summary": "Double 8mm camera introduced in 1942.", "recovery": "summary-only" },
+    { "slug": "b8", "name": "B-8", "format": "Double 8mm", "introduced": 1953, "originalPath": "/cameras/b8.html", "summary": "Double 8mm camera introduced in 1953.", "recovery": "summary-only" },
+    { "slug": "b8l", "name": "B-8L", "format": "Double 8mm", "introduced": null, "originalPath": "/cameras/b8l.html", "summary": "First in the series of \"Compumatic\" cameras, providing an easy method for determining proper exposure using a photo-electric selenium cell and galvanometer needle.", "recovery": "summary-only" },
+    { "slug": "b8sl", "name": "B-8SL", "format": "Double 8mm", "introduced": null, "originalPath": "/cameras/b8sl.html", "summary": null, "recovery": "pending" },
+    { "slug": "c8", "name": "C-8", "format": "Double 8mm", "introduced": 1954, "originalPath": "/cameras/c8.html", "summary": "Double 8mm camera introduced in 1954.", "recovery": "summary-only" },
+    { "slug": "c8s", "name": "C-8S", "format": "Double 8mm", "introduced": null, "originalPath": "/cameras/c8s.html", "summary": null, "recovery": "pending" },
+    { "slug": "d8l", "name": "D-8L", "format": "Double 8mm", "introduced": null, "originalPath": "/cameras/d8l.html", "summary": null, "recovery": "pending" },
+    { "slug": "150", "name": "150 Super", "format": "Super 8", "introduced": 1967, "originalPath": "/cameras/150.html", "summary": "The first Bolex Super 8 model. Unconventional design with a built-in lens, bright reflex viewfinder, and a film chamber located on top of the camera body.", "recovery": "summary-only" },
+    { "slug": "155", "name": "155 Macrozoom", "format": "Super 8", "introduced": 1968, "originalPath": "/cameras/155.html", "summary": "Improved on the 150 Super. The Macrozoom lens focuses as close as one inch; the viewing system features a coincident-image rangefinder.", "recovery": "summary-only" },
+    { "slug": "160", "name": "160 Macrozoom", "format": "Super 8", "introduced": 1970, "originalPath": "/cameras/160.html", "summary": "Introduced in 1970, the latest model in the Macrozoom series.", "recovery": "summary-only" },
+    { "slug": "75macro", "name": "7.5 Macrozoom", "format": "Super 8", "introduced": 1969, "originalPath": "/cameras/75macro.html", "summary": "Introduced in 1969 as a lower-priced option to the 155/160 series.", "recovery": "summary-only" },
+    { "slug": "s1", "name": "S1 Automatic", "format": "Super 8", "introduced": null, "originalPath": "/cameras/s1.html", "summary": "Assigned its own unique serial number range by Paillard in 1963 alongside the P-series and K-series cameras.", "recovery": "summary-only" }
+  ]
+}
