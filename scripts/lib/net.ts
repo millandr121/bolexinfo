@@ -22,19 +22,34 @@ export class PolicyDeniedError extends Error {
   }
 }
 
+export interface PoliteFetchOptions {
+  /** Delay after a successful response, before the next request. */
+  delayMs?: number;
+  /** Retries after the first attempt (so total attempts = retries + 1). */
+  retries?: number;
+  /** Per-attempt abort timeout. */
+  timeoutMs?: number;
+}
+
 /**
  * Fetch with retry + exponential backoff and a politeness delay, tuned by
- * default for archive.org's rate limits (override `delayMs` for hosts with
- * more generous limits, e.g. Common Crawl). A CONNECT-level 403 from a
- * corporate egress proxy is surfaced as PolicyDeniedError immediately —
- * retrying a policy denial is pointless and impolite.
+ * default for archive.org's rate limits (pass `opts` to relax these for
+ * hosts with more generous limits, e.g. Common Crawl, or to bound worst-case
+ * latency when a call site queries several hosts/collections in sequence and
+ * the default budget per attempt would otherwise multiply out to minutes of
+ * silence). A CONNECT-level 403 from a corporate egress proxy is surfaced as
+ * PolicyDeniedError immediately — retrying a policy denial is pointless and
+ * impolite.
  */
-export async function politeFetch(url: string, init?: RequestInit, delayMs: number = POLITENESS.delayMs): Promise<Response> {
+export async function politeFetch(url: string, init?: RequestInit, opts: PoliteFetchOptions = {}): Promise<Response> {
+  const delayMs = opts.delayMs ?? POLITENESS.delayMs;
+  const retries = opts.retries ?? POLITENESS.retries;
+  const timeoutMs = opts.timeoutMs ?? POLITENESS.requestTimeoutMs;
   let lastError: unknown;
-  for (let attempt = 0; attempt <= POLITENESS.retries; attempt++) {
+  for (let attempt = 0; attempt <= retries; attempt++) {
     if (attempt > 0) await sleep(POLITENESS.backoffBaseMs * 2 ** (attempt - 1));
     const timeoutController = new AbortController();
-    const timeout = setTimeout(() => timeoutController.abort(), POLITENESS.requestTimeoutMs);
+    const timeout = setTimeout(() => timeoutController.abort(), timeoutMs);
     try {
       const res = await fetch(url, {
         ...init,
@@ -61,7 +76,7 @@ export async function politeFetch(url: string, init?: RequestInit, delayMs: numb
     } catch (err) {
       if (err instanceof PolicyDeniedError) throw err;
       if (err instanceof Error && err.name === "AbortError") {
-        lastError = new Error(`Timed out after ${POLITENESS.requestTimeoutMs}ms fetching ${url}`);
+        lastError = new Error(`Timed out after ${timeoutMs}ms fetching ${url}`);
         continue;
       }
       const message = err instanceof Error ? String(err.cause ?? err.message) : String(err);
@@ -75,8 +90,8 @@ export async function politeFetch(url: string, init?: RequestInit, delayMs: numb
 }
 
 /** Fetch JSON with the same retry semantics. */
-export async function fetchJson<T>(url: string, delayMs?: number): Promise<T> {
-  const res = await politeFetch(url, undefined, delayMs);
+export async function fetchJson<T>(url: string, opts?: PoliteFetchOptions): Promise<T> {
+  const res = await politeFetch(url, undefined, opts);
   if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
   return (await res.json()) as T;
 }

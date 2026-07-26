@@ -1,6 +1,19 @@
 import zlib from "node:zlib";
 import { COMMON_CRAWL, HOSTS } from "./config";
-import { politeFetch } from "./net";
+import { politeFetch, type PoliteFetchOptions } from "./net";
+
+// A single closestCommonCrawlCapture() call can issue up to
+// HOSTS.length * maxCollectionsChecked sequential queries. If each one used
+// the default archive.org-tuned retry/timeout budget (up to 5 attempts *
+// 20s + backoff), one slow or half-down Common Crawl endpoint could stall a
+// single URL lookup for 8+ minutes with no output — indistinguishable from a
+// hang. This budget is deliberately tighter so a bad endpoint fails fast and
+// the pipeline keeps moving (and logging) instead of going silent.
+const CC_FETCH_OPTIONS: PoliteFetchOptions = {
+  delayMs: COMMON_CRAWL.requestDelayMs,
+  retries: 1,
+  timeoutMs: 8_000,
+};
 
 interface CcIndexRecord {
   urlkey: string;
@@ -42,7 +55,7 @@ let collectionsCache: CcCollection[] | null = null;
  */
 async function getCollections(): Promise<CcCollection[]> {
   if (collectionsCache) return collectionsCache;
-  const res = await politeFetch(COMMON_CRAWL.collinfo, undefined, COMMON_CRAWL.requestDelayMs);
+  const res = await politeFetch(COMMON_CRAWL.collinfo, undefined, CC_FETCH_OPTIONS);
   if (!res.ok) throw new Error(`Common Crawl collinfo returned HTTP ${res.status}`);
   const raw = (await res.json()) as Array<{ id: string; "cdx-api": string }>;
   collectionsCache = raw.map((c) => ({ id: c.id, cdxApi: c["cdx-api"] }));
@@ -51,7 +64,7 @@ async function getCollections(): Promise<CcCollection[]> {
 
 async function queryCollection(cdxApi: string, url: string): Promise<CcIndexRecord[]> {
   const params = new URLSearchParams({ url, output: "json" });
-  const res = await politeFetch(`${cdxApi}?${params}`, undefined, COMMON_CRAWL.requestDelayMs);
+  const res = await politeFetch(`${cdxApi}?${params}`, undefined, CC_FETCH_OPTIONS);
   if (res.status === 404) return []; // no captures of this URL in this collection
   if (!res.ok) throw new Error(`Common Crawl index ${cdxApi} returned HTTP ${res.status}`);
   const text = await res.text();
@@ -116,7 +129,7 @@ export async function fetchCommonCrawlAsset(capture: CommonCrawlCapture): Promis
   const res = await politeFetch(
     `${COMMON_CRAWL.dataHost}/${capture.filename}`,
     { headers: { Range: `bytes=${capture.offset}-${capture.offset + capture.length - 1}` } },
-    COMMON_CRAWL.requestDelayMs,
+    CC_FETCH_OPTIONS,
   );
   if (!res.ok && res.status !== 206) return null;
   const compressed = Buffer.from(await res.arrayBuffer());
