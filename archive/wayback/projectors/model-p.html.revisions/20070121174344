@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="description" content="Specifications of the Bolex Model P projector for 9.5mm film">
+<title>Bolex Collector | Projectors | Model P</title>
+<link rel="stylesheet" href="../style40.css" type="text/css" media="screen">
+<link rel="shortcut icon" href="../images/favicon.ico">
+</head>
+
+<body>
+		<div><a name="top">&nbsp;</a></div>
+			
+			<!-- LOGO Top left logo menu -->
+			
+<div id="logo"> 
+  <!-- Atomz Search HTML for Bolex Collector -->
+  <form id="searchbox" method="get" action="http://search.atomz.com/search/">
+    <div> 
+      <input class="textarea" name="sp-q">
+      <br>
+      <input class="buttonstyle" type="submit" value="Search">
+      <input type="hidden" name="sp-a" value="sp10036ab9">
+      <input type="hidden" name="sp-p" value="all">
+      <input type="hidden" name="sp-f" value="ISO-8859-1">
+    </div>
+  </form>
+</div>
+				
+			<!-- HEADER with banner and top links -->
+			
+<div id="header"> 
+  <ul>
+    <li><a href="http://www.bolexcollector.com">Home</a></li>
+    <li><a href="../cameras.html">Cameras</a></li>
+    <li><a class="selecthead" href="../projectors.html">Projectors</a></li>
+    <li><a href="../lenses.html">Lenses</a></li>
+    <li><a href="../accessories.html">Accessories</a></li>
+    <li><a href="../ephemera.html">Ephemera</a></li>
+  </ul>
+</div>
+	
+	
+
+<div id="menu"> 
+  <h4 class="type">1928 - 1940s</h4>
+  <ul>
+    <li><a href="auto-proj.html">Auto Cine</a></li>
+    <li><a href="model-c.html">Model C</a></li>
+    <li><a href="model-d.html">Model D</a></li>
+    <li><a class="selectmenu" href="model-p.html">Model P</a></li>
+    <li><a href="model-g.html">Model G</a></li>
+  </ul>
+  <h4 class="type">1950s</h4>
+  <ul>
+    <li><a href="m8.html">M-8</a></li>
+    <li><a href="m8r.html">M-8R</a></li>
+  </ul>
+  <h4 class="type">1960s</h4>
+  <ul>
+    <li><a href="s211.html">S-211</a></li>
+    <li><a href="s221.html">S-221</a></li>
+    <li><a href="185.html">18-5</a></li>
+    <li><a href="185auto.html">18-5 Auto</a></li>
+    <li><a href="185super.html">18-5 Super</a></li>
+    <li><a href="sm8.html">SM 8</a></li>
+    <li><a href="185l.html">18-5L</a></li>
+    <li><a href="s311.html">S-311</a></li>
+    <li><a href="s321.html">S-321</a></li>
+    <li><a href="multimatic.html">Multimatic</a></li>
+  </ul>
+</div>
+
+<div id="content"> 
+  <div id="itemtop"> <img class="fltleft" src="../images/projectors/modelproj.jpg" alt="Bolex Model P Projector" width="234" height="315"> 
+    <h3>BOLEX MODEL P</h3>
+    <h4>9.5mm Projector</h4>
+    <h4>1932</h4>
+    <!-- Specifications -->
+    <ul>
+      <li><b>CONSTRUCTION:</b> Grey enamel finish</li>
+      <li><b>REEL CAPACITY:</b> Reel arms accommodate 400 ft spools.</li>
+      <li><b>THREADING:</b> Manual threading and loop forming of film.</li>
+      <li><b>POWER:</b> Runs on 110v AC or DC power supply.</li>
+      <li><b>LAMP:</b> 250w or 400w lamp; Side located lamp housing reflects light 
+        at a 90 degree angle and through the lens.</li>
+      <li><b>LENS:</b> Interchangeable lenses</li>
+      <li><b>SPEED:</b> 16 frames per second; Notch title projection; Reverse 
+        projection; Rapid motor rewind.</li>
+      <li><b>OTHER FEATURES:</b> Direct draft ventilation and cooling of lamp; 
+        Adjustable base with tilting screws for proper alignment of projected 
+        image;</li>
+    </ul>
+  </div>
+  <hr>
+  <h4 class="close">Notes and Comments</h4>
+  <p>The Bolex Model P was a single gauge 9.5mm projector featuring a notch title 
+    stop device. Because 9.5mm was never a popular film format here in the United 
+    States, I have little information on this projector. Although it was advertised 
+    in the US, it was simply referred to as a "Bolex 9.5mm model", rather than 
+    the P or PA. </p>
+  <p>The projector was modified twice; the later version included a more powerful 
+    projection lamp. If you have more information on this model, please <a href="../contact.html">email</a> 
+    me. </p>
+  <h4 class="close">Model P</h4>
+  <p class="closep"><span class="italicb">1932 -- 9.5mm Projector</span><br>
+    The original version of the Model P featured a 250 watt lamp. </p>
+  <h4 class="close">Model PA</h4>
+  <p class="closep"><span class="italicb">1937 -- 9.5mm Projector</span><br>
+    This may possibly be referred to as Model PA2. This later version used a 400 
+    Watt lamp. </p>
+  <hr class="spacer">
+  <ul id="backnext">
+    <li class="left"><a href="model-d.html">Previous: Model D</a></li>
+    <li class="right"><a href="model-g.html">Next: Model G</a></li>
+  </ul>
+  <!-- begin copyright here -->
+  <div class="copyright"> Copyright &copy; 2005-2007 bolexcollector.com<br>
+    <a href="#top">Return to top of Page</a> </div>
+</div>
+
+<!-- End of main content above -->
+</body>
+</html>
