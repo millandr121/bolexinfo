@@ -1,0 +1,9 @@
+# archive/wayback holds byte-faithful preserved originals (HTML, images,
+# downloads) fetched directly from Wayback/Common Crawl. Their SHA-1 hashes
+# are recorded in archive/meta/manifest.json at fetch time, and verify.ts
+# checks committed bytes against those hashes. Without this, Git's line-ending
+# normalization (core.autocrlf on Windows, or a repo-level text=auto default)
+# silently rewrites \r\n to \n on commit for anything it guesses is text,
+# corrupting the preserved copy relative to what was actually captured.
+# Treating this entire tree as binary disables that normalization outright.
+archive/wayback/** -text -diff
