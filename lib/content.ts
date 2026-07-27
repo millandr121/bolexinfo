@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
+import type { SerialRow } from "./museum";
 
 /**
  * All content access flows through this module. Pages never read files
@@ -55,19 +56,12 @@ export function getAccessoryCategories(): { provenance: string; categories: Mode
   return { provenance: file?.provenance ?? "", categories: file?.categories ?? [] };
 }
 
-export interface SerialRange {
-  year: number;
-  from: number;
-  to: number;
-  series?: string;
-  note?: string;
-}
-
 export interface SerialDataset {
   source: string;
   status?: string;
   note?: string;
-  ranges: SerialRange[];
+  capturedAt?: string;
+  ranges: SerialRow[];
 }
 
 export function getSerialDataset(): SerialDataset {
@@ -92,34 +86,64 @@ export interface Article {
   body: string;
 }
 
-function readMarkdownDir(dir: string): Article[] {
+/** Strip "Bolex Collector | Articles | " prefixes from a recovered title. */
+function cleanTitle(title: string): string {
+  return title.replace(/^(Bolex Collector\s*\|\s*)?(Articles?\s*\|\s*)?/i, "").trim();
+}
+
+/**
+ * Recovered article Markdown was produced by running Turndown over the whole
+ * archived HTML page, so it carries the site's nav, social links, ad scripts
+ * and footer. Real content sits between the article's own `## ` heading and
+ * the footer nav ("Return to Index" / "Copyright"). This isolates it.
+ */
+function cleanArticleBody(md: string): string {
+  let s = md;
+  // Drop everything up to and including the article's first H2 title line
+  // (the page renders the title separately), removing the leading chrome.
+  const h2 = s.match(/^##\s+.+$/m);
+  if (h2) s = s.slice(s.indexOf(h2[0]) + h2[0].length);
+  // Cut the footer: the nav block beginning at "[Return to Index]".
+  const footer = s.search(/\*\s*\[Return to Index\]/);
+  if (footer !== -1) s = s.slice(0, footer);
+  // Remove stray tracking/ad/social lines anywhere in the body.
+  s = s
+    .split("\n")
+    .filter((l) => !/document\.write|urchinTracker|_uacct|addthis\.com|lg-share-en\.gif|s7\.addthis/.test(l))
+    .join("\n");
+  // Tidy a dangling horizontal rule left where the footer was removed.
+  return s.replace(/\n\s*\*\s*\*\s*\*\s*$/, "").trim();
+}
+
+function readMarkdownDir(dir: string, clean: boolean): Article[] {
   if (!fs.existsSync(dir)) return [];
   return fs
     .readdirSync(dir)
     .filter((f) => f.endsWith(".md") && f !== "README.md")
     .map((f) => {
       const { data, content } = matter(fs.readFileSync(path.join(dir, f), "utf8"));
+      const rawTitle = (data.title as string) ?? path.basename(f, ".md");
       return {
         slug: path.basename(f, ".md"),
-        title: (data.title as string) ?? path.basename(f, ".md"),
+        title: clean ? cleanTitle(rawTitle) : rawTitle,
         date: data.date as string | undefined,
         description: data.description as string | undefined,
         originalUrl: data.originalUrl as string | undefined,
         originalPath: data.originalPath as string | undefined,
         capturedAt: data.capturedAt as string | undefined,
         kind: data.kind as string | undefined,
-        body: content,
+        body: clean ? cleanArticleBody(content) : content,
       };
     })
     .sort((a, b) => (b.date ?? "").localeCompare(a.date ?? ""));
 }
 
 export function getRecoveredArticles(): Article[] {
-  return readMarkdownDir(path.join(ROOT, "content", "articles"));
+  return readMarkdownDir(path.join(ROOT, "content", "articles"), true);
 }
 
 export function getEditorial(slug: string): Article | null {
-  const all = readMarkdownDir(path.join(ROOT, "content", "editorial"));
+  const all = readMarkdownDir(path.join(ROOT, "content", "editorial"), false);
   return all.find((a) => a.slug === slug) ?? null;
 }
 

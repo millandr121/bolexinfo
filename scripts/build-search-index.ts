@@ -8,6 +8,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
+import { getCameraRecords, getProjectorRecords } from "../lib/museum";
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const read = <T>(p: string, fallback: T): T =>
@@ -16,9 +17,7 @@ const read = <T>(p: string, fallback: T): T =>
 interface Entry {
   slug: string;
   name: string;
-  format?: string;
   country?: string;
-  introduced?: number | null;
   summary: string | null;
 }
 
@@ -42,24 +41,24 @@ const docs: Doc[] = [
   { title: "About the Restoration", href: "/about", section: "archive" },
 ];
 
-const cameras = read<{ models: Entry[] }>(path.join(ROOT, "data/models/cameras.json"), { models: [] });
-for (const m of cameras.models) {
+// Index the full recovered camera catalogue, including spec labels so a search
+// for "matte box" or "turret" surfaces the models that document it.
+for (const m of getCameraRecords()) {
   docs.push({
     title: m.name,
     href: `/cameras/${m.slug}`,
     section: "cameras",
-    keywords: `${m.format ?? ""} ${m.introduced ?? ""} bolex paillard camera`,
-    summary: m.summary ?? undefined,
+    keywords: `${m.format ?? ""} ${m.introduced ?? ""} bolex paillard camera ${m.specs.map((s) => s.label).join(" ")}`,
+    summary: m.summary ?? m.specs[0]?.value ?? undefined,
   });
 }
 
-const projectors = read<{ models: Entry[] }>(path.join(ROOT, "data/models/projectors.json"), { models: [] });
-for (const m of projectors.models) {
+for (const m of getProjectorRecords()) {
   docs.push({
     title: m.name,
-    href: "/projectors",
+    href: `/projectors`,
     section: "projectors",
-    keywords: `${m.format ?? ""} projector`,
+    keywords: `${m.format ?? ""} projector ${m.specs.map((s) => s.label).join(" ")}`,
     summary: m.summary ?? undefined,
   });
 }

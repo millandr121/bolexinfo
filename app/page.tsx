@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
-import { getArchiveStats, getCameras, getUrlInventory } from "@/lib/content";
+import { getArchiveStats, getUrlInventory } from "@/lib/content";
+import { getCameraRecords } from "@/lib/museum";
 
 const SECTIONS = [
   {
@@ -36,7 +37,7 @@ const SECTIONS = [
 ] as const;
 
 export default function HomePage() {
-  const { models } = getCameras();
+  const models = getCameraRecords();
   const inventory = getUrlInventory();
   const stats = getArchiveStats();
 

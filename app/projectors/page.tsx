@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
 import { Reveal } from "@/components/Reveal";
-import { ProvenanceNote, RecoveryBadge } from "@/components/RecoveryBadge";
 import { getProjectors } from "@/lib/content";
+import { getProjectorRecords } from "@/lib/museum";
+import { originalArchiveHref } from "@/lib/archive";
 
 export const metadata: Metadata = {
   title: "Projectors",
   description:
-    "Paillard-Bolex movie projectors for 8mm, Super 8 and 16mm film, from the multi-gauge Model G of 1936 to the S-series sound projectors.",
+    "Paillard-Bolex movie projectors for 8mm, Super 8 and 16mm film, recovered from BolexCollector.com — from the multi-gauge Model G of 1936 to the S-series sound projectors.",
 };
 
 export default function ProjectorsPage() {
-  const { models, provenance } = getProjectors();
+  const models = getProjectorRecords();
+  const provenance = getProjectors().provenance;
 
   return (
     <div className="pt-14 pb-8">
@@ -19,33 +21,49 @@ export default function ProjectorsPage() {
           Projectors
         </h1>
         <p className="mt-4 max-w-2xl text-[var(--fg-soft)] leading-relaxed">
-          Paillard manufactured single and multi-format projectors for 8mm, Super 8 and
-          16mm film, aimed mainly at the amateur and home movie market.
+          Paillard&rsquo;s single and multi-format projectors for the amateur and home-movie
+          market — {models.length} models recovered, each with its original specifications.
         </p>
       </Reveal>
 
-      <ul className="mt-12 grid sm:grid-cols-2 gap-px bg-[var(--line)] border border-[var(--line)]">
-        {models.map((model, i) => (
-          <Reveal key={model.slug} as="li" delay={Math.min(i * 0.04, 0.3)}>
-            <div className="h-full bg-[var(--bg)] p-6">
-              <div className="flex items-baseline justify-between gap-4">
-                <h2 className="font-[family-name:var(--font-display)] text-xl font-[560]">{model.name}</h2>
-                <span className="font-[family-name:var(--font-mono)] text-sm text-[var(--fg-soft)]">
-                  {model.format} · {model.introduced ?? "—"}
-                </span>
+      <ul className="mt-12 grid gap-px bg-[var(--line)] border border-[var(--line)]">
+        {models.map((model, i) => {
+          const archiveHref = originalArchiveHref(model.originalPath);
+          return (
+            <Reveal key={model.slug} as="li" delay={Math.min(i * 0.03, 0.25)}>
+              <div className="h-full bg-[var(--bg)] p-6 sm:flex sm:items-start sm:gap-8">
+                <div className="sm:w-48 shrink-0">
+                  <div className="flex items-baseline gap-3">
+                    <h2 className="font-[family-name:var(--font-display)] text-xl font-[560]">{model.name}</h2>
+                    <span className="font-[family-name:var(--font-mono)] text-xs text-[var(--fg-soft)]">
+                      {model.introduced ?? ""}
+                    </span>
+                  </div>
+                  <p className="mt-1 font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.14em] text-[var(--fg-soft)]">
+                    {model.format ?? "projector"}
+                  </p>
+                </div>
+                <div className="mt-3 sm:mt-0 flex-1">
+                  {model.summary && <p className="text-sm leading-relaxed text-[var(--fg-soft)] max-w-xl">{model.summary}</p>}
+                  <div className="mt-2 flex flex-wrap gap-x-5 gap-y-1 font-[family-name:var(--font-mono)] text-xs text-[var(--fg-soft)]">
+                    {model.specs.length > 0 && <span>{model.specs.length} specifications</span>}
+                    {archiveHref && (
+                      <a href={archiveHref} className="text-[var(--accent)] underline underline-offset-4">
+                        View original archive ↗
+                      </a>
+                    )}
+                  </div>
+                </div>
               </div>
-              <p className="mt-2.5 text-sm leading-relaxed text-[var(--fg-soft)]">
-                {model.summary ?? "Full description pending recovery from the archived original."}
-              </p>
-              <div className="mt-3">
-                <RecoveryBadge status={model.recovery} />
-              </div>
-            </div>
-          </Reveal>
-        ))}
+            </Reveal>
+          );
+        })}
       </ul>
 
-      <ProvenanceNote>{provenance}</ProvenanceNote>
+      <aside className="rule mt-16 pt-4 text-xs leading-relaxed text-[var(--fg-soft)] font-[family-name:var(--font-mono)] max-w-2xl">
+        <span className="uppercase tracking-[0.18em]">Provenance — </span>
+        {provenance}
+      </aside>
     </div>
   );
 }

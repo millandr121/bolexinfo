@@ -1,7 +1,292 @@
 {
   "$schema": "../schemas/serial-ranges.schema.json",
-  "source": "Populated by scripts/extract.ts from the preserved page /articles/07_05_11.html (\"Paillard-Bolex Serial Numbers\", May 11 2007), which the original site credits to the Bolex International S.A. bulletin \"Serial Numbers and Date of Manufacture\" (September 1, 1977) and original Paillard service and repair manuals.",
-  "status": "pending-recovery",
-  "note": "This dataset is intentionally empty until the archived serial tables are downloaded and extracted. Serial data is never entered from memory or secondary sources — preservation fidelity requires extraction from the archived original.",
-  "ranges": []
+  "source": "Extracted from the recovered page /articles/07_05_11.html (\"Paillard-Bolex Serial Numbers\", May 11 2007), which the original site credits to the Bolex International S.A. bulletin \"Serial Numbers and Date of Manufacture\" (September 1, 1977) and original Paillard service and repair manuals.",
+  "status": "extracted",
+  "note": "Ranges parsed from the archived serial tables. Independent model series (e.g. the P/K/S1 cameras numbered from 1963) reused number blocks, so a serial may match more than one year — every candidate is shown.",
+  "capturedAt": "20250307220139",
+  "generated": "2026-07-27T02:56:24.665Z",
+  "ranges": [
+    {
+      "from": 7510,
+      "to": 10000,
+      "yearFrom": 1936,
+      "yearTo": 1937
+    },
+    {
+      "from": 10000,
+      "to": 15000,
+      "yearFrom": 1938,
+      "yearTo": 1940
+    },
+    {
+      "from": 15000,
+      "to": 20000,
+      "yearFrom": 1941,
+      "yearTo": 1943
+    },
+    {
+      "from": 20000,
+      "to": 25000,
+      "yearFrom": 1944,
+      "yearTo": 1944
+    },
+    {
+      "from": 25000,
+      "to": 30000,
+      "yearFrom": 1945,
+      "yearTo": 1945
+    },
+    {
+      "from": 30000,
+      "to": 40000,
+      "yearFrom": 1946,
+      "yearTo": 1947
+    },
+    {
+      "from": 40000,
+      "to": 50000,
+      "yearFrom": 1948,
+      "yearTo": 1948
+    },
+    {
+      "from": 50000,
+      "to": 55000,
+      "yearFrom": 1949,
+      "yearTo": 1949
+    },
+    {
+      "from": 55000,
+      "to": 60000,
+      "yearFrom": 1950,
+      "yearTo": 1950
+    },
+    {
+      "from": 60000,
+      "to": 70000,
+      "yearFrom": 1951,
+      "yearTo": 1951
+    },
+    {
+      "from": 70000,
+      "to": 85000,
+      "yearFrom": 1952,
+      "yearTo": 1952
+    },
+    {
+      "from": 410000,
+      "to": 415000,
+      "yearFrom": 1952,
+      "yearTo": 1952
+    },
+    {
+      "from": 85000,
+      "to": 95000,
+      "yearFrom": 1953,
+      "yearTo": 1953
+    },
+    {
+      "from": 415000,
+      "to": 420000,
+      "yearFrom": 1953,
+      "yearTo": 1953
+    },
+    {
+      "from": 95000,
+      "to": 105000,
+      "yearFrom": 1954,
+      "yearTo": 1954
+    },
+    {
+      "from": 420000,
+      "to": 460000,
+      "yearFrom": 1954,
+      "yearTo": 1954
+    },
+    {
+      "from": 105000,
+      "to": 120000,
+      "yearFrom": 1955,
+      "yearTo": 1955
+    },
+    {
+      "from": 460000,
+      "to": 510000,
+      "yearFrom": 1955,
+      "yearTo": 1955
+    },
+    {
+      "from": 120000,
+      "to": 130000,
+      "yearFrom": 1956,
+      "yearTo": 1956
+    },
+    {
+      "from": 510000,
+      "to": 610000,
+      "yearFrom": 1956,
+      "yearTo": 1956
+    },
+    {
+      "from": 130000,
+      "to": 150000,
+      "yearFrom": 1957,
+      "yearTo": 1957
+    },
+    {
+      "from": 610000,
+      "to": 670000,
+      "yearFrom": 1957,
+      "yearTo": 1957
+    },
+    {
+      "from": 150000,
+      "to": 158000,
+      "yearFrom": 1958,
+      "yearTo": 1958
+    },
+    {
+      "from": 670000,
+      "to": 745000,
+      "yearFrom": 1958,
+      "yearTo": 1958
+    },
+    {
+      "from": 158000,
+      "to": 175000,
+      "yearFrom": 1959,
+      "yearTo": 1959
+    },
+    {
+      "from": 745000,
+      "to": 822000,
+      "yearFrom": 1959,
+      "yearTo": 1959
+    },
+    {
+      "from": 175000,
+      "to": 186000,
+      "yearFrom": 1960,
+      "yearTo": 1960
+    },
+    {
+      "from": 822000,
+      "to": 885000,
+      "yearFrom": 1960,
+      "yearTo": 1960
+    },
+    {
+      "from": 186000,
+      "to": 192000,
+      "yearFrom": 1961,
+      "yearTo": 1961
+    },
+    {
+      "from": 885000,
+      "to": 910000,
+      "yearFrom": 1961,
+      "yearTo": 1961
+    },
+    {
+      "from": 192000,
+      "to": 200000,
+      "yearFrom": 1962,
+      "yearTo": 1962
+    },
+    {
+      "from": 910000,
+      "to": 973000,
+      "yearFrom": 1962,
+      "yearTo": 1962
+    },
+    {
+      "from": 200000,
+      "to": 208000,
+      "yearFrom": 1963,
+      "yearTo": 1963
+    },
+    {
+      "from": 973000,
+      "to": 984500,
+      "yearFrom": 1963,
+      "yearTo": 1963
+    },
+    {
+      "from": 208000,
+      "to": 214000,
+      "yearFrom": 1964,
+      "yearTo": 1964
+    },
+    {
+      "from": 214000,
+      "to": 224000,
+      "yearFrom": 1965,
+      "yearTo": 1965
+    },
+    {
+      "from": 224000,
+      "to": 232000,
+      "yearFrom": 1966,
+      "yearTo": 1966
+    },
+    {
+      "from": 232000,
+      "to": 238600,
+      "yearFrom": 1967,
+      "yearTo": 1967
+    },
+    {
+      "from": 238600,
+      "to": 242110,
+      "yearFrom": 1968,
+      "yearTo": 1968
+    },
+    {
+      "from": 242111,
+      "to": 250185,
+      "yearFrom": 1969,
+      "yearTo": 1969
+    },
+    {
+      "from": 250186,
+      "to": 253018,
+      "yearFrom": 1970,
+      "yearTo": 1970
+    },
+    {
+      "from": 253019,
+      "to": 253673,
+      "yearFrom": 1971,
+      "yearTo": 1971
+    },
+    {
+      "from": 253674,
+      "to": 256057,
+      "yearFrom": 1972,
+      "yearTo": 1972
+    },
+    {
+      "from": 256058,
+      "to": 260757,
+      "yearFrom": 1973,
+      "yearTo": 1973
+    },
+    {
+      "from": 260758,
+      "to": 261735,
+      "yearFrom": 1974,
+      "yearTo": 1974
+    },
+    {
+      "from": 261736,
+      "to": 262438,
+      "yearFrom": 1975,
+      "yearTo": 1975
+    },
+    {
+      "from": 262439,
+      "to": 264230,
+      "yearFrom": 1976,
+      "yearTo": 1976
+    }
+  ]
 }
