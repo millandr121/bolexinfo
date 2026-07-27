@@ -1,5 +1,14 @@
 import { POLITENESS } from "./config";
 
+// Node's built-in fetch does not read HTTPS_PROXY by default (Node >= 22.21
+// requires this flag to opt in); without it, a request to a proxy-blocked
+// host attempts a direct connection instead of going through the proxy,
+// which can hang indefinitely rather than failing fast. Setting it here
+// (rather than as a shell env var prefix in package.json) keeps `npm run
+// pipeline` portable across bash, cmd.exe and PowerShell. Harmless on older
+// Node versions or when no proxy is configured.
+process.env.NODE_USE_ENV_PROXY ??= "1";
+
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 export class PolicyDeniedError extends Error {
@@ -13,19 +22,38 @@ export class PolicyDeniedError extends Error {
   }
 }
 
+export interface PoliteFetchOptions {
+  /** Delay after a successful response, before the next request. */
+  delayMs?: number;
+  /** Retries after the first attempt (so total attempts = retries + 1). */
+  retries?: number;
+  /** Per-attempt abort timeout. */
+  timeoutMs?: number;
+}
+
 /**
- * Fetch with retry + exponential backoff and a politeness delay, tuned for
- * archive.org's rate limits. A CONNECT-level 403 from a corporate egress
- * proxy is surfaced as PolicyDeniedError immediately — retrying a policy
- * denial is pointless and impolite.
+ * Fetch with retry + exponential backoff and a politeness delay, tuned by
+ * default for archive.org's rate limits (pass `opts` to relax these for
+ * hosts with more generous limits, e.g. Common Crawl, or to bound worst-case
+ * latency when a call site queries several hosts/collections in sequence and
+ * the default budget per attempt would otherwise multiply out to minutes of
+ * silence). A CONNECT-level 403 from a corporate egress proxy is surfaced as
+ * PolicyDeniedError immediately — retrying a policy denial is pointless and
+ * impolite.
  */
-export async function politeFetch(url: string, init?: RequestInit): Promise<Response> {
+export async function politeFetch(url: string, init?: RequestInit, opts: PoliteFetchOptions = {}): Promise<Response> {
+  const delayMs = opts.delayMs ?? POLITENESS.delayMs;
+  const retries = opts.retries ?? POLITENESS.retries;
+  const timeoutMs = opts.timeoutMs ?? POLITENESS.requestTimeoutMs;
   let lastError: unknown;
-  for (let attempt = 0; attempt <= POLITENESS.retries; attempt++) {
+  for (let attempt = 0; attempt <= retries; attempt++) {
     if (attempt > 0) await sleep(POLITENESS.backoffBaseMs * 2 ** (attempt - 1));
+    const timeoutController = new AbortController();
+    const timeout = setTimeout(() => timeoutController.abort(), timeoutMs);
     try {
       const res = await fetch(url, {
         ...init,
+        signal: timeoutController.signal,
         headers: {
           "user-agent":
             "bolexcollector-preservation/1.0 (+https://github.com/millandr121/bolexinfo; archival mirror with owner permission)",
@@ -43,21 +71,27 @@ export async function politeFetch(url: string, init?: RequestInit): Promise<Resp
         lastError = new Error(`HTTP ${res.status} for ${url}`);
         continue;
       }
-      await sleep(POLITENESS.delayMs);
+      await sleep(delayMs);
       return res;
     } catch (err) {
       if (err instanceof PolicyDeniedError) throw err;
+      if (err instanceof Error && err.name === "AbortError") {
+        lastError = new Error(`Timed out after ${timeoutMs}ms fetching ${url}`);
+        continue;
+      }
       const message = err instanceof Error ? String(err.cause ?? err.message) : String(err);
       if (/CONNECT.*403|tunnel.*403|proxy.*403/i.test(message)) throw new PolicyDeniedError(url);
       lastError = err;
+    } finally {
+      clearTimeout(timeout);
     }
   }
   throw lastError instanceof Error ? lastError : new Error(`Failed to fetch ${url}`);
 }
 
 /** Fetch JSON with the same retry semantics. */
-export async function fetchJson<T>(url: string): Promise<T> {
-  const res = await politeFetch(url);
+export async function fetchJson<T>(url: string, opts?: PoliteFetchOptions): Promise<T> {
+  const res = await politeFetch(url, undefined, opts);
   if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
   return (await res.json()) as T;
 }

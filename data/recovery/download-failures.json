@@ -1,0 +1,1293 @@
+{
+  "generated": "2026-07-27T01:29:53.574Z",
+  "failures": [
+    {
+      "urlPath": "/forums/",
+      "reason": "capture-20080820095037-unavailable"
+    },
+    {
+      "urlPath": "/forums/faq.php?sid=a83d5142c3cef7e13e350a14522205f1",
+      "reason": "capture-20070517124648-unavailable"
+    },
+    {
+      "urlPath": "/forums/groupcp.php?sid=a83d5142c3cef7e13e350a14522205f1",
+      "reason": "capture-20070517124750-unavailable"
+    },
+    {
+      "urlPath": "/forums/index.php?sid=a83d5142c3cef7e13e350a14522205f1",
+      "reason": "capture-20070517125028-unavailable"
+    },
+    {
+      "urlPath": "/forums/login.php?sid=a83d5142c3cef7e13e350a14522205f1",
+      "reason": "capture-20070517125327-unavailable"
+    },
+    {
+      "urlPath": "/forums/search.php?sid=a83d5142c3cef7e13e350a14522205f1",
+      "reason": "capture-20070517125042-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewonline.php?sid=a83d5142c3cef7e13e350a14522205f1",
+      "reason": "capture-20070517125415-unavailable"
+    },
+    {
+      "urlPath": "/forums/index.php?sid=fc758a3253f4c461c0ea1383b4e82d24",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/faq.php?sid=fc758a3253f4c461c0ea1383b4e82d24",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/search.php?sid=fc758a3253f4c461c0ea1383b4e82d24",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/memberlist.php?sid=fc758a3253f4c461c0ea1383b4e82d24",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/groupcp.php?sid=fc758a3253f4c461c0ea1383b4e82d24",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/login.php?sid=fc758a3253f4c461c0ea1383b4e82d24",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=register&sid=fc758a3253f4c461c0ea1383b4e82d24",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=3&sid=fc758a3253f4c461c0ea1383b4e82d24",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=2&sid=fc758a3253f4c461c0ea1383b4e82d24",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=22&sid=fc758a3253f4c461c0ea1383b4e82d24",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewonline.php?sid=fc758a3253f4c461c0ea1383b4e82d24",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=25&sid=fc758a3253f4c461c0ea1383b4e82d24",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/templates/Conundrum/images/top_image.jpg",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/templates/Conundrum/images/folder_big.gif",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/templates/Conundrum/images/icon_latest_reply.gif",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/templates/Conundrum/images/whosonline.gif",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/templates/Conundrum/images/folder_new_big.gif",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/templates/Conundrum/images/folder_locked_big.gif",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/index.php?sid=20d0ef0a3e8719d3d43372fc0e8a1182",
+      "reason": "capture-20070517125146-unavailable"
+    },
+    {
+      "urlPath": "/forums/faq.php?sid=20d0ef0a3e8719d3d43372fc0e8a1182",
+      "reason": "capture-20070517125146-unavailable"
+    },
+    {
+      "urlPath": "/forums/search.php?sid=20d0ef0a3e8719d3d43372fc0e8a1182",
+      "reason": "capture-20070517125146-unavailable"
+    },
+    {
+      "urlPath": "/forums/memberlist.php?sid=20d0ef0a3e8719d3d43372fc0e8a1182",
+      "reason": "capture-20070517125146-unavailable"
+    },
+    {
+      "urlPath": "/forums/groupcp.php?sid=20d0ef0a3e8719d3d43372fc0e8a1182",
+      "reason": "capture-20070517125146-unavailable"
+    },
+    {
+      "urlPath": "/forums/login.php?sid=20d0ef0a3e8719d3d43372fc0e8a1182",
+      "reason": "capture-20070517125146-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=register&sid=20d0ef0a3e8719d3d43372fc0e8a1182",
+      "reason": "capture-20070517125146-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=3&sid=20d0ef0a3e8719d3d43372fc0e8a1182",
+      "reason": "capture-20070517125146-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=2&sid=20d0ef0a3e8719d3d43372fc0e8a1182",
+      "reason": "capture-20070517125146-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=22&sid=20d0ef0a3e8719d3d43372fc0e8a1182",
+      "reason": "capture-20070517125146-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewonline.php?sid=20d0ef0a3e8719d3d43372fc0e8a1182",
+      "reason": "capture-20070517125146-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=25&sid=20d0ef0a3e8719d3d43372fc0e8a1182",
+      "reason": "capture-20070517125146-unavailable"
+    },
+    {
+      "urlPath": "/forums/index.php?sid=7d42d6f5fe3b7c6e94d876fdf7d72172",
+      "reason": "capture-20070517124454-unavailable"
+    },
+    {
+      "urlPath": "/forums/faq.php?sid=7d42d6f5fe3b7c6e94d876fdf7d72172",
+      "reason": "capture-20070517124454-unavailable"
+    },
+    {
+      "urlPath": "/forums/search.php?sid=7d42d6f5fe3b7c6e94d876fdf7d72172",
+      "reason": "capture-20070517124454-unavailable"
+    },
+    {
+      "urlPath": "/forums/memberlist.php?sid=7d42d6f5fe3b7c6e94d876fdf7d72172",
+      "reason": "capture-20070517124454-unavailable"
+    },
+    {
+      "urlPath": "/forums/groupcp.php?sid=7d42d6f5fe3b7c6e94d876fdf7d72172",
+      "reason": "capture-20070517124454-unavailable"
+    },
+    {
+      "urlPath": "/forums/login.php?sid=7d42d6f5fe3b7c6e94d876fdf7d72172",
+      "reason": "capture-20070517124454-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=register&sid=7d42d6f5fe3b7c6e94d876fdf7d72172",
+      "reason": "capture-20070517124454-unavailable"
+    },
+    {
+      "urlPath": "/forums/index.php?sid=d52bd6392fed1eb5259ab6ccc2cc5a10",
+      "reason": "capture-20070517032820-unavailable"
+    },
+    {
+      "urlPath": "/forums/faq.php?sid=d52bd6392fed1eb5259ab6ccc2cc5a10",
+      "reason": "capture-20070517032820-unavailable"
+    },
+    {
+      "urlPath": "/forums/search.php?sid=d52bd6392fed1eb5259ab6ccc2cc5a10",
+      "reason": "capture-20070517032820-unavailable"
+    },
+    {
+      "urlPath": "/forums/memberlist.php?sid=d52bd6392fed1eb5259ab6ccc2cc5a10",
+      "reason": "capture-20070517032820-unavailable"
+    },
+    {
+      "urlPath": "/forums/groupcp.php?sid=d52bd6392fed1eb5259ab6ccc2cc5a10",
+      "reason": "capture-20070517032820-unavailable"
+    },
+    {
+      "urlPath": "/forums/login.php?sid=d52bd6392fed1eb5259ab6ccc2cc5a10",
+      "reason": "capture-20070517032820-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=register&sid=d52bd6392fed1eb5259ab6ccc2cc5a10",
+      "reason": "capture-20070517032820-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=37&highlight=&sid=d52bd6392fed1eb5259ab6ccc2cc5a10",
+      "reason": "capture-20070517032820-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=22&sid=d52bd6392fed1eb5259ab6ccc2cc5a10",
+      "reason": "capture-20070517032820-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=79&sid=d52bd6392fed1eb5259ab6ccc2cc5a10",
+      "reason": "capture-20070517032820-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=33&highlight=&sid=d52bd6392fed1eb5259ab6ccc2cc5a10",
+      "reason": "capture-20070517032820-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=2&sid=d52bd6392fed1eb5259ab6ccc2cc5a10",
+      "reason": "capture-20070517032820-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=64&sid=d52bd6392fed1eb5259ab6ccc2cc5a10",
+      "reason": "capture-20070517032820-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=29&highlight=&sid=d52bd6392fed1eb5259ab6ccc2cc5a10",
+      "reason": "capture-20070517032820-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=53&sid=d52bd6392fed1eb5259ab6ccc2cc5a10",
+      "reason": "capture-20070517032820-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=28&highlight=&sid=d52bd6392fed1eb5259ab6ccc2cc5a10",
+      "reason": "capture-20070517032820-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=50&sid=d52bd6392fed1eb5259ab6ccc2cc5a10",
+      "reason": "capture-20070517032820-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=22&highlight=&sid=d52bd6392fed1eb5259ab6ccc2cc5a10",
+      "reason": "capture-20070517032820-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=3&sid=d52bd6392fed1eb5259ab6ccc2cc5a10",
+      "reason": "capture-20070517032820-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=38&sid=d52bd6392fed1eb5259ab6ccc2cc5a10",
+      "reason": "capture-20070517032820-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=14&highlight=&sid=d52bd6392fed1eb5259ab6ccc2cc5a10",
+      "reason": "capture-20070517032820-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=21&sid=d52bd6392fed1eb5259ab6ccc2cc5a10",
+      "reason": "capture-20070517032820-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=12&highlight=&sid=d52bd6392fed1eb5259ab6ccc2cc5a10",
+      "reason": "capture-20070517032820-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=17&sid=d52bd6392fed1eb5259ab6ccc2cc5a10",
+      "reason": "capture-20070517032820-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=11&highlight=&sid=d52bd6392fed1eb5259ab6ccc2cc5a10",
+      "reason": "capture-20070517032820-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=16&sid=d52bd6392fed1eb5259ab6ccc2cc5a10",
+      "reason": "capture-20070517032820-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=9&highlight=&sid=d52bd6392fed1eb5259ab6ccc2cc5a10",
+      "reason": "capture-20070517032820-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=13&sid=d52bd6392fed1eb5259ab6ccc2cc5a10",
+      "reason": "capture-20070517032820-unavailable"
+    },
+    {
+      "urlPath": "/forums/templates/Conundrum/images/folder.gif",
+      "reason": "capture-20070517032820-unavailable"
+    },
+    {
+      "urlPath": "/forums/templates/Conundrum/images/folder_lock.gif",
+      "reason": "capture-20070517032820-unavailable"
+    },
+    {
+      "urlPath": "/forums/templates/Conundrum/images/folder_announce.gif",
+      "reason": "capture-20070517032820-unavailable"
+    },
+    {
+      "urlPath": "/forums/index.php?sid=465c4727ac6934faaefa939b00b08391",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/faq.php?sid=465c4727ac6934faaefa939b00b08391",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/search.php?sid=465c4727ac6934faaefa939b00b08391",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/memberlist.php?sid=465c4727ac6934faaefa939b00b08391",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/groupcp.php?sid=465c4727ac6934faaefa939b00b08391",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/login.php?sid=465c4727ac6934faaefa939b00b08391",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=register&sid=465c4727ac6934faaefa939b00b08391",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=28&sid=465c4727ac6934faaefa939b00b08391",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=2&sid=465c4727ac6934faaefa939b00b08391",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=50&sid=465c4727ac6934faaefa939b00b08391",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=30&sid=465c4727ac6934faaefa939b00b08391",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=17&sid=465c4727ac6934faaefa939b00b08391",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=27&sid=465c4727ac6934faaefa939b00b08391",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=13&sid=465c4727ac6934faaefa939b00b08391",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=10&sid=465c4727ac6934faaefa939b00b08391",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=54&sid=465c4727ac6934faaefa939b00b08391",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=13&sid=465c4727ac6934faaefa939b00b08391",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=3&sid=465c4727ac6934faaefa939b00b08391",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=15&sid=465c4727ac6934faaefa939b00b08391",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=51&sid=465c4727ac6934faaefa939b00b08391",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=21&sid=465c4727ac6934faaefa939b00b08391",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=49&sid=465c4727ac6934faaefa939b00b08391",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=17&sid=465c4727ac6934faaefa939b00b08391",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=44&sid=465c4727ac6934faaefa939b00b08391",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=20&sid=465c4727ac6934faaefa939b00b08391",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=7&sid=465c4727ac6934faaefa939b00b08391",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=35&sid=465c4727ac6934faaefa939b00b08391",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=10&sid=465c4727ac6934faaefa939b00b08391",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=5&sid=465c4727ac6934faaefa939b00b08391",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=18&sid=465c4727ac6934faaefa939b00b08391",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewforum.php?f=1&mark=topics&sid=465c4727ac6934faaefa939b00b08391",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/posting.php?mode=newtopic&f=1&sid=465c4727ac6934faaefa939b00b08391",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/templates/Conundrum/images/lang_english/post.gif",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/templates/Conundrum/images/folder_new.gif",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/templates/Conundrum/images/folder_announce_new.gif",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/templates/Conundrum/images/folder_lock_new.gif",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/templates/Conundrum/images/folder_sticky_new.gif",
+      "reason": "capture-20070517124929-unavailable"
+    },
+    {
+      "urlPath": "/forums/index.php?sid=67722b2b4016349648af716452f948e0",
+      "reason": "capture-20070517125337-unavailable"
+    },
+    {
+      "urlPath": "/forums/faq.php?sid=67722b2b4016349648af716452f948e0",
+      "reason": "capture-20070517125337-unavailable"
+    },
+    {
+      "urlPath": "/forums/search.php?sid=67722b2b4016349648af716452f948e0",
+      "reason": "capture-20070517125337-unavailable"
+    },
+    {
+      "urlPath": "/forums/memberlist.php?sid=67722b2b4016349648af716452f948e0",
+      "reason": "capture-20070517125337-unavailable"
+    },
+    {
+      "urlPath": "/forums/groupcp.php?sid=67722b2b4016349648af716452f948e0",
+      "reason": "capture-20070517125337-unavailable"
+    },
+    {
+      "urlPath": "/forums/login.php?sid=67722b2b4016349648af716452f948e0",
+      "reason": "capture-20070517125337-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=register&sid=67722b2b4016349648af716452f948e0",
+      "reason": "capture-20070517125337-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=33&sid=67722b2b4016349648af716452f948e0",
+      "reason": "capture-20070517125337-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=2&sid=67722b2b4016349648af716452f948e0",
+      "reason": "capture-20070517125337-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=64&sid=67722b2b4016349648af716452f948e0",
+      "reason": "capture-20070517125337-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=34&sid=67722b2b4016349648af716452f948e0",
+      "reason": "capture-20070517125337-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=20&sid=67722b2b4016349648af716452f948e0",
+      "reason": "capture-20070517125337-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewforum.php?f=2&mark=topics&sid=67722b2b4016349648af716452f948e0",
+      "reason": "capture-20070517125337-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=3&sid=67722b2b4016349648af716452f948e0",
+      "reason": "capture-20070517125337-unavailable"
+    },
+    {
+      "urlPath": "/forums/posting.php?mode=newtopic&f=2&sid=67722b2b4016349648af716452f948e0",
+      "reason": "capture-20070517125337-unavailable"
+    },
+    {
+      "urlPath": "/forums/templates/Conundrum/images/folder_sticky.gif",
+      "reason": "capture-20070517125337-unavailable"
+    },
+    {
+      "urlPath": "/forums/index.php?sid=e8c3445f1f2a39d469e51c6b2dcd6898",
+      "reason": "capture-20070517124329-unavailable"
+    },
+    {
+      "urlPath": "/forums/faq.php?sid=e8c3445f1f2a39d469e51c6b2dcd6898",
+      "reason": "capture-20070517124329-unavailable"
+    },
+    {
+      "urlPath": "/forums/search.php?sid=e8c3445f1f2a39d469e51c6b2dcd6898",
+      "reason": "capture-20070517124329-unavailable"
+    },
+    {
+      "urlPath": "/forums/memberlist.php?sid=e8c3445f1f2a39d469e51c6b2dcd6898",
+      "reason": "capture-20070517124329-unavailable"
+    },
+    {
+      "urlPath": "/forums/groupcp.php?sid=e8c3445f1f2a39d469e51c6b2dcd6898",
+      "reason": "capture-20070517124329-unavailable"
+    },
+    {
+      "urlPath": "/forums/login.php?sid=e8c3445f1f2a39d469e51c6b2dcd6898",
+      "reason": "capture-20070517124329-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=register&sid=e8c3445f1f2a39d469e51c6b2dcd6898",
+      "reason": "capture-20070517124329-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=36&sid=e8c3445f1f2a39d469e51c6b2dcd6898",
+      "reason": "capture-20070517124329-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=22&sid=e8c3445f1f2a39d469e51c6b2dcd6898",
+      "reason": "capture-20070517124329-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=22&sid=e8c3445f1f2a39d469e51c6b2dcd6898",
+      "reason": "capture-20070517124329-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=3&sid=e8c3445f1f2a39d469e51c6b2dcd6898",
+      "reason": "capture-20070517124329-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=38&sid=e8c3445f1f2a39d469e51c6b2dcd6898",
+      "reason": "capture-20070517124329-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=12&sid=e8c3445f1f2a39d469e51c6b2dcd6898",
+      "reason": "capture-20070517124329-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=17&sid=e8c3445f1f2a39d469e51c6b2dcd6898",
+      "reason": "capture-20070517124329-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=11&sid=e8c3445f1f2a39d469e51c6b2dcd6898",
+      "reason": "capture-20070517124329-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=16&sid=e8c3445f1f2a39d469e51c6b2dcd6898",
+      "reason": "capture-20070517124329-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=9&sid=e8c3445f1f2a39d469e51c6b2dcd6898",
+      "reason": "capture-20070517124329-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=2&sid=e8c3445f1f2a39d469e51c6b2dcd6898",
+      "reason": "capture-20070517124329-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=13&sid=e8c3445f1f2a39d469e51c6b2dcd6898",
+      "reason": "capture-20070517124329-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewforum.php?f=3&mark=topics&sid=e8c3445f1f2a39d469e51c6b2dcd6898",
+      "reason": "capture-20070517124329-unavailable"
+    },
+    {
+      "urlPath": "/forums/posting.php?mode=newtopic&f=3&sid=e8c3445f1f2a39d469e51c6b2dcd6898",
+      "reason": "capture-20070517124329-unavailable"
+    },
+    {
+      "urlPath": "/forums/index.php?sid=bc56abc290ecfa2530a4191d906be59f",
+      "reason": "capture-20070517125318-unavailable"
+    },
+    {
+      "urlPath": "/forums/faq.php?sid=bc56abc290ecfa2530a4191d906be59f",
+      "reason": "capture-20070517125318-unavailable"
+    },
+    {
+      "urlPath": "/forums/search.php?sid=bc56abc290ecfa2530a4191d906be59f",
+      "reason": "capture-20070517125318-unavailable"
+    },
+    {
+      "urlPath": "/forums/memberlist.php?sid=bc56abc290ecfa2530a4191d906be59f",
+      "reason": "capture-20070517125318-unavailable"
+    },
+    {
+      "urlPath": "/forums/groupcp.php?sid=bc56abc290ecfa2530a4191d906be59f",
+      "reason": "capture-20070517125318-unavailable"
+    },
+    {
+      "urlPath": "/forums/login.php?sid=bc56abc290ecfa2530a4191d906be59f",
+      "reason": "capture-20070517125318-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=register&sid=bc56abc290ecfa2530a4191d906be59f",
+      "reason": "capture-20070517125318-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=15&sid=bc56abc290ecfa2530a4191d906be59f",
+      "reason": "capture-20070517125318-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=3&sid=bc56abc290ecfa2530a4191d906be59f",
+      "reason": "capture-20070517125318-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=22&sid=bc56abc290ecfa2530a4191d906be59f",
+      "reason": "capture-20070517125318-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=32&sid=bc56abc290ecfa2530a4191d906be59f",
+      "reason": "capture-20070517125318-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=19&sid=bc56abc290ecfa2530a4191d906be59f",
+      "reason": "capture-20070517125318-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=80&sid=bc56abc290ecfa2530a4191d906be59f",
+      "reason": "capture-20070517125318-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=37&sid=bc56abc290ecfa2530a4191d906be59f",
+      "reason": "capture-20070517125318-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=79&sid=bc56abc290ecfa2530a4191d906be59f",
+      "reason": "capture-20070517125318-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=35&sid=bc56abc290ecfa2530a4191d906be59f",
+      "reason": "capture-20070517125318-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=15&sid=bc56abc290ecfa2530a4191d906be59f",
+      "reason": "capture-20070517125318-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=17&sid=bc56abc290ecfa2530a4191d906be59f",
+      "reason": "capture-20070517125318-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=75&sid=bc56abc290ecfa2530a4191d906be59f",
+      "reason": "capture-20070517125318-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=31&sid=bc56abc290ecfa2530a4191d906be59f",
+      "reason": "capture-20070517125318-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=14&sid=bc56abc290ecfa2530a4191d906be59f",
+      "reason": "capture-20070517125318-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=2&sid=bc56abc290ecfa2530a4191d906be59f",
+      "reason": "capture-20070517125318-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=59&sid=bc56abc290ecfa2530a4191d906be59f",
+      "reason": "capture-20070517125318-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=29&sid=bc56abc290ecfa2530a4191d906be59f",
+      "reason": "capture-20070517125318-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=53&sid=bc56abc290ecfa2530a4191d906be59f",
+      "reason": "capture-20070517125318-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=16&sid=bc56abc290ecfa2530a4191d906be59f",
+      "reason": "capture-20070517125318-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=52&sid=bc56abc290ecfa2530a4191d906be59f",
+      "reason": "capture-20070517125318-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=19&sid=bc56abc290ecfa2530a4191d906be59f",
+      "reason": "capture-20070517125318-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=8&sid=bc56abc290ecfa2530a4191d906be59f",
+      "reason": "capture-20070517125318-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=36&sid=bc56abc290ecfa2530a4191d906be59f",
+      "reason": "capture-20070517125318-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=14&sid=bc56abc290ecfa2530a4191d906be59f",
+      "reason": "capture-20070517125318-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=21&sid=bc56abc290ecfa2530a4191d906be59f",
+      "reason": "capture-20070517125318-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewforum.php?f=4&mark=topics&sid=bc56abc290ecfa2530a4191d906be59f",
+      "reason": "capture-20070517125318-unavailable"
+    },
+    {
+      "urlPath": "/forums/posting.php?mode=newtopic&f=4&sid=bc56abc290ecfa2530a4191d906be59f",
+      "reason": "capture-20070517125318-unavailable"
+    },
+    {
+      "urlPath": "/forums/index.php?sid=77fd6708063780e99d58c14b08094964",
+      "reason": "capture-20070517124418-unavailable"
+    },
+    {
+      "urlPath": "/forums/faq.php?sid=77fd6708063780e99d58c14b08094964",
+      "reason": "capture-20070517124418-unavailable"
+    },
+    {
+      "urlPath": "/forums/search.php?sid=77fd6708063780e99d58c14b08094964",
+      "reason": "capture-20070517124418-unavailable"
+    },
+    {
+      "urlPath": "/forums/memberlist.php?sid=77fd6708063780e99d58c14b08094964",
+      "reason": "capture-20070517124418-unavailable"
+    },
+    {
+      "urlPath": "/forums/groupcp.php?sid=77fd6708063780e99d58c14b08094964",
+      "reason": "capture-20070517124418-unavailable"
+    },
+    {
+      "urlPath": "/forums/login.php?sid=77fd6708063780e99d58c14b08094964",
+      "reason": "capture-20070517124418-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=register&sid=77fd6708063780e99d58c14b08094964",
+      "reason": "capture-20070517124418-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=55&sid=77fd6708063780e99d58c14b08094964",
+      "reason": "capture-20070517124418-unavailable"
+    },
+    {
+      "urlPath": "/forums/posting.php?mode=quote&p=55&sid=77fd6708063780e99d58c14b08094964",
+      "reason": "capture-20070517124418-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=17&sid=77fd6708063780e99d58c14b08094964",
+      "reason": "capture-20070517124418-unavailable"
+    },
+    {
+      "urlPath": "/forums/privmsg.php?mode=post&u=17&sid=77fd6708063780e99d58c14b08094964",
+      "reason": "capture-20070517124418-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=56&sid=77fd6708063780e99d58c14b08094964",
+      "reason": "capture-20070517124418-unavailable"
+    },
+    {
+      "urlPath": "/forums/posting.php?mode=quote&p=56&sid=77fd6708063780e99d58c14b08094964",
+      "reason": "capture-20070517124418-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=2&sid=77fd6708063780e99d58c14b08094964",
+      "reason": "capture-20070517124418-unavailable"
+    },
+    {
+      "urlPath": "/forums/privmsg.php?mode=post&u=2&sid=77fd6708063780e99d58c14b08094964",
+      "reason": "capture-20070517124418-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=57&sid=77fd6708063780e99d58c14b08094964",
+      "reason": "capture-20070517124418-unavailable"
+    },
+    {
+      "urlPath": "/forums/posting.php?mode=quote&p=57&sid=77fd6708063780e99d58c14b08094964",
+      "reason": "capture-20070517124418-unavailable"
+    },
+    {
+      "urlPath": "/forums/posting.php?mode=quote&p=60&sid=77fd6708063780e99d58c14b08094964",
+      "reason": "capture-20070517124418-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=30&view=next&sid=77fd6708063780e99d58c14b08094964",
+      "reason": "capture-20070517124418-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=30&view=previous&sid=77fd6708063780e99d58c14b08094964",
+      "reason": "capture-20070517124418-unavailable"
+    },
+    {
+      "urlPath": "/forums/posting.php?mode=newtopic&f=1&sid=77fd6708063780e99d58c14b08094964",
+      "reason": "capture-20070517124418-unavailable"
+    },
+    {
+      "urlPath": "/forums/posting.php?mode=reply&t=30&sid=77fd6708063780e99d58c14b08094964",
+      "reason": "capture-20070517124418-unavailable"
+    },
+    {
+      "urlPath": "/forums/templates/Conundrum/images/icon_minipost.gif",
+      "reason": "capture-20070517124418-unavailable"
+    },
+    {
+      "urlPath": "/forums/templates/Conundrum/images/lang_english/icon_quote.gif",
+      "reason": "capture-20070517124418-unavailable"
+    },
+    {
+      "urlPath": "/forums/templates/Conundrum/images/lang_english/icon_profile.gif",
+      "reason": "capture-20070517124418-unavailable"
+    },
+    {
+      "urlPath": "/forums/templates/Conundrum/images/lang_english/icon_pm.gif",
+      "reason": "capture-20070517124418-unavailable"
+    },
+    {
+      "urlPath": "/forums/templates/Conundrum/images/lang_english/icon_email.gif",
+      "reason": "capture-20070517124418-unavailable"
+    },
+    {
+      "urlPath": "/forums/images/avatars/16016564745e75f4dce932.jpg",
+      "reason": "capture-20070517124418-unavailable"
+    },
+    {
+      "urlPath": "/forums/templates/Conundrum/images/lang_english/icon_www.gif",
+      "reason": "capture-20070517124418-unavailable"
+    },
+    {
+      "urlPath": "/forums/templates/Conundrum/images/lang_english/reply.gif",
+      "reason": "capture-20070517124418-unavailable"
+    },
+    {
+      "urlPath": "/forums/index.php?sid=9c61c25f6bee2a32c7e10274a5d0d6c0",
+      "reason": "capture-20070517125122-unavailable"
+    },
+    {
+      "urlPath": "/forums/faq.php?sid=9c61c25f6bee2a32c7e10274a5d0d6c0",
+      "reason": "capture-20070517125122-unavailable"
+    },
+    {
+      "urlPath": "/forums/search.php?sid=9c61c25f6bee2a32c7e10274a5d0d6c0",
+      "reason": "capture-20070517125122-unavailable"
+    },
+    {
+      "urlPath": "/forums/memberlist.php?sid=9c61c25f6bee2a32c7e10274a5d0d6c0",
+      "reason": "capture-20070517125122-unavailable"
+    },
+    {
+      "urlPath": "/forums/groupcp.php?sid=9c61c25f6bee2a32c7e10274a5d0d6c0",
+      "reason": "capture-20070517125122-unavailable"
+    },
+    {
+      "urlPath": "/forums/login.php?sid=9c61c25f6bee2a32c7e10274a5d0d6c0",
+      "reason": "capture-20070517125122-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=register&sid=9c61c25f6bee2a32c7e10274a5d0d6c0",
+      "reason": "capture-20070517125122-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=65&sid=9c61c25f6bee2a32c7e10274a5d0d6c0",
+      "reason": "capture-20070517125122-unavailable"
+    },
+    {
+      "urlPath": "/forums/posting.php?mode=quote&p=65&sid=9c61c25f6bee2a32c7e10274a5d0d6c0",
+      "reason": "capture-20070517125122-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=20&sid=9c61c25f6bee2a32c7e10274a5d0d6c0",
+      "reason": "capture-20070517125122-unavailable"
+    },
+    {
+      "urlPath": "/forums/privmsg.php?mode=post&u=20&sid=9c61c25f6bee2a32c7e10274a5d0d6c0",
+      "reason": "capture-20070517125122-unavailable"
+    },
+    {
+      "urlPath": "/forums/posting.php?mode=quote&p=66&sid=9c61c25f6bee2a32c7e10274a5d0d6c0",
+      "reason": "capture-20070517125122-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=2&sid=9c61c25f6bee2a32c7e10274a5d0d6c0",
+      "reason": "capture-20070517125122-unavailable"
+    },
+    {
+      "urlPath": "/forums/privmsg.php?mode=post&u=2&sid=9c61c25f6bee2a32c7e10274a5d0d6c0",
+      "reason": "capture-20070517125122-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=34&view=next&sid=9c61c25f6bee2a32c7e10274a5d0d6c0",
+      "reason": "capture-20070517125122-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=34&view=previous&sid=9c61c25f6bee2a32c7e10274a5d0d6c0",
+      "reason": "capture-20070517125122-unavailable"
+    },
+    {
+      "urlPath": "/forums/posting.php?mode=newtopic&f=2&sid=9c61c25f6bee2a32c7e10274a5d0d6c0",
+      "reason": "capture-20070517125122-unavailable"
+    },
+    {
+      "urlPath": "/forums/posting.php?mode=reply&t=34&sid=9c61c25f6bee2a32c7e10274a5d0d6c0",
+      "reason": "capture-20070517125122-unavailable"
+    },
+    {
+      "urlPath": "/forums/index.php?sid=a0957992a19f5e3dd0af017279780373",
+      "reason": "capture-20070517032249-unavailable"
+    },
+    {
+      "urlPath": "/forums/faq.php?sid=a0957992a19f5e3dd0af017279780373",
+      "reason": "capture-20070517032249-unavailable"
+    },
+    {
+      "urlPath": "/forums/search.php?sid=a0957992a19f5e3dd0af017279780373",
+      "reason": "capture-20070517032249-unavailable"
+    },
+    {
+      "urlPath": "/forums/memberlist.php?sid=a0957992a19f5e3dd0af017279780373",
+      "reason": "capture-20070517032249-unavailable"
+    },
+    {
+      "urlPath": "/forums/groupcp.php?sid=a0957992a19f5e3dd0af017279780373",
+      "reason": "capture-20070517032249-unavailable"
+    },
+    {
+      "urlPath": "/forums/login.php?sid=a0957992a19f5e3dd0af017279780373",
+      "reason": "capture-20070517032249-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=register&sid=a0957992a19f5e3dd0af017279780373",
+      "reason": "capture-20070517032249-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=76&sid=a0957992a19f5e3dd0af017279780373",
+      "reason": "capture-20070517032249-unavailable"
+    },
+    {
+      "urlPath": "/forums/posting.php?mode=quote&p=76&sid=a0957992a19f5e3dd0af017279780373",
+      "reason": "capture-20070517032249-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=22&sid=a0957992a19f5e3dd0af017279780373",
+      "reason": "capture-20070517032249-unavailable"
+    },
+    {
+      "urlPath": "/forums/privmsg.php?mode=post&u=22&sid=a0957992a19f5e3dd0af017279780373",
+      "reason": "capture-20070517032249-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=77&sid=a0957992a19f5e3dd0af017279780373",
+      "reason": "capture-20070517032249-unavailable"
+    },
+    {
+      "urlPath": "/forums/posting.php?mode=quote&p=77&sid=a0957992a19f5e3dd0af017279780373",
+      "reason": "capture-20070517032249-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=15&sid=a0957992a19f5e3dd0af017279780373",
+      "reason": "capture-20070517032249-unavailable"
+    },
+    {
+      "urlPath": "/forums/privmsg.php?mode=post&u=15&sid=a0957992a19f5e3dd0af017279780373",
+      "reason": "capture-20070517032249-unavailable"
+    },
+    {
+      "urlPath": "/forums/posting.php?mode=quote&p=78&sid=a0957992a19f5e3dd0af017279780373",
+      "reason": "capture-20070517032249-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=36&view=next&sid=a0957992a19f5e3dd0af017279780373",
+      "reason": "capture-20070517032249-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=36&view=previous&sid=a0957992a19f5e3dd0af017279780373",
+      "reason": "capture-20070517032249-unavailable"
+    },
+    {
+      "urlPath": "/forums/posting.php?mode=newtopic&f=3&sid=a0957992a19f5e3dd0af017279780373",
+      "reason": "capture-20070517032249-unavailable"
+    },
+    {
+      "urlPath": "/forums/posting.php?mode=reply&t=36&sid=a0957992a19f5e3dd0af017279780373",
+      "reason": "capture-20070517032249-unavailable"
+    },
+    {
+      "urlPath": "/forums/images/avatars/69534875146468046db243.gif",
+      "reason": "capture-20070517032249-unavailable"
+    },
+    {
+      "urlPath": "/forums/templates/Conundrum/images/lang_english/icon_aim.gif",
+      "reason": "capture-20070517032249-unavailable"
+    },
+    {
+      "urlPath": "/forums/images/smiles/icon_sad.gif",
+      "reason": "capture-20070517032249-unavailable"
+    },
+    {
+      "urlPath": "/forums/index.php?sid=abcaab20f980eda58a57198e0aee123f",
+      "reason": "capture-20070517124530-unavailable"
+    },
+    {
+      "urlPath": "/forums/faq.php?sid=abcaab20f980eda58a57198e0aee123f",
+      "reason": "capture-20070517124530-unavailable"
+    },
+    {
+      "urlPath": "/forums/search.php?sid=abcaab20f980eda58a57198e0aee123f",
+      "reason": "capture-20070517124530-unavailable"
+    },
+    {
+      "urlPath": "/forums/memberlist.php?sid=abcaab20f980eda58a57198e0aee123f",
+      "reason": "capture-20070517124530-unavailable"
+    },
+    {
+      "urlPath": "/forums/groupcp.php?sid=abcaab20f980eda58a57198e0aee123f",
+      "reason": "capture-20070517124530-unavailable"
+    },
+    {
+      "urlPath": "/forums/login.php?sid=abcaab20f980eda58a57198e0aee123f",
+      "reason": "capture-20070517124530-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=register&sid=abcaab20f980eda58a57198e0aee123f",
+      "reason": "capture-20070517124530-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=22&sid=abcaab20f980eda58a57198e0aee123f",
+      "reason": "capture-20070517124530-unavailable"
+    },
+    {
+      "urlPath": "/forums/posting.php?mode=quote&p=22&sid=abcaab20f980eda58a57198e0aee123f",
+      "reason": "capture-20070517124530-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=3&sid=abcaab20f980eda58a57198e0aee123f",
+      "reason": "capture-20070517124530-unavailable"
+    },
+    {
+      "urlPath": "/forums/privmsg.php?mode=post&u=3&sid=abcaab20f980eda58a57198e0aee123f",
+      "reason": "capture-20070517124530-unavailable"
+    },
+    {
+      "urlPath": "/forums/posting.php?mode=quote&p=81&sid=abcaab20f980eda58a57198e0aee123f",
+      "reason": "capture-20070517124530-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=22&sid=abcaab20f980eda58a57198e0aee123f",
+      "reason": "capture-20070517124530-unavailable"
+    },
+    {
+      "urlPath": "/forums/privmsg.php?mode=post&u=22&sid=abcaab20f980eda58a57198e0aee123f",
+      "reason": "capture-20070517124530-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=15&view=next&sid=abcaab20f980eda58a57198e0aee123f",
+      "reason": "capture-20070517124530-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=15&view=previous&sid=abcaab20f980eda58a57198e0aee123f",
+      "reason": "capture-20070517124530-unavailable"
+    },
+    {
+      "urlPath": "/forums/posting.php?mode=newtopic&f=4&sid=abcaab20f980eda58a57198e0aee123f",
+      "reason": "capture-20070517124530-unavailable"
+    },
+    {
+      "urlPath": "/forums/posting.php?mode=reply&t=15&sid=abcaab20f980eda58a57198e0aee123f",
+      "reason": "capture-20070517124530-unavailable"
+    },
+    {
+      "urlPath": "/forums/images/avatars/146960522345e94bfea0e7c.gif",
+      "reason": "capture-20070517124530-unavailable"
+    },
+    {
+      "urlPath": "http://s7.addthis.com/static/btn/v2/lg-share-en.gif",
+      "reason": "capture-20250303210409-unavailable"
+    },
+    {
+      "urlPath": "/forums/index.php?sid=91cdd5f03bf32698dedae1c900e27f82",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/faq.php?sid=91cdd5f03bf32698dedae1c900e27f82",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/search.php?sid=91cdd5f03bf32698dedae1c900e27f82",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/memberlist.php?sid=91cdd5f03bf32698dedae1c900e27f82",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/groupcp.php?sid=91cdd5f03bf32698dedae1c900e27f82",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/login.php?sid=91cdd5f03bf32698dedae1c900e27f82",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=register&sid=91cdd5f03bf32698dedae1c900e27f82",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=37&highlight=&sid=91cdd5f03bf32698dedae1c900e27f82",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=22&sid=91cdd5f03bf32698dedae1c900e27f82",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=79&sid=91cdd5f03bf32698dedae1c900e27f82",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=33&highlight=&sid=91cdd5f03bf32698dedae1c900e27f82",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=2&sid=91cdd5f03bf32698dedae1c900e27f82",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=64&sid=91cdd5f03bf32698dedae1c900e27f82",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=29&highlight=&sid=91cdd5f03bf32698dedae1c900e27f82",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=53&sid=91cdd5f03bf32698dedae1c900e27f82",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=28&highlight=&sid=91cdd5f03bf32698dedae1c900e27f82",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=50&sid=91cdd5f03bf32698dedae1c900e27f82",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=22&highlight=&sid=91cdd5f03bf32698dedae1c900e27f82",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=3&sid=91cdd5f03bf32698dedae1c900e27f82",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=38&sid=91cdd5f03bf32698dedae1c900e27f82",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=14&highlight=&sid=91cdd5f03bf32698dedae1c900e27f82",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=21&sid=91cdd5f03bf32698dedae1c900e27f82",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=12&highlight=&sid=91cdd5f03bf32698dedae1c900e27f82",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=17&sid=91cdd5f03bf32698dedae1c900e27f82",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=11&highlight=&sid=91cdd5f03bf32698dedae1c900e27f82",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=16&sid=91cdd5f03bf32698dedae1c900e27f82",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=9&highlight=&sid=91cdd5f03bf32698dedae1c900e27f82",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=13&sid=91cdd5f03bf32698dedae1c900e27f82",
+      "reason": "capture-20070517124958-unavailable"
+    },
+    {
+      "urlPath": "/forums/index.php?sid=eb88e8fc0053a022d7d1eba4120473ba",
+      "reason": "capture-20070517125146-unavailable"
+    },
+    {
+      "urlPath": "/forums/faq.php?sid=eb88e8fc0053a022d7d1eba4120473ba",
+      "reason": "capture-20070517125146-unavailable"
+    },
+    {
+      "urlPath": "/forums/search.php?sid=eb88e8fc0053a022d7d1eba4120473ba",
+      "reason": "capture-20070517125146-unavailable"
+    },
+    {
+      "urlPath": "/forums/memberlist.php?sid=eb88e8fc0053a022d7d1eba4120473ba",
+      "reason": "capture-20070517125146-unavailable"
+    },
+    {
+      "urlPath": "/forums/groupcp.php?sid=eb88e8fc0053a022d7d1eba4120473ba",
+      "reason": "capture-20070517125146-unavailable"
+    },
+    {
+      "urlPath": "/forums/login.php?sid=eb88e8fc0053a022d7d1eba4120473ba",
+      "reason": "capture-20070517125146-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=register&sid=eb88e8fc0053a022d7d1eba4120473ba",
+      "reason": "capture-20070517125146-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=76&sid=eb88e8fc0053a022d7d1eba4120473ba",
+      "reason": "capture-20070517125146-unavailable"
+    },
+    {
+      "urlPath": "/forums/posting.php?mode=quote&p=76&sid=eb88e8fc0053a022d7d1eba4120473ba",
+      "reason": "capture-20070517125146-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=22&sid=eb88e8fc0053a022d7d1eba4120473ba",
+      "reason": "capture-20070517125146-unavailable"
+    },
+    {
+      "urlPath": "/forums/privmsg.php?mode=post&u=22&sid=eb88e8fc0053a022d7d1eba4120473ba",
+      "reason": "capture-20070517125146-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?p=77&sid=eb88e8fc0053a022d7d1eba4120473ba",
+      "reason": "capture-20070517125146-unavailable"
+    },
+    {
+      "urlPath": "/forums/posting.php?mode=quote&p=77&sid=eb88e8fc0053a022d7d1eba4120473ba",
+      "reason": "capture-20070517125146-unavailable"
+    },
+    {
+      "urlPath": "/forums/profile.php?mode=viewprofile&u=15&sid=eb88e8fc0053a022d7d1eba4120473ba",
+      "reason": "capture-20070517125146-unavailable"
+    },
+    {
+      "urlPath": "/forums/privmsg.php?mode=post&u=15&sid=eb88e8fc0053a022d7d1eba4120473ba",
+      "reason": "capture-20070517125146-unavailable"
+    },
+    {
+      "urlPath": "/forums/posting.php?mode=quote&p=78&sid=eb88e8fc0053a022d7d1eba4120473ba",
+      "reason": "capture-20070517125146-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=36&view=next&sid=eb88e8fc0053a022d7d1eba4120473ba",
+      "reason": "capture-20070517125146-unavailable"
+    },
+    {
+      "urlPath": "/forums/viewtopic.php?t=36&view=previous&sid=eb88e8fc0053a022d7d1eba4120473ba",
+      "reason": "capture-20070517125146-unavailable"
+    },
+    {
+      "urlPath": "/forums/posting.php?mode=newtopic&f=3&sid=eb88e8fc0053a022d7d1eba4120473ba",
+      "reason": "capture-20070517125146-unavailable"
+    },
+    {
+      "urlPath": "/forums/posting.php?mode=reply&t=36&sid=eb88e8fc0053a022d7d1eba4120473ba",
+      "reason": "capture-20070517125146-unavailable"
+    }
+  ]
+}

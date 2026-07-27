@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="description" content="Specifications and history Jacques Bogopolsky's Auto Cine projector for 16mm and 9.5mm film">
+<title>Bolex Collector | Projectors | Auto Cine</title>
+<link rel="stylesheet" href="../style40.css" type="text/css" media="screen">
+<link rel="shortcut icon" href="../images/favicon.ico">
+</head>
+
+<body>
+		<div><a name="top">&nbsp;</a></div>
+			
+			<!-- LOGO Top left logo menu -->
+			
+<div id="logo"> 
+  <!-- Atomz Search HTML for Bolex Collector -->
+  <form id="searchbox" method="get" action="http://search.atomz.com/search/">
+    <div> 
+      <input class="textarea" name="sp-q">
+      <br>
+      <input class="buttonstyle" type="submit" value="Search">
+      <input type="hidden" name="sp-a" value="sp10036ab9">
+      <input type="hidden" name="sp-p" value="all">
+      <input type="hidden" name="sp-f" value="ISO-8859-1">
+    </div>
+  </form>
+</div>
+				
+			<!-- HEADER with banner and top links -->
+			
+<div id="header"> 
+  <ul>
+    <li><a href="http://www.bolexcollector.com">Home</a></li>
+    <li><a href="../cameras.html">Cameras</a></li>
+    <li><a class="selecthead" href="../projectors.html">Projectors</a></li>
+    <li><a href="../lenses.html">Lenses</a></li>
+    <li><a href="../accessories.html">Accessories</a></li>
+    <li><a href="../ephemera.html">Ephemera</a></li>
+  </ul>
+</div>
+	
+	
+
+<div id="menu"> 
+  <h4 class="type">1928 - 1940s</h4>
+  <ul>
+    <li><a class="selectmenu" href="auto-proj.html">Auto Cine</a></li>
+    <li><a href="model-c.html">Model C</a></li>
+    <li><a href="model-d.html">Model D</a></li>
+    <li><a href="model-p.html">Model P</a></li>
+    <li><a href="model-g.html">Model G</a></li>
+  </ul>
+  <h4 class="type">1950s</h4>
+  <ul>
+    <li><a href="m8.html">M-8</a></li>
+    <li><a href="m8r.html">M-8R</a></li>
+  </ul>
+  <h4 class="type">1960s</h4>
+  <ul>
+    <li><a href="s211.html">S-211</a></li>
+    <li><a href="s221.html">S-221</a></li>
+    <li><a href="185.html">18-5</a></li>
+    <li><a href="185auto.html">18-5 Auto</a></li>
+    <li><a href="185super.html">18-5 Super</a></li>
+    <li><a href="sm8.html">SM 8</a></li>
+    <li><a href="185l.html">18-5L</a></li>
+    <li><a href="s311.html">S-311</a></li>
+    <li><a href="s321.html">S-321</a></li>
+    <li><a href="multimatic.html">Multimatic</a></li>
+  </ul>
+</div>
+
+<div id="content"> 
+  <div id="itemtop"> <img class="fltleft" src="../images/projectors/autoproj_1.jpg" alt="Bolex cine auto projector" width="163" height="238"> 
+    <h3>AUTO CINE</h3>
+    <h4>16mm and 9.5mm Projector</h4>
+    <h4>1928</h4>
+    <!-- Specifications -->
+    <ul>
+      <li><b>OVERALL DIMENSIONS:</b> Approximately 12in x 8in x 5in (30cm x 20cm 
+        x 12cm)</li>
+      <li><b>WEIGHT:</b> Approximately 10 lbs (4.5 kg)</li>
+      <li><b>CONSTRUCTION:</b> Black "crinkle" paint finish.</li>
+      <li><b>REEL CAPACITY:</b> Reel arms accommodate 400 ft spools.</li>
+      <li><b>THREADING:</b> Manual threading and loop forming of film; Interchangeable 
+        sprockets and guides allow projection of either 16mm or 9.5mm film.</li>
+      <li><b>POWER:</b> 145 volt AC mains lead</li>
+      <li><b>LAMP:</b> Osram Nitra 6V 20W with integrated mirror.</li>
+      <li><b>LENS:</b> Hermagis Paris F 45mm</li>
+      <li><b>SPEED:</b> 16 frames per second; Stop; Rewind</li>
+      <li><b>OTHER FEATURES:</b> Adjustable base allows for the proper alignment 
+        of the projected image.</li>
+    </ul>
+  </div>
+  <hr>
+  <img class="padright" src="../images/projectors/autoproj_2.jpg" alt="Bolex cine auto advertisement" width="171" height="357"> 
+  <h4 class="close">Notes and Comments</h4>
+  <p>This was the first projector designed by Jacques Bogopolsky after he formed 
+    the Bolex company. Unfortunately, I have little information on this model, 
+    apart from what I've been able to translate (poorly, via <a href="http://babelfish.altavista.com/">Babelfish</a>) 
+    from French advertisements of the late 1920s. </p>
+  <p>Andrew Alden, in his book, <i>A Bolex History</i>, identifies two versions 
+    of the Auto Cine. The first, designed to project 16mm film; the second version, 
+    a dual guage projector with interchangeable sprockets for projecting both 
+    9.5mm and 16mm film. <sup class="foot"><a name="ft1" href="#ftref1">[1]</a></sup> 
+  </p>
+  <p>Special thanks to Heinrich Kriesi, a collector from Switzerland, for providing much of the missing details and specifications of this projector.
+  </p>
+  <div id="footnote"> 
+    <p> <sup><a name="ftref1" href="#ft1">1</a></sup> Andrew Alden, A Bolex History 
+      (A2 Time Based Graphics, 1998), 7. </p>
+  </div>
+  <hr class="spacer">
+  <ul id="backnext">
+    <li class="right"><a href="model-c.html">Next: Model C</a></li>
+  </ul>
+  <!-- begin copyright here -->
+  <div class="copyright"> Copyright &copy; 2005-2007 bolexcollector.com<br>
+    <a href="#top">Return to top of Page</a> </div>
+</div>
+
+<!-- End of main content above -->
+</body>
+</html>

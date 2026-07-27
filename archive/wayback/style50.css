@@ -1,0 +1,1206 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-family: "palatino Linotype", palatino, georgia, serif;
+	font-size: 14px;
+	margin:0; 
+	padding:0;
+	background-color:#709455;
+}
+/*margin and padding set to 0 to get rid of top white space*/
+
+
+
+#container {
+	width:760px;
+	margin:0px auto;
+	border-bottom:1px #044211 solid;
+	background-image: url(images/back50.gif);
+	background-repeat:repeat-y;
+	background-color:#fff;
+}
+
+#headerone {
+	color:#000;
+	height:45px;
+	/*padding:5px;*/
+	background-image: url(images/headerone50.gif);
+	background-repeat:no-repeat;
+}
+
+#headertwo {
+	color:#000;
+	height:63px;
+	/*padding:5px;*/
+	background-image: url(images/headertwo50.gif);
+	background-repeat:no-repeat;
+}
+
+#content {
+	float:left;
+	width:480px;
+	padding:0px 30px 0px 30px; /*was margin*/
+}
+
+#sidebar {
+	float:left;
+	width:149px;
+	margin:10px 0 0 10px;
+}
+
+#footer {
+	clear:both;
+	/*text-align:center;*/ /*remove? redundant in copyright, but aligns left for other text*/
+	height:auto; /*was 50px*/
+	/*padding:5px;*/
+	/*background-image: url(images/backhome.gif);
+	background-repeat:repeat-y;*/
+
+}
+
+
+/* --- ADDED STUFF BELOW  --- */
+/* --- ADDED STUFF BELOW  --- */
+/* --- ADDED STUFF BELOW  --- */
+/* --- ADDED STUFF BELOW  --- */
+/* --- ADDED STUFF BELOW  --- */
+
+/* --- GENERIC STUFF  --- */
+/* --- GENERIC STUFF  --- */
+/* --- GENERIC STUFF  --- */
+/* --- GENERIC STUFF  --- */
+
+a:link { color: #999; }
+a:visited { color: #555;}
+a:focus, a:hover, a:active { color: #709455; }
+
+a {outline:none;}
+
+h1.close, h2.close, h5.close, h6.close {margin: 24px 0 0 0; padding:0;}
+p.closep {margin:0; padding:0;}
+p.notice {font: 11px Tahoma, Geneva, sans-serif; color:#aaa; line-height:1em; margin:2em 0 2em 0;}
+p.quoted {font-family: "courier new", courier, monospace; line-height:1em;}
+blockquote {border-left: 6px solid #b4c799; padding:0;margin:15px;}
+blockquote h3 {color:#b4c799;font-size:18px; margin:0 0 0 .5em;padding:0;}
+blockquote p {font-size:14px; font-family: "courier new", courier, monospace; line-height:14px; margin:1em 0 1em 1em;padding:0; text-align:left;}
+
+h6.close {font-size: 14px; color:#999; margin: 1.5em 0 0 0; padding:0;}
+h5.close {font-size: 1.05em; color:#999; margin: 1.5em 0 0 0; padding:0;}
+h4.close {font-size: 16px; margin: 1.5em 0 0 0; padding:0;}
+h3.close {font-size: 18px; margin: 27px 0 0 0; padding:0;}
+
+h1, h2, h3, h4, h5, h6 { font-family: arial, helvetica, sans-serif; color: #333; }
+
+h3.notes { font-size: 1.1em; margin:0; padding:0; }
+h3.linklist { font-size: 22px; letter-spacing: -1px; color:#709455; display: block; width: 100%; border-bottom: 2px solid #666; padding:0; margin:0;}
+h2.bigtitle { font-family: Arial, Helvetica, sans-serif; font-size: 20px; text-align: center; margin: 2px 0 2px 0;}
+
+h2.welcome 
+{ 
+	color: #709455; 
+	font-size: 1em; 
+	letter-spacing: 1px;
+	margin: 0;
+	padding: 0;
+}
+
+hr
+{
+	color: #709455;
+	background: #709455;
+	border: 0;
+	height: 2px;
+	clear: both;
+	margin:0;
+	padding:0;
+}
+	
+hr.spacer
+{ 	color:#fff;
+	background:#fff;
+	border:0;
+	height:1px;
+	clear:both;
+	margin:0;
+	padding:0;
+}
+
+.italic
+{
+	color: #999;
+	font-size: 11px;
+	font-weight:normal;
+	letter-spacing: 1px;
+}
+
+.italicb
+{
+	font-family: Georgia, Palatino, serif;
+	color: #999;
+	font-size: 11px;
+}
+
+.center {text-align:center; width:auto; height:auto; margin:0; padding:0 0 1em 0;}
+.mail {text-align:center; width:auto; height:auto; margin:1em; padding:0;}
+.mail img {margin:0; padding:2px; border:1px #fff solid;}
+.mail a:hover img {border:1px #999 dashed;padding:2px;}
+
+.imagecap
+{
+	color: #999;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: .75em;
+	line-height: 1.2em;
+	text-align: center;
+	margin: .7em 0 0 0;
+	padding: 0;
+}
+
+.gallery {text-align:center; width:auto; height:auto; margin:0; padding:0;}
+.gallery img {margin:.5em; padding:2px; border:1px #fff solid;}
+.gallery a:hover img {border:1px #555 solid; padding:2px;}
+
+/* --------- ITEM and pic BELOW  (CONTENT)----------- */
+/* --------- ITEM and pic BELOW  (CONTENT) ---------- */
+#itemtop
+{
+	height: auto;
+}
+
+div#itemtop h3 { color: #709455; font-size: 1.4em; padding: 0; margin: 0;}
+div#itemtop h4 { color: #000; font-size: 1.2em; padding: 0; margin: 0;}
+
+div#itemtop .floatright
+{
+float: right;
+margin: 20px 0 15px 20px;
+padding: 2px;
+}
+
+div#itemtop li img.floatleft
+{
+float: left;
+margin: 10px 20px 15px 0px;
+padding: 2px;
+}
+
+div#itemtop ul
+{
+	font: 12px arial, helvetica, sans-serif;
+	margin-left: 0;
+	padding-left: 0;
+	padding-bottom: 20px;
+	list-style-type: none;
+}
+
+div#itemtop ul li { padding: 0 0 5px 0; }
+
+/* ----- specification above ----------- */
+/* ----- specification above ----------- */
+
+/*Content Styling*/
+#content p.generic
+{
+	margin: 0;
+	padding: 1.1em 0 .8em 0;
+	font: 14px arial, helvetica, sans-serif;
+}
+
+#content p.ephtext
+{
+	height: auto;
+	margin: 25px 0 25px 0;
+	padding: 0;	
+}
+
+#content p.ephtext strong
+{
+	font-size: 1em;
+	font-family: arial, helvetica, sans-serif;
+	font-weight: bold;
+}
+
+.fltright
+{
+float: right;
+margin: 0;
+padding: 0 0 20px 25px;
+}
+
+.fltleft
+{
+float: left;
+margin: 0;
+padding: 0 25px 20px 0;
+}
+
+.padleft
+{
+float: left;
+margin: 0;
+padding: 20px 25px 20px 0;
+}
+
+.padright
+{
+float: right;
+margin: 0;
+padding: 20px 0 20px 25px;
+}
+
+
+/* --- GENERIC STUFF ABOVE --- */
+/* --- GENERIC STUFF ABOVE  --- */
+/* --- GENERIC STUFF ABOVE  --- */
+/* --- GENERIC STUFF ABOVE  --- */
+
+/* --------- BOOKS BELOW (CONTENT) ----------- */
+/* --------- BOOKS BELOW (CONTENT) ----------- */
+#books
+{
+	width: 480px;
+	height: auto;
+	line-height:1px;
+}
+
+div#books ul
+{
+	font: 12px arial, helvetica, sans-serif;
+	margin: 0;
+	padding: 20px 0 20px 0;
+	list-style-type: none;
+}
+
+div#books ul li {padding: 0; margin:0;}
+div#books ul li.title {padding: 0; margin:0; letter-spacing: 1px;}
+div#books ul li.author {font-size:11px;color:#888; padding: 0; margin:0;}
+div#books ul li.desc {font: 14px "palatino Linotype", palatino, georgia, serif; padding: 6px 0 5px 0; margin:0; line-height:18px;}
+div#books ul li.bolrep {font-size:14px; font-weight:bold;}
+div#books ul li.repart {text-align: left; line-height:13px; color:#777;}
+div#books ul li.pp { font: 11px Georgia, Palatino, serif; color: #aaa;}
+
+/* ----- books above ----------- */
+/* ----- books above ----------- */
+
+
+/* --- SEARCH BOX --- */
+
+#headerone .headersearch {width:150px; padding: 12px 0 0 10px;}
+#headerone .headersearch form {margin:0px; padding-left:8px; /*width:160px;*/}
+#headerone .headersearch input.textarea {color: #000; background-color: #a1b97f; border: 1px #709455 solid; margin:0; padding:0 0 0 4px; height: 18px; width: 76px;}
+/*input.buttonstyle {font-size:13px; margin:0px; padding:0 2px 0 2px;}*/
+/*input.buttonstyle {color: #000; background-image:url(images/searchbutton.gif); font-size: 10px; height:21px; width:45px; padding:0; margin:0;}*/
+
+
+/* header and topline links */
+/* HEADERMENU goes inside header */
+/* HEADERMENU goes inside header */
+/* HEADERMENU goes inside header */
+/* HEADERMENU goes inside header */
+/* HEADERMENU goes inside header */
+
+#headertwo .headermenu
+{
+
+	/*float: right;*/
+/*	background-image: url(images/head.gif);*/
+/*	background-repeat: no-repeat;*/
+	/*margin:86px 0 0 160px;*/
+	/*margin:20px 0 0 160px;*/
+	padding:20px 0 0 160px;
+	width: 540px;
+	/*height: 150px;*/
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+#headertwo .headermenu ul
+{
+	margin: 0;
+	padding: 4px 0;
+	list-style-type: none;
+	text-align: center;
+	margin-top: 0px;
+/*	background-color: #000;*/
+}
+
+#headertwo .headermenu ul li { display: inline;}
+
+#headertwo .headermenu ul li a 
+{
+	text-decoration: none;
+	padding: 4px 12px;
+	color: #d5e7ba;
+}
+
+#headertwo .headermenu ul li a:hover { color: #333; /*background-color: #222;*/ border-top: 4px solid #333; }
+
+#headertwo .headermenu ul li a.selecthead 
+{
+  color: #333;
+  border-top: 4px solid #333;
+  cursor:default;
+}
+
+/* HEADERMENU goes inside header */
+/* header and topline links above */
+/* header and topline links above */
+/* header and topline links above */
+/* header and topline links above */
+/* header and topline links above */
+/* header and topline links above */
+
+
+/* ----------------- This is the left sidebar -------------------- */
+/* ----------------- SIDEBAR ------------------------------------- */
+/* ----------------- SIDEBAR ------------------------------------- */
+/* ----------------- SIDEBAR ------------------------------------- */
+/* ----------------- SIDEBAR ------------------------------------- */
+/* ----------------- SIDEBAR ------------------------------------- */
+/* ----------------- SIDEBAR ------------------------------------- */
+
+#sidebar .sidemenu {
+	padding:0;
+	font-size:12px;
+	/*font-size: 1em;*/
+	/*font-family: "palatino Linotype", palatino, georgia, serif;*/
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+/*#sidebar
+{
+	float: left;
+	position:absolute;
+	margin: 160px 0 0 10px;
+	padding: 0 0 0 10px;
+	width: 129px;
+	font-size: 12px;
+	color: #000;
+	font-family: arial, helvetica, sans-serif;
+}
+*/
+#sidebar .sponsor { padding-left: 14px; padding-top:12px; /*border-top:15px #000 solid;*/} /*google ads or misc - has border on top*/
+
+#sidebar .sponsornoborder { padding-left: 14px; padding-top:12px;} /*ebay vertical*/
+/*extra link styling for ebay vertical ads*/
+div#sidebar .sponsornoborder a:link { padding:0;margin:0; text-decoration:none; border-bottom:0; display:block; font-weight:bold;}
+div#sidebar .sponsornoborder a:visited, div#sidebar .sponsornoborder a:focus, div#sidebar .sponsornoborder a:hover { padding:0;margin:0; text-decoration:none; border-bottom:0; display:block;}
+
+
+
+
+#sidebar h4.type
+{
+	color: #d5e7ba;
+	font-size: .95em;
+	background-color: #709455;
+	padding: 1px; /*10px;*/
+	display: block; width: auto;
+	margin: 0px; /*had 10px on top*/
+	text-align: center;
+	font-weight: normal;
+	letter-spacing: 1px;
+}
+
+#sidebar ul 
+{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+/*take out .serifhome below on arial menus... ul.serifhome becomes redundant*/
+/*#sidebar ul.serifhome
+{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;*/
+	/*letter-spacing: 1px;
+	font-size: 1em;
+	font-family: "palatino Linotype", palatino, georgia, serif;*/ /*took this out and replaced in .sidemenu*/
+/*}*/
+
+#sidebar ul/*.serifhome*/ a { padding:0px 0px 0px 10px; text-decoration: none; display: block; width: auto; color: #31561c; border-bottom: 1px solid #7fa05e; }
+#sidebar ul/*.serifhome*/ a:hover { color: #31561c; background-color: #a1b97f; }
+
+#sidebar .sidemenu a.selectmenu 
+{
+  color: #31561c;
+  background-color:#a1b97f;
+  border-right: 3px solid #333;
+  /*padding-right: 7px;*/ /*causing problems? */
+  cursor:default;
+}
+
+
+/* -------------  list menus  -------------- */
+
+#sidebar dl.deflist
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+#sidebar dl.deflist dt
+{
+	margin: 0px;
+	padding: 0px 0px 0px 10px;
+	display: block; width: auto;
+	font-weight: bold;
+	color: #31561c;
+
+}
+
+#sidebar dl.deflist dd
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+#sidebar dl a { padding:0 0 0 10px; text-decoration: none; display: block; width: auto; color: #31561c; border-bottom: 1px solid #7fa05e; }
+#sidebar dl a:hover { color: #31561c; background-color: #a1b97f; }
+
+
+/* ----------------------------- SIDEBAR ------------------------*/
+/* ----------------------------- SIDEBAR ------------------------*/
+/* ----------------------------- SIDEBAR ------------------------*/
+/* ----------------------------- SIDEBAR ------------------------*/
+/* ----------------------------- SIDEBAR ------------------------*/
+/* ---------------------- This is the left menu above ------- */
+
+
+
+/* --- EQUIPMENT AND CATEGORY PAGES --- */
+/* --- EQUIPMENT AND CATEGORY PAGES --- */
+/* --- EQUIPMENT AND CATEGORY PAGES --- */
+/* --- EQUIPMENT AND CATEGORY PAGES --- */
+/* -- divs for main navigation of equipment intro pages -- */
+
+/* tan was titled intros */
+div#content .fourties h3.linklist { font-size: 24px; letter-spacing: -1px; color:#999; display: block; width: 100%; border-bottom:none; padding:0; margin:0; line-height:17px;}
+
+div#content .rtype .fourties dl {font-family: arial, helvetica, sans-serif; border:2px solid #eee; padding:10px 0 10px 0; margin:0px 0 25px 0;} /* margin fix BOX outline - pad fix inside */
+div#content .rtype .fourties dl a:link {/*padding: 0 0 0 10px;*/ color:#999; font-weight: bold; display:block; text-decoration:none;} /* BLOCK */
+div#content .rtype .fourties dl dt a:link {padding: 0 0 0 10px;} /* BLOCK */
+div#content .rtype .fourties dl dd a:link {padding-left:25px;} /* BLOCK */
+div#content .rtype .fourties dl a:visited {color:#999;} /*do nothing atm*/
+
+div#content .rtype .fourties dl:hover {border:2px solid #bfbf8b; background-color:#cccca2; } /* appearance of box when highlighted */
+div#content .rtype .fourties dl:hover a:link {color:#fff; text-decoration:none;} /* appearance of link colors when box is highlighted */
+div#content .rtype .fourties dl:hover a:visited {color:#fff;} /* highlighted and visited */
+div#content .rtype .fourties dl:hover a:hover {color:#edebc6; background-color:#bfbf8b; border-right:10px #edebc6 solid; text-decoration:none;} /* highlighted LINK */
+div#content .rtype .fourties ul:hover {border:2px solid #bfbf8b; background-color:#cccca2; } /* appearance of box when highlighted */
+div#content .rtype .fourties ul:hover a:link {color:#fff; text-decoration:none;} /* appearance of link colors when box is highlighted */
+div#content .rtype .fourties ul:hover a:visited {color:#fff;} /* highlighted and visited */
+div#content .rtype .fourties ul:hover a:hover {color:#edebc6; background-color:#bfbf8b; border-right:10px #edebc6 solid; text-decoration:none;} /* highlighted LINK */
+
+
+div#content .rtype .fourties ul {font-family: arial, helvetica, sans-serif; border:2px solid #eee; padding:10px 0 10px 0; margin:0px 0 25px 0; list-style-type: none;} /*BOX for lists*/
+div#content .rtype .fourties ul a:link {padding: 0 0 0 10px; color:#999; font-weight: bold; display:block; text-decoration:none;} /*BLOCK links*/
+div#content .rtype .fourties ul li a:visited {color:#999;} /*do nothing atm*/
+
+div#content .rtype .fourties dl dd { padding-left: 0; margin-left:0; }
+div#content .rtype .fourties dl dd.subdescript { padding-left: 25px; margin-left:0; color:#000;} /* misc descriptions */
+div#content .rtype .fourties dl:hover dd.subdescript { padding-left: 25px; margin-left:0; color:#663;} /* misc descriptions HOVERED */
+div#content .rtype .fourties ul li { padding:0; margin:0; } /* normalize - i don't know */
+
+div#content .rtype .fourties dl:hover .italic, div#content .rtype .fourties ul:hover .italic {color: #edebc6;} /* misc gray descriptions in LINK when highlighted */
+
+
+/* green */
+div#content .fifties h3.linklist { font-size: 24px; letter-spacing: -1px; color:#999; display: block; width: 100%; border-bottom:none; padding:0; margin:0; line-height:17px;}
+
+div#content .rtype .fifties dl {font-family: arial, helvetica, sans-serif; border:2px solid #eee; padding:10px 0 10px 0; margin:0px 0 25px 0;} /* margin fix BOX outline - pad fix inside */
+div#content .rtype .fifties dl a:link {/*padding: 0 0 0 10px;*/ color:#999; font-weight: bold; display:block; text-decoration:none;} /* BLOCK */
+div#content .rtype .fifties dl dt a:link {padding: 0 0 0 10px;} /* BLOCK */
+div#content .rtype .fifties dl dd a:link {padding-left:25px;} /* BLOCK */
+div#content .rtype .fifties dl a:visited {color:#999;} /*do nothing atm*/
+
+div#content .rtype .fifties dl:hover {border:2px solid #a1b97f; background-color:#b4c799; } /* appearance of box when highlighted */
+div#content .rtype .fifties dl:hover a:link {color:#fff; text-decoration:none;} /* appearance of link colors when box is highlighted */
+div#content .rtype .fifties dl:hover a:visited {color:#fff;} /* highlighted and visited */
+div#content .rtype .fifties dl:hover a:hover {color:#d5e7ba; background-color:#a1b97f; border-right:10px #d5e7ba solid; text-decoration:none;} /* highlighted LINK */
+div#content .rtype .fifties ul:hover {border:2px solid #a1b97f; background-color:#b4c799; } /* appearance of box when highlighted */
+div#content .rtype .fifties ul:hover a:link {color:#fff; text-decoration:none;} /* appearance of link colors when box is highlighted */
+div#content .rtype .fifties ul:hover a:visited {color:#fff;} /* highlighted and visited */
+div#content .rtype .fifties ul:hover a:hover {color:#d5e7ba; background-color:#a1b97f; border-right:10px #d5e7ba solid; text-decoration:none;} /* highlighted LINK */
+
+
+div#content .rtype .fifties ul {font-family: arial, helvetica, sans-serif; border:2px solid #eee; padding:10px 0 10px 0; margin:0px 0 25px 0; list-style-type: none;} /*BOX for lists*/
+div#content .rtype .fifties ul a:link {padding: 0 0 0 10px; color:#999; font-weight: bold; display:block; text-decoration:none;} /*BLOCK links*/
+div#content .rtype .fifties ul li a:visited {color:#999;} /*do nothing atm*/
+
+div#content .rtype .fifties dl dd { padding-left: 0; margin-left:0; }
+div#content .rtype .fifties dl dd.subdescript { padding-left: 25px; margin-left:0; color:#000;} /* misc descriptions */
+div#content .rtype .fifties dl:hover dd.subdescript { padding-left: 25px; margin-left:0; color:#31561c;} /* misc descriptions HOVERED */
+div#content .rtype .fifties ul li { padding:0; margin:0; } /* normalize - i don't know */
+
+div#content .rtype .fifties dl:hover .italic, div#content .rtype .fifties ul:hover .italic {color: #d5e7ba;} /* misc gray descriptions in LINK when highlighted */
+
+
+/* blue */
+div#content .sixties h3.linklist { font-size: 24px; letter-spacing: -1px; color:#999; display: block; width: 100%; border-bottom:none; padding:0; margin:0; line-height:17px;}
+
+div#content .rtype .sixties dl {font-family: arial, helvetica, sans-serif; border:2px solid #eee; padding:10px 0 10px 0; margin:0px 0 25px 0;} /* margin fix BOX outline - pad fix inside */
+div#content .rtype .sixties dl a:link {/*padding: 0 0 0 10px;*/ color:#999; font-weight: bold; display:block; text-decoration:none;} /* BLOCK */
+div#content .rtype .sixties dl dt a:link {padding: 0 0 0 10px;} /* BLOCK */
+div#content .rtype .sixties dl dd a:link {padding-left:25px;} /* BLOCK */
+div#content .rtype .sixties dl a:visited {color:#999;} /*do nothing atm*/
+
+div#content .rtype .sixties dl:hover {border:2px solid #72afb0; background-color:#8ebfc0; } /* appearance of box when highlighted */
+div#content .rtype .sixties dl:hover a:link {color:#fff; text-decoration:none;} /* appearance of link colors when box is highlighted */
+div#content .rtype .sixties dl:hover a:visited {color:#fff;} /* highlighted and visited */
+div#content .rtype .sixties dl:hover a:hover {color:#96e1e0; background-color:#72afb0; border-right:10px #96e1e0 solid; text-decoration:none;} /* highlighted LINK */
+div#content .rtype .sixties ul:hover {border:2px solid #72afb0; background-color:#8ebfc0; } /* appearance of box when highlighted */
+div#content .rtype .sixties ul:hover a:link {color:#fff; text-decoration:none;} /* appearance of link colors when box is highlighted */
+div#content .rtype .sixties ul:hover a:visited {color:#fff;} /* highlighted and visited */
+div#content .rtype .sixties ul:hover a:hover {color:#96e1e0; background-color:#72afb0; border-right:10px #96e1e0 solid; text-decoration:none;} /* highlighted LINK */
+
+
+div#content .rtype .sixties ul {font-family: arial, helvetica, sans-serif; border:2px solid #eee; padding:10px 0 10px 0; margin:0px 0 25px 0; list-style-type: none;} /*BOX for lists*/
+div#content .rtype .sixties ul a:link {padding: 0 0 0 10px; color:#999; font-weight: bold; display:block; text-decoration:none;} /*BLOCK links*/
+div#content .rtype .sixties ul li a:visited {color:#999;} /*do nothing atm*/
+
+div#content .rtype .sixties dl dd { padding-left: 0; margin-left:0; }
+div#content .rtype .sixties dl dd.subdescript { padding-left: 25px; margin-left:0; color:#000;} /* misc descriptions */
+div#content .rtype .sixties dl:hover dd.subdescript { padding-left: 25px; margin-left:0; color:#01494a;} /* misc descriptions HOVERED */
+div#content .rtype .sixties ul li { padding:0; margin:0; } /* normalize - i don't know */
+
+div#content .rtype .sixties dl:hover .italic, div#content .rtype .sixties ul:hover .italic {color: #96e1e0;} /* misc gray descriptions in LINK when highlighted */
+
+/* applies to sixties only */
+div#content .rtype .sixties dl dt.deftagnolink {font-weight:bold; color:#999; padding: 0 0 0 10px}
+div#content .rtype .sixties dl:hover dt.deftagnolink {color:#01494a;}
+div#content .rtype .sixties dl:hover dt.deftagnolink:hover {color:#01494a;}
+/* -- divs for main navigation of equipment intro pages -- */
+/* --- EQUIPMENT AND CATEGORY PAGES --- */
+/* --- EQUIPMENT AND CATEGORY PAGES --- */
+/* --- EQUIPMENT AND CATEGORY PAGES --- */
+/* --- EQUIPMENT AND CATEGORY PAGES --- */
+
+
+/* shouldn't be a div -- used only on archives page */
+#softlink a:link { color: #333; text-decoration:none; border-bottom:1px solid #ccc;}
+#softlink a:visited { color: #333; text-decoration:none; border-bottom:1px dashed #bbb;}
+#softlink a:focus, #softlink a:hover, #softlink a:active { color: #c00; text-decoration:none; border-bottom:1px solid #c00;}
+
+
+/* d8 woman picture box text with pic on right */
+#content .picr
+{
+	background: url(images/picr.gif) no-repeat;
+	width: 480px;
+	margin: 0;
+	padding: 0;	
+}
+
+#content .picarticle
+{
+	background: url(images/picarticle.gif) no-repeat;
+	width: 480px;
+	margin: 0;
+	padding: 0;	
+}
+
+#content .picabout
+{
+	background: url(images/picabout.gif) no-repeat;
+	width: 480px;
+	margin: 0;
+	padding: 0;	
+}
+
+#content .picebay
+{
+	background: url(images/picebay.gif) no-repeat;
+	width: 480px;
+	margin: 0;
+	padding: 0;	
+}
+
+#content .piccntrb
+{
+	background: url(images/piccntrb.gif) no-repeat;
+	width: 480px;
+	margin: 0;
+	padding: 0;	
+}
+
+#content .picgloss
+{
+	background: url(images/picgloss.gif) no-repeat;
+	width: 480px;
+	margin: 0;
+	padding: 0;	
+}
+
+#content .piclink
+{
+	background: url(images/piclink.gif) no-repeat;
+	width: 480px;
+	margin: 0;
+	padding: 0;	
+}
+
+#content .picfaq
+{
+	background: url(images/picfaq.gif) no-repeat;
+	width: 480px;
+	margin: 0;
+	padding: 0;	
+}
+
+#content .picmail
+{
+	background: url(images/picmail.gif) no-repeat;
+	width: 480px;
+	margin: 0;
+	padding: 0;	
+}
+
+#content .piccam
+{
+	background: url(images/piccam.gif) no-repeat;
+	width: 480px;
+	margin: 0;
+	padding: 0;	
+}
+
+#content .picproj
+{
+	background: url(images/picproj.gif) no-repeat;
+	width: 480px;
+	margin: 0;
+	padding: 0;	
+}
+
+#content .piclens
+{
+	background: url(images/piclens.gif) no-repeat;
+	width: 480px;
+	margin: 0;
+	padding: 0;	
+}
+
+#content .picacc
+{
+	background: url(images/picacc.gif) no-repeat;
+	width: 480px;
+	margin: 0;
+	padding: 0;	
+}
+
+#content .piceph
+{
+	background: url(images/piceph.gif) no-repeat;
+	width: 480px;
+	margin: 0;
+	padding: 0;	
+}
+
+#content .pic70
+{
+	background: url(images/pic70.gif) no-repeat;
+	width: 480px;
+	margin: 0;
+	padding: 0;	
+}
+
+#content .pictime
+{
+	background: url(images/pictime.gif) no-repeat;
+	width: 480px;
+	margin: 0;
+	padding: 0;	
+}
+
+#content .rtype
+{
+	padding: 65px 125px 15px 0px;
+}
+
+#content .frontleft
+{
+	padding: 15px 125px 15px 0px;
+}
+div.frontleft p a:visited { color: #555; text-decoration:none; border-bottom:1px dashed #999;}
+div.frontleft p a:focus, div.frontleft p a:hover, div.frontleft p a:active { color: #c00; }
+
+#content .picl
+{
+	background: url(images/picl.gif) no-repeat;
+	width: 480px;
+	margin: 0;
+	padding: 0;
+}
+div.picl a:visited { color: #555; text-decoration:none; border-bottom:1px dashed #999;}
+div.picl a:focus, div.picl a:hover, div.picl a:active { color: #c00; }
+
+
+#content .ltype
+{	text-align:right;
+	padding: 15px 0px 15px 150px;
+}
+
+/* Allen Miner picture box text with pic on right -- use rtype */
+#content .picallen
+{
+	background: url(images/allen.gif) no-repeat;
+	width: 480px;
+	margin: 0;
+	padding: 0;
+}
+
+img.rssicon {border:0;padding:0;margin:0;}
+
+/* --------------- glossary items ------------------ */
+
+div#glossary .alphabet
+{
+	text-align: center;
+	font-weight: bold;
+	border-top: 2px solid #c00;
+}
+
+#glossary .alphabet a:link, #glossary .alphabet a:visited { color: #000; text-decoration: none; padding: 0 2px;}
+#glossary .alphabet a:focus, #glossary .alphabet a:hover, #glossary .alphabet a:active {color:#c00; border-bottom:2px solid #c00;}
+
+#glossary dl dt {font-weight: bold;}
+
+/* --------------- faq questions items ------------------ */
+div#faq dl dt {font-weight: bold; font-family: arial, helvetica, sans-serif; margin-bottom: 16px;}
+#faq .qa {font-size: 29px; color: #ccc; font-family: "palatino Linotype", palatino, georgia, serif;}
+#faq strong {color: #999;}
+#faq ul {font: 12px arial, helvetica, sans-serif; margin:15px 0 40px 0; padding: 0; list-style-type: none; line-height: 18px;}
+#faq ul li.faqsect {font: 17px "palatino Linotype", palatino, georgia, serif; font-weight:bold; color:#999; margin:0; padding: 6px 0 0 0;}
+#faq a:visited { color: #555; text-decoration:none; border-bottom:1px dashed #999;}
+#faq a:focus, #faq a:hover, #faq a:active { color: #c00; }
+/* --------------- articles stories id section ------------------ */
+div#stories {margin:0 0 43px 0; padding:0;}
+div#stories a:link {color:#c00; text-decoration:none;}
+div#stories a:visited {text-decoration: none; color:#999;}
+div#stories a:focus, div#stories a:hover, div#stories a:active {text-decoration:underline;}
+div#stories p {padding-bottom: 26px; border-bottom: 1px #999 dashed;}
+
+
+/* -------- some table styling test 
+
+#content table { font-size: 14px; font-family: tahoma, geneva, sans-serif; padding: 0; margin: 5px; border:1px solid #000;}
+#content table caption { text-align: left; font-family:arial; color:#999; font-weight: bold; padding: 0; margin: 0; }
+#content table tr.hilite { background-color: #d8d8d8; }
+#content table td {text-align:left;border-bottom:1px solid #000;}
+#content table td.rite { text-align: right;}
+-------------- */
+
+/* tabular1 */
+table.tabular1 {
+    border-spacing: 0px;
+    border-collapse: collapse;
+	font-family: arial, helvetica, serif;
+	width:480px;
+	font-size:13px;
+}
+table.tabular1 caption {
+	padding:0;
+	margin:0;
+	font-weight:bold;
+	color:#859064;
+}
+table.tabular1 th {
+    text-align: left;
+    font-weight: normal;
+    padding: 0.1em 0.5em;
+    border-bottom: 2px solid #fff;
+    background: #d0d8be;
+}
+table.tabular1 td {
+    text-align: right;
+    border-bottom: 2px solid #fff;
+    padding: 0.1em 0.5em;
+    background: #d0d8be;
+}
+
+table.tabular1 td.yearcol {padding-left:25px;}
+
+
+table.tabular1 thead th {
+    background: #b5c09f;
+    color: #fff; font-weight:bold;
+    text-align: right;
+}
+table.tabular1 th.corner {
+    text-align: left;
+}
+table.tabular1 th.yeartop {
+    text-align: right;
+}
+
+/* -------- PREVIOUS AND NEXT LINKS -------------- */
+/* -------- PREVIOUS AND NEXT LINKS -------------- */
+ul#backnext
+{
+	list-style-type: none;
+	margin: .5em 0 2em 0;
+	padding: .5em 0;
+}
+
+ul#backnext li a
+{
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: 1px;
+	font-size: 12px;
+	font-weight: bold;
+	display: block;
+	color: #ccc;
+	width: 231px;
+	background-color: #000;
+	padding: .4em 0 .3em 0;
+	text-align: center;
+	text-decoration: none;
+}
+
+ul#backnext li a:hover
+{
+	color: #fff;
+	background-color: #333;
+}
+
+ul#backnext .left { float: left; }
+ul#backnext .right { float: right; }
+
+/* -------- PREVIOUS AND NEXT LINKS -------------- */
+/* -------- PREVIOUS AND NEXT LINKS -------------- */
+
+#footnote {margin-top: 21px;}
+#footnote p 
+{
+	color: #999;
+	font: 11px arial, verdana, san-serif;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+#footnote p a:link, #footnote p a:visited {color: #999; background-color:#eee; padding:1px 4px 1px 4px; margin-right: 1em;}
+#footnote p a:hover {color: #fff; background-color:#ccc; padding:1px 4px 1px 4px; margin-right: 1em;}
+
+sup.foot {vertical-align: top; color: #ccc; font: 9px verdana, arial, san-serif; margin:0; padding:0; margin-right: 11px;}
+
+
+/* -------- COPYRIGHT FOR FOOTER OR PAGE -------------- */
+/* -------- COPYRIGHT FOR FOOTER OR PAGE -------------- */
+/*temp test of copyright and footer*/
+#footer a:link, #footer a:visited { color: #999;}
+#footer a:focus, #footer a:hover, #footer a:active { color: #709455; }
+
+#footer .footerlinks {
+	font-family: Georgia, Palatino, serif;
+	color: #999;
+	font-size: 15px; margin: 0 90px 0px 190px;
+	border-top: 2px solid #709455;
+}
+
+#footer .footerlinks ul
+{
+	margin: 0;
+	padding: 4px 0;
+	list-style-type:none;
+	text-align: center;
+}
+#footer .footerlinks ul li { display: inline; /*border-left: 1px solid;*/}
+#footer .footerlinks ul li a:link {padding: 0 5px; text-decoration:none;}
+
+
+#footer .copyright
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size:11px;
+	color:#999;
+	/*font-family: Georgia, Palatino, serif;
+	color: #999;
+	font-size: 11px;*/
+	text-align: center;
+	/*padding: 30px 0 15px 0;*/
+	margin: 0 90px 10px 190px;
+	padding-top:10px;
+	line-height:12px;
+	/*border-top: 2px solid #c00;*/ /*originally in .copyright*/
+}
+
+#footer .smedia
+{
+	text-align: center;
+	/*padding: 30px 0 15px 0;*/
+	margin: 0 90px 0px 190px;
+	padding:5px 0 20px 0;
+	/*border-top: 2px solid #c00;*/ /*originally in .copyright*/
+}
+
+
+/* -------- LINK PAGE CSS -------------- */
+/* -------- LINK PAGE CSS -------------- */
+#link h2 {font: 20px "palatino Linotype", palatino, georgia, serif; color:#c00; margin:17px 0 12px 0; padding: 0; line-height: 18px;}
+#link p {padding:0; margin: 4px 0 4px 0;}
+#link p a:link {color:#999; font: 12px Arial, Helvetica, sans-serif; font-weight:bold;}
+#link p a:visited { color: #666; font: 12px Arial, Helvetica, sans-serif; font-weight:bold; text-decoration:none; border-bottom: 1px dashed #ccc;}
+#link p a:focus, #link p a:hover, #link p a:active { color: #c00; }
+
+/* -------- EBAY  -------------- */
+div.ebay table td img {display:block;padding: 0;margin:0;} /*ebay colored*/
+
+div#sidebar div#ebaycol {padding-left: 14px; padding-top:12px; text-align:left;}
+div#sidebar div#ebaycol table td img {display:block; padding:0;margin:0;}
+div#sidebar div#ebaycol a:link { padding:0;margin:0; text-decoration:underline; border-bottom:0; display:block; color: #666;}
+div#sidebar div#ebaycol a:visited, div#sidebar div#ebaycol a:focus, div#sidebar div#ebaycol a:hover { padding:0;margin:0; text-decoration:underline; border-bottom:0; display:block; color: #666; background-color:transparent; }
+
+/* -------- RSS AUCTION FEEDS    ----------- */
+div#content .feedbay {margin:0;padding:0; font: .9em arial, helvetica, sans-serif;}
+
+div#content .feedbay ul
+{
+	margin-left: 0;
+	padding-left: 0;
+	padding-bottom: 20px;
+	list-style-type: none;
+}
+
+div#content .feedbay ul li { padding:0; margin:0 0 5px 0; border:2px #c8c8c8 solid;}
+div#content .feedbay ul li span.headline {padding:5px; font-size:12px; display:block; font-weight:bold; background-color:#f0f0f0;}
+div#content .feedbay ul li {font-size:15px;}
+
+div#content .feedbay a:link { color: #777; }
+div#content .feedbay a:visited { color: #555;}
+div#content .feedbay a:focus, div#content .feedbay a:hover, div#content .feedbay a:active { color: #c00; }
+
+/* =-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+div.sociable { margin:10px 0 0px 0; padding: 0 0 5px 0; text-align:center; border-bottom:15px #000 solid;}
+
+/*span.sociable_tagline { position: relative; }
+span.sociable_tagline span { display: none; width: 14em; }
+span.sociable_tagline:hover span {
+	position: absolute;
+	display: block;
+	top: -5em;
+	background: #ffe;
+	border: 1px solid #ccc;
+	color: black;
+	line-height: 1.25em;
+}
+*/
+/*.sociable span {
+	display: block;
+}*/
+.sociable ul {
+	display: inline;
+/*	margin: 0 !important;
+	padding: 0 !important;*/
+}
+.sociable ul li {
+	background: none;
+	display: inline !important;
+	list-style-type: none;
+	margin: 0;
+	/*padding: 5px;*/
+}
+/*.sociable ul li:before { content: ""; }*/
+.sociable img {
+	float: none;
+	width: 35px;
+	height: 35px;
+	border: 0;
+	margin: 0;
+	padding: 0 7px 0 7px;
+}
+
+.sociable-hovers {
+	opacity: .4;
+	-moz-opacity: .4;
+	filter: alpha(opacity=40);
+}
+.sociable-hovers:hover {
+	opacity: 1;
+	-moz-opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+/* -------- Timeline in basic CSS only or separatecss altogether -------------- */
+/* -------- Timeline in basic CSS only or separatecss altogether -------------- */
+#content #tline a:visited {text-decoration:none; border-bottom:1px dashed #999;}
+
+#content h3.timea { text-align:center; font: 1.3em  georgia, serif; color:#666; background-color:#eee; display: block; width: 100%; margin:0; padding:.1em 0;}
+#content h3.time40 { text-align:center; font: 1.3em georgia, serif; color:#330; background-color:#CCCCA2; display: block; width: 100%; margin:0; padding:.1em 0;}
+#content h3.time50 { text-align:center; font: 1.3em georgia, serif; color:#044211; background-color:#B4C799; display: block; width: 100%; margin:0; padding:.1em 0;}
+#content h3.time60 { text-align:center; font: 1.3em georgia, serif; color:#01494A; background-color:#8EBFC0; display: block; width: 100%; margin:0; padding:.1em 0;}
+#content h3.time70 { text-align:center; font: 1.3em georgia, serif; color:#ffc; background-color:#656500; display: block; width: 100%; margin:0; padding:.1em 0;}
+
+em.history {font-style:italic;color:#999}
+
+dl.timeline
+{
+	margin: 0;
+	padding: 0;
+	font-family: arial, helvetica, sans-serif;
+	border-left: 5px solid #eee;
+	background: url(images/timeg.gif) repeat-y;
+}
+
+dl.timeline a:hover { color:#ccc; background-color:#000; text-decoration: none;}
+
+.timeline dt
+{
+	position: relative;
+	left: 0;
+	top: 1.1em;
+	width: 3.5em;
+	color:#999;
+	font: 1.2em georgia, times, serif;;
+	border-left: 5px solid #ccc;
+	padding-left: 7px;
+}
+
+.timeline dd
+{
+	border-left: 1px solid #ccc;
+	margin: 0 0 0 5em;
+	padding: 0 0 .5em 1em;
+}
+
+dl.timeline40
+{
+	margin: 0;
+	padding: 0;
+	font-family: arial, helvetica, sans-serif;
+	border-left: 5px solid #CCCCA2;
+	background: url(images/time40.gif) repeat-y;
+}
+
+dl.timeline40 a:hover { color: #EDEBC6; background-color: #A59A68; text-decoration: none; }
+
+.timeline40 dt
+{
+	position: relative;
+	left: 0;
+	top: 1.1em;
+	width: 3.5em;
+	color:#a59a68;
+	font: 1.2em georgia, times, serif;;
+	border-left: 5px solid #A59A68;
+	padding-left: 7px;
+}
+
+.timeline40 dd
+{
+	border-left: 1px solid #A59A68;
+	margin: 0 0 0 5em;
+	padding: 0 0 .5em 1em;
+}
+
+dl.timeline50
+{
+	margin: 0;
+	padding: 0;
+	font-family: arial, helvetica, sans-serif;
+	border-left: 5px solid #B4C799;
+	background: url(images/time50.gif) repeat-y;
+}
+
+dl.timeline50 a:hover { color: #D5E7BA; background-color: #709455; text-decoration: none; }
+
+.timeline50 dt
+{
+	position: relative;
+	left: 0;
+	top: 1.1em;
+	width: 3.5em;
+	color:#709455;
+	font: 1.2em georgia, times, serif;;
+	border-left: 5px solid #709455;
+	padding-left: 7px;
+}
+
+.timeline50 dd
+{
+	border-left: 1px solid #709455;
+	margin: 0 0 0 5em;
+	padding: 0 0 .5em 1em;
+}
+
+dl.timeline60
+{
+	margin: 0;
+	padding: 0;
+	font-family: arial, helvetica, sans-serif;
+	border-left: 5px solid #8EBFC0;
+	background: url(images/time60.gif) repeat-y;
+}
+
+dl.timeline60 a:hover { color: #96E1E0; background-color: #138889; text-decoration: none;}
+
+.timeline60 dt
+{
+	position: relative;
+	left: 0;
+	top: 1.1em;
+	width: 3.5em;
+	color:#138889;
+	font: 1.2em georgia, times, serif;;
+	border-left: 5px solid #138889;
+	padding-left: 7px;
+}
+
+.timeline60 dd
+{
+	border-left: 1px solid #138889;
+	margin: 0 0 0 5em;
+	padding: 0 0 .5em 1em;
+}
+
+dl.timeline70
+{
+	margin: 0;
+	padding: 0;
+	font-family: arial, helvetica, sans-serif;
+	border-left: 5px solid #656500;
+}
+
+dl.timeline70 a:hover { color: #fff; background-color: #656500; text-decoration: none;}
+
+.timeline70 dt
+{
+	position: relative;
+	left: 0;
+	top: 1.1em;
+	width: 3.5em;
+	color:#660;
+	font: 1.2em georgia, times, serif;;
+	border-left: 5px solid #F5A100;
+	padding-left: 7px;
+}
+
+.timeline70 dd
+{
+	border-left: 1px solid #F5A100;
+	margin: 0 0 0 5em;
+	padding: 0 0 .5em 1em;
+}
+
+/* -------- DOUBLE LIST -- list styling used in instruction reference -- DOUBLE LIST -------------- */
+/* -------- DOUBLE LIST -- list styling used in instruction reference -- DOUBLE LIST -------------- */
+
+ol.doublerows {
+  font: bold "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  color: #709455;
+}
+
+ol.doublerows li {margin:0px; padding:0px; line-height:.9em;}
+
+ol.doublerows p {
+	font: normal "palatino Linotype", palatino, georgia, serif;
+	color: #222;
+	line-height:1.15em;
+	margin:0px; padding:0px;
+}
+
+/* -------- DOUBLE LIST -- list styling used in instruction reference -- DOUBLE LIST -------------- */
+/* -------- DOUBLE LIST -- list styling used in instruction reference -- DOUBLE LIST -------------- */

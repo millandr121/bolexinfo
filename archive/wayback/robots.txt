@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /forums/memberlist.php
+Disallow: /forums/profile.php

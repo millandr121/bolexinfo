@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	lang="en"
+	xml:lang="en">
+
+<head>
+
+<meta http-equiv="Content-Type"
+	content="text/html;
+	charset=iso-8859-1" />
+
+<meta http-equiv="imagetoolbar"
+	content="no" />
+
+<link rel="icon"
+	href="templates/Conundrum/images/favicon.ico" />
+
+<link rel="stylesheet"
+	href="templates/Conundrum/Conundrum.css" type="text/css" />
+
+<script type="text/javascript"
+	src="templates/Conundrum/Conundrum.js"></script>
+
+<script type="text/javascript"
+	src="templates/Conundrum/lightbox/prototype.js"></script>
+
+<script type="text/javascript"
+	src="templates/Conundrum/lightbox/scriptaculous.js?load=effects"></script>
+
+<script type="text/javascript"
+	src="templates/Conundrum/lightbox/lightbox.js"></script>
+
+<link rel="stylesheet"
+	href="templates/Conundrum/lightbox/lightbox.css" type="text/css" media="screen" />
+
+
+<link rel="top" href="./index.php?sid=c5b2f2d13d04d245184cf85dfaae0ca7" title="Bolex Collector | Discussion Forum Index" />
+<link rel="search" href="./search.php?sid=c5b2f2d13d04d245184cf85dfaae0ca7" title="Search" />
+<link rel="help" href="./faq.php?sid=c5b2f2d13d04d245184cf85dfaae0ca7" title="FAQ" />
+<link rel="author" href="./memberlist.php?sid=c5b2f2d13d04d245184cf85dfaae0ca7" title="Memberlist" />
+
+
+<title>Bolex Collector | Discussion ~ Index</title>
+
+
+</head>
+<body>
+
+<a id="top"></a>
+
+<table cellspacing="0" id="forum">
+	<tr>
+		<td>&nbsp;</td>
+		<td id="bodyline">
+
+		<div id="top_image">
+			<a href="index.php?sid=c5b2f2d13d04d245184cf85dfaae0ca7"><img src="templates/Conundrum/images/top_image.jpg" alt="Bolex Collector | Discussion Forum Index" /></a>
+		</div>
+
+
+<!-- HEADER with banner and top links -->
+<div id="bolcolmenu">
+ <ul>
+	<li><a href="http://www.bolexcollector.com/">Home</a></li>
+	<li><a href="http://www.bolexcollector.com/cameras.html">Cameras</a></li>
+	<li><a href="http://www.bolexcollector.com/projectors.html">Projectors</a></li>
+	<li><a href="http://www.bolexcollector.com/lenses.html">Lenses</a></li>
+	<li><a href="http://www.bolexcollector.com/accessories.html">Accessories</a></li>
+	<li><a href="http://www.bolexcollector.com/ephemera.html">Ephemera</a></li>
+	</ul>
+</div>
+
+		<div id="menu">
+			<div id="left" class="left mainmenu">
+				<a href="faq.php?sid=c5b2f2d13d04d245184cf85dfaae0ca7">FAQ</a>
+				<a href="search.php?sid=c5b2f2d13d04d245184cf85dfaae0ca7">Search</a>
+				<a href="memberlist.php?sid=c5b2f2d13d04d245184cf85dfaae0ca7">Memberlist</a>
+				<a href="groupcp.php?sid=c5b2f2d13d04d245184cf85dfaae0ca7">Usergroups</a>
+			</div>
+			<div id="right" class="right mainmenu">
+				<a href="login.php?sid=c5b2f2d13d04d245184cf85dfaae0ca7">Log in</a>
+				<a href="profile.php?mode=register&amp;sid=c5b2f2d13d04d245184cf85dfaae0ca7">Register</a>
+			</div>
+		</div>
+
+		<div class="clear"></div>
+<table cellspacing="1" class="index_body">
+	<tr class="toplines">
+		<th colspan="2">Forum</th>
+		<th>Topics</th>
+		<th>Posts</th>
+		<th>Last Post</th>
+	</tr>
+	<tr>
+		<td colspan="5"><h2><a href="index.php?c=1&amp;sid=c5b2f2d13d04d245184cf85dfaae0ca7">General</a></h2></td>
+	</tr>
+	<tr>
+		<td class="row1 one"><img src="templates/Conundrum/images/folder_big.gif" alt="" /></td>
+		<td class="row1 two"
+		onmouseover="this.style.backgroundColor='#DEE3E7'; this.style.cursor='pointer'"
+		onmouseout="this.style.backgroundColor=''"
+		onclick="window.location.href='viewforum.php?f=1&amp;sid=c5b2f2d13d04d245184cf85dfaae0ca7'">
+		<h3><a href="viewforum.php?f=1&amp;sid=c5b2f2d13d04d245184cf85dfaae0ca7">Cine Camera Collectors</a></h3>
+		Classic movie cameras, projectors and equipment -- Agfa, Bolex, Pathé, Kodak, Bell & Howell and everything else! Need help in identifying something? Want to talk about collecting? This is a friendly community forum for general discussion.<br />
+		Moderator <a href="profile.php?mode=viewprofile&amp;u=3&amp;sid=c5b2f2d13d04d245184cf85dfaae0ca7">fredtheoyster</a></td>
+		<td class="row2 one">8</td>
+		<td class="row2 one">27</td>
+		<td class="row2 three">Mon Apr 30, 2007 3:00 am<br /><a href="profile.php?mode=viewprofile&amp;u=2&amp;sid=c5b2f2d13d04d245184cf85dfaae0ca7">Michael</a> <a href="viewtopic.php?p=60&amp;sid=c5b2f2d13d04d245184cf85dfaae0ca7#60"><img src="templates/Conundrum/images/icon_latest_reply.gif" border="0" alt="View latest post" title="View latest post" /></a></td>
+	</tr>
+	<tr>
+		<td class="row1 one"><img src="templates/Conundrum/images/folder_big.gif" alt="" /></td>
+		<td class="row1 two"
+		onmouseover="this.style.backgroundColor='#DEE3E7'; this.style.cursor='pointer'"
+		onmouseout="this.style.backgroundColor=''"
+		onclick="window.location.href='viewforum.php?f=4&amp;sid=c5b2f2d13d04d245184cf85dfaae0ca7'">
+		<h3><a href="viewforum.php?f=4&amp;sid=c5b2f2d13d04d245184cf85dfaae0ca7">Bolex Users</a></h3>
+		Got a technical related question? Want to discuss filming or projecting with Bolex equipment? Post it here.<br />
+		Moderator <a href="profile.php?mode=viewprofile&amp;u=3&amp;sid=c5b2f2d13d04d245184cf85dfaae0ca7">fredtheoyster</a></td>
+		<td class="row2 one">9</td>
+		<td class="row2 one">26</td>
+		<td class="row2 three">Sat May 12, 2007 10:53 pm<br /><a href="profile.php?mode=viewprofile&amp;u=22&amp;sid=c5b2f2d13d04d245184cf85dfaae0ca7">Sam Dole</a> <a href="viewtopic.php?p=81&amp;sid=c5b2f2d13d04d245184cf85dfaae0ca7#81"><img src="templates/Conundrum/images/icon_latest_reply.gif" border="0" alt="View latest post" title="View latest post" /></a></td>
+	</tr>
+	<tr>
+		<td colspan="5"><h2><a href="index.php?c=2&amp;sid=c5b2f2d13d04d245184cf85dfaae0ca7">Buying, Selling, Trading</a></h2></td>
+	</tr>
+</table>
+
+<div class="timezone left"><a href="index.php?mark=forums&amp;sid=c5b2f2d13d04d245184cf85dfaae0ca7">Mark all forums read</a></div>
+<div class="timezone right">All times are GMT</div>
+<div class="spacing"></div>
+
+<table cellspacing="0">
+	<tr class="lines_3">
+		<th>
+		<div class="left">
+			The time now is Thu May 17, 2007 3:35 am<br />
+           <span class="nav"><a href="index.php?sid=c5b2f2d13d04d245184cf85dfaae0ca7">Bolex Collector | Discussion Forum Index</a></span>
+		</div>
+		<div class="right">
+			<a href="search.php?search_id=unanswered&amp;sid=c5b2f2d13d04d245184cf85dfaae0ca7">View unanswered posts</a>
+		</div>
+		</th>
+	</tr>
+</table>
+<div class="spacing"></div>
+
+<table cellspacing="1" class="index_body">
+	<tr>
+		<td colspan="2"><h2><a href="viewonline.php?sid=c5b2f2d13d04d245184cf85dfaae0ca7">Who is Online</a></h2></td>
+	</tr>
+	<tr>
+		<td class="row1 one" rowspan="2"><img src="templates/Conundrum/images/whosonline.gif" alt="" /></td>
+		<td class="row1 two">Our users have posted a total of <b>63</b> articles<br />
+		We have <b>23</b> registered users<br />
+		The newest registered user is <b><a href="profile.php?mode=viewprofile&amp;u=25&amp;sid=c5b2f2d13d04d245184cf85dfaae0ca7">LECS</a></b></td>
+	</tr>
+	<tr>
+		<td class="row1 two">In total there is <b>1</b> user online :: 0 Registered, 0 Hidden and 1 Guest &nbsp; [ <span style="color:#A76100">Administrator</span> ] &nbsp; [ <span style="color:#668400">Moderator</span> ]<br />
+		Most users ever online was <b>4</b> on Wed Mar 21, 2007 3:57 am<br />
+		Registered Users: None</td>
+	</tr>
+</table>
+<div class="timezone left">This data is based on users active over the past five minutes</div>
+<div class="spacing"></div>
+
+<form method="post" action="login.php?sid=c5b2f2d13d04d245184cf85dfaae0ca7">
+<table cellspacing="1">
+	<tr>
+		<td><h2><a id="login"></a>Log in</h2></td>
+	</tr>
+	<tr>
+		<td class="row1 txtcenter pad4">
+		Username:
+		<input class="post postsmall" type="text" name="username" />
+		&nbsp;&nbsp;&nbsp;Password:
+		<input class="post postsmall" type="password" name="password" maxlength="32" />
+		<input name="autologin" type="hidden" value="1" />
+		&nbsp;&nbsp;<input type="submit" class="button" name="login" value="Log in" />
+		</td>
+	</tr>
+</table>
+</form>
+<div class="spacing"></div>
+
+<div class="spacing"></div>
+
+<table cellspacing="1" class="index_body_icons">
+	<tr>
+		<td><img src="templates/Conundrum/images/folder_new_big.gif" alt=""/>
+		New posts&nbsp;&nbsp;
+		<img src="templates/Conundrum/images/folder_locked_big.gif" alt="" />
+		Forum is locked&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	</tr>
+</table>
+		<div class="spacing"></div>
+		<div class="spacing"></div>
+		<div class="spacing"></div>
+
+		<div class="copyright"></div>
+
+		<div class="copyright">
+			Powered by <a href="http://www.phpbb.com/" target="_phpbb" title="Powered by phpBB &copy; 2001, 2006 phpBB Group">phpBB</a>
+		</div>
+
+
+		<td>&nbsp;</td>
+
+
+</body>
+</html>

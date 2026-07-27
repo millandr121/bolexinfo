@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="description" content="Merry Christmas, from Bolex Collector!">
+<title>Bolex Collector | Merry Christmas (Dec. 18, 2006)</title>
+<link rel="stylesheet" href="../style.css" type="text/css" media="screen">
+<link rel="shortcut icon" href="../images/favicon.ico">
+</head>
+
+<body>
+	<div><a name="top">&nbsp;</a></div>
+			
+			<!-- LOGO Top left logo menu -->
+			
+<div id="logo"> 
+  <!-- Atomz Search HTML for Bolex Collector -->
+  <form id="searchbox" method="get" action="http://search.atomz.com/search/">
+    <div> 
+      <input class="textarea" name="sp-q">
+      <br>
+      <input class="buttonstyle" type="submit" value="Search">
+      <input type="hidden" name="sp-a" value="sp10036ab9">
+      <input type="hidden" name="sp-p" value="all">
+      <input type="hidden" name="sp-f" value="ISO-8859-1">
+    </div>
+  </form>
+</div>
+			
+			<!-- HEADER with banner and top links -->
+			
+<div id="header"> 
+  <ul>
+    <li><a href="http://www.bolexcollector.com">Home</a></li>
+    <li><a href="../cameras.html">Cameras</a></li>
+    <li><a href="../projectors.html">Projectors</a></li>
+    <li><a href="../lenses.html">Lenses</a></li>
+    <li><a href="../accessories.html">Accessories</a></li>
+    <li><a href="../ephemera.html">Ephemera</a></li>
+  </ul>
+</div>
+	
+<!-- MENU left side -->
+<div id="menu"> 
+  <h4 class="type">Site</h4>
+  <ul class="serifhome">
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+    <li><a href="../contribute.html">Contribute</a></li>
+    <li><a href="../faq.html">FAQ</a></li>
+  </ul>
+  <h4 class="type">Reference</h4>
+  <ul class="serifhome">
+    <li><a href="../articles.html">Articles</a></li>
+    <li><a href="../timeline.html">Timeline</a></li>
+    <li><a href="../glossary.html">Glossary</a></li>
+    <li><a href="../links.html">Links</a></li>
+  </ul>
+</div>
+
+<!-- CONTENT  --> 
+<div id="content"> 
+  <!-- a picture and titling for article -->
+  <div class="center"> <img src="../images/news/bolexwoman.jpg" alt="Bolex woman in a Santa costume" width="480" height="337"> 
+  </div>
+  <h2 class="bigtitle">Merry Christmas, from Bolex Collector</h2>
+  <p> <span class="italicb">December 18, 2006 -- Michael Tisdale</span><br>
+    Greetings! Bolex Collector is taking the rest of the year off, so this will 
+    be the last site update until the beginning of the new year.</p>
+  <p>With the holidays and other obligations, I've been a little busy for the 
+    last two months and have not had a chance to update the site as often as I 
+    would like. To those who have written recently with questions, I apologize 
+    for not responding; I'll catch up on my email in January. </p>
+  <h5 class="close">New Additions!</h5>
+  <p class="closep">Beginning in 2007, I plan to add several more articles to 
+    the site, as well as update other pages with more information and images. 
+    I have many articles planned, additional brochures to scan, new images and 
+    more. Enough to keep me busy for a while! So, visit often and look for those 
+    soon. I hope you'll enjoy the new additions. </p>
+  <h5 class="close">...and Thanks for '06</h5>
+  <p class="closep">I'd like to thank everyone who has contacted me since this 
+    site began. I've enjoyed reading emails from other collectors and filmmakers 
+    around the world. It's great to hear from others who are as obsessive about 
+    Bolex as I am. Your comments have been very encouraging. </p>
+  <p>Last, but not least, I'd like to thank Mr. Ernst Wildi (Hasselblad photography 
+    guru, instructor and author; former Technical Director at Paillard Products 
+    in New York; and author of many articles in the Bolex Reporter magazine, among 
+    others) for his kind help in answering many of my questions while putting 
+    this site together. And of course, thanks to my wife for her patience and 
+    support over the many hours I devote to this website -- and for putting up 
+    with my growing collection of Bolex stuff that competes for space with her 
+    own collections! </p>
+  <p>Happy Holidays,<br>
+    Michael Tisdale </p>
+  <div class="center"> <img src="../images/news/christmas.jpg" alt="Bolex Christms Greetings" width="480" height="406"> 
+  </div>
+  <hr class="spacer">
+  <!-- begin copyright here -->
+  <div class="copyright"> Copyright &copy; 2005-2007 bolexcollector.com<br>
+    <a href="#top">Return to top of Page</a> </div>
+</div>
+<!-- End of main content above -->
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta name="description" content="The differences between regular and RX lenses for Bolex H16 reflex cameras.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="imagetoolbar" content="no">
+<title>Bolex Collector | Articles | Lenses for Bolex 16mm Cameras (Mar. 21, 2007)</title>
+<link rel="stylesheet" href="../stylebw.css" type="text/css" media="screen">
+<link rel="shortcut icon" href="../images/favicon.ico">
+</head>
+
+<body>
+<div id="container">
+
+	<div id="headerone"> 
+         <div class="headersearch">
+          <!-- Atomz HTML for Search -->
+            <form method="get" action="http://search.atomz.com/search/">
+            <div>
+            <input type="hidden" name="sp_a" value="sp10036ab9">
+            <input class="textarea" name="sp_q">
+            <input type="submit" value="Find">
+            <input type="hidden" name="sp_p" value="all">
+            <input type="hidden" name="sp_f" value="ISO-8859-1">
+            </div>
+            </form>
+     	 </div>
+      </div>
+
+
+<!-- HEADER top links -->
+	<div id="headertwo">
+			<div class="headermenu">
+				 <ul>
+					<li><a href="http://www.bolexcollector.com">Home</a></li>
+					<li><a href="../cameras.html">Cameras</a></li>
+					<li><a href="../projectors.html">Projectors</a></li>
+					<li><a href="../lenses.html">Lenses</a></li>
+					<li><a href="../accessories.html">Accessories</a></li>
+					<li><a href="../ephemera.html">Ephemera</a></li>
+					</ul>
+			</div><!-- END top menu -->			
+	</div><!-- END HEADER TWO -->
+	
+
+<!-- SIDEBAR START menu ads and misc stuff -->    
+<div id="sidebar">
+    <div class="sidemenu">
+        <h4 class="type">Reference</h4>
+            <ul class="serifhome">
+                <li><a class="selectindex" href="../articles.html">Return to Index</a></li>
+                <li><a href="../auctions.html">For Sale</a></li>
+                <li><a href="../timeline.html">Timeline</a></li>
+                <li><a href="../glossary.html">Glossary</a></li>
+                </ul>
+		<h4 class="type">Follow Us</h4>
+        	<div class="sociable">
+            <ul>
+                <li><a rel="nofollow" href="http://www.facebook.com/pages/Bolex-Collector/189520487779033" title="Facebook"><img src="../images/facebook.gif" title="Facebook" alt="Facebook" class="sociable-hovers"></a></li>
+                <li><a rel="nofollow" href="http://twitter.com/bolexcollector" title="Twitter"><img src="../images/twitter.gif" title="Twitter" alt="Twitter" class="sociable-hovers"></a></li>
+            </ul>
+			</div>
+            <!-- END sociable -->                
+                
+	</div><!-- SIDEMENU END -->
+    
+    <div class="sponsornoborder">
+	<script charset="utf-8" src='http://adn.ebay.com/files/js/min/ebay_activeContent-min.js'></script>
+    <script charset="utf-8" type='text/javascript'>
+    document.write('<scr' + 'ipt charset="utf-8" src="http://adn.ebay.com/cb?programId=1&campId=5335822045&toolId=10026&customId=lenses_120_800&keyword=%28kern+paillard%2Cpan+cinor%29&width=120&height=800&font=2&textColor=666666&linkColor=777777&arrowColor=8BBC01&color1=959595&color2=c8c8c8&format=Html&contentType=TEXT_AND_IMAGE&enableSearch=n&useeBayT=n&usePopularSearches=n&freeShipping=n&topRatedSeller=n&itemsWithPayPal=n&descriptionSearch=n&showKwCatLink=n&excludeCatId=&excludeKeyword=&catId=625&disWithin=200&ctx=n&flashEnabled=' + isFlashEnabled + '&pageTitle=' + _epn__pageTitle + '"></scr' + 'ipt>' );
+    </script>
+    </div>
+
+</div><!-- SIDEBAR END -->
+
+<!-- CONTENT  --> 	
+<div id="content">
+  <h2 class="bigtitle">Lenses for Bolex 16mm Cameras</h2>
+  <p> <span class="italicb">March 21, 2007 -- Bolexcollector.com</span><br>
+	<em>The following technical information is taken from a 1974 bulletin, published by Paillard Inc., NY, explaining the use of RX mount lenses with the Bolex H16.</em>  <sup class="foot"><a name="ft1" href="#ftref1">[1]</a></sup>
+	</p>
+	<p>Among the lenses for 16mm Bolex cameras are some designated for use on non-reflex 16mm cameras only, some which are usable on reflex and non-reflex models, and some designated RX types, meaning they can be used on Bolex 16mm cameras with reflex viewing only.
+	</p>
+	<p>Since all these lenses have the same "C" type thread (1" diameter, 32 threads per inch), the question naturally comes up regarding the difference between the various types and whether or not other makes of lenses can be used on Bolex 16mm cameras.
+	</p>
+	<p>Since the mechanical distance from the filmplane to the lens seat appears to be longer on reflex cameras, the opinion expressed most often is that RX and "C" mount lenses are adjusted for a different lens seat-to-filmplane distance. This, however, is not so.
+	</p>
+  <div class="center"><img src="../images/articles/07_03_21a.jpg" alt="Figure 1" width="294" height="244"> 
+    <div class="imagecap">Figure 1. RX and standard C mount lenses.</div>
+  </div>
+	<p>All Bolex lenses (Figure 1), whether RX or not, are adjusted for the same back focus and form an image at exactly the same distance of 17.52mm (.690") from the lens seat when set at infinity, providing there is nothing but air between the rear element of the lens and film. All these conditions are met in non-reflex cameras.
+	</p>
+	<p>In reflex cameras, on the other hand, part of the space between lens and film is filled with the prism, which reflects part of the light into the reflex finder. The light which comes out of the lens no longer travels in air only.
+	</p>
+  <div class="center"><img src="../images/articles/07_03_21b.jpg" alt="Figure 2" width="301" height="153"> 
+    <div class="imagecap">Figure 2. Light is refracted by the reflex prism.</div>
+  </div>
+  <p>The light (Figure 2) which would normally form an image at A, enters the front surface of the prism where it is refracted (bent), and then comes out of the glass at the rear surface where it is refracted again, but in the opposite direction. As a result, the image is now formed at B, at a distance of 20.76mm, which explains why the mechanical distance in a reflex camera is longer.
+  </p>
+  <div class="center"><img src="../images/articles/07_03_21c.jpg" alt="Figure 3" width="314" height="246"> 
+    <div class="imagecap">Figure 3. Distance of image formed by lens is increased by reflex prism.</div>
+  </div>
+  <p>This change in the image distance is caused completely by the prisms and happens to any lens, whether RX or C (Figure 3), wide angle, telephoto, zoom, which explains why some lenses, like the Macro Switar 75mm, Macro Yvar 150mm, Pan Cinor 85, can be used on reflex cameras as well as on non-reflex models without an adjustment of any kind.
+  </p>
+  <p>We can, therefore, state the following facts:</p>
+  <ul>
+  <li>Without the prism, all the lenses form the image at 17.52mm -- with the prism, at 20.76mm.</li>
+  <li>Any 16mm lens adjusted for the standard "C" mount distance of 17.52mm will properly focus on all Bolex H16 cameras, whether reflex or non-reflex models.</li>
+  <li>All Bolex H-16 cameras, whether reflex or not, have the same <u>optical</u> distance from the lens seat to the filmplane.</li>
+  </ul>
+  <p>Since all lenses adjusted for 17.52mm form the image at 20.76 when used in a reflex camera, the above statements still do not explain why special RX lenses are necessary. To find the answer, we must discuss the optical correction of lenses.
+  </p>
+  <p>In an optically well-designed lens, the various faults or aberrations, such as chromatic, spherical aberrations, coma, astigmatism, etc., are minimized to a degree where they are no longer visible and objectionable on the film.
+  </p>
+  <p>As an example, let's take spherical aberration, which is the fault of a single lens where light rays passing through the edge of a lens form an image closer to the lens than light rays passing near the center (Figure 4).
+  </p>
+  <div class="center"><img src="../images/articles/07_03_21d.jpg" alt="Figure 4" width="251" height="155"> 
+    <div class="imagecap">Figure 4. Spherical aberration.</div>
+  </div>
+  <p>In a lens corrected for spherical aberration, all light rays meet at the same point, form the image at the same distance (Figure 5).
+  </p>
+  <div class="center"><img src="../images/articles/07_03_21e.jpg" alt="Figure 5" width="265" height="149"> 
+    <div class="imagecap">Figure 5. A lens corrected for spherical aberration.</div>
+  </div>
+  <p>"Regular" 16mm lenses are designed to have a minimum amount of spherical aberration when the light behind the lens travels in air only. When we add the prism to such a corrected lens, light rays entering the edge of the lens reach the prism at a different angle than light rays passing near the center. They are refracted differently and, as a result, form the image in a different plane (Figure 6). The prism has re-introduced spherical aberration, resulting in a loss of sharpness and contrast when used on a reflex camera.
+  </p>
+  <div class="center"><img src="../images/articles/07_03_21f.jpg" alt="Figure 6" width="284" height="161"> 
+    <div class="imagecap">Figure 6. Spherical aberration introduced by the reflex prism.</div>
+  </div>
+  <p>Overcoming this loss of quality was the purpose of designing special RX lenses, 
+    which are lenses with a 17.52mm back focus but designed to provide maximum 
+    quality when combined with the prism (Figure 7). If such an RX lens is mounted 
+    on a non-reflex camera with a 17.52mm back focus, the image will focus properly 
+    but will show a loss of sharpness and contrast, at least at the larger apertures. 
+  </p>
+  <div class="center"><img src="../images/articles/07_03_21g.jpg" alt="Figure 7" width="279" height="160"> 
+    <div class="imagecap">Figure 7. Aberration of RX lens corrected by reflex prism.</div>
+  </div>
+  <p>While the description up to now explains the difference between "regular" and RX lenses, it still does not answer why it is possible to use some lenses on either camera.
+  </p>
+  <p>While the prism affects the optical correction of every lens, the loss of sharpness and contrast on many lenses is so small that it is not visible on the film. This applies to most longer focal length lenses, such as the Macro Switar 75mm, Macro Yvar 150mm and some zoom lenses like the Pan Cinor 85.
+  </p>
+  <p>On other lenses, a loss of definition may be visible at maximum aperture, but will be eliminated by simply closing the diaphragm one or two stops down.
+  </p>
+  <p>There is no definite rule to indicate which lenses are usable since this depends on many factors, such as the size of rear element, position of rear element to the prism, focal length of lens, aperture or general design of lens.
+  </p>
+  <p>A film test is necessary to determine the quality or loss of quality. If the quality is unsatisfactory, an adjustment in the back focus does not solve the problem.
+  </p>
+
+  <div id="footnote"> 
+    <p><sup><a name="ftref1" href="#ft1">1</a></sup>"<i>Bolex Product News From Paillard</i>," No. 5, (New York: Paillard Incorporated, June 25, 1974).</p>
+   </div>
+
+  <hr class="spacer">
+  <ul id="backnext">
+    <li class="left"><a href="../articles.html">Return to Index</a></li>
+  </ul>
+</div><!-- END CONTENT  -->
+    
+<!-- FOOTER -->     
+<div id="footer">
+    <!-- begin bottom links -->
+                <div class="footerlinks">
+                <ul>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><a href="../contribute.html">Contribute</a></li>
+                <li><a href="../faq.html">Frequently Asked Questions</a></li>
+                <li><a href="../links.html">Links</a></li>
+                </ul>
+                </div><!-- END footer links -->
+
+	<!-- begin copyright here --> 
+			<div class="copyright">
+				Copyright &copy; 2005-2011 bolexcollector.com<br>
+				<a href="#container">Return to top of Page</a>
+			</div>
+     <!-- social media stuff -->
+     		<div class="smedia">
+            <!-- AddThis Button BEGIN -->
+                <a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pubid=ra-4e30507d3a34d63d"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"></a>
+                <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e30507d3a34d63d"></script>
+                <!-- AddThis Button END -->
+                </div><!-- END smedia class -->
+</div><!-- FOOTER END -->
+
+</div>
+<!--CONTAINER end-->
+<!-- Google analytics code -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-1868316-1";
+urchinTracker();
+</script>
+</body>
+</html>
