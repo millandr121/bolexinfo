@@ -18,3 +18,10 @@ npm-debug.log*
 # The /archive directory IS committed — it is the preservation record.
 # Only transient pipeline scratch space is ignored.
 /archive/.tmp/
+
+# Derived copies staged into /public from the committed archive at build time
+# (scripts/stage-archive.ts). The canonical bytes live in /archive/wayback.
+/public/images/
+/public/original/
+/public/search-index.json
+/public/feed.xml

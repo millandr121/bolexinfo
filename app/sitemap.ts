@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
-import { getCameras, getRecoveredArticles } from "@/lib/content";
+import { getRecoveredArticles } from "@/lib/content";
+import { getCameraRecords } from "@/lib/museum";
 
 export const dynamic = "force-static";
 
@@ -19,7 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/about",
   ].map((route) => ({ url: `${BASE}${route}`, changeFrequency: "weekly" as const }));
 
-  const cameraRoutes = getCameras().models.map((m) => ({
+  const cameraRoutes = getCameraRecords().map((m) => ({
     url: `${BASE}/cameras/${m.slug}`,
     changeFrequency: "monthly" as const,
   }));

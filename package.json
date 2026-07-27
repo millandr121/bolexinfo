@@ -5,8 +5,11 @@
   "description": "Digital preservation archive and modern museum edition of BolexCollector.com — the definitive reference for Paillard-Bolex cameras, lenses, and accessories.",
   "scripts": {
     "dev": "next dev",
-    "prebuild": "tsx scripts/build-search-index.ts",
+    "predev": "npm run stage:archive",
+    "prebuild": "npm run build:serials && npm run stage:archive && npm run search:index",
     "build": "next build",
+    "build:serials": "tsx scripts/build-serials.ts",
+    "stage:archive": "tsx scripts/stage-archive.ts",
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
