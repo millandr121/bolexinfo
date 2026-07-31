@@ -9,12 +9,17 @@ export function SiteFooter() {
             Bolex Collector
           </p>
           <p className="mt-2 max-w-xs leading-relaxed">
-            A preservation of the original BolexCollector.com by Michael Tisdale,
-            resurrected with permission as a permanent digital archive.
+            A preservation of the original BolexCollector.com by{" "}
+            <Link href="/tribute" className="underline underline-offset-4 hover:text-[var(--accent)]">
+              Michael Tisdale
+            </Link>
+            , resurrected with permission as a permanent digital archive. With gratitude
+            for the years of work he shared.
           </p>
         </div>
         <nav aria-label="Footer" className="grid gap-1.5">
           <Link href="/about" className="hover:text-[var(--accent)]">About the restoration</Link>
+          <Link href="/tribute" className="hover:text-[var(--accent)]">A dedication to Michael Tisdale</Link>
           <Link href="/archive" className="hover:text-[var(--accent)]">Recovery status</Link>
           <Link href="/serials" className="hover:text-[var(--accent)]">Serial number lookup</Link>
           <Link href="/timeline" className="hover:text-[var(--accent)]">Paillard timeline</Link>

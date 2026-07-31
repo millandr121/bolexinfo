@@ -120,6 +120,26 @@ export default function HomePage() {
           </div>
         </Reveal>
       </section>
+
+      <section aria-label="Dedication" className="rule py-16">
+        <Reveal>
+          <div className="max-w-2xl mx-auto text-center">
+            <p className="font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.28em] text-[var(--accent)]">
+              In appreciation
+            </p>
+            <p className="mt-5 font-[family-name:var(--font-display)] text-2xl sm:text-3xl leading-snug font-[560]">
+              This archive is dedicated to Michael Tisdale, who built the original
+              BolexCollector.com and shared it freely for nearly twenty years.
+            </p>
+            <Link
+              href="/tribute"
+              className="mt-6 inline-block font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.16em] text-[var(--accent)] hover:underline underline-offset-4"
+            >
+              Read the dedication →
+            </Link>
+          </div>
+        </Reveal>
+      </section>
     </>
   );
 }
