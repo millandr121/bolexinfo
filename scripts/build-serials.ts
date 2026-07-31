@@ -34,8 +34,10 @@ function main() {
     status: "extracted" as const,
     note:
       "Ranges parsed from the archived serial tables. Independent model series (e.g. the P/K/S1 cameras numbered from 1963) reused number blocks, so a serial may match more than one year — every candidate is shown.",
+    // capturedAt (the Wayback capture time) is the meaningful provenance and is
+    // stable; deliberately no build timestamp here, so rebuilding the file
+    // produces identical bytes and never churns git.
     capturedAt: doc.capturedAt,
-    generated: new Date().toISOString(),
     ranges,
   };
   fs.mkdirSync(path.dirname(OUT), { recursive: true });
