@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
+import { SupportCallout } from "@/components/SupportCallout";
 
 export const metadata: Metadata = {
   title: "A Dedication — Michael Tisdale, the Bolex Collector",
@@ -108,6 +109,10 @@ export default function TributePage() {
           </p>
         </Reveal>
       </div>
+
+      <Reveal>
+        <SupportCallout />
+      </Reveal>
 
       <Reveal>
         <section aria-label="Sources and further reading" className="rule mt-14 pt-6 max-w-2xl mx-auto">
