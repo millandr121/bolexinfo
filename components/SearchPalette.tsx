@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { useRouter } from "next/navigation";
 import Fuse from "fuse.js";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
@@ -26,7 +27,6 @@ export function SearchButton() {
         e.preventDefault();
         setOpen((v) => !v);
       }
-      if (e.key === "Escape") setOpen(false);
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
@@ -61,7 +61,10 @@ function Palette({ onClose }: { onClose: () => void }) {
   const [docs, setDocs] = useState<SearchDoc[]>([]);
   const [query, setQuery] = useState("");
   const [active, setActive] = useState(0);
+  const [mounted, setMounted] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => setMounted(true), []);
 
   useEffect(() => {
     inputRef.current?.focus();
@@ -72,6 +75,27 @@ function Palette({ onClose }: { onClose: () => void }) {
       .catch(() => {});
     return () => {
       cancelled = true;
+    };
+  }, [mounted]);
+
+  // Escape closes from anywhere, including when focus has left the input.
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        e.preventDefault();
+        onClose();
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [onClose]);
+
+  // Hold the page still while the palette owns the screen.
+  useEffect(() => {
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previous;
     };
   }, []);
 
@@ -116,14 +140,24 @@ function Palette({ onClose }: { onClose: () => void }) {
     }
   };
 
-  return (
+  if (!mounted) return null;
+
+  /*
+   * Rendered through a portal to document.body on purpose. The site header
+   * uses `backdrop-blur`, and a backdrop-filter establishes a containing block
+   * for fixed-position descendants — so an overlay rendered inside the header
+   * would size itself to the header strip rather than the viewport, leaving
+   * most of the page un-clickable and the palette impossible to dismiss by
+   * clicking away. The portal escapes that containing block entirely.
+   */
+  return createPortal(
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: reduceMotion ? 0 : 0.15 }}
-      className="fixed inset-0 z-50 bg-black/40 backdrop-blur-[2px] flex items-start justify-center pt-[14vh] px-4"
-      onClick={onClose}
+      className="fixed inset-0 z-[100] bg-black/40 backdrop-blur-[2px] flex items-start justify-center pt-[14vh] px-4"
+      onMouseDown={onClose}
     >
       <motion.div
         role="dialog"
@@ -134,24 +168,35 @@ function Palette({ onClose }: { onClose: () => void }) {
         exit={{ opacity: 0, y: reduceMotion ? 0 : -8 }}
         transition={{ duration: reduceMotion ? 0 : 0.18, ease: [0.2, 0.8, 0.2, 1] }}
         className="w-full max-w-xl bg-[var(--bg-raised)] border border-[var(--line)] shadow-2xl"
-        onClick={(e) => e.stopPropagation()}
+        // Stop clicks inside the panel from reaching the dismissing backdrop.
+        onMouseDown={(e) => e.stopPropagation()}
       >
-        <input
-          ref={inputRef}
-          value={query}
-          onChange={(e) => {
-            setQuery(e.target.value);
-            setActive(0);
-          }}
-          onKeyDown={onKeyDown}
-          placeholder="Search cameras, serials, lenses, articles…"
-          aria-label="Search"
-          role="combobox"
-          aria-expanded="true"
-          aria-controls="search-results"
-          aria-activedescendant={results[active] ? `result-${active}` : undefined}
-          className="w-full bg-transparent px-5 py-4 text-base outline-none border-b border-[var(--line)] placeholder:text-[var(--fg-soft)]"
-        />
+        <div className="flex items-center border-b border-[var(--line)]">
+          <input
+            ref={inputRef}
+            value={query}
+            onChange={(e) => {
+              setQuery(e.target.value);
+              setActive(0);
+            }}
+            onKeyDown={onKeyDown}
+            placeholder="Search cameras, serials, lenses, ephemera…"
+            aria-label="Search"
+            role="combobox"
+            aria-expanded="true"
+            aria-controls="search-results"
+            aria-activedescendant={results[active] ? `result-${active}` : undefined}
+            className="flex-1 bg-transparent px-5 py-4 text-base outline-none placeholder:text-[var(--fg-soft)]"
+          />
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Close search"
+            className="px-4 py-4 font-[family-name:var(--font-mono)] text-[0.65rem] uppercase tracking-[0.16em] text-[var(--fg-soft)] hover:text-[var(--accent)]"
+          >
+            Esc
+          </button>
+        </div>
         <ul id="search-results" role="listbox" aria-label="Search results" className="max-h-[50vh] overflow-y-auto py-1">
           {results.length === 0 && (
             <li className="px-5 py-6 text-sm text-[var(--fg-soft)]">
@@ -181,6 +226,7 @@ function Palette({ onClose }: { onClose: () => void }) {
           ))}
         </ul>
       </motion.div>
-    </motion.div>
+    </motion.div>,
+    document.body,
   );
 }
