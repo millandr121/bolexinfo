@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/archive",
     "/timeline",
     "/about",
+    "/tribute",
   ].map((route) => ({ url: `${BASE}${route}`, changeFrequency: "weekly" as const }));
 
   const cameraRoutes = getCameraRecords().map((m) => ({

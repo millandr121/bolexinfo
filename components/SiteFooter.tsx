@@ -15,6 +15,7 @@ export function SiteFooter() {
         </div>
         <nav aria-label="Footer" className="grid gap-1.5">
           <Link href="/about" className="hover:text-[var(--accent)]">About the restoration</Link>
+          <Link href="/tribute" className="hover:text-[var(--accent)]">A dedication to Michael Tisdale</Link>
           <Link href="/archive" className="hover:text-[var(--accent)]">Recovery status</Link>
           <Link href="/serials" className="hover:text-[var(--accent)]">Serial number lookup</Link>
           <Link href="/timeline" className="hover:text-[var(--accent)]">Paillard timeline</Link>

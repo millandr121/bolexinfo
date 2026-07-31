@@ -39,6 +39,12 @@ const docs: Doc[] = [
   { title: "Archive & Recovery Status", href: "/archive", section: "archive", keywords: "preservation wayback original" },
   { title: "Timeline", href: "/timeline", section: "reference", keywords: "history paillard sainte-croix" },
   { title: "About the Restoration", href: "/about", section: "archive" },
+  {
+    title: "A Dedication to Michael Tisdale",
+    href: "/tribute",
+    section: "archive",
+    keywords: "michael tisdale creator webmaster founder bolex collector tribute dedication honor",
+  },
 ];
 
 // Index the full recovered camera catalogue, including spec labels so a search

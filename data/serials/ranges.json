@@ -4,7 +4,7 @@
   "status": "extracted",
   "note": "Ranges parsed from the archived serial tables. Independent model series (e.g. the P/K/S1 cameras numbered from 1963) reused number blocks, so a serial may match more than one year — every candidate is shown.",
   "capturedAt": "20250307220139",
-  "generated": "2026-07-27T02:56:24.665Z",
+  "generated": "2026-07-31T01:37:35.187Z",
   "ranges": [
     {
       "from": 7510,
