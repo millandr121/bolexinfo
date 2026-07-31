@@ -141,3 +141,34 @@ html {
 
 /* Hairline rules in the Swiss tradition. */
 .rule { border-top: 1px solid var(--line); }
+
+/*
+ * Product photography plate.
+ *
+ * The archived product shots (cameras, lenses, accessories) were photographed
+ * on pure white (verified 255,255,255 at the borders). Rather than altering a
+ * single archived pixel, the image is multiplied against a warm plate: white
+ * multiplied by the plate colour *is* the plate colour, so the hard white
+ * rectangle dissolves and the subject appears to sit directly on the page.
+ *
+ * In dark mode the plate stays light on purpose — these subjects are dark
+ * metal, and dropping them onto a dark ground would erase them. A lit plate in
+ * a dark room is how a gallery shows a print, and it keeps contrast honest.
+ */
+:root { --plate: var(--color-paper); }
+@media (prefers-color-scheme: dark) { :root { --plate: #ddd5c4; } }
+:root[data-theme="light"] { --plate: var(--color-paper); }
+:root[data-theme="dark"] { --plate: #ddd5c4; }
+
+.plate {
+  background: var(--plate);
+  isolation: isolate; /* keeps the blend inside the plate, not the page */
+}
+.plate img { mix-blend-mode: multiply; }
+
+/* Document scans (period ads, catalogues) are artefacts, not products: their
+   aged paper is part of the record, so they are framed rather than blended. */
+.document {
+  border: 1px solid var(--line);
+  background: #fff;
+}

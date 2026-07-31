@@ -10,17 +10,24 @@ export const metadata: Metadata = {
     "Every Paillard-Bolex camera recovered from BolexCollector.com: the H-16 and H-8 lineages, the Auto Cine, B/C/D/L series, the Zoom Reflex and Automatic lines, and the Super 8 models.",
 };
 
-const FORMAT_ORDER = ["16mm", "Double 8mm", "8mm", "Super 8", "9.5mm"] as const;
+/**
+ * Film gauges, in the order the collection reads best. Every recovered model
+ * declares its own gauge on its archived page, so there is no catch-all
+ * bucket — a model whose gauge somehow can't be read is surfaced under
+ * "Gauge unrecorded" rather than silently misfiled.
+ */
+const FORMAT_ORDER = ["16mm", "8mm", "Super 8", "9.5mm"] as const;
+const UNKNOWN_GROUP = "Gauge unrecorded";
 
 function groupKey(m: ModelRecord): string {
-  return m.format && FORMAT_ORDER.includes(m.format as (typeof FORMAT_ORDER)[number]) ? m.format : "Other models";
+  return m.format && (FORMAT_ORDER as readonly string[]).includes(m.format) ? m.format : UNKNOWN_GROUP;
 }
 
 export default function CamerasPage() {
   const models = getCameraRecords();
   const provenance = getCameras().provenance;
 
-  const groups = [...FORMAT_ORDER, "Other models"]
+  const groups = [...FORMAT_ORDER, UNKNOWN_GROUP]
     .map((format) => ({ format, models: models.filter((m) => groupKey(m) === format) }))
     .filter((g) => g.models.length > 0);
 

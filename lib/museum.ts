@@ -1,5 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
+import { cleanImages, type ModelImage } from "./assets";
+import { readContentBlocks, type ContentBlock } from "./recovered";
 
 /**
  * The museum data layer.
@@ -18,20 +20,15 @@ import path from "node:path";
 
 const ROOT = process.cwd();
 const dataDir = (...s: string[]) => path.join(ROOT, "data", ...s);
-const ARCHIVE_IMAGES = path.join(ROOT, "archive", "wayback", "images");
-
-/** Tracking pixels, share widgets, and layout spacers — never real content. */
-const CHROME_IMAGE = /addthis|facebook|twitter|s7\.addthis|\bshare\b|feedburner|rss|paypal|spacer|blank\.gif|pixel/i;
 
 export interface Spec {
   label: string;
   value: string;
 }
 
-export interface ModelImage {
-  src: string;
-  alt: string;
-}
+// Imported for local use and re-exported so existing consumers of the museum
+// layer keep working after these helpers moved into ./assets.
+export { cleanImages, type ModelImage };
 
 export interface SerialRow {
   from: number | null;
@@ -167,21 +164,6 @@ export function parseSerialRows(tables: string[][][]): SerialRow[] {
   return rows.sort((a, b) => a.yearFrom - b.yearFrom || (a.from ?? 0) - (b.from ?? 0));
 }
 
-/** Keep only real, on-disk content images (drops chrome and never-recovered files). */
-export function cleanImages(images: ModelImage[] | undefined): ModelImage[] {
-  if (!images) return [];
-  const out: ModelImage[] = [];
-  const seen = new Set<string>();
-  for (const img of images) {
-    if (!img.src.startsWith("/images/") || CHROME_IMAGE.test(img.src) || seen.has(img.src)) continue;
-    const onDisk = path.join(ROOT, "archive", "wayback", img.src.replace(/^\//, ""));
-    if (!fs.existsSync(onDisk)) continue;
-    seen.add(img.src);
-    out.push({ src: img.src, alt: img.alt || "" });
-  }
-  return out;
-}
-
 // ————————————————————————————————————————————————————————————————
 // Loaders
 // ————————————————————————————————————————————————————————————————
@@ -208,26 +190,45 @@ function nameFromTitle(title: string, slug: string): string {
   return tail && tail.length > 0 ? tail : slug.toUpperCase();
 }
 
-const FORMAT_TOKENS: Array<[RegExp, string]> = [
-  [/super\s?8/i, "Super 8"],
-  [/double\s?8|\bd-?8\b/i, "Double 8mm"],
-  [/9\.5\s?mm/i, "9.5mm"],
-  [/16\s?mm/i, "16mm"],
-  [/8\s?mm/i, "8mm"],
-];
-
-/** Infer film format from the recovered spec header (e.g. "16mm Camera"). */
-function inferFormat(bodyText: string): string | undefined {
-  const header = bodyText.slice(0, 600);
-  for (const [re, label] of FORMAT_TOKENS) if (re.test(header)) return label;
-  return undefined;
+/** Normalize the original site's own format wording to a canonical label. */
+function normalizeFormat(raw: string): string {
+  const s = raw.toLowerCase().replace(/\s+/g, "");
+  if (s.startsWith("super8")) return "Super 8";
+  if (s.startsWith("9.5")) return "9.5mm";
+  if (s.startsWith("16")) return "16mm";
+  return "8mm"; // covers "8mm" and "Double 8" — both are the 8mm gauge
 }
 
-/** Infer the introduction year from the model header block (first standalone 19xx). */
-function inferIntroduced(bodyText: string): number | null {
-  const header = bodyText.slice(0, 600);
-  const m = header.match(/(?:mm|Super\s?8|Camera|Projector)[^0-9]{0,40}\b(19[2-9]\d)\b/i);
-  return m ? Number(m[1]) : null;
+/**
+ * Read the model's format and introduction year from the *archived page's own
+ * header*, which reads e.g. "H-16 REX-4 / 16mm Camera / 1965".
+ *
+ * This reads the page's `#content` container rather than the extracted
+ * bodyText: bodyText begins with the site-wide navigation listing every model,
+ * which is long enough to swamp any fixed-size prefix scan and yields no
+ * format at all. Taking the declaration from the original page also means the
+ * site reports what Michael Tisdale documented, not what we guessed — where
+ * the two disagree, the original wins.
+ */
+function headerFacts(originalPath?: string): { format?: string; introduced?: number } {
+  const texts = readContentBlocks(originalPath)
+    .filter((b): b is Extract<ContentBlock, { kind: "heading" | "paragraph" }> => b.kind !== "image")
+    .slice(0, 10)
+    .map((b) => b.text.trim());
+
+  let format: string | undefined;
+  let introduced: number | undefined;
+  for (const t of texts) {
+    if (!format) {
+      const m = /^(super\s?8(?:mm)?|16\s?mm|9\.5\s?mm|double\s?8(?:mm)?|8\s?mm)\s+(camera|projector)\b/i.exec(t);
+      if (m) format = normalizeFormat(m[1]!);
+    }
+    if (introduced === undefined) {
+      const y = /^(19[2-9]\d)$/.exec(t);
+      if (y) introduced = Number(y[1]);
+    }
+  }
+  return { format, introduced };
 }
 
 function reconcile(seedFile: string, extractedDir: string): ModelRecord[] {
@@ -244,11 +245,14 @@ function reconcile(seedFile: string, extractedDir: string): ModelRecord[] {
     // Skip non-model helper pages that slipped into the extraction.
     if (!s && e && /instructions|index/i.test(slug)) continue;
     const specs = e?.bodyText ? parseSpecs(e.bodyText) : [];
+    // The archived page's own header is authoritative for format and year;
+    // curated seed values only fill gaps where the page didn't state them.
+    const facts = headerFacts(e?.originalPath ?? s?.originalPath);
     records.push({
       slug,
       name: s?.name ?? (e ? nameFromTitle(e.title, slug) : slug.toUpperCase()),
-      format: s?.format ?? (e?.bodyText ? inferFormat(e.bodyText) : undefined),
-      introduced: s?.introduced ?? (e?.bodyText ? inferIntroduced(e.bodyText) : null),
+      format: facts.format ?? s?.format,
+      introduced: facts.introduced ?? s?.introduced ?? null,
       summary: s?.summary ?? e?.description ?? null,
       specs,
       images: cleanImages(e?.images),

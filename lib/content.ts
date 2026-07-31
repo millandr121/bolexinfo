@@ -160,14 +160,36 @@ export function getUrlInventory(): { entries: InventoryEntry[]; note: string } {
   return { entries: file?.verifiedUrls ?? [], note: file?.provenance.note ?? "" };
 }
 
-/** Count of preserved assets, if the archive manifest exists yet. */
-export function getArchiveStats(): { assets: number; pages: number } {
-  const manifest = readJson<{ assets: Record<string, { mimetype: string }> }>(
+export interface ArchivedAsset {
+  urlPath: string;
+  mimetype: string;
+  bytes: number;
+  timestamp: string;
+  source?: string;
+}
+
+/** Every asset the preservation pipeline stored, read from the archive manifest. */
+export function getArchivedAssets(): ArchivedAsset[] {
+  const manifest = readJson<{ assets: Record<string, ArchivedAsset> }>(
     path.join(ROOT, "archive", "meta", "manifest.json"),
   );
-  const assets = manifest ? Object.values(manifest.assets) : [];
+  return manifest ? Object.values(manifest.assets) : [];
+}
+
+/** Headline counts for the archive ledger. */
+export function getArchiveStats(): {
+  assets: number;
+  pages: number;
+  images: number;
+  downloads: number;
+  bytes: number;
+} {
+  const assets = getArchivedAssets();
   return {
     assets: assets.length,
     pages: assets.filter((a) => a.mimetype.includes("html")).length,
+    images: assets.filter((a) => a.mimetype.startsWith("image/")).length,
+    downloads: assets.filter((a) => /pdf|zip|octet/.test(a.mimetype)).length,
+    bytes: assets.reduce((n, a) => n + (a.bytes ?? 0), 0),
   };
 }

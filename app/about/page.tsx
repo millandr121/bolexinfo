@@ -6,7 +6,7 @@ import { getEditorial } from "@/lib/content";
 export const metadata: Metadata = {
   title: "About the Restoration",
   description:
-    "How and why the original BolexCollector.com is being preserved and rebuilt, with the owner's permission, as a permanent digital archive.",
+    "How and why the original BolexCollector.com is being preserved and rebuilt as a permanent digital archive.",
 };
 
 export default async function AboutPage() {

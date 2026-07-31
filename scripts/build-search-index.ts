@@ -9,6 +9,7 @@ import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 import { getCameraRecords, getProjectorRecords } from "../lib/museum";
+import { getRecoveredSection } from "../lib/recovered";
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const read = <T>(p: string, fallback: T): T =>
@@ -69,26 +70,30 @@ for (const m of getProjectorRecords()) {
   });
 }
 
-const lenses = read<{ manufacturers: Entry[] }>(path.join(ROOT, "data/models/lenses.json"), { manufacturers: [] });
-for (const m of lenses.manufacturers) {
-  docs.push({
-    title: m.name,
-    href: "/lenses",
-    section: "lenses",
-    keywords: `lens optics ${m.country ?? ""}`,
-    summary: m.summary ?? undefined,
-  });
+// Recovered narrative sections. Index the alt text of every pictured item too,
+// so searching a Kern product code ("SWINQ") or an accessory name finds the
+// page that actually shows it.
+for (const [section, prefix] of [
+  ["lenses", "/lenses"],
+  ["accessories", "/accessories"],
+  ["ephemera", "/ephemera"],
+] as const) {
+  for (const page of getRecoveredSection(section)) {
+    docs.push({
+      title: page.title,
+      href: `${prefix}/${page.slug}`,
+      section,
+      keywords: page.images.map((i) => i.alt).filter(Boolean).join(" "),
+      summary: page.description,
+    });
+  }
 }
 
-const accessories = read<{ categories: Entry[] }>(path.join(ROOT, "data/models/accessories.json"), { categories: [] });
-for (const m of accessories.categories) {
-  docs.push({
-    title: m.name,
-    href: "/accessories",
-    section: "accessories",
-    keywords: "accessory",
-    summary: m.summary ?? undefined,
-  });
+for (const [title, href, keywords] of [
+  ["Glossary", "/glossary", "terminology terms definitions filmmaking"],
+  ["Ephemera", "/ephemera", "advertising catalogs brochures bolex reporter"],
+] as const) {
+  docs.push({ title, href, section: "reference", keywords });
 }
 
 const feedItems: Array<{ title: string; link: string; date: string; description: string }> = [];

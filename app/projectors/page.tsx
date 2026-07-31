@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { getProjectors } from "@/lib/content";
 import { getProjectorRecords } from "@/lib/museum";
-import { originalArchiveHref } from "@/lib/archive";
 
 export const metadata: Metadata = {
   title: "Projectors",
@@ -28,10 +28,12 @@ export default function ProjectorsPage() {
 
       <ul className="mt-12 grid gap-px bg-[var(--line)] border border-[var(--line)]">
         {models.map((model, i) => {
-          const archiveHref = originalArchiveHref(model.originalPath);
           return (
             <Reveal key={model.slug} as="li" delay={Math.min(i * 0.03, 0.25)}>
-              <div className="h-full bg-[var(--bg)] p-6 sm:flex sm:items-start sm:gap-8">
+              <Link
+                href={`/projectors/${model.slug}`}
+                className="group block h-full bg-[var(--bg)] p-6 sm:flex sm:items-start sm:gap-8 hover:bg-[var(--bg-raised)] transition-colors duration-300"
+              >
                 <div className="sm:w-48 shrink-0">
                   <div className="flex items-baseline gap-3">
                     <h2 className="font-[family-name:var(--font-display)] text-xl font-[560]">{model.name}</h2>
@@ -47,14 +49,10 @@ export default function ProjectorsPage() {
                   {model.summary && <p className="text-sm leading-relaxed text-[var(--fg-soft)] max-w-xl">{model.summary}</p>}
                   <div className="mt-2 flex flex-wrap gap-x-5 gap-y-1 font-[family-name:var(--font-mono)] text-xs text-[var(--fg-soft)]">
                     {model.specs.length > 0 && <span>{model.specs.length} specifications</span>}
-                    {archiveHref && (
-                      <a href={archiveHref} className="text-[var(--accent)] underline underline-offset-4">
-                        View original archive ↗
-                      </a>
-                    )}
+                    {model.images.length > 0 && <span>{model.images.length} photographs</span>}
                   </div>
                 </div>
-              </div>
+              </Link>
             </Reveal>
           );
         })}

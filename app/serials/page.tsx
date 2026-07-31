@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Reveal } from "@/components/Reveal";
 import { ProvenanceNote } from "@/components/RecoveryBadge";
 import { getSerialDataset } from "@/lib/content";
-import { formatYearSpan } from "@/lib/serials";
+import { getCameraRecords, getProjectorRecords } from "@/lib/museum";
+import { formatYearSpan, type SerialModel } from "@/lib/serials";
 import { SerialLookup } from "./SerialLookup";
 
 export const metadata: Metadata = {
@@ -11,9 +12,23 @@ export const metadata: Metadata = {
     "Date a Paillard-Bolex camera or projector from its serial number, using the year ranges preserved from the original BolexCollector.com.",
 };
 
+/**
+ * Every model whose archived page published its own serial table, so a serial
+ * can be attributed to actual cameras and projectors rather than a bare year.
+ */
+function serialModels(): SerialModel[] {
+  return [
+    ...getCameraRecords().map((m) => ({ ...m, href: `/cameras/${m.slug}` })),
+    ...getProjectorRecords().map((m) => ({ ...m, href: `/projectors/${m.slug}` })),
+  ]
+    .filter((m) => m.serialRows.length > 0)
+    .map(({ slug, name, format, href, serialRows }) => ({ slug, name, format, href, rows: serialRows }));
+}
+
 export default function SerialsPage() {
   const dataset = getSerialDataset();
   const rows = dataset.ranges;
+  const models = serialModels();
 
   return (
     <div className="pt-14 pb-8">
@@ -31,7 +46,7 @@ export default function SerialsPage() {
       <Reveal delay={0.1}>
         <div className="mt-10 max-w-2xl">
           {rows.length > 0 ? (
-            <SerialLookup rows={rows} />
+            <SerialLookup rows={rows} models={models} />
           ) : (
             <div className="border border-[var(--line)] bg-[var(--bg-raised)] p-8">
               <h2 className="font-[family-name:var(--font-display)] text-xl font-[560]">
