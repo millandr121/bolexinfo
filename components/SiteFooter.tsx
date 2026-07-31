@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SUPPORT } from "@/lib/support";
 
 export function SiteFooter() {
   return (
@@ -23,6 +24,14 @@ export function SiteFooter() {
           <Link href="/archive" className="hover:text-[var(--accent)]">Recovery status</Link>
           <Link href="/serials" className="hover:text-[var(--accent)]">Serial number lookup</Link>
           <Link href="/timeline" className="hover:text-[var(--accent)]">Paillard timeline</Link>
+          <a
+            href={SUPPORT.donateUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-[var(--accent)]"
+          >
+            Support rural filmmakers ↗
+          </a>
         </nav>
         <div className="font-[family-name:var(--font-mono)] text-xs leading-relaxed">
           <p>Original site © Michael Tisdale.</p>
