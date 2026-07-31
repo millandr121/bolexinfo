@@ -14,8 +14,8 @@ export function SiteFooter() {
             <Link href="/tribute" className="underline underline-offset-4 hover:text-[var(--accent)]">
               Michael Tisdale
             </Link>
-            , resurrected with permission as a permanent digital archive. With gratitude
-            for the years of work he shared.
+            , maintained as a permanent digital archive. With gratitude for the years of
+            work he shared.
           </p>
         </div>
         <nav aria-label="Footer" className="grid gap-1.5">

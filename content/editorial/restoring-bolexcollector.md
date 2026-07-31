@@ -2,7 +2,7 @@
 title: "Restoring BolexCollector.com"
 kind: "modern-editorial"
 date: "2026-07-26"
-description: "How and why the original BolexCollector.com is being preserved and rebuilt — with the owner's permission — as a permanent digital archive and modern museum edition."
+description: "How and why the original BolexCollector.com is being preserved and rebuilt as a permanent digital archive and modern museum edition."
 ---
 
 # Restoring BolexCollector.com
@@ -23,8 +23,7 @@ The site has since gone offline. Its domain no longer resolves.
 
 ## This project
 
-With the original owner's permission, this repository resurrects the site as two
-things at once:
+This project is two things at once:
 
 1. **A permanent preservation archive.** Every recoverable page, image, table,
    serial number and download is retrieved from the Internet Archive's Wayback

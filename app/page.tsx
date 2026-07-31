@@ -106,10 +106,10 @@ export default function HomePage() {
               A preservation project, in the open.
             </h2>
             <p className="mt-4 leading-relaxed text-[var(--fg-soft)]">
-              The original site has gone offline. With its owner&rsquo;s permission, every
-              recoverable page is being retrieved from the Internet Archive and preserved —
-              byte-for-byte — alongside this modern edition. Recovery status is public, and
-              every entry states its provenance.
+              The original site has gone offline. Every recoverable page has been retrieved
+              from the Internet Archive and preserved — byte-for-byte — alongside this
+              modern edition. Recovery status is public, and every entry states its
+              provenance.
             </p>
             <Link
               href="/about"

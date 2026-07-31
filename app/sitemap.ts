@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getRecoveredArticles } from "@/lib/content";
 import { getCameraRecords } from "@/lib/museum";
+import { getRecoveredSection } from "@/lib/recovered";
 
 export const dynamic = "force-static";
 
@@ -17,9 +18,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/articles",
     "/archive",
     "/timeline",
+    "/glossary",
+    "/ephemera",
     "/about",
     "/tribute",
   ].map((route) => ({ url: `${BASE}${route}`, changeFrequency: "weekly" as const }));
+
+  const sectionRoutes = (["lenses", "accessories", "ephemera"] as const).flatMap((section) =>
+    getRecoveredSection(section).map((page) => ({
+      url: `${BASE}/${section}/${page.slug}`,
+      changeFrequency: "monthly" as const,
+    })),
+  );
 
   const cameraRoutes = getCameraRecords().map((m) => ({
     url: `${BASE}/cameras/${m.slug}`,
@@ -31,5 +41,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "yearly" as const,
   }));
 
-  return [...staticRoutes, ...cameraRoutes, ...articleRoutes];
+  return [...staticRoutes, ...cameraRoutes, ...sectionRoutes, ...articleRoutes];
 }
