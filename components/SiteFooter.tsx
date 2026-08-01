@@ -24,6 +24,7 @@ export function SiteFooter() {
           <Link href="/archive" className="hover:text-[var(--accent)]">Recovery status</Link>
           <Link href="/serials" className="hover:text-[var(--accent)]">Serial number lookup</Link>
           <Link href="/timeline" className="hover:text-[var(--accent)]">Paillard timeline</Link>
+          <Link href="/glossary" className="hover:text-[var(--accent)]">Glossary of terms</Link>
           <a
             href={SUPPORT.donateUrl}
             target="_blank"

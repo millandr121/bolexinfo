@@ -3,37 +3,56 @@ import { Reveal } from "@/components/Reveal";
 import { getArchiveStats, getUrlInventory } from "@/lib/content";
 import { getCameraRecords } from "@/lib/museum";
 
-const SECTIONS = [
+/**
+ * The collections — the things a visitor came to browse. Every primary
+ * destination in the header appears here too, so the front door and the
+ * navigation describe the same site rather than two different ones.
+ */
+const COLLECTIONS = [
   {
     href: "/cameras",
     title: "Cameras",
-    body: "The H-16 and H-8 lineages, the B, C, D and L series, and the Super 8 era — every model the original site documented.",
+    body: "The H-16 and H-8 lineages, the Auto Cine, the B, C, D and L series, the Zoom Reflex and Automatic lines, and the Super 8 era.",
+    count: "54 models",
   },
   {
     href: "/projectors",
     title: "Projectors",
     body: "From the multi-gauge Model G of 1936 to the S-series sound projectors.",
+    count: "17 models",
   },
   {
     href: "/lenses",
     title: "Lenses",
     body: "Kern-Paillard, Hugo Meyer, Goerz, Wollensak, SOM Berthiot and Angénieux optics for Bolex cameras.",
+    count: "6 makers",
   },
   {
     href: "/accessories",
     title: "Accessories",
     body: "Motors, matte boxes, grips, viewfinders, filters, cases and editing gear, decade by decade.",
+    count: "20 pages",
   },
   {
-    href: "/serials",
-    title: "Serial Lookup",
-    body: "Date a Paillard-Bolex camera from its serial number, using the ranges the original site preserved.",
+    href: "/ephemera",
+    title: "Ephemera",
+    body: "Period advertising, dealer catalogues, promotional brochures and the Bolex Reporter magazine.",
+    count: "171 pieces",
   },
   {
     href: "/articles",
-    title: "Articles & Ephemera",
-    body: "Recovered writing, the Bolex Reporter magazine, catalogs and vintage advertising.",
+    title: "Articles",
+    body: "Recovered writing from the original site — tips, histories and the serial-number reference.",
+    count: "22 articles",
   },
+] as const;
+
+/** Tools and reference — reachable in one tap rather than buried in a footer. */
+const REFERENCE = [
+  { href: "/serials", title: "Serial Lookup", body: "Date a camera from its serial number." },
+  { href: "/timeline", title: "Timeline", body: "45 entries, from Sainte-Croix to the Bolex era." },
+  { href: "/glossary", title: "Glossary", body: "Bolex and filmmaking terminology." },
+  { href: "/archive", title: "The Archive", body: "What was preserved, and what is missing." },
 ] as const;
 
 export default function HomePage() {
@@ -76,23 +95,58 @@ export default function HomePage() {
       </section>
 
       <section aria-label="Collections" className="rule py-14">
-        <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[var(--line)] border border-[var(--line)]">
-          {SECTIONS.map((s, i) => (
-            <Reveal key={s.href} as="li" delay={i * 0.05}>
+        <Reveal>
+          <h2 className="font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.25em] text-[var(--accent)]">
+            The collections
+          </h2>
+        </Reveal>
+        <ul className="mt-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[var(--line)] border border-[var(--line)]">
+          {COLLECTIONS.map((s, i) => (
+            <Reveal key={s.href} as="li" delay={Math.min(i * 0.05, 0.25)}>
               <Link
                 href={s.href}
-                className="group block h-full bg-[var(--bg)] p-7 hover:bg-[var(--bg-raised)] transition-colors duration-300"
+                className="group flex h-full flex-col bg-[var(--bg)] p-7 hover:bg-[var(--bg-raised)] transition-colors duration-300"
               >
-                <h2 className="font-[family-name:var(--font-display)] text-2xl font-[560] group-hover:text-[var(--accent)] transition-colors duration-300">
-                  {s.title}
-                </h2>
+                <div className="flex items-baseline justify-between gap-3">
+                  <h3 className="font-[family-name:var(--font-display)] text-2xl font-[560] group-hover:text-[var(--accent)] transition-colors duration-300">
+                    {s.title}
+                  </h3>
+                  {/* The count sets expectations before the tap — a card that
+                      says "171 pieces" reads as a place worth entering. */}
+                  <span className="font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.14em] text-[var(--fg-soft)] shrink-0">
+                    {s.count}
+                  </span>
+                </div>
                 <p className="mt-3 text-sm leading-relaxed text-[var(--fg-soft)]">{s.body}</p>
                 <span
                   aria-hidden="true"
-                  className="mt-5 inline-block font-[family-name:var(--font-mono)] text-xs text-[var(--accent)] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+                  className="reveal-on-hover mt-5 inline-block font-[family-name:var(--font-mono)] text-xs text-[var(--accent)]"
                 >
                   View →
                 </span>
+              </Link>
+            </Reveal>
+          ))}
+        </ul>
+      </section>
+
+      <section aria-label="Reference and tools" className="rule py-14">
+        <Reveal>
+          <h2 className="font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.25em] text-[var(--accent)]">
+            Reference &amp; tools
+          </h2>
+        </Reveal>
+        <ul className="mt-5 grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[var(--line)] border border-[var(--line)]">
+          {REFERENCE.map((s, i) => (
+            <Reveal key={s.href} as="li" delay={Math.min(i * 0.05, 0.2)}>
+              <Link
+                href={s.href}
+                className="group block h-full bg-[var(--bg)] p-6 hover:bg-[var(--bg-raised)] transition-colors duration-300"
+              >
+                <h3 className="font-[family-name:var(--font-display)] text-lg font-[560] group-hover:text-[var(--accent)] transition-colors duration-300">
+                  {s.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-[var(--fg-soft)]">{s.body}</p>
               </Link>
             </Reveal>
           ))}
