@@ -1,7 +1,13 @@
 import Link from "next/link";
 import { SearchButton } from "./SearchPalette";
+import { DesktopNav, SectionRail, type NavItem } from "./NavLinks";
 
-const NAV = [
+/**
+ * Primary destinations, ordered so the five *collections* come first and the
+ * tools and meta pages follow. A visitor scanning left to right meets the
+ * things they came to browse before anything about the project itself.
+ */
+export const NAV: readonly NavItem[] = [
   { href: "/cameras", label: "Cameras" },
   { href: "/projectors", label: "Projectors" },
   { href: "/lenses", label: "Lenses" },
@@ -9,8 +15,9 @@ const NAV = [
   { href: "/ephemera", label: "Ephemera" },
   { href: "/serials", label: "Serials" },
   { href: "/articles", label: "Articles" },
+  { href: "/timeline", label: "Timeline" },
   { href: "/archive", label: "Archive" },
-] as const;
+];
 
 export function SiteHeader() {
   return (
@@ -24,43 +31,17 @@ export function SiteHeader() {
             Paillard-Bolex · Est. archive
           </span>
         </Link>
-        <nav
-          aria-label="Primary"
-          className="hidden md:flex items-baseline gap-5 text-[0.8rem] uppercase tracking-[0.12em]"
-        >
-          {NAV.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="text-[var(--fg-soft)] hover:text-[var(--accent)] transition-colors duration-200"
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
+        <DesktopNav items={NAV} />
         <SearchButton />
       </div>
 
       {/*
-       * Mobile section bar. Kept as a swipeable rail rather than a hamburger:
-       * with only eight destinations, a rail keeps them one tap away and shows
-       * where you are, where a menu would add a tap and hide the structure.
-       * Each item is a 44pt target, and `.scroll-x` fades the right edge so it
-       * is visibly scrollable instead of looking arbitrarily truncated.
+       * Mobile section rail. Kept as a swipeable rail rather than a hamburger:
+       * with this many destinations a menu would add a tap and hide the site's
+       * structure, where a rail keeps every section one tap away and shows
+       * which one you are in.
        */}
-      <nav aria-label="Sections" className="md:hidden border-t border-[var(--line)] scroll-x scroll-fade">
-        <div className="flex px-3 whitespace-nowrap">
-          {NAV.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="tap-target px-3 text-[0.78rem] uppercase tracking-[0.1em] text-[var(--fg-soft)] active:text-[var(--accent)]"
-            >
-              {item.label}
-            </Link>
-          ))}
-        </div>
-      </nav>
+      <SectionRail items={NAV} />
     </header>
   );
 }
