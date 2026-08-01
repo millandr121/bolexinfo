@@ -156,9 +156,17 @@ function Palette({ onClose }: { onClose: () => void }) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: reduceMotion ? 0 : 0.15 }}
-      className="fixed inset-0 z-[100] bg-black/40 backdrop-blur-[2px] flex items-start justify-center pt-[14vh] px-4"
+      className="fixed inset-0 z-[100] bg-black/40 backdrop-blur-[2px] flex items-stretch sm:items-start justify-center sm:pt-[14vh] sm:px-4"
       onMouseDown={onClose}
     >
+      {/*
+       * Full-height sheet on phones, floating panel on desktop. A centred
+       * dialog is the wrong shape for a phone: the on-screen keyboard claims
+       * roughly the lower half, so a panel floating in the middle ends up
+       * squeezed into a sliver with its results hidden behind the keyboard.
+       * Occupying the full height keeps the field anchored at the top and
+       * gives the list every pixel the keyboard leaves.
+       */}
       <motion.div
         role="dialog"
         aria-modal="true"
@@ -167,7 +175,7 @@ function Palette({ onClose }: { onClose: () => void }) {
         animate={{ opacity: 1, y: 0, scale: 1 }}
         exit={{ opacity: 0, y: reduceMotion ? 0 : -8 }}
         transition={{ duration: reduceMotion ? 0 : 0.18, ease: [0.2, 0.8, 0.2, 1] }}
-        className="w-full max-w-xl bg-[var(--bg-raised)] border border-[var(--line)] shadow-2xl"
+        className="w-full sm:max-w-xl flex flex-col bg-[var(--bg-raised)] sm:border border-[var(--line)] shadow-2xl safe-top"
         // Stop clicks inside the panel from reaching the dismissing backdrop.
         onMouseDown={(e) => e.stopPropagation()}
       >
@@ -197,7 +205,12 @@ function Palette({ onClose }: { onClose: () => void }) {
             Esc
           </button>
         </div>
-        <ul id="search-results" role="listbox" aria-label="Search results" className="max-h-[50vh] overflow-y-auto py-1">
+        <ul
+          id="search-results"
+          role="listbox"
+          aria-label="Search results"
+          className="flex-1 sm:flex-none sm:max-h-[50vh] overflow-y-auto overscroll-contain py-1 safe-bottom sm:pb-1"
+        >
           {results.length === 0 && (
             <li className="px-5 py-6 text-sm text-[var(--fg-soft)]">
               Nothing found{query ? ` for “${query}”` : ""}.
@@ -209,7 +222,7 @@ function Palette({ onClose }: { onClose: () => void }) {
                 type="button"
                 onMouseEnter={() => setActive(i)}
                 onClick={() => go(item.href)}
-                className={`w-full text-left px-5 py-2.5 flex items-baseline justify-between gap-4 ${
+                className={`w-full text-left px-5 py-3.5 min-h-[44px] flex items-baseline justify-between gap-4 ${
                   i === active ? "bg-[var(--accent)] text-[var(--bg)]" : ""
                 }`}
               >

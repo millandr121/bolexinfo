@@ -69,7 +69,7 @@ export default function SerialsPage() {
             <h2 className="font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.25em] text-[var(--accent)]">
               The complete recovered table
             </h2>
-            <div className="mt-3 max-w-2xl overflow-x-auto border border-[var(--line)]">
+            <div className="mt-3 max-w-2xl scroll-x border border-[var(--line)]">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="text-left font-[family-name:var(--font-sans)] text-[0.68rem] uppercase tracking-[0.12em] text-[var(--fg-soft)] border-b border-[var(--line)]">

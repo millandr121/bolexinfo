@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "@fontsource-variable/fraunces";
 import "@fontsource-variable/archivo";
 import "@fontsource/ibm-plex-mono/400.css";
@@ -7,6 +7,22 @@ import "./globals.css";
 import { SITE } from "@/lib/site";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+
+/**
+ * `viewport-fit: cover` lets the page extend under the notch and home
+ * indicator, which is what the safe-area insets in globals.css then account
+ * for. Zoom is deliberately left unrestricted — pinch-to-zoom is an
+ * accessibility right, and archived scans in particular need it.
+ */
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f5f1e8" },
+    { media: "(prefers-color-scheme: dark)", color: "#14110e" },
+  ],
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),

@@ -89,7 +89,7 @@ export default function HomePage() {
                 <p className="mt-3 text-sm leading-relaxed text-[var(--fg-soft)]">{s.body}</p>
                 <span
                   aria-hidden="true"
-                  className="mt-5 inline-block font-[family-name:var(--font-mono)] text-xs text-[var(--accent)] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+                  className="reveal-on-hover mt-5 inline-block font-[family-name:var(--font-mono)] text-xs text-[var(--accent)]"
                 >
                   View →
                 </span>
