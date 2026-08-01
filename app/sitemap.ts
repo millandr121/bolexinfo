@@ -2,10 +2,11 @@ import type { MetadataRoute } from "next";
 import { getRecoveredArticles } from "@/lib/content";
 import { getCameraRecords } from "@/lib/museum";
 import { getRecoveredSection } from "@/lib/recovered";
+import { SITE } from "@/lib/site";
 
 export const dynamic = "force-static";
 
-const BASE = "https://bolexcollector.com";
+const BASE = SITE.url;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
