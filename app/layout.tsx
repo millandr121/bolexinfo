@@ -4,11 +4,12 @@ import "@fontsource-variable/archivo";
 import "@fontsource/ibm-plex-mono/400.css";
 import "@fontsource/ibm-plex-mono/500.css";
 import "./globals.css";
+import { SITE } from "@/lib/site";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://bolexcollector.com"),
+  metadataBase: new URL(SITE.url),
   title: {
     default: "Bolex Collector — Classic Movie Cameras and Projectors",
     template: "%s — Bolex Collector",
@@ -28,7 +29,7 @@ const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Bolex Collector",
-  url: "https://bolexcollector.com",
+  url: SITE.url,
   description:
     "Digital museum and preservation archive of Paillard-Bolex movie cameras, projectors, lenses and accessories.",
 } as const;
