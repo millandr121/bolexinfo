@@ -45,19 +45,51 @@ export function ArchiveCompare({ originalHref, title }: { originalHref: string; 
             className="overflow-hidden"
           >
             <div className="mt-4 border border-[var(--line)] bg-[var(--bg-raised)]">
-              <div className="flex items-center justify-between px-4 py-2 border-b border-[var(--line)] font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.16em] text-[var(--fg-soft)]">
+              <div className="flex items-center justify-between gap-3 px-4 py-2 border-b border-[var(--line)] font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.16em] text-[var(--fg-soft)]">
                 <span>Preserved original · bolexcollector.com</span>
-                <a href={originalHref} target="_blank" rel="noreferrer" className="text-[var(--accent)] hover:underline">
-                  Open in new tab ↗
+                <a
+                  href={originalHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="tap-target text-[var(--accent)] hover:underline shrink-0"
+                >
+                  Open ↗
                 </a>
               </div>
+
+              {/*
+               * The embedded frame is desktop-only by design. The archived
+               * pages are fixed-width documents from the 2000s; on a phone an
+               * iframe of one means a small scroll region nested inside the
+               * page scroll — you fight to pan it, and vertical swipes get
+               * captured by the wrong surface. Phones get a full-screen open
+               * instead, which hands the document the whole viewport and the
+               * browser's own pinch-zoom.
+               */}
               <iframe
                 src={originalHref}
                 title={`Original archived page: ${title}`}
                 loading="lazy"
-                className="w-full h-[60vh] bg-white"
+                className="hidden sm:block w-full h-[60vh] bg-white"
                 sandbox=""
               />
+
+              <a
+                href={originalHref}
+                target="_blank"
+                rel="noreferrer"
+                className="sm:hidden flex items-center justify-between gap-4 px-4 py-5 active:bg-[var(--bg)]"
+              >
+                <span className="text-sm leading-snug">
+                  Open the preserved page full screen
+                  <span className="block mt-1 text-xs text-[var(--fg-soft)]">
+                    Original 2000s layout — best viewed with pinch-to-zoom
+                  </span>
+                </span>
+                <span aria-hidden="true" className="text-[var(--accent)] text-xl shrink-0">
+                  ↗
+                </span>
+              </a>
             </div>
           </motion.div>
         )}

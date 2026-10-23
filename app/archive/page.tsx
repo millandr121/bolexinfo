@@ -78,7 +78,7 @@ export default function ArchivePage() {
           <h2 className="font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.25em] text-[var(--accent)]">
             Preserved by section
           </h2>
-          <div className="mt-4 max-w-xl overflow-x-auto border border-[var(--line)]">
+          <div className="mt-4 max-w-xl scroll-x border border-[var(--line)]">
             <table className="w-full text-sm">
               <thead>
                 <tr className="text-left font-[family-name:var(--font-sans)] text-[0.68rem] uppercase tracking-[0.12em] text-[var(--fg-soft)] border-b border-[var(--line)]">

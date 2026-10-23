@@ -149,7 +149,7 @@ function SerialTable({ model }: { model: ModelRecord }) {
           </Link>{" "}
           page.
         </p>
-        <div className="mt-4 max-w-md overflow-x-auto border border-[var(--line)]">
+        <div className="mt-4 max-w-md scroll-x border border-[var(--line)]">
           <table className="w-full text-sm">
             <thead>
               <tr className="text-left font-[family-name:var(--font-sans)] text-[0.68rem] uppercase tracking-[0.12em] text-[var(--fg-soft)] border-b border-[var(--line)]">

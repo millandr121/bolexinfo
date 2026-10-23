@@ -59,7 +59,7 @@ export default function EphemeraPage() {
                           src={cover.src}
                           alt={cover.alt || page.title}
                           loading="lazy"
-                          className="w-full h-40 object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+                          className="w-full aspect-[3/4] object-contain bg-white transition-transform duration-500 group-hover:scale-[1.03] no-touch-zoom"
                         />
                       </div>
                     )}

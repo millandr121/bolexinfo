@@ -101,7 +101,7 @@ export function SerialLookup({ rows, models }: { rows: SerialRow[]; models: Seri
                     </span>
                     <span
                       aria-hidden="true"
-                      className="font-[family-name:var(--font-mono)] text-xs text-[var(--accent)] opacity-0 group-hover:opacity-100 transition-opacity"
+                      className="reveal-on-hover font-[family-name:var(--font-mono)] text-xs text-[var(--accent)]"
                     >
                       →
                     </span>

@@ -172,3 +172,89 @@ html {
   border: 1px solid var(--line);
   background: #fff;
 }
+
+/* ——————————————————————————————————————————————————————————————
+   Touch
+   —————————————————————————————————————————————————————————————— */
+
+/*
+ * Affordances that fade in on hover are invisible on a touch screen, because
+ * touch devices never hover — the hint simply never appears. Show them by
+ * default and only hide-until-hover on devices that actually have a pointer.
+ */
+.reveal-on-hover {
+  opacity: 1;
+  transform: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  .reveal-on-hover {
+    opacity: 0;
+    transform: translateX(-0.25rem);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  .group:hover .reveal-on-hover {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Hover *styling* (background shifts, zooms) should likewise not fire from a
+   tap and then stick until the next tap elsewhere. */
+@media (hover: none) {
+  .group:hover .no-touch-zoom {
+    transform: none;
+  }
+}
+
+/* Grey flash on tap reads as a web page, not an app. Feedback comes from our
+   own :active states instead. */
+a,
+button,
+[role="button"] {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Apple's HIG asks for 44pt minimum. Applied to compact controls that would
+   otherwise be text-sized hit areas. */
+.tap-target {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* A tap should feel like it registered instantly, before any navigation. */
+@media (hover: none) {
+  a:active,
+  button:active {
+    opacity: 0.6;
+    transition: opacity 0.05s;
+  }
+}
+
+/* Honour the notch / home indicator rather than sitting under them. */
+.safe-bottom { padding-bottom: max(1rem, env(safe-area-inset-bottom)); }
+.safe-top { padding-top: max(0.5rem, env(safe-area-inset-top)); }
+
+/*
+ * Horizontally scrollable regions (wide tables, the mobile section bar) give
+ * no hint that more content exists off-screen. A soft right-edge fade signals
+ * "keep swiping" without adding chrome; it disappears once scrolled to the end.
+ */
+.scroll-x {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  /* Don't let a sideways swipe inside a table walk the whole page, or trigger
+     the browser's back-navigation gesture. */
+  overscroll-behavior-x: contain;
+}
+
+/*
+ * The right-edge fade is applied only where content is known to overflow (the
+ * mobile section rail). Applying it to every scroll container would paint a
+ * permanent fade on tables that happen to fit, which reads as a rendering
+ * fault rather than an affordance.
+ */
+.scroll-fade {
+  mask-image: linear-gradient(to right, #000 calc(100% - 2.5rem), transparent 100%);
+}
