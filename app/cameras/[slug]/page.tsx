@@ -32,5 +32,5 @@ export default async function CameraPage({ params }: Props) {
   const model = getCameraRecord(slug);
   if (!model) notFound();
 
-  return <ObjectPage model={model} section={{ label: "Cameras", href: "/cameras" }} />;
+  return <ObjectPage model={model} section={{ label: "Cameras", href: "/cameras", kind: "cameras" }} />;
 }
