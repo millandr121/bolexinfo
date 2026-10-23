@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { parse } from "node-html-parser";
 import { getCameraRecords, getProjectorRecords, type ModelRecord } from "./museum";
+import { accessoryTypeOf, decadeOf, getRecoveredSection } from "./recovered";
 
 const ROOT = process.cwd();
 
@@ -126,10 +127,16 @@ export interface RelatedModel {
 }
 
 export interface RelatedContext {
-  /** Models in the same line, e.g. the other H-16 cameras. */
-  series?: { name: string; models: RelatedModel[] };
+  /**
+   * Models in the same line, e.g. the other H-16 cameras.
+   *
+   * `heading` overrides the band's wording where the default phrasing does not
+   * fit the section — "the H-16 line" reads correctly for a camera series but
+   * not for a group of accessory cases.
+   */
+  series?: { name: string; heading?: string; models: RelatedModel[] };
   /** Models the original index listed in the same era and gauge. */
-  era?: { label: string; gauge?: string; models: RelatedModel[] };
+  era?: { label: string; gauge?: string; heading?: string; models: RelatedModel[] };
 }
 
 function records(section: Section): ModelRecord[] {
@@ -242,6 +249,79 @@ export function getRelated(section: Section, slug: string, limit = 8): RelatedCo
         label: own.era,
         ...(sameGauge.length > 0 && own.entry.gauge ? { gauge: own.entry.gauge } : {}),
         models: peers.slice(0, limit).map(toRelated),
+      };
+    }
+  }
+
+  return context;
+}
+
+export type RecoveredSection = "lenses" | "accessories";
+
+/**
+ * Onward links for the narrative sections.
+ *
+ * Lenses and accessories carry no specifications or serial numbers, so the
+ * relations that connect cameras do not apply. What they do have is a grid the
+ * original site arranged them on: every lens page is a maker in a decade
+ * (Kern Paillard in the 1940s, 1950s and 1960s), and every accessory page is a
+ * category in a decade (cases in the 1950s). Both axes are read from the
+ * recovered slugs and titles, so the groupings are the site's own.
+ */
+export function getRecoveredRelated(
+  section: RecoveredSection,
+  slug: string,
+  limit = 8,
+): RelatedContext {
+  const pages = getRecoveredSection(section);
+  const self = pages.find((p) => p.slug === slug);
+  if (!self) return {};
+
+  const noun = section === "lenses" ? "lenses" : "accessories";
+  const groupOf = (s: string) =>
+    section === "lenses" ? s.replace(/^\d+/, "") : accessoryTypeOf(s);
+
+  const toRelated = (p: { slug: string; title: string }): RelatedModel => ({
+    slug: p.slug,
+    name: p.title,
+    href: `/${section}/${p.slug}`,
+    ...(decadeOf(p.slug) ? { gauge: decadeOf(p.slug)! } : {}),
+  });
+
+  const context: RelatedContext = {};
+
+  // The same maker or category, through the other decades it was made in.
+  const group = groupOf(slug);
+  const sameGroup = pages.filter((p) => p.slug !== slug && groupOf(p.slug) === group);
+  if (sameGroup.length > 0) {
+    /*
+     * The display name comes from the page's own title with its decade
+     * stripped — "Kern Paillard 1940s" is the Kern Paillard lenses — so the
+     * heading uses the archive's spelling rather than the slug's.
+     */
+    const name =
+      section === "lenses"
+        ? self.title.replace(/\s*\b(19)?\d0s\b\s*$/, "").trim() || group
+        : accessoryTypeOf(slug);
+    context.series = {
+      name,
+      heading: `${name} through the decades`,
+      models: sameGroup.slice(0, limit).map(toRelated),
+    };
+  }
+
+  // Everything else of the same decade.
+  const decade = decadeOf(slug);
+  if (decade) {
+    const seen = new Set(context.series?.models.map((m) => m.slug) ?? []);
+    const sameDecade = pages.filter(
+      (p) => p.slug !== slug && !seen.has(p.slug) && decadeOf(p.slug) === decade,
+    );
+    if (sameDecade.length > 0) {
+      context.era = {
+        label: decade,
+        heading: `Other ${decade} ${noun}`,
+        models: sameDecade.slice(0, limit).map(toRelated),
       };
     }
   }

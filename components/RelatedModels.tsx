@@ -35,10 +35,7 @@ export function RelatedModels({
         </h2>
 
         {series && (
-          <Band
-            title={`The ${series.name} line`}
-            models={series.models}
-          />
+          <Band title={series.heading ?? `The ${series.name} line`} models={series.models} />
         )}
 
         {/*
@@ -49,11 +46,12 @@ export function RelatedModels({
         {era && (
           <Band
             title={
-              era.gauge
+              era.heading ??
+              (era.gauge
                 ? `${era.gauge} ${sectionLabel.toLowerCase()} of the same period`
-                : "Others of the same period"
+                : "Others of the same period")
             }
-            subtitle={era.label}
+            subtitle={era.heading ? undefined : era.label}
             models={era.models}
           />
         )}
@@ -85,7 +83,13 @@ function Band({
       </h3>
       <ul className="mt-3 grid gap-px border border-[var(--line)] bg-[var(--line)] sm:grid-cols-2">
         {models.map((model) => (
-          <li key={model.slug}>
+          /*
+           * The grid draws its separators as a one-pixel gap over a line
+           * coloured background, so an odd count would leave the empty cell
+           * showing as a solid block. A lone trailing item spans the row
+           * instead.
+           */
+          <li key={model.slug} className="sm:[&:last-child:nth-child(odd)]:col-span-2">
             <Link
               href={model.href}
               className="group flex h-full items-baseline justify-between gap-3 bg-[var(--bg)] px-4 py-3 transition-colors duration-200 hover:bg-[var(--bg-raised)]"
