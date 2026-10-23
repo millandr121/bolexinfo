@@ -20,6 +20,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/archive",
     "/timeline",
     "/glossary",
+    "/links",
+    "/updates",
     "/ephemera",
     "/about",
     "/tribute",
