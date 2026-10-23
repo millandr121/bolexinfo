@@ -22,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/glossary",
     "/links",
     "/updates",
+    "/revisit",
     "/ephemera",
     "/about",
     "/tribute",

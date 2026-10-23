@@ -3,6 +3,8 @@
  *
  *   archive/wayback/images/**      → public/images/**      (live model imagery)
  *   archive/wayback/**\/*.html     → public/original/**    ("View Original Archive")
+ *   archive/wayback/*.css          → public/original/*.css  (so it renders as published)
+ *   archive/wayback/images/**      → public/original/images/** (same)
  *
  * These are derived copies of the committed archive — regenerated on every
  * build and git-ignored, so the canonical bytes live only in archive/wayback.
@@ -40,7 +42,30 @@ function main() {
   }
   const images = copyTree(path.join(WAYBACK, "images"), path.join(PUBLIC, "images"), () => true);
   const pages = copyTree(WAYBACK, path.join(PUBLIC, "original"), (f) => f.endsWith(".html"));
-  console.log(`Staged ${images} images → public/images and ${pages} original pages → public/original`);
+
+  /*
+   * The preserved pages need their own stylesheets and photographs, or they
+   * render as bare markup with broken images — which is what "View Original
+   * Archive" showed for months.
+   *
+   * They must sit *inside* public/original because that is where the archived
+   * markup points: a root page asks for `stylebw.css` and `images/…`, a nested
+   * one for `../style40.css` and `../images/…`, and both resolve within
+   * /original. The duplication against public/images is deliberate; the two
+   * serve different purposes and the modern site is free to optimise its copy
+   * without touching the preserved one.
+   */
+  const styles = copyTree(WAYBACK, path.join(PUBLIC, "original"), (f) => f.endsWith(".css"));
+  const originalImages = copyTree(
+    path.join(WAYBACK, "images"),
+    path.join(PUBLIC, "original", "images"),
+    () => true,
+  );
+
+  console.log(
+    `Staged ${images} images → public/images, ` +
+      `${pages} pages + ${styles} stylesheets + ${originalImages} images → public/original`,
+  );
 }
 
 main();

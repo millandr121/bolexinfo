@@ -95,6 +95,7 @@ for (const [title, href, keywords] of [
   ["Ephemera", "/ephemera", "advertising catalogs brochures bolex reporter"],
   ["Links", "/links", "resources directory repair film stock cinema history recommended sites"],
   ["Previous Updates", "/updates", "archives site news changelog history 2005 2011"],
+  ["Revisit the original site", "/revisit", "old site original look classic browse nostalgia as it was"],
 ] as const) {
   docs.push({ title, href, section: "reference", keywords });
 }

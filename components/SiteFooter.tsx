@@ -27,6 +27,7 @@ export function SiteFooter() {
           <Link href="/glossary" className="hover:text-[var(--accent)]">Glossary of terms</Link>
           <Link href="/links" className="hover:text-[var(--accent)]">Links &amp; resources</Link>
           <Link href="/updates" className="hover:text-[var(--accent)]">Previous updates</Link>
+          <Link href="/revisit" className="hover:text-[var(--accent)]">Revisit the original site</Link>
           <a
             href={SUPPORT.donateUrl}
             target="_blank"
