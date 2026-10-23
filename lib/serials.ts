@@ -54,11 +54,48 @@ export interface SerialModel {
   format?: string;
   href: string;
   rows: SerialRow[];
+  /** Cameras and projectors were numbered separately; only these two kinds were catalogued. */
+  kind: "camera" | "projector";
+  /**
+   * Short physical tells for distinguishing this model from others sharing a
+   * serial range — lens mount, film gauge, turret, reflex viewing. Every one
+   * is derived from the archived specification text, never invented.
+   */
+  tells: string[];
 }
 
 export interface ModelMatch {
   model: SerialModel;
   row: SerialRow;
+}
+
+/**
+ * Derive the handful of facts that let a collector tell two same-numbered
+ * models apart by looking at the camera in front of them.
+ *
+ * Priority is physical and checkable in seconds: the film gauge, then the lens
+ * mount (a 16mm H-16 takes C-mount glass where an 8mm H-8 takes D-mount),
+ * then turret and viewing system. All of it is read out of the recovered spec
+ * values rather than asserted.
+ */
+export function deriveTells(format: string | undefined, specs: Array<{ label: string; value: string }>): string[] {
+  const tells: string[] = [];
+  if (format) tells.push(`${format} film`);
+
+  const blob = specs.map((s) => `${s.label}: ${s.value}`).join(" \u0000 ");
+
+  const mount = /\b([CD])\s*mount\b/i.exec(blob);
+  if (mount) tells.push(`${mount[1]!.toUpperCase()} mount lenses`);
+
+  if (/\bturret\b/i.test(blob)) {
+    tells.push(/\bthree\b|\b3\b/i.test(blob.slice(Math.max(0, blob.search(/\bturret\b/i) - 90)))
+      ? "3-lens turret"
+      : "lens turret");
+  }
+
+  if (/\breflex\b|\bprism\b/i.test(blob)) tells.push("Reflex viewing");
+
+  return tells.slice(0, 4);
 }
 
 /**
