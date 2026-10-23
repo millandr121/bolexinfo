@@ -2,8 +2,10 @@ import Link from "next/link";
 import { Reveal } from "./Reveal";
 import { ImageGallery } from "./ImageGallery";
 import { ArchiveCompare } from "./ArchiveCompare";
+import { RelatedModels } from "./RelatedModels";
 import { partitionSpecs } from "@/lib/specs";
 import type { ModelRecord } from "@/lib/museum";
+import { getRelated, type Section } from "@/lib/related";
 import { originalArchiveHref } from "@/lib/archive";
 
 /**
@@ -36,9 +38,10 @@ export function ObjectPage({
 }: {
   model: ModelRecord;
   /** The collection this object belongs to, for the breadcrumb. */
-  section: { label: string; href: string };
+  section: { label: string; href: string; kind?: Section };
 }) {
   const archiveHref = originalArchiveHref(model.originalPath);
+  const related = section.kind ? getRelated(section.kind, model.slug) : {};
   const { glance, detail } = partitionSpecs(model.specs);
   const hasImages = model.images.length > 0;
 
@@ -164,6 +167,12 @@ export function ObjectPage({
       </div>
 
       {model.serialRows.length > 0 && <SerialTable model={model} />}
+
+      <RelatedModels
+        related={related}
+        sectionLabel={section.label}
+        sectionHref={section.href}
+      />
 
       {archiveHref && (
         <div className="max-w-3xl">

@@ -32,5 +32,5 @@ export default async function ProjectorPage({ params }: Props) {
   const model = record(slug);
   if (!model) notFound();
 
-  return <ObjectPage model={model} section={{ label: "Projectors", href: "/projectors" }} />;
+  return <ObjectPage model={model} section={{ label: "Projectors", href: "/projectors", kind: "projectors" }} />;
 }
