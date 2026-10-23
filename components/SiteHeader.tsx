@@ -23,11 +23,21 @@ export function SiteHeader() {
   return (
     <header className="w-full border-b border-[var(--line)] bg-[var(--bg)]/95 backdrop-blur-sm sticky top-0 z-40 safe-top">
       <div className="max-w-6xl mx-auto px-5 sm:px-8 flex items-center justify-between gap-4 py-3 sm:py-4">
-        <Link href="/" className="group shrink-0 no-underline tap-target">
+        {/*
+         * The wordmark is a two-line stack: title above, imprint below. It
+         * deliberately does not use the .tap-target utility — that sets
+         * `display: inline-flex`, which would lay these two spans out as row
+         * flex items and run the whole lockup onto one line, stretching the
+         * brand and squeezing the nav. The 44px floor is set directly instead.
+         */}
+        <Link
+          href="/"
+          className="group shrink-0 no-underline flex flex-col justify-center min-h-[44px]"
+        >
           <span className="block font-[family-name:var(--font-display)] text-lg sm:text-2xl tracking-tight font-[560] leading-tight">
             Bolex<span className="text-[var(--accent)]"> Collector</span>
           </span>
-          <span className="hidden sm:block text-[0.65rem] uppercase tracking-[0.22em] text-[var(--fg-soft)] font-[family-name:var(--font-mono)]">
+          <span className="block text-[0.6rem] sm:text-[0.65rem] uppercase tracking-[0.18em] sm:tracking-[0.22em] text-[var(--fg-soft)] font-[family-name:var(--font-mono)] leading-tight">
             Paillard-Bolex · Est. archive
           </span>
         </Link>
