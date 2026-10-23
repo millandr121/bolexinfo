@@ -14,7 +14,23 @@ import type { ModelImage } from "@/lib/museum";
  * where a thumb rests rather than the top-right corner, which is the hardest
  * point to reach one-handed on a large phone.
  */
-export function ImageGallery({ images, caption }: { images: ModelImage[]; caption: string }) {
+export function ImageGallery({
+  images,
+  caption,
+  layout = "grid",
+}: {
+  images: ModelImage[];
+  caption: string;
+  /**
+   * `grid` — equal thumbnails, for pages that are mostly photographs.
+   * `feature` — one lead plate with the remainder as a strip beneath it, for
+   * object pages where a single photograph should anchor the top of the page.
+   *
+   * Both layouts share one lightbox sequence, so swiping from the lead
+   * continues through the strip rather than treating them as separate sets.
+   */
+  layout?: "grid" | "feature";
+}) {
   const [open, setOpen] = useState<number | null>(null);
   const [mounted, setMounted] = useState(false);
   const reduceMotion = useReducedMotion();
@@ -48,29 +64,94 @@ export function ImageGallery({ images, caption }: { images: ModelImage[]; captio
 
   return (
     <>
-      <ul className={`grid gap-3 ${images.length === 1 ? "sm:grid-cols-1 max-w-md" : "grid-cols-2"}`}>
-        {images.map((img, i) => (
-          <li key={img.src}>
-            <button
-              type="button"
-              onClick={() => setOpen(i)}
-              className="group block w-full overflow-hidden border border-[var(--line)] plate p-2 cursor-zoom-in"
-              aria-label={`View ${img.alt || caption} full screen`}
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={img.src}
-                alt={img.alt || caption}
-                loading="lazy"
-                className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-[1.02] no-touch-zoom"
-              />
-            </button>
-            {img.alt && (
-              <p className="mt-1.5 text-xs text-[var(--fg-soft)] font-[family-name:var(--font-mono)]">{img.alt}</p>
-            )}
-          </li>
-        ))}
-      </ul>
+      {layout === "feature" ? (
+        <div>
+          {/*
+           * One list, two shapes, so each photograph is fetched once.
+           *
+           * Below `lg` it is a horizontal, snapping film strip at a fixed
+           * height: every photograph is reachable by swiping and the block
+           * costs the same vertical space whether a model has one picture or
+           * five. Stacking them instead — or showing a full-width lead plate —
+           * measurably lengthened the page on a phone, which is the opposite
+           * of what this layout is for.
+           *
+           * At `lg` and above it becomes the feature grid the sidebar wants:
+           * the first photograph spans the full rail as the lead plate, the
+           * rest sit beneath it as square thumbnails.
+           */}
+          <ul className="scroll-x flex snap-x snap-mandatory gap-3 pb-1 lg:grid lg:grid-cols-4 lg:gap-2 lg:overflow-visible lg:pb-0">
+            {images.map((img, i) => {
+              const isLead = i === 0;
+              return (
+                <li
+                  key={img.src}
+                  className={`shrink-0 snap-start basis-[78%] sm:basis-[46%] lg:shrink lg:basis-auto ${
+                    isLead ? "lg:col-span-4" : ""
+                  }`}
+                >
+                  <button
+                    type="button"
+                    onClick={() => setOpen(i)}
+                    className={`group block h-44 w-full cursor-zoom-in overflow-hidden border border-[var(--line)] plate lg:h-auto ${
+                      isLead ? "p-3" : "p-1.5 lg:aspect-square"
+                    }`}
+                    aria-label={`View ${img.alt || caption} full screen (${i + 1} of ${images.length})`}
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={img.src}
+                      alt={img.alt || caption}
+                      /* The lead plate is usually the largest element painted,
+                         so it is not deferred; the rest are. */
+                      loading={isLead ? undefined : "lazy"}
+                      className={`h-full w-full object-contain transition-transform duration-500 no-touch-zoom group-hover:scale-[1.03] ${
+                        isLead ? "lg:h-auto" : ""
+                      }`}
+                    />
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+
+          {/*
+           * A single shared line rather than a caption per photograph: on a
+           * phone a caption under every slide was pure added height, and each
+           * image's own description is shown in the lightbox where there is
+           * room for it.
+           */}
+          <p className="mt-2 font-[family-name:var(--font-mono)] text-xs text-[var(--fg-soft)]">
+            {images.length === 1
+              ? "Tap to enlarge"
+              : `${images.length} photographs — swipe, or tap to enlarge`}
+          </p>
+        </div>
+      ) : (
+        <ul className={`grid gap-3 ${images.length === 1 ? "sm:grid-cols-1 max-w-md" : "grid-cols-2"}`}>
+          {images.map((img, i) => (
+            <li key={img.src}>
+              <button
+                type="button"
+                onClick={() => setOpen(i)}
+                className="group block w-full overflow-hidden border border-[var(--line)] plate p-2 cursor-zoom-in"
+                aria-label={`View ${img.alt || caption} full screen`}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={img.src}
+                  alt={img.alt || caption}
+                  loading="lazy"
+                  className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-[1.02] no-touch-zoom"
+                />
+              </button>
+              {img.alt && (
+                <p className="mt-1.5 text-xs text-[var(--fg-soft)] font-[family-name:var(--font-mono)]">{img.alt}</p>
+              )}
+            </li>
+          ))}
+        </ul>
+      )}
 
       {mounted &&
         createPortal(
