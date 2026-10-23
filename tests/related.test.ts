@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { getIndexGroups, getRelated, type Section } from "../lib/related";
+import { getIndexGroups, getRecoveredRelated, getRelated, type Section } from "../lib/related";
+import { getRecoveredSection } from "../lib/recovered";
 import { getCameraRecords, getProjectorRecords } from "../lib/museum";
 
 const SECTIONS: Section[] = ["cameras", "projectors"];
@@ -155,4 +156,57 @@ test("every index entry corresponds to a recovered model", () => {
       }
     }
   }
+});
+
+/* ---- lenses and accessories ---------------------------------------- */
+
+test("a lens links to its maker's other decades and its decade's other makers", () => {
+  const kern50 = getRecoveredRelated("lenses", "50kern");
+
+  assert.equal(kern50.series?.name, "Kern Paillard");
+  assert.deepEqual(
+    kern50.series!.models.map((m) => m.slug).sort(),
+    ["40kern", "60kern"],
+    "Kern Paillard was made across three decades",
+  );
+
+  assert.equal(kern50.era?.label, "1950s");
+  assert.ok(kern50.era!.models.every((m) => !m.slug.endsWith("kern")));
+  assert.ok(kern50.era!.models.length > 0);
+});
+
+test("an accessory links by category and by decade", () => {
+  const cases50 = getRecoveredRelated("accessories", "case50");
+
+  assert.equal(cases50.series?.name, "Cases");
+  assert.deepEqual(cases50.series!.models.map((m) => m.slug).sort(), ["case40", "case60"]);
+
+  assert.equal(cases50.era?.label, "1950s");
+  assert.ok(cases50.era!.models.every((m) => !m.slug.startsWith("case")));
+});
+
+test("the series heading is worded for its section", () => {
+  // "The Cases line" would be wrong; these sections carry their own wording.
+  assert.equal(getRecoveredRelated("accessories", "case50").series?.heading, "Cases through the decades");
+  assert.equal(getRecoveredRelated("lenses", "50kern").series?.heading, "Kern Paillard through the decades");
+  assert.equal(getRecoveredRelated("lenses", "50kern").era?.heading, "Other 1950s lenses");
+});
+
+test("every lens and accessory page links onward, and never to itself", () => {
+  for (const section of ["lenses", "accessories"] as const) {
+    for (const page of getRecoveredSection(section)) {
+      const related = getRecoveredRelated(section, page.slug);
+      const shown = [...(related.series?.models ?? []), ...(related.era?.models ?? [])];
+      const slugs = shown.map((m) => m.slug);
+
+      assert.ok(shown.length > 0, `${section}/${page.slug} is a dead end`);
+      assert.ok(!slugs.includes(page.slug), `${section}/${page.slug} links to itself`);
+      assert.equal(new Set(slugs).size, slugs.length, `${section}/${page.slug} repeats a relation`);
+      for (const m of shown) assert.equal(m.href, `/${section}/${m.slug}`);
+    }
+  }
+});
+
+test("an unknown page yields no relations rather than throwing", () => {
+  assert.deepEqual(getRecoveredRelated("lenses", "not-a-lens"), {});
 });
