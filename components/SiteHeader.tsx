@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { SearchButton } from "./SearchPalette";
 import { DesktopNav, SectionRail, type NavItem } from "./NavLinks";
+import { RevisitButton } from "./RevisitButton";
 
 /**
  * Primary destinations, ordered so the five *collections* come first and the
@@ -42,7 +43,11 @@ export function SiteHeader() {
           </span>
         </Link>
         <DesktopNav items={NAV} />
-        <SearchButton />
+        {/* Tools, kept together and apart from the sections in the nav. */}
+        <div className="flex shrink-0 items-center gap-2">
+          <RevisitButton />
+          <SearchButton />
+        </div>
       </div>
 
       {/*

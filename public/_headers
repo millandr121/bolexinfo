@@ -1,0 +1,23 @@
+# Headers for the preserved original site.
+#
+# Both rules below exist because the archived pages must not be edited: adding
+# a meta tag or stripping a script from them would alter the record. A header
+# changes how they are served without changing a byte of what is served.
+
+/original/*
+  # The preserved pages are a second copy of content the modern pages already
+  # carry. Indexing both would split the archive against itself and risk
+  # surfacing the 2000s markup ahead of the restoration.
+  X-Robots-Tag: noindex
+
+  # The pages still call out to the third parties the site used in its day —
+  # AddThis share buttons, eBay affiliate widgets, and Michael's own Google
+  # Analytics. Those services are long dead to us but the requests are not:
+  # served as-is they would leak every reader's address and referring page to
+  # three companies, for no benefit, since none of the widgets work any more.
+  #
+  # Scripts are already inert inside the viewer's sandbox, but an <img> beacon
+  # is not a script and loads regardless, so the policy is set here instead.
+  # 'unsafe-inline' is required for styles because the period markup styles
+  # many elements with attributes.
+  Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'none'; object-src 'none'; frame-src 'none'; connect-src 'none'; form-action 'none'

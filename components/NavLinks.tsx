@@ -28,7 +28,14 @@ export function DesktopNav({ items }: { items: readonly NavItem[] }) {
   return (
     <nav
       aria-label="Primary"
-      className="hidden md:flex items-baseline gap-5 text-[0.8rem] uppercase tracking-[0.12em]"
+      /*
+       * Nine uppercase labels with letter-spacing need roughly 1400px beside
+       * the wordmark and the tools. Switching to them at `md` left the header
+       * overflowing the window on every laptop width — 275px of horizontal
+       * page scroll at 1024px — so the rail now carries the sections until
+       * there is genuinely room, and the spacing opens up as space allows.
+       */
+      className="hidden xl:flex items-baseline gap-3 min-[1700px]:gap-5 text-[0.72rem] min-[1700px]:text-[0.8rem] uppercase tracking-[0.06em] min-[1700px]:tracking-[0.12em]"
     >
       {items.map((item) => {
         const active = isActive(pathname, item.href);
@@ -56,7 +63,7 @@ export function SectionRail({ items }: { items: readonly NavItem[] }) {
   return (
     <nav
       aria-label="Sections"
-      className="md:hidden border-t border-[var(--line)] scroll-x scroll-fade"
+      className="xl:hidden border-t border-[var(--line)] scroll-x scroll-fade"
     >
       <div className="flex px-3 whitespace-nowrap">
         {items.map((item) => {

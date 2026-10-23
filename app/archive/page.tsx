@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { getArchivedAssets, getArchiveStats, getUrlInventory } from "@/lib/content";
 
@@ -71,6 +72,32 @@ export default function ArchivePage() {
             </div>
           ))}
         </dl>
+      </Reveal>
+
+      {/*
+       * The strongest thing this page can say is not a number but a door: the
+       * whole site is here, readable, exactly as it was published.
+       */}
+      <Reveal delay={0.05}>
+        <section aria-label="Browse the original site" className="mt-10 max-w-2xl">
+          <Link
+            href="/revisit"
+            className="group flex items-center justify-between gap-6 border border-[var(--line)] bg-[var(--bg-raised)] p-6 transition-colors duration-200 hover:border-[var(--accent)]"
+          >
+            <span className="min-w-0">
+              <span className="block font-[family-name:var(--font-display)] text-xl font-[560] transition-colors group-hover:text-[var(--accent)]">
+                Revisit the original site
+              </span>
+              <span className="mt-2 block text-sm leading-relaxed text-[var(--fg-soft)]">
+                Every page of BolexCollector.com as it was published — its own layout,
+                typefaces and photographs — browsable from the front page.
+              </span>
+            </span>
+            <span aria-hidden="true" className="shrink-0 text-2xl text-[var(--accent)]">
+              →
+            </span>
+          </Link>
+        </section>
       </Reveal>
 
       <Reveal>
