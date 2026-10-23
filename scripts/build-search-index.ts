@@ -10,6 +10,7 @@ import path from "node:path";
 import matter from "gray-matter";
 import { getCameraRecords, getProjectorRecords } from "../lib/museum";
 import { getRecoveredSection } from "../lib/recovered";
+import { getLinkDirectory, getUpdates } from "../lib/directory";
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const read = <T>(p: string, fallback: T): T =>
@@ -92,8 +93,40 @@ for (const [section, prefix] of [
 for (const [title, href, keywords] of [
   ["Glossary", "/glossary", "terminology terms definitions filmmaking"],
   ["Ephemera", "/ephemera", "advertising catalogs brochures bolex reporter"],
+  ["Links", "/links", "resources directory repair film stock cinema history recommended sites"],
+  ["Previous Updates", "/updates", "archives site news changelog history 2005 2011"],
 ] as const) {
   docs.push({ title, href, section: "reference", keywords });
+}
+
+/*
+ * The link directory and update log are indexed entry by entry, not just as
+ * two page titles. Someone looking for a repair specialist searches the
+ * specialist's name, and someone chasing when the serial-number article
+ * appeared searches its title — neither is findable if only the container is
+ * indexed. Both deep-link to the section of the page that holds them.
+ */
+for (const category of getLinkDirectory().categories) {
+  for (const entry of category.entries) {
+    docs.push({
+      title: entry.name,
+      href: "/links",
+      section: "reference",
+      keywords: `link resource ${category.title}`,
+      summary: entry.description,
+    });
+  }
+}
+
+for (const update of getUpdates()) {
+  if (!update.title) continue; // undated housekeeping notes have nothing to match on
+  docs.push({
+    title: update.title,
+    href: update.articleSlug ? `/articles/${update.articleSlug}` : "/updates",
+    section: "reference",
+    keywords: `update ${update.date}`,
+    summary: update.description,
+  });
 }
 
 const feedItems: Array<{ title: string; link: string; date: string; description: string }> = [];
