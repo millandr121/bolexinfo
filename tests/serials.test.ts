@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { formatSerialInput, formatYearSpan, lookupModels, lookupSerial } from "../lib/serials";
+import { deriveTells, formatSerialInput, formatYearSpan, lookupModels, lookupSerial } from "../lib/serials";
 import type { SerialRow } from "../lib/museum";
 
 const rows: SerialRow[] = [
@@ -59,9 +59,9 @@ test("formatSerialInput strips punctuation and labels", () => {
 
 test("lookupModels attributes a serial to the models that documented it", () => {
   const models = [
-    { slug: "h16", name: "H-16", format: "16mm", href: "/cameras/h16", rows: [{ from: 20000, to: 25000, yearFrom: 1944, yearTo: 1944 }] },
-    { slug: "h8", name: "H-8", format: "8mm", href: "/cameras/h8", rows: [{ from: 20000, to: 25000, yearFrom: 1944, yearTo: 1944 }] },
-    { slug: "b8", name: "B-8", format: "8mm", href: "/cameras/b8", rows: [{ from: 90000, to: 95000, yearFrom: 1953, yearTo: 1953 }] },
+    { slug: "h16", name: "H-16", format: "16mm", kind: "camera" as const, tells: [], href: "/cameras/h16", rows: [{ from: 20000, to: 25000, yearFrom: 1944, yearTo: 1944 }] },
+    { slug: "h8", name: "H-8", format: "8mm", kind: "camera" as const, tells: [], href: "/cameras/h8", rows: [{ from: 20000, to: 25000, yearFrom: 1944, yearTo: 1944 }] },
+    { slug: "b8", name: "B-8", format: "8mm", kind: "camera" as const, tells: [], href: "/cameras/b8", rows: [{ from: 90000, to: 95000, yearFrom: 1953, yearTo: 1953 }] },
   ];
   const hits = lookupModels(22000, models);
   assert.equal(hits.length, 2);
@@ -76,6 +76,8 @@ test("lookupModels skips rows with unknown bounds and never double-counts a mode
     {
       slug: "x",
       name: "X",
+      kind: "camera" as const,
+      tells: [],
       href: "/cameras/x",
       rows: [
         { from: null, to: null, yearFrom: 1935, yearTo: 1935 },
@@ -87,4 +89,25 @@ test("lookupModels skips rows with unknown bounds and never double-counts a mode
   const hits = lookupModels(175, models);
   assert.equal(hits.length, 1, "one attribution per model");
   assert.equal(hits[0]!.row.yearFrom, 1940);
+});
+
+test("deriveTells surfaces the physical differences between same-numbered models", () => {
+  // An H-16 and an H-8 can share a serial; gauge and lens mount separate them.
+  const h16 = deriveTells("16mm", [
+    { label: "Turret", value: "Rotating turret accommodates three interchangeable C mount lenses." },
+    { label: "Film Capacity", value: "100ft daylight loading spools of 16mm film." },
+  ]);
+  const h8 = deriveTells("8mm", [
+    { label: "Turret", value: "Rotating turret accommodates three interchangeable D mount lenses." },
+    { label: "Film Capacity", value: "100ft spools of double run 8mm film." },
+  ]);
+  assert.ok(h16.includes("16mm film") && h16.includes("C mount lenses"));
+  assert.ok(h8.includes("8mm film") && h8.includes("D mount lenses"));
+  assert.notDeepEqual(h16, h8, "tells must actually distinguish the two");
+});
+
+test("deriveTells reports only what the specs support", () => {
+  assert.deepEqual(deriveTells(undefined, []), []);
+  const plain = deriveTells("Super 8", [{ label: "Lens", value: "Fixed zoom lens." }]);
+  assert.deepEqual(plain, ["Super 8 film"]);
 });

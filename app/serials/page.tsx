@@ -3,7 +3,7 @@ import { Reveal } from "@/components/Reveal";
 import { ProvenanceNote } from "@/components/RecoveryBadge";
 import { getSerialDataset } from "@/lib/content";
 import { getCameraRecords, getProjectorRecords } from "@/lib/museum";
-import { formatYearSpan, type SerialModel } from "@/lib/serials";
+import { formatYearSpan, deriveTells, type SerialModel } from "@/lib/serials";
 import { SerialLookup } from "./SerialLookup";
 
 export const metadata: Metadata = {
@@ -13,16 +13,26 @@ export const metadata: Metadata = {
 };
 
 /**
- * Every model whose archived page published its own serial table, so a serial
- * can be attributed to actual cameras and projectors rather than a bare year.
+ * Every model whose archived page published its own serial table.
+ *
+ * Only cameras and projectors were ever serial-catalogued: the recovered lens
+ * and accessory pages carry no range tables at all, so those kinds are
+ * genuinely absent here rather than merely unimplemented.
  */
 function serialModels(): SerialModel[] {
-  return [
-    ...getCameraRecords().map((m) => ({ ...m, href: `/cameras/${m.slug}` })),
-    ...getProjectorRecords().map((m) => ({ ...m, href: `/projectors/${m.slug}` })),
-  ]
-    .filter((m) => m.serialRows.length > 0)
-    .map(({ slug, name, format, href, serialRows }) => ({ slug, name, format, href, rows: serialRows }));
+  const cameras = getCameraRecords().map((m) => ({ m, kind: "camera" as const, href: `/cameras/${m.slug}` }));
+  const projectors = getProjectorRecords().map((m) => ({ m, kind: "projector" as const, href: `/projectors/${m.slug}` }));
+  return [...cameras, ...projectors]
+    .filter(({ m }) => m.serialRows.length > 0)
+    .map(({ m, kind, href }) => ({
+      slug: m.slug,
+      name: m.name,
+      format: m.format,
+      href,
+      kind,
+      rows: m.serialRows,
+      tells: deriveTells(m.format, m.specs),
+    }));
 }
 
 export default function SerialsPage() {
@@ -37,9 +47,9 @@ export default function SerialsPage() {
           Serial Number Lookup
         </h1>
         <p className="mt-4 max-w-2xl text-[var(--fg-soft)] leading-relaxed">
-          Paillard allocated a block of serial numbers to each production year. Enter a
-          serial number to estimate the year of manufacture and where in that year&rsquo;s
-          run the camera falls.
+          Enter a serial number to identify which Paillard-Bolex models it could be, when it
+          was made, and how to tell the candidates apart. Cameras and projectors were serial
+          catalogued; lenses and accessories were not.
         </p>
       </Reveal>
 
@@ -65,11 +75,20 @@ export default function SerialsPage() {
 
       {rows.length > 0 && (
         <Reveal delay={0.15}>
-          <section aria-label="Full serial number table" className="mt-16">
-            <h2 className="font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.25em] text-[var(--accent)]">
-              The complete recovered table
-            </h2>
-            <div className="mt-3 max-w-2xl scroll-x border border-[var(--line)]">
+          {/*
+           * The full 47-row master table used to be dumped straight onto the
+           * page, which buried the lookup — the thing people came for — under
+           * a wall of numbers. It is reference material, so it is kept one tap
+           * away rather than removed.
+           */}
+          <details className="mt-16 max-w-2xl border border-[var(--line)] group">
+            <summary className="tap-target px-5 cursor-pointer list-none flex items-center justify-between gap-4 font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.2em] text-[var(--fg-soft)]">
+              <span>The complete table · {rows.length} ranges, 1936–1976</span>
+              <span aria-hidden="true" className="text-[var(--accent)] group-open:rotate-90 transition-transform">
+                ›
+              </span>
+            </summary>
+            <div className="scroll-x border-t border-[var(--line)]">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="text-left font-[family-name:var(--font-sans)] text-[0.68rem] uppercase tracking-[0.12em] text-[var(--fg-soft)] border-b border-[var(--line)]">
@@ -89,7 +108,7 @@ export default function SerialsPage() {
                 </tbody>
               </table>
             </div>
-          </section>
+          </details>
         </Reveal>
       )}
 
