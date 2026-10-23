@@ -215,7 +215,12 @@ button,
 }
 
 /* Apple's HIG asks for 44pt minimum. Applied to compact controls that would
-   otherwise be text-sized hit areas. */
+   otherwise be text-sized hit areas.
+
+   Single-line controls only: this sets `display: inline-flex`, so any element
+   carrying it lays its children out in a ROW. On a control with stacked
+   children (a title over a subtitle) it collapses the stack onto one line —
+   set `min-height: 44px` directly on those instead. */
 .tap-target {
   min-height: 44px;
   display: inline-flex;
