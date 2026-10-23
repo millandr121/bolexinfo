@@ -53,6 +53,16 @@ const organizationJsonLd = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      {/*
+       * Entrance animations start from `opacity: 0` in the server-rendered
+       * HTML and are revealed by the client. With scripting unavailable that
+       * reveal never happens, so the archive — which is plain documents and
+       * photographs, and should outlive any of its JavaScript — would render
+       * as a blank page. This restores it.
+       */}
+      <noscript>
+        <style>{`[data-reveal]{opacity:1!important;transform:none!important}`}</style>
+      </noscript>
       <body className="min-h-screen flex flex-col">
         <a
           href="#main"

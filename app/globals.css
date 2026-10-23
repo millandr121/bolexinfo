@@ -81,6 +81,19 @@ html {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+
+  /*
+   * Entrance animations are server-rendered in their hidden starting state
+   * (opacity: 0), on the assumption that the client will animate them in.
+   * Under reduced motion it deliberately does not, so without this the page
+   * body would simply never become visible — the readers most in need of a
+   * calm page would get a blank one. Content visibility must not depend on an
+   * animation running.
+   */
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 /* Editorial prose for recovered and modern articles. */
