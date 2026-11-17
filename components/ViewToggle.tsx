@@ -19,10 +19,19 @@ import { VIEW_STORAGE_KEY, type View } from "@/lib/view-preference";
 export function ViewToggle({
   to,
   className,
+  label,
   children,
 }: {
   to: View;
   className?: string;
+  /**
+   * Accessible name, needed wherever the visible label is hidden at some
+   * width. The header control collapses to its icon below `sm`, which is
+   * `display: none` on the text — so it is gone from the accessibility tree
+   * too, not merely from view, and without this the button is announced as
+   * nothing at all.
+   */
+  label?: string;
   children: ReactNode;
 }) {
   const router = useRouter();
@@ -42,7 +51,12 @@ export function ViewToggle({
   };
 
   return (
-    <button type="button" onClick={apply} className={className}>
+    <button
+      type="button"
+      onClick={apply}
+      className={className}
+      {...(label ? { "aria-label": label, title: label } : {})}
+    >
       {children}
     </button>
   );

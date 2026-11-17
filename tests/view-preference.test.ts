@@ -107,3 +107,15 @@ test("the built homepage serves both editions", { skip: !fs.existsSync("out/inde
   // Hidden for most visitors, so it must not be fetched by them.
   assert.match(html, /<iframe[^>]+loading="lazy"/, "the framed original should be lazily loaded");
 });
+
+/*
+ * The header toggle collapses to its icon below `sm` with `hidden sm:inline`,
+ * which is `display: none` — the label leaves the accessibility tree, not just
+ * the screen. Without an explicit name the control is announced as nothing on
+ * exactly the devices that get it by default.
+ */
+test("the header toggle keeps an accessible name when its label is hidden", { skip: !fs.existsSync("out/cameras/h16.html") }, () => {
+  const html = fs.readFileSync("out/cameras/h16.html", "utf8");
+  const button = /<button[^>]*aria-label="[^"]+"[^>]*>(?:(?!<\/button>)[\s\S])*?hidden sm:inline/.exec(html);
+  assert.ok(button, "the icon-only toggle must carry an aria-label");
+});

@@ -19,6 +19,7 @@ export function RevisitButton() {
   return (
     <ViewToggle
       to="original"
+      label="Browse the original site as it was"
       className="flex shrink-0 items-center gap-2 border border-[var(--line)] bg-[var(--bg-raised)] px-3 py-1.5 text-xs text-[var(--fg-soft)] transition-colors duration-200 hover:border-[var(--accent)] hover:text-[var(--fg)]"
     >
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
