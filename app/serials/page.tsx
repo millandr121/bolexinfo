@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Reveal } from "@/components/Reveal";
 import { ProvenanceNote } from "@/components/RecoveryBadge";
 import { getSerialDataset } from "@/lib/content";
-import { getCameraRecords, getProjectorRecords } from "@/lib/museum";
-import { formatYearSpan, deriveTells, type SerialModel } from "@/lib/serials";
+import { serialModels } from "@/lib/serial-models";
+import { formatYearSpan } from "@/lib/serials";
 import { SerialLookup } from "./SerialLookup";
 
 export const metadata: Metadata = {
@@ -11,29 +11,6 @@ export const metadata: Metadata = {
   description:
     "Date a Paillard-Bolex camera or projector from its serial number, using the year ranges preserved from the original BolexCollector.com.",
 };
-
-/**
- * Every model whose archived page published its own serial table.
- *
- * Only cameras and projectors were ever serial-catalogued: the recovered lens
- * and accessory pages carry no range tables at all, so those kinds are
- * genuinely absent here rather than merely unimplemented.
- */
-function serialModels(): SerialModel[] {
-  const cameras = getCameraRecords().map((m) => ({ m, kind: "camera" as const, href: `/cameras/${m.slug}` }));
-  const projectors = getProjectorRecords().map((m) => ({ m, kind: "projector" as const, href: `/projectors/${m.slug}` }));
-  return [...cameras, ...projectors]
-    .filter(({ m }) => m.serialRows.length > 0)
-    .map(({ m, kind, href }) => ({
-      slug: m.slug,
-      name: m.name,
-      format: m.format,
-      href,
-      kind,
-      rows: m.serialRows,
-      tells: deriveTells(m.format, m.specs),
-    }));
-}
 
 export default function SerialsPage() {
   const dataset = getSerialDataset();

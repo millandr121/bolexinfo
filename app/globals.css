@@ -309,3 +309,31 @@ html[data-view="original"] .original-edition {
 html[data-view="original"] .modern-edition {
   display: none;
 }
+
+/*
+ * The rotating third card on the front page.
+ *
+ * All the candidates are in the served HTML and this shows one of them, from
+ * the `data-featured` index the inline script in <head> sets before the first
+ * paint — the same arrangement as the edition switch above, for the same two
+ * reasons: nothing flashes past on the way to the chosen card, and React is
+ * never asked to render something different on the client than it did on the
+ * server.
+ *
+ * With no attribute — scripting off, or the script having thrown — the last
+ * rule shows the first card, so the row is always three cards wide rather
+ * than two and a gap.
+ */
+.featured-slot {
+  display: none;
+}
+
+html[data-featured="0"] .featured-slot[data-slot="0"],
+html[data-featured="1"] .featured-slot[data-slot="1"],
+html[data-featured="2"] .featured-slot[data-slot="2"] {
+  display: block;
+}
+
+html:not([data-featured]) .featured-slot[data-slot="0"] {
+  display: block;
+}

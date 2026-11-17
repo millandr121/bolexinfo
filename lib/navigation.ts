@@ -27,12 +27,15 @@ export function isGroup(entry: NavEntry): entry is NavGroup {
  * usefully, say what kind of thing each destination is — the four collections
  * of hardware are one idea, the things to read are another.
  *
- * Serials is the exception and stays a single item at the top level. It is a
- * tool rather than a collection, and someone holding a camera with a number
- * stamped on it is the most common visitor this site has; burying that one
- * click deeper to make the pattern tidy would be the wrong trade.
+ * Identify comes first and stays a single item. It is a tool rather than a
+ * collection, and someone holding a camera with a number stamped on it is the
+ * most common visitor this site has — it is also what the front page now
+ * leads with, so the navigation and the front door agree about what this site
+ * is for. Burying it a click deeper to tidy the pattern would be the wrong
+ * trade.
  */
 export const NAVIGATION: readonly NavEntry[] = [
+  { href: "/serials", label: "Identify" },
   {
     label: "Equipment",
     items: [
@@ -45,6 +48,7 @@ export const NAVIGATION: readonly NavEntry[] = [
   {
     label: "Library",
     items: [
+      { href: "/technicians", label: "Repair & service", blurb: "Who works on these cameras" },
       { href: "/articles", label: "Articles", blurb: "Recovered from the original site" },
       { href: "/ephemera", label: "Ephemera", blurb: "Advertising, brochures, catalogues" },
       { href: "/timeline", label: "Timeline", blurb: "Paillard, 1814 onwards" },
@@ -52,7 +56,6 @@ export const NAVIGATION: readonly NavEntry[] = [
       { href: "/links", label: "Links", blurb: "Resources worth your time" },
     ],
   },
-  { href: "/serials", label: "Identify" },
   {
     label: "The Archive",
     items: [

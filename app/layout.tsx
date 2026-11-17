@@ -1,4 +1,5 @@
 import { VIEW_INIT_SCRIPT } from "@/lib/view-preference";
+import { FEATURED_INIT_SCRIPT } from "@/lib/featured";
 import type { Metadata, Viewport } from "next";
 import "@fontsource-variable/fraunces";
 import "@fontsource-variable/archivo";
@@ -62,6 +63,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
        * replaces it.
        */}
       <script dangerouslySetInnerHTML={{ __html: VIEW_INIT_SCRIPT }} />
+      {/* Picks the rotating front-page card, before paint, for the same reason. */}
+      <script dangerouslySetInnerHTML={{ __html: FEATURED_INIT_SCRIPT }} />
       {/*
        * Entrance animations start from `opacity: 0` in the server-rendered
        * HTML and are revealed by the client. With scripting unavailable that
