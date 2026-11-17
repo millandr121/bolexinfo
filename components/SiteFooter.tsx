@@ -1,10 +1,30 @@
 import Link from "next/link";
 import { SUPPORT } from "@/lib/support";
 
+/*
+ * The footer holds what the header does not.
+ *
+ * It used to list ten destinations in a single column, which made it the
+ * tallest thing on a short page — and eight of those ten were already one
+ * click away in the navigation above. Repeating the whole site at the bottom
+ * is not a courtesy to anyone.
+ *
+ * What is left is the housekeeping: who made this and why, the two ways out
+ * of the modern edition, and the provenance note. Laid out in two columns so
+ * it reads as a block rather than a ladder.
+ */
+const FOOTER_LINKS = [
+  { href: "/about", label: "About the restoration" },
+  { href: "/tribute", label: "A dedication to Michael Tisdale" },
+  { href: "/archive", label: "Recovery status" },
+  { href: "/updates", label: "Previous updates" },
+  { href: "/revisit", label: "Revisit the original site" },
+] as const;
+
 export function SiteFooter() {
   return (
-    <footer className="mt-24 border-t border-[var(--line)]">
-      <div className="max-w-6xl mx-auto px-5 sm:px-8 py-10 grid gap-8 sm:grid-cols-3 text-sm text-[var(--fg-soft)]">
+    <footer className="mt-20 border-t border-[var(--line)]">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8 py-8 grid gap-7 sm:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)] text-sm text-[var(--fg-soft)]">
         <div>
           <p className="font-[family-name:var(--font-display)] text-lg text-[var(--fg)]">
             Bolex Collector
@@ -14,20 +34,20 @@ export function SiteFooter() {
             <Link href="/tribute" className="underline underline-offset-4 hover:text-[var(--accent)]">
               Michael Tisdale
             </Link>
-            , maintained as a permanent digital archive. With gratitude for the years of
-            work he shared.
+            , kept as a permanent archive.
+          </p>
+          <p className="mt-3 font-[family-name:var(--font-mono)] text-[0.68rem] leading-relaxed">
+            Original site © Michael Tisdale. Historical texts and images are preserved
+            unaltered; recovery provenance is recorded throughout.
           </p>
         </div>
-        <nav aria-label="Footer" className="grid gap-1.5">
-          <Link href="/about" className="hover:text-[var(--accent)]">About the restoration</Link>
-          <Link href="/tribute" className="hover:text-[var(--accent)]">A dedication to Michael Tisdale</Link>
-          <Link href="/archive" className="hover:text-[var(--accent)]">Recovery status</Link>
-          <Link href="/serials" className="hover:text-[var(--accent)]">Serial number lookup</Link>
-          <Link href="/timeline" className="hover:text-[var(--accent)]">Paillard timeline</Link>
-          <Link href="/glossary" className="hover:text-[var(--accent)]">Glossary of terms</Link>
-          <Link href="/links" className="hover:text-[var(--accent)]">Links &amp; resources</Link>
-          <Link href="/updates" className="hover:text-[var(--accent)]">Previous updates</Link>
-          <Link href="/revisit" className="hover:text-[var(--accent)]">Revisit the original site</Link>
+
+        <nav aria-label="Footer" className="grid gap-x-8 gap-y-1.5 sm:grid-cols-2 self-start">
+          {FOOTER_LINKS.map((link) => (
+            <Link key={link.href} href={link.href} className="hover:text-[var(--accent)]">
+              {link.label}
+            </Link>
+          ))}
           <a
             href={SUPPORT.donateUrl}
             target="_blank"
@@ -37,13 +57,6 @@ export function SiteFooter() {
             Support rural filmmakers ↗
           </a>
         </nav>
-        <div className="font-[family-name:var(--font-mono)] text-xs leading-relaxed">
-          <p>Original site © Michael Tisdale.</p>
-          <p className="mt-1">
-            Historical texts and images are preserved unaltered; recovery
-            provenance is recorded throughout.
-          </p>
-        </div>
       </div>
     </footer>
   );

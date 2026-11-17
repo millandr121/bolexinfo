@@ -126,14 +126,14 @@ export default function HomePage() {
                 className="group flex h-full flex-col bg-[var(--bg)] p-7 hover:bg-[var(--bg-raised)] transition-colors duration-300"
               >
                 <h2 className="font-[family-name:var(--font-display)] text-2xl font-[560] group-hover:text-[var(--accent)] transition-colors duration-300">
-                  The collectors{" "}
+                  Ask the group{" "}
                   <span aria-hidden="true" className="text-xs text-[var(--accent)] align-middle">
                     ↗
                   </span>
                 </h2>
                 <p className="mt-3 text-sm leading-relaxed text-[var(--fg-soft)]">
-                  The Bolex group on Facebook, where manuals, repairs and finds get shared
-                  daily.
+                  Advice, answers, manuals, and buying and selling — the Bolex group on
+                  Facebook, busy most days.
                 </p>
               </a>
             </li>

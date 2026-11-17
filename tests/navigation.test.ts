@@ -55,6 +55,34 @@ test("active state reaches detail pages", () => {
   assert.ok(!isActiveEntry("/serials", equipment));
 });
 
+/*
+ * The footer was ten links in one column, eight of which the header already
+ * carried — it was the tallest thing on a short page. These check it stays
+ * short and stays honest, from the built page rather than the source.
+ */
+test("the footer does not re-list the header", { skip: !fs.existsSync("out/index.html") }, () => {
+  const html = fs.readFileSync("out/index.html", "utf8");
+  const footer = /<footer[\s\S]*?<\/footer>/.exec(html);
+  assert.ok(footer, "the built page should have a footer");
+
+  const internal = [...footer[0].matchAll(/href="(\/[^"#]*)"/g)].map((m) => m[1]!);
+  const unique = [...new Set(internal)];
+
+  assert.ok(unique.length <= 7, `${unique.length} footer links is a second navigation`);
+
+  for (const href of unique) {
+    const segment = href.replace(/^\//, "").replace(/\/$/, "");
+    assert.ok(
+      fs.existsSync(path.join(process.cwd(), "app", segment, "page.tsx")),
+      `the footer links to ${href}, which has no page`,
+    );
+  }
+
+  // /revisit is the one destination that lives nowhere else, so losing it
+  // from here would strand it.
+  assert.ok(unique.includes("/revisit"), "the way back to the original site must stay in the footer");
+});
+
 test("the mobile rail still reaches everything the menus do", () => {
   const rail = flattenNavigation().map((l) => l.href);
   for (const entry of NAVIGATION) {
