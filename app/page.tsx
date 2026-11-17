@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
+import { OriginalFrame } from "@/components/OriginalFrame";
 import { getArchiveStats, getUrlInventory } from "@/lib/content";
 import { getCameraRecords } from "@/lib/museum";
 
@@ -62,6 +63,22 @@ export default function HomePage() {
 
   return (
     <>
+      {/*
+       * Both editions are served on the front page and CSS shows one of them,
+       * from the attribute the inline script sets before paint. A desktop
+       * visitor with no stored choice opens on the preserved site; a phone
+       * visitor opens on this one, which is the only one of the two that was
+       * built to be read on a phone. Whatever anyone toggles to is remembered
+       * and wins from then on.
+       *
+       * The frame is lazily loaded, so the visitors who are shown this edition
+       * never fetch the other one.
+       */}
+      <div className="original-edition">
+        <OriginalFrame lazy />
+      </div>
+
+      <div className="modern-edition">
       <section className="pt-16 sm:pt-24 pb-14">
         <Reveal>
           <p className="font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.25em] text-[var(--accent)]">
@@ -194,6 +211,7 @@ export default function HomePage() {
           </div>
         </Reveal>
       </section>
+      </div>
     </>
   );
 }

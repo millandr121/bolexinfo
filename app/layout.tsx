@@ -1,3 +1,4 @@
+import { VIEW_INIT_SCRIPT } from "@/lib/view-preference";
 import type { Metadata, Viewport } from "next";
 import "@fontsource-variable/fraunces";
 import "@fontsource-variable/archivo";
@@ -53,6 +54,14 @@ const organizationJsonLd = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      {/*
+       * Runs before the first paint and sets `data-view`, which the stylesheet
+       * uses to choose between the preserved site and the modern edition. It
+       * is inline and tiny on purpose: decide any later and every desktop
+       * visitor sees the modern homepage flash past before the old one
+       * replaces it.
+       */}
+      <script dangerouslySetInnerHTML={{ __html: VIEW_INIT_SCRIPT }} />
       {/*
        * Entrance animations start from `opacity: 0` in the server-rendered
        * HTML and are revealed by the client. With scripting unavailable that

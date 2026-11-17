@@ -276,3 +276,28 @@ button,
 .scroll-fade {
   mask-image: linear-gradient(to right, #000 calc(100% - 2.5rem), transparent 100%);
 }
+
+/*
+ * Choosing between the two editions on the front page.
+ *
+ * Both are present in the served HTML and this decides which one is shown,
+ * from the `data-view` attribute the inline script in <head> sets before the
+ * first paint. Doing it in CSS rather than in React means the right edition
+ * paints immediately and keeps painting even if the page's JavaScript never
+ * arrives; the toggle then only has to flip the attribute.
+ *
+ * With no attribute at all — scripting off — the rules below do nothing and
+ * the modern edition shows, which is the right thing to fall back to: it is
+ * the readable, responsive one.
+ */
+.original-edition {
+  display: none;
+}
+
+html[data-view="original"] .original-edition {
+  display: flex;
+}
+
+html[data-view="original"] .modern-edition {
+  display: none;
+}
