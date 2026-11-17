@@ -1,0 +1,87 @@
+export interface NavLeaf {
+  href: string;
+  label: string;
+  /** One line shown under the label in a desktop menu. */
+  blurb?: string;
+}
+
+export interface NavGroup {
+  label: string;
+  /** Where the group's own index lives, when it has one. */
+  href?: string;
+  items: readonly NavLeaf[];
+}
+
+export type NavEntry = NavLeaf | NavGroup;
+
+export function isGroup(entry: NavEntry): entry is NavGroup {
+  return "items" in entry;
+}
+
+/**
+ * The primary navigation, in four groups.
+ *
+ * Nine flat destinations was the whole problem: the bar was full before the
+ * search and view controls were placed, and it overflowed the window on every
+ * common laptop width. Four groups leave room for the tools and, more
+ * usefully, say what kind of thing each destination is — the four collections
+ * of hardware are one idea, the things to read are another.
+ *
+ * Serials is the exception and stays a single item at the top level. It is a
+ * tool rather than a collection, and someone holding a camera with a number
+ * stamped on it is the most common visitor this site has; burying that one
+ * click deeper to make the pattern tidy would be the wrong trade.
+ */
+export const NAVIGATION: readonly NavEntry[] = [
+  {
+    label: "Equipment",
+    items: [
+      { href: "/cameras", label: "Cameras", blurb: "54 models, 1928–1970" },
+      { href: "/projectors", label: "Projectors", blurb: "17 models" },
+      { href: "/lenses", label: "Lenses", blurb: "Kern, Berthiot, Angénieux" },
+      { href: "/accessories", label: "Accessories", blurb: "Motors, cases, viewfinders" },
+    ],
+  },
+  {
+    label: "Library",
+    items: [
+      { href: "/articles", label: "Articles", blurb: "Recovered from the original site" },
+      { href: "/ephemera", label: "Ephemera", blurb: "Advertising, brochures, catalogues" },
+      { href: "/timeline", label: "Timeline", blurb: "Paillard, 1814 onwards" },
+      { href: "/glossary", label: "Glossary", blurb: "The terms, defined" },
+      { href: "/links", label: "Links", blurb: "Resources worth your time" },
+    ],
+  },
+  { href: "/serials", label: "Identify" },
+  {
+    label: "The Archive",
+    items: [
+      { href: "/archive", label: "Recovery status", blurb: "What was preserved, and from where" },
+      { href: "/updates", label: "Previous updates", blurb: "The site's own log, 2005–2011" },
+      { href: "/about", label: "About the restoration" },
+      { href: "/tribute", label: "Michael Tisdale" },
+    ],
+  },
+];
+
+/** Every destination, flattened — the order the mobile rail uses. */
+export function flattenNavigation(entries: readonly NavEntry[] = NAVIGATION): NavLeaf[] {
+  return entries.flatMap((entry) => (isGroup(entry) ? [...entry.items] : [entry]));
+}
+
+/**
+ * Whether a path belongs to this destination.
+ *
+ * Prefix-based so a detail page (/cameras/h16) still marks its parent, which
+ * is what keeps the navigation meaningful two levels deep.
+ */
+export function isActiveHref(pathname: string, href: string): boolean {
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
+/** Whether any destination in a group is the current one. */
+export function isActiveEntry(pathname: string, entry: NavEntry): boolean {
+  return isGroup(entry)
+    ? entry.items.some((item) => isActiveHref(pathname, item.href))
+    : isActiveHref(pathname, entry.href);
+}

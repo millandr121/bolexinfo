@@ -1,24 +1,7 @@
 import Link from "next/link";
 import { SearchButton } from "./SearchPalette";
-import { DesktopNav, SectionRail, type NavItem } from "./NavLinks";
+import { DesktopNav, SectionRail } from "./NavLinks";
 import { RevisitButton } from "./RevisitButton";
-
-/**
- * Primary destinations, ordered so the five *collections* come first and the
- * tools and meta pages follow. A visitor scanning left to right meets the
- * things they came to browse before anything about the project itself.
- */
-export const NAV: readonly NavItem[] = [
-  { href: "/cameras", label: "Cameras" },
-  { href: "/projectors", label: "Projectors" },
-  { href: "/lenses", label: "Lenses" },
-  { href: "/accessories", label: "Accessories" },
-  { href: "/ephemera", label: "Ephemera" },
-  { href: "/serials", label: "Serials" },
-  { href: "/articles", label: "Articles" },
-  { href: "/timeline", label: "Timeline" },
-  { href: "/archive", label: "Archive" },
-];
 
 export function SiteHeader() {
   return (
@@ -42,7 +25,7 @@ export function SiteHeader() {
             Paillard-Bolex · Est. archive
           </span>
         </Link>
-        <DesktopNav items={NAV} />
+        <DesktopNav />
         {/* Tools, kept together and apart from the sections in the nav. */}
         <div className="flex shrink-0 items-center gap-2">
           <RevisitButton />
@@ -56,7 +39,7 @@ export function SiteHeader() {
        * structure, where a rail keeps every section one tap away and shows
        * which one you are in.
        */}
-      <SectionRail items={NAV} />
+      <SectionRail />
     </header>
   );
 }
