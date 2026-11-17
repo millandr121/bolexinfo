@@ -36,6 +36,7 @@
   --color-night-line: #352f28;
   /* The same teal lifted for a dark ground, where #01494a would disappear. */
   --color-ember: #5fb0aa;
+  --color-ember-soft: #7ec4bf;
 }
 
 :root {
@@ -45,6 +46,8 @@
   --fg-soft: var(--color-ink-soft);
   --line: var(--color-line);
   --accent: var(--color-accent);
+  /* Only used for the hover state of a filled accent button. */
+  --accent-soft: var(--color-accent-soft);
   color-scheme: light;
 }
 
@@ -56,6 +59,7 @@
     --fg-soft: var(--color-bone-soft);
     --line: var(--color-night-line);
     --accent: var(--color-ember);
+    --accent-soft: var(--color-ember-soft);
     color-scheme: dark;
   }
 }

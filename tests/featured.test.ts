@@ -3,6 +3,7 @@ import { test } from "node:test";
 import fs from "node:fs";
 import path from "node:path";
 import { FEATURED_LINKS, FEATURED_INIT_SCRIPT } from "../lib/featured";
+import { getCameraRecords, getProjectorRecords } from "../lib/museum";
 
 test("every rotating card points at a page that exists", () => {
   for (const link of FEATURED_LINKS) {
@@ -119,10 +120,28 @@ test("the built homepage carries the rotation intact", { skip: !fs.existsSync("o
 
 test("the front page leads with the lookup, not with statistics", { skip: !fs.existsSync("out/index.html") }, () => {
   const html = fs.readFileSync("out/index.html", "utf8");
-  assert.match(html, /Everything Bolex ever made, in one place/);
+  assert.match(html, /Everything Bolex\s*(?:<br\/?>)?\s*ever made, in one place/);
   assert.match(html, /id="serial-input"/, "the serial lookup must be on the front page");
+  assert.match(html, /id="identify"/, "the hero button needs something to jump to");
   assert.ok(
     !html.includes("Models catalogued"),
     "the statistics row was replaced by the three quick links",
+  );
+});
+
+/*
+ * The hero says "Fifty-four cameras, seventeen projectors" in words, because
+ * a sentence reads better there than a row of figures. Words cannot be
+ * derived from the data the way a rendered count can, so this is what stops
+ * them going quietly stale as the catalogue grows.
+ */
+test("the hero's spelled-out counts still match the catalogue", () => {
+  const cameras = getCameraRecords().length;
+  const projectors = getProjectorRecords().length;
+  assert.equal(cameras, 54, `the front page says "Fifty-four cameras" but there are ${cameras}`);
+  assert.equal(
+    projectors,
+    17,
+    `the front page says "seventeen projectors" but there are ${projectors}`,
   );
 });

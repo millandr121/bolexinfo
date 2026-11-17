@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { OriginalFrame } from "@/components/OriginalFrame";
 import { SerialLookup } from "@/app/serials/SerialLookup";
+import { LookupCta } from "@/components/LookupCta";
 import { getSerialDataset } from "@/lib/content";
 import { serialModels } from "@/lib/serial-models";
 import { FEATURED_LINKS } from "@/lib/featured";
@@ -83,45 +84,63 @@ export default function HomePage() {
          * typing a serial pushes them down rather than covering them — the
          * page grows into an answer instead of swapping to a different view.
          */}
-        <section className="pt-16 sm:pt-20 pb-12">
-          <Reveal>
-            <p className="font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.25em] text-[var(--accent)]">
-              Paillard-Bolex · Sainte-Croix, Switzerland · 1935–1970s
-            </p>
-            <h1 className="mt-4 font-[family-name:var(--font-display)] text-4xl sm:text-6xl leading-[1.05] tracking-tight max-w-3xl font-[560]">
-              Everything Bolex ever made, in one place.
-            </h1>
-            {/* One line, not three. On a phone every extra line of preamble
-                pushes the lookup — and the three cards under it — further off
-                the first screen. */}
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--fg-soft)]">
-              Start with the serial number: it will tell you what you are holding, and when it
-              was made.
-            </p>
-          </Reveal>
+        <section className="pt-14 sm:pt-16 pb-12">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
+            <Reveal>
+              <p className="font-[family-name:var(--font-mono)] text-[0.68rem] uppercase tracking-[0.2em] text-[var(--accent)]">
+                A resource for Bolex collectors and enthusiasts
+              </p>
+              <h1 className="mt-3.5 font-[family-name:var(--font-display)] text-[2.4rem] sm:text-5xl leading-[1.04] tracking-[-0.02em] font-[560]">
+                Everything Bolex
+                <br />
+                ever made, in one place
+              </h1>
+              {/* The counts that used to sit in a statistics row, said as a
+                  sentence instead. A test keeps the words honest if the
+                  catalogue ever grows. */}
+              <p className="mt-5 max-w-[29rem] leading-[1.65] text-[var(--fg-soft)]">
+                Fifty-four cameras, seventeen projectors, the lenses and accessories that went
+                with them, and the paper that sold them — recovered, verified, and kept.
+              </p>
+              <div className="mt-7 flex flex-wrap gap-3">
+                <LookupCta>Identify my Bolex</LookupCta>
+                <Link
+                  href="/cameras"
+                  className="tap-target border border-[var(--fg)] px-6 text-[0.8rem] uppercase tracking-[0.08em] hover:bg-[var(--fg)] hover:text-[var(--bg)] transition-colors duration-200"
+                >
+                  Browse the cameras
+                </Link>
+              </div>
+            </Reveal>
 
-          <Reveal delay={0.1}>
-            <div className="mt-10 max-w-2xl">
-              {dataset.ranges.length > 0 ? (
-                <SerialLookup rows={dataset.ranges} models={models} />
-              ) : (
-                <div className="border border-[var(--line)] bg-[var(--bg-raised)] p-8">
+            {/*
+             * The lookup sits beside the headline rather than under it, so the
+             * first screen carries both what this place is and the one tool
+             * most people came for. Typing grows this card downward, which
+             * grows the row and pushes the three links below it down the page
+             * — the answer arrives without anything being covered up.
+             */}
+            <Reveal delay={0.1}>
+              <div id="identify" className="border border-[var(--line)] bg-[var(--bg-raised)] p-6 sm:p-7 scroll-mt-28">
+                {dataset.ranges.length > 0 ? (
+                  <SerialLookup rows={dataset.ranges} models={models} />
+                ) : (
                   <p className="text-sm leading-relaxed text-[var(--fg-soft)]">
                     The serial tables have not been extracted yet. The lookup activates as soon
                     as they are.
                   </p>
-                </div>
-              )}
-              {/* Why the filter offers two kinds and not three: the recovered
-                  lens and accessory pages carry no serial tables at all. */}
-              <p className="mt-4 font-[family-name:var(--font-mono)] text-[0.68rem] leading-relaxed text-[var(--fg-soft)]">
-                Lenses and accessories were never serial-numbered.{" "}
-                <Link href="/serials" className="text-[var(--accent)] hover:underline underline-offset-4">
-                  The complete table →
-                </Link>
-              </p>
-            </div>
-          </Reveal>
+                )}
+                {/* Why the filter offers two kinds and not three: the recovered
+                    lens and accessory pages carry no serial tables at all. */}
+                <p className="mt-5 border-t border-[var(--line)] pt-4 font-[family-name:var(--font-mono)] text-[0.66rem] leading-relaxed text-[var(--fg-soft)]">
+                  Lenses and accessories were never serial-numbered.{" "}
+                  <Link href="/serials" className="text-[var(--accent)] hover:underline underline-offset-4">
+                    The complete table →
+                  </Link>
+                </p>
+              </div>
+            </Reveal>
+          </div>
         </section>
 
         {/*
