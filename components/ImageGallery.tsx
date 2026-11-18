@@ -102,11 +102,10 @@ export function ImageGallery({
                     <img
                       src={img.src}
                       alt={img.alt || caption}
-                      data-credit={img.credit || undefined}
                       /* The lead plate is usually the largest element painted,
                          so it is not deferred; the rest are. */
                       loading={isLead ? undefined : "lazy"}
-                      className={`h-full w-full object-contain transition-transform duration-500 no-touch-zoom group-hover:scale-[1.03] ${img.credit ? "cutout " : ""}${
+                      className={`h-full w-full object-contain transition-transform duration-500 no-touch-zoom group-hover:scale-[1.03] ${
                         isLead ? "lg:h-auto" : ""
                       }`}
                     />
@@ -143,9 +142,7 @@ export function ImageGallery({
                   src={img.src}
                   alt={img.alt || caption}
                   loading="lazy"
-                  className={`w-full h-auto object-contain transition-transform duration-500 group-hover:scale-[1.02] no-touch-zoom${
-                    img.credit ? " cutout" : ""
-                  }`}
+                  className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-[1.02] no-touch-zoom"
                 />
               </button>
               {img.alt && (
@@ -190,20 +187,7 @@ export function ImageGallery({
                     src={current.src}
                     alt={current.alt || caption}
                     draggable={false}
-                    /*
-                     * A cut-out gets a light card behind it full screen.
-                     *
-                     * Transparency is right in a page where the image sits
-                     * on paper, and wrong here: against the near-black
-                     * backdrop a dark camera with no background loses its
-                     * own edges and reads as a smudge. The archive's own
-                     * photographs do not have this problem because they
-                     * still carry the white they were shot on, so only the
-                     * cut-outs need the card.
-                     */
-                    className={`max-h-full max-w-full object-contain touch-pan-y select-none${
-                      current.credit ? " bg-[#f2efe6] p-3 sm:p-6 rounded-sm" : ""
-                    }`}
+                    className="max-h-full max-w-full object-contain touch-pan-y select-none"
                     onClick={(e) => e.stopPropagation()}
                   />
                 </div>

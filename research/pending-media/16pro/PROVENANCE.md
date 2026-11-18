@@ -24,24 +24,16 @@ Needed: who took them, or where they were found.
 The body plate reads `BOLEX 16 PRO 100` and the lens is an Angénieux
 12-120mm f/2.2. See ../../findings/bolex-16-pro.md.
 
-## Cut-outs
+## Published as plain WebP, not cut out
 
-`webp/` holds the same five images as transparent WebP, background removed.
+These JPEGs are the masters. What is served lives in
+`media/sourced/cameras/16pro/` — the same photographs at 1600px wide as
+WebP, white background intact, 445KB for all five against 676KB of JPEG.
 
-The removal is by connectivity, not colour: a flood fill runs inward from
-the border and only clears pixels it can reach through other background
-pixels. That matters because this camera has silver knobs, a white-and-red
-body plate and bright highlights — a plain "clear everything near white"
-would have punched holes straight through them. Anything enclosed by dark
-metal is unreachable and survives.
-
-The threshold also clears the soft drop shadow, which at a tighter setting
-stayed behind as a grey smear and looked wrong on a dark ground. It is safe
-by construction: the fill can only clear pixels brighter than 160, so the
-black body can never be touched.
-
-Note these are *genuinely* transparent, unlike the rest of the site's
-imagery — those are JPEGs on white that only look cut out, because `.plate`
-multiplies them against a warm panel. A real alpha channel needs no plate
-and works on any ground, so when these are published they should not get
-the multiply treatment.
+Cutting them out was tried and abandoned. The transparency looked right on
+the page and wrong enlarged: against the near-black lightbox a dark camera
+with no background lost its own edges. Keeping two versions of every
+photograph to work around that is worse than not cutting them out, and the
+archive's own photographs are all white-background originals that the plate
+multiplies into the paper. One file, one treatment, consistent with
+everything else on the site.

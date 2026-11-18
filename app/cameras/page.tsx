@@ -83,10 +83,7 @@ export default function CamerasPage() {
                   href={`/cameras/${model.slug}`}
                   className="group flex h-full items-start gap-4 bg-[var(--bg)] p-5 hover:bg-[var(--bg-raised)] transition-colors duration-300"
                 >
-                  <Thumb
-                      src={thumbnailFor("cameras", model.slug, model.images)}
-                      cutout={Boolean(model.images[0]?.credit)}
-                    />
+                  <Thumb src={thumbnailFor("cameras", model.slug, model.images)} />
                   <div className="min-w-0 flex-1">
                     <div className="flex items-baseline justify-between gap-3">
                       <h3 className="font-[family-name:var(--font-display)] text-lg font-[560] group-hover:text-[var(--accent)] transition-colors duration-200">

@@ -19,16 +19,27 @@ export const ORIGINAL_ENTRY = "/original/index.html";
 export function OriginalFrame({ lazy = false }: { lazy?: boolean }) {
   return (
     <div className="fixed inset-0 z-50 flex flex-col bg-[var(--bg)]">
-      <div className="safe-top shrink-0 border-b border-[var(--line)] bg-[var(--bg-raised)]">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-2">
-          <p className="min-w-0 font-[family-name:var(--font-mono)] text-[0.68rem] leading-snug text-[var(--fg-soft)]">
-            <span className="text-[var(--fg)]">BolexCollector.com as it was</span>
-            <span className="hidden sm:inline">
+      {/*
+       * The strip is the only thing standing between the reader and the
+       * preserved site, so it takes as little height as it can while still
+       * crediting Michael and offering the way out. Teal ground rather than
+       * paper: it reads as this project's own furniture at a glance, which
+       * is exactly what it is, and it stops the 1990s page below looking
+       * like it continues upward into our header.
+       */}
+      <div className="safe-top shrink-0 bg-[var(--color-accent)] text-[#f2efe6]">
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-1.5">
+          <p className="min-w-0 truncate font-[family-name:var(--font-mono)] text-[0.66rem] leading-tight">
+            <span className="font-medium">BolexCollector.com as it was</span>
+            <span className="hidden opacity-75 sm:inline">
               {" "}
               — the work of Michael Tisdale, kept online while the original is down
             </span>
           </p>
-          <ViewToggle to="modern" className="tap-target shrink-0 border border-[var(--fg)] px-3 font-[family-name:var(--font-mono)] text-[0.65rem] uppercase tracking-[0.12em] transition-colors duration-200 hover:bg-[var(--fg)] hover:text-[var(--bg)]">
+          <ViewToggle
+            to="modern"
+            className="shrink-0 border border-[#f2efe6]/50 px-3 py-1 font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.12em] transition-colors duration-200 hover:bg-[#f2efe6] hover:text-[var(--color-accent)]"
+          >
             Modern site
           </ViewToggle>
         </div>

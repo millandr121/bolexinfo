@@ -21,13 +21,10 @@ export function Thumb({
   src,
   className = "",
   size = "md",
-  cutout = false,
 }: {
   src?: string;
   className?: string;
   size?: "md" | "lg";
-  /** True when the image already has an alpha channel, so skip the multiply. */
-  cutout?: boolean;
 }) {
   const box = size === "lg" ? "h-20 w-20" : "h-14 w-14 sm:h-16 sm:w-16";
 
@@ -49,7 +46,7 @@ export function Thumb({
   return (
     <div className={`plate ${box} ${className} shrink-0 border border-[var(--line)] p-1`}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={src} alt="" loading="lazy" decoding="async" className={`h-full w-full object-contain${cutout ? " cutout" : ""}`} />
+      <img src={src} alt="" loading="lazy" decoding="async" className="h-full w-full object-contain" />
     </div>
   );
 }
