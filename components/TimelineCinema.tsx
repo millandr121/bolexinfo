@@ -28,13 +28,13 @@ import { useCallback, useEffect, useRef, useState } from "react";
 /**
  * Pixels per second.
  *
- * Set against the measured height of the piece rather than picked: at this
- * speed an unattended playthrough runs a little over a minute, and any one
- * entry spends about eight seconds crossing the screen — long enough to read
- * a line as it passes, which is the only test that matters. Faster starts to
- * feel like a thing you are chasing.
+ * Set against the measured height of the piece rather than picked. At this
+ * speed an unattended playthrough runs a little under two minutes, and an
+ * entry spends roughly twelve seconds crossing the screen — unhurried enough
+ * to read a long one twice. The earlier 105px/s read as something you were
+ * chasing.
  */
-const SPEED = 105;
+const SPEED = 72;
 
 /** How far from the focal line an entry is fully faded. */
 const FADE_DISTANCE = 0.62;
