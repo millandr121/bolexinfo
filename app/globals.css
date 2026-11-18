@@ -28,6 +28,14 @@
   --color-accent: #01494a;
   --color-accent-soft: #0a6b66;
   --color-brass: #8c6d3f;
+  /*
+   * The archive strip. Its own colour rather than the link accent: the strip
+   * is furniture, not a link, and the teal read as clinical against the warm
+   * 1990s page below it. This is the brass note taken darker, so cream text
+   * clears 6:1 on it — warm like the catalogue paper the subject came in,
+   * and plainly ours rather than a continuation of the preserved page.
+   */
+  --color-strip: #6f4b23;
 
   --color-night: #14110e;
   --color-night-raised: #1d1915;
