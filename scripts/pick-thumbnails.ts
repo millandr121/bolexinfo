@@ -41,6 +41,31 @@ const OUT = path.join(ROOT, "data", "thumbnails.json");
 /** Never a portrait of one model: spec plates, control diagrams, shared art. */
 const GENERIC = /plate|control|chart|diagram|schematic|htype|logo|banner|_t\./i;
 
+/**
+ * Hand-picked, for the cases scoring cannot reach.
+ *
+ * The scorer's "shot on white" test is a good proxy for a catalogue
+ * photograph, but a diagram drawn on white passes it too — and when the real
+ * product shot happens to be on a coloured ground, the diagram wins. That is
+ * what put a picture of two control dials next to the 18-5 Super instead of
+ * the projector.
+ *
+ * Detecting diagrams from the pixels was tried and does not work on this
+ * archive. Measured over known cases, the 18-5 Super's dial diagram has 91
+ * distinct colours and 0.03 mean saturation; the H-16 REX-4's genuine studio
+ * photograph has 55 and 0.035. The diagram looks *more* photographic by every
+ * cheap statistic, so any threshold that caught it would throw away the
+ * black-and-white product shots that make up much of this collection.
+ *
+ * So the exceptions are listed, not inferred. The list is small, each entry
+ * was looked at, and a wrong one is visible on the page rather than buried in
+ * a score.
+ */
+const OVERRIDES: Record<string, string> = {
+  // _2 is a diagram of the slow-motion and reverse-projection dials.
+  "projectors/185super": "/images/projectors/185super_1.jpg",
+};
+
 interface Candidate {
   src: string;
   score: number;
@@ -160,18 +185,32 @@ async function main() {
 
   const picks: Record<string, string> = {};
   let changed = 0;
+  let overridden = 0;
   for (const { section, items } of groups) {
     for (const item of items) {
       if (item.images.length === 0) continue;
+      const key = `${section}/${item.slug}`;
+
+      const override = OVERRIDES[key];
+      if (override) {
+        if (!item.images.some((i) => i.src === override)) {
+          throw new Error(`override for ${key} names ${override}, which is not one of its images`);
+        }
+        picks[key] = override;
+        overridden += 1;
+        process.stdout.write(`  ${key}: ${override.split("/").pop()}  (hand-picked)\n`);
+        continue;
+      }
+
       const ranked = item.images
         .map((img, i) => score(img.src, i, item.slug, measured.get(img.src)))
         .sort((a, b) => b.score - a.score);
       const best = ranked[0]!;
-      picks[`${section}/${item.slug}`] = best.src;
+      picks[key] = best.src;
       if (best.src !== item.images[0]!.src) {
         changed += 1;
         process.stdout.write(
-          `  ${section}/${item.slug}: ${item.images[0]!.src.split("/").pop()} → ${best.src
+          `  ${key}: ${item.images[0]!.src.split("/").pop()} → ${best.src
             .split("/")
             .pop()}  (${best.why})\n`,
         );
@@ -182,7 +221,7 @@ async function main() {
   fs.mkdirSync(path.dirname(OUT), { recursive: true });
   fs.writeFileSync(OUT, `${JSON.stringify(picks, null, 2)}\n`);
   process.stdout.write(
-    `\n${Object.keys(picks).length} thumbnails chosen, ${changed} different from the page's first image\n→ ${path.relative(ROOT, OUT)}\n`,
+    `\n${Object.keys(picks).length} thumbnails chosen, ${changed} different from the page's first image, ${overridden} hand-picked\n→ ${path.relative(ROOT, OUT)}\n`,
   );
 }
 

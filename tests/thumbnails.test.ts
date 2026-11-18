@@ -66,6 +66,9 @@ test("the known-bad leading images stay rejected", () => {
     ["cameras", "h16s", "/images/cameras/h16s_plate.jpg"],
     ["lenses", "50berthiot", "/images/lenses/lens_blank.jpg"],
     ["lenses", "40meyer", "/images/rudolph.jpg"],
+    // A diagram of two control dials, which the scorer preferred because it
+    // was drawn on white while the real projector was photographed on blue.
+    ["projectors", "185super", "/images/projectors/185super_2.jpg"],
   ];
 
   const index = new Map(everything().map((i) => [`${i.section}/${i.slug}`, i]));
