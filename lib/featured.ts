@@ -2,6 +2,12 @@ export interface FeaturedLink {
   href: string;
   label: string;
   blurb: string;
+  /**
+   * Named rather than imported, so this stays a plain data module that the
+   * tests can read without pulling in JSX. components/Icons.tsx owns the
+   * drawing.
+   */
+  icon: "book" | "history" | "portrait";
 }
 
 /**
@@ -21,16 +27,19 @@ export const FEATURED_LINKS: readonly FeaturedLink[] = [
     href: "/ephemera",
     label: "The memorabilia",
     blurb: "Advertising, brochures and catalogues as Bolex sold itself, decade by decade.",
+    icon: "book",
   },
   {
     href: "/timeline",
     label: "The whole history",
     blurb: "Paillard from a Swiss music-box workshop to the end of the H series.",
+    icon: "history",
   },
   {
     href: "/tribute",
     label: "Michael Tisdale",
     blurb: "The collector who built all of this, and why the archive exists at all.",
+    icon: "portrait",
   },
 ];
 

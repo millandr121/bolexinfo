@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
+import { Thumb } from "@/components/Thumb";
+import { thumbnailFor } from "@/lib/thumbnails";
 import { getCameras } from "@/lib/content";
 import { getCameraRecords, type ModelRecord } from "@/lib/museum";
 
@@ -56,19 +58,22 @@ export default function CamerasPage() {
               <Reveal key={model.slug} as="li" delay={Math.min(i * 0.03, 0.25)}>
                 <Link
                   href={`/cameras/${model.slug}`}
-                  className="group block h-full bg-[var(--bg)] p-6 hover:bg-[var(--bg-raised)] transition-colors duration-300"
+                  className="group flex h-full items-start gap-4 bg-[var(--bg)] p-5 hover:bg-[var(--bg-raised)] transition-colors duration-300"
                 >
-                  <div className="flex items-baseline justify-between gap-3">
-                    <h3 className="font-[family-name:var(--font-display)] text-lg font-[560] group-hover:text-[var(--accent)] transition-colors duration-200">
-                      {model.name}
-                    </h3>
-                    <span className="font-[family-name:var(--font-mono)] text-xs text-[var(--fg-soft)] shrink-0">
-                      {model.introduced ?? "—"}
-                    </span>
+                  <Thumb src={thumbnailFor("cameras", model.slug, model.images)} />
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-baseline justify-between gap-3">
+                      <h3 className="font-[family-name:var(--font-display)] text-lg font-[560] group-hover:text-[var(--accent)] transition-colors duration-200">
+                        {model.name}
+                      </h3>
+                      <span className="font-[family-name:var(--font-mono)] text-xs text-[var(--fg-soft)] shrink-0">
+                        {model.introduced ?? "—"}
+                      </span>
+                    </div>
+                    <p className="mt-2 font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.14em] text-[var(--fg-soft)]">
+                      {model.specs.length > 0 ? `${model.specs.length} specifications` : "recovered"}
+                    </p>
                   </div>
-                  <p className="mt-2 font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.14em] text-[var(--fg-soft)]">
-                    {model.specs.length > 0 ? `${model.specs.length} specifications` : "recovered"}
-                  </p>
                 </Link>
               </Reveal>
             ))}

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
+import { Thumb } from "@/components/Thumb";
+import { thumbnailFor } from "@/lib/thumbnails";
 import { getRecoveredSection, decadeOf } from "@/lib/recovered";
 
 export const metadata: Metadata = {
@@ -47,17 +49,20 @@ export default function LensesPage() {
               <Reveal key={page.slug} as="li" delay={Math.min(i * 0.04, 0.25)}>
                 <Link
                   href={`/lenses/${page.slug}`}
-                  className="group block h-full bg-[var(--bg)] p-6 hover:bg-[var(--bg-raised)] transition-colors duration-300"
+                  className="group flex h-full items-start gap-4 bg-[var(--bg)] p-5 hover:bg-[var(--bg-raised)] transition-colors duration-300"
                 >
-                  <h2 className="font-[family-name:var(--font-display)] text-lg font-[560] group-hover:text-[var(--accent)] transition-colors">
-                    {maker}
-                  </h2>
-                  <p className="mt-1 font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.16em] text-[var(--fg-soft)]">
-                    {decadeOf(page.slug) ?? ""}
-                  </p>
-                  <p className="mt-3 font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.14em] text-[var(--fg-soft)]">
-                    {page.images.length} lenses pictured
-                  </p>
+                  <Thumb src={thumbnailFor("lenses", page.slug, page.images)} />
+                  <div className="min-w-0 flex-1">
+                    <h2 className="font-[family-name:var(--font-display)] text-lg font-[560] group-hover:text-[var(--accent)] transition-colors">
+                      {maker}
+                    </h2>
+                    <p className="mt-1 font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.16em] text-[var(--fg-soft)]">
+                      {decadeOf(page.slug) ?? ""}
+                    </p>
+                    <p className="mt-3 font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.14em] text-[var(--fg-soft)]">
+                      {page.images.length} lenses pictured
+                    </p>
+                  </div>
                 </Link>
               </Reveal>
             )),

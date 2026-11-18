@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
+import { Thumb } from "@/components/Thumb";
+import { thumbnailFor } from "@/lib/thumbnails";
 import { getProjectors } from "@/lib/content";
 import { getProjectorRecords } from "@/lib/museum";
 
@@ -32,9 +34,10 @@ export default function ProjectorsPage() {
             <Reveal key={model.slug} as="li" delay={Math.min(i * 0.03, 0.25)}>
               <Link
                 href={`/projectors/${model.slug}`}
-                className="group block h-full bg-[var(--bg)] p-6 sm:flex sm:items-start sm:gap-8 hover:bg-[var(--bg-raised)] transition-colors duration-300"
+                className="group block h-full bg-[var(--bg)] p-6 sm:flex sm:items-start sm:gap-6 hover:bg-[var(--bg-raised)] transition-colors duration-300"
               >
-                <div className="sm:w-48 shrink-0">
+                <Thumb src={thumbnailFor("projectors", model.slug, model.images)} size="lg" className="mb-3 sm:mb-0" />
+                <div className="sm:w-44 shrink-0">
                   <div className="flex items-baseline gap-3">
                     <h2 className="font-[family-name:var(--font-display)] text-xl font-[560]">{model.name}</h2>
                     <span className="font-[family-name:var(--font-mono)] text-xs text-[var(--fg-soft)]">
