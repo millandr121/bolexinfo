@@ -2,72 +2,178 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-export interface NavItem {
-  href: string;
-  label: string;
-}
+import { useEffect, useId, useRef, useState } from "react";
+import {
+  NAVIGATION,
+  flattenNavigation,
+  isActiveEntry,
+  isActiveHref,
+  isGroup,
+  type NavEntry,
+  type NavGroup,
+} from "@/lib/navigation";
 
 /**
- * Navigation links that know where you are.
+ * Primary navigation.
  *
- * Without an active state a visitor has to re-read every label to work out
- * their location — the "where am I?" pause that precedes "what do I click
- * next?". Every tab bar worth copying marks the current destination, so the
- * answer is available at a glance instead of by inference.
- *
- * Matching is prefix-based so a detail page (/cameras/h16) still marks its
- * parent section, which is what keeps the rail meaningful two levels deep.
+ * Grouped rather than flat: nine top-level destinations filled the bar before
+ * the tools were placed and overflowed the window below 1536px. Four groups
+ * fit comfortably and, more usefully, tell a visitor what kind of thing each
+ * destination is.
  */
-function isActive(pathname: string, href: string): boolean {
-  return pathname === href || pathname.startsWith(`${href}/`);
-}
-
-export function DesktopNav({ items }: { items: readonly NavItem[] }) {
+export function DesktopNav() {
   const pathname = usePathname();
+  const [open, setOpen] = useState<string | null>(null);
+  const navRef = useRef<HTMLElement>(null);
+
+  /*
+   * A menu that can only be dismissed by clicking its own button is a trap:
+   * Escape and a click anywhere outside both close it, which is what every
+   * menu people already know does.
+   */
+  useEffect(() => {
+    if (open === null) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(null);
+    };
+    const onPointerDown = (e: PointerEvent) => {
+      if (!navRef.current?.contains(e.target as Node)) setOpen(null);
+    };
+    window.addEventListener("keydown", onKey);
+    window.addEventListener("pointerdown", onPointerDown);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      window.removeEventListener("pointerdown", onPointerDown);
+    };
+  }, [open]);
+
+  // Navigating away should not leave a menu hanging open behind the new page.
+  useEffect(() => setOpen(null), [pathname]);
+
   return (
     <nav
+      ref={navRef}
       aria-label="Primary"
-      /*
-       * Nine uppercase labels with letter-spacing need roughly 1400px beside
-       * the wordmark and the tools. Switching to them at `md` left the header
-       * overflowing the window on every laptop width — 275px of horizontal
-       * page scroll at 1024px — so the rail now carries the sections until
-       * there is genuinely room, and the spacing opens up as space allows.
-       */
-      className="hidden xl:flex items-baseline gap-3 min-[1700px]:gap-5 text-[0.72rem] min-[1700px]:text-[0.8rem] uppercase tracking-[0.06em] min-[1700px]:tracking-[0.12em]"
+      className="hidden lg:flex items-center gap-1 xl:gap-2 text-[0.74rem] xl:text-[0.78rem] uppercase tracking-[0.08em]"
     >
-      {items.map((item) => {
-        const active = isActive(pathname, item.href);
-        return (
+      {NAVIGATION.map((entry) =>
+        isGroup(entry) ? (
+          <NavMenu
+            key={entry.label}
+            group={entry}
+            pathname={pathname}
+            open={open === entry.label}
+            onToggle={() => setOpen((v) => (v === entry.label ? null : entry.label))}
+          />
+        ) : (
           <Link
-            key={item.href}
-            href={item.href}
-            aria-current={active ? "page" : undefined}
-            className={
-              active
-                ? "text-[var(--accent)] border-b border-[var(--accent)] pb-0.5"
-                : "text-[var(--fg-soft)] hover:text-[var(--accent)] transition-colors duration-200"
-            }
+            key={entry.href}
+            href={entry.href}
+            aria-current={isActiveHref(pathname, entry.href) ? "page" : undefined}
+            className={`px-2 py-1.5 transition-colors duration-200 ${
+              isActiveHref(pathname, entry.href)
+                ? "text-[var(--accent)] border-b border-[var(--accent)]"
+                : "text-[var(--fg-soft)] hover:text-[var(--accent)]"
+            }`}
           >
-            {item.label}
+            {entry.label}
           </Link>
-        );
-      })}
+        ),
+      )}
     </nav>
   );
 }
 
-export function SectionRail({ items }: { items: readonly NavItem[] }) {
+function NavMenu({
+  group,
+  pathname,
+  open,
+  onToggle,
+}: {
+  group: NavGroup;
+  pathname: string;
+  open: boolean;
+  onToggle: () => void;
+}) {
+  const id = useId();
+  const active = isActiveEntry(pathname, group);
+
+  return (
+    <div className="relative">
+      <button
+        type="button"
+        onClick={onToggle}
+        aria-expanded={open}
+        aria-controls={id}
+        className={`flex items-center gap-1.5 px-2 py-1.5 uppercase tracking-[0.08em] transition-colors duration-200 ${
+          active || open
+            ? "text-[var(--accent)]"
+            : "text-[var(--fg-soft)] hover:text-[var(--accent)]"
+        }`}
+      >
+        {group.label}
+        <span
+          aria-hidden="true"
+          className={`text-[0.5em] transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+        >
+          ▼
+        </span>
+      </button>
+
+      {open && (
+        <div
+          id={id}
+          className="absolute left-0 top-full z-50 mt-1 min-w-[17rem] border border-[var(--line)] bg-[var(--bg-raised)] p-2 shadow-[0_12px_28px_rgba(0,0,0,0.10)]"
+        >
+          <ul>
+            {group.items.map((item) => {
+              const current = isActiveHref(pathname, item.href);
+              return (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    aria-current={current ? "page" : undefined}
+                    className={`block px-3 py-2.5 normal-case tracking-normal transition-colors duration-200 hover:bg-[var(--bg)] ${
+                      current ? "text-[var(--accent)]" : "text-[var(--fg)]"
+                    }`}
+                  >
+                    <span className="block text-[0.95rem] font-[520]">{item.label}</span>
+                    {item.blurb && (
+                      <span className="mt-0.5 block font-[family-name:var(--font-mono)] text-[0.68rem] text-[var(--fg-soft)]">
+                        {item.blurb}
+                      </span>
+                    )}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+}
+
+/**
+ * The mobile rail stays flat.
+ *
+ * It already scrolls sideways and handles any number of destinations, so
+ * folding it into menus would add a tap to reach everything and hide the
+ * site's shape for no gain. Grouping solves a desktop width problem; this
+ * surface does not have one.
+ */
+export function SectionRail() {
   const pathname = usePathname();
+  const items = flattenNavigation();
+
   return (
     <nav
       aria-label="Sections"
-      className="xl:hidden border-t border-[var(--line)] scroll-x scroll-fade"
+      className="lg:hidden border-t border-[var(--line)] scroll-x scroll-fade"
     >
       <div className="flex px-3 whitespace-nowrap">
         {items.map((item) => {
-          const active = isActive(pathname, item.href);
+          const active = isActiveHref(pathname, item.href);
           return (
             <Link
               key={item.href}
@@ -87,3 +193,5 @@ export function SectionRail({ items }: { items: readonly NavItem[] }) {
     </nav>
   );
 }
+
+export type { NavEntry };

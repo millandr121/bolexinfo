@@ -1,65 +1,16 @@
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { OriginalFrame } from "@/components/OriginalFrame";
-import { getArchiveStats, getUrlInventory } from "@/lib/content";
-import { getCameraRecords } from "@/lib/museum";
-
-/**
- * The collections — the things a visitor came to browse. Every primary
- * destination in the header appears here too, so the front door and the
- * navigation describe the same site rather than two different ones.
- */
-const COLLECTIONS = [
-  {
-    href: "/cameras",
-    title: "Cameras",
-    body: "The H-16 and H-8 lineages, the Auto Cine, the B, C, D and L series, the Zoom Reflex and Automatic lines, and the Super 8 era.",
-    count: "54 models",
-  },
-  {
-    href: "/projectors",
-    title: "Projectors",
-    body: "From the multi-gauge Model G of 1936 to the S-series sound projectors.",
-    count: "17 models",
-  },
-  {
-    href: "/lenses",
-    title: "Lenses",
-    body: "Kern-Paillard, Hugo Meyer, Goerz, Wollensak, SOM Berthiot and Angénieux optics for Bolex cameras.",
-    count: "6 makers",
-  },
-  {
-    href: "/accessories",
-    title: "Accessories",
-    body: "Motors, matte boxes, grips, viewfinders, filters, cases and editing gear, decade by decade.",
-    count: "20 pages",
-  },
-  {
-    href: "/ephemera",
-    title: "Ephemera",
-    body: "Period advertising, dealer catalogues, promotional brochures and the Bolex Reporter magazine.",
-    count: "171 pieces",
-  },
-  {
-    href: "/articles",
-    title: "Articles",
-    body: "Recovered writing from the original site — tips, histories and the serial-number reference.",
-    count: "22 articles",
-  },
-] as const;
-
-/** Tools and reference — reachable in one tap rather than buried in a footer. */
-const REFERENCE = [
-  { href: "/serials", title: "Serial Lookup", body: "Date a camera from its serial number." },
-  { href: "/timeline", title: "Timeline", body: "45 entries, from Sainte-Croix to the Bolex era." },
-  { href: "/glossary", title: "Glossary", body: "Bolex and filmmaking terminology." },
-  { href: "/archive", title: "The Archive", body: "What was preserved, and what is missing." },
-] as const;
+import { SerialLookup } from "@/app/serials/SerialLookup";
+import { LookupCta } from "@/components/LookupCta";
+import { getSerialDataset } from "@/lib/content";
+import { serialModels } from "@/lib/serial-models";
+import { FEATURED_LINKS } from "@/lib/featured";
+import { FACEBOOK_GROUP_URL } from "@/lib/community";
 
 export default function HomePage() {
-  const models = getCameraRecords();
-  const inventory = getUrlInventory();
-  const stats = getArchiveStats();
+  const dataset = getSerialDataset();
+  const models = serialModels();
 
   return (
     <>
@@ -79,138 +30,151 @@ export default function HomePage() {
       </div>
 
       <div className="modern-edition">
-      <section className="pt-16 sm:pt-24 pb-14">
-        <Reveal>
-          <p className="font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.25em] text-[var(--accent)]">
-            Paillard-Bolex · Sainte-Croix, Switzerland · 1935–1970s
-          </p>
-          <h1 className="mt-4 font-[family-name:var(--font-display)] text-4xl sm:text-6xl leading-[1.05] tracking-tight max-w-3xl font-[560]">
-            The digital museum of the classic Bolex.
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--fg-soft)]">
-            A preservation — and continuation — of the original BolexCollector.com:
-            cameras, projectors, lenses, accessories, serial numbers, and the printed
-            ephemera of the Swiss company that put precision filmmaking in amateur hands.
-          </p>
-        </Reveal>
-        <Reveal delay={0.15}>
-          <dl className="mt-10 flex flex-wrap gap-x-12 gap-y-4 font-[family-name:var(--font-mono)] text-sm">
-            <div>
-              <dt className="text-[0.65rem] uppercase tracking-[0.2em] text-[var(--fg-soft)]">Models catalogued</dt>
-              <dd className="text-2xl mt-1">{models.length}</dd>
-            </div>
-            <div>
-              <dt className="text-[0.65rem] uppercase tracking-[0.2em] text-[var(--fg-soft)]">Original URLs inventoried</dt>
-              <dd className="text-2xl mt-1">{inventory.entries.length}</dd>
-            </div>
-            <div>
-              <dt className="text-[0.65rem] uppercase tracking-[0.2em] text-[var(--fg-soft)]">Assets preserved</dt>
-              <dd className="text-2xl mt-1">{stats.assets}</dd>
-            </div>
-          </dl>
-        </Reveal>
-      </section>
+        {/*
+         * The front page leads with the lookup because that is what people
+         * arrive holding: a camera with a number stamped inside the film
+         * chamber and no idea what it is. A statistics row used to sit here
+         * instead, and a count of 54 models answers nobody's question.
+         *
+         * The lookup's results render in normal flow above the three cards, so
+         * typing a serial pushes them down rather than covering them — the
+         * page grows into an answer instead of swapping to a different view.
+         */}
+        <section className="pt-14 sm:pt-16 pb-12">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
+            <Reveal>
+              <p className="font-[family-name:var(--font-mono)] text-[0.68rem] uppercase tracking-[0.2em] text-[var(--accent)]">
+                A resource for Bolex collectors and enthusiasts
+              </p>
+              <h1 className="mt-3.5 font-[family-name:var(--font-display)] text-[2.4rem] sm:text-5xl leading-[1.04] tracking-[-0.02em] font-[560]">
+                Everything Bolex
+                <br />
+                ever made, in one place
+              </h1>
+              {/* The counts that used to sit in a statistics row, said as a
+                  sentence instead. A test keeps the words honest if the
+                  catalogue ever grows. */}
+              <p className="mt-5 max-w-[29rem] leading-[1.65] text-[var(--fg-soft)]">
+                Fifty-four cameras, seventeen projectors, the lenses and accessories that went
+                with them, and the paper that sold them — recovered, verified, and kept.
+              </p>
+              <div className="mt-7 flex flex-wrap gap-3">
+                <LookupCta>Identify my Bolex</LookupCta>
+                <Link
+                  href="/cameras"
+                  className="tap-target border border-[var(--fg)] px-6 text-[0.8rem] uppercase tracking-[0.08em] hover:bg-[var(--fg)] hover:text-[var(--bg)] transition-colors duration-200"
+                >
+                  Browse the cameras
+                </Link>
+              </div>
+            </Reveal>
 
-      <section aria-label="Collections" className="rule py-14">
-        <Reveal>
-          <h2 className="font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.25em] text-[var(--accent)]">
-            The collections
-          </h2>
-        </Reveal>
-        <ul className="mt-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[var(--line)] border border-[var(--line)]">
-          {COLLECTIONS.map((s, i) => (
-            <Reveal key={s.href} as="li" delay={Math.min(i * 0.05, 0.25)}>
-              <Link
-                href={s.href}
+            {/*
+             * The lookup sits beside the headline rather than under it, so the
+             * first screen carries both what this place is and the one tool
+             * most people came for. Typing grows this card downward, which
+             * grows the row and pushes the three links below it down the page
+             * — the answer arrives without anything being covered up.
+             */}
+            <Reveal delay={0.1}>
+              <div id="identify" className="border border-[var(--line)] bg-[var(--bg-raised)] p-6 sm:p-7 scroll-mt-28">
+                {dataset.ranges.length > 0 ? (
+                  <SerialLookup rows={dataset.ranges} models={models} />
+                ) : (
+                  <p className="text-sm leading-relaxed text-[var(--fg-soft)]">
+                    The serial tables have not been extracted yet. The lookup activates as soon
+                    as they are.
+                  </p>
+                )}
+                {/* Why the filter offers two kinds and not three: the recovered
+                    lens and accessory pages carry no serial tables at all. */}
+                <p className="mt-5 border-t border-[var(--line)] pt-4 font-[family-name:var(--font-mono)] text-[0.66rem] leading-relaxed text-[var(--fg-soft)]">
+                  Lenses and accessories were never serial-numbered.{" "}
+                  <Link href="/serials" className="text-[var(--accent)] hover:underline underline-offset-4">
+                    The complete table →
+                  </Link>
+                </p>
+              </div>
+            </Reveal>
+          </div>
+        </section>
+
+        {/*
+         * Three doors, where the statistics used to be. Two are fixed because
+         * they answer the two questions that follow identifying a camera —
+         * where are the other owners, and who can service this — and the third
+         * changes between visits so the page can point somewhere different
+         * without growing a fourth and fifth card.
+         */}
+        {/*
+         * The page stops here, on purpose.
+         *
+         * It used to carry a collections grid, a paragraph about the
+         * restoration and a dedication panel below this row — all of it
+         * reachable from the navigation and the footer already, and all of it
+         * standing between a visitor and the two things this page is for:
+         * identifying a camera, and the three doors below. A front page that
+         * repeats the whole site is a front page nobody reads.
+         */}
+        <section aria-label="Start here" className="rule pt-12 pb-20">
+          <ul className="grid sm:grid-cols-3 gap-px bg-[var(--line)] border border-[var(--line)]">
+            <li>
+              <a
+                href={FACEBOOK_GROUP_URL}
+                target="_blank"
+                rel="noreferrer"
                 className="group flex h-full flex-col bg-[var(--bg)] p-7 hover:bg-[var(--bg-raised)] transition-colors duration-300"
               >
-                <div className="flex items-baseline justify-between gap-3">
-                  <h3 className="font-[family-name:var(--font-display)] text-2xl font-[560] group-hover:text-[var(--accent)] transition-colors duration-300">
-                    {s.title}
-                  </h3>
-                  {/* The count sets expectations before the tap — a card that
-                      says "171 pieces" reads as a place worth entering. */}
-                  <span className="font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.14em] text-[var(--fg-soft)] shrink-0">
-                    {s.count}
+                <h2 className="font-[family-name:var(--font-display)] text-2xl font-[560] group-hover:text-[var(--accent)] transition-colors duration-300">
+                  Ask the group{" "}
+                  <span aria-hidden="true" className="text-xs text-[var(--accent)] align-middle">
+                    ↗
                   </span>
-                </div>
-                <p className="mt-3 text-sm leading-relaxed text-[var(--fg-soft)]">{s.body}</p>
-                <span
-                  aria-hidden="true"
-                  className="reveal-on-hover mt-5 inline-block font-[family-name:var(--font-mono)] text-xs text-[var(--accent)]"
-                >
-                  View →
-                </span>
-              </Link>
-            </Reveal>
-          ))}
-        </ul>
-      </section>
+                </h2>
+                <p className="mt-3 text-sm leading-relaxed text-[var(--fg-soft)]">
+                  Advice, answers, manuals, and buying and selling — the Bolex group on
+                  Facebook, busy most days.
+                </p>
+              </a>
+            </li>
 
-      <section aria-label="Reference and tools" className="rule py-14">
-        <Reveal>
-          <h2 className="font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.25em] text-[var(--accent)]">
-            Reference &amp; tools
-          </h2>
-        </Reveal>
-        <ul className="mt-5 grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[var(--line)] border border-[var(--line)]">
-          {REFERENCE.map((s, i) => (
-            <Reveal key={s.href} as="li" delay={Math.min(i * 0.05, 0.2)}>
+            <li>
               <Link
-                href={s.href}
-                className="group block h-full bg-[var(--bg)] p-6 hover:bg-[var(--bg-raised)] transition-colors duration-300"
+                href="/technicians"
+                className="group flex h-full flex-col bg-[var(--bg)] p-7 hover:bg-[var(--bg-raised)] transition-colors duration-300"
               >
-                <h3 className="font-[family-name:var(--font-display)] text-lg font-[560] group-hover:text-[var(--accent)] transition-colors duration-300">
-                  {s.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-[var(--fg-soft)]">{s.body}</p>
+                <h2 className="font-[family-name:var(--font-display)] text-2xl font-[560] group-hover:text-[var(--accent)] transition-colors duration-300">
+                  Find a technician
+                </h2>
+                <p className="mt-3 text-sm leading-relaxed text-[var(--fg-soft)]">
+                  Who services, repairs and converts these cameras — and how current each
+                  listing is.
+                </p>
               </Link>
-            </Reveal>
-          ))}
-        </ul>
-      </section>
+            </li>
 
-      <section className="rule py-14">
-        <Reveal>
-          <div className="max-w-2xl">
-            <h2 className="font-[family-name:var(--font-display)] text-3xl font-[560]">
-              A preservation project, in the open.
-            </h2>
-            <p className="mt-4 leading-relaxed text-[var(--fg-soft)]">
-              The original site has gone offline. Every recoverable page has been retrieved
-              from the Internet Archive and preserved — byte-for-byte — alongside this
-              modern edition. Recovery status is public, and every entry states its
-              provenance.
-            </p>
-            <Link
-              href="/about"
-              className="mt-6 inline-block border border-[var(--fg)] px-5 py-2.5 text-sm uppercase tracking-[0.12em] hover:bg-[var(--fg)] hover:text-[var(--bg)] transition-colors duration-200"
-            >
-              About the restoration
-            </Link>
-          </div>
-        </Reveal>
-      </section>
+            {/*
+             * All three rotating cards are in the HTML and CSS shows one, from
+             * the attribute set before paint. Picking in React instead would
+             * mean the server and the client disagreed about what to render,
+             * and no card flashes past on the way to another this way.
+             */}
+            {FEATURED_LINKS.map((link, i) => (
+              <li key={link.href} className="featured-slot" data-slot={i}>
+                <Link
+                  href={link.href}
+                  className="group flex h-full flex-col bg-[var(--bg)] p-7 hover:bg-[var(--bg-raised)] transition-colors duration-300"
+                >
+                  <h2 className="font-[family-name:var(--font-display)] text-2xl font-[560] group-hover:text-[var(--accent)] transition-colors duration-300">
+                    {link.label}
+                  </h2>
+                  <p className="mt-3 text-sm leading-relaxed text-[var(--fg-soft)]">{link.blurb}</p>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
 
-      <section aria-label="Dedication" className="rule py-16">
-        <Reveal>
-          <div className="max-w-2xl mx-auto text-center">
-            <p className="font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.28em] text-[var(--accent)]">
-              In appreciation
-            </p>
-            <p className="mt-5 font-[family-name:var(--font-display)] text-2xl sm:text-3xl leading-snug font-[560]">
-              This archive is dedicated to Michael Tisdale, who built the original
-              BolexCollector.com and shared it freely for nearly twenty years.
-            </p>
-            <Link
-              href="/tribute"
-              className="mt-6 inline-block font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.16em] text-[var(--accent)] hover:underline underline-offset-4"
-            >
-              Read the dedication →
-            </Link>
-          </div>
-        </Reveal>
-      </section>
       </div>
     </>
   );

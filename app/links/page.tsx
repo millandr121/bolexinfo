@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { ArchiveCompare } from "@/components/ArchiveCompare";
 import { getLinkDirectory } from "@/lib/directory";
 import { originalArchiveHref } from "@/lib/archive";
+import { COMMUNITY_LINKS } from "@/lib/community";
 
 export const metadata: Metadata = {
   title: "Links",
@@ -38,8 +40,58 @@ export default function LinksPage() {
         </p>
       </Reveal>
 
+      {/*
+       * Added now, not recovered — and kept visibly apart from the rest of the
+       * page for that reason. The directory below is a 2011 record reproduced
+       * verbatim, so mixing live links into it would quietly rewrite the
+       * record. These sit above it under their own heading, which also puts
+       * the links that still work first.
+       */}
+      <Reveal delay={0.05}>
+        <section className="mt-12" aria-labelledby="community">
+          <h2
+            id="community"
+            className="font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.25em] text-[var(--accent)]"
+          >
+            Where people talk — added by this archive
+          </h2>
+          <ul className="mt-4 border-t border-[var(--line)]">
+            {COMMUNITY_LINKS.map((link) => (
+              <li key={link.href} className="border-b border-[var(--line)] py-4">
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                  className="group inline-flex items-baseline gap-2 font-[family-name:var(--font-display)] text-lg font-[560] hover:text-[var(--accent)] transition-colors"
+                >
+                  {link.label}
+                  <span aria-hidden="true" className="text-xs text-[var(--accent)]">
+                    ↗
+                  </span>
+                </a>
+                <p className="mt-1 text-sm leading-relaxed text-[var(--fg-soft)]">{link.blurb}</p>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-3 font-[family-name:var(--font-mono)] text-[0.68rem] leading-relaxed text-[var(--fg-soft)]">
+            No Bolex subreddit is listed because none could be confirmed as an active Bolex
+            community. For repair, see{" "}
+            <Link href="/technicians" className="text-[var(--accent)] hover:underline underline-offset-4">
+              repair &amp; service
+            </Link>
+            .
+          </p>
+        </section>
+      </Reveal>
+
       {categories.length > 0 ? (
         <>
+          <Reveal>
+            <h2 className="rule mt-14 pt-6 font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.25em] text-[var(--fg-soft)]">
+              The original directory, as published
+            </h2>
+          </Reveal>
+
           {categories.map((category, i) => (
             <Reveal key={category.title} delay={i === 0 ? 0.05 : 0}>
               <section className="mt-12" aria-labelledby={`cat-${i}`}>

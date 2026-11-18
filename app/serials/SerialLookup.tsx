@@ -81,7 +81,10 @@ export function SerialLookup({ rows, models }: { rows: SerialRow[]; models: Seri
                 type="button"
                 onClick={() => setFilter(f.id)}
                 aria-pressed={on}
-                className={`tap-target px-4 border text-xs uppercase tracking-[0.12em] transition-colors ${
+                /* gap, not a space: `tap-target` is inline-flex, and a flex
+                   container discards the whitespace between its items — which
+                   rendered the counts as "ALL5". */
+                className={`tap-target gap-1.5 px-4 border text-xs uppercase tracking-[0.12em] transition-colors ${
                   on
                     ? "border-[var(--accent)] bg-[var(--accent)] text-[var(--bg)]"
                     : "border-[var(--line)] text-[var(--fg-soft)] hover:border-[var(--accent)]"

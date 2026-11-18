@@ -18,8 +18,15 @@
   --color-ink: #211d18;
   --color-ink-soft: #575047;
   --color-line: #d8d1c2;
-  --color-accent: #8a2f26;
-  --color-accent-soft: #a8503f;
+  /*
+   * Reading Room. The accent is the deep teal already present in the original
+   * site's own stylesheet (#01494a in style40.css) rather than a colour chosen
+   * from nothing — so the modern edition and the preserved one share a note,
+   * and the link colour stops competing with the photographs for attention the
+   * way the oxblood did.
+   */
+  --color-accent: #01494a;
+  --color-accent-soft: #0a6b66;
   --color-brass: #8c6d3f;
 
   --color-night: #14110e;
@@ -27,7 +34,9 @@
   --color-bone: #e9e2d3;
   --color-bone-soft: #a89f90;
   --color-night-line: #352f28;
-  --color-ember: #d07a5e;
+  /* The same teal lifted for a dark ground, where #01494a would disappear. */
+  --color-ember: #5fb0aa;
+  --color-ember-soft: #7ec4bf;
 }
 
 :root {
@@ -37,6 +46,8 @@
   --fg-soft: var(--color-ink-soft);
   --line: var(--color-line);
   --accent: var(--color-accent);
+  /* Only used for the hover state of a filled accent button. */
+  --accent-soft: var(--color-accent-soft);
   color-scheme: light;
 }
 
@@ -48,6 +59,7 @@
     --fg-soft: var(--color-bone-soft);
     --line: var(--color-night-line);
     --accent: var(--color-ember);
+    --accent-soft: var(--color-ember-soft);
     color-scheme: dark;
   }
 }
@@ -300,4 +312,32 @@ html[data-view="original"] .original-edition {
 
 html[data-view="original"] .modern-edition {
   display: none;
+}
+
+/*
+ * The rotating third card on the front page.
+ *
+ * All the candidates are in the served HTML and this shows one of them, from
+ * the `data-featured` index the inline script in <head> sets before the first
+ * paint — the same arrangement as the edition switch above, for the same two
+ * reasons: nothing flashes past on the way to the chosen card, and React is
+ * never asked to render something different on the client than it did on the
+ * server.
+ *
+ * With no attribute — scripting off, or the script having thrown — the last
+ * rule shows the first card, so the row is always three cards wide rather
+ * than two and a gap.
+ */
+.featured-slot {
+  display: none;
+}
+
+html[data-featured="0"] .featured-slot[data-slot="0"],
+html[data-featured="1"] .featured-slot[data-slot="1"],
+html[data-featured="2"] .featured-slot[data-slot="2"] {
+  display: block;
+}
+
+html:not([data-featured]) .featured-slot[data-slot="0"] {
+  display: block;
 }

@@ -1,24 +1,7 @@
 import Link from "next/link";
 import { SearchButton } from "./SearchPalette";
-import { DesktopNav, SectionRail, type NavItem } from "./NavLinks";
+import { DesktopNav, SectionRail } from "./NavLinks";
 import { RevisitButton } from "./RevisitButton";
-
-/**
- * Primary destinations, ordered so the five *collections* come first and the
- * tools and meta pages follow. A visitor scanning left to right meets the
- * things they came to browse before anything about the project itself.
- */
-export const NAV: readonly NavItem[] = [
-  { href: "/cameras", label: "Cameras" },
-  { href: "/projectors", label: "Projectors" },
-  { href: "/lenses", label: "Lenses" },
-  { href: "/accessories", label: "Accessories" },
-  { href: "/ephemera", label: "Ephemera" },
-  { href: "/serials", label: "Serials" },
-  { href: "/articles", label: "Articles" },
-  { href: "/timeline", label: "Timeline" },
-  { href: "/archive", label: "Archive" },
-];
 
 export function SiteHeader() {
   return (
@@ -35,14 +18,16 @@ export function SiteHeader() {
           href="/"
           className="group shrink-0 no-underline flex flex-col justify-center min-h-[44px]"
         >
-          <span className="block font-[family-name:var(--font-display)] text-lg sm:text-2xl tracking-tight font-[560] leading-tight">
+          <span className="block font-[family-name:var(--font-display)] text-2xl sm:text-4xl tracking-tight font-[560] leading-[1.05]">
             Bolex<span className="text-[var(--accent)]"> Collector</span>
           </span>
-          <span className="block text-[0.6rem] sm:text-[0.65rem] uppercase tracking-[0.18em] sm:tracking-[0.22em] text-[var(--fg-soft)] font-[family-name:var(--font-mono)] leading-tight">
+          {/* The imprint drops as the title grows, so the lockup reads as one
+              name with a line under it rather than two competing labels. */}
+          <span className="block mt-0.5 text-[0.52rem] sm:text-[0.58rem] uppercase tracking-[0.16em] sm:tracking-[0.2em] text-[var(--fg-soft)] font-[family-name:var(--font-mono)] leading-tight">
             Paillard-Bolex · Est. archive
           </span>
         </Link>
-        <DesktopNav items={NAV} />
+        <DesktopNav />
         {/* Tools, kept together and apart from the sections in the nav. */}
         <div className="flex shrink-0 items-center gap-2">
           <RevisitButton />
@@ -56,7 +41,7 @@ export function SiteHeader() {
        * structure, where a rail keeps every section one tap away and shows
        * which one you are in.
        */}
-      <SectionRail items={NAV} />
+      <SectionRail />
     </header>
   );
 }
