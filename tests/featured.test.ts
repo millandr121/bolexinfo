@@ -138,7 +138,7 @@ test("the front page leads with the lookup, not with statistics", { skip: !fs.ex
 test("the hero's spelled-out counts still match the catalogue", () => {
   const cameras = getCameraRecords().length;
   const projectors = getProjectorRecords().length;
-  assert.equal(cameras, 54, `the front page says "Fifty-four cameras" but there are ${cameras}`);
+  assert.equal(cameras, 55, `the front page says "Fifty-five cameras" but there are ${cameras}`);
   assert.equal(
     projectors,
     17,

@@ -218,7 +218,26 @@ export function getRelated(section: Section, slug: string, limit = 8): RelatedCo
     }
   }
 
-  const own = indexEntry.get(slug);
+  /*
+   * A model the archive never covered has no entry in the archived index,
+   * so it has no era band and would sit on a page with nothing leading away
+   * from it. Its decade is derived from the year instead, and matched
+   * against the index's own headings, which are named by decade.
+   *
+   * This is why the fallback matches on the decade rather than inventing a
+   * band: a sourced model then joins the same group the recovered models of
+   * its decade are already in, instead of forming a lonely one of its own.
+   */
+  const own =
+    indexEntry.get(slug) ??
+    (() => {
+      if (!self.introduced) return undefined;
+      const decade = `${Math.floor(self.introduced / 10) * 10}s`;
+      const group = groups.find((g) => g.era.includes(decade));
+      if (!group) return undefined;
+      return { entry: { slug, gauge: self.format } as IndexEntry, era: group.era };
+    })();
+
   if (own) {
     /*
      * The era band exists to show something the line does not. On a 16mm
@@ -233,7 +252,14 @@ export function getRelated(section: Section, slug: string, limit = 8): RelatedCo
       indexEntry.get(m.slug)?.era === own.era;
 
     const sameGauge = all
-      .filter((m) => inSameEra(m) && indexEntry.get(m.slug)!.entry.gauge === own.entry.gauge)
+      /*
+       * `m.format` is the fallback, not a non-null assertion on the index:
+       * once a second sourced model shares this decade, neither is in the
+       * archived index and asserting would throw on a page view.
+       */
+      .filter(
+        (m) => inSameEra(m) && (indexEntry.get(m.slug)?.entry.gauge ?? m.format) === own.entry.gauge,
+      )
       .sort(byNearestYear);
 
     /*

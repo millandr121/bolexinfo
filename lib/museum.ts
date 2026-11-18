@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import { cleanImages, type ModelImage } from "./assets";
+import { cleanImages, sourcedImages, type ModelImage } from "./assets";
 import { readContentBlocks, type ContentBlock } from "./recovered";
 
 /**
@@ -28,7 +28,7 @@ export interface Spec {
 
 // Imported for local use and re-exported so existing consumers of the museum
 // layer keep working after these helpers moved into ./assets.
-export { cleanImages, type ModelImage };
+export { cleanImages, sourcedImages, type ModelImage };
 
 export interface SerialRow {
   from: number | null;
@@ -60,6 +60,11 @@ interface SeedEntry {
   pages?: string[];
   summary: string | null;
   recovery: "full" | "summary-only" | "pending";
+  /**
+   * Photographs contributed for a model the archive never covered. Each
+   * needs a credit; see sourcedImages in ./assets.
+   */
+  images?: ModelImage[];
 }
 
 export interface ModelRecord {
@@ -255,7 +260,12 @@ function reconcile(seedFile: string, extractedDir: string): ModelRecord[] {
       introduced: facts.introduced ?? s?.introduced ?? null,
       summary: s?.summary ?? e?.description ?? null,
       specs,
-      images: cleanImages(e?.images),
+      /*
+       * Recovered first, then anything sourced since. Keeping them in one
+       * list lets every page render them the same way; the credit on a
+       * sourced image is what tells the two apart on the page.
+       */
+      images: [...cleanImages(e?.images), ...sourcedImages(s?.images)],
       serialRows: e?.tables ? parseSerialRows(e.tables) : [],
       originalPath: e?.originalPath ?? s?.originalPath,
       originalUrl: e?.originalUrl,

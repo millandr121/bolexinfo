@@ -102,10 +102,11 @@ export function ImageGallery({
                     <img
                       src={img.src}
                       alt={img.alt || caption}
+                      data-credit={img.credit || undefined}
                       /* The lead plate is usually the largest element painted,
                          so it is not deferred; the rest are. */
                       loading={isLead ? undefined : "lazy"}
-                      className={`h-full w-full object-contain transition-transform duration-500 no-touch-zoom group-hover:scale-[1.03] ${
+                      className={`h-full w-full object-contain transition-transform duration-500 no-touch-zoom group-hover:scale-[1.03] ${img.credit ? "cutout " : ""}${
                         isLead ? "lg:h-auto" : ""
                       }`}
                     />
@@ -142,7 +143,9 @@ export function ImageGallery({
                   src={img.src}
                   alt={img.alt || caption}
                   loading="lazy"
-                  className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-[1.02] no-touch-zoom"
+                  className={`w-full h-auto object-contain transition-transform duration-500 group-hover:scale-[1.02] no-touch-zoom${
+                    img.credit ? " cutout" : ""
+                  }`}
                 />
               </button>
               {img.alt && (

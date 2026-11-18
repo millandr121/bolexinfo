@@ -32,21 +32,31 @@ bar this site has already set:
 - **Say when it is uncertain.** "Probably 1965, from a dealer listing" is
   publishable. "1965" is not, unless it is.
 
-## On manuals
+## On manuals — decided: host them
 
-Scans of Paillard manuals are almost certainly still in copyright. Bolex
-International S.A. still trades from Sainte-Croix, so there is a rights
-holder to ask, and "the company is gone" is not available as a defence.
+The site's owner has decided to host manual scans here rather than only link
+to them. Recorded so the reasoning behind any later takedown request is not
+a mystery.
 
-The position that costs nothing and risks nothing: **link to manuals where
-they are already hosted, host none here.** A page per model listing which
-manuals exist and where to find them is nearly as useful to a researcher and
-cannot be taken down.
+What that means in practice, and the risk being accepted: scans of Paillard
+manuals are almost certainly still in copyright, and **Bolex International
+S.A. still trades from Sainte-Croix**, so there is a living rights holder.
+"The company is gone" is not available as a defence. The realistic worst
+case is a takedown request, which is cheap to comply with; the unrealistic
+worse case is a claim, which is unlikely against a non-commercial archive
+but is not impossible.
 
-Hosting scans is a decision for the site's owner, not something to drift
-into. If the answer is yes, the clean route is to ask Bolex International for
-permission first — a small archive asking politely about forty-year-old
-manuals is not a hard conversation to have.
+Two things that cost little and reduce it:
+
+1. **Ask.** A short, polite letter to Bolex International about forty-year-
+   old manuals for a non-commercial preservation archive is a conversation
+   worth having, and a yes removes the question entirely.
+2. **Keep every scan attributable.** Where a manual came from, and who
+   scanned it, recorded with the file. A rights holder who writes should get
+   an immediate, accurate answer rather than a shrug.
+
+Manuals still go through the same staging as everything else: into
+`research/incoming/`, catalogued, then published with their source.
 
 ## Status of the sources we have
 

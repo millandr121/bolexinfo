@@ -191,6 +191,17 @@ html {
 }
 .plate img { mix-blend-mode: multiply; }
 
+/*
+ * Images with a real alpha channel must not be multiplied.
+ *
+ * The plate exists because the archive's photographs were shot on white:
+ * multiplying makes that white become the plate, so the subject reads as
+ * cut out. A genuinely transparent image has no white to remove, and
+ * multiplying it only muddies the subject against the panel. Sourced
+ * photographs are cut out properly, so they opt out.
+ */
+.plate img.cutout { mix-blend-mode: normal; }
+
 /* Document scans (period ads, catalogues) are artefacts, not products: their
    aged paper is part of the record, so they are framed rather than blended. */
 .document {

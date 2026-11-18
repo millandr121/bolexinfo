@@ -141,8 +141,20 @@ test("the H-16 S-4 is missing from the archived index but still connected", () =
   const indexed = new Set(getIndexGroups("cameras").flatMap((g) => g.entries.map((e) => e.slug)));
   const records = getCameraRecords();
 
-  const missing = records.filter((m) => !indexed.has(m.slug)).map((m) => m.slug);
+  /*
+   * Only recovered models are expected in the archived index. A model the
+   * original site never covered is absent for a different and legitimate
+   * reason, so it is not a gap in the recovery.
+   */
+  const missing = records
+    .filter((m) => m.recovered && !indexed.has(m.slug))
+    .map((m) => m.slug);
   assert.deepEqual(missing, ["h16s4"]);
+
+  const sourced = records.filter((m) => !m.recovered).map((m) => m.slug);
+  for (const slug of sourced) {
+    assert.ok(!indexed.has(slug), `${slug} was never on the original site, so cannot be indexed`);
+  }
 
   assert.equal(getRelated("cameras", "h16s4").series?.name, "H-16");
 });

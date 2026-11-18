@@ -50,6 +50,8 @@ export function ObjectPage({
   const related = section.kind ? getRelated(section.kind, model.slug) : {};
   const { glance, detail } = partitionSpecs(model.specs);
   const hasImages = model.images.length > 0;
+  /* Photographers of anything not recovered from the archive. */
+  const credits = [...new Set(model.images.map((i) => i.credit).filter((c): c is string => Boolean(c)))];
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -202,14 +204,40 @@ export function ObjectPage({
         </div>
       )}
 
+      {/*
+       * Two provenance notes, because there are two kinds of page.
+       *
+       * Most are recovered from BolexCollector.com and say so. A few —
+       * models the original never covered — were researched and sourced
+       * since, and must not borrow the archive's authority by implying they
+       * came from it. Getting this wrong would be the quietest and worst
+       * failure this site could have.
+       */}
       <aside className="rule mt-14 max-w-3xl pt-4 font-[family-name:var(--font-mono)] text-xs leading-relaxed text-[var(--fg-soft)]">
         <span className="uppercase tracking-[0.18em]">Provenance — </span>
-        Recovered from{" "}
-        <span className="text-[var(--fg)]">
-          {model.originalUrl ?? `bolexcollector.com${model.originalPath ?? ""}`}
-        </span>
-        {model.capturedAt ? `, Wayback capture ${model.capturedAt}` : ""}. Specifications and serial
-        ranges are reproduced verbatim from the archived page.
+        {model.recovered ? (
+          <>
+            Recovered from{" "}
+            <span className="text-[var(--fg)]">
+              {model.originalUrl ?? `bolexcollector.com${model.originalPath ?? ""}`}
+            </span>
+            {model.capturedAt ? `, Wayback capture ${model.capturedAt}` : ""}. Specifications and
+            serial ranges are reproduced verbatim from the archived page.
+          </>
+        ) : (
+          <>
+            <span className="text-[var(--fg)]">Not from the original site.</span> BolexCollector.com
+            never covered this model; the entry was researched and added since, from the sources
+            named below.
+            {credits.length > 0 && (
+              <>
+                {" "}
+                Photographs by{" "}
+                <span className="text-[var(--fg)]">{credits.join(", ")}</span>.
+              </>
+            )}
+          </>
+        )}
       </aside>
 
       {neighbours && <SequenceNav neighbours={neighbours} section={section} />}
