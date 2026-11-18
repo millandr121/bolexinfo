@@ -44,6 +44,19 @@ function main() {
   const pages = copyTree(WAYBACK, path.join(PUBLIC, "original"), (f) => f.endsWith(".html"));
 
   /*
+   * Media that was not recovered — photographs taken or contributed since,
+   * for models the original site never covered.
+   *
+   * It lives in media/sourced/ rather than archive/wayback/ and is served
+   * from /sourced/ rather than /images/, so the two can never be confused.
+   * The archive is a record of what BolexCollector.com held; a photograph
+   * taken in 2026 is not part of that record however useful it is, and
+   * mixing them would quietly destroy the one thing that makes this site
+   * trustworthy. Each one carries its photographer in the data.
+   */
+  const sourced = copyTree(path.join(ROOT, "media", "sourced"), path.join(PUBLIC, "sourced"), () => true);
+
+  /*
    * The preserved pages need their own stylesheets and photographs, or they
    * render as bare markup with broken images — which is what "View Original
    * Archive" showed for months.
@@ -64,7 +77,8 @@ function main() {
 
   console.log(
     `Staged ${images} images → public/images, ` +
-      `${pages} pages + ${styles} stylesheets + ${originalImages} images → public/original`,
+      `${pages} pages + ${styles} stylesheets + ${originalImages} images → public/original, ` +
+      `${sourced} sourced → public/sourced`,
   );
 }
 

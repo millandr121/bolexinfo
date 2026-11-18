@@ -29,8 +29,31 @@ export default function CamerasPage() {
   const models = getCameraRecords();
   const provenance = getCameras().provenance;
 
+  /*
+   * Chronological within each gauge.
+   *
+   * The catalogue's own order is recovered-first then alphabetical, which
+   * reads oddly here — it puts the H-16 M-3 of 1964 above the H-16 Reflex of
+   * 1956, and it buries anything sourced rather than recovered at the bottom
+   * of its gauge regardless of date. By year, a reader scrolling the 16mm
+   * list watches the line actually develop, and a model added since lands
+   * among its contemporaries instead of in an appendix.
+   *
+   * Models whose year was never recorded keep the alphabetical order and
+   * follow the dated ones, rather than being guessed into a position.
+   */
+  const byYear = (a: ModelRecord, b: ModelRecord) => {
+    if (a.introduced && b.introduced) return a.introduced - b.introduced || a.name.localeCompare(b.name);
+    if (a.introduced) return -1;
+    if (b.introduced) return 1;
+    return a.name.localeCompare(b.name);
+  };
+
   const groups = [...FORMAT_ORDER, UNKNOWN_GROUP]
-    .map((format) => ({ format, models: models.filter((m) => groupKey(m) === format) }))
+    .map((format) => ({
+      format,
+      models: models.filter((m) => groupKey(m) === format).sort(byYear),
+    }))
     .filter((g) => g.models.length > 0);
 
   return (
@@ -71,7 +94,17 @@ export default function CamerasPage() {
                       </span>
                     </div>
                     <p className="mt-2 font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.14em] text-[var(--fg-soft)]">
-                      {model.specs.length > 0 ? `${model.specs.length} specifications` : "recovered"}
+                      {/*
+                        The empty case used to read "recovered", which is a
+                        claim and not always a true one: a model sourced
+                        since says so instead of borrowing the archive's
+                        word for itself.
+                      */}
+                      {model.specs.length > 0
+                        ? `${model.specs.length} specifications`
+                        : model.recovered
+                          ? "recovered"
+                          : "added since"}
                     </p>
                   </div>
                 </Link>

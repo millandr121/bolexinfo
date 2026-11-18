@@ -8,6 +8,8 @@ import { RelatedModels } from "@/components/RelatedModels";
 import { getRecoveredPage, getRecoveredSection } from "@/lib/recovered";
 import { originalArchiveHref } from "@/lib/archive";
 import { getRecoveredRelated } from "@/lib/related";
+import { SequenceNav } from "@/components/SequenceNav";
+import { resolveNeighbours } from "@/lib/sequence";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -57,6 +59,15 @@ export default async function AccessoryPage({ params }: Props) {
           <ArchiveCompare originalHref={archiveHref} title={page.title} />
         </Reveal>
       )}
+
+      <SequenceNav
+        neighbours={resolveNeighbours(
+          "accessories",
+          slug,
+          getRecoveredSection("accessories").map((p) => ({ slug: p.slug, label: p.title })),
+        )}
+        section={{ label: "Accessories", href: "/accessories" }}
+      />
 
       <aside className="rule mt-14 pt-4 text-xs leading-relaxed text-[var(--fg-soft)] font-[family-name:var(--font-mono)]">
         <span className="uppercase tracking-[0.18em]">Provenance — </span>

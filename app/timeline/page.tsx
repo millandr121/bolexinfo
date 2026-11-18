@@ -52,8 +52,36 @@ export default function TimelinePage() {
               {p}
             </p>
           ))}
+          {/*
+           * How to say it.
+           *
+           * The timeline is where the name Paillard first appears and where
+           * a reader is most likely to wonder, so the note lives here rather
+           * than in a glossary nobody opens. It is not an aside this project
+           * invented: Amateur Movie-Maker said it in 1959, in a piece
+           * Michael reprinted on the original site, so it comes out of the
+           * archive like everything else.
+           */}
+          <p className="mt-7 flex flex-wrap items-baseline gap-x-3 gap-y-1 border-l-2 border-[var(--accent)] pl-4 text-sm text-[var(--fg-soft)]">
+            <span className="font-[family-name:var(--font-display)] text-base text-[var(--fg)]">
+              Paillard
+            </span>
+            <span className="font-[family-name:var(--font-mono)] text-[var(--accent)]">
+              &ldquo;pie-ard&rdquo;
+            </span>
+            <span className="text-xs">
+              — the <i>ll</i> is silent.{" "}
+              <Link
+                href="/articles/07-01-26"
+                className="underline underline-offset-2 hover:text-[var(--accent)]"
+              >
+                Amateur Movie-Maker, 1959
+              </Link>
+            </span>
+          </p>
+
           {total > 0 && (
-            <p className="mt-7 font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.2em] text-[var(--fg-soft)]">
+            <p className="mt-6 font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.2em] text-[var(--fg-soft)]">
               {total} entries · {timeline.eras.length} eras
             </p>
           )}

@@ -8,6 +8,8 @@ import type { ModelRecord } from "@/lib/museum";
 import { getRelated, type Section } from "@/lib/related";
 import { originalArchiveHref } from "@/lib/archive";
 import { hasControls } from "@/lib/controls";
+import { SequenceNav } from "@/components/SequenceNav";
+import type { Neighbours } from "@/lib/sequence";
 
 /**
  * The object page: one shared layout for every catalogued piece of hardware.
@@ -36,15 +38,20 @@ import { hasControls } from "@/lib/controls";
 export function ObjectPage({
   model,
   section,
+  neighbours,
 }: {
   model: ModelRecord;
   /** The collection this object belongs to, for the breadcrumb. */
   section: { label: string; href: string; kind?: Section };
+  /** Previous and next in the collection, if it has an order. */
+  neighbours?: Neighbours;
 }) {
   const archiveHref = originalArchiveHref(model.originalPath);
   const related = section.kind ? getRelated(section.kind, model.slug) : {};
   const { glance, detail } = partitionSpecs(model.specs);
   const hasImages = model.images.length > 0;
+  /* Photographers of anything not recovered from the archive. */
+  const credits = [...new Set(model.images.map((i) => i.credit).filter((c): c is string => Boolean(c)))];
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -197,15 +204,74 @@ export function ObjectPage({
         </div>
       )}
 
+      {/*
+       * Two provenance notes, because there are two kinds of page.
+       *
+       * Most are recovered from BolexCollector.com and say so. A few —
+       * models the original never covered — were researched and sourced
+       * since, and must not borrow the archive's authority by implying they
+       * came from it. Getting this wrong would be the quietest and worst
+       * failure this site could have.
+       */}
       <aside className="rule mt-14 max-w-3xl pt-4 font-[family-name:var(--font-mono)] text-xs leading-relaxed text-[var(--fg-soft)]">
         <span className="uppercase tracking-[0.18em]">Provenance — </span>
-        Recovered from{" "}
-        <span className="text-[var(--fg)]">
-          {model.originalUrl ?? `bolexcollector.com${model.originalPath ?? ""}`}
-        </span>
-        {model.capturedAt ? `, Wayback capture ${model.capturedAt}` : ""}. Specifications and serial
-        ranges are reproduced verbatim from the archived page.
+        {model.recovered ? (
+          <>
+            Recovered from{" "}
+            <span className="text-[var(--fg)]">
+              {model.originalUrl ?? `bolexcollector.com${model.originalPath ?? ""}`}
+            </span>
+            {model.capturedAt ? `, Wayback capture ${model.capturedAt}` : ""}. Specifications and
+            serial ranges are reproduced verbatim from the archived page.
+          </>
+        ) : (
+          <>
+            <span className="text-[var(--fg)]">Not from the original site.</span> BolexCollector.com
+            never covered this model; the entry was researched and added since.
+            {credits.length > 0 && (
+              <>
+                {" "}
+                Photographs by{" "}
+                <span className="text-[var(--fg)]">{credits.join(", ")}</span>.
+              </>
+            )}
+
+            {/*
+             * The sources, actually listed. A page that says it was
+             * researched and then names nothing is asking to be taken on
+             * trust, which is the opposite of the point.
+             */}
+            {model.sources && model.sources.length > 0 && (
+              <ul className="mt-3 space-y-1.5">
+                {model.sources.map((s) => (
+                  <li key={s.title} className="flex gap-2">
+                    <span aria-hidden="true" className="text-[var(--accent)]">
+                      ·
+                    </span>
+                    <span>
+                      {s.url ? (
+                        <a
+                          href={s.url}
+                          target="_blank"
+                          rel="noreferrer nofollow"
+                          className="text-[var(--fg)] underline underline-offset-2 hover:text-[var(--accent)]"
+                        >
+                          {s.title}
+                        </a>
+                      ) : (
+                        <span className="text-[var(--fg)]">{s.title}</span>
+                      )}
+                      {s.note ? ` — ${s.note}` : ""}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </>
+        )}
       </aside>
+
+      {neighbours && <SequenceNav neighbours={neighbours} section={section} />}
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     </article>

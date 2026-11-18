@@ -50,7 +50,13 @@ test("every chosen thumbnail is a file that exists", () => {
   for (const item of everything()) {
     const thumb = thumbnailFor(item.section, item.slug, item.images);
     if (!thumb) continue;
-    const file = path.join(process.cwd(), "archive", "wayback", thumb.replace(/^\//, ""));
+    /*
+     * Recovered imagery lives in the archive; imagery sourced since lives in
+     * media/sourced and is served from /sourced/. Both must exist on disk.
+     */
+    const file = thumb.startsWith("/sourced/")
+      ? path.join(process.cwd(), "media", thumb.replace(/^\/sourced\//, "sourced/"))
+      : path.join(process.cwd(), "archive", "wayback", thumb.replace(/^\//, ""));
     assert.ok(fs.existsSync(file), `${item.section}/${item.slug} points at missing ${thumb}`);
   }
 });

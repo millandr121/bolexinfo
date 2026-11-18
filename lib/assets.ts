@@ -26,6 +26,38 @@ const CHROME_IMAGE =
 export interface ModelImage {
   src: string;
   alt: string;
+  /**
+   * Who took it, when the photograph was not recovered from the archive.
+   *
+   * Its presence is what marks an image as sourced rather than preserved.
+   * The site's claim is that everything on it is either recovered from
+   * BolexCollector.com or sourced and attributed, and that claim is only
+   * worth anything if the two are told apart on the page as well as in the
+   * data.
+   */
+  credit?: string;
+  /** Where it came from, if not the photographer directly. */
+  source?: string;
+}
+
+/**
+ * Images contributed for a model the archive never covered.
+ *
+ * Served from /sourced/ rather than /images/, staged out of the committed
+ * media/sourced/ tree. Anything without a credit is dropped: an unattributed
+ * photograph is exactly what this project must not publish.
+ */
+export function sourcedImages(images: ModelImage[] | undefined): ModelImage[] {
+  if (!images) return [];
+  const out: ModelImage[] = [];
+  for (const img of images) {
+    if (!img.src.startsWith("/sourced/")) continue;
+    if (!img.credit?.trim()) continue;
+    const onDisk = path.join(ROOT, "media", img.src.replace(/^\/sourced\//, "sourced/"));
+    if (!fs.existsSync(onDisk)) continue;
+    out.push(img);
+  }
+  return out;
 }
 
 /** Keep only real, on-disk content images (drops chrome and never-recovered files). */

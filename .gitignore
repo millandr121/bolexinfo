@@ -22,6 +22,7 @@ npm-debug.log*
 # Derived copies staged into /public from the committed archive at build time
 # (scripts/stage-archive.ts). The canonical bytes live in /archive/wayback.
 /public/images/
+/public/sourced/
 /public/original/
 /public/search-index.json
 /public/feed.xml
