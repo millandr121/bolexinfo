@@ -341,3 +341,44 @@ html[data-featured="2"] .featured-slot[data-slot="2"] {
 html:not([data-featured]) .featured-slot[data-slot="0"] {
   display: block;
 }
+
+/*
+ * The timeline, read like credits.
+ *
+ * Each beat carries a --lit value between 0 and 1, set from its distance to
+ * a focal line a little above the middle of the screen. The script writes
+ * the number; everything visual happens here, so the page still renders
+ * correctly before the script runs and if it never does.
+ *
+ * The floor of 0.18 rather than 0 matters: a reader who stops halfway must
+ * never be looking at a blank screen, and text that fades to nothing cannot
+ * be selected or found with the browser's own search.
+ */
+.cinema [data-beat] {
+  opacity: calc(0.18 + 0.82 * var(--lit, 1));
+  transform: translateY(calc((1 - var(--lit, 1)) * 6px));
+  transition: opacity 120ms linear;
+}
+
+/*
+ * Motion off: no fading, no drift, nothing moving under the reader. The
+ * script does not autoplay in this case either, so this is the whole
+ * experience and it has to be a complete one.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .cinema [data-beat] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/*
+ * Printing, and any context without the script, gets the plain chronology.
+ */
+@media print {
+  .cinema [data-beat] {
+    opacity: 1;
+    transform: none;
+  }
+}

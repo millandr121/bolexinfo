@@ -23,6 +23,7 @@ import TurndownService from "turndown";
 import { paths } from "./lib/config";
 import { analyzePage, parseSerialRanges } from "./lib/html";
 import { archiveLocation, loadManifest, writeJson } from "./lib/store";
+import { readArchiveHtml } from "../lib/archive-text";
 
 const turndown = new TurndownService({ headingStyle: "atx", codeBlockStyle: "fenced" });
 
@@ -71,7 +72,9 @@ function main() {
   for (const asset of pages) {
     const file = archiveLocation(asset.urlPath);
     if (!fs.existsSync(file)) continue;
-    const html = fs.readFileSync(file, "latin1");
+    // Not latin1: the archive is UTF-8, and decoding it as Latin-1 is what
+    // baked "PathÃ© FrÃ¨res" into the extracted JSON. See lib/archive-text.ts.
+    const html = readArchiveHtml(file);
     const analysis = analyzePage(html, asset.urlPath);
     const section = SECTION_OF(asset.urlPath);
     const slug = slugOf(asset.urlPath);

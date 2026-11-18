@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { parse, type HTMLElement } from "node-html-parser";
+import { readArchiveHtml } from "./archive-text";
 
 const ROOT = process.cwd();
 
@@ -19,7 +20,7 @@ const ROOT = process.cwd();
 function readArchived(originalPath: string): HTMLElement | null {
   const file = path.join(ROOT, "archive", "wayback", originalPath.replace(/^\//, ""));
   if (!fs.existsSync(file)) return null;
-  const root = parse(fs.readFileSync(file, "latin1"));
+  const root = parse(readArchiveHtml(file));
   const content = root.querySelector("#content");
   if (!content) return null;
   content.querySelectorAll("script, style").forEach((el) => el.remove());

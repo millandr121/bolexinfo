@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { parse } from "node-html-parser";
 import { cleanImages, type ModelImage } from "./assets";
+import { readArchiveHtml } from "./archive-text";
 
 /**
  * Generic renderer source for recovered pages whose value is narrative rather
@@ -75,7 +76,7 @@ export function readContentBlocks(originalPath: string | undefined): ContentBloc
   const file = path.join(ROOT, "archive", "wayback", originalPath.replace(/^\//, ""));
   if (!fs.existsSync(file)) return [];
 
-  const root = parse(fs.readFileSync(file, "latin1"));
+  const root = parse(readArchiveHtml(file));
   const content = root.querySelector("#content");
   if (!content) return [];
   content.querySelectorAll("script, style").forEach((el) => el.remove());
