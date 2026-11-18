@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ObjectPage } from "@/components/ObjectPage";
 import { getProjectorRecords } from "@/lib/museum";
+import { resolveNeighbours } from "@/lib/sequence";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -32,5 +33,17 @@ export default async function ProjectorPage({ params }: Props) {
   const model = record(slug);
   if (!model) notFound();
 
-  return <ObjectPage model={model} section={{ label: "Projectors", href: "/projectors", kind: "projectors" }} />;
+  const neighbours = resolveNeighbours(
+    "projectors",
+    slug,
+    getProjectorRecords().map((m) => ({ slug: m.slug, label: m.name })),
+  );
+
+  return (
+    <ObjectPage
+      model={model}
+      section={{ label: "Projectors", href: "/projectors", kind: "projectors" }}
+      neighbours={neighbours}
+    />
+  );
 }

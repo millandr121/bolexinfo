@@ -8,6 +8,8 @@ import type { ModelRecord } from "@/lib/museum";
 import { getRelated, type Section } from "@/lib/related";
 import { originalArchiveHref } from "@/lib/archive";
 import { hasControls } from "@/lib/controls";
+import { SequenceNav } from "@/components/SequenceNav";
+import type { Neighbours } from "@/lib/sequence";
 
 /**
  * The object page: one shared layout for every catalogued piece of hardware.
@@ -36,10 +38,13 @@ import { hasControls } from "@/lib/controls";
 export function ObjectPage({
   model,
   section,
+  neighbours,
 }: {
   model: ModelRecord;
   /** The collection this object belongs to, for the breadcrumb. */
   section: { label: string; href: string; kind?: Section };
+  /** Previous and next in the collection, if it has an order. */
+  neighbours?: Neighbours;
 }) {
   const archiveHref = originalArchiveHref(model.originalPath);
   const related = section.kind ? getRelated(section.kind, model.slug) : {};
@@ -206,6 +211,8 @@ export function ObjectPage({
         {model.capturedAt ? `, Wayback capture ${model.capturedAt}` : ""}. Specifications and serial
         ranges are reproduced verbatim from the archived page.
       </aside>
+
+      {neighbours && <SequenceNav neighbours={neighbours} section={section} />}
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     </article>
