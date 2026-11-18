@@ -11,8 +11,17 @@ import path from "node:path";
 
 const ROOT = process.cwd();
 
-/** Tracking pixels, share widgets, and layout spacers — never real content. */
-const CHROME_IMAGE = /addthis|facebook|twitter|s7\.addthis|\bshare\b|feedburner|rss|paypal|spacer|blank\.gif|pixel|logo/i;
+/**
+ * Tracking pixels, share widgets, layout spacers — never real content.
+ *
+ * `_instruction` is in here for a different reason: on the H-16 Reflex page
+ * it is a 100×100 icon that linked to the controls figures, not a photograph
+ * of the camera. Left in, it showed up in the gallery as a third picture
+ * that was really a thumbnail of a thumbnail, pointing nowhere. The page it
+ * led to is now a route of its own — see lib/controls.ts.
+ */
+const CHROME_IMAGE =
+  /addthis|facebook|twitter|s7\.addthis|\bshare\b|feedburner|rss|paypal|spacer|blank\.gif|pixel|logo|_instruction\./i;
 
 export interface ModelImage {
   src: string;

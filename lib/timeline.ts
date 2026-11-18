@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { parse } from "node-html-parser";
+import { readArchiveHtml } from "./archive-text";
 
 /**
  * The Paillard timeline.
@@ -42,7 +43,7 @@ export function getTimeline(): Timeline {
 
   if (!fs.existsSync(file)) return { intro: [], eras: [], ...meta };
 
-  const root = parse(fs.readFileSync(file, "latin1"));
+  const root = parse(readArchiveHtml(file));
   const content = root.querySelector("#content");
   if (!content) return { intro: [], eras: [], ...meta };
   content.querySelectorAll("script, style").forEach((el) => el.remove());

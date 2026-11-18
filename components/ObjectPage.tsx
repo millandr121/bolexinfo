@@ -7,6 +7,7 @@ import { partitionSpecs } from "@/lib/specs";
 import type { ModelRecord } from "@/lib/museum";
 import { getRelated, type Section } from "@/lib/related";
 import { originalArchiveHref } from "@/lib/archive";
+import { hasControls } from "@/lib/controls";
 
 /**
  * The object page: one shared layout for every catalogued piece of hardware.
@@ -70,6 +71,20 @@ export function ObjectPage({
         <h1 className="mt-4 font-[family-name:var(--font-display)] text-4xl sm:text-5xl font-[560] tracking-tight">
           {model.name}
         </h1>
+        {/*
+         * Where the original published a numbered figure set, it is offered
+         * as a real link rather than the 100×100 icon it used to hide behind
+         * in the photo gallery. Only one model has one, so this appears once.
+         */}
+        {section.kind === "cameras" && hasControls(model.slug) && (
+          <Link
+            href={`/cameras/${model.slug}/controls`}
+            className="tap-target mt-5 gap-2 border border-[var(--line)] px-4 text-[0.72rem] uppercase tracking-[0.12em] text-[var(--fg-soft)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors"
+          >
+            What everything is called
+            <span aria-hidden="true">→</span>
+          </Link>
+        )}
         <dl className="mt-6 flex flex-wrap gap-x-10 gap-y-3 font-[family-name:var(--font-mono)] text-sm border-y border-[var(--line)] py-4">
           {model.format && <Fact label="Format">{model.format}</Fact>}
           <Fact label="Introduced">{model.introduced ?? "—"}</Fact>

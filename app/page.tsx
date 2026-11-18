@@ -3,10 +3,19 @@ import { Reveal } from "@/components/Reveal";
 import { OriginalFrame } from "@/components/OriginalFrame";
 import { SerialLookup } from "@/app/serials/SerialLookup";
 import { LookupCta } from "@/components/LookupCta";
+import { Icon } from "@/components/Icons";
 import { getSerialDataset } from "@/lib/content";
 import { serialModels } from "@/lib/serial-models";
 import { FEATURED_LINKS } from "@/lib/featured";
 import { FACEBOOK_GROUP_URL } from "@/lib/community";
+
+/*
+ * The three cards' icons. Sized to read at a glance without competing with
+ * the heading under them, and quiet until the card is hovered — they are
+ * there to make the row scannable, not to be the loudest thing on the page.
+ */
+const CARD_ICON =
+  "h-7 w-7 text-[var(--fg-soft)] group-hover:text-[var(--accent)] transition-colors duration-300";
 
 export default function HomePage() {
   const dataset = getSerialDataset();
@@ -125,7 +134,8 @@ export default function HomePage() {
                 rel="noreferrer"
                 className="group flex h-full flex-col bg-[var(--bg)] p-7 hover:bg-[var(--bg-raised)] transition-colors duration-300"
               >
-                <h2 className="font-[family-name:var(--font-display)] text-2xl font-[560] group-hover:text-[var(--accent)] transition-colors duration-300">
+                <Icon name="facebook" className={CARD_ICON} />
+                <h2 className="mt-4 font-[family-name:var(--font-display)] text-2xl font-[560] group-hover:text-[var(--accent)] transition-colors duration-300">
                   Ask the group{" "}
                   <span aria-hidden="true" className="text-xs text-[var(--accent)] align-middle">
                     ↗
@@ -143,7 +153,8 @@ export default function HomePage() {
                 href="/technicians"
                 className="group flex h-full flex-col bg-[var(--bg)] p-7 hover:bg-[var(--bg-raised)] transition-colors duration-300"
               >
-                <h2 className="font-[family-name:var(--font-display)] text-2xl font-[560] group-hover:text-[var(--accent)] transition-colors duration-300">
+                <Icon name="wrench" className={CARD_ICON} />
+                <h2 className="mt-4 font-[family-name:var(--font-display)] text-2xl font-[560] group-hover:text-[var(--accent)] transition-colors duration-300">
                   Find a technician
                 </h2>
                 <p className="mt-3 text-sm leading-relaxed text-[var(--fg-soft)]">
@@ -165,7 +176,8 @@ export default function HomePage() {
                   href={link.href}
                   className="group flex h-full flex-col bg-[var(--bg)] p-7 hover:bg-[var(--bg-raised)] transition-colors duration-300"
                 >
-                  <h2 className="font-[family-name:var(--font-display)] text-2xl font-[560] group-hover:text-[var(--accent)] transition-colors duration-300">
+                  <Icon name={link.icon} className={CARD_ICON} />
+                  <h2 className="mt-4 font-[family-name:var(--font-display)] text-2xl font-[560] group-hover:text-[var(--accent)] transition-colors duration-300">
                     {link.label}
                   </h2>
                   <p className="mt-3 text-sm leading-relaxed text-[var(--fg-soft)]">{link.blurb}</p>

@@ -3,6 +3,7 @@ import path from "node:path";
 import { parse } from "node-html-parser";
 import { getCameraRecords, getProjectorRecords, type ModelRecord } from "./museum";
 import { accessoryTypeOf, decadeOf, getRecoveredSection } from "./recovered";
+import { readArchiveHtml } from "./archive-text";
 
 const ROOT = process.cwd();
 
@@ -35,7 +36,7 @@ export interface IndexGroup {
 export function getIndexGroups(section: Section): IndexGroup[] {
   const file = path.join(ROOT, "archive", "wayback", `${section}.html`);
   if (!fs.existsSync(file)) return [];
-  const content = parse(fs.readFileSync(file, "latin1")).querySelector("#content");
+  const content = parse(readArchiveHtml(file)).querySelector("#content");
   if (!content) return [];
 
   const groups: IndexGroup[] = [];
