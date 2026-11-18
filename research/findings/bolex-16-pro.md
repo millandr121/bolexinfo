@@ -70,28 +70,56 @@ and silent.
 - **Build** — most components are plug-in modules in an araldite sealing
   compound, meant to be exchanged by the user rather than sent for service.
 
+## Dating it — what the price lists show
+
+The brochure does not date the model, so Paillard's own price lists were
+read to bracket it. Both from Pacific Rim, both read 2026-11-18.
+
+- **Dealer's Confidential Price List, H-16, 15 May 1967**
+  (`rl/04933/04933.pdf`) — no 16 Pro. Weak evidence on its own: the sheet
+  is specifically the H-16 range, so a professional camera could sit on
+  another.
+- **Bolex 16mm Confidential Price List, 23 February 1972**
+  (`rl/04932/04932.pdf`) — three pages covering the whole 16mm line: H-16
+  EBM, H-16 spring-wound, Rex-5, every lens and accessory. **No 16 Pro.**
+  This one is strong, because the scope is exactly where it would belong.
+
+So the bracket, from primary sources:
+
+> **Being marketed July 1970. Off Paillard's US 16mm price list by
+> February 1972.**
+
+The introduction date remains **c. 1966**, and remains secondary — accounts
+place it against the Arriflex 16 BL, but no primary source for the year has
+been found. One collector listing dates examples to about 1974, which fits
+badly with its absence from the 1972 list and may be a later production run
+or simply wrong.
+
+## Serial numbers — nothing found
+
+No serial table or range for the 16 Pro turned up in the brochure, either
+price list, or the recovered archive. This site's serial lookup covers only
+the cameras whose own archived pages published range tables, and the 16 Pro
+never had a page here at all. It is genuinely absent rather than pending.
+
+The remaining places worth trying: the Oct 1976, Jan 1978 and Nov 1979 price
+lists, the Bolex catalogues (1946, Feb 1952, Nov 1952, Feb 1965), and the
+29 technical bulletins, which are service documents and the likeliest to
+carry serial ranges.
+
 ## What we still need
 
-- **Years.** The brochure is c. July 1970; it does not say when the model
-  was introduced or discontinued. A catalogue or price list would settle
-  it — Pacific Rim has 16mm price lists for Feb 1972, Oct 1976, Jan 1978
-  and Nov 1979, which would at least bracket how long it was sold.
+- **A primary source for the introduction year.**
 - **Lens mount.** The brochure never names it. The photographs show a large
   bayonet with an Angénieux 12-120mm f/2.2 zoom fitted.
 - **Where it belongs in Michael's sequence**, if it is to join the
   prev/next chain rather than sit at the end.
 
-## The photographs
+## The photographs — published
 
-Five images of a 16 Pro 100, 2000px wide — far better than anything in the
-archive, which tops out at 480px. Staged at
-`research/pending-media/16pro/`, **not published**.
+Five images of a 16 Pro 100, 2000px wide, photographed by **Cesar
+Ballesteros Dominguez** and credited to him on the page and in the data.
 
-They are held back for one reason: **nobody has said where they came from.**
-They look like dealer or auction photography — white sweep, consistent
-lighting, a set shot together. If they are the site owner's own, they can
-go up immediately. If they were saved from a listing or a group post, the
-photographer owns them and this archive would be republishing someone's work
-without asking, which is the one thing it exists not to do.
-
-Needed before publishing: who took them, or where they were found.
+Cut out to transparent WebP and served from `/sourced/`, never from
+`/images/`: the archive is a record of what BolexCollector.com held, and a
+photograph taken since is not part of that record however good it is.

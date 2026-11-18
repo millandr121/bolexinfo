@@ -232,7 +232,7 @@
       "name": "16 Pro",
       "format": "16mm",
       "introduced": 1966,
-      "summary": "Professional 16mm camera with a built-in three-phase Vario-Synchro motor, 132° mirror shutter and a 400ft coaxial two-chamber magazine that threads itself in under four seconds. Sold in single and double system sound versions, each at 16–50 f.p.s. or, as the 16 Pro 100, 16–100 f.p.s.",
+      "summary": "Professional 16mm camera with a built-in three-phase Vario-Synchro motor, 132° mirror shutter and a 400ft coaxial two-chamber magazine that threads itself in under four seconds. Sold in single and double system sound versions, each at 16–50 f.p.s. or, as the 16 Pro 100, 16–100 f.p.s. Still being marketed in July 1970; gone from Paillard's US 16mm price list by February 1972.",
       "recovery": "pending",
       "images": [
         {
@@ -259,6 +259,22 @@
           "src": "/sourced/cameras/16pro/16pro100-front-lens-cap.webp",
           "alt": "Bolex 16 Pro 100 from the front, lens cap reading 16 PRO 100",
           "credit": "Cesar Ballesteros Dominguez"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Bolex 16 Pro sales brochure, Paillard Inc.",
+          "url": "https://www.pacificrimcamera.com/rl/00936/00936.pdf",
+          "note": "the manufacturer's own; every specification here comes from it. Dating code 7/70"
+        },
+        {
+          "title": "Bolex 16mm confidential price list, February 1972",
+          "url": "https://www.pacificrimcamera.com/rl/04932/04932.pdf",
+          "note": "lists the H-16 EBM, spring-wound and Rex-5 but not the 16 Pro, so it had left the US list by then"
+        },
+        {
+          "title": "Introduction date, c. 1966",
+          "note": "secondary and not confirmed here: accounts place it against the Arriflex 16 BL. No primary source for the year has been found"
         }
       ]
     }

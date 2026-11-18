@@ -227,14 +227,45 @@ export function ObjectPage({
         ) : (
           <>
             <span className="text-[var(--fg)]">Not from the original site.</span> BolexCollector.com
-            never covered this model; the entry was researched and added since, from the sources
-            named below.
+            never covered this model; the entry was researched and added since.
             {credits.length > 0 && (
               <>
                 {" "}
                 Photographs by{" "}
                 <span className="text-[var(--fg)]">{credits.join(", ")}</span>.
               </>
+            )}
+
+            {/*
+             * The sources, actually listed. A page that says it was
+             * researched and then names nothing is asking to be taken on
+             * trust, which is the opposite of the point.
+             */}
+            {model.sources && model.sources.length > 0 && (
+              <ul className="mt-3 space-y-1.5">
+                {model.sources.map((s) => (
+                  <li key={s.title} className="flex gap-2">
+                    <span aria-hidden="true" className="text-[var(--accent)]">
+                      ·
+                    </span>
+                    <span>
+                      {s.url ? (
+                        <a
+                          href={s.url}
+                          target="_blank"
+                          rel="noreferrer nofollow"
+                          className="text-[var(--fg)] underline underline-offset-2 hover:text-[var(--accent)]"
+                        >
+                          {s.title}
+                        </a>
+                      ) : (
+                        <span className="text-[var(--fg)]">{s.title}</span>
+                      )}
+                      {s.note ? ` — ${s.note}` : ""}
+                    </span>
+                  </li>
+                ))}
+              </ul>
             )}
           </>
         )}

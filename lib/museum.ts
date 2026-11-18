@@ -65,6 +65,12 @@ interface SeedEntry {
    * needs a credit; see sourcedImages in ./assets.
    */
   images?: ModelImage[];
+  /**
+   * Where the entry's facts came from, for a model the archive never
+   * covered. The provenance note promises these, so a sourced entry
+   * without them is not publishable.
+   */
+  sources?: Array<{ title: string; url?: string; note?: string }>;
 }
 
 export interface ModelRecord {
@@ -81,6 +87,8 @@ export interface ModelRecord {
   originalUrl?: string;
   capturedAt?: string;
   recovered: boolean;
+  /** Cited sources, for an entry that was researched rather than recovered. */
+  sources?: Array<{ title: string; url?: string; note?: string }>;
 }
 
 // ————————————————————————————————————————————————————————————————
@@ -271,6 +279,7 @@ function reconcile(seedFile: string, extractedDir: string): ModelRecord[] {
       originalUrl: e?.originalUrl,
       capturedAt: e?.capturedAt,
       recovered: Boolean(e),
+      ...(s?.sources?.length ? { sources: s.sources } : {}),
     });
   }
 
