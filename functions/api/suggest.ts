@@ -73,10 +73,33 @@ async function fingerprint(request: Request): Promise<string> {
   return [...new Uint8Array(digest)].slice(0, 16).map((b) => b.toString(16).padStart(2, "0")).join("");
 }
 
-/** Whether uploads are possible, so the form can ask for files or not. */
+/**
+ * What the box can actually do, so the form can ask rather than assume.
+ *
+ * `ready` means a suggestion sent right now would be stored — which takes
+ * more than a binding. A database can be bound and still have no tables in
+ * it, and that was worth getting right: reporting ready on the binding alone
+ * told the sender their correction would be kept, then lost it to a generic
+ * server error. The table is checked, not the binding.
+ */
 export const onRequestGet: PagesFunction<Env> = async ({ env }) => {
+  let ready = false;
+  let reason: string | undefined;
+
+  if (!env.DB) {
+    reason = "no-binding";
+  } else {
+    try {
+      await env.DB.prepare("SELECT 1 FROM suggestions LIMIT 1").all();
+      ready = true;
+    } catch {
+      reason = "no-schema";
+    }
+  }
+
   return json({
-    ready: Boolean(env.DB),
+    ready,
+    reason,
     media: Boolean(env.SUGGESTIONS_MEDIA),
     maxFileBytes: LIMITS.fileBytes,
     maxFiles: LIMITS.files,
@@ -180,10 +203,17 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
         request.headers.get("user-agent")?.slice(0, 400) ?? null,
       )
       .run();
-  } catch {
+  } catch (cause) {
+    /* "no such table" is a setup fault, not a passing failure, and telling
+       someone to "try again" would send them round the same wall. */
+    const missing = String(cause).includes("no such table");
     return json(
-      { error: "The suggestion could not be saved. Nothing was lost on your side — please try again." },
-      500,
+      {
+        error: missing
+          ? "The suggestion box is not finished being set up — its database has no tables yet."
+          : "The suggestion could not be saved. Nothing was lost on your side — please try again.",
+      },
+      missing ? 503 : 500,
     );
   }
 

@@ -26,3 +26,7 @@ npm-debug.log*
 /public/original/
 /public/search-index.json
 /public/feed.xml
+
+# Wrangler's local state, written when running the Pages function
+# against a local D1. Never part of the site.
+.wrangler/
