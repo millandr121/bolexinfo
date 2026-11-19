@@ -2,6 +2,7 @@ import Link from "next/link";
 import { SearchButton } from "./SearchPalette";
 import { DesktopNav, SectionRail } from "./NavLinks";
 import { RevisitButton } from "./RevisitButton";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function SiteHeader() {
   return (
@@ -31,6 +32,7 @@ export function SiteHeader() {
         {/* Tools, kept together and apart from the sections in the nav. */}
         <div className="flex shrink-0 items-center gap-2">
           <RevisitButton />
+          <ThemeToggle className="flex h-[30px] w-[30px] shrink-0 items-center justify-center border border-[var(--line)] bg-[var(--bg-raised)] text-[var(--fg-soft)] transition-colors duration-200 hover:border-[var(--accent)] hover:text-[var(--fg)]" />
           <SearchButton />
         </div>
       </div>

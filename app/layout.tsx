@@ -1,4 +1,5 @@
 import { VIEW_INIT_SCRIPT } from "@/lib/view-preference";
+import { THEME_INIT_SCRIPT } from "@/lib/theme-preference";
 import { FEATURED_INIT_SCRIPT } from "@/lib/featured";
 import type { Metadata, Viewport } from "next";
 import "@fontsource-variable/fraunces";
@@ -65,6 +66,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <script dangerouslySetInnerHTML={{ __html: VIEW_INIT_SCRIPT }} />
       {/* Picks the rotating front-page card, before paint, for the same reason. */}
       <script dangerouslySetInnerHTML={{ __html: FEATURED_INIT_SCRIPT }} />
+      {/*
+       * Applies a stored light/dark choice, before paint. It sets nothing when
+       * the visitor has not chosen, leaving the stylesheet's
+       * `prefers-color-scheme` rules to follow the device.
+       */}
+      <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
       {/*
        * Entrance animations start from `opacity: 0` in the server-rendered
        * HTML and are revealed by the client. With scripting unavailable that
