@@ -9,6 +9,8 @@ import { getRelated, type Section } from "@/lib/related";
 import { originalArchiveHref } from "@/lib/archive";
 import { hasControls } from "@/lib/controls";
 import { SequenceNav } from "@/components/SequenceNav";
+import { BrowseCarousel } from "@/components/BrowseCarousel";
+import type { BrowseSection } from "@/lib/browse";
 import type { Neighbours } from "@/lib/sequence";
 
 /**
@@ -39,12 +41,15 @@ export function ObjectPage({
   model,
   section,
   neighbours,
+  browse,
 }: {
   model: ModelRecord;
   /** The collection this object belongs to, for the breadcrumb. */
   section: { label: string; href: string; kind?: Section };
   /** Previous and next in the collection, if it has an order. */
   neighbours?: Neighbours;
+  /** Everything there is to browse between, for the shelf at the foot. */
+  browse?: { index: BrowseSection[]; sectionId: string };
 }) {
   const archiveHref = originalArchiveHref(model.originalPath);
   const related = section.kind ? getRelated(section.kind, model.slug) : {};
@@ -271,7 +276,36 @@ export function ObjectPage({
         )}
       </aside>
 
-      {neighbours && <SequenceNav neighbours={neighbours} section={section} />}
+      {/*
+       * One line, where a reader who has just found an error is looking.
+       * Carries the page with it, so the form opens knowing what it is about.
+       */}
+      <p className="rule mt-12 pt-4 font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.16em] text-[var(--fg-soft)]">
+        Something wrong, or something to add?{" "}
+        <Link
+          href={`/suggest?page=${encodeURIComponent(`${section.href}/${model.slug}`)}`}
+          className="text-[var(--accent)] underline underline-offset-2"
+        >
+          Tell us
+        </Link>
+      </p>
+
+      {/*
+       * The shelf replaces the previous/next pair that used to sit here. It
+       * reaches any object in a few taps instead of one at a time, and it
+       * keeps the archived order as a line inside itself rather than losing
+       * it. Where no browse index was supplied the old pair still stands.
+       */}
+      {browse ? (
+        <BrowseCarousel
+          index={browse.index}
+          currentSection={browse.sectionId}
+          currentSlug={model.slug}
+          neighbours={neighbours}
+        />
+      ) : (
+        neighbours && <SequenceNav neighbours={neighbours} section={section} />
+      )}
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     </article>

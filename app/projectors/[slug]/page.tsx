@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { ObjectPage } from "@/components/ObjectPage";
 import { getProjectorRecords } from "@/lib/museum";
 import { resolveNeighbours } from "@/lib/sequence";
+import { getBrowseIndex } from "@/lib/browse";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -44,6 +45,7 @@ export default async function ProjectorPage({ params }: Props) {
       model={model}
       section={{ label: "Projectors", href: "/projectors", kind: "projectors" }}
       neighbours={neighbours}
+      browse={{ index: getBrowseIndex(), sectionId: "projectors" }}
     />
   );
 }

@@ -56,6 +56,30 @@ Rough shape, not a committed design:
    shipped as a static asset fits that; a search server does not, without a
    deliberate decision to add one.
 
+### Where the corpus lives
+
+Decided 2026-11-19. The harvested post text is a **working research copy**,
+and it is kept out of this repository, which is public.
+
+This follows how an archive actually separates its material:
+
+| | where |
+|---|---|
+| Working corpus — raw post text, no right to redistribute | **private repo** `bolex-forum-archive` |
+| Finding aid — thread index, authors, dates, links | here, public. Already live |
+| Scholarship — our own writing, quoting with attribution | here, public |
+
+A note on an error made earlier: a "private branch of a public repo" was
+offered as an option and does not exist. Branches in a public repository
+are public. The only real choices were a separate private repo, rebuilding
+the corpus on demand, or publishing it.
+
+The private repo must be created by hand — this session's GitHub access is
+scoped to `bolexinfo` alone and cannot create repositories. Until it
+exists, the corpus lives only in a session scratchpad and a copy sent to
+Andrew directly; it is rebuildable in about 50 minutes from the method in
+`sources.md`.
+
 ### The line to hold
 
 Andrew's direction is to extract and use this knowledge, and that is the

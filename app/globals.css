@@ -59,6 +59,16 @@
   color-scheme: light;
 }
 
+/*
+ * Dark mode applies in two cases: the device asks for it, or the visitor
+ * picked it. The declarations are shared so the two can never drift apart.
+ *
+ * `:root[data-theme="light"]` below wins over the media query on specificity
+ * alone — an attribute selector on top of `:root` beats a bare `:root`
+ * whatever the source order — which is what lets someone keep a light page on
+ * a device set to dark. With no attribute at all, nothing overrides and the
+ * device's preference stands, which is the right default.
+ */
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: var(--color-night);
@@ -70,6 +80,28 @@
     --accent-soft: var(--color-ember-soft);
     color-scheme: dark;
   }
+}
+
+:root[data-theme="dark"] {
+  --bg: var(--color-night);
+  --bg-raised: var(--color-night-raised);
+  --fg: var(--color-bone);
+  --fg-soft: var(--color-bone-soft);
+  --line: var(--color-night-line);
+  --accent: var(--color-ember);
+  --accent-soft: var(--color-ember-soft);
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  --bg: var(--color-paper);
+  --bg-raised: var(--color-paper-raised);
+  --fg: var(--color-ink);
+  --fg-soft: var(--color-ink-soft);
+  --line: var(--color-line);
+  --accent: var(--color-accent);
+  --accent-soft: var(--color-accent-soft);
+  color-scheme: light;
 }
 
 html {

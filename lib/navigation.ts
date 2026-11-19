@@ -54,6 +54,7 @@ export const NAVIGATION: readonly NavEntry[] = [
       { href: "/timeline", label: "Timeline", blurb: "Paillard, 1814 onwards" },
       { href: "/glossary", label: "Glossary", blurb: "The terms, defined" },
       { href: "/links", label: "Links", blurb: "Resources worth your time" },
+      { href: "/suggest", label: "Suggest an edit", blurb: "Corrections, photographs, what you know" },
     ],
   },
   {
