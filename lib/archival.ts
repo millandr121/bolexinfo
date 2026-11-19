@@ -55,6 +55,13 @@ export const CC_BY_SA_4: Licence = {
   href: "https://creativecommons.org/licenses/by-sa/4.0/",
 };
 
+export const CC_BY_NC_ND_4: Licence = {
+  name: "CC BY-NC-ND 4.0",
+  href: "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+  noDerivatives: true,
+  nonCommercial: true,
+};
+
 export interface ArchivalPhotograph {
   slug: string;
   src: string;
@@ -63,8 +70,19 @@ export interface ArchivalPhotograph {
   title: string;
   /** As precise as the record is, in words rather than a date format. */
   when: string;
-  /** The year it belongs to, for matching against the chronology. */
-  year: string;
+  /**
+   * The chronology year this photograph may be shown against, where the
+   * entry for that year genuinely concerns what the photograph shows.
+   *
+   * Absent means the photograph lives on this page only, and that is the
+   * normal case rather than a gap. 1964's entry is a list of models that
+   * includes the K2 Automatic, so a photograph of a K2 belongs there; the
+   * Expo 64 prospectus is from the same year and the entry says nothing
+   * about Expo 64, so putting it on that panel would be decoration
+   * standing in for a connection. Same test the catalogue plates have to
+   * pass, applied by hand because there are nine of these.
+   */
+  year?: string;
   /** What it shows and why it is here. Ours, not the institution's. */
   note: string;
   photographer: string;
@@ -85,7 +103,6 @@ export const ARCHIVAL_PHOTOGRAPHS: readonly ArchivalPhotograph[] = [
       "the upper reel full and the lower one part-wound.",
     title: "A Paillard cine projector",
     when: "10 January 1937",
-    year: "1937",
     note:
       "Photographed on a glass plate in a studio, lit to show the mechanism. " +
       "The Paillard name is legible on the lower reel. This is the earliest " +
@@ -105,7 +122,6 @@ export const ARCHIVAL_PHOTOGRAPHS: readonly ArchivalPhotograph[] = [
       "tilted upward with a lens and solar attachment fitted.",
     title: "A Paillard 16mm camera rigged for an eclipse",
     when: "December 1951",
-    year: "1951",
     note:
       "Built into a mount for the Swiss Federal Observatory to film the " +
       "total solar eclipse, ordered by Max Waldmeier, ETH professor of " +
@@ -126,7 +142,6 @@ export const ARCHIVAL_PHOTOGRAPHS: readonly ArchivalPhotograph[] = [
       "building with PAILLARD S.A. in raised letters above the entrance.",
     title: "Outside the works at Sainte-Croix",
     when: "1950s",
-    year: "1955",
     note:
       "Paillard periodically invited its dealers to tour the Sainte-Croix " +
       "workshops so that the people selling the cameras had seen them made. " +
@@ -147,7 +162,6 @@ export const ARCHIVAL_PHOTOGRAPHS: readonly ArchivalPhotograph[] = [
       "the women in suits and hats, the men in overcoats.",
     title: "The dealers arrive",
     when: "1950s",
-    year: "1955",
     note:
       "The same visit, as the coach brings the party up from Yverdon.",
     photographer: "Paillard SA",
@@ -178,6 +192,65 @@ export const ARCHIVAL_PHOTOGRAPHS: readonly ArchivalPhotograph[] = [
     licence: CC_BY_SA_4,
   },
   {
+    slug: "k2-trafalgar-square",
+    src: "/archival/k2-trafalgar-square.webp",
+    alt:
+      "A young man in sunglasses filming with a Bolex Paillard K2 in " +
+      "Trafalgar Square, a pigeon standing on top of the camera and another " +
+      "perched on his shoulder, the National Gallery behind him.",
+    title: "Filming in Trafalgar Square with a K2",
+    when: "1960s",
+    year: "1964",
+    note:
+      "Jean-Fred Friederich, who has filmed on Bolex cameras since 1963, " +
+      "photographed by his brother Eric while being overrun by pigeons. He " +
+      "rates the K2 the best of them for its Kern-Switar lens, and his 8mm " +
+      "film Trois jours à Londres came out of this trip. The record's period " +
+      "field reads 1930s, which the colour film and the camera both " +
+      "contradict; the 1960s is his own account.",
+    photographer: "Eric Friederich",
+    collection: "notreHistoire.ch, published by Jean-Fred Friederich",
+    reference: "Caméra Bolex Paillard K2 à Trafalgar Square Londres",
+    source: "https://notrehistoire.ch/documents/01kqfbvc263cgzzh3e9w7yeeh0",
+    licence: CC_BY_NC_ND_4,
+  },
+  {
+    slug: "route-bolex-expo64-recto",
+    src: "/archival/route-bolex-expo64-recto.webp",
+    alt:
+      "A folded four-language prospectus headed ROUTE BOLEX, with a red " +
+      "and black cover showing a man filming on a tripod, the Bolex Paillard " +
+      "roundel and a Swiss cross.",
+    title: "The Route Bolex prospectus for Expo 64",
+    when: "1964",
+    note:
+      "For the Swiss National Exhibition at Lausanne, 30 April to 25 October " +
+      "1964, Paillard marked out a route through the grounds for amateur " +
+      "film-makers, signposting the best places to shoot so that a visitor " +
+      "came home with a film that cut together. The leaflet went to photographic " +
+      "shops across Switzerland and is printed in French, German, Italian and " +
+      "English. This copy carries the stamp of Foto Studio L. Abächerli of " +
+      "Lugano, the shop whose dealers' visit to Sainte-Croix appears above.",
+    photographer: "Photographer unrecorded",
+    collection: "notreHistoire.ch, published by Claudio Abächerli",
+    reference: "La Route Bolex à l’Expo 64 à Lausanne — Recto",
+    source: "https://notrehistoire.ch/documents/01k81cwmrt2e2wq635hk15b95r",
+    licence: CC_BY_NC_ND_4,
+  },
+  {
+    slug: "route-bolex-expo64-verso",
+    src: "/archival/route-bolex-expo64-verso.webp",
+    alt: "The reverse of the Route Bolex prospectus.",
+    title: "The Route Bolex prospectus, reverse",
+    when: "1964",
+    note: "The other side of the same leaflet.",
+    photographer: "Photographer unrecorded",
+    collection: "notreHistoire.ch, published by Claudio Abächerli",
+    reference: "La Route Bolex à l’Expo 64 à Lausanne — Verso",
+    source: "https://notrehistoire.ch/documents/01k81cwmrt2e2wq635hk15b960",
+    licence: CC_BY_NC_ND_4,
+  },
+  {
     slug: "sainte-croix-works-1996",
     src: "/archival/eth-sik-03-080632.jpg",
     alt:
@@ -185,7 +258,6 @@ export const ARCHIVAL_PHOTOGRAPHS: readonly ArchivalPhotograph[] = [
       "gabled house standing in front of it and a grass slope below.",
     title: "The Paillard-Bolex-Hermes works, Sainte-Croix",
     when: "November 1996",
-    year: "1996",
     note:
       "Photographed by the industrial historian Hans-Peter Bärtschi, who " +
       "spent his working life recording Swiss industry as it closed. The " +
@@ -202,7 +274,7 @@ export const ARCHIVAL_PHOTOGRAPHS: readonly ArchivalPhotograph[] = [
 
 /** Photographs belonging to a given chronology year, if any. */
 export function archivalFor(year: string): ArchivalPhotograph[] {
-  return ARCHIVAL_PHOTOGRAPHS.filter((p) => p.year === year);
+  return ARCHIVAL_PHOTOGRAPHS.filter((p) => p.year !== undefined && p.year === year);
 }
 
 /** One credit line, the same wherever a photograph appears. */

@@ -107,11 +107,58 @@ test("a photograph placed on the timeline uses a year the timeline has", () => {
     getTimeline().eras.flatMap((era) => era.entries.map((entry) => entry.year)),
   );
   for (const p of ARCHIVAL_PHOTOGRAPHS) {
-    if (!years.has(p.year)) continue;
+    if (p.year === undefined) continue;
+    assert.ok(
+      years.has(p.year),
+      `${p.slug} is filed under ${p.year}, which the chronology does not have`,
+    );
     assert.ok(
       archivalFor(p.year).some((x) => x.slug === p.slug),
       `${p.slug} claims ${p.year} but is not returned for it`,
     );
+  }
+});
+
+/*
+ * A photograph with no year is page-only, and must stay off the timeline.
+ * The Expo 64 prospectus is the case this protects: it is from 1964 and
+ * the 1964 entry is a list of camera models that says nothing about the
+ * exhibition, so putting it there would be decoration standing in for a
+ * connection — the exact habit the matcher rewrite removed.
+ */
+test("a photograph with no year never reaches the timeline", () => {
+  const pageOnly = ARCHIVAL_PHOTOGRAPHS.filter((p) => p.year === undefined);
+  assert.ok(pageOnly.length > 0, "expected some page-only photographs");
+  const placed = new Set(
+    [...getTimelineMedia().values()].flat().map((picture) => picture.href),
+  );
+  for (const p of pageOnly) {
+    assert.ok(
+      !placed.has(`/photographs#${p.slug}`),
+      `${p.slug} has no year but appears on the timeline`,
+    );
+  }
+});
+
+/*
+ * Where a photograph does claim a year, the entry for that year has to
+ * name what it shows. Both current placements are models named outright
+ * in their entry: the 150 Super in 1967, the K2 in 1964.
+ */
+test("a timeline placement is backed by the entry's own words", () => {
+  const entries = new Map(
+    getTimeline().eras.flatMap((era) => era.entries.map((e) => [e.year, e.event] as const)),
+  );
+  const EXPECTED: Record<string, RegExp> = {
+    "bolex-150-super-1967": /150 Super/i,
+    "k2-trafalgar-square": /\bK2\b/i,
+  };
+  for (const p of ARCHIVAL_PHOTOGRAPHS) {
+    if (p.year === undefined) continue;
+    const pattern = EXPECTED[p.slug];
+    assert.ok(pattern, `${p.slug} is on the timeline with no stated justification`);
+    const text = entries.get(p.year) ?? "";
+    assert.match(text, pattern, `${p.year} no longer names what ${p.slug} shows`);
   }
 });
 

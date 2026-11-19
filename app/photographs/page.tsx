@@ -116,6 +116,17 @@ export default function PhotographsPage() {
                     >
                       {photo.licence.name}
                     </a>
+                    {/*
+                      Spelled out rather than left as an acronym. These are
+                      obligations this site is under, and a reader who wants
+                      to reuse the photograph themselves is under them too.
+                    */}
+                    {(photo.licence.nonCommercial || photo.licence.noDerivatives) && (
+                      <span className="block mt-1 text-[0.62rem] leading-relaxed normal-case tracking-normal">
+                        {photo.licence.nonCommercial && "Non-commercial use. "}
+                        {photo.licence.noDerivatives && "Shown unaltered, as the licence requires."}
+                      </span>
+                    )}
                   </dd>
 
                   <dt className="mt-3 uppercase tracking-[0.18em] text-[0.62rem]">
