@@ -58,27 +58,26 @@ Rough shape, not a committed design:
 
 ### Where the corpus lives
 
-Decided 2026-11-19. The harvested post text is a **working research copy**,
-and it is kept out of this repository, which is public.
+Decided 2026-11-19, and then changed the same day.
 
-This follows how an archive actually separates its material:
+The first decision was to hold the harvested post text privately: a working
+research copy, kept out of a public repository, with only the finding aid
+and the scholarship published. That is how an archive normally separates its
+material and it is still the tidier answer.
 
-| | where |
-|---|---|
-| Working corpus — raw post text, no right to redistribute | **private repo** `bolex-forum-archive` |
-| Finding aid — thread index, authors, dates, links | here, public. Already live |
-| Scholarship — our own writing, quoting with attribution | here, public |
+It was overtaken by a plainer problem. The corpus existed in exactly one
+place — a session scratchpad that is wiped on cleanup — no private
+repository had been created, and this session cannot create one. Andrew's
+call was to commit it publicly rather than risk losing fifty minutes of
+harvest and, more to the point, a body of knowledge that is itself
+disappearing. Preservation beat tidiness, which is the right order.
 
-A note on an error made earlier: a "private branch of a public repo" was
-offered as an option and does not exist. Branches in a public repository
-are public. The only real choices were a separate private repo, rebuilding
-the corpus on demand, or publishing it.
+So `corpus/bolex-forum-corpus.jsonl` is in this public repository, with a
+README beside it saying plainly whose writing it is and on what terms it is
+held. Worth being clear-eyed about the cost: a public repository is
+permanent and gets scraped, and this cannot be quietly undone later.
 
-The private repo must be created by hand — this session's GitHub access is
-scoped to `bolexinfo` alone and cannot create repositories. Until it
-exists, the corpus lives only in a session scratchpad and a copy sent to
-Andrew directly; it is rebuildable in about 50 minutes from the method in
-`sources.md`.
+What has not changed is what may be *published from* it — see below.
 
 ### The line to hold
 
