@@ -10,9 +10,12 @@ import type { RelatedContext, RelatedModel } from "@/lib/related";
  * go, even though the next thing they want is almost always the rest of its
  * line or what else was being made alongside it.
  *
- * Two bands, strongest relation first. The line is bounded and ordered by
- * nearness in year, so an eighteen-model series shows the neighbouring
- * variants rather than becoming a second index.
+ * Deliberately small. This was two grids of bordered cells running most of a
+ * screen, which was the right shape when it was the only way onward — it no
+ * longer is. The browse shelf reaches every object in the collection with
+ * thumbnails and a category switch, so this does not need to be a second
+ * index; it needs to name the handful of models most closely related and
+ * stay out of the way. Two lines of text do that.
  */
 export function RelatedModels({
   related,
@@ -29,81 +32,83 @@ export function RelatedModels({
 
   return (
     <Reveal delay={0.1}>
-      <section aria-label={`More ${sectionLabel.toLowerCase()}`} className="mt-16 max-w-3xl">
-        <h2 className="font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.25em] text-[var(--accent)]">
-          Related models
-        </h2>
+      <section
+        aria-label={`More ${sectionLabel.toLowerCase()}`}
+        className="rule mt-14 max-w-3xl pt-4"
+      >
+        <div className="space-y-2">
+          {series && (
+            <Row label={series.heading ?? `${series.name} line`} models={series.models} />
+          )}
 
-        {series && (
-          <Band title={series.heading ?? `The ${series.name} line`} models={series.models} />
-        )}
+          {/*
+           * The gauge is named only when the models actually share one. Where
+           * the relation widened past it — the H-9 is the only 9.5mm camera the
+           * site documented — the label claims nothing more than the period.
+           */}
+          {era && (
+            <Row
+              label={era.heading ?? era.label ?? (era.gauge ? `Other ${era.gauge}` : "Same period")}
+              models={era.models}
+            />
+          )}
 
-        {/*
-         * The gauge is named only when the models actually share one. Where
-         * the relation widened past it — the H-9 is the only 9.5mm camera the
-         * site documented — the heading claims nothing more than the period.
-         */}
-        {era && (
-          <Band
-            title={
-              era.heading ??
-              (era.gauge
-                ? `${era.gauge} ${sectionLabel.toLowerCase()} of the same period`
-                : "Others of the same period")
+          <Row
+            label=""
+            models={[]}
+            trailing={
+              <Link
+                href={sectionHref}
+                className="text-[var(--accent)] underline-offset-4 hover:underline"
+              >
+                All {sectionLabel.toLowerCase()} →
+              </Link>
             }
-            subtitle={era.heading ? undefined : era.label}
-            models={era.models}
           />
-        )}
-
-        <p className="mt-8 font-[family-name:var(--font-mono)] text-xs">
-          <Link href={sectionHref} className="text-[var(--accent)] hover:underline underline-offset-4">
-            All {sectionLabel.toLowerCase()} →
-          </Link>
-        </p>
+        </div>
       </section>
     </Reveal>
   );
 }
 
-function Band({
-  title,
-  subtitle,
+/**
+ * One line: a label, then the models run together inline.
+ *
+ * The label is a fixed column at `sm` and above so the two rows line up and
+ * read as a small table; below that it stacks, because a 9rem column on a
+ * phone leaves the links about forty characters to wrap in.
+ */
+function Row({
+  label,
   models,
+  trailing,
 }: {
-  title: string;
-  subtitle?: string;
+  label: string;
   models: RelatedModel[];
+  trailing?: React.ReactNode;
 }) {
   return (
-    <div className="mt-6">
-      <h3 className="font-[family-name:var(--font-mono)] text-[0.68rem] uppercase tracking-[0.16em] text-[var(--fg-soft)]">
-        {title}
-        {subtitle && <span className="ml-2 opacity-70">· {subtitle}</span>}
-      </h3>
-      <ul className="mt-3 grid gap-px border border-[var(--line)] bg-[var(--line)] sm:grid-cols-2">
-        {models.map((model) => (
-          /*
-           * The grid draws its separators as a one-pixel gap over a line
-           * coloured background, so an odd count would leave the empty cell
-           * showing as a solid block. A lone trailing item spans the row
-           * instead.
-           */
-          <li key={model.slug} className="sm:[&:last-child:nth-child(odd)]:col-span-2">
-            <Link
-              href={model.href}
-              className="group flex h-full items-baseline justify-between gap-3 bg-[var(--bg)] px-4 py-3 transition-colors duration-200 hover:bg-[var(--bg-raised)]"
-            >
-              <span className="font-[family-name:var(--font-display)] text-base font-[560] transition-colors group-hover:text-[var(--accent)]">
-                {model.name}
-              </span>
-              <span className="shrink-0 font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.12em] text-[var(--fg-soft)]">
-                {model.introduced ?? model.gauge}
-              </span>
+    <div className="flex flex-col gap-0.5 text-xs leading-relaxed sm:flex-row sm:gap-3">
+      <span
+        className="shrink-0 font-[family-name:var(--font-mono)] text-[0.6rem] uppercase tracking-[0.14em] text-[var(--fg-soft)] sm:w-[9rem] sm:pt-px"
+        aria-hidden={label ? undefined : "true"}
+      >
+        {label}
+      </span>
+      <span className="font-[family-name:var(--font-mono)] text-[0.7rem]">
+        {models.map((model, i) => (
+          <span key={model.slug}>
+            {i > 0 && <span className="text-[var(--fg-soft)] opacity-50"> · </span>}
+            <Link href={model.href} className="hover:text-[var(--accent)]">
+              {model.name}
+              {model.introduced && (
+                <span className="text-[var(--fg-soft)] opacity-70"> {model.introduced}</span>
+              )}
             </Link>
-          </li>
+          </span>
         ))}
-      </ul>
+        {trailing}
+      </span>
     </div>
   );
 }
