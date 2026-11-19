@@ -41,6 +41,36 @@ export interface TimelineMedia {
 const MAX_PER_ENTRY = 3;
 
 /**
+ * How a panel is composed.
+ *
+ *  `bare`    — words only; the entry names no equipment.
+ *  `feature` — one photograph, very large, running past the text column and
+ *              off the edge of the page, pushed in slowly as it arrives.
+ *  `side`    — one photograph beside the text, entering from the margin.
+ *  `scatter` — two or three at different sizes, laid down one after another.
+ *
+ * Every panel built the same way is a list however it is animated, so the
+ * composition changes as the film runs. It changes *predictably*, though:
+ * the variant comes from the entry's position, not from a random number, so
+ * a static export produces the same page every time and a reader scrolling
+ * back finds what they saw before.
+ */
+export type TimelineLayout = "bare" | "feature" | "side" | "scatter";
+
+export function timelineLayout(index: number, pictures: number): TimelineLayout {
+  if (pictures === 0) return "bare";
+  if (pictures >= 2) return "scatter";
+  /* A single photograph alternates between filling the frame and sitting
+     beside the text, so two neighbouring years never look alike. */
+  return index % 2 === 0 ? "feature" : "side";
+}
+
+/** Which side the picture takes, alternating down the page. */
+export function timelineSide(index: number): "left" | "right" {
+  return index % 4 < 2 ? "right" : "left";
+}
+
+/**
  * A model's name as a pattern that survives the archive's own spelling.
  *
  * The chronology writes "H-16 De luxe" where the catalogue says "H-16

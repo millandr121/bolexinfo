@@ -401,10 +401,26 @@ html:not([data-featured]) .featured-slot[data-slot="0"] {
  * never be looking at a blank screen, and text that fades to nothing cannot
  * be selected or found with the browser's own search.
  */
+/*
+ * The fade every beat shares. The floor of 0.18 matters: a reader who
+ * stops halfway must never face a blank screen, and text faded to nothing
+ * cannot be selected or found with the browser's own search.
+ *
+ * Note what is *not* here. This rule used to drift each beat a few pixels
+ * as well, and on a timeline panel that was a quiet disaster: at rest the
+ * transform computes to an identity matrix, which still creates a
+ * stacking context, which isolated the photographs' `mix-blend-mode` from
+ * the page behind them — so every product shot kept its hard white box
+ * instead of melting into the paper. The panels move their own parts now,
+ * so the drift belongs on the beats that have no parts of their own.
+ */
 .cinema [data-beat] {
   opacity: calc(0.18 + 0.82 * var(--lit, 1));
-  transform: translateY(calc((1 - var(--lit, 1)) * 6px));
   transition: opacity 120ms linear;
+}
+
+.cinema [data-beat]:not(.timeline-panel) {
+  transform: translateY(calc((1 - var(--lit, 1)) * 6px));
 }
 
 /*
@@ -421,7 +437,15 @@ html:not([data-featured]) .featured-slot[data-slot="0"] {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  scroll-snap-align: center;
+  /*
+   * `start`, not `centre`. A panel is exactly one screen tall, so a centre
+   * snap sits half a screen away from where a `#year-1935` anchor jump
+   * lands — the browser would then snap on to the *next* year, and every
+   * deep link pointed at the wrong panel. Aligning to the start puts the
+   * snap position and the anchor position in the same place. The content
+   * is centred inside the panel, so the sticky header still clears it.
+   */
+  scroll-snap-align: start;
   padding: 3rem 0;
 }
 
@@ -460,86 +484,254 @@ html:has(.cinema .timeline-panel) {
   max-width: 38rem;
 }
 
-.timeline-plates {
-  margin-top: 2.25rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+/* ——————————————————————————————————————————————————————————————
+   The stage: photographs as part of the composition, not attached to it
+   —————————————————————————————————————————————————————————————— */
+
+/*
+ * The photographs sit behind the words rather than after them, so a
+ * feature can run the full width of the screen without the text column
+ * having to make room. They are `aria-hidden`; each one is named and
+ * linked in the line beneath the text, so nothing is lost to a reader who
+ * cannot see them.
+ *
+ * No borders. A frame around every photograph turned the page into a
+ * contact sheet; the archive's product shots were taken on white, and the
+ * plate multiply blends that white into the paper so a camera appears to
+ * be sitting on the page itself.
+ */
+/*
+ * The stage fills the panel, and the panel now fills the page — the
+ * timeline's wrapper no longer imposes a reading width, because the film
+ * wants the whole frame while only the words want a measure.
+ *
+ * Offsets are percentages of the panel rather than `vw`. An earlier
+ * version mixed the two: the stage was confined to a 944px column while
+ * `right: 26vw` was computed against a 1440px window, which put a camera
+ * squarely on top of the text. Percentages of the thing you are
+ * positioning inside cannot drift apart from it.
+ */
+.timeline-stage {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.timeline-plate {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: clamp(9rem, 26vw, 15rem);
-  height: clamp(7rem, 19vw, 11rem);
-  border: 1px solid var(--line);
-  overflow: hidden;
+.timeline-stage li {
+  position: absolute;
+  mix-blend-mode: multiply;
 }
 
-.timeline-plate img {
+.timeline-stage img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: contain;
-  padding: 0.6rem;
-  transition: transform 600ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.group:hover .timeline-plate img {
-  transform: scale(1.04);
+/* Dark mode has no white to multiply away, so the shots are lightened
+   instead of blended — the same trick the .plate rule uses on model pages. */
+:root[data-theme="dark"] .timeline-stage li {
+  mix-blend-mode: screen;
+  filter: invert(1) hue-rotate(180deg) brightness(1.4);
 }
 
-.timeline-plate__caption {
-  display: block;
-  margin-top: 0.5rem;
+/* — feature: one photograph, oversized, bleeding off the edge — */
+[data-layout="feature"] .timeline-stage li {
+  top: 50%;
+  width: 62%;
+  height: min(70svh, 34rem);
+  translate: 0 -50%;
+}
+[data-layout="feature"][data-side="right"] .timeline-stage li { right: -8%; }
+[data-layout="feature"][data-side="left"] .timeline-stage li { left: -8%; }
+
+/* — side: beside the text, entering from the margin — */
+[data-layout="side"] .timeline-stage li {
+  top: 50%;
+  width: 34%;
+  height: min(44svh, 21rem);
+  translate: 0 -50%;
+}
+[data-layout="side"][data-side="right"] .timeline-stage li { right: 2%; }
+[data-layout="side"][data-side="left"] .timeline-stage li { left: 2%; }
+
+/*
+ * — scatter: two or three at different sizes —
+ *
+ * Deliberately unequal. Three photographs at one size read as a row of
+ * thumbnails however they are animated; staggering the size and the
+ * baseline makes them a group.
+ */
+/*
+ * Placed from the left so every one of them clears the reading column,
+ * which ends around half the window. Written as `right:` offsets they
+ * only stayed clear at one window width.
+ */
+/*
+ * All three sit in the right-hand half, clear of the reading column at
+ * any width, at three different sizes so they read as a group rather
+ * than a row of thumbnails.
+ */
+[data-layout="scatter"] .timeline-stage li:nth-child(1) {
+  left: 52%;
+  top: 10%;
+  width: 29%;
+  height: min(36svh, 17rem);
+}
+[data-layout="scatter"] .timeline-stage li:nth-child(2) {
+  left: 80%;
+  top: 44%;
+  width: 18%;
+  height: min(25svh, 12rem);
+}
+[data-layout="scatter"] .timeline-stage li:nth-child(3) {
+  left: 55%;
+  top: 62%;
+  width: 15%;
+  height: min(21svh, 10rem);
+}
+
+/*
+ * The text column holds its own width against a feature running behind it,
+ * and gets a little air from the photograph on the side layouts.
+ */
+[data-layout="feature"] .timeline-panel__inner { max-width: 34rem; }
+[data-layout="side"] .timeline-panel__inner { max-width: min(34rem, 48%); }
+[data-layout="side"][data-side="left"] .timeline-panel__inner { margin-left: auto; }
+[data-layout="scatter"] .timeline-panel__inner { max-width: min(30rem, 46%); }
+
+/* What the pictures are, named once under the text. */
+.timeline-names {
+  margin-top: 1.5rem;
   font-family: var(--font-mono);
-  font-size: 0.62rem;
+  font-size: 0.64rem;
   text-transform: uppercase;
   letter-spacing: 0.14em;
   color: var(--fg-soft);
 }
+.timeline-names a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+}
+.timeline-names a:hover { color: var(--accent); }
+.timeline-credit { text-transform: none; letter-spacing: normal; opacity: 0.75; }
 
-.timeline-plate__credit {
-  text-transform: none;
-  letter-spacing: normal;
-  opacity: 0.8;
+/*
+ * Below `lg` the stage is abandoned: a photograph behind the text is
+ * unreadable on a phone, and absolutely positioning three of them into a
+ * 390px column is worse. They return to the flow, in a row that scrolls.
+ */
+@media (max-width: 1023px) {
+  .timeline-stage {
+    position: static;
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.75rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .timeline-stage::-webkit-scrollbar { display: none; }
+  .timeline-stage li {
+    position: static;
+    flex: 0 0 auto;
+    width: min(58vw, 15rem);
+    height: min(30svh, 11rem);
+    inset: auto;
+    translate: none;
+  }
+  [data-layout] .timeline-panel__inner { max-width: none; margin-left: 0; }
 }
 
 /*
  * The entrance.
  *
- * Everything keys off the same `--lit` the script already writes per panel,
- * so there is no second observer and the parts can never disagree about
- * where the panel is. The year leads, the text follows, the plates come in
- * last and one after another — `--n` is the plate's index, so a year with
- * three cameras reads as a sequence being laid down rather than a wall
- * appearing at once.
+ * Everything keys off the same `--lit` the script already writes per
+ * panel, so there is no second observer and the parts cannot disagree
+ * about where a panel is. It is a position, not an animation, which also
+ * means it simply runs backwards when the reader scrolls up — an
+ * @keyframes entrance would have to be reversed by hand.
  *
- * The delays are built from `--lit` rather than from CSS animations because
- * the reader may be scrolling backwards, and an animation would have to be
- * reversed by hand; a value derived from position simply runs the other way.
+ * `--in` is how far from settled the panel is, 1 at the edges and 0 at the
+ * focal line. Writing the movements against it keeps every rule reading
+ * the same way round.
+ */
+.cinema .timeline-panel {
+  --in: calc(1 - var(--lit, 1));
+  position: relative;
+}
+
+/*
+ * Transform only. The panel itself already fades, with a floor, in the
+ * `.cinema [data-beat]` rule — fading the parts again on raw `--lit`
+ * multiplied the two and took the words to genuine zero at the edges of
+ * the screen, where they were meant to be dim but legible. One rule owns
+ * opacity; these own movement.
  */
 .cinema .timeline-panel [data-part] {
-  opacity: var(--lit, 1);
-  transition: opacity 420ms ease, transform 520ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: transform 560ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .cinema .timeline-panel [data-part="year"] {
-  transform: translateY(calc((1 - var(--lit, 1)) * 18px));
+  transform: translateY(calc(var(--in) * 20px));
 }
-
 .cinema .timeline-panel [data-part="text"] {
-  transform: translateY(calc((1 - var(--lit, 1)) * 26px));
-  transition-delay: 60ms;
+  transform: translateY(calc(var(--in) * 30px));
+  transition-delay: 70ms;
+}
+.cinema .timeline-panel [data-part="names"] {
+  transform: translateY(calc(var(--in) * 16px));
+  transition-delay: 150ms;
 }
 
-.cinema .timeline-panel [data-figure] {
-  opacity: var(--lit, 1);
-  transform: translateY(calc((1 - var(--lit, 1)) * 34px)) scale(calc(0.96 + 0.04 * var(--lit, 1)));
-  transition:
-    opacity 480ms ease,
-    transform 620ms cubic-bezier(0.2, 0.8, 0.2, 1);
-  transition-delay: calc(120ms + var(--n, 0) * 90ms);
+/*
+ * The photographs. Each layout arrives differently, which is the point:
+ * a film that cuts the same way every time is a slideshow.
+ */
+.cinema .timeline-stage li {
+  /* A constant, not a fade: the dissolve comes from the panel's own
+     opacity, which has a floor. A feature is held back so the words stay
+     readable over it. */
+  opacity: var(--max-opacity, 1);
+  transition: transform 900ms cubic-bezier(0.22, 0.75, 0.2, 1);
+  transition-delay: calc(var(--n, 0) * 110ms);
+}
+
+/*
+ * A feature pushes in — a slow dolly toward the subject, held back behind
+ * the words so the text stays legible over it. The scale is larger than
+ * anywhere else because it is the whole shot, and a 2% move on something
+ * this size would not read at all.
+ */
+.cinema [data-layout="feature"] .timeline-stage li {
+  --max-opacity: 0.5;
+  transform: translateY(-50%) scale(calc(1.12 - 0.12 * var(--lit, 1)));
+}
+
+/* A side photograph pans in from its own margin. */
+.cinema [data-layout="side"][data-side="right"] .timeline-stage li {
+  transform: translateY(-50%) translateX(calc(var(--in) * 70px));
+}
+.cinema [data-layout="side"][data-side="left"] .timeline-stage li {
+  transform: translateY(-50%) translateX(calc(var(--in) * -70px));
+}
+
+/* A scattered group settles one photograph at a time, each drifting up. */
+.cinema [data-layout="scatter"] .timeline-stage li {
+  transform: translateY(calc(var(--in) * 46px)) scale(calc(0.94 + 0.06 * var(--lit, 1)));
+}
+
+/* On a phone the stage is a plain row, so the motion is a plain one too. */
+@media (max-width: 1023px) {
+  .cinema .timeline-stage li,
+  .cinema [data-layout] .timeline-stage li {
+    --max-opacity: 1;
+    transform: translateY(calc(var(--in) * 26px));
+  }
 }
 
 /*
@@ -569,10 +761,29 @@ html:has(.cinema .timeline-panel) {
 @media (prefers-reduced-motion: reduce) {
   .cinema [data-beat],
   .cinema [data-beat] [data-figure],
+  .cinema .timeline-stage li,
   .cinema .timeline-panel [data-part] {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+
+  /* A feature photograph is held at half strength so words can be read
+     over it; flattened to full opacity it would bury them, so the stage
+     returns to the flow instead of sitting behind the text. */
+  .timeline-stage {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  .timeline-stage li {
+    position: static;
+    width: min(44vw, 14rem);
+    height: 10rem;
+    inset: auto;
+    translate: none;
   }
 
   /* Snapping is motion the reader did not ask for, and on a page of
@@ -595,10 +806,19 @@ html:has(.cinema .timeline-panel) {
 @media print {
   .cinema [data-beat],
   .cinema [data-beat] [data-figure],
+  .cinema .timeline-stage li,
   .cinema .timeline-panel [data-part] {
     opacity: 1;
     transform: none;
   }
+
+  .timeline-stage {
+    position: static;
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+  .timeline-stage li { position: static; width: 9rem; height: 7rem; inset: auto; translate: none; }
 
   /* A screen-tall panel per year would print forty-five near-empty pages. */
   .timeline-panel {

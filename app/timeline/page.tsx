@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArchiveCompare } from "@/components/ArchiveCompare";
 import { TimelineCinema } from "@/components/TimelineCinema";
 import { getTimeline } from "@/lib/timeline";
-import { getTimelineMedia } from "@/lib/timeline-media";
+import { getTimelineMedia, timelineLayout, timelineSide } from "@/lib/timeline-media";
 import { originalArchiveHref } from "@/lib/archive";
 
 export const metadata: Metadata = {
@@ -39,7 +39,9 @@ export default function TimelinePage() {
 
   return (
     <TimelineCinema>
-      <div className="pb-8 max-w-3xl">
+      {/* Full width: the film wants the page, the words want a measure.
+          The reading column is set on .timeline-panel__inner instead. */}
+      <div className="pb-8">
         {/* Opening title. Tall enough to hold the screen for a moment before
             the first date arrives, so the piece starts rather than lurches. */}
         <header data-beat className="min-h-[46vh] flex flex-col justify-center py-14">
@@ -89,7 +91,16 @@ export default function TimelinePage() {
           )}
         </header>
 
-        {timeline.eras.map((era) => (
+        {/*
+          A running count across all four eras, so the alternation of
+          composition carries over an era boundary instead of restarting
+          and putting two identical panels next to each other.
+        */}
+        {timeline.eras.map((era, eraIndex) => {
+          const index = timeline.eras
+            .slice(0, eraIndex)
+            .reduce((n, e) => n + e.entries.length, 0);
+          return (
           <section key={era.era} aria-label={era.era}>
             {/* Era cards break the chronology into chapters. They get a
                 screen of their own while playing, which is what gives the
@@ -106,14 +117,39 @@ export default function TimelinePage() {
             <ol>
               {era.entries.map((entry, i) => {
                 const pictures = media.get(entry.year) ?? [];
+                const layout = timelineLayout(index + i, pictures.length);
+                const side = timelineSide(index + i);
                 return (
                   <li
                     key={`${entry.year}-${i}`}
                     data-beat
-                    data-panel
+                    data-layout={layout}
+                    data-side={side}
                     id={`year-${entry.year}`}
                     className="timeline-panel"
                   >
+                    {/*
+                      The photographs are laid out first and sit behind the
+                      words, so a feature can run the width of the screen
+                      without the text having to make room for it. On a
+                      phone they drop back into the flow beneath the text,
+                      where overlapping anything would make both unreadable.
+                    */}
+                    {pictures.length > 0 && (
+                      <ul className="timeline-stage" aria-hidden="true">
+                        {pictures.map((picture, n) => (
+                          <li
+                            key={picture.src}
+                            data-figure
+                            style={{ "--n": n } as React.CSSProperties}
+                          >
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img src={picture.src} alt="" loading="lazy" decoding="async" />
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+
                     <div className="timeline-panel__inner">
                       <p className="timeline-year" data-part="year">
                         {entry.year}
@@ -122,40 +158,27 @@ export default function TimelinePage() {
                         {entry.event}
                       </p>
 
+                      {/*
+                        The pictures are decorative above and named here, so
+                        each one is still a link to its own page and still
+                        carries its credit — without a caption box under
+                        every photograph breaking up the composition.
+                      */}
                       {pictures.length > 0 && (
-                        <ul className="timeline-plates" data-part="plates">
+                        <p className="timeline-names" data-part="names">
                           {pictures.map((picture, n) => (
-                            <li
-                              key={picture.src}
-                              data-figure
-                              /* Each plate arrives a beat after the one
-                                 before it, so a year with three cameras
-                                 reads as a sequence rather than a wall. */
-                              style={{ "--n": n } as React.CSSProperties}
-                            >
-                              <Link href={picture.href} className="group block">
-                                <span className="timeline-plate plate">
-                                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                                  <img
-                                    src={picture.src}
-                                    alt={picture.alt}
-                                    loading="lazy"
-                                    decoding="async"
-                                  />
+                            <span key={picture.src}>
+                              {n > 0 && <span aria-hidden="true"> · </span>}
+                              <Link href={picture.href}>{picture.caption}</Link>
+                              {picture.credit && (
+                                <span className="timeline-credit">
+                                  {" "}
+                                  photograph by {picture.credit}
                                 </span>
-                                <span className="timeline-plate__caption">
-                                  {picture.caption}
-                                  {picture.credit && (
-                                    <span className="timeline-plate__credit">
-                                      {" "}
-                                      — photograph by {picture.credit}
-                                    </span>
-                                  )}
-                                </span>
-                              </Link>
-                            </li>
+                              )}
+                            </span>
                           ))}
-                        </ul>
+                        </p>
                       )}
                     </div>
                   </li>
@@ -163,7 +186,8 @@ export default function TimelinePage() {
               })}
             </ol>
           </section>
-        ))}
+          );
+        })}
 
         {timeline.eras.length === 0 && (
           <div className="mt-10 border border-[var(--line)] bg-[var(--bg-raised)] p-8">
