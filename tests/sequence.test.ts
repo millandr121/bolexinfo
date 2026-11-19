@@ -87,10 +87,26 @@ test("a section the original never chained still gets buttons", () => {
   assert.equal(resolveNeighbours("lenses", lenses[lenses.length - 1]!.slug, lenses).next, undefined);
 });
 
-test("the built pages carry the links", { skip: !fs.existsSync("out/cameras/155.html") }, () => {
-  const html = fs.readFileSync("out/cameras/155.html", "utf8");
+/*
+ * Object pages no longer render the sequence: the browse shelf replaced it,
+ * and the archived previous/next line inside the shelf was dropped with it.
+ * Ephemera still uses SequenceNav, so that is where the rendered end of this
+ * is now checked. The resolver above is tested on its own either way.
+ */
+test("the built ephemera pages carry the links", { skip: !fs.existsSync("out/ephemera/ads40-ad002.html") }, () => {
+  const html = fs.readFileSync("out/ephemera/ads40-ad002.html", "utf8");
   assert.match(html, /rel="prev"/);
   assert.match(html, /rel="next"/);
-  assert.match(html, /href="\/cameras\/150"/);
-  assert.match(html, /href="\/cameras\/75macro"/);
+  assert.match(html, /href="\/ephemera\/ads40-ad001"/);
+  assert.match(html, /href="\/ephemera\/ads40-ad003"/);
+});
+
+/*
+ * And the shelf really did take over on object pages — if a stray
+ * SequenceNav came back there, this catches it.
+ */
+test("object pages carry the shelf, not the sequence pair", { skip: !fs.existsSync("out/cameras/155.html") }, () => {
+  const html = fs.readFileSync("out/cameras/155.html", "utf8");
+  assert.match(html, /id="browse-shelf"/, "the browse shelf should be served");
+  assert.doesNotMatch(html, /rel="prev"/, "the previous/next pair was replaced by the shelf");
 });

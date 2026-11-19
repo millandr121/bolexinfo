@@ -8,10 +8,8 @@ import type { ModelRecord } from "@/lib/museum";
 import { getRelated, type Section } from "@/lib/related";
 import { originalArchiveHref } from "@/lib/archive";
 import { hasControls } from "@/lib/controls";
-import { SequenceNav } from "@/components/SequenceNav";
 import { BrowseCarousel } from "@/components/BrowseCarousel";
 import type { BrowseSection } from "@/lib/browse";
-import type { Neighbours } from "@/lib/sequence";
 
 /**
  * The object page: one shared layout for every catalogued piece of hardware.
@@ -40,14 +38,11 @@ import type { Neighbours } from "@/lib/sequence";
 export function ObjectPage({
   model,
   section,
-  neighbours,
   browse,
 }: {
   model: ModelRecord;
   /** The collection this object belongs to, for the breadcrumb. */
   section: { label: string; href: string; kind?: Section };
-  /** Previous and next in the collection, if it has an order. */
-  neighbours?: Neighbours;
   /** Everything there is to browse between, for the shelf at the foot. */
   browse?: { index: BrowseSection[]; sectionId: string };
 }) {
@@ -201,25 +196,37 @@ export function ObjectPage({
         sectionHref={section.href}
       />
 
-      {archiveHref && (
-        <div className="max-w-3xl">
+      {/*
+       * The record of where this page came from, all in one place.
+       *
+       * These were three stacked blocks — the archive viewer, the provenance
+       * note, and the line inviting a correction — each with its own rule and
+       * its own margin, which cost most of a screen of scrolling to say three
+       * short things that belong together. They are one footer now: the same
+       * content, one rule, one heading.
+       */}
+      <section className="rule mt-14 max-w-3xl pt-4" aria-label="Provenance and corrections">
+        {archiveHref && (
           <Reveal delay={0.1}>
             <ArchiveCompare originalHref={archiveHref} title={model.name} />
           </Reveal>
-        </div>
-      )}
+        )}
 
-      {/*
-       * Two provenance notes, because there are two kinds of page.
-       *
-       * Most are recovered from BolexCollector.com and say so. A few —
-       * models the original never covered — were researched and sourced
-       * since, and must not borrow the archive's authority by implying they
-       * came from it. Getting this wrong would be the quietest and worst
-       * failure this site could have.
-       */}
-      <aside className="rule mt-14 max-w-3xl pt-4 font-[family-name:var(--font-mono)] text-xs leading-relaxed text-[var(--fg-soft)]">
-        <span className="uppercase tracking-[0.18em]">Provenance — </span>
+        {/*
+         * Two provenance notes, because there are two kinds of page.
+         *
+         * Most are recovered from BolexCollector.com and say so. A few —
+         * models the original never covered — were researched and sourced
+         * since, and must not borrow the archive's authority by implying they
+         * came from it. Getting this wrong would be the quietest and worst
+         * failure this site could have.
+         */}
+        <p
+          className={`font-[family-name:var(--font-mono)] text-xs leading-relaxed text-[var(--fg-soft)] ${
+            archiveHref ? "mt-6" : ""
+          }`}
+        >
+          <span className="uppercase tracking-[0.18em]">Provenance — </span>
         {model.recovered ? (
           <>
             Recovered from{" "}
@@ -274,21 +281,19 @@ export function ObjectPage({
             )}
           </>
         )}
-      </aside>
+        </p>
 
-      {/*
-       * One line, where a reader who has just found an error is looking.
-       * Carries the page with it, so the form opens knowing what it is about.
-       */}
-      <p className="rule mt-12 pt-4 font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.16em] text-[var(--fg-soft)]">
-        Something wrong, or something to add?{" "}
-        <Link
-          href={`/suggest?page=${encodeURIComponent(`${section.href}/${model.slug}`)}`}
-          className="text-[var(--accent)] underline underline-offset-2"
-        >
-          Tell us
-        </Link>
-      </p>
+        {/* Carries the page with it, so the form opens knowing what it is about. */}
+        <p className="mt-3 font-[family-name:var(--font-mono)] text-xs leading-relaxed text-[var(--fg-soft)]">
+          Something wrong, or something to add?{" "}
+          <Link
+            href={`/suggest?page=${encodeURIComponent(`${section.href}/${model.slug}`)}`}
+            className="text-[var(--accent)] underline underline-offset-2"
+          >
+            Tell us
+          </Link>
+        </p>
+      </section>
 
       {/*
        * The shelf replaces the previous/next pair that used to sit here. It
@@ -296,15 +301,12 @@ export function ObjectPage({
        * keeps the archived order as a line inside itself rather than losing
        * it. Where no browse index was supplied the old pair still stands.
        */}
-      {browse ? (
+      {browse && (
         <BrowseCarousel
           index={browse.index}
           currentSection={browse.sectionId}
           currentSlug={model.slug}
-          neighbours={neighbours}
         />
-      ) : (
-        neighbours && <SequenceNav neighbours={neighbours} section={section} />
       )}
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
