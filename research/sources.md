@@ -16,6 +16,7 @@ Reachability was tested on 2026-11-18 from this project's cloud session.
 | [pathefilm.uk](https://pathefilm.uk/95gear/95gearBolex.htm) | 9.5mm gear, Pathé side | yes | none stated |
 | [bolexh16user.net](http://bolexh16user.net/) | H16 cameras, lenses, motors, accessories; a repair list | yes | none stated |
 | [phsc.ca](https://phsc.ca/repair/Bolex/bolex_camera-h8_h16.pdf) | H8/H16 **repair manual**, 31 MB | yes | none stated |
+| [cinematography.com](https://cinematography.com/index.php?/forums/forum/78-bolex/) **via the Wayback Machine** | a dedicated **Bolex forum** (forum 78), 27 listing pages, **571 threads** 2003–2026 — repair knowledge, technical argument, history, the working technicians | **only through web.archive.org** — see below | posts are their authors' own words; treat as citable sources, not reusable content |
 
 ## Not reachable from a build session
 
@@ -29,6 +30,43 @@ Reachability was tested on 2026-11-18 from this project's cloud session.
 
 Blocked does not mean unusable — a person with a browser can open any of
 them. It means the material has to be fetched by hand and brought in.
+
+## Reading cinematography.com
+
+The live site sits behind a Cloudflare interstitial that answers anything
+non-interactive with 403, a real headless Chromium included — it never gets
+past "Just a moment...". The forum is readable all the same, because the
+Wayback Machine has it: 1,930 archived URLs under the Bolex forum and
+snapshots of the listing pages as recent as 2026.
+
+Two details make the difference between working and not:
+
+- Use the **raw `id_` replay endpoint**
+  (`web.archive.org/web/<timestamp>id_/<url>`), which serves the stored
+  bytes without the archive's own chrome. It answers in about a second,
+  where the ordinary replay URL takes long enough that this session's
+  proxy closes the tunnel first and curl reports a bare connection reset.
+- The forum is **Invision Community**, and its post bodies are
+  `<div data-role='commentContent'>` with **single-quoted** attributes and
+  nested divs. Author, date and body appear in that order per post.
+
+`research/findings/cinematography-forum.md` records what the threads
+actually hold. The harvest scripts are not committed: they are scaffolding,
+and re-running them is a minute's work from the notes above.
+
+### What may be done with it
+
+Forum posts are the writing of the people who wrote them — Dom Jaeger,
+Simon Wyss and the rest are living specialists, not an anonymous data set.
+So the rule here is the same one the rest of this project follows for
+material it did not create:
+
+- **Facts** learned from a thread may be stated on the site in our own
+  words, cited to the thread.
+- **Short quotations** with the author named are ordinary scholarly use.
+- **Wholesale republication** of posts is not ours to do, and bulk forum
+  text never becomes page content.
+- Nothing is **attributed** to a named person that they did not write.
 
 ## Notable documents
 

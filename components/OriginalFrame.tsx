@@ -22,12 +22,12 @@ export function OriginalFrame({ lazy = false }: { lazy?: boolean }) {
       {/*
        * The strip is the only thing standing between the reader and the
        * preserved site, so it takes as little height as it can while still
-       * crediting Michael and offering the way out. Teal ground rather than
-       * paper: it reads as this project's own furniture at a glance, which
-       * is exactly what it is, and it stops the 1990s page below looking
-       * like it continues upward into our header.
+       * crediting Michael and offering the way out. A warm ochre ground
+       * rather than paper: it reads as this project's own furniture at a
+       * glance, which is exactly what it is, and it stops the 1990s page
+       * below looking like it continues upward into our header.
        */}
-      <div className="safe-top shrink-0 bg-[var(--color-accent)] text-[#f2efe6]">
+      <div className="safe-top shrink-0 bg-[var(--color-strip)] text-[#f2efe6]">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-1.5">
           <p className="min-w-0 truncate font-[family-name:var(--font-mono)] text-[0.66rem] leading-tight">
             <span className="font-medium">BolexCollector.com as it was</span>
@@ -38,7 +38,7 @@ export function OriginalFrame({ lazy = false }: { lazy?: boolean }) {
           </p>
           <ViewToggle
             to="modern"
-            className="shrink-0 border border-[#f2efe6]/50 px-3 py-1 font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.12em] transition-colors duration-200 hover:bg-[#f2efe6] hover:text-[var(--color-accent)]"
+            className="shrink-0 border border-[#f2efe6]/50 px-3 py-1 font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.12em] transition-colors duration-200 hover:bg-[#f2efe6] hover:text-[var(--color-strip)]"
           >
             Modern site
           </ViewToggle>
