@@ -141,6 +141,7 @@ export default function TimelinePage() {
                           <li
                             key={picture.src}
                             data-figure
+                            data-plate={picture.blend ? "blend" : "soft"}
                             style={{ "--n": n } as React.CSSProperties}
                           >
                             {/* eslint-disable-next-line @next/next/no-img-element */}

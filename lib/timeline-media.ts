@@ -21,6 +21,30 @@
 import { getCameraRecords, getProjectorRecords, type ModelRecord } from "./museum";
 import { thumbnailFor } from "./thumbnails";
 import { getTimeline } from "./timeline";
+import unblendable from "../data/unblendable-plates.json";
+
+/**
+ * Scans that cannot be laid onto the paper.
+ *
+ * The timeline blends a photograph's white background into the page so
+ * the camera appears to sit on it with no frame. A few scans in this
+ * archive have a ground of their own — one camera was shot against
+ * near-black, others carry a grey wash — and multiplying those onto
+ * cream produces the hard rectangle the whole composition exists to
+ * avoid.
+ *
+ * The list is measured, not judged: scripts/audit-plate-grounds.mjs
+ * samples the border pixels of every equipment scan and writes the
+ * ones that will not blend.
+ *
+ * They are not thrown away. A clean scan of the same model is used
+ * where one exists; where none does — the Model P has exactly one
+ * photograph and it was shot against near-black — the picture is still
+ * shown, with its edges feathered into the paper instead of blended.
+ * Refusing to show it would quietly delete the only surviving image of
+ * a projector from the chronology, which is the opposite of the job.
+ */
+const UNBLENDABLE: ReadonlySet<string> = new Set(unblendable.sources);
 
 export interface TimelineMedia {
   src: string;
@@ -35,6 +59,12 @@ export interface TimelineMedia {
    * the image is not much of a credit.
    */
   credit?: string;
+  /**
+   * Whether the scan's own background is white enough to multiply away.
+   * False means it carries a ground of its own and must be feathered
+   * into the page instead; see data/unblendable-plates.json.
+   */
+  blend: boolean;
 }
 
 /** At most this many pictures for one year, so a panel stays readable. */
@@ -167,7 +197,16 @@ export function getTimelineMedia(): Map<string, TimelineMedia[]> {
 
       for (const { model, section } of modelsNamedIn(entry.event, pool)) {
         if (picked.length >= MAX_PER_ENTRY) break;
-        const src = thumbnailFor(section, model.slug, model.images);
+        /*
+         * The catalogue thumbnail first, since it is the shot chosen to
+         * represent the model — but only if it will blend. Otherwise the
+         * next photograph of the same camera that will.
+         */
+        const preferred = thumbnailFor(section, model.slug, model.images);
+        const src =
+          preferred && !UNBLENDABLE.has(preferred)
+            ? preferred
+            : (model.images.map((i) => i.src).find((s) => !UNBLENDABLE.has(s)) ?? preferred);
         if (!src || seen.has(src)) continue;
         seen.add(src);
         const credit = model.images.find((i) => i.src === src)?.credit;
@@ -176,6 +215,7 @@ export function getTimelineMedia(): Map<string, TimelineMedia[]> {
           alt: `Paillard-Bolex ${model.name}`,
           caption: model.name,
           href: `/${section}/${model.slug}`,
+          blend: !UNBLENDABLE.has(src),
           ...(credit ? { credit } : {}),
         });
       }

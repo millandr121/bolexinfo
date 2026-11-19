@@ -67,6 +67,15 @@ export function TimelineCinema({ children }: { children: React.ReactNode }) {
       const away = Math.abs(mid - focus) / h;
       const lit = Math.max(0, 1 - Math.max(0, away - 0.1) / FADE_DISTANCE);
       panel.style.setProperty("--lit", lit.toFixed(3));
+      /*
+       * Marks the panel holding the screen, so the slow drift across its
+       * photographs runs there and nowhere else. Written only when it
+       * changes: setting an attribute to the value it already has still
+       * invalidates style for the subtree, which on a page of forty panels
+       * is a scroll handler's worth of work for nothing.
+       */
+      const live = lit > 0.55 ? "on" : "off";
+      if (panel.dataset.live !== live) panel.dataset.live = live;
     }
   }, [panels]);
 

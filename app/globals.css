@@ -467,21 +467,41 @@ html:has(.cinema .timeline-panel) {
   scroll-snap-type: y proximity;
 }
 
-/* The year, as a title card. */
+/*
+ * The year, as a title card.
+ *
+ * Bigger than a heading has any business being, because on a screen that
+ * holds one year at a time it is the title of the shot, not a label on a
+ * list item. The rule under it draws itself as the panel arrives, which
+ * is what makes the date feel struck rather than printed.
+ */
 .timeline-year {
   font-family: var(--font-mono);
-  font-size: clamp(2.6rem, 9vw, 4.6rem);
-  line-height: 1;
-  letter-spacing: -0.03em;
+  font-size: clamp(3.2rem, 11vw, 6.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.045em;
   color: var(--accent);
   font-variant-numeric: tabular-nums;
 }
 
+.timeline-year::after {
+  content: "";
+  display: block;
+  height: 2px;
+  margin-top: 1rem;
+  background: var(--accent);
+  transform-origin: left center;
+  transform: scaleX(var(--lit, 1));
+  transition: transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1) 120ms;
+  opacity: 0.55;
+}
+
 .timeline-event {
-  margin-top: 1.5rem;
-  font-size: clamp(1.05rem, 2.1vw, 1.4rem);
-  line-height: 1.6;
+  margin-top: 1.6rem;
+  font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+  line-height: 1.55;
   max-width: 38rem;
+  text-wrap: pretty;
 }
 
 /* ——————————————————————————————————————————————————————————————
@@ -511,9 +531,22 @@ html:has(.cinema .timeline-panel) {
  * squarely on top of the text. Percentages of the thing you are
  * positioning inside cannot drift apart from it.
  */
+/*
+ * The stage is a band no taller than the window, centred on the panel —
+ * not the panel itself.
+ *
+ * `inset: 0` tied it to the panel's box, and a panel with three lines of
+ * text is taller than the screen. A photograph centred in *that* is centred
+ * somewhere off the top of the window, which is why features arrived with
+ * their heads cut off.
+ */
 .timeline-stage {
   position: absolute;
-  inset: 0;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: min(100%, 100svh);
+  translate: 0 -50%;
   pointer-events: none;
   margin: 0;
   padding: 0;
@@ -525,39 +558,86 @@ html:has(.cinema .timeline-panel) {
   mix-blend-mode: multiply;
 }
 
+/*
+ * A scan with a ground of its own.
+ *
+ * Multiply only disappears a background that is white; a camera
+ * photographed against near-black multiplies into a solid dark
+ * rectangle. These few are shown unblended and feathered instead — the
+ * edges dissolve into the paper over a generous margin, so the picture
+ * still has no frame and still sits in the composition rather than on
+ * top of it.
+ */
+.timeline-stage li[data-plate="soft"] {
+  mix-blend-mode: normal;
+  -webkit-mask-image: radial-gradient(ellipse 72% 72% at 50% 50%, #000 48%, transparent 100%);
+  mask-image: radial-gradient(ellipse 72% 72% at 50% 50%, #000 48%, transparent 100%);
+}
+
 .timeline-stage img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: contain;
+  /*
+   * A small lift so a scan that is *nearly* white becomes white.
+   *
+   * Multiply makes a 255 background vanish into the paper exactly, but
+   * a scan that measures 242 lands a few percent darker than the page
+   * and draws a faint rectangle around the camera — a frame by
+   * accident, which is the one thing these are not meant to have.
+   * 1.05 closes that gap and is far too small to touch the subject:
+   * the darkest tones move by a point or two.
+   *
+   * Scans with a real ground of their own are not rescued by this and
+   * are not shown here at all; see data/unblendable-plates.json.
+   */
+  filter: brightness(1.05);
 }
 
 /* Dark mode has no white to multiply away, so the shots are lightened
    instead of blended — the same trick the .plate rule uses on model pages. */
-:root[data-theme="dark"] .timeline-stage li {
+:root[data-theme="dark"] .timeline-stage li[data-plate="blend"] {
   mix-blend-mode: screen;
   filter: invert(1) hue-rotate(180deg) brightness(1.4);
 }
 
-/* — feature: one photograph, oversized, bleeding off the edge — */
+/* A feathered plate is a real photograph, not a white-ground product
+   shot, so inverting it in dark mode would turn the subject itself
+   inside out. It only loses a little brightness. */
+:root[data-theme="dark"] .timeline-stage li[data-plate="soft"] {
+  filter: brightness(0.9);
+}
+
+/*
+ * — feature: one photograph, large, holding its own half of the frame —
+ *
+ * It used to be pulled 8% off the page edge, which did nothing it was
+ * meant to. These are `object-fit: contain`, so a box hanging off the
+ * edge is not a photograph bleeding past it — the picture simply
+ * letterboxes inside the part still on screen and looks shoved out of
+ * frame. A real bleed needs `cover`, which crops the camera. Neither is
+ * wanted here: the subject is the whole object, so the frame holds it
+ * whole, and the drama comes from scale and movement instead.
+ */
 [data-layout="feature"] .timeline-stage li {
   top: 50%;
-  width: 62%;
-  height: min(70svh, 34rem);
+  width: 44%;
+  height: min(64svh, 30rem);
   translate: 0 -50%;
 }
-[data-layout="feature"][data-side="right"] .timeline-stage li { right: -8%; }
-[data-layout="feature"][data-side="left"] .timeline-stage li { left: -8%; }
+[data-layout="feature"][data-side="right"] .timeline-stage li { right: 3%; }
+[data-layout="feature"][data-side="left"] .timeline-stage li { left: 3%; }
 
 /* — side: beside the text, entering from the margin — */
 [data-layout="side"] .timeline-stage li {
   top: 50%;
-  width: 34%;
+  width: 32%;
   height: min(44svh, 21rem);
   translate: 0 -50%;
 }
-[data-layout="side"][data-side="right"] .timeline-stage li { right: 2%; }
-[data-layout="side"][data-side="left"] .timeline-stage li { left: 2%; }
+[data-layout="side"][data-side="right"] .timeline-stage li { right: 4%; }
+[data-layout="side"][data-side="left"] .timeline-stage li { left: 4%; }
 
 /*
  * — scatter: two or three at different sizes —
@@ -599,7 +679,8 @@ html:has(.cinema .timeline-panel) {
  * The text column holds its own width against a feature running behind it,
  * and gets a little air from the photograph on the side layouts.
  */
-[data-layout="feature"] .timeline-panel__inner { max-width: 34rem; }
+[data-layout="feature"] .timeline-panel__inner { max-width: min(32rem, 43%); }
+[data-layout="feature"][data-side="left"] .timeline-panel__inner { margin-left: auto; }
 [data-layout="side"] .timeline-panel__inner { max-width: min(34rem, 48%); }
 [data-layout="side"][data-side="left"] .timeline-panel__inner { margin-left: auto; }
 [data-layout="scatter"] .timeline-panel__inner { max-width: min(30rem, 46%); }
@@ -707,17 +788,31 @@ html:has(.cinema .timeline-panel) {
  * anywhere else because it is the whole shot, and a 2% move on something
  * this size would not read at all.
  */
+/*
+ * 0.5 was a ghost. It was held back so words could be read over it, but
+ * the text column now clears the photograph instead of sitting on it, so
+ * the shot can be a photograph rather than a watermark.
+ *
+ * These carry no `translateY(-50%)`. The layout rules centre the figure
+ * with the `translate` property, and `translate` and `transform` compose
+ * rather than override — repeating the centring here applied it twice and
+ * lifted every feature a full frame off the top of the screen, which is
+ * exactly the decapitated camera that prompted this.
+ */
 .cinema [data-layout="feature"] .timeline-stage li {
-  --max-opacity: 0.5;
-  transform: translateY(-50%) scale(calc(1.12 - 0.12 * var(--lit, 1)));
+  --max-opacity: 0.92;
+  transform: translateX(calc(var(--in) * 40px)) scale(calc(1.06 - 0.06 * var(--lit, 1)));
+}
+.cinema [data-layout="feature"][data-side="left"] .timeline-stage li {
+  transform: translateX(calc(var(--in) * -40px)) scale(calc(1.06 - 0.06 * var(--lit, 1)));
 }
 
 /* A side photograph pans in from its own margin. */
 .cinema [data-layout="side"][data-side="right"] .timeline-stage li {
-  transform: translateY(-50%) translateX(calc(var(--in) * 70px));
+  transform: translateX(calc(var(--in) * 70px));
 }
 .cinema [data-layout="side"][data-side="left"] .timeline-stage li {
-  transform: translateY(-50%) translateX(calc(var(--in) * -70px));
+  transform: translateX(calc(var(--in) * -70px));
 }
 
 /* A scattered group settles one photograph at a time, each drifting up. */
@@ -735,23 +830,38 @@ html:has(.cinema .timeline-panel) {
 }
 
 /*
- * The pictures move a little further than their text.
+ * The slow drift, once a panel is holding the screen.
  *
- * Same `--lit` the script already writes for each beat, so this costs no
- * extra measurement and stays in step with the fade — a figure drifts up
- * and settles as its year reaches the focal line, and sinks again as it
- * leaves. The amounts are small on purpose: 14px of travel and 2% of scale
- * read as the page breathing, where the 40px version read as a carousel
- * fighting the scroll.
+ * The entrance above is a position, so it is over the moment a panel
+ * settles and the shot then sits perfectly still for the whole dwell —
+ * which is why the film read as a slideshow with no motion in it. This is
+ * the other half: a continuous, barely-perceptible push and pan across the
+ * photograph itself for as long as its year is the one being read.
  *
- * `will-change` is deliberately absent. Promoting forty figures to their own
- * layers costs more in memory than the compositing saves, and the transform
- * is cheap enough without it.
+ * It lives on the `img`, not the `li`, because the li already owns the
+ * entrance transform and an animation would simply overwrite it. Two
+ * elements, two jobs, no fight.
+ *
+ * It runs only on the live panel — `data-live` is written by the same
+ * paint pass that writes `--lit`, so there is no second observer — which
+ * keeps forty simultaneous animations off the compositor.
  */
-.cinema [data-beat] [data-figure] {
-  transform: translateY(calc((1 - var(--lit, 1)) * 14px)) scale(calc(0.98 + 0.02 * var(--lit, 1)));
-  transition: transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
+@keyframes timeline-drift {
+  from {
+    transform: scale(1.02) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.1) translate3d(var(--pan-x, -2%), var(--pan-y, -1.5%), 0);
+  }
 }
+
+.cinema .timeline-panel[data-live="on"] .timeline-stage img {
+  animation: timeline-drift calc(13s + var(--n, 0) * 4s) ease-in-out infinite alternate;
+}
+
+/* Alternating directions, so a scattered group does not drift as a block. */
+.timeline-stage li:nth-child(2n) img { --pan-x: 2.5%; --pan-y: 1.5%; }
+.timeline-stage li:nth-child(3n) img { --pan-x: -1%; --pan-y: 2%; }
 
 /*
  * Motion off: no fading, no drift, nothing moving under the reader. The
@@ -764,6 +874,15 @@ html:has(.cinema .timeline-panel) {
   .cinema .timeline-stage li,
   .cinema .timeline-panel [data-part] {
     opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  /* The drift is the one thing here that moves on its own, with no
+     scrolling to ask for it, so it is the first thing to go. */
+  .cinema .timeline-panel[data-live="on"] .timeline-stage img,
+  .timeline-year::after {
+    animation: none;
     transform: none;
     transition: none;
   }
@@ -809,6 +928,11 @@ html:has(.cinema .timeline-panel) {
   .cinema .timeline-stage li,
   .cinema .timeline-panel [data-part] {
     opacity: 1;
+    transform: none;
+  }
+  .cinema .timeline-panel[data-live="on"] .timeline-stage img,
+  .timeline-year::after {
+    animation: none;
     transform: none;
   }
 
