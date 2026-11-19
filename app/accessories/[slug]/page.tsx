@@ -8,8 +8,9 @@ import { RelatedModels } from "@/components/RelatedModels";
 import { getRecoveredPage, getRecoveredSection } from "@/lib/recovered";
 import { originalArchiveHref } from "@/lib/archive";
 import { getRecoveredRelated } from "@/lib/related";
-import { SequenceNav } from "@/components/SequenceNav";
 import { resolveNeighbours } from "@/lib/sequence";
+import { getBrowseIndex } from "@/lib/browse";
+import { BrowseCarousel } from "@/components/BrowseCarousel";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -60,13 +61,22 @@ export default async function AccessoryPage({ params }: Props) {
         </Reveal>
       )}
 
-      <SequenceNav
+      <p className="rule mt-12 pt-4 font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.16em] text-[var(--fg-soft)]">
+        Something wrong, or something to add?{" "}
+        <Link href={`/suggest?page=${encodeURIComponent(`/accessories/${slug}`)}`} className="text-[var(--accent)] underline underline-offset-2">
+          Tell us
+        </Link>
+      </p>
+
+      <BrowseCarousel
+        index={getBrowseIndex()}
+        currentSection="accessories"
+        currentSlug={slug}
         neighbours={resolveNeighbours(
           "accessories",
           slug,
           getRecoveredSection("accessories").map((p) => ({ slug: p.slug, label: p.title })),
         )}
-        section={{ label: "Accessories", href: "/accessories" }}
       />
 
       <aside className="rule mt-14 pt-4 text-xs leading-relaxed text-[var(--fg-soft)] font-[family-name:var(--font-mono)]">
