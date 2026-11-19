@@ -22,19 +22,26 @@ have had these cameras apart for a living. Post counts from the harvest:
 
 | | posts | who |
 |---|---|---|
-| Chris Millar | 68 | |
-| **Simon Wyss** | 63 | Swiss; writes with factory-level detail on Paillard practice |
-| **Jean-Louis Seguin** | 54 | Montreal; Bolex repair, recommended by other techs in-thread |
-| **Dom Jaeger** | 51 | Melbourne camera technician; the name others say to wait for |
-| Nick Mulder | 25 | |
+| **Simon Wyss** | 108 | Swiss; writes with factory-level detail on Paillard practice |
+| **Dom Jaeger** | 95 | Melbourne camera technician; the name others say to wait for |
+| **Jean-Louis Seguin** | 75 | Montreal; Bolex repair, recommended by other techs in-thread |
+| Chris Millar | 73 | |
+| Nick Mulder | 46 | |
+| David Auner aac | 34 | |
+| Robert Ditto | 26 | |
 | Oliver Christoph Kochs | 24 | |
-| kevin jackman | 22 | |
-| Robert Ditto | 20 | |
-| David Auner aac | 19 | |
+| kevin jackman | 23 | |
+| Todd Pinder | 23 | |
+| Doug Palmer | 20 | |
+| Philip Forrest | 20 | |
 
-265 distinct contributors in all. **Les Bosher** (note the spelling — not
-"Boscher") appears as the subject of Super 16 conversion threads rather than
-as a frequent poster.
+**412 distinct contributors** in all, 1,929 posts, roughly 150,000 words.
+The three names Andrew named from memory — Wyss, Jaeger, Seguin — come out
+first, second and third by post count, which is a fair check that the
+reputation matches the record.
+
+**Les Bosher** (note the spelling — not "Boscher") appears as the subject
+of Super 16 conversion threads rather than as a frequent poster.
 
 ## What it covers
 
@@ -42,21 +49,24 @@ Threads matching each theme (a thread can match several):
 
 | threads | theme |
 |---|---|
-| 113 | models & dating |
-| 105 | lenses & optics |
-| 90 | magazines & motors |
-| 86 | viewfinder & reflex |
-| 84 | repair & service |
-| 77 | shutter & speed |
-| 72 | super 16 / gate |
-| 41 | film & loading |
-| 41 | history & company |
-| 12 | projectors |
+| 198 | models & dating |
+| 192 | lenses & optics |
+| 157 | magazines & motors |
+| 154 | repair & service |
+| 147 | viewfinder & reflex |
+| 137 | shutter & speed |
+| 114 | super 16 / gate |
+| 73 | history & company |
+| 71 | film & loading |
+| 23 | projectors |
 
 ### Threads worth reading first
 
 Ranked by length and by how many distinct voices took part:
 
+- **Seeking Information on Dan Norris and Norris Film Products** — 6
+  voices and **7,650 words**, by far the longest thread in the forum.
+  Intervalometers and the Norris story.
 - **Bolex Yverdon closed?** — 7 voices. Company history, late period.
 - **Bad Super 16mm conversion** — 6 voices. What goes wrong and why.
 - **Ye olde 144 degree shutter angle and lightmeter rant** — 14 voices.
@@ -73,9 +83,9 @@ Ranked by length and by how many distinct voices took part:
 571 threads were listed on the archived index pages. Only some of those
 threads were themselves captured:
 
-- **~65% fetched in full** — every post, with author and date
-- **~35% never archived** — the index page recording the thread survives,
-  the thread does not
+- **326 recovered in full (57%)** — every post, with author and date
+- **245 never archived (43%)** — the index page recording the thread
+  survives, the thread does not
 
 The misses are real, not a fetching bug: the Wayback Machine returns a
 genuine 404 for them, and a date-wildcard replay that bypasses the CDX
