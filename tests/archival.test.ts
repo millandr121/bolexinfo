@@ -41,12 +41,39 @@ test("slugs are unique, since they are anchors", () => {
   assert.equal(new Set(slugs).size, slugs.length, "two photographs share a slug");
 });
 
-test("every photograph file is actually present", () => {
+/*
+ * Checked against the committed file, not the staged copy.
+ *
+ * public/archival/ is produced by scripts/stage-archive.ts at build time
+ * and is gitignored, so looking there passes locally after a build and
+ * fails on a fresh checkout — which is exactly what happened: the first
+ * version of this put the photographs under public/images/, where the
+ * ignore rule for staged assets swallowed all six, and CI was the only
+ * thing that noticed they had never been committed at all.
+ */
+test("every photograph file is actually committed", () => {
   for (const p of ARCHIVAL_PHOTOGRAPHS) {
-    const file = path.join("public", p.src.replace(/^\//, ""));
+    assert.match(p.src, /^\/archival\//, `${p.slug}: should be served from /archival/`);
+    const file = path.join("media", p.src.replace(/^\//, ""));
     assert.ok(fs.existsSync(file), `${p.slug}: ${file} is missing`);
   }
 });
+
+/*
+ * And that staging actually carries them across, since the page asks for
+ * the staged path. Skipped before the first build, like the other tests
+ * that read build output.
+ */
+test(
+  "staging puts them where the page looks for them",
+  { skip: !fs.existsSync("public/archival") },
+  () => {
+    for (const p of ARCHIVAL_PHOTOGRAPHS) {
+      const staged = path.join("public", p.src.replace(/^\//, ""));
+      assert.ok(fs.existsSync(staged), `${p.slug}: ${staged} was not staged`);
+    }
+  },
+);
 
 /*
  * The licences on these range from public domain to share-alike, and

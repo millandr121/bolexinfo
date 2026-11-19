@@ -123,7 +123,7 @@ test("a sourced photograph keeps its credit", () => {
 test("every picture links somewhere real and names itself", () => {
   for (const [year, pictures] of media) {
     for (const m of pictures) {
-      assert.match(m.src, /^\/(images|sourced)\//, `${year}: should be a local image`);
+      assert.match(m.src, /^\/(images|sourced|archival)\//, `${year}: should be a local image`);
       assert.match(
         m.href,
         /^\/(cameras|projectors)\/|^\/photographs#/,

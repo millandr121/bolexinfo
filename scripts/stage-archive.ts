@@ -2,6 +2,7 @@
  * Stages recovered archive assets into /public for the static site:
  *
  *   archive/wayback/images/**      → public/images/**      (live model imagery)
+ *   media/archival/**              → public/archival/**    (other collections)
  *   archive/wayback/**\/*.html     → public/original/**    ("View Original Archive")
  *   archive/wayback/*.css          → public/original/*.css  (so it renders as published)
  *   archive/wayback/images/**      → public/original/images/** (same)
@@ -57,6 +58,20 @@ function main() {
   const sourced = copyTree(path.join(ROOT, "media", "sourced"), path.join(PUBLIC, "sourced"), () => true);
 
   /*
+   * Photographs from other institutions' collections, used under their
+   * licences.
+   *
+   * Third category, third directory, for the same reason `sourced` is
+   * separate from `images`: these are neither part of what
+   * BolexCollector.com held nor photographs contributed to this project.
+   * They belong to the ETH Library, to notreHistoire's contributors, and
+   * to the people who took them, and each carries conditions recorded
+   * alongside it in lib/archival.ts. Served from /archival/ so that a
+   * path alone says which of the three a picture is.
+   */
+  const archival = copyTree(path.join(ROOT, "media", "archival"), path.join(PUBLIC, "archival"), () => true);
+
+  /*
    * The preserved pages need their own stylesheets and photographs, or they
    * render as bare markup with broken images — which is what "View Original
    * Archive" showed for months.
@@ -78,7 +93,8 @@ function main() {
   console.log(
     `Staged ${images} images → public/images, ` +
       `${pages} pages + ${styles} stylesheets + ${originalImages} images → public/original, ` +
-      `${sourced} sourced → public/sourced`,
+      `${sourced} sourced → public/sourced, ` +
+      `${archival} archival → public/archival`,
   );
 }
 

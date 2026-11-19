@@ -79,7 +79,7 @@ export interface ArchivalPhotograph {
 export const ARCHIVAL_PHOTOGRAPHS: readonly ArchivalPhotograph[] = [
   {
     slug: "paillard-projector-1937",
-    src: "/images/archival/eth-pi-38-g-0023.jpg",
+    src: "/archival/eth-pi-38-g-0023.jpg",
     alt:
       "Studio photograph of a Paillard cine projector with two film reels mounted, " +
       "the upper reel full and the lower one part-wound.",
@@ -99,7 +99,7 @@ export const ARCHIVAL_PHOTOGRAPHS: readonly ArchivalPhotograph[] = [
   },
   {
     slug: "paillard-eclipse-camera-1951",
-    src: "/images/archival/eth-pi-51-s-0086.jpg",
+    src: "/archival/eth-pi-51-s-0086.jpg",
     alt:
       "A Paillard 16mm camera clamped into a wooden and metal mount on a bench, " +
       "tilted upward with a lens and solar attachment fitted.",
@@ -120,7 +120,7 @@ export const ARCHIVAL_PHOTOGRAPHS: readonly ArchivalPhotograph[] = [
   },
   {
     slug: "usine-paillard-visite-1",
-    src: "/images/archival/paillard-ste-croix-visite-1.webp",
+    src: "/archival/paillard-ste-croix-visite-1.webp",
     alt:
       "A group of men and women in 1950s dress standing outside a concrete " +
       "building with PAILLARD S.A. in raised letters above the entrance.",
@@ -141,7 +141,7 @@ export const ARCHIVAL_PHOTOGRAPHS: readonly ArchivalPhotograph[] = [
   },
   {
     slug: "usine-paillard-visite-2",
-    src: "/images/archival/paillard-ste-croix-visite-2.webp",
+    src: "/archival/paillard-ste-croix-visite-2.webp",
     alt:
       "The same party of visitors standing beside a coach among pine trees, " +
       "the women in suits and hats, the men in overcoats.",
@@ -158,7 +158,7 @@ export const ARCHIVAL_PHOTOGRAPHS: readonly ArchivalPhotograph[] = [
   },
   {
     slug: "bolex-150-super-1967",
-    src: "/images/archival/eth-com-c16-049-005.jpg",
+    src: "/archival/eth-com-c16-049-005.jpg",
     alt:
       "A Paillard Bolex 150 Super super-8 camera beside a Kodak Retina S2 " +
       "stills camera, photographed for a magazine feature.",
@@ -179,7 +179,7 @@ export const ARCHIVAL_PHOTOGRAPHS: readonly ArchivalPhotograph[] = [
   },
   {
     slug: "sainte-croix-works-1996",
-    src: "/images/archival/eth-sik-03-080632.jpg",
+    src: "/archival/eth-sik-03-080632.jpg",
     alt:
       "A long five-storey factory block in evening light with an older " +
       "gabled house standing in front of it and a grass slope below.",
