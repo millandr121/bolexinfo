@@ -20,10 +20,22 @@ test("every picture belongs to a year the timeline actually has", () => {
  * Thorens" with an H-16 REX-2 — true about the year, nothing to do with the
  * sentence. Every picture must be named by its own entry.
  */
+/*
+ * Two kinds of picture reach the timeline and only one of them is matched
+ * by this rule.
+ *
+ * A catalogue plate is chosen automatically from the entry's own words, so
+ * it has to be checked: a matcher left to itself will cheerfully illustrate
+ * a merger with a camera. A photograph from another collection is placed by
+ * hand, one at a time, and links to /photographs rather than to a model, so
+ * it is excluded here and held to its own rules in tests/archival.test.ts.
+ */
+const isCataloguePlate = (href: string) => !href.startsWith("/photographs");
+
 test("every picture is named in its entry's own text", () => {
   for (const [year, pictures] of media) {
     const text = byYear.get(year) ?? "";
-    for (const picture of pictures) {
+    for (const picture of pictures.filter((p) => isCataloguePlate(p.href))) {
       const named = modelsNamedIn(text).some((c) => c.model.name === picture.caption);
       assert.ok(named, `${year}: "${picture.caption}" is not named in the entry`);
     }
@@ -39,7 +51,8 @@ test("entries that name no equipment get no picture", () => {
   const prose = entries.filter((e) => modelsNamedIn(e.event).length === 0);
   assert.ok(prose.length > 10, "expected a good number of prose-only entries");
   for (const entry of prose) {
-    assert.equal(media.get(entry.year), undefined, `${entry.year} should have no picture`);
+    const plates = (media.get(entry.year) ?? []).filter((p) => isCataloguePlate(p.href));
+    assert.deepEqual(plates, [], `${entry.year} should have no catalogue plate`);
   }
 });
 
@@ -111,7 +124,11 @@ test("every picture links somewhere real and names itself", () => {
   for (const [year, pictures] of media) {
     for (const m of pictures) {
       assert.match(m.src, /^\/(images|sourced)\//, `${year}: should be a local image`);
-      assert.match(m.href, /^\/(cameras|projectors)\//, `${year}: bad link ${m.href}`);
+      assert.match(
+        m.href,
+        /^\/(cameras|projectors)\/|^\/photographs#/,
+        `${year}: bad link ${m.href}`,
+      );
       assert.ok(m.caption.trim().length > 0, `${year}: needs a caption`);
       assert.ok(m.alt.trim().length > 0, `${year}: needs alt text`);
     }

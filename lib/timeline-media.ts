@@ -22,6 +22,7 @@ import { getCameraRecords, getProjectorRecords, type ModelRecord } from "./museu
 import { thumbnailFor } from "./thumbnails";
 import { getTimeline } from "./timeline";
 import unblendable from "../data/unblendable-plates.json";
+import { archivalFor, creditLine } from "./archival";
 
 /**
  * Scans that cannot be laid onto the paper.
@@ -194,6 +195,36 @@ export function getTimelineMedia(): Map<string, TimelineMedia[]> {
     for (const entry of era.entries) {
       const picked: TimelineMedia[] = [];
       const seen = new Set<string>();
+
+      /*
+       * A photograph from another collection, where one belongs to this
+       * exact year.
+       *
+       * Matched on the year and nothing else, which would be the wrong
+       * rule for the catalogue plates below — those are matched on the
+       * model the entry names, because a camera merely contemporary with
+       * a sentence is filler. These are different: there are six of them,
+       * each chosen by hand for a year the chronology actually covers,
+       * and the 1967 one shows the very camera that year's entry
+       * announces. A handful of deliberate placements does not need a
+       * matcher second-guessing it.
+       *
+       * It goes first because it is the better picture.
+       */
+      for (const photo of archivalFor(entry.year)) {
+        if (picked.length >= MAX_PER_ENTRY) break;
+        seen.add(photo.src);
+        picked.push({
+          src: photo.src,
+          alt: photo.alt,
+          caption: photo.title,
+          href: `/photographs#${photo.slug}`,
+          credit: creditLine(photo),
+          /* Never blended into the paper. Some are licensed in terms
+             that forbid alteration, and none were shot on white. */
+          blend: false,
+        });
+      }
 
       for (const { model, section } of modelsNamedIn(entry.event, pool)) {
         if (picked.length >= MAX_PER_ENTRY) break;
