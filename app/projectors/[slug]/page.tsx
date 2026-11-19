@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ObjectPage } from "@/components/ObjectPage";
 import { getProjectorRecords } from "@/lib/museum";
-import { resolveNeighbours } from "@/lib/sequence";
 import { getBrowseIndex } from "@/lib/browse";
 
 interface Props {
@@ -34,17 +33,11 @@ export default async function ProjectorPage({ params }: Props) {
   const model = record(slug);
   if (!model) notFound();
 
-  const neighbours = resolveNeighbours(
-    "projectors",
-    slug,
-    getProjectorRecords().map((m) => ({ slug: m.slug, label: m.name })),
-  );
 
   return (
     <ObjectPage
       model={model}
       section={{ label: "Projectors", href: "/projectors", kind: "projectors" }}
-      neighbours={neighbours}
       browse={{ index: getBrowseIndex(), sectionId: "projectors" }}
     />
   );

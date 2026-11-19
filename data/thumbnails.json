@@ -1,5 +1,5 @@
 {
-  "cameras/150": "/images/cameras/150_2.jpg",
+  "cameras/150": "/images/cameras/150_1.jpg",
   "cameras/155": "/images/cameras/155_1.jpg",
   "cameras/160": "/images/cameras/160_1.jpg",
   "cameras/75macro": "/images/cameras/75macro_1.jpg",
@@ -52,6 +52,7 @@
   "cameras/p3": "/images/cameras/p3_1.jpg",
   "cameras/p4": "/images/cameras/p4_1.jpg",
   "cameras/s1": "/images/cameras/s1_1.jpg",
+  "cameras/16pro": "/sourced/cameras/16pro/16pro100-left-profile.webp",
   "projectors/185": "/images/projectors/185_1.jpg",
   "projectors/185auto": "/images/projectors/185auto_1.jpg",
   "projectors/185super": "/images/projectors/185super_1.jpg",

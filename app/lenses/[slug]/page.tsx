@@ -8,7 +8,6 @@ import { RelatedModels } from "@/components/RelatedModels";
 import { getRecoveredPage, getRecoveredSection } from "@/lib/recovered";
 import { originalArchiveHref } from "@/lib/archive";
 import { getRecoveredRelated } from "@/lib/related";
-import { resolveNeighbours } from "@/lib/sequence";
 import { getBrowseIndex } from "@/lib/browse";
 import { BrowseCarousel } from "@/components/BrowseCarousel";
 
@@ -72,11 +71,6 @@ export default async function LensPage({ params }: Props) {
         index={getBrowseIndex()}
         currentSection="lenses"
         currentSlug={slug}
-        neighbours={resolveNeighbours(
-          "lenses",
-          slug,
-          getRecoveredSection("lenses").map((p) => ({ slug: p.slug, label: p.title })),
-        )}
       />
 
       <aside className="rule mt-14 pt-4 text-xs leading-relaxed text-[var(--fg-soft)] font-[family-name:var(--font-mono)]">

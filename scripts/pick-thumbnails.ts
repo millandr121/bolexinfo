@@ -64,6 +64,9 @@ const GENERIC = /plate|control|chart|diagram|schematic|htype|logo|banner|_t\./i;
 const OVERRIDES: Record<string, string> = {
   // _2 is a diagram of the slow-motion and reverse-projection dials.
   "projectors/185super": "/images/projectors/185super_1.jpg",
+  // _2 is a close-up of the lens alone, and _3 is a model holding the camera.
+  // Neither reads as "150 Super" at thumbnail size; _1 is the camera itself.
+  "cameras/150": "/images/cameras/150_1.jpg",
 };
 
 interface Candidate {

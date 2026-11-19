@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ObjectPage } from "@/components/ObjectPage";
 import { getCameraRecords, getCameraRecord } from "@/lib/museum";
-import { resolveNeighbours } from "@/lib/sequence";
 import { getBrowseIndex } from "@/lib/browse";
 
 interface Props {
@@ -34,17 +33,11 @@ export default async function CameraPage({ params }: Props) {
   const model = getCameraRecord(slug);
   if (!model) notFound();
 
-  const neighbours = resolveNeighbours(
-    "cameras",
-    slug,
-    getCameraRecords().map((m) => ({ slug: m.slug, label: m.name })),
-  );
 
   return (
     <ObjectPage
       model={model}
       section={{ label: "Cameras", href: "/cameras", kind: "cameras" }}
-      neighbours={neighbours}
       browse={{ index: getBrowseIndex(), sectionId: "cameras" }}
     />
   );

@@ -325,6 +325,28 @@ button,
  * permanent fade on tables that happen to fit, which reads as a rendering
  * fault rather than an affordance.
  */
+/*
+ * The equipment shelf's rail.
+ *
+ * A flick should carry, the way a photo roll does. Three things decide
+ * whether it feels like that: momentum scrolling on iOS, snapping set to
+ * `proximity` rather than `mandatory` — mandatory grabs the rail at every
+ * card and kills the glide — and no visible scrollbar, which on a touch
+ * screen is only clutter. The cards keep `snap-start`, so a flick still
+ * settles with one aligned to the edge instead of sliced in half.
+ */
+.flick {
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+
+.flick::-webkit-scrollbar {
+  display: none;
+}
+
 .scroll-fade {
   mask-image: linear-gradient(to right, #000 calc(100% - 2.5rem), transparent 100%);
 }

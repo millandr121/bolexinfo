@@ -22,23 +22,10 @@ export function BrowseCarousel({
   index,
   currentSection,
   currentSlug,
-  neighbours,
 }: {
   index: BrowseSection[];
   currentSection: string;
   currentSlug: string;
-  /**
-   * The archived site's own previous/next, where it had them. Kept as a
-   * single line inside the panel rather than dropped: that chain is one
-   * collector's route through his own collection, recorded on 290 of the
-   * recovered pages, and it is not the same thing as a sort by gauge and
-   * year. The carousel is for getting somewhere; this is for following
-   * the path Michael laid.
-   */
-  neighbours?: {
-    previous?: { href: string; label: string };
-    next?: { href: string; label: string };
-  };
 }) {
   const [open, setOpen] = useState(false);
   const [sectionId, setSectionId] = useState(currentSection);
@@ -106,7 +93,7 @@ export function BrowseCarousel({
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <path d="M18 15l-6-6-6 6" />
         </svg>
-        Browse {section.label.toLowerCase()}
+        Browse more equipment
       </button>
 
       {/* Click-away. Transparent: this dims nothing, it only catches taps. */}
@@ -191,7 +178,7 @@ export function BrowseCarousel({
         <div className="relative">
           <ul
             ref={railRef}
-            className="scroll-x flex snap-x gap-3 px-4 pb-4 pt-1 sm:px-8"
+            className="flick flex snap-x gap-3 px-4 pb-4 pt-1 sm:px-8"
           >
             {group.items.map((item) => {
               const here = item.slug === currentSlug && section.id === currentSection;
@@ -270,33 +257,6 @@ export function BrowseCarousel({
           )}
         </div>
 
-        {(neighbours?.previous || neighbours?.next) && (
-          <div className="border-t border-[var(--line)] px-4 py-2 sm:px-8">
-            <p className="flex flex-wrap items-center gap-x-4 gap-y-1 font-[family-name:var(--font-mono)] text-[0.6rem] uppercase tracking-[0.14em] text-[var(--fg-soft)]">
-              <span className="opacity-70">In the original order</span>
-              {neighbours.previous && (
-                <Link
-                  href={neighbours.previous.href}
-                  rel="prev"
-                  onClick={() => setOpen(false)}
-                  className="hover:text-[var(--accent)]"
-                >
-                  ← {neighbours.previous.label}
-                </Link>
-              )}
-              {neighbours.next && (
-                <Link
-                  href={neighbours.next.href}
-                  rel="next"
-                  onClick={() => setOpen(false)}
-                  className="hover:text-[var(--accent)]"
-                >
-                  {neighbours.next.label} →
-                </Link>
-              )}
-            </p>
-          </div>
-        )}
       </div>
     </>
   );
