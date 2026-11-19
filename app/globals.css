@@ -423,12 +423,32 @@ html:not([data-featured]) .featured-slot[data-slot="0"] {
 }
 
 /*
+ * The pictures move a little further than their text.
+ *
+ * Same `--lit` the script already writes for each beat, so this costs no
+ * extra measurement and stays in step with the fade — a figure drifts up
+ * and settles as its year reaches the focal line, and sinks again as it
+ * leaves. The amounts are small on purpose: 14px of travel and 2% of scale
+ * read as the page breathing, where the 40px version read as a carousel
+ * fighting the scroll.
+ *
+ * `will-change` is deliberately absent. Promoting forty figures to their own
+ * layers costs more in memory than the compositing saves, and the transform
+ * is cheap enough without it.
+ */
+.cinema [data-beat] [data-figure] {
+  transform: translateY(calc((1 - var(--lit, 1)) * 14px)) scale(calc(0.98 + 0.02 * var(--lit, 1)));
+  transition: transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/*
  * Motion off: no fading, no drift, nothing moving under the reader. The
  * script does not autoplay in this case either, so this is the whole
  * experience and it has to be a complete one.
  */
 @media (prefers-reduced-motion: reduce) {
-  .cinema [data-beat] {
+  .cinema [data-beat],
+  .cinema [data-beat] [data-figure] {
     opacity: 1;
     transform: none;
     transition: none;
@@ -439,7 +459,8 @@ html:not([data-featured]) .featured-slot[data-slot="0"] {
  * Printing, and any context without the script, gets the plain chronology.
  */
 @media print {
-  .cinema [data-beat] {
+  .cinema [data-beat],
+  .cinema [data-beat] [data-figure] {
     opacity: 1;
     transform: none;
   }
