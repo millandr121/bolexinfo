@@ -105,62 +105,58 @@ export default function TimelinePage() {
 
             <ol>
               {era.entries.map((entry, i) => {
-                const picture = media.get(entry.year);
+                const pictures = media.get(entry.year) ?? [];
                 return (
                   <li
                     key={`${entry.year}-${i}`}
                     data-beat
+                    data-panel
                     id={`year-${entry.year}`}
-                    className="scroll-mt-24 py-5 sm:py-7"
+                    className="timeline-panel"
                   >
-                    <div className="sm:flex sm:gap-8">
-                      <p className="font-[family-name:var(--font-mono)] text-sm text-[var(--accent)] sm:w-20 shrink-0 tabular-nums">
+                    <div className="timeline-panel__inner">
+                      <p className="timeline-year" data-part="year">
                         {entry.year}
                       </p>
-                      <div className="mt-1.5 min-w-0 sm:mt-0">
-                        <p className="text-lg leading-[1.6] max-w-[36rem]">{entry.event}</p>
+                      <p className="timeline-event" data-part="text">
+                        {entry.event}
+                      </p>
 
-                        {/*
-                         * The picture sits under its year's text rather than
-                         * beside it. Alternating left and right looked livelier
-                         * in the abstract and read as noise in practice: the eye
-                         * has to find where the next line starts every time, on
-                         * a page whose whole purpose is to be read straight
-                         * down. One column, one rhythm.
-                         *
-                         * It is a link, not decoration — every image here is an
-                         * object or an advertisement the site holds a page for,
-                         * and saying so is what makes it a citation.
-                         */}
-                        {picture && (
-                          <figure className="mt-4 max-w-[26rem]" data-figure>
-                            <Link
-                              href={picture.href}
-                              className="group block overflow-hidden border border-[var(--line)] plate"
+                      {pictures.length > 0 && (
+                        <ul className="timeline-plates" data-part="plates">
+                          {pictures.map((picture, n) => (
+                            <li
+                              key={picture.src}
+                              data-figure
+                              /* Each plate arrives a beat after the one
+                                 before it, so a year with three cameras
+                                 reads as a sequence rather than a wall. */
+                              style={{ "--n": n } as React.CSSProperties}
                             >
-                              {/* eslint-disable-next-line @next/next/no-img-element */}
-                              <img
-                                src={picture.src}
-                                alt={picture.alt}
-                                loading="lazy"
-                                decoding="async"
-                                className="h-[190px] w-full object-contain p-3 transition-transform duration-700 no-touch-zoom group-hover:scale-[1.03] sm:h-[230px]"
-                              />
-                            </Link>
-                            <figcaption className="mt-1.5 font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.14em] text-[var(--fg-soft)]">
-                              {picture.caption}
-                              {/* A given photograph is credited wherever it is shown,
-                                  not only on the page it belongs to. */}
-                              {picture.credit && (
-                                <span className="normal-case tracking-normal opacity-80">
-                                  {" "}
-                                  — photograph by {picture.credit}
+                              <Link href={picture.href} className="group block">
+                                <span className="timeline-plate plate">
+                                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                                  <img
+                                    src={picture.src}
+                                    alt={picture.alt}
+                                    loading="lazy"
+                                    decoding="async"
+                                  />
                                 </span>
-                              )}
-                            </figcaption>
-                          </figure>
-                        )}
-                      </div>
+                                <span className="timeline-plate__caption">
+                                  {picture.caption}
+                                  {picture.credit && (
+                                    <span className="timeline-plate__credit">
+                                      {" "}
+                                      — photograph by {picture.credit}
+                                    </span>
+                                  )}
+                                </span>
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </div>
                   </li>
                 );

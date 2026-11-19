@@ -60,28 +60,14 @@
 }
 
 /*
- * Dark mode applies in two cases: the device asks for it, or the visitor
- * picked it. The declarations are shared so the two can never drift apart.
+ * Dark is a choice, not a default.
  *
- * `:root[data-theme="light"]` below wins over the media query on specificity
- * alone — an attribute selector on top of `:root` beats a bare `:root`
- * whatever the source order — which is what lets someone keep a light page on
- * a device set to dark. With no attribute at all, nothing overrides and the
- * device's preference stands, which is the right default.
+ * The device's `prefers-color-scheme` used to decide this. It meant a
+ * reader whose machine switches itself at sunset opened a site made of
+ * 1950s catalogue paper and found it black, having asked for nothing of
+ * the kind. Light is what this site looks like; the toggle in the header
+ * sets `data-theme` and the rule below does the rest.
  */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: var(--color-night);
-    --bg-raised: var(--color-night-raised);
-    --fg: var(--color-bone);
-    --fg-soft: var(--color-bone-soft);
-    --line: var(--color-night-line);
-    --accent: var(--color-ember);
-    --accent-soft: var(--color-ember-soft);
-    color-scheme: dark;
-  }
-}
-
 :root[data-theme="dark"] {
   --bg: var(--color-night);
   --bg-raised: var(--color-night-raised);
@@ -220,8 +206,7 @@ html {
  * metal, and dropping them onto a dark ground would erase them. A lit plate in
  * a dark room is how a gallery shows a print, and it keeps contrast honest.
  */
-:root { --plate: var(--color-paper); }
-@media (prefers-color-scheme: dark) { :root { --plate: #ddd5c4; } }
+:root,
 :root[data-theme="light"] { --plate: var(--color-paper); }
 :root[data-theme="dark"] { --plate: #ddd5c4; }
 
@@ -423,6 +408,141 @@ html:not([data-featured]) .featured-slot[data-slot="0"] {
 }
 
 /*
+ * The film.
+ *
+ * Each year holds the screen on its own. `100svh` rather than `100vh`
+ * because a phone's address bar makes `vh` taller than what you can
+ * actually see, which would cut the bottom off every panel until the bar
+ * retracts. `justify-center` keeps the content clear of the sticky header
+ * without having to know how tall it is.
+ */
+.timeline-panel {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-snap-align: center;
+  padding: 3rem 0;
+}
+
+.timeline-panel__inner {
+  max-width: 46rem;
+}
+
+/*
+ * Snapping, scoped to this page.
+ *
+ * `:has()` keeps it off every other page without a second stylesheet or a
+ * class on <html>. `proximity` rather than `mandatory` on purpose:
+ * mandatory refuses to leave a panel until it has committed to the next,
+ * which fights a reader trying to move a little and reads as the page
+ * grabbing the scroll. Proximity settles panels for anyone drifting and
+ * lets anyone deliberate go where they like.
+ */
+html:has(.cinema .timeline-panel) {
+  scroll-snap-type: y proximity;
+}
+
+/* The year, as a title card. */
+.timeline-year {
+  font-family: var(--font-mono);
+  font-size: clamp(2.6rem, 9vw, 4.6rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.timeline-event {
+  margin-top: 1.5rem;
+  font-size: clamp(1.05rem, 2.1vw, 1.4rem);
+  line-height: 1.6;
+  max-width: 38rem;
+}
+
+.timeline-plates {
+  margin-top: 2.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.timeline-plate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(9rem, 26vw, 15rem);
+  height: clamp(7rem, 19vw, 11rem);
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.timeline-plate img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 0.6rem;
+  transition: transform 600ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.group:hover .timeline-plate img {
+  transform: scale(1.04);
+}
+
+.timeline-plate__caption {
+  display: block;
+  margin-top: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--fg-soft);
+}
+
+.timeline-plate__credit {
+  text-transform: none;
+  letter-spacing: normal;
+  opacity: 0.8;
+}
+
+/*
+ * The entrance.
+ *
+ * Everything keys off the same `--lit` the script already writes per panel,
+ * so there is no second observer and the parts can never disagree about
+ * where the panel is. The year leads, the text follows, the plates come in
+ * last and one after another — `--n` is the plate's index, so a year with
+ * three cameras reads as a sequence being laid down rather than a wall
+ * appearing at once.
+ *
+ * The delays are built from `--lit` rather than from CSS animations because
+ * the reader may be scrolling backwards, and an animation would have to be
+ * reversed by hand; a value derived from position simply runs the other way.
+ */
+.cinema .timeline-panel [data-part] {
+  opacity: var(--lit, 1);
+  transition: opacity 420ms ease, transform 520ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.cinema .timeline-panel [data-part="year"] {
+  transform: translateY(calc((1 - var(--lit, 1)) * 18px));
+}
+
+.cinema .timeline-panel [data-part="text"] {
+  transform: translateY(calc((1 - var(--lit, 1)) * 26px));
+  transition-delay: 60ms;
+}
+
+.cinema .timeline-panel [data-figure] {
+  opacity: var(--lit, 1);
+  transform: translateY(calc((1 - var(--lit, 1)) * 34px)) scale(calc(0.96 + 0.04 * var(--lit, 1)));
+  transition:
+    opacity 480ms ease,
+    transform 620ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition-delay: calc(120ms + var(--n, 0) * 90ms);
+}
+
+/*
  * The pictures move a little further than their text.
  *
  * Same `--lit` the script already writes for each beat, so this costs no
@@ -448,10 +568,24 @@ html:not([data-featured]) .featured-slot[data-slot="0"] {
  */
 @media (prefers-reduced-motion: reduce) {
   .cinema [data-beat],
-  .cinema [data-beat] [data-figure] {
+  .cinema [data-beat] [data-figure],
+  .cinema .timeline-panel [data-part] {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+
+  /* Snapping is motion the reader did not ask for, and on a page of
+     full-height panels it is the most noticeable kind. */
+  html:has(.cinema .timeline-panel) {
+    scroll-snap-type: none;
+  }
+
+  /* Without the film there is no reason for a year to own a whole screen;
+     flattened, the page is an ordinary chronology again. */
+  .timeline-panel {
+    min-height: 0;
+    padding: 1.75rem 0;
   }
 }
 
@@ -460,8 +594,15 @@ html:not([data-featured]) .featured-slot[data-slot="0"] {
  */
 @media print {
   .cinema [data-beat],
-  .cinema [data-beat] [data-figure] {
+  .cinema [data-beat] [data-figure],
+  .cinema .timeline-panel [data-part] {
     opacity: 1;
     transform: none;
+  }
+
+  /* A screen-tall panel per year would print forty-five near-empty pages. */
+  .timeline-panel {
+    min-height: 0;
+    padding: 0.75rem 0;
   }
 }

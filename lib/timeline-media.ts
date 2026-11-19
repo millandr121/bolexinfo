@@ -1,29 +1,24 @@
 /**
- * Archival pictures for the timeline, drawn from what the archive already
- * holds rather than sourced from elsewhere.
+ * Pictures for the timeline, matched to what each entry actually says.
  *
- * Nothing here is fetched or licensed: every image is one already recovered
- * from BolexCollector.com and already published on this site, so illustrating
- * the chronology raises no question the rest of the site has not already
- * answered. Each picture links back to the page it belongs to, so it reads as
- * a citation rather than decoration.
+ * The first version of this paired a year with whatever model was introduced
+ * in it, which produced entries like "1963: Paillard merges with Thorens"
+ * illustrated by an H-16 REX-2, and "1928: Bell & Howell introduces the
+ * Model 75" illustrated by a Bolex. Both true about the year, neither about
+ * the sentence — and a picture that is merely contemporary with the text
+ * reads as filler.
  *
- * The pairing is deliberately plain:
+ * So the rule is now: show the equipment the entry *names*, and nothing
+ * otherwise. Roughly half the chronology is company history — mergers,
+ * magazines, a competitor's product, a film format — and those entries get
+ * no picture, which is correct. An entry about a merger does not have a
+ * photograph.
  *
- *  1. A camera or projector *introduced that year* — the strongest possible
- *     illustration of "1954: the H-16 Supreme is announced".
- *  2. Failing that, a piece of period advertising from the same decade.
- *  3. Failing that, nothing.
- *
- * Rule 3 matters as much as the others. Bolex did not exist before 1928 and
- * the advertising begins in the 1940s, so the first eleven entries have no
- * picture and are not given a borrowed one. The page opens as plain text and
- * the images begin when the cameras do, which is the truth of the story
- * rather than a gap to paper over.
+ * Everything here is already in this archive and links to the page it
+ * belongs to, so each picture is a citation rather than decoration.
  */
 
 import { getCameraRecords, getProjectorRecords, type ModelRecord } from "./museum";
-import { getRecoveredSection } from "./recovered";
 import { thumbnailFor } from "./thumbnails";
 import { getTimeline } from "./timeline";
 
@@ -33,152 +28,129 @@ export interface TimelineMedia {
   /** Names what the picture is, under it. */
   caption: string;
   href: string;
-  kind: "model" | "ephemera";
   /**
-   * The photographer, where the picture was not recovered from the archive
-   * but given to this project. Shown wherever the picture is, not only on
-   * the model's own page: a credit that travels with the image is the whole
-   * point of having one.
+   * The photographer, where the picture was given to this project rather
+   * than recovered from the archive. Shown wherever the picture appears,
+   * not only on the model's own page: a credit that does not travel with
+   * the image is not much of a credit.
    */
   credit?: string;
 }
 
-/** Advertising begins in this decade; before it, rule 2 has nothing to offer. */
-const FIRST_AD_DECADE = 1940;
+/** At most this many pictures for one year, so a panel stays readable. */
+const MAX_PER_ENTRY = 3;
 
 /**
- * An advertisement has to be *about Bolex* to illustrate a Bolex timeline.
+ * A model's name as a pattern that survives the archive's own spelling.
  *
- * The ephemera section keeps whole magazine pages, so some sheets are there
- * for what was printed on the other side of them: one is catalogued, quite
- * correctly, as "1953 Linda Darnell Rheingold Beer Ad". Faithful to the
- * archive, and absurd next to an entry about registration claws.
+ * The chronology writes "H-16 De luxe" where the catalogue says "H-16
+ * Deluxe", "H 8" for "H-8", and so on, so every run of spaces, hyphens and
+ * dots between the parts of a name is treated as interchangeable.
  *
- * A positive signal is demanded rather than a blocklist of the off-topic
- * ones. It is the conservative direction: it will pass over a genuine Bolex
- * sheet filed under a title like "Pleasure Aplenty!", which costs nothing,
- * because there are seventy sheets competing for four places on the page.
+ * The boundaries are the point. Without them "C-8" matches inside "C-8SL"
+ * and every mention of the later camera drags in the earlier one; `\B` on
+ * either side of a bare alphanumeric run would be wrong too, so the guard
+ * is an explicit "not followed by more name".
  */
-const ABOUT_BOLEX = /bolex|paillard|kern|berthiot|pan ?cinor|switar|yvar/i;
-
-function decadeOf(year: number): number {
-  return Math.floor(year / 10) * 10;
+function namePattern(name: string): RegExp {
+  const body = name
+    .trim()
+    .split(/[\s\-.]+/)
+    .map((part) => part.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
+    .join("[\\s\\-.]*");
+  return new RegExp(`(?<![A-Za-z0-9])${body}(?![A-Za-z0-9])`, "i");
 }
 
 /**
- * Period advertising, grouped by decade and kept in a stable order.
+ * Makers whose products this chronology also records.
  *
- * Only the individual sheets are wanted — `ads50` is the gallery page that
- * collects them and its thumbnail is a contact sheet, which illustrates
- * nothing at this size.
+ * Paillard named models the way everyone did, so a competitor's product can
+ * carry a name the Bolex catalogue also uses. The 1927 entry is entirely
+ * about Bell & Howell's *Filmo Model C* and Victor's Cine Model 3 — and a
+ * bare search for "Model C" pulls in a Bolex projector to illustrate it,
+ * which is worse than no picture: it is a wrong attribution on a page whose
+ * whole value is being right about what is what.
+ *
+ * So a name immediately preceded by another maker belongs to that maker.
  */
-function adsByDecade(): Map<number, { src: string; alt: string; href: string; title: string }[]> {
-  const out = new Map<number, { src: string; alt: string; href: string; title: string }[]>();
-  for (const page of getRecoveredSection("ephemera")) {
-    const m = /^ads(\d\d)-/.exec(page.slug);
-    const image = page.images[0];
-    if (!m?.[1] || !image) continue;
-    if (!ABOUT_BOLEX.test(`${page.title} ${image.alt ?? ""}`)) continue;
-    const decade = 1900 + Number(m[1]);
-    if (!out.has(decade)) out.set(decade, []);
-    out.get(decade)!.push({
-      src: image.src,
-      alt: image.alt || page.title,
-      href: `/ephemera/${page.slug}`,
-      title: page.title,
-    });
-  }
-  // Slug order, so the same year gets the same advertisement on every build.
-  for (const list of out.values()) list.sort((a, b) => a.href.localeCompare(b.href));
-  return out;
+const OTHER_MAKERS =
+  /(bell\s*&?\s*howell|filmo|victor(\s+(animatograph|cine))?|eastman|kodak|cine-?kodak|path[ée]|zeiss|siemens|agfa|keystone|revere)\s+(\w+\s+){0,2}$/i;
+
+interface Candidate {
+  model: ModelRecord;
+  section: "cameras" | "projectors";
+  pattern: RegExp;
 }
 
-function modelsByYear(): Map<number, (ModelRecord & { section: "cameras" | "projectors" })[]> {
-  const all = [
-    ...getCameraRecords().map((m) => ({ ...m, section: "cameras" as const })),
-    ...getProjectorRecords().map((m) => ({ ...m, section: "projectors" as const })),
+function candidates(): Candidate[] {
+  const all: Candidate[] = [
+    ...getCameraRecords().map((m) => ({ model: m, section: "cameras" as const, pattern: namePattern(m.name) })),
+    ...getProjectorRecords().map((m) => ({ model: m, section: "projectors" as const, pattern: namePattern(m.name) })),
   ];
-  const out = new Map<number, (ModelRecord & { section: "cameras" | "projectors" })[]>();
-  for (const model of all) {
-    if (!model.introduced) continue;
-    if (!out.has(model.introduced)) out.set(model.introduced, []);
-    out.get(model.introduced)!.push(model);
+  /*
+   * Longest name first. "H-16 REX-5" must be tried before "H-16", or the
+   * shorter name claims the sentence and the specific camera is never
+   * reached.
+   */
+  return all.sort((a, b) => b.model.name.length - a.model.name.length);
+}
+
+/** Which models an entry's own words name, in the order they are named. */
+export function modelsNamedIn(text: string, pool = candidates()): Candidate[] {
+  const found: { at: number; candidate: Candidate }[] = [];
+  /* Matched spans are blanked out so a longer name consumes its own text
+     and a shorter one cannot match the remains of it. */
+  let remaining = text;
+  for (const candidate of pool) {
+    /*
+     * Every occurrence is considered, not just the first: where a name is
+     * claimed by another maker in one sentence it may still be Paillard's
+     * own in the next, and taking only the first match would lose that.
+     */
+    const all = new RegExp(candidate.pattern.source, "gi");
+    let m: RegExpExecArray | null;
+    while ((m = all.exec(remaining)) !== null) {
+      if (OTHER_MAKERS.test(remaining.slice(Math.max(0, m.index - 40), m.index))) continue;
+      found.push({ at: m.index, candidate });
+      remaining =
+        remaining.slice(0, m.index) +
+        " ".repeat(m[0].length) +
+        remaining.slice(m.index + m[0].length);
+      break;
+    }
   }
-  /* Cameras before projectors, then by name: the chronology is a camera
-     story, and a stable order keeps the static export reproducible. */
-  for (const list of out.values()) {
-    list.sort((a, b) =>
-      a.section === b.section ? a.name.localeCompare(b.name) : a.section === "cameras" ? -1 : 1,
-    );
-  }
-  return out;
+  return found.sort((a, b) => a.at - b.at).map((f) => f.candidate);
 }
 
 /**
- * One picture per timeline year, or none.
- *
- * Walks the chronology in order so that advertising is handed out without
- * repeating: a decade's sheets are used one after another, and only reused
- * once the decade has run out of them. Doing this in a single pass is what
- * keeps it deterministic — the same build always produces the same pairing.
+ * Pictures per timeline year, keyed by year, in the order the entry names
+ * them. A year whose entry names no equipment is absent from the map.
  */
-export function getTimelineMedia(): Map<string, TimelineMedia> {
-  const byYear = modelsByYear();
-  const ads = adsByDecade();
-  const used = new Map<number, number>();
-  const media = new Map<string, TimelineMedia>();
-  /*
-   * The archive sometimes files one photograph against several models —
-   * two early projectors share a single picture — and the same image twice
-   * in a chronology reads as a mistake even though the data is honest. A
-   * year whose only model picture is already spoken for falls through to
-   * advertising instead.
-   */
-  const shown = new Set<string>();
+export function getTimelineMedia(): Map<string, TimelineMedia[]> {
+  const pool = candidates();
+  const media = new Map<string, TimelineMedia[]>();
 
   for (const era of getTimeline().eras) {
     for (const entry of era.entries) {
-      const year = Number(entry.year);
-      if (!Number.isFinite(year)) continue;
+      const picked: TimelineMedia[] = [];
+      const seen = new Set<string>();
 
-      const models = byYear.get(year) ?? [];
-      const model = models.find((m) => {
-        const src = thumbnailFor(m.section, m.slug, m.images);
-        return src && !shown.has(src);
-      });
-      if (model) {
-        const src = thumbnailFor(model.section, model.slug, model.images);
-        if (src) {
-          shown.add(src);
-          const credit = model.images.find((i) => i.src === src)?.credit;
-          media.set(entry.year, {
-            src,
-            alt: `Paillard-Bolex ${model.name}`,
-            caption: model.name,
-            href: `/${model.section}/${model.slug}`,
-            kind: "model",
-            ...(credit ? { credit } : {}),
-          });
-          continue;
-        }
+      for (const { model, section } of modelsNamedIn(entry.event, pool)) {
+        if (picked.length >= MAX_PER_ENTRY) break;
+        const src = thumbnailFor(section, model.slug, model.images);
+        if (!src || seen.has(src)) continue;
+        seen.add(src);
+        const credit = model.images.find((i) => i.src === src)?.credit;
+        picked.push({
+          src,
+          alt: `Paillard-Bolex ${model.name}`,
+          caption: model.name,
+          href: `/${section}/${model.slug}`,
+          ...(credit ? { credit } : {}),
+        });
       }
 
-      const decade = decadeOf(year);
-      if (decade < FIRST_AD_DECADE) continue;
-      const sheets = ads.get(decade);
-      if (!sheets?.length) continue;
-      const next = used.get(decade) ?? 0;
-      used.set(decade, next + 1);
-      const sheet = sheets[next % sheets.length];
-      if (!sheet) continue;
-      shown.add(sheet.src);
-      media.set(entry.year, {
-        src: sheet.src,
-        alt: sheet.alt,
-        caption: `${decade}s advertising`,
-        href: sheet.href,
-        kind: "ephemera",
-      });
+      if (picked.length) media.set(entry.year, picked);
     }
   }
 
