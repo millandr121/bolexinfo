@@ -244,13 +244,9 @@ export default function TimelinePage() {
 
         {archiveHref && <ArchiveCompare originalHref={archiveHref} title="Timeline" />}
 
-        <aside className="rule mt-14 pt-4 pb-16 text-xs leading-relaxed text-[var(--fg-soft)] font-[family-name:var(--font-mono)]">
-          <span className="uppercase tracking-[0.18em]">Provenance — </span>
-          Recovered from{" "}
-          <span className="text-[var(--fg)]">{timeline.originalUrl ?? "bolexcollector.com/timeline.html"}</span>
-          {timeline.capturedAt ? `, Wayback capture ${timeline.capturedAt}` : ""}. Entries are
-          reproduced verbatim from the archived chronology.
-        </aside>
+        <aside className="rule mt-14 pt-4 text-xs leading-relaxed text-[var(--fg-soft)] font-[family-name:var(--font-mono)]">
+        Chronology by Michael Tisdale.
+      </aside>
       </div>
     </TimelineCinema>
   );

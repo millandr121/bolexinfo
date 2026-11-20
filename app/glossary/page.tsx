@@ -131,15 +131,8 @@ export default function GlossaryPage() {
           )}
 
           <aside className="rule mt-14 pt-4 text-xs leading-relaxed text-[var(--fg-soft)] font-[family-name:var(--font-mono)]">
-            <span className="uppercase tracking-[0.18em]">Provenance — </span>
-            Recovered from{" "}
-            <span className="text-[var(--fg)]">
-              {page?.originalUrl ?? "bolexcollector.com/glossary.html"}
-            </span>
-            {page?.capturedAt ? `, Wayback capture ${page.capturedAt}` : ""}, reproduced
-            verbatim. Each term keeps the anchor the original gave it, so links written
-            against the old page still land.
-          </aside>
+        Definitions by Michael Tisdale.
+      </aside>
         </>
       ) : (
         <Reveal>

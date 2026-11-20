@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Reveal } from "@/components/Reveal";
-import { ProvenanceNote } from "@/components/RecoveryBadge";
+import { SourceNote } from "@/components/RecoveryBadge";
 import { getSerialDataset } from "@/lib/content";
 import { serialModels } from "@/lib/serial-models";
 import { formatYearSpan } from "@/lib/serials";
@@ -89,7 +89,7 @@ export default function SerialsPage() {
         </Reveal>
       )}
 
-      <ProvenanceNote>{dataset.source}</ProvenanceNote>
+      <SourceNote>{dataset.source}</SourceNote>
     </div>
   );
 }

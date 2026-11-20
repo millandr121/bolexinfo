@@ -61,9 +61,8 @@ export const NAVIGATION: readonly NavEntry[] = [
   {
     label: "The Archive",
     items: [
-      { href: "/archive", label: "Recovery status", blurb: "What was preserved, and from where" },
-      { href: "/updates", label: "Previous updates", blurb: "The site's own log, 2005–2011" },
-      { href: "/about", label: "About the restoration" },
+      { href: "/updates", label: "Updates", blurb: "What has been added, 2005 to now" },
+      { href: "/about", label: "About this archive" },
       { href: "/tribute", label: "Michael Tisdale" },
     ],
   },

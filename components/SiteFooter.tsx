@@ -16,7 +16,6 @@ import { SUPPORT } from "@/lib/support";
 const FOOTER_LINKS = [
   { href: "/about", label: "About" },
   { href: "/tribute", label: "Michael Tisdale" },
-  { href: "/archive", label: "Recovery status" },
   { href: "/updates", label: "Updates" },
   { href: "/revisit", label: "The original site" },
 ] as const;
@@ -49,8 +48,8 @@ export function SiteFooter() {
         {/* One sentence. The longer version ran to four lines on a phone,
             which is most of a footer by itself. */}
         <p className="mt-2.5 font-[family-name:var(--font-mono)] text-[0.66rem] leading-relaxed">
-          Preserving BolexCollector.com © Michael Tisdale — texts and images unaltered,
-          provenance recorded.
+          Michael Tisdale&rsquo;s BolexCollector.com, preserved and carried on — his work kept
+          as he wrote it, with what has been learned since.
         </p>
       </div>
     </footer>

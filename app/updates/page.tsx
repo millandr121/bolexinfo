@@ -3,18 +3,20 @@ import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { ArchiveCompare } from "@/components/ArchiveCompare";
 import { getUpdates } from "@/lib/directory";
+import { editionUpdates } from "@/lib/edition-updates";
 import { originalArchiveHref } from "@/lib/archive";
 
 export const metadata: Metadata = {
-  title: "Previous Updates",
+  title: "Updates",
   description:
-    "The update log of BolexCollector.com, 2005–2011 — what Michael Tisdale added to the site and when, recovered from the original archives page.",
+    "What has been added to this archive and when — Michael Tisdale's own log from 2005 to 2011, continued since.",
 };
 
 const ORIGINAL_PATH = "/archives.html";
 
 export default function UpdatesPage() {
   const updates = getUpdates(ORIGINAL_PATH);
+  const recent = editionUpdates();
   const archiveHref = originalArchiveHref(ORIGINAL_PATH);
   const years = updates
     .map((u) => (u.sortKey ? String(u.sortKey).slice(0, 4) : null))
@@ -25,19 +27,74 @@ export default function UpdatesPage() {
     <div className="pt-14 pb-8 max-w-3xl">
       <Reveal>
         <h1 className="font-[family-name:var(--font-display)] text-4xl sm:text-5xl font-[560] tracking-tight">
-          Previous Updates
+          Updates
         </h1>
         <p className="mt-4 leading-relaxed text-[var(--fg-soft)]">
-          The site&rsquo;s own record of itself: what was added to BolexCollector.com and when,
-          kept by its author as he built it. It is the only account of the archive&rsquo;s working
-          life{span ? `, and it runs from ${span}` : ""}.
+          The archive&rsquo;s record of itself: what was added and when. Michael Tisdale kept it
+          as he built the site{span ? `, from ${span}` : ""}, and it carries on below with the
+          work done since.
         </p>
       </Reveal>
+
+      {recent.length > 0 && (
+        <Reveal delay={0.05}>
+          <section className="mt-12" aria-labelledby="since">
+            <h2
+              id="since"
+              className="font-[family-name:var(--font-mono)] text-[0.68rem] uppercase tracking-[0.25em] text-[var(--accent)]"
+            >
+              Since
+            </h2>
+            <ol className="mt-4 border-t border-[var(--line)]">
+              {recent.map((update) => (
+                <li
+                  key={update.date + update.title}
+                  className="grid gap-1 border-b border-[var(--line)] py-5 sm:grid-cols-[10rem_1fr] sm:gap-6"
+                >
+                  <p className="pt-0.5 font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.1em] text-[var(--fg-soft)]">
+                    <span className="block text-[var(--fg)]">
+                      {new Date(`${update.date}T00:00:00Z`).toLocaleDateString("en-GB", {
+                        day: "numeric",
+                        month: "long",
+                        year: "numeric",
+                        timeZone: "UTC",
+                      })}
+                    </span>
+                  </p>
+                  <div className="min-w-0">
+                    {update.href ? (
+                      <Link
+                        href={update.href}
+                        className="group font-[family-name:var(--font-display)] text-lg font-[560] hover:text-[var(--accent)] transition-colors"
+                      >
+                        {update.title}
+                        <span aria-hidden="true" className="reveal-on-hover ml-2 text-xs text-[var(--accent)]">
+                          Go →
+                        </span>
+                      </Link>
+                    ) : (
+                      <p className="font-[family-name:var(--font-display)] text-lg font-[560]">
+                        {update.title}
+                      </p>
+                    )}
+                    <p className="mt-1 text-sm leading-relaxed text-[var(--fg-soft)]">
+                      {update.description}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </section>
+        </Reveal>
+      )}
 
       {updates.length > 0 ? (
         <>
           <Reveal delay={0.05}>
-            <ol className="mt-12 border-t border-[var(--line)]">
+            <h2 className="mt-14 font-[family-name:var(--font-mono)] text-[0.68rem] uppercase tracking-[0.25em] text-[var(--accent)]">
+              Michael Tisdale&rsquo;s log
+            </h2>
+            <ol className="mt-4 border-t border-[var(--line)]">
               {updates.map((update, i) => (
                 <li
                   key={`${update.date}-${i}`}
@@ -103,11 +160,8 @@ export default function UpdatesPage() {
           )}
 
           <aside className="rule mt-14 pt-4 font-[family-name:var(--font-mono)] text-xs leading-relaxed text-[var(--fg-soft)]">
-            <span className="uppercase tracking-[0.18em]">Provenance — </span>
-            Recovered from{" "}
-            <span className="text-[var(--fg)]">bolexcollector.com/archives.html</span>. Entries,
-            dates and ordering are reproduced verbatim; an update links onward only where the
-            article it announced was itself recovered.
+            Entries above &ldquo;Since&rdquo; are this edition&rsquo;s. Michael&rsquo;s own log is
+            reproduced as he wrote it, dates and ordering included.
           </aside>
         </>
       ) : (

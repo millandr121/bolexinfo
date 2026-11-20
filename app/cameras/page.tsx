@@ -9,7 +9,7 @@ import { getCameraRecords, type ModelRecord } from "@/lib/museum";
 export const metadata: Metadata = {
   title: "Cameras",
   description:
-    "Every Paillard-Bolex camera recovered from BolexCollector.com: the H-16 and H-8 lineages, the Auto Cine, B/C/D/L series, the Zoom Reflex and Automatic lines, and the Super 8 models.",
+    "Paillard-Bolex motion picture cameras: the H-16 and H-8 lineages, the Auto Cine, the B, C, D and L series, the Zoom Reflex and Automatic lines, and the Super 8 models.",
 };
 
 /**
@@ -63,9 +63,9 @@ export default function CamerasPage() {
           Cameras
         </h1>
         <p className="mt-4 max-w-2xl text-[var(--fg-soft)] leading-relaxed">
-          The complete recovered index of Paillard-Bolex motion picture cameras — {models.length} models
-          from the first H-16 of 1935 to the Super 8 Macrozoom series, each with its original
-          specifications preserved from the archived site.
+          Paillard built these at Sainte-Croix for four decades, from the first H-16 of 1935
+          to the Super 8 Macrozoom series. {models.length} models, with their specifications,
+          serial ranges and photographs.
         </p>
       </Reveal>
 

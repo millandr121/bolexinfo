@@ -1,29 +1,21 @@
-const LABELS = {
-  full: { text: "Fully recovered", tone: "text-[var(--fg-soft)]" },
-  "summary-only": { text: "Summary recovered · full page pending", tone: "text-[var(--brass,#8c6d3f)]" },
-  pending: { text: "Recovery pending", tone: "text-[var(--fg-soft)] opacity-70" },
-} as const;
-
 /**
- * Honest provenance labeling: every entry states exactly how much of the
- * original record has been recovered so far. Nothing is presented as more
- * complete than it is.
+ * A short credit under a page: who made the thing above it.
+ *
+ * It used to be headed "Provenance" and used to describe the recovery —
+ * which Wayback capture a page came from, how much of it had been
+ * recovered so far, which fields were still pending. That is real and
+ * worth keeping, but it is a note to ourselves: a reader looking up a
+ * serial number wants the serial number, not an account of how the
+ * site was rebuilt. The recovery record lives in the archive ledger
+ * and in research/, and the page says who the work belongs to.
+ *
+ * The file keeps its name only because the import path is referenced
+ * from several pages; renaming it is a separate, noisier change.
  */
-export function RecoveryBadge({ status }: { status: keyof typeof LABELS }) {
-  const label = LABELS[status];
-  return (
-    <span
-      className={`inline-block font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.14em] ${label.tone}`}
-    >
-      {label.text}
-    </span>
-  );
-}
-
-export function ProvenanceNote({ children }: { children: React.ReactNode }) {
+export function SourceNote({ children }: { children: React.ReactNode }) {
   return (
     <aside className="rule mt-12 pt-4 text-xs leading-relaxed text-[var(--fg-soft)] font-[family-name:var(--font-mono)] max-w-2xl">
-      <span className="uppercase tracking-[0.18em]">Provenance — </span>
+      <span className="uppercase tracking-[0.18em]">Source — </span>
       {children}
     </aside>
   );
