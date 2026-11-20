@@ -51,6 +51,7 @@ export const NAVIGATION: readonly NavEntry[] = [
       { href: "/technicians", label: "Repair & service", blurb: "Who works on these cameras" },
       { href: "/articles", label: "Articles", blurb: "Recovered from the original site" },
       { href: "/ephemera", label: "Ephemera", blurb: "Advertising, brochures, catalogues" },
+      { href: "/photographs", label: "Archive photographs", blurb: "The works, from public collections" },
       { href: "/timeline", label: "Timeline", blurb: "Paillard, 1814 onwards" },
       { href: "/glossary", label: "Glossary", blurb: "The terms, defined" },
       { href: "/links", label: "Links", blurb: "Resources worth your time" },
@@ -60,9 +61,8 @@ export const NAVIGATION: readonly NavEntry[] = [
   {
     label: "The Archive",
     items: [
-      { href: "/archive", label: "Recovery status", blurb: "What was preserved, and from where" },
-      { href: "/updates", label: "Previous updates", blurb: "The site's own log, 2005–2011" },
-      { href: "/about", label: "About the restoration" },
+      { href: "/updates", label: "Updates", blurb: "What has been added, 2005 to now" },
+      { href: "/about", label: "About this archive" },
       { href: "/tribute", label: "Michael Tisdale" },
     ],
   },

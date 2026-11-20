@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { marked } from "marked";
-import { ProvenanceNote } from "@/components/RecoveryBadge";
+import { SourceNote } from "@/components/RecoveryBadge";
 import { getRecoveredArticles } from "@/lib/content";
 
 interface Props {
@@ -24,7 +24,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const article = getRecoveredArticles().find((a) => a.slug === slug);
-  if (!article) return { title: "Articles pending recovery", robots: { index: false } };
+  if (!article) return { title: "Article not found", robots: { index: false } };
   return { title: article.title, description: article.description };
 }
 
@@ -48,12 +48,7 @@ export default async function ArticlePage({ params }: Props) {
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </div>
       {article.originalUrl && (
-        <ProvenanceNote>
-          Recovered verbatim from {article.originalUrl}
-          {article.capturedAt ? `, Wayback Machine capture ${article.capturedAt}` : ""}. The
-          unmodified original is preserved in /archive
-          {article.originalPath ? `/wayback${article.originalPath}` : ""}.
-        </ProvenanceNote>
+        <SourceNote>Written by Michael Tisdale for BolexCollector.com.</SourceNote>
       )}
     </article>
   );

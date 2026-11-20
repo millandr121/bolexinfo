@@ -72,13 +72,8 @@ export default async function AccessoryPage({ params }: Props) {
         currentSection="accessories"
         currentSlug={slug}
       />
-
       <aside className="rule mt-14 pt-4 text-xs leading-relaxed text-[var(--fg-soft)] font-[family-name:var(--font-mono)]">
-        <span className="uppercase tracking-[0.18em]">Provenance — </span>
-        Recovered from{" "}
-        <span className="text-[var(--fg)]">{page.originalUrl ?? `bolexcollector.com${page.originalPath ?? ""}`}</span>
-        {page.capturedAt ? `, Wayback capture ${page.capturedAt}` : ""}. Text and photographs
-        are reproduced verbatim from the archived page.
+        Text and photographs by Michael Tisdale.
       </aside>
     </article>
   );

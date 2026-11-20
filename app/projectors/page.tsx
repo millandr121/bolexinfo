@@ -9,7 +9,7 @@ import { getProjectorRecords } from "@/lib/museum";
 export const metadata: Metadata = {
   title: "Projectors",
   description:
-    "Paillard-Bolex movie projectors for 8mm, Super 8 and 16mm film, recovered from BolexCollector.com — from the multi-gauge Model G of 1936 to the S-series sound projectors.",
+    "Paillard-Bolex movie projectors for 8mm, Super 8 and 16mm film, from the multi-gauge Model G of 1936 to the S-series sound projectors.",
 };
 
 export default function ProjectorsPage() {
@@ -24,7 +24,7 @@ export default function ProjectorsPage() {
         </h1>
         <p className="mt-4 max-w-2xl text-[var(--fg-soft)] leading-relaxed">
           Paillard&rsquo;s single and multi-format projectors for the amateur and home-movie
-          market — {models.length} models recovered, each with its original specifications.
+          market. {models.length} models, each with its original specifications.
         </p>
       </Reveal>
 

@@ -3,10 +3,21 @@ import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { getArchivedAssets, getArchiveStats, getUrlInventory } from "@/lib/content";
 
+/*
+ * Kept, and kept out of the way.
+ *
+ * This page is the recovery ledger: what was preserved, from where, and
+ * whether it is intact. It matters — it is the thing that makes the
+ * rest of the site checkable — but it is a note to ourselves rather
+ * than something a reader looking up a camera should meet. It is off
+ * the navigation and out of the index; the URL still works for anyone
+ * who wants it, and we link it from the research notes.
+ */
 export const metadata: Metadata = {
-  title: "Archive & Recovery Status",
+  title: "Recovery ledger",
   description:
-    "The public ledger of the BolexCollector.com preservation effort: every asset recovered from the Internet Archive, with capture timestamps and source.",
+    "Internal record of what was preserved from BolexCollector.com, with capture timestamps and integrity checks.",
+  robots: { index: false, follow: false },
 };
 
 const SECTION_LABELS: Record<string, string> = {

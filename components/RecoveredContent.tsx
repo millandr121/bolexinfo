@@ -42,9 +42,22 @@ export function RecoveredContent({
                 className="max-w-full h-auto"
               />
             </div>
-            {block.alt && (
+            {(block.alt || block.thumbnailOnly) && (
               <figcaption className="mt-2 font-[family-name:var(--font-mono)] text-xs text-[var(--fg-soft)]">
                 {block.alt}
+                {/*
+                  Said plainly rather than left for the reader to wonder
+                  why a scan is small. The full-size image existed on
+                  Michael's server and the Wayback Machine never captured
+                  it, so this thumbnail is the whole of what survives —
+                  and if anyone out there has the original, this line is
+                  what tells them it is wanted.
+                */}
+                {block.thumbnailOnly && (
+                  <span className={block.alt ? "block mt-1 opacity-80" : "opacity-80"}>
+                    Thumbnail only — the full-size scan was not preserved.
+                  </span>
+                )}
               </figcaption>
             )}
           </figure>

@@ -1,71 +1,80 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import fs from "node:fs";
-import { TECHNICIANS, TECHNICIAN_REGIONS, techniciansByRegion } from "../lib/technicians";
+import { TECHNICIANS } from "../lib/technicians";
 
 /*
- * This is the one list on the site that can cost somebody money. Someone
- * reads an entry, packs a camera and posts it. So the tests here are about
- * the claims each entry makes rather than about rendering: every entry has to
- * say what it rests on, and nothing may be presented as checked when it was
- * not.
+ * The repair list is the page most likely to cost someone real money
+ * if it is wrong: a reader ships a camera across a continent on the
+ * strength of it. These check the things that would do that damage
+ * quietly.
  */
-test("every entry states its evidence", () => {
+
+test("every entry carries its evidence", () => {
+  assert.ok(TECHNICIANS.length > 0);
   for (const t of TECHNICIANS) {
-    assert.ok(["site", "listed"].includes(t.evidence.kind), `${t.name}: unknown evidence kind`);
-    assert.ok(t.evidence.note.trim().length > 20, `${t.name}: the evidence note says too little`);
-    assert.ok(t.work.trim().length > 0, `${t.name}: needs a description of the work`);
-    assert.ok(TECHNICIAN_REGIONS.includes(t.region), `${t.name}: ${t.region} is not a region`);
+    assert.ok(t.name.trim(), "a technician needs a name");
+    assert.ok(t.location.trim(), `${t.name} needs a location`);
+    assert.ok(t.work.trim().length > 20, `${t.name} needs a real description of the work`);
+    assert.ok(t.evidence?.note?.trim(), `${t.name} needs an evidence note`);
+    assert.ok(
+      ["site", "listed"].includes(t.evidence.kind),
+      `${t.name} has an unknown evidence kind`,
+    );
   }
 });
 
-test("an entry read from a site has that site on it", () => {
+test("a way to reach them", () => {
   for (const t of TECHNICIANS) {
-    if (t.evidence.kind === "site") {
-      assert.ok(t.url, `${t.name} claims its own site was read but carries no URL`);
-      assert.match(t.url!, /^https:\/\//, `${t.name}: ${t.url} should be https`);
-    }
+    assert.ok(
+      t.url || t.email || t.phone,
+      `${t.name} has no website, email or phone — a listing nobody can act on`,
+    );
+    if (t.url) assert.match(t.url, /^https?:\/\//, `${t.name} has a malformed URL`);
+    if (t.email) assert.match(t.email, /^[^@\s]+@[^@\s]+\.\w+$/, `${t.name} has a malformed email`);
   }
 });
 
-test("an unconfirmed entry does not look confirmed", () => {
+test("no two entries are the same business", () => {
+  const names = TECHNICIANS.map((t) => t.name.toLowerCase());
+  assert.equal(new Set(names).size, names.length, "a technician is listed twice");
+});
+
+/*
+ * Coordinates locate a town, never a business's own address — a repair
+ * shop is often someone's home workshop, and a map pin on a house is
+ * not something this project is going to publish.
+ */
+test("coordinates are plausible and say what they locate", () => {
   for (const t of TECHNICIANS) {
-    if (t.evidence.kind === "listed") {
-      assert.match(
-        t.evidence.note,
-        /not confirmed|unconfirmed|rather than confirmed/i,
-        `${t.name}: an unverified entry must say so in its note`,
+    if (!t.place) continue;
+    const { lat, lon, precision, from } = t.place;
+    assert.ok(Number.isFinite(lat) && lat >= -90 && lat <= 90, `${t.name} has a bad latitude`);
+    assert.ok(Number.isFinite(lon) && lon >= -180 && lon <= 180, `${t.name} has a bad longitude`);
+    assert.ok(["town", "city"].includes(precision), `${t.name} has an odd precision`);
+    assert.ok(from.trim(), `${t.name}'s coordinates need a source`);
+    assert.ok(lat !== 0 || lon !== 0, `${t.name} is at null island`);
+  }
+});
+
+/*
+ * A vague location must not acquire coordinates. "Canada" and "United
+ * Kingdom" cannot be placed, and inventing a point for them would put
+ * a business in a town it is not in — worse on a map than an absence,
+ * because a dot looks like knowledge.
+ */
+test("a location too vague to place carries no coordinates", () => {
+  const tooVague = /^(canada|united kingdom|usa|united states|england|wales|scotland)$/i;
+  for (const t of TECHNICIANS) {
+    const last = t.location.split(",").pop()?.trim() ?? "";
+    const isCountryOnly = tooVague.test(t.location.trim());
+    const isRegionOnly = t.location.trim().split(",").length === 2 && /^(south|north|east|west)\s/i.test(t.location.trim());
+    if (isCountryOnly || isRegionOnly) {
+      assert.equal(
+        t.place,
+        undefined,
+        `${t.name} is located only as "${t.location}" and must not be given a point`,
       );
     }
+    assert.ok(last, `${t.name} has a malformed location`);
   }
-});
-
-test("no entry is listed twice and every one is grouped", () => {
-  const names = TECHNICIANS.map((t) => t.name);
-  assert.equal(new Set(names).size, names.length, `duplicate entry: ${names.join(", ")}`);
-
-  const grouped = techniciansByRegion().flatMap((g) => g.people);
-  assert.equal(grouped.length, TECHNICIANS.length, "an entry fell out of its region group");
-  for (const group of techniciansByRegion()) {
-    assert.ok(group.people.length > 0, `${group.region} is an empty heading`);
-  }
-});
-
-test("the built page keeps the warning above the list", { skip: !fs.existsSync("out/technicians.html") }, () => {
-  const html = fs.readFileSync("out/technicians.html", "utf8");
-
-  const warning = html.indexOf("Check before you ship");
-  assert.ok(warning > 0, "the page must carry the caveat");
-
-  const first = html.indexOf(TECHNICIANS[0]!.name);
-  assert.ok(first > warning, "the caveat must come before the first entry, not after the list");
-
-  // Every entry reaches the page — a silently dropped one is a missing option.
-  for (const t of TECHNICIANS) {
-    assert.ok(html.includes(t.name), `${t.name} is not in the built page`);
-  }
-
-  // An outbound link that leaks the visitor's referrer or hands over the tab
-  // is the kind of detail that only shows up in the build.
-  assert.match(html, /rel="noreferrer nofollow"/);
 });

@@ -3,40 +3,34 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
 /**
- * The timeline, played like credits — and the same page when it is not.
+ * The timeline, played like a film — and the same page when it is not.
  *
- * The central decision: there are not two views here. The slideshow *is* the
- * timeline, scrolled for you. That is what makes taking over seamless —
- * stopping the playback leaves the reader exactly where the animation had
- * reached, because the animation was only moving the page's own scroll
- * position. Nothing has to be handed from one mode to another, and nothing
- * can get out of step.
+ * The central decision has not changed: there are not two views here. The
+ * film *is* the timeline, moved for you. Stopping the playback leaves the
+ * reader exactly where it had reached, because the playback only ever moved
+ * the page's own scroll position. Nothing is handed between modes and
+ * nothing can get out of step. With scripting off, or motion reduced, the
+ * page is an ordinary chronology and loses nothing.
  *
- * Two things follow from that:
- *
- *  - Scrolling, by any means, simply stops the playback. There is no
- *    "exit animation", because there is nothing to exit.
- *  - With JavaScript off, or motion reduced, the page is an ordinary
- *    chronology and loses nothing.
- *
- * The credits feel comes from a focal band: entries are brightest in the
- * middle of the screen and fade towards both edges. That is applied on every
- * frame while playing and on scroll otherwise, so manual reading has the same
- * texture as the playback rather than looking like a different page.
+ * What changed is the movement. It used to crawl the page upward at a
+ * constant speed, which read as a teleprompter: the text slid continuously
+ * and nothing ever arrived. Now it moves a year at a time — settle, hold,
+ * advance — which is what makes it feel like a sequence of shots rather
+ * than a scroll. The holding is the part that does the work; a cut with no
+ * dwell after it is just a jump.
  */
 
 /**
- * Pixels per second.
- *
- * Set against the measured height of the piece rather than picked. At this
- * speed an unattended playthrough runs a little under two minutes, and an
- * entry spends roughly twelve seconds crossing the screen — unhurried enough
- * to read a long one twice. The earlier 105px/s read as something you were
- * chasing.
+ * How long a year holds the screen before the next one comes, in
+ * milliseconds, plus a little for each line of text so a long entry is not
+ * whipped away. Measured against reading it aloud, which is slower than
+ * reading it silently and about right for something playing itself.
  */
-const SPEED = 72;
+const BASE_DWELL = 2600;
+const DWELL_PER_CHARACTER = 13;
+const MAX_DWELL = 9000;
 
-/** How far from the focal line an entry is fully faded. */
+/** How far from the focal line a panel is fully faded. */
 const FADE_DISTANCE = 0.62;
 
 function prefersReducedMotion(): boolean {
@@ -49,107 +43,128 @@ function prefersReducedMotion(): boolean {
 
 export function TimelineCinema({ children }: { children: React.ReactNode }) {
   const root = useRef<HTMLDivElement>(null);
-  const frame = useRef<number | null>(null);
-  const carry = useRef(0); // sub-pixel remainder, so slow speeds stay smooth
-  const last = useRef(0);
-  const programmatic = useRef(false);
+  const timer = useRef<number | null>(null);
+  const settling = useRef(false);
+  const playingRef = useRef(false);
 
   const [playing, setPlaying] = useState(false);
   const [offered, setOffered] = useState(false);
   const [done, setDone] = useState(false);
 
-  /** Brighten what is near the middle of the screen, dim the rest. */
+  const panels = useCallback(
+    () => Array.from(root.current?.querySelectorAll<HTMLElement>("[data-beat]") ?? []),
+    [],
+  );
+
+  /** Brighten what is near the focal line, dim the rest. */
   const paint = useCallback(() => {
-    const beats = root.current?.querySelectorAll<HTMLElement>("[data-beat]");
-    if (!beats) return;
     const h = window.innerHeight;
-    const focus = h * 0.42; // a little above centre reads better than dead centre
-    for (const beat of beats) {
-      const box = beat.getBoundingClientRect();
-      if (box.bottom < -200 || box.top > h + 200) continue;
+    const focus = h * 0.46;
+    for (const panel of panels()) {
+      const box = panel.getBoundingClientRect();
+      if (box.bottom < -400 || box.top > h + 400) continue;
       const mid = box.top + box.height / 2;
       const away = Math.abs(mid - focus) / h;
-      const lit = Math.max(0, 1 - Math.max(0, away - 0.08) / FADE_DISTANCE);
-      beat.style.setProperty("--lit", lit.toFixed(3));
+      const lit = Math.max(0, 1 - Math.max(0, away - 0.1) / FADE_DISTANCE);
+      panel.style.setProperty("--lit", lit.toFixed(3));
+      /*
+       * Marks the panel holding the screen, so the slow drift across its
+       * photographs runs there and nowhere else. Written only when it
+       * changes: setting an attribute to the value it already has still
+       * invalidates style for the subtree, which on a page of forty panels
+       * is a scroll handler's worth of work for nothing.
+       */
+      const live = lit > 0.55 ? "on" : "off";
+      if (panel.dataset.live !== live) panel.dataset.live = live;
     }
-  }, []);
+  }, [panels]);
 
   const stop = useCallback(() => {
-    if (frame.current !== null) cancelAnimationFrame(frame.current);
-    frame.current = null;
+    if (timer.current !== null) window.clearTimeout(timer.current);
+    timer.current = null;
+    playingRef.current = false;
     setPlaying(false);
   }, []);
 
-  const step = useCallback(
-    (now: number) => {
-      const dt = last.current ? Math.min(100, now - last.current) : 16;
-      last.current = now;
-
-      const want = (SPEED * dt) / 1000 + carry.current;
-      const whole = Math.floor(want);
-      carry.current = want - whole;
-
-      const max = document.documentElement.scrollHeight - window.innerHeight;
-      const next = Math.min(max, window.scrollY + whole);
-
-      if (whole > 0) {
-        programmatic.current = true;
-        window.scrollTo(0, next);
+  /** The panel currently nearest the focal line. */
+  const currentIndex = useCallback(() => {
+    const all = panels();
+    const focus = window.innerHeight * 0.46;
+    let best = 0;
+    let bestAway = Infinity;
+    all.forEach((panel, i) => {
+      const box = panel.getBoundingClientRect();
+      const away = Math.abs(box.top + box.height / 2 - focus);
+      if (away < bestAway) {
+        bestAway = away;
+        best = i;
       }
-      paint();
+    });
+    return best;
+  }, [panels]);
 
-      if (next >= max - 1) {
-        setDone(true);
-        stop();
-        return;
+  const advance = useCallback(() => {
+    if (!playingRef.current) return;
+    const all = panels();
+    const next = currentIndex() + 1;
+    if (next >= all.length) {
+      setDone(true);
+      stop();
+      return;
+    }
+    const panel = all[next];
+    if (!panel) {
+      stop();
+      return;
+    }
+
+    /*
+     * A smooth scroll fires dozens of scroll events that are ours, not the
+     * reader's, and the two are indistinguishable from the event alone. The
+     * flag is held for the duration of the movement and released once the
+     * page has stopped moving, which is the only honest way to tell them
+     * apart without taking over the scroll entirely.
+     */
+    settling.current = true;
+    panel.scrollIntoView({ behavior: "smooth", block: "center" });
+
+    let still = 0;
+    let previous = window.scrollY;
+    const watch = window.setInterval(() => {
+      if (Math.abs(window.scrollY - previous) < 1) still += 1;
+      else still = 0;
+      previous = window.scrollY;
+      if (still >= 3) {
+        window.clearInterval(watch);
+        settling.current = false;
+        if (!playingRef.current) return;
+        const text = panel.innerText?.length ?? 0;
+        const dwell = Math.min(MAX_DWELL, BASE_DWELL + text * DWELL_PER_CHARACTER);
+        timer.current = window.setTimeout(advance, dwell);
       }
-      frame.current = requestAnimationFrame(step);
-    },
-    [paint, stop],
-  );
+    }, 60);
+  }, [currentIndex, panels, stop]);
 
   const play = useCallback(() => {
-    if (frame.current !== null) return;
+    if (playingRef.current) return;
     setDone(false);
-    last.current = 0;
-    carry.current = 0;
+    playingRef.current = true;
     setPlaying(true);
-    frame.current = requestAnimationFrame(step);
-  }, [step]);
+    timer.current = window.setTimeout(advance, 400);
+  }, [advance]);
 
-  // Playback, and the handover.
   useEffect(() => {
     paint();
 
-    /*
-     * Anything the reader does to move the page takes it over. The scroll
-     * listener cannot tell our own scrolling from theirs, so our writes set a
-     * flag that the very next scroll event clears — every other scroll is
-     * someone's own.
-     */
-    const onScroll = () => {
-      if (programmatic.current) {
-        programmatic.current = false;
-      } else if (frame.current !== null) {
-        stop();
-      }
-      paint();
-    };
+    const onScroll = () => paint();
 
+    /* Anything the reader does to move the page takes it over — except
+       while we are mid-move, when the events are our own doing. */
     const takeOver = (e: Event) => {
-      if (frame.current === null) return;
+      if (!playingRef.current || settling.current) return;
       if (e.type === "keydown") {
         const k = (e as KeyboardEvent).key;
-        const moves = [
-          "ArrowDown",
-          "ArrowUp",
-          "PageDown",
-          "PageUp",
-          "Home",
-          "End",
-          " ",
-          "Spacebar",
-        ];
+        const moves = ["ArrowDown", "ArrowUp", "PageDown", "PageUp", "Home", "End", " ", "Spacebar"];
         if (!moves.includes(k)) return;
       }
       stop();
@@ -162,34 +177,23 @@ export function TimelineCinema({ children }: { children: React.ReactNode }) {
     window.addEventListener("resize", paint);
 
     /*
-     * Autoplay only from the top of an untouched page. Someone who followed a
-     * link to a particular year, or who came back to where they were, did not
+     * Autoplay only from the top of an untouched page. Someone who followed
+     * a link to a particular year, or came back to where they were, did not
      * ask to be taken on a tour — and reduced motion means never.
      */
     const fresh = window.scrollY < 4 && !window.location.hash;
-    if (fresh && !prefersReducedMotion()) {
-      // A beat before starting, so the first card is read, not missed.
-      const id = window.setTimeout(play, 900);
-      setOffered(true);
-      return () => {
-        window.clearTimeout(id);
-        window.removeEventListener("scroll", onScroll);
-        window.removeEventListener("wheel", takeOver);
-        window.removeEventListener("touchstart", takeOver);
-        window.removeEventListener("keydown", takeOver);
-        window.removeEventListener("resize", paint);
-        if (frame.current !== null) cancelAnimationFrame(frame.current);
-      };
-    }
-
+    let start: number | undefined;
+    if (fresh && !prefersReducedMotion()) start = window.setTimeout(play, 1400);
     setOffered(true);
+
     return () => {
+      if (start) window.clearTimeout(start);
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("wheel", takeOver);
       window.removeEventListener("touchstart", takeOver);
       window.removeEventListener("keydown", takeOver);
       window.removeEventListener("resize", paint);
-      if (frame.current !== null) cancelAnimationFrame(frame.current);
+      if (timer.current !== null) window.clearTimeout(timer.current);
     };
   }, [paint, play, stop]);
 
@@ -197,13 +201,6 @@ export function TimelineCinema({ children }: { children: React.ReactNode }) {
     <div ref={root} data-cinema={playing ? "playing" : "idle"} className="cinema">
       {children}
 
-      {/*
-       * The only control, and it stays in one place rather than appearing and
-       * disappearing under the reader's cursor. It is a real button, so it is
-       * reachable by keyboard and announces its state; `aria-live` is
-       * deliberately absent, because narrating a scroll position to a screen
-       * reader is noise.
-       */}
       {offered && (
         <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 flex justify-center pb-5 px-4 print:hidden">
           <div className="pointer-events-auto flex items-center gap-3 border border-[var(--line)] bg-[var(--bg-raised)]/95 backdrop-blur-sm px-4 py-2 shadow-sm">

@@ -21,7 +21,7 @@ const ROOT = process.cwd();
 export type ContentBlock =
   | { kind: "heading"; text: string }
   | { kind: "paragraph"; text: string }
-  | { kind: "image"; src: string; alt: string };
+  | { kind: "image"; src: string; alt: string; thumbnailOnly?: boolean };
 
 export interface RecoveredPage {
   slug: string;
@@ -89,10 +89,17 @@ export function readContentBlocks(originalPath: string | undefined): ContentBloc
     if (tag === "IMG") {
       const src = toSitePath(el.getAttribute("src") ?? "", originalPath);
       if (!src || seenImages.has(src)) continue;
+      /* `kept.src` may differ from `src`: a missing full-size scan falls
+         back to its thumbnail, so dedupe on what is actually used. */
       const [kept] = cleanImages([{ src, alt: el.getAttribute("alt") ?? "" }]);
       if (!kept) continue;
       seenImages.add(src);
-      blocks.push({ kind: "image", src: kept.src, alt: kept.alt });
+      blocks.push({
+        kind: "image",
+        src: kept.src,
+        alt: kept.alt,
+        ...(kept.thumbnailOnly ? { thumbnailOnly: true } : {}),
+      });
       continue;
     }
     const text = el.structuredText.replace(/\s+/g, " ").trim();

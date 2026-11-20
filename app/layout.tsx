@@ -21,10 +21,10 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f5f1e8" },
-    { media: "(prefers-color-scheme: dark)", color: "#14110e" },
-  ],
+  /* One colour, because the site has one default. A device-conditional
+     theme colour would paint the browser chrome dark around a light page
+     for anyone whose machine is set that way. */
+  themeColor: "#f5f1e8",
 };
 
 export const metadata: Metadata = {
@@ -67,9 +67,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       {/* Picks the rotating front-page card, before paint, for the same reason. */}
       <script dangerouslySetInnerHTML={{ __html: FEATURED_INIT_SCRIPT }} />
       {/*
-       * Applies a stored light/dark choice, before paint. It sets nothing when
-       * the visitor has not chosen, leaving the stylesheet's
-       * `prefers-color-scheme` rules to follow the device.
+       * Sets the theme before the first paint — the stored choice if there
+       * is one, light otherwise. Deciding after hydration instead would
+       * show anyone who has chosen dark a flash of the light page first.
        */}
       <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
       {/*

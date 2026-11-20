@@ -9,16 +9,33 @@ test("a stored choice is honoured", () => {
 });
 
 /*
- * With nothing stored the answer must be null, not a guess. Returning
- * "light" here would override the device preference of every first-time
- * visitor whose machine asks for a dark page.
+ * With nothing stored the answer is light, not the device's preference.
+ *
+ * Deferring to the device is the usual advice and it was what this did. It
+ * meant a reader whose machine switches itself at sunset opened a site made
+ * of 1950s catalogue paper and found it black, having asked for nothing of
+ * the kind. Dark remains one click away and is remembered once chosen.
  */
-test("no stored choice defers to the device", () => {
-  assert.equal(chooseTheme(null), null);
-  assert.equal(chooseTheme(undefined), null);
-  assert.equal(chooseTheme(""), null);
-  assert.equal(chooseTheme("DARK"), null, "the comparison is exact");
-  assert.equal(chooseTheme("sepia"), null, "an unknown value is not a theme");
+test("no stored choice means light", () => {
+  assert.equal(chooseTheme(null), "light");
+  assert.equal(chooseTheme(undefined), "light");
+  assert.equal(chooseTheme(""), "light");
+  assert.equal(chooseTheme("DARK"), "light", "the comparison is exact");
+  assert.equal(chooseTheme("sepia"), "light", "an unknown value is not a theme");
+});
+
+test("a stored dark choice is still honoured", () => {
+  assert.equal(chooseTheme("dark"), "dark");
+});
+
+/*
+ * The attribute is always set now, so the stylesheet never has to fall
+ * through to a media query — and the page cannot be dark by accident.
+ */
+test("the init script always sets a theme", () => {
+  assert.match(THEME_INIT_SCRIPT, /setAttribute\("data-theme"/);
+  assert.match(THEME_INIT_SCRIPT, /"dark":"light"/, "light must be the fallback");
+  assert.doesNotMatch(THEME_INIT_SCRIPT, /prefers-color-scheme/);
 });
 
 /*

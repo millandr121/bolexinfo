@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArchiveCompare } from "@/components/ArchiveCompare";
 import { TimelineCinema } from "@/components/TimelineCinema";
 import { getTimeline } from "@/lib/timeline";
+import { getTimelineMedia, timelineLayout, timelineSide } from "@/lib/timeline-media";
 import { originalArchiveHref } from "@/lib/archive";
 
 export const metadata: Metadata = {
@@ -29,6 +30,7 @@ export const metadata: Metadata = {
  */
 export default function TimelinePage() {
   const timeline = getTimeline();
+  const media = getTimelineMedia();
   const archiveHref = originalArchiveHref("/timeline.html");
   const total = timeline.eras.reduce((n, e) => n + e.entries.length, 0);
   const first = timeline.eras[0]?.entries[0]?.year;
@@ -37,7 +39,9 @@ export default function TimelinePage() {
 
   return (
     <TimelineCinema>
-      <div className="pb-8 max-w-3xl">
+      {/* Full width: the film wants the page, the words want a measure.
+          The reading column is set on .timeline-panel__inner instead. */}
+      <div className="pb-8">
         {/* Opening title. Tall enough to hold the screen for a moment before
             the first date arrives, so the piece starts rather than lurches. */}
         <header data-beat className="min-h-[46vh] flex flex-col justify-center py-14">
@@ -87,7 +91,16 @@ export default function TimelinePage() {
           )}
         </header>
 
-        {timeline.eras.map((era) => (
+        {/*
+          A running count across all four eras, so the alternation of
+          composition carries over an era boundary instead of restarting
+          and putting two identical panels next to each other.
+        */}
+        {timeline.eras.map((era, eraIndex) => {
+          const index = timeline.eras
+            .slice(0, eraIndex)
+            .reduce((n, e) => n + e.entries.length, 0);
+          return (
           <section key={era.era} aria-label={era.era}>
             {/* Era cards break the chronology into chapters. They get a
                 screen of their own while playing, which is what gives the
@@ -102,24 +115,80 @@ export default function TimelinePage() {
             </div>
 
             <ol>
-              {era.entries.map((entry, i) => (
-                <li
-                  key={`${entry.year}-${i}`}
-                  data-beat
-                  id={`year-${entry.year}`}
-                  className="scroll-mt-24 py-5 sm:py-7"
-                >
-                  <div className="sm:flex sm:gap-8">
-                    <p className="font-[family-name:var(--font-mono)] text-sm text-[var(--accent)] sm:w-20 shrink-0 tabular-nums">
-                      {entry.year}
-                    </p>
-                    <p className="mt-1.5 sm:mt-0 text-lg leading-[1.6] max-w-[36rem]">{entry.event}</p>
-                  </div>
-                </li>
-              ))}
+              {era.entries.map((entry, i) => {
+                const pictures = media.get(entry.year) ?? [];
+                const layout = timelineLayout(index + i, pictures.length);
+                const side = timelineSide(index + i);
+                return (
+                  <li
+                    key={`${entry.year}-${i}`}
+                    data-beat
+                    data-layout={layout}
+                    data-side={side}
+                    id={`year-${entry.year}`}
+                    className="timeline-panel"
+                  >
+                    {/*
+                      The photographs are laid out first and sit behind the
+                      words, so a feature can run the width of the screen
+                      without the text having to make room for it. On a
+                      phone they drop back into the flow beneath the text,
+                      where overlapping anything would make both unreadable.
+                    */}
+                    {pictures.length > 0 && (
+                      <ul className="timeline-stage" aria-hidden="true">
+                        {pictures.map((picture, n) => (
+                          <li
+                            key={picture.src}
+                            data-figure
+                            data-plate={picture.blend ? "blend" : "soft"}
+                            style={{ "--n": n } as React.CSSProperties}
+                          >
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img src={picture.src} alt="" loading="lazy" decoding="async" />
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+
+                    <div className="timeline-panel__inner">
+                      <p className="timeline-year" data-part="year">
+                        {entry.year}
+                      </p>
+                      <p className="timeline-event" data-part="text">
+                        {entry.event}
+                      </p>
+
+                      {/*
+                        The pictures are decorative above and named here, so
+                        each one is still a link to its own page and still
+                        carries its credit — without a caption box under
+                        every photograph breaking up the composition.
+                      */}
+                      {pictures.length > 0 && (
+                        <p className="timeline-names" data-part="names">
+                          {pictures.map((picture, n) => (
+                            <span key={picture.src}>
+                              {n > 0 && <span aria-hidden="true"> · </span>}
+                              <Link href={picture.href}>{picture.caption}</Link>
+                              {picture.credit && (
+                                <span className="timeline-credit">
+                                  {" "}
+                                  photograph by {picture.credit}
+                                </span>
+                              )}
+                            </span>
+                          ))}
+                        </p>
+                      )}
+                    </div>
+                  </li>
+                );
+              })}
             </ol>
           </section>
-        ))}
+          );
+        })}
 
         {timeline.eras.length === 0 && (
           <div className="mt-10 border border-[var(--line)] bg-[var(--bg-raised)] p-8">
@@ -175,13 +244,9 @@ export default function TimelinePage() {
 
         {archiveHref && <ArchiveCompare originalHref={archiveHref} title="Timeline" />}
 
-        <aside className="rule mt-14 pt-4 pb-16 text-xs leading-relaxed text-[var(--fg-soft)] font-[family-name:var(--font-mono)]">
-          <span className="uppercase tracking-[0.18em]">Provenance — </span>
-          Recovered from{" "}
-          <span className="text-[var(--fg)]">{timeline.originalUrl ?? "bolexcollector.com/timeline.html"}</span>
-          {timeline.capturedAt ? `, Wayback capture ${timeline.capturedAt}` : ""}. Entries are
-          reproduced verbatim from the archived chronology.
-        </aside>
+        <aside className="rule mt-14 pt-4 text-xs leading-relaxed text-[var(--fg-soft)] font-[family-name:var(--font-mono)]">
+        Chronology by Michael Tisdale.
+      </aside>
       </div>
     </TimelineCinema>
   );

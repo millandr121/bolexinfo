@@ -119,13 +119,9 @@ export default async function ControlsPage({ params }: { params: Promise<{ slug:
       ))}
 
       <Reveal>
-        <aside className="rule mt-16 pt-4 font-[family-name:var(--font-mono)] text-xs leading-relaxed text-[var(--fg-soft)]">
-          <span className="uppercase tracking-[0.18em]">Provenance — </span>
-          Recovered from{" "}
-          <span className="text-[var(--fg)]">bolexcollector.com{controls.originalPath}</span>.
-          Figures and part names are reproduced verbatim; the numbering is the original&rsquo;s,
-          running continuously across all four figures.
-        </aside>
+        <aside className="rule mt-14 pt-4 text-xs leading-relaxed text-[var(--fg-soft)] font-[family-name:var(--font-mono)]">
+        Figures and part names as published, numbered continuously across all four figures.
+      </aside>
       </Reveal>
     </div>
   );

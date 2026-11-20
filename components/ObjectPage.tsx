@@ -213,33 +213,34 @@ export function ObjectPage({
         )}
 
         {/*
-         * Two provenance notes, because there are two kinds of page.
+         * Two notes, because there are two kinds of page.
          *
-         * Most are recovered from BolexCollector.com and say so. A few —
-         * models the original never covered — were researched and sourced
-         * since, and must not borrow the archive's authority by implying they
-         * came from it. Getting this wrong would be the quietest and worst
-         * failure this site could have.
+         * Most of this is Michael Tisdale's own research and is credited to
+         * him. A few models he never covered were researched and added since,
+         * and must not borrow his authority by implying otherwise. Getting
+         * that wrong would be the quietest and worst failure this site could
+         * have.
+         *
+         * What is deliberately absent is the machinery: which Wayback capture
+         * a page came from, and when. That is real and worth keeping, but it
+         * is a note to ourselves rather than something a reader wants between
+         * them and a camera, so it lives in the archive ledger instead.
          */}
         <p
           className={`font-[family-name:var(--font-mono)] text-xs leading-relaxed text-[var(--fg-soft)] ${
             archiveHref ? "mt-6" : ""
           }`}
         >
-          <span className="uppercase tracking-[0.18em]">Provenance — </span>
+          <span className="uppercase tracking-[0.18em]">Source — </span>
         {model.recovered ? (
           <>
-            Recovered from{" "}
-            <span className="text-[var(--fg)]">
-              {model.originalUrl ?? `bolexcollector.com${model.originalPath ?? ""}`}
-            </span>
-            {model.capturedAt ? `, Wayback capture ${model.capturedAt}` : ""}. Specifications and
-            serial ranges are reproduced verbatim from the archived page.
+            Specifications, serial ranges and photographs by{" "}
+            <span className="text-[var(--fg)]">Michael Tisdale</span>.
           </>
         ) : (
           <>
-            <span className="text-[var(--fg)]">Not from the original site.</span> BolexCollector.com
-            never covered this model; the entry was researched and added since.
+            <span className="text-[var(--fg)]">Added since.</span> Michael Tisdale never
+            covered this model; it was researched for this edition.
             {credits.length > 0 && (
               <>
                 {" "}

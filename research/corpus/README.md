@@ -55,3 +55,49 @@ project works to, set out in `../sources.md`:
 If you are one of the people in this file and would rather your posts were
 not here, that is a fair thing to ask: say so and they come out. Drafts of
 the notes asking permission properly are in `../outreach.md`.
+## bolex-reddit-corpus.jsonl
+
+**5,070 records · 981 threads · 1,497 contributors · 2011–2026 · 2.8 MB**
+
+Reddit, harvested by `research/scripts/harvest-reddit.py`. Same record
+shape as the forum corpus: source, thread_id, thread, url, n, author,
+date, text, so one reader serves both.
+
+| Subreddit | Records | Threads | Span |
+| --- | --- | --- | --- |
+| r/bolex | 1,075 | 391 | 2013-10-11 → 2026-11-20 |
+| r/16mm | 1,840 | 247 | 2016-01-21 → 2026-11-19 |
+| r/8mm | 1,159 | 194 | 2016-04-12 → 2026-10-28 |
+| r/Filmmakers | 765 | 103 | 2011-07-25 → 2026-11-15 |
+| r/super8 | 231 | 46 | 2021-03-15 → 2026-11-16 |
+
+r/bolex and r/super8 are swept whole. The rest are searched by keyword,
+by title and by body separately, because a thread that mentions a Bolex
+in its text rarely says so in its title.
+
+**Six sweeps are still owed.** They are listed in `../roadmap.md` with
+where each stopped. Arctic Shift answers HTTP 422 when it wants the
+caller to slow down rather than when a request is wrong, and a sweep
+refused that way stops short; the harvester reports each one instead of
+returning an empty page and treating the subreddit as finished.
+
+Re-running picks up where it left off, per subreddit: each resumes from
+its own newest date rather than from the newest date in the file, so a
+subreddit cut short is not skipped over. A sweep that stopped before
+reaching back to where another sweep of the same subreddit already
+ended needs `--since` with that date, because resuming only goes
+forward.
+
+Reddit itself cannot be read from this environment, every
+unauthenticated route answers 403 to a datacenter address, so this
+comes via Arctic Shift, a public research mirror of the Reddit archive.
+The script's docstring records the three API quirks that cost time.
+
+Deleted and removed posts are dropped on the way in.
+
+## Whose writing the Reddit file is
+
+The same rules as the forum corpus, above, and for the same reasons:
+these are 1,497 named people's posts, held because the material is
+worth not losing, not because it is ours to republish.
+

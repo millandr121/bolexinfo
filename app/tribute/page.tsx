@@ -4,7 +4,7 @@ import { Reveal } from "@/components/Reveal";
 import { SupportCallout } from "@/components/SupportCallout";
 
 export const metadata: Metadata = {
-  title: "A Dedication — Michael Tisdale, the Bolex Collector",
+  title: "A Dedication: Michael Tisdale, the Bolex Collector",
   description:
     "In appreciation of Michael Tisdale, the collector and filmmaker who created BolexCollector.com in 2005 and spent years documenting Paillard-Bolex for everyone who came after.",
 };
@@ -36,7 +36,7 @@ export default function TributePage() {
           <p>
             Everything in this archive exists because one collector in Atlanta decided that the
             cameras he loved deserved to be remembered properly. In 2005, Michael Tisdale began
-            BolexCollector.com &mdash; in his own words, &ldquo;a personal project to catalog
+            BolexCollector.com. In his own words, it was &ldquo;a personal project to catalog
             information about Paillard-Bolex, a Swiss company that manufactured clockwork movie
             cameras for both the professional and home movie maker.&rdquo;
           </p>
@@ -49,7 +49,7 @@ export default function TributePage() {
             decades, into the definitive independent reference on the subject: cameras and projectors
             catalogued model by model, lenses and accessories by decade, serial-number tables,
             scanned catalogs and advertising, the Bolex Reporter magazine, a company timeline, and a
-            glossary &mdash; assembled with a care that most institutions never manage.
+            glossary, assembled with a care that most institutions never manage.
           </p>
         </Reveal>
 
@@ -64,7 +64,7 @@ export default function TributePage() {
         <Reveal>
           <p>
             He was never only an archivist. He was a filmmaker who used the machines he documented
-            &mdash; shooting time-lapse, animation, and b-roll, preferring, as he put it, &ldquo;spring-wound
+            , shooting time-lapse, animation, and b-roll, preferring, as he put it, &ldquo;spring-wound
             cameras over anything that uses a battery.&rdquo; For years his hands-on knowledge came
             mostly through a Bolex H16 Rex-4 and an H16 Supreme on 16mm; later, almost exclusively on
             double-8mm reversal. That he actually <em>ran film</em> through these cameras is why the
@@ -79,8 +79,8 @@ export default function TributePage() {
             <a href="https://www.collectorsweekly.com/articles/an-interview-with-vintage-bolex-movie-camera-collector-michael-tisdale/">
               Collectors Weekly
             </a>
-            , he traced the passion to a convergence of older ones &mdash; photography, broadcasting, and
-            collecting vintage records and magazines &mdash; and, above all, to an admiration for the Swiss
+            , he traced the passion to a convergence of older ones: photography, broadcasting, and
+            collecting vintage records and magazines, and, above all, to an admiration for the Swiss
             craftsmanship and sheer quality of the cameras themselves. The site earned a place in that
             publication&rsquo;s Hall of Fame.
           </p>
@@ -90,21 +90,28 @@ export default function TributePage() {
           <h2>Why this project owes him everything</h2>
           <p>
             When BolexCollector.com went offline, a great deal of carefully gathered history was at
-            risk of vanishing with it &mdash; the fate of most personal reference sites once the person
+            risk of vanishing with it, the fate of most personal reference sites once the person
             behind them moves on. This restoration is, first and last, an act of gratitude: to
             preserve what he built exactly as he made it, and to keep it freely available to the
             collectors, filmmakers, and curious readers he always meant it for.
           </p>
           <p>
-            We have changed nothing of his record. His pages are preserved byte-for-byte; his words,
-            tables, and scans are reproduced as he published them. The modern edition is only a new
-            reading room built around his library.
+            His legacy is kept two ways. The original site is here in full, byte for byte, exactly
+            as he published it: his words, his tables, his scans, nothing edited and nothing
+            tidied. Alongside it, this edition carries his work forward, adding what has been
+            learned since and what he never had the chance to cover. The two are kept apart on
+            purpose, so it is always clear which is his.
+          </p>
+          <p>
+            That is what BolexCollector.com was for. He built it so the knowledge would be
+            somewhere, freely, for anyone who came looking. Continuing it is the only way to
+            preserve a thing like that.
           </p>
         </Reveal>
 
         <Reveal>
           <p className="text-center font-[family-name:var(--font-display)] text-lg italic text-[var(--fg-soft)] not-prose mt-12">
-            With thanks to Michael Tisdale &mdash; for the years, the care, and the generosity of
+            With thanks to Michael Tisdale, for the years, the care, and the generosity of
             sharing it all.
           </p>
         </Reveal>
@@ -124,13 +131,13 @@ export default function TributePage() {
               <a href="/original/aboutme.html" className="text-[var(--accent)] underline underline-offset-4">
                 &ldquo;About the Webmaster&rdquo;
               </a>{" "}
-              &mdash; Michael Tisdale&rsquo;s own biography, preserved from the original site.
+              Michael Tisdale&rsquo;s own biography, as he wrote it.
             </li>
             <li>
               <a href="/original/about.html" className="text-[var(--accent)] underline underline-offset-4">
                 &ldquo;About This Site&rdquo;
               </a>{" "}
-              &mdash; his statement of the project&rsquo;s purpose, preserved from the original site.
+              His statement of the project&rsquo;s purpose, as he wrote it.
             </li>
             <li>
               <a
@@ -139,7 +146,7 @@ export default function TributePage() {
               >
                 &ldquo;Hollywood at Home: Vintage Bolex Movie Cameras&rdquo;
               </a>{" "}
-              &mdash; interview, Collectors Weekly.
+              Interview, Collectors Weekly.
             </li>
             <li>
               <a
@@ -148,7 +155,7 @@ export default function TributePage() {
               >
                 Bolex Collector
               </a>{" "}
-              &mdash; Collectors Weekly Hall of Fame.
+              Collectors Weekly Hall of Fame.
             </li>
           </ul>
           <p className="mt-6 text-xs leading-relaxed text-[var(--fg-soft)] font-[family-name:var(--font-mono)]">

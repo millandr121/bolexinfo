@@ -54,7 +54,7 @@ export function DesktopNav() {
     <nav
       ref={navRef}
       aria-label="Primary"
-      className="hidden lg:flex items-center gap-1 xl:gap-2 text-[0.74rem] xl:text-[0.78rem] uppercase tracking-[0.08em]"
+      className="hidden menus:flex items-center gap-1 xl:gap-2 text-[0.74rem] xl:text-[0.78rem] uppercase tracking-[0.08em]"
     >
       {NAVIGATION.map((entry) =>
         isGroup(entry) ? (
@@ -155,12 +155,18 @@ function NavMenu({
 }
 
 /**
- * The mobile rail stays flat.
+ * The rail, for phones and narrow windows only.
  *
- * It already scrolls sideways and handles any number of destinations, so
- * folding it into menus would add a tap to reach everything and hide the
- * site's shape for no gain. Grouping solves a desktop width problem; this
- * surface does not have one.
+ * It scrolls sideways and handles any number of destinations, which is
+ * right on a touch screen: folding it into menus would add a tap to
+ * reach everything and hide the site's shape for no gain. Grouping
+ * solves a width problem that surface does not have.
+ *
+ * It is emphatically not for a desktop. It used to take over below
+ * 1024px, so a browser window merely narrower than full screen fell
+ * back to a sideways-scrolling strip with a scrollbar under it, on a
+ * display with room for the menus several times over. The switch is
+ * now at the width the menus actually need.
  */
 export function SectionRail() {
   const pathname = usePathname();
@@ -169,7 +175,7 @@ export function SectionRail() {
   return (
     <nav
       aria-label="Sections"
-      className="lg:hidden border-t border-[var(--line)] scroll-x scroll-fade"
+      className="menus:hidden border-t border-[var(--line)] scroll-x scroll-fade"
     >
       <div className="flex px-3 whitespace-nowrap">
         {items.map((item) => {

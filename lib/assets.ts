@@ -36,6 +36,15 @@ export interface ModelImage {
    * data.
    */
   credit?: string;
+  /**
+   * True where only the thumbnail survives.
+   *
+   * The original page asked for a full-size scan the Wayback Machine
+   * never captured, and this is the small version shown in its place.
+   * Carried so a page can say so rather than present a 200px scan as
+   * though it were the whole record.
+   */
+  thumbnailOnly?: boolean;
   /** Where it came from, if not the photographer directly. */
   source?: string;
 }
@@ -67,10 +76,42 @@ export function cleanImages(images: ModelImage[] | undefined): ModelImage[] {
   const seen = new Set<string>();
   for (const img of images) {
     if (!img.src.startsWith("/images/") || CHROME_IMAGE.test(img.src) || seen.has(img.src)) continue;
-    const onDisk = path.join(ROOT, "archive", "wayback", img.src.replace(/^\//, ""));
-    if (!fs.existsSync(onDisk)) continue;
-    seen.add(img.src);
-    out.push({ src: img.src, alt: img.alt || "" });
+
+    const inArchive = (src: string) =>
+      fs.existsSync(path.join(ROOT, "archive", "wayback", src.replace(/^\//, "")));
+
+    let src = img.src;
+    let thumbnailOnly = false;
+    if (!inArchive(src)) {
+      /*
+       * Fall back to the thumbnail where the full-size scan is gone.
+       *
+       * 95 ephemera pages showed nothing at all because the page asks
+       * for `40ad007.jpg`, which the Wayback Machine never captured,
+       * while `40ad007_t.jpg` sits beside it in the archive and was
+       * captured. Checked against Wayback's own index: it holds 220
+       * files for that directory, 81 full-size and 139 thumbnails,
+       * exactly what is on disk. Nothing was lost in harvesting and no
+       * refetch will produce the rest — those scans only ever existed
+       * on Michael's server.
+       *
+       * A small scan of an advertisement is worth much more than an
+       * empty page, so the thumbnail is used and marked as one. It is
+       * marked rather than quietly substituted because the reader
+       * deserves to know they are seeing all that survives.
+       */
+      const thumb = src.replace(/(\.[a-z]+)$/i, "_t$1");
+      if (thumb !== src && inArchive(thumb)) {
+        src = thumb;
+        thumbnailOnly = true;
+      } else {
+        continue;
+      }
+    }
+
+    if (seen.has(src)) continue;
+    seen.add(src);
+    out.push({ src, alt: img.alt || "", ...(thumbnailOnly ? { thumbnailOnly } : {}) });
   }
   return out;
 }

@@ -136,12 +136,9 @@ export default function LinksPage() {
             </Reveal>
           )}
 
-          <aside className="rule mt-14 pt-4 font-[family-name:var(--font-mono)] text-xs leading-relaxed text-[var(--fg-soft)]">
-            <span className="uppercase tracking-[0.18em]">Provenance — </span>
-            Recovered from{" "}
-            <span className="text-[var(--fg)]">bolexcollector.com/links.html</span>, reproduced
-            verbatim: every link, its description and its ordering are as published.
-          </aside>
+          <aside className="rule mt-14 pt-4 text-xs leading-relaxed text-[var(--fg-soft)] font-[family-name:var(--font-mono)]">
+        Compiled by Michael Tisdale.
+      </aside>
         </>
       ) : (
         <Reveal>

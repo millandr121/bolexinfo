@@ -85,3 +85,81 @@ Picked out of the Pacific Rim list because they close a known gap:
 Attaching a file to the conversation works: it arrives as a real file and
 can be read, catalogued and committed. That is the shortest path for
 anything found by hand, the Facebook group included.
+
+## ETH-Bibliothek Bildarchiv (E-Pics Image Archive)
+
+<https://ba.e-pics.ethz.ch/> — the ETH Zurich library's image archive.
+Given by the site owner, 2026-11-19, as five record links.
+
+**This is the first source found that offers genuinely reusable
+historic photography of Paillard and Bolex.** Nearly everything else
+is either rights-reserved (bolex.com states its pictures are the
+property of Bolex International SA and may not be reproduced without
+written permission) or simply does not exist (Wikimedia Commons holds
+nothing for Moïse Paillard, Bogopolsky or the early factory).
+
+Almost every relevant record is **Creative Commons BY-SA 4.0**; a few
+older ones carry the **Public Domain Mark**. Each record states its
+licence in `eth_license` and its required credit line in
+`eth_copyright_notice`, e.g. "ETH Library Zurich, Image Archive /
+PI_38-G-0023".
+
+### Reading it
+
+The site is a JavaScript application and its URLs are hash fragments,
+so the asset id never reaches the server and fetching the URL returns
+only the shell. Two non-obvious things, recorded so they need not be
+rediscovered:
+
+- The data comes from `https://api.ethz.sharedien.com/api/v10/`.
+  `assets/{id}/properties` is the metadata, `assets/{id}/derivations`
+  lists the files (Original TIFF, Print, Screen, Thumbnail), and
+  `POST assets/search` takes `{"q": "...", "operator": "And"}`.
+- It needs a bearer token, which the front end obtains anonymously.
+  Load any archive page in a browser and read the `authorization`
+  header off its own API calls. The token is short-lived.
+
+Titles are frequently **German only**. A reader that keeps only
+`dataLanguageIdentifier == "en"` silently drops most records' titles
+and makes the archive look empty — it is not.
+
+### What it holds
+
+"Bolex" returns 7 records; "Paillard" returns far more, but most are
+an unrelated person (C. Paillard) or a street, so results must be
+filtered on the title and description actually naming the company or
+Sainte-Croix.
+
+Genuinely relevant, all CC BY-SA 4.0:
+
+- `PI_38-G-0023` — **Paillard cine projector, 10 January 1937**, glass
+  plate, Photographisches Institut der ETH Zürich. A studio
+  photograph; the Paillard name is legible on the reel.
+- `PI_51-S-0086` — **Paillard 16mm camera in an equatorial mount**,
+  December 1951, made for the Swiss Federal Observatory's solar
+  eclipse observations, ordered by Prof. Max Waldmeier.
+- `Com_C16-049-001` … `-005` — five press photographs, **1967**, Jack
+  Metzger (1918–1999), "Fototipps für Amateure": a Paillard Bolex 150
+  Super beside a Kodak Retina S2.
+- `SIK_03-080632`, `-080636` — **the Paillard-Bolex-Hermes works at
+  Sainte-Croix**, November 1996, Hans-Peter Bärtschi (1950–2022).
+- `SIK_03-080637` — Sainte-Croix, Paillard, Colonie du Progrès, 1996.
+- `SIK_03-080656`, `-080659`, `-080660`, `-080663`, `-080664`,
+  `-080665` — Sainte-Croix, Avenue des Alpes, Paillard, September 1996.
+- `SIK_03-080641` — Sainte-Croix, Paillard, "à vendre 23'000m2",
+  October 2002. The works offered for sale.
+- `SIK_04-E1401-061` — Ste-Croix, the former Paillard MEM factory,
+  2013, "today Migros".
+
+The two ETH Photographic Institute plates are the only period
+photographs of Paillard equipment this project has found that may be
+reused. The Bärtschi series is modern but is the actual factory.
+
+### Using it
+
+BY-SA 4.0 requires the author, the licence and a link, and that
+adaptations be shared alike. Putting a licensed photograph on a page
+does not place the page under the licence; cropping or retouching one
+does make that image an adaptation. So these are shown unaltered,
+credited to the named photographer and to "ETH Library Zurich, Image
+Archive", with the record signature and a link to the licence.

@@ -23,6 +23,7 @@ npm-debug.log*
 # (scripts/stage-archive.ts). The canonical bytes live in /archive/wayback.
 /public/images/
 /public/sourced/
+/public/archival/
 /public/original/
 /public/search-index.json
 /public/feed.xml

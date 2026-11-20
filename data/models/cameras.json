@@ -1,6 +1,6 @@
 {
   "$schema": "../schemas/model.schema.json",
-  "provenance": "Model list and summaries verified against bolexcollector.com page titles and indexed page content (search-index recovery, 2026-07-26). Full specifications, serial ranges, and imagery are populated by the preservation pipeline (scripts/extract.ts) from archived pages. Fields marked null are pending recovery — they are never guessed.",
+  "provenance": "Specifications, serial ranges and photographs from Michael Tisdale's BolexCollector.com, with additions credited where they appear.",
   "models": [
     {
       "slug": "h16",
