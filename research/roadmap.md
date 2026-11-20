@@ -32,13 +32,35 @@ Two things make this worth building rather than just nice:
 |---|---|---|
 | **cinematography.com forum 78** (Bolex) | **harvested** | 571 threads, ~65% with full text. See `findings/cinematography-forum.md` |
 | cinematography.com — other forums | not started | Bolex discussion also lands in the 16mm, lenses and telecine forums. 21,500+ archived topics site-wide; filter by slug |
-| **Reddit** | not started | r/Filmmakers, r/analog, r/16mm, r/Cinematography. Has a real API and an archive; far easier than Facebook |
+| **Reddit** | **harvested, with gaps** | 5,070 records, 981 threads, 1,497 named people in `corpus/bolex-reddit-corpus.jsonl`, via Arctic Shift. Five sweeps were refused mid-run and need re-running: see below |
 | **Facebook group** 746982282801800 | blocked | Login wall. Only route is files brought in by hand |
 | **Live cinematography.com** | blocked to automation | A logged-in person can read what the archive missed |
 
 When adding a source, record it in `sources.md` first — reachability, what
 it holds, and what its terms allow. That register exists so the same dead
 ends are not re-walked.
+
+### Reddit sweeps still owed
+
+Arctic Shift answers `HTTP 422` when it wants the caller to slow down, not
+when the request is wrong. The harvester now reports each sweep it could
+not finish rather than returning an empty page and pretending the
+subreddit ended there, so these are known rather than silent:
+
+| Subreddit | Field | Stopped at |
+|---|---|---|
+| r/16mm | title | 2026-08-12 |
+| r/AnalogCommunity | title | start of range |
+| r/AnalogCommunity | selftext | start of range |
+| r/Filmmakers | title | start of range |
+| r/cinematography | title | start of range |
+| r/cinematography | selftext | start of range |
+
+Re-run with `python3 research/scripts/harvest-reddit.py`; each subreddit
+resumes from its own newest record, so nothing already held is fetched
+twice. r/Filmmakers (title) is the exception: its selftext sweep already
+set a recent watermark for that subreddit, so it needs an explicit
+`--since` to reach back past it.
 
 ## Building the search
 
