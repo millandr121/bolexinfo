@@ -27,8 +27,11 @@ export interface Technician {
  * small-gauge trade is thin enough that businesses go quiet without taking
  * their websites down. Nothing here is a recommendation, and the page says so.
  *
- * Coordinates are carried so this can become a map once the list is long
- * enough for one to beat a grouped list.
+ * There is no map yet, and no coordinates: an earlier version of this
+ * comment said coordinates were carried, which was never true of any
+ * entry. A map is planned — see research/roadmap.md — and wants a
+ * longer list first, because seven dots on a world map is mostly
+ * ocean.
  */
 export const TECHNICIANS: readonly Technician[] = [
   {
@@ -42,6 +45,35 @@ export const TECHNICIANS: readonly Technician[] = [
     evidence: {
       kind: "site",
       note: "Their own services page, read November 2026. Prices in CAD; the site carries a 2021 copyright, so confirm they are taking work.",
+    },
+  },
+  {
+    /*
+     * Added after the Reddit corpus made it impossible to ignore: Du-All
+     * is named in 13 separate threads, more than twice as often as
+     * anyone else, and people describe sending Bolex bodies there for a
+     * CLA and discussing the turnaround. The details below are from
+     * their own site rather than from those posts.
+     */
+    name: "Du-All Camera",
+    location: "Westfield, New Jersey, USA",
+    region: "North America",
+    url: "https://duallcamera.com/",
+    phone: "+1 212-643-1042",
+    email: "duall529@aol.com",
+    work:
+      "Motion picture camera and lens repair, modification and overhaul, with an " +
+      "in-house machine shop making parts that are no longer available. Family run " +
+      "for over forty-five years; the founder George Gal is a tool and die maker by " +
+      "trade, and his sons Jeffrey and Steven now run it, Jeffrey as service " +
+      "technician. They also sell Bolex accessories and parts.",
+    pricing: "By quote",
+    evidence: {
+      kind: "site",
+      note:
+        "Their own about page and shop, read November 2026. The site has no Bolex-specific " +
+        "service page, so the Bolex work is attested by customers on r/bolex rather than " +
+        "advertised; confirm scope and turnaround before shipping.",
     },
   },
   {
