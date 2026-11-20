@@ -25,6 +25,22 @@
    * and the link colour stops competing with the photographs for attention the
    * way the oxblood did.
    */
+  /*
+   * Where the menus replace the rail.
+   *
+   * Measured, not guessed: the wordmark is 251px, the menus 372px and
+   * the controls 250px, and the row overflows at 920px and fits at
+   * 940px. 59rem (944px) is the first comfortable step above that.
+   *
+   * It used to switch at Tailwind's `lg` (1024px), so a browser window
+   * merely narrower than full screen fell back to the phone's sideways
+   * scrolling rail on a display with room for the menus and more. A
+   * first attempt at 54rem was wrong in the other direction — it came
+   * from measuring the controls with a selector that caught only part
+   * of them, and the header overflowed its own width from 864 to 920.
+   */
+  --breakpoint-menus: 59rem;
+
   --color-accent: #01494a;
   --color-accent-soft: #0a6b66;
   --color-brass: #8c6d3f;
