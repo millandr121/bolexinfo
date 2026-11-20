@@ -199,6 +199,30 @@ Recorded so they can be checked, not so they can be published.
 - **bolexrepair** — mentioned once, by someone comparing turnarounds
   with Du-All. No other trace yet.
 
+**Dom Jaeger** is the strongest lead on this list and the hardest to
+act on. The forum corpus holds **95 of his posts across 70 threads,
+2010 to July 2025**, which is the kind of record the whole "respected
+technician" idea is pointing at — other members send people to him
+unprompted ("Dom Jaeger knows a lot about bolexes and often drops in
+to a thread like this and helps out").
+
+What he has said himself, in 2020: *"I work on mechanical Bolexes, but
+I avoid the electronic ones even if it's a mechanical issue because
+they are a real pain to work on."* That is a service scope and a
+useful limitation, from him.
+
+What is missing is everything a listing needs: a business name, a
+location and a way to contact him. The corpus has none of it. One
+member mentioned "the bolex service center in Melbourne, Australia" in
+2009, but that is someone else's passing remark, not his, and it must
+not be welded to his name on the strength of a guess.
+
+He may also not advertise repair work at all, in which case listing
+him would send strangers at someone who has not asked for them. So the
+only clean route is to ask him, through his cinematography.com
+profile — which the forum-technicians draft in outreach.md already
+covers. Add nothing until he answers.
+
 ### The map
 
 A world atlas with a dot per technician, so someone can see who is
