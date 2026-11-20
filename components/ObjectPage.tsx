@@ -2,10 +2,10 @@ import Link from "next/link";
 import { Reveal } from "./Reveal";
 import { ImageGallery } from "./ImageGallery";
 import { ArchiveCompare } from "./ArchiveCompare";
-import { RelatedModels } from "./RelatedModels";
+import { ModelNotes } from "./ModelNotes";
 import { partitionSpecs } from "@/lib/specs";
 import type { ModelRecord } from "@/lib/museum";
-import { getRelated, type Section } from "@/lib/related";
+import { getNotes } from "@/lib/notes";
 import { originalArchiveHref } from "@/lib/archive";
 import { hasControls } from "@/lib/controls";
 import { BrowseCarousel } from "@/components/BrowseCarousel";
@@ -42,12 +42,12 @@ export function ObjectPage({
 }: {
   model: ModelRecord;
   /** The collection this object belongs to, for the breadcrumb. */
-  section: { label: string; href: string; kind?: Section };
+  section: { label: string; href: string; kind?: "cameras" | "projectors" };
   /** Everything there is to browse between, for the shelf at the foot. */
   browse?: { index: BrowseSection[]; sectionId: string };
 }) {
   const archiveHref = originalArchiveHref(model.originalPath);
-  const related = section.kind ? getRelated(section.kind, model.slug) : {};
+  const notes = getNotes(model.originalPath);
   const { glance, detail } = partitionSpecs(model.specs);
   const hasImages = model.images.length > 0;
   /* Photographers of anything not recovered from the archive. */
@@ -188,13 +188,17 @@ export function ObjectPage({
         </div>
       </div>
 
-      {model.serialRows.length > 0 && <SerialTable model={model} />}
+      {/*
+       * The writing comes before the serial table.
+       *
+       * It is prose and the table is a lookup: someone reading the page
+       * wants the notes, someone dating a camera they are holding goes
+       * to the table and nothing else, and that reader arrives by the
+       * serial search rather than by scrolling.
+       */}
+      <ModelNotes notes={notes} />
 
-      <RelatedModels
-        related={related}
-        sectionLabel={section.label}
-        sectionHref={section.href}
-      />
+      {model.serialRows.length > 0 && <SerialTable model={model} />}
 
       {/*
        * The record of where this page came from, all in one place.
@@ -332,7 +336,8 @@ function SerialTable({ model }: { model: ModelRecord }) {
           Serial numbers &amp; production years
         </h2>
         <p className="mt-3 max-w-2xl text-sm text-[var(--fg-soft)]">
-          As documented on this model&rsquo;s archived page. Look up any serial on the{" "}
+          From the Bolex International S.A. bulletin of September 1977. Look up any serial on
+          the{" "}
           <Link href="/serials" className="text-[var(--accent)] underline underline-offset-4">
             serial lookup
           </Link>{" "}

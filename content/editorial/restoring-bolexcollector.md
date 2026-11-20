@@ -1,47 +1,62 @@
 ---
-title: "Restoring BolexCollector.com"
+title: "About this archive"
 kind: "modern-editorial"
 date: "2026-07-26"
-description: "How and why the original BolexCollector.com is being preserved and rebuilt as a permanent digital archive and modern museum edition."
+description: "What this site is, where it came from, and how the original BolexCollector.com is kept alongside it."
 ---
 
-# Restoring BolexCollector.com
+# About this archive
 
-For nearly two decades, BolexCollector.com — published by collector Michael Tisdale —
-was the definitive independent reference for the cameras, projectors, lenses and
-accessories of Paillard-Bolex, the Swiss manufacturer whose clockwork movie cameras
-defined amateur and professional filmmaking from the 1930s through the 1960s.
+For nearly twenty years, BolexCollector.com was the best independent reference
+there was for Paillard-Bolex. It was written by one collector, Michael Tisdale,
+who started it in 2005 to organise his own collection and kept going until it
+covered most of what the company ever made: the cameras and projectors, the
+lenses, the accessories, the Bolex Reporter, the advertising and brochures, a
+glossary, a company timeline, and the serial number tables that collectors
+still use to date a camera.
 
-The original site documented the complete H-16 and H-8 lineages, the B, C, D and L
-series, the Super 8 era, every Paillard projector line, lens catalogues from
-Kern-Paillard to SOM Berthiot, decades of accessories, the Bolex Reporter magazine,
-factory ephemera, a glossary, a company timeline — and the serial number tables,
-drawn from the Bolex International S.A. bulletin of September 1977, that collectors
-worldwide still rely on to date their cameras.
+Then the site went offline and the domain stopped resolving. That is usually
+how these things end. A personal reference site is one person's work, and when
+they stop, it goes.
 
-The site has since gone offline. Its domain no longer resolves.
+## What this site is
 
-## This project
+Two things, kept deliberately separate.
 
-This project is two things at once:
+**The original, whole.** Every page that could be retrieved is here exactly as
+Michael published it, down to the bytes: his words, his tables, his scans, his
+layout. Nothing edited, nothing tidied, nothing modernised. It is linked from
+every page of this edition, so you are never more than one click from the
+record itself.
 
-1. **A permanent preservation archive.** Every recoverable page, image, table,
-   serial number and download is retrieved from the Internet Archive's Wayback
-   Machine and other sources, stored byte-for-byte in `/archive`, and converted
-   into structured, presentation-independent data in `/content` and `/data`.
-   The Git repository itself is the archival medium.
+**This edition.** The same material, set to be read on a phone, searched, and
+looked up quickly. A serial number search that tells you when your camera was
+made. The catalogue as browsable pages rather than a frame-based site from
+2005.
 
-2. **A modern museum edition.** A fast, accessible, typographically serious
-   presentation layer built on the structured data — with instant search, a serial
-   number lookup, and a side-by-side "View Original Archive" mode so the historical
-   record is never more than one click away.
+And, now, a little more than he had: cameras the original never covered,
+photographs from public collections, a directory of people who still repair
+these machines. That part grows. When something substantial is added it goes
+in the [updates](/updates), the same log Michael kept from 2005, carried on
+rather than closed.
 
-## Principles
+## How it works
 
-- **Preservation comes first.** Nothing historical is altered, paraphrased or
-  invented. Where a page has not yet been recovered, the site says so plainly.
-- **Provenance everywhere.** Every dataset records where it came from and when it
-  was captured.
-- **Independence of the record.** The archive in this repository does not depend
-  on any external service to remain readable. Future maintainers can rebuild the
-  entire website from the structured content alone.
+The specifications, the serial tables and the writing on every model page are
+his. Where this edition adds something, the page says where it came from and
+who to check it against. Nothing is guessed at and nothing is filled in to
+look complete.
+
+The archive does not depend on anything staying online to keep working. The
+pages, the images and the data all live in one public Git repository, and the
+whole site can be rebuilt from it. That is the point: the reason to do this at
+all is that the first copy disappeared.
+
+## Why
+
+Michael built the site so the knowledge would be somewhere, freely, for anyone
+who went looking for it. That is worth keeping. It is also worth continuing,
+which is the only way a reference like this stays useful.
+
+If you have something that belongs here, a correction, a model that is missing,
+a scan of a brochure or a photograph, please [send it](/suggest).
