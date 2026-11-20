@@ -84,9 +84,26 @@ TIMEOUT = 60
 
 REMOVED = {"[deleted]", "[removed]", "", None}
 
+# Gaps this run could not fill, reported at the end rather than lost in
+# the scroll. Both used to be invisible.
+TRUNCATED: list[tuple[str, str, str, str]] = []
+MISSED_COMMENTS: list[str] = []
+
+
+class Unavailable(Exception):
+    """
+    The request did not succeed after retrying.
+
+    Distinct from an empty page on purpose. Both used to come back as
+    [], and the pager treats an empty page as "that is everything", so
+    one rate-limit that outlasted its retries silently ended the sweep
+    and the rest of that subreddit was quietly never fetched. A gap you
+    cannot see is worse than an error you can.
+    """
+
 
 def get(path: str, **params: object) -> list[dict]:
-    """One page from Arctic Shift, or [] if it has nothing more."""
+    """One page from Arctic Shift. [] means no more; raises on failure."""
     # `after=0` is not "from the beginning" to this API, it is a 400:
     # "'after' must be a valid date". Dropping a zero is the difference
     # between a full harvest and an empty one, and the first --full run
@@ -116,15 +133,13 @@ def get(path: str, **params: object) -> list[dict]:
             if error.code in (422, 429, 500, 502, 503, 504) and attempt < 3:
                 time.sleep(8 * (attempt + 1))
                 continue
-            print(f"  ! HTTP {error.code} on {path} {params}", file=sys.stderr)
-            return []
+            raise Unavailable(f"HTTP {error.code} on {path}") from error
         except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as error:
             if attempt < 3:
                 time.sleep(4 * (attempt + 1))
                 continue
-            print(f"  ! {error} on {path} {params}", file=sys.stderr)
-            return []
-    return []
+            raise Unavailable(f"{error} on {path}") from error
+    raise Unavailable(f"{path} exhausted its retries")
 
 
 def day(epoch: object) -> str:
@@ -158,14 +173,20 @@ def submissions(after: int, subreddit: str, field: str | None, query: str | None
     out: list[dict] = []
     cursor = after
     while True:
-        page = get(
-            "posts/search",
+        try:
+            page = get(
+                "posts/search",
             subreddit=subreddit,
             after=cursor or None,
             limit=PAGE,
-            sort="asc",
-            **({field: query} if field and query else {}),
-        )
+                sort="asc",
+                **({field: query} if field and query else {}),
+            )
+        except Unavailable as error:
+            """A gap, not an ending."""
+            print(f"    ! truncated at {day(cursor)}: {error}", flush=True)
+            TRUNCATED.append((subreddit, field or "all", day(cursor), str(error)))
+            break
         if not page:
             break
         out.extend(page)
@@ -186,27 +207,51 @@ def comments_for(post_id: str) -> list[dict]:
     fullname prefix here and this one rejects it, which is the sort of
     difference that costs an afternoon.
     """
-    page = get("comments/search", link_id=post_id, limit=PAGE, sort="asc")
+    try:
+        page = get("comments/search", link_id=post_id, limit=PAGE, sort="asc")
+    except Unavailable as error:
+        print(f"    ! comments for {post_id} unavailable: {error}", flush=True)
+        MISSED_COMMENTS.append(post_id)
+        page = []
     time.sleep(PAUSE)
     return page
 
 
-def newest_in_corpus() -> int:
-    """The latest date already harvested, as an epoch, or 0."""
+def newest_per_source() -> dict[str, int]:
+    """
+    The latest date already harvested, per subreddit, as epochs.
+
+    Per subreddit rather than one figure for the whole file. A single
+    watermark is the most recent date anywhere in the corpus, which
+    after a sweep of r/bolex is this year — so a subreddit that was cut
+    short at 2023, or added to the list later, would be asked only for
+    posts after that date and its missing years would never arrive. The
+    corpus would look complete and quietly not be.
+
+    This still only resumes forward. A sweep cut short in the middle
+    leaves a hole that a plain rerun will not fill, because the newest
+    record sits after it. That is what the truncation report at the end
+    of a run is for: it names the subreddit and the date it stopped, so
+    the hole can be filled with --since.
+    """
+    newest: dict[str, str] = {}
     if not OUT.exists():
-        return 0
-    latest = ""
+        return {}
     with OUT.open(encoding="utf8") as handle:
         for line in handle:
             try:
-                date = json.loads(line).get("date", "")
+                record = json.loads(line)
             except json.JSONDecodeError:
                 continue
-            if date > latest:
-                latest = date
-    if not latest:
-        return 0
-    return int(time.mktime(time.strptime(latest, "%Y-%m-%d"))) - 86400
+            source = record.get("source", "")
+            date = record.get("date", "")
+            if date > newest.get(source, ""):
+                newest[source] = date
+    return {
+        source: int(time.mktime(time.strptime(date, "%Y-%m-%d"))) - 86400
+        for source, date in newest.items()
+        if date
+    }
 
 
 def main() -> int:
@@ -215,14 +260,22 @@ def main() -> int:
     parser.add_argument("--since", default=None, help="YYYY-MM-DD to start from")
     args = parser.parse_args()
 
-    if args.since:
-        after = int(time.mktime(time.strptime(args.since, "%Y-%m-%d")))
-    elif args.full:
-        after = 0
-    else:
-        after = newest_in_corpus()
+    forced = int(time.mktime(time.strptime(args.since, "%Y-%m-%d"))) if args.since else None
+    watermarks = {} if (args.full or forced is not None) else newest_per_source()
 
-    print(f"Harvesting from {day(after) if after else 'the beginning'}")
+    def start_for(subreddit: str) -> int:
+        if forced is not None:
+            return forced
+        return watermarks.get(f"reddit.com/r/{subreddit}", 0)
+
+    if forced is not None:
+        print(f"Harvesting everything from {args.since}")
+    elif args.full:
+        print("Harvesting from the beginning")
+    else:
+        print("Resuming per subreddit:")
+        for source, when in sorted(watermarks.items()):
+            print(f"  {source} from {day(when)}")
 
     seen_ids: set[str] = set()
     if OUT.exists() and not args.full:
@@ -274,7 +327,7 @@ def main() -> int:
     for subreddit, field, query in targets:
         label = f"r/{subreddit}" + (f" {field}~{query}" if field else " (all)")
         print(f"  {label}")
-        posts = submissions(after, subreddit, field, query)
+        posts = submissions(start_for(subreddit), subreddit, field, query)
         print(f"    {len(posts)} submissions")
 
         for post in posts:
@@ -338,6 +391,14 @@ def main() -> int:
         print("Nothing new.")
         return 0
     print(f"Wrote {total} records across {len(threads_seen)} threads → {OUT.relative_to(REPO)}")
+
+    if TRUNCATED or MISSED_COMMENTS:
+        print("\nGaps this run could not fill:")
+        for subreddit, field, when, why in TRUNCATED:
+            print(f"  r/{subreddit} ({field}) stopped at {when} — {why}")
+        if MISSED_COMMENTS:
+            print(f"  comments unavailable for {len(MISSED_COMMENTS)} threads")
+        print("Re-run to pick these up; each subreddit resumes from its own newest date.")
     return 0
 
 
