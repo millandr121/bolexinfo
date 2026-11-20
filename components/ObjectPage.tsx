@@ -50,6 +50,8 @@ export function ObjectPage({
   const notes = getNotes(model.originalPath);
   const { glance, detail } = partitionSpecs(model.specs);
   const hasImages = model.images.length > 0;
+  /* The right-hand column earns its place if it has either thing to carry. */
+  const hasRail = hasImages || model.serialRows.length > 0;
   /* Photographers of anything not recovered from the archive. */
   const credits = [...new Set(model.images.map((i) => i.credit).filter((c): c is string => Boolean(c)))];
 
@@ -113,10 +115,10 @@ export function ObjectPage({
        */}
       <div
         className={`mt-10 grid items-start gap-8 ${
-          hasImages ? "lg:grid-cols-[minmax(0,1fr)_20rem] lg:gap-12" : ""
+          hasRail ? "lg:grid-cols-[minmax(0,1fr)_20rem] lg:gap-12" : ""
         }`}
       >
-        {hasImages && (
+        {hasRail && (
           /*
            * The rail sticks while the specifications scroll past it, so the
            * object stays in view for the whole description instead of being
@@ -124,9 +126,23 @@ export function ObjectPage({
            * empty right-hand column to use.
            */
           <Reveal className="order-1 lg:order-2 lg:sticky lg:top-28 lg:self-start">
-            <section aria-label="Photographs">
-              <ImageGallery images={model.images} caption={model.name} layout="feature" />
-            </section>
+            {hasImages && (
+              <section aria-label="Photographs">
+                <ImageGallery images={model.images} caption={model.name} layout="feature" />
+              </section>
+            )}
+
+            {/*
+             * The serial table rides with the photograph rather than
+             * sitting at the foot of the page.
+             *
+             * It is the most looked-up thing on a model page: someone
+             * with the camera in their hands wants the year, and they
+             * were scrolling past the whole specification list and the
+             * notes to reach it. Up here it is visible from the top and
+             * stays in view while the rest of the page scrolls under it.
+             */}
+            {model.serialRows.length > 0 && <SerialRail model={model} />}
           </Reveal>
         )}
 
@@ -143,7 +159,10 @@ export function ObjectPage({
                 <h2 className="font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.25em] text-[var(--accent)]">
                   At a glance
                 </h2>
-                <dl className="mt-4 grid grid-cols-2 gap-px border border-[var(--line)] bg-[var(--line)]">
+                {/* An odd number of facts left the last cell of the grid
+                    empty, showing as a filled rectangle of the rule colour.
+                    The final entry widens to close it. */}
+                <dl className="mt-4 grid grid-cols-2 gap-px border border-[var(--line)] bg-[var(--line)] [&>*:last-child:nth-child(odd)]:col-span-2">
                   {glance.map((spec) => (
                     <div key={spec.label} className="bg-[var(--bg)] px-4 py-3">
                       <dt className="font-[family-name:var(--font-mono)] text-[0.6rem] uppercase tracking-[0.16em] text-[var(--fg-soft)]">
@@ -162,6 +181,12 @@ export function ObjectPage({
            * starting a new full-width band below the grid. Keeping them here
            * closes the gap that otherwise opened under a short summary, and
            * gives the photograph something to stay beside.
+           *
+           * Set small and tight. This is reference matter that is scanned
+           * for one row, not read through: a dozen entries at body size
+           * with generous rows ran most of a screen on their own and put
+           * the writing below the fold. The label column narrows with it,
+           * since the labels are two or three words.
            */}
           {detail.length > 0 && (
             <Reveal delay={0.1}>
@@ -169,36 +194,30 @@ export function ObjectPage({
                 <h2 className="font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.25em] text-[var(--accent)]">
                   Specifications in detail
                 </h2>
-                <dl className="mt-4 border-t border-[var(--line)]">
+                <dl className="mt-3 border-t border-[var(--line)] text-sm">
                   {detail.map((spec) => (
                     <div
                       key={spec.label}
-                      className="grid gap-1 border-b border-[var(--line)] py-3 sm:grid-cols-[11rem_1fr] sm:gap-6"
+                      className="grid gap-0.5 border-b border-[var(--line)] py-2 sm:grid-cols-[9rem_1fr] sm:gap-5"
                     >
-                      <dt className="pt-0.5 font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.12em] text-[var(--fg-soft)]">
+                      <dt className="pt-px font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.12em] text-[var(--fg-soft)]">
                         {spec.label}
                       </dt>
-                      <dd className="leading-relaxed">{spec.value}</dd>
+                      <dd className="leading-snug">{spec.value}</dd>
                     </div>
                   ))}
                 </dl>
               </section>
             </Reveal>
           )}
+
+          {/*
+           * The writing sits in the same column, so the rail stays beside
+           * it instead of the page widening out under the specifications.
+           */}
+          <ModelNotes notes={notes} />
         </div>
       </div>
-
-      {/*
-       * The writing comes before the serial table.
-       *
-       * It is prose and the table is a lookup: someone reading the page
-       * wants the notes, someone dating a camera they are holding goes
-       * to the table and nothing else, and that reader arrives by the
-       * serial search rather than by scrolling.
-       */}
-      <ModelNotes notes={notes} />
-
-      {model.serialRows.length > 0 && <SerialTable model={model} />}
 
       {/*
        * The record of where this page came from, all in one place.
@@ -328,48 +347,50 @@ function Fact({ label, children }: { label: string; children: React.ReactNode })
   );
 }
 
-function SerialTable({ model }: { model: ModelRecord }) {
+/**
+ * Serial numbers, in the right-hand rail.
+ *
+ * Narrow, so the two columns are set as a plain grid rather than a
+ * table that would need to scroll sideways at 20rem. Years run to four
+ * digits and serials to six, which fits with room to spare.
+ *
+ * The longest table here is nineteen rows, which would push the rail
+ * past the height of the window and stop it sticking, so the list
+ * scrolls within itself past about a dozen. The median model has six
+ * and never scrolls at all.
+ */
+function SerialRail({ model }: { model: ModelRecord }) {
   return (
-    <Reveal delay={0.1}>
-      <section aria-label="Serial numbers" className="mt-14">
-        <h2 className="font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.25em] text-[var(--accent)]">
-          Serial numbers &amp; production years
-        </h2>
-        <p className="mt-3 max-w-2xl text-sm text-[var(--fg-soft)]">
-          From the Bolex International S.A. bulletin of September 1977. Look up any serial on
-          the{" "}
-          <Link href="/serials" className="text-[var(--accent)] underline underline-offset-4">
-            serial lookup
-          </Link>{" "}
-          page.
-        </p>
-        <div className="scroll-x mt-4 max-w-md border border-[var(--line)]">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="border-b border-[var(--line)] text-left font-[family-name:var(--font-sans)] text-[0.68rem] uppercase tracking-[0.12em] text-[var(--fg-soft)]">
-                <th scope="col" className="px-4 py-2.5 font-semibold">
-                  Serial range
-                </th>
-                <th scope="col" className="px-4 py-2.5 font-semibold">
-                  Year
-                </th>
-              </tr>
-            </thead>
-            <tbody className="font-[family-name:var(--font-mono)] text-xs">
-              {model.serialRows.map((r, i) => (
-                <tr key={`${r.yearFrom}-${r.from}-${i}`} className="border-b border-[var(--line)] last:border-0">
-                  <td className="px-4 py-2">
-                    {r.from?.toLocaleString() ?? "???"} – {r.to?.toLocaleString() ?? "???"}
-                  </td>
-                  <td className="px-4 py-2 text-[var(--fg-soft)]">
-                    {r.yearFrom === r.yearTo ? r.yearFrom : `${r.yearFrom}–${r.yearTo}`}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-    </Reveal>
+    <section
+      aria-label="Serial numbers"
+      className="mt-8 border border-[var(--line)] lg:mt-6"
+    >
+      <h2 className="border-b border-[var(--line)] bg-[var(--bg-raised)] px-3 py-2 font-[family-name:var(--font-mono)] text-[0.6rem] uppercase tracking-[0.18em] text-[var(--accent)]">
+        Serial numbers
+      </h2>
+
+      <dl className="max-h-[21rem] overflow-y-auto font-[family-name:var(--font-mono)] text-[0.7rem]">
+        {model.serialRows.map((r, i) => (
+          <div
+            key={`${r.yearFrom}-${r.from}-${i}`}
+            className="flex items-baseline justify-between gap-3 border-b border-[var(--line)] px-3 py-1.5 last:border-0"
+          >
+            <dt className="tabular-nums">
+              {r.from?.toLocaleString() ?? "???"} – {r.to?.toLocaleString() ?? "???"}
+            </dt>
+            <dd className="shrink-0 tabular-nums text-[var(--fg-soft)]">
+              {r.yearFrom === r.yearTo ? r.yearFrom : `${r.yearFrom}–${r.yearTo}`}
+            </dd>
+          </div>
+        ))}
+      </dl>
+
+      <p className="border-t border-[var(--line)] px-3 py-2 text-[0.65rem] leading-relaxed text-[var(--fg-soft)]">
+        Bolex International S.A. bulletin, September 1977.{" "}
+        <Link href="/serials" className="text-[var(--accent)] underline underline-offset-2">
+          Look up a serial
+        </Link>
+      </p>
+    </section>
   );
 }
