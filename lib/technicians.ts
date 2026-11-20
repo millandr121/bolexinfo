@@ -87,6 +87,28 @@ export const TECHNICIANS: readonly Technician[] = [
     },
   },
   {
+    name: "Visual Products",
+    location: "Wellington, Ohio, USA",
+    region: "North America",
+    url: "https://visualproducts.com/",
+    phone: "+1 440-647-4999",
+    email: "sales@visualproducts.com",
+    work:
+      "Dealer in used and refurbished motion picture equipment, including S16 and " +
+      "16mm cameras, with an in-house machine shop and camera and lens departments. " +
+      "They refurbish what they sell and make conversions, and their staff includes " +
+      "engineers and technicians rather than sales alone. In business over thirty years.",
+    pricing: "By quote",
+    evidence: {
+      kind: "site",
+      note:
+        "Their own about page and departments, read November 2026, plus a recommendation " +
+        "from the site owner. They publish no Bolex-specific repair page — the service " +
+        "side is described around the equipment they sell — so ask directly whether they " +
+        "will take in a camera that did not come from them.",
+    },
+  },
+  {
     name: "Dr Bolex",
     location: "Tijeras, New Mexico, USA",
     region: "North America",

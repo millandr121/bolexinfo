@@ -62,12 +62,24 @@ Reddit, harvested by `research/scripts/harvest-reddit.py`. Same record
 shape as the forum corpus — source, thread_id, thread, url, n, author,
 date, text — so one reader serves both.
 
-**This file is a partial harvest.** It holds the most recent slice only;
-r/bolex goes back to 2012 and the earlier years have not been fetched
-yet. The script is incremental: it reads the newest date already here
-and asks only for what came after, so re-running tops it up rather than
-starting over. To fill in the years before this slice, pass `--since`
-with an earlier date, or `--full` to rebuild from the beginning.
+**Still partial.** As of 2026-11-20 it holds 2,655 records across 601
+threads and 732 people:
+
+| Subreddit | Records | Threads | Span |
+| --- | --- | --- | --- |
+| r/bolex | 1,074 | 390 | 2013-10-11 → 2026-11-11 (complete) |
+| r/16mm | 1,581 | 211 | 2016-01-21 → 2026-08-13 (comments incomplete) |
+
+r/bolex is swept in full. r/16mm was still having its comments fetched
+when the run was stopped, and five more subreddits have not been
+touched: r/super8, r/AnalogCommunity, r/Filmmakers, r/cinematography
+and r/8mm, each searched by keyword rather than taken whole.
+
+Re-running picks up where it left off, per subreddit — each resumes
+from its own newest date rather than from the newest date in the file,
+so a subreddit cut short is not skipped over. A run that was truncated
+mid-sweep names the subreddit and the date at the end, and that gap
+needs `--since` with that date, because resuming only goes forward.
 
 Reddit itself cannot be read from this environment — every
 unauthenticated route answers 403 to a datacenter address — so this
