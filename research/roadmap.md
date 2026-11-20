@@ -32,7 +32,7 @@ Two things make this worth building rather than just nice:
 |---|---|---|
 | **cinematography.com forum 78** (Bolex) | **harvested** | 571 threads, ~65% with full text. See `findings/cinematography-forum.md` |
 | cinematography.com — other forums | not started | Bolex discussion also lands in the 16mm, lenses and telecine forums. 21,500+ archived topics site-wide; filter by slug |
-| **Reddit** | **harvested, with gaps** | 5,070 records, 981 threads, 1,497 named people in `corpus/bolex-reddit-corpus.jsonl`, via Arctic Shift. Five sweeps were refused mid-run and need re-running: see below |
+| **Reddit** | **harvested, with gaps** | 5,070 records, 981 threads, 1,497 named people in `corpus/bolex-reddit-corpus.jsonl`, via Arctic Shift. Six sweeps were refused mid-run and need re-running: see below |
 | **Facebook group** 746982282801800 | blocked | Login wall. Only route is files brought in by hand |
 | **Live cinematography.com** | blocked to automation | A logged-in person can read what the archive missed |
 
