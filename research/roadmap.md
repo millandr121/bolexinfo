@@ -114,6 +114,33 @@ Carried over, not forgotten:
   him. Recorded as a lead; same permission question, same clean route.
 - Repair manuals to be hosted (decided; none ingested yet)
 - 192 dead-end article/ephemera pages
+
+## The 95 ephemera scans: closed
+
+Settled 2026-11-20, and the answer is that they are gone.
+
+The ephemera section had 95 pages showing no picture. The cause was
+not a processing bug and not a failed harvest: the Wayback Machine
+never captured those full-size scans. Its index for
+`/images/ephemera/` holds 220 files — 81 full-size and 139
+thumbnails — which is exactly what `archive/wayback/images/ephemera/`
+contains. The harvest took everything there was.
+
+So `scripts/backfill-ephemera-scans.mjs` recovers nothing, and no
+amount of rate-limit patience will change that. It is kept because it
+is the thing that proved the point, and because it would pick up any
+scan that was added to Wayback later.
+
+Those images only ever existed on Michael's own server. The one route
+left is a person who has the originals or saved copies, which is a
+question for the suggestions page rather than a script.
+
+**The pages are no longer blank.** Each one falls back to its
+thumbnail, marked "Thumbnail only — the full-size scan was not
+preserved." A 58×80 scan of a 1940s advertisement is a poor substitute
+for the real thing and far better than an empty page, and saying so on
+the page is also how someone holding the original finds out it is
+wanted.
 - Bolex Stereo/Triorama, SP8/SP80, 5120 entries
 - A primary source for the 16 Pro introduction year
 
