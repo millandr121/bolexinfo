@@ -178,6 +178,27 @@ Specific cases, recorded only as things to resolve:
   experience is not evidence of anything, and it changes nothing by
   itself.
 
+### Leads, not listings
+
+Names that have come up and have not met the bar to appear on the site.
+Recorded so they can be checked, not so they can be published.
+
+- **TCS — Technological Cinevideo Services.** Raised 2026-11-20, rep
+  explicitly unverified. The evidence here is thin: one Reddit mention,
+  and it is a *question* — someone asking whether anyone has reviews of
+  "Du-all, Dr. Bolex, or TCS" — with no answer about TCS in the thread.
+  The three forum hits for "TCS" are a different thing entirely, a TCS
+  time-lapse motor. `tcscinevideo.com` did not resolve when tried from
+  the build environment, which may be the environment rather than the
+  business. Needs a working site or a named recommendation before it
+  goes anywhere near the list.
+- **Procam, trading as Bolex USA.** Named in the same thread, with the
+  useful detail that they do not work on Super 16 Bolexes. Worth
+  checking as a listing in its own right; that limitation belongs in
+  the entry if they are added.
+- **bolexrepair** — mentioned once, by someone comparing turnarounds
+  with Du-All. No other trace yet.
+
 ### The map
 
 A world atlas with a dot per technician, so someone can see who is
