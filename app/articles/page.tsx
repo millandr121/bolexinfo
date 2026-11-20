@@ -6,7 +6,7 @@ import { getRecoveredArticles, getUrlInventory } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Articles",
   description:
-    "Articles, tips and images related to vintage 8mm, 16mm and Super 8 movie cameras, recovered from the original BolexCollector.com.",
+    "Articles, tips and images related to vintage 8mm, 16mm and Super 8 movie cameras, from BolexCollector.com and continued here.",
 };
 
 export default function ArticlesPage() {
@@ -20,9 +20,10 @@ export default function ArticlesPage() {
           Articles
         </h1>
         <p className="mt-4 max-w-2xl text-[var(--fg-soft)] leading-relaxed">
-          The original site&rsquo;s articles: tips, stories, factory films, serial number
-          references and Paillard-Bolex items not covered elsewhere. Each is preserved
-          verbatim as it was recovered.
+          Tips, stories, factory films, serial number references and Paillard-Bolex items not
+          covered elsewhere. These were written for BolexCollector.com by Michael Tisdale and
+          are kept exactly as he wrote them. New articles are added here as the research turns
+          them up.
         </p>
       </Reveal>
 

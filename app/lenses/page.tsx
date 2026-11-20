@@ -8,7 +8,7 @@ import { getRecoveredSection, decadeOf } from "@/lib/recovered";
 export const metadata: Metadata = {
   title: "Lenses",
   description:
-    "Cine lenses supplied on or crafted for Bolex cameras — Kern-Paillard, Hugo Meyer, Goerz, Wollensak, SOM Berthiot and Angénieux — recovered from BolexCollector.com.",
+    "Cine lenses supplied on or crafted for Bolex cameras: Kern-Paillard, Hugo Meyer, Goerz, Wollensak, SOM Berthiot and Angénieux.",
 };
 
 const MAKER_LABEL: Array<[RegExp, string]> = [
@@ -36,8 +36,8 @@ export default function LensesPage() {
           Lenses
         </h1>
         <p className="mt-4 max-w-2xl text-[var(--fg-soft)] leading-relaxed">
-          The manufacturers whose optics were supplied on — or computed specifically for —
-          Bolex cameras, organised as the original site organised them: by maker and decade.
+          The manufacturers whose optics were supplied on, or computed specifically for,
+          Bolex cameras, by maker and decade.
         </p>
       </Reveal>
 
