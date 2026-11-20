@@ -225,6 +225,12 @@ Recorded so they can be checked, not so they can be published.
   the entry if they are added.
 - **bolexrepair** — mentioned once, by someone comparing turnarounds
   with Du-All. No other trace yet.
+- **Martin Stent — Steicca.** Was on the live list and has been taken
+  off. It came from bolexh16user.net's links page, never confirmed,
+  and carried no website, email or phone — a listing telling a reader
+  a technician exists while giving them no way to reach him, and no
+  evidence he is still working. Nothing found under steicca.co.uk or
+  steicca.com. Needs a working contact before it goes back.
 
 **Dom Jaeger** is the strongest lead on this list and the hardest to
 act on. The forum corpus holds **95 of his posts across 70 threads,

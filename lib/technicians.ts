@@ -1,7 +1,35 @@
+/**
+ * Where a technician is, precisely enough to put a dot on a map.
+ *
+ * The town centre, not the business's own address. A repair shop is
+ * often someone's home workshop, and this project is not going to
+ * publish a map pin on a person's house — the point is "there is
+ * someone in this part of the world", which a town does perfectly
+ * well.
+ *
+ * `from` records how the coordinates were obtained, because a number
+ * that cannot be rechecked is not evidence.
+ */
+export interface Place {
+  lat: number;
+  lon: number;
+  /** What the coordinates actually locate. */
+  precision: "town" | "city";
+  from: string;
+}
+
 export interface Technician {
   name: string;
   /** Town and country as the business states them, or the best evidence available. */
   location: string;
+  /**
+   * Coordinates, where the stated location is specific enough to have
+   * any. Three of the current entries are not: two give only a country
+   * and one only a region, and none of them publish more. A guess
+   * would put a business in a town it is not in, which is worse on a
+   * map than an absence.
+   */
+  place?: Place;
   region: "North America" | "United Kingdom & Europe" | "Rest of world";
   url?: string;
   phone?: string;
@@ -67,6 +95,7 @@ export const TECHNICIANS: readonly Technician[] = [
      */
     name: "Du-All Camera",
     location: "Westfield, New Jersey, USA",
+    place: { lat: 40.651726, lon: -74.3483059, precision: "town", from: "OpenStreetMap / Nominatim, geocoded 2026-11-20" },
     region: "North America",
     url: "https://duallcamera.com/",
     phone: "+1 212-643-1042",
@@ -89,6 +118,7 @@ export const TECHNICIANS: readonly Technician[] = [
   {
     name: "Visual Products",
     location: "Wellington, Ohio, USA",
+    place: { lat: 41.1685867, lon: -82.2175679, precision: "town", from: "OpenStreetMap / Nominatim, geocoded 2026-11-20" },
     region: "North America",
     url: "https://visualproducts.com/",
     phone: "+1 440-647-4999",
@@ -111,6 +141,7 @@ export const TECHNICIANS: readonly Technician[] = [
   {
     name: "Dr Bolex",
     location: "Tijeras, New Mexico, USA",
+    place: { lat: 35.0796355, lon: -106.3879441, precision: "town", from: "OpenStreetMap / Nominatim, geocoded 2026-11-20" },
     region: "North America",
     url: "https://www.drbolex.com/cla-1",
     phone: "+1 214-870-5608",
@@ -125,6 +156,7 @@ export const TECHNICIANS: readonly Technician[] = [
   {
     name: "High Line Camera Rentals",
     location: "Los Angeles, California, USA",
+    place: { lat: 34.0536923, lon: -118.2427676, precision: "city", from: "OpenStreetMap / Nominatim, geocoded 2026-11-20" },
     region: "North America",
     url: "https://www.highlinecamerarentals.com/bolex-repair-service",
     phone: "+1 213-444-2422",
@@ -136,23 +168,27 @@ export const TECHNICIANS: readonly Technician[] = [
     },
   },
   {
-    name: "Martin Stent — Steicca",
-    location: "United Kingdom",
-    region: "United Kingdom & Europe",
-    work: "Full service and overhaul of H16 bodies.",
-    evidence: {
-      kind: "listed",
-      note: "Listed on bolexh16user.net's useful links rather than confirmed here. Treat as a lead to check, not a verified listing.",
-    },
-  },
-  {
-    name: "Les Boscher",
+    /*
+     * Spelled "Boscher" here until his own site was read, which was a
+     * misspelling of a real person's name on a page that exists to
+     * help people find him.
+     */
+    name: "Les Bosher",
     location: "South Wales, United Kingdom",
     region: "United Kingdom & Europe",
-    work: "PL mount fitting and Super 16 conversion rather than general CLA work.",
+    url: "https://www.lesbosher.co.uk/",
+    work:
+      "Lens and camera conversions, lens mounts, adapters, range extenders and " +
+      "lens supports, made in-house on CNC and manual machinery. Manufacturing for " +
+      "film and television since 1982, run by Les Bosher with his son Chris. This " +
+      "is fabrication rather than general CLA work.",
     evidence: {
-      kind: "listed",
-      note: "Listed on bolexh16user.net's useful links rather than confirmed here. Treat as a lead to check, not a verified listing.",
+      kind: "site",
+      note:
+        "His own site, read November 2026 — a frameset from the early web, still up, " +
+        "stating 43 years as a camera engineer. It publishes no email or phone and no " +
+        "address beyond the work itself, so contact is through the site. The South Wales " +
+        "location comes from elsewhere and is not stated there.",
     },
   },
 ];
