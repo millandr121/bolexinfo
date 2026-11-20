@@ -244,6 +244,28 @@ Recorded so they can be checked, not so they can be published.
   the entry if they are added.
 - **bolexrepair** — mentioned once, by someone comparing turnarounds
   with Du-All. No other trace yet.
+
+**Pacific Rim Camera and the 95 missing scans.** Checked 2026-11-20
+and the answer is no, with a caveat worth keeping.
+
+Their reference library holds 73 Bolex items, and 58 of our 95 missing
+scans are brochures rather than advertisements, so the overlap looked
+promising. It is not: their collection is instruction books, sales
+brochures, catalogues, technical bulletins and dealer notebook pages,
+scanned as PDFs. Ours are Michael's own photographs of his own
+ephemera collection. Fuzzy title matching produced 31 "matches" and
+nearly all are noise — "Doris Day Brochure" against "Bolex B8 Sales
+Brochure".
+
+Perhaps three are worth a human comparing by eye: our 155 Macrozoom
+and 8mm brochures against their "155 Macrozoom Sales Brochure" and
+"8mm Sales Brochure". Even then it would be a different scan of a
+possibly different printing, not the missing file.
+
+The real point is that Pacific Rim is a complementary source rather
+than a replacement one, and a good one: catalogues from 1946, 1952 and
+1965, the 16 Pro brochure, 29 technical bulletins. Their scans are
+theirs, so anything used needs asking. See research/sources.md.
 - **Martin Stent — Steicca.** Was on the live list and has been taken
   off. It came from bolexh16user.net's links page, never confirmed,
   and carried no website, email or phone — a listing telling a reader

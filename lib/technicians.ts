@@ -74,7 +74,8 @@ export interface Technician {
 export const TECHNICIANS: readonly Technician[] = [
   {
     name: "Pigeon Creek Camera",
-    location: "Canada",
+    location: "Janetville, Ontario, Canada",
+    place: { lat: 44.2144316, lon: -78.7243914, precision: "town", from: "OpenStreetMap / Nominatim, geocoded 2026-11-20" },
     region: "North America",
     url: "https://www.pigeoncreekcamera.com/services",
     email: "contact@pigeoncreekcamera.com",
@@ -82,7 +83,43 @@ export const TECHNICIANS: readonly Technician[] = [
     pricing: "CLA from CAD $495 + parts; lens service from CAD $150 + parts",
     evidence: {
       kind: "site",
-      note: "Their own services page, read November 2026. Prices in CAD; the site carries a 2021 copyright, so confirm they are taking work.",
+      note:
+        "Their own services page, read November 2026. Prices in CAD; the site carries a 2021 " +
+        "copyright, so confirm they are taking work. The town comes from the map pin on their " +
+        "contact page, which sits at the centre of Janetville rather than on an address — they " +
+        "publish no street address and none is given here.",
+    },
+  },
+  {
+    /*
+     * The strongest public record of anyone here, and the entry that
+     * took longest to justify, because a reputation is not a business
+     * listing. The forum corpus holds 95 of his posts across 70 threads
+     * from 2010 to July 2025, and members send people to him unprompted.
+     * None of that is permission: listing someone who has not asked for
+     * strangers is a disservice dressed as a favour. He trades publicly
+     * under his own business name with a published address for enquiries,
+     * which settles it.
+     */
+    name: "Dom Jaeger — Cinetinker",
+    location: "Melbourne, Victoria, Australia",
+    place: { lat: -37.8142454, lon: 144.9631732, precision: "city", from: "OpenStreetMap / Nominatim, geocoded 2026-11-20" },
+    region: "Rest of world",
+    url: "https://cinetinker.blogspot.com/",
+    email: "cinetinker@gmail.com",
+    work:
+      "Freelance cine lens and camera technician. In his own words he works on mechanical " +
+      "Bolexes and avoids the electronic ones even for a mechanical fault, because they are a " +
+      "real pain to work on — which is more use before shipping than most service pages offer. " +
+      "His blog carries full strip-down write-ups of cine cameras.",
+    pricing: "By quote",
+    evidence: {
+      kind: "site",
+      note:
+        "His blog at cinetinker.blogspot.com, read November 2026: detailed service procedures, " +
+        "last posted 2019. The email and the description of his work are from his own public " +
+        "profile. He has answered Bolex questions on cinematography.com continuously from 2010 " +
+        "to July 2025. The blog is dormant, so write before assuming he is taking work.",
     },
   },
   {
