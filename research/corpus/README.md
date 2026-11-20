@@ -55,3 +55,23 @@ project works to, set out in `../sources.md`:
 If you are one of the people in this file and would rather your posts were
 not here, that is a fair thing to ask: say so and they come out. Drafts of
 the notes asking permission properly are in `../outreach.md`.
+
+## bolex-reddit-corpus.jsonl
+
+Reddit, harvested by `research/scripts/harvest-reddit.py`. Same record
+shape as the forum corpus — source, thread_id, thread, url, n, author,
+date, text — so one reader serves both.
+
+**This file is a partial harvest.** It holds the most recent slice only;
+r/bolex goes back to 2012 and the earlier years have not been fetched
+yet. The script is incremental: it reads the newest date already here
+and asks only for what came after, so re-running tops it up rather than
+starting over. To fill in the years before this slice, pass `--since`
+with an earlier date, or `--full` to rebuild from the beginning.
+
+Reddit itself cannot be read from this environment — every
+unauthenticated route answers 403 to a datacenter address — so this
+comes via Arctic Shift, a public research mirror of the Reddit archive.
+The script's docstring records the three API quirks that cost time.
+
+Deleted and removed posts are dropped on the way in.

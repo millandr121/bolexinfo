@@ -244,6 +244,32 @@ def main() -> int:
         targets.append((subreddit, "title", QUERY))
         targets.append((subreddit, "selftext", QUERY))
 
+    OUT.parent.mkdir(parents=True, exist_ok=True)
+    if args.full and OUT.exists():
+        OUT.unlink()
+
+    def flush(batch: list[dict]) -> int:
+        """
+        Append what we have so far and forget it.
+
+        The first version of this held every record in memory and wrote
+        once at the end, so a run that was interrupted — a lost
+        container, a timeout, a stopped session — lost everything it had
+        fetched, which for a full sweep is hours of polite, rate-limited
+        requests. Appending per subreddit means the worst case is losing
+        one subreddit's worth, and a rerun skips what is already held.
+        """
+        if not batch:
+            return 0
+        with OUT.open("a", encoding="utf8") as handle:
+            for record in batch:
+                handle.write(json.dumps(record, ensure_ascii=False) + "\n")
+        written = len(batch)
+        batch.clear()
+        return written
+
+    total = 0
+    threads_seen: set[str] = set()
     records: list[dict] = []
     for subreddit, field, query in targets:
         label = f"r/{subreddit}" + (f" {field}~{query}" if field else " (all)")
@@ -281,6 +307,12 @@ def main() -> int:
                     }
                 )
 
+            threads_seen.add(post_id)
+            # Per subreddit was still too coarse: r/bolex alone is hours,
+            # so an interrupted run reached the end of no subreddit and
+            # saved nothing. Little and often.
+            if len(records) >= 50:
+                total += flush(records)
             if int(post.get("num_comments") or 0) == 0:
                 continue
             for i, comment in enumerate(comments_for(post_id), start=1):
@@ -298,18 +330,14 @@ def main() -> int:
                     }
                 )
 
-    if not records:
+        total += flush(records)
+        print(f"    written so far: {total} records, {len(threads_seen)} threads", flush=True)
+
+    total += flush(records)
+    if not total:
         print("Nothing new.")
         return 0
-
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    mode = "w" if args.full else "a"
-    with OUT.open(mode, encoding="utf8") as handle:
-        for record in records:
-            handle.write(json.dumps(record, ensure_ascii=False) + "\n")
-
-    threads = len({r["thread_id"] for r in records})
-    print(f"Wrote {len(records)} records across {threads} threads → {OUT.relative_to(REPO)}")
+    print(f"Wrote {total} records across {len(threads_seen)} threads → {OUT.relative_to(REPO)}")
     return 0
 
 
