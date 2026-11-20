@@ -62,7 +62,7 @@ export default function ProjectorsPage() {
       </ul>
 
       <aside className="rule mt-16 pt-4 text-xs leading-relaxed text-[var(--fg-soft)] font-[family-name:var(--font-mono)] max-w-2xl">
-        <span className="uppercase tracking-[0.18em]">Provenance — </span>
+        <span className="uppercase tracking-[0.18em]">Provenance: </span>
         {provenance}
       </aside>
     </div>

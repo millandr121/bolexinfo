@@ -4,10 +4,8 @@ import { notFound } from "next/navigation";
 import { Reveal } from "@/components/Reveal";
 import { RecoveredContent } from "@/components/RecoveredContent";
 import { ArchiveCompare } from "@/components/ArchiveCompare";
-import { RelatedModels } from "@/components/RelatedModels";
 import { getRecoveredPage, getRecoveredSection } from "@/lib/recovered";
 import { originalArchiveHref } from "@/lib/archive";
-import { getRecoveredRelated } from "@/lib/related";
 import { getBrowseIndex } from "@/lib/browse";
 import { BrowseCarousel } from "@/components/BrowseCarousel";
 
@@ -33,7 +31,6 @@ export default async function AccessoryPage({ params }: Props) {
   const page = getRecoveredPage("accessories", slug);
   if (!page) notFound();
   const archiveHref = originalArchiveHref(page.originalPath);
-  const related = getRecoveredRelated("accessories", page.slug);
 
   return (
     <article className="pt-14 pb-8 max-w-3xl">
@@ -52,7 +49,6 @@ export default async function AccessoryPage({ params }: Props) {
         <RecoveredContent blocks={page.blocks} treatment="product" />
       </Reveal>
 
-      <RelatedModels related={related} sectionLabel="Accessories" sectionHref="/accessories" />
 
       {archiveHref && (
         <Reveal>

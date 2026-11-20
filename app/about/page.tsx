@@ -4,9 +4,9 @@ import { marked } from "marked";
 import { getEditorial } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "About the Restoration",
+  title: "About this archive",
   description:
-    "How and why the original BolexCollector.com is being preserved and rebuilt as a permanent digital archive.",
+    "What this site is, where it came from, and how the original BolexCollector.com is kept alongside it.",
 };
 
 export default async function AboutPage() {
