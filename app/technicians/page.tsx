@@ -32,12 +32,30 @@ export default function TechniciansPage() {
          * presenting all of them with the same confidence.
          */}
         <div className="mt-8 border-l-2 border-[var(--accent)] bg-[var(--bg-raised)] px-5 py-4">
+          {/*
+            Written from the counts rather than around them. The old copy
+            said "{checked} of these {total} were read from the business's
+            own site; the rest come from another directory" — which, once
+            the one unconfirmed entry was removed, read "6 of these 6 …
+            the rest come from another directory", describing a remainder
+            that does not exist.
+          */}
           <p className="text-sm leading-relaxed">
-            <strong className="font-[560]">Check before you ship.</strong> This is not a
-            recommendation and none of it is an endorsement. {checked} of these {TECHNICIANS.length}{" "}
-            were read from the business&rsquo;s own site; the rest come from another
-            directory and have not been confirmed here. Prices and turnarounds move. Write
-            first and ask whether they are taking work.
+            <strong className="font-[560]">Check before you ship.</strong>{" "}
+            {checked === TECHNICIANS.length ? (
+              <>
+                Every entry here was read from the business&rsquo;s own site.
+              </>
+            ) : (
+              <>
+                {checked} of these {TECHNICIANS.length} were read from the
+                business&rsquo;s own site; the {TECHNICIANS.length - checked} others come
+                from another directory and have not been confirmed here.
+              </>
+            )}{" "}
+            That is not the same as a guarantee of their work: the small-gauge trade is
+            thin, businesses go quiet without taking their sites down, and prices and
+            turnarounds move. Write first and ask whether they are taking work.
           </p>
         </div>
       </Reveal>
