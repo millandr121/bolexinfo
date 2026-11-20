@@ -134,34 +134,49 @@ and their standing comes from decades of public, checkable answers
 rather than from marketing.
 
 Both corpora are the obvious place to look. 1,929 forum posts and a
-growing Reddit set already name who people are sent to, who they come
-back satisfied from, and who they warn each other about.
+growing Reddit set already name who people are sent to and who they
+come back satisfied from. Du-All Camera came out of exactly that: 13
+separate Reddit threads, more than twice anyone else, then verified
+from their own site and added.
 
-### On reputation, and what this site may say
+### On reputation: curate, never criticise
 
-**The site reports; it does not rate.** A directory that calls a named
-business untrusted is making an allegation about someone's livelihood,
-and this project cannot stand behind one. Two things are safe and
-useful:
+The standard is **inclusion, not judgement**. The list should hold
+technicians this project is willing to stand behind, and simply not
+hold anyone else. Nothing on the site says, or implies, that a named
+business does poor work.
 
-- A technician's own stated work, prices and currency, which is what
-  the list does now.
-- What named people said in public, quoted and cited, so the reader
-  weighs Dom Jaeger's opinion as Dom Jaeger's.
+That is not squeamishness. People trust this site, and a listing here
+reads as a recommendation whether or not it is labelled as one —
+someone ships a camera across a continent on the strength of it. So
+the harm runs in one direction: listing a technician who does a bad
+job hurts a reader and the site's standing, while leaving someone off
+costs them nothing they can point to, because absence says nothing.
 
-Specifically flagged, and deliberately not acted on yet:
+Working rules:
 
-- **Dr Bolex** is reportedly not well regarded among the senior
-  technicians. That is hearsay reaching this project secondhand. It is
-  recorded here because it should be checked, and it must not reach
-  the site as an unsourced judgement. If respected technicians have
-  said something on the record, quote and cite them. If not, say
-  nothing.
-- The Reddit corpus holds a thread titled "Avoid Les Boscher Super16!"
-  — one customer's account, and Les Bosher is one of the long-standing
-  names in the trade. One bad experience is not a verdict, and
-  publishing it as one would be unfair to a reputation built over
-  decades.
+- **Omission is silent.** No "not recommended" section, no asterisks,
+  no implications. A business either appears or does not.
+- **A listing needs a reason.** Their own current site for the facts,
+  and corroboration that they are respected and taking work: repeated
+  unprompted recommendations from the long-standing names, or a track
+  record visible in the forums.
+- **Negative hearsay removes, it never publishes.** Enough credible
+  doubt means quietly not listing them, and that is the whole action.
+- **Write nothing down that would be unfair if it leaked.** These
+  research notes are in a public repository, so the reasoning here
+  stays factual and the gossip stays out of it.
+
+Specific cases, recorded only as things to resolve:
+
+- **Dr Bolex** is currently listed. There is secondhand doubt about
+  their standing among senior technicians. Worth checking properly
+  before the directory is promoted; if the doubt holds up, the entry
+  comes out with no announcement.
+- A Reddit thread titled "Avoid Les Boscher Super16!" is one
+  customer's account against a reputation built over decades. One bad
+  experience is not evidence of anything, and it changes nothing by
+  itself.
 
 ### The map
 

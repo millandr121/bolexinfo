@@ -25,7 +25,17 @@ export interface Technician {
  * what the evidence for it actually is. That matters more than it might look:
  * a stale repair listing costs someone a camera and a shipping bill, and the
  * small-gauge trade is thin enough that businesses go quiet without taking
- * their websites down. Nothing here is a recommendation, and the page says so.
+ * their websites down.
+ *
+ * The list curates by inclusion. Someone shipping a camera across a continent
+ * treats a listing here as a recommendation whether or not it is labelled one,
+ * so the bar for appearing is that this project is willing to stand behind the
+ * entry. Anyone it is not willing to stand behind is simply absent — there is
+ * no "not recommended" anywhere on the site, no asterisk and no implication.
+ * Omission is silent, and silence is the whole of it: absence says nothing
+ * about a business, where a published doubt would say a great deal.
+ *
+ * See research/roadmap.md for how that is meant to be applied.
  *
  * There is no map yet, and no coordinates: an earlier version of this
  * comment said coordinates were carried, which was never true of any
