@@ -113,7 +113,26 @@ Carried over, not forgotten:
 - **Edwin Molenaar** — H16 non-reflex photograph via Instagram, credited to
   him. Recorded as a lead; same permission question, same clean route.
 - Repair manuals to be hosted (decided; none ingested yet)
-- 192 dead-end article/ephemera pages
+- ~~192 dead-end article/ephemera pages~~ — stale, see below
+
+## "192 dead-end pages": stale, and now checked continuously
+
+Measured 2026-11-20 and the number does not survive any reading of it:
+
+- **0** broken internal links, out of 12,439 checked across the built
+  site. A test holds that at zero from now on.
+- **0** pages with no content blocks at all.
+- **0** ephemera pages without a picture, since the thumbnail fallback.
+- 22 recovered articles, none of them thin.
+
+The nearest thing to a match is 29 ephemera pages with a heading and
+several images and no prose — "1950s Books", "1940s Catalogs",
+"Bolex Reporter Vol. 1". Those are gallery pages and were galleries on
+the original site. They are not dead ends and want no fixing.
+
+Where the 192 came from is not recorded, which is the lesson: a count
+in a backlog without the query that produced it cannot be rechecked,
+and goes stale without anyone noticing.
 
 ## The 95 ephemera scans: closed
 
