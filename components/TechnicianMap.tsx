@@ -87,7 +87,22 @@ export function clusterTechnicians(technicians: readonly Technician[]): Cluster[
   return clusters;
 }
 
-export function TechnicianMap({ technicians }: { technicians: readonly Technician[] }) {
+export function TechnicianMap({
+  technicians,
+  confirmed,
+  wantedLabel,
+}: {
+  technicians: readonly Technician[];
+  /**
+   * Under a filter, the names that actually say they do the thing.
+   * The rest are on the map because they have not said either way,
+   * and they are drawn hollow so the map can be read at a glance
+   * rather than looking unchanged.
+   */
+  confirmed?: ReadonlySet<string>;
+  /** What the filter is asking for, for the caption. */
+  wantedLabel?: string;
+}) {
   const clusters = clusterTechnicians(technicians);
   const placed = technicians.filter((t) => t.place);
   const unplaced = technicians.filter((t) => !t.place);
@@ -95,6 +110,26 @@ export function TechnicianMap({ technicians }: { technicians: readonly Technicia
 
   if (clusters.length === 0) return null;
   const active = selected === null ? null : clusters[selected] ?? null;
+
+  /*
+   * Within a mark, the people who say yes come first.
+   *
+   * A mark is solid when anyone standing on it says yes, so a cluster
+   * of five with one yes looked, when opened, like five answers to
+   * the question. They are sorted and then split by a line, so the
+   * panel says the same thing the mark does.
+   */
+  const orderedPeople = active
+    ? confirmed
+      ? [
+          ...active.people.filter((p) => confirmed.has(p.name)),
+          ...active.people.filter((p) => !confirmed.has(p.name)),
+        ]
+      : active.people
+    : [];
+  const firstUnconfirmed = confirmed
+    ? orderedPeople.findIndex((p) => !confirmed.has(p.name))
+    : -1;
 
   return (
     <section aria-labelledby="map-heading" className="mt-10">
@@ -120,7 +155,12 @@ export function TechnicianMap({ technicians }: { technicians: readonly Technicia
         {clusters.map((cluster, i) => {
           const on = i === selected;
           const many = cluster.people.length > 1;
-          const label = cluster.people.map((p) => `${p.name}, ${p.location}`).join("; ");
+          /* Under a filter: solid if anyone here says yes, hollow if
+             this mark is only people who have not said. */
+          const says = confirmed ? cluster.people.some((p) => confirmed.has(p.name)) : true;
+          const label =
+            cluster.people.map((p) => `${p.name}, ${p.location}`).join("; ") +
+            (confirmed && !says && wantedLabel ? ` (has not said whether they do this: ${wantedLabel})` : "");
           return (
             <button
               key={cluster.people[0]!.name}
@@ -130,7 +170,13 @@ export function TechnicianMap({ technicians }: { technicians: readonly Technicia
               title={label}
               className={`absolute grid -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full ring-2 ring-[var(--bg)] transition-all hover:z-20 focus-visible:z-20 ${
                 many ? "h-6 w-6" : "h-4 w-4 hover:h-5 hover:w-5"
-              } ${on ? "z-10 bg-[var(--accent)]" : "bg-[var(--fg)] hover:bg-[var(--accent)]"}`}
+              } ${
+                on
+                  ? "z-10 bg-[var(--accent)]"
+                  : says
+                    ? "bg-[var(--fg)] hover:bg-[var(--accent)]"
+                    : "border-2 border-[var(--fg-soft)] bg-[var(--bg-raised)] hover:border-[var(--accent)]"
+              }`}
               style={{
                 left: `${(cluster.x / WORLD_WIDTH) * 100}%`,
                 top: `${(cluster.y / WORLD_HEIGHT) * 100}%`,
@@ -140,7 +186,9 @@ export function TechnicianMap({ technicians }: { technicians: readonly Technicia
               {many && (
                 <span
                   aria-hidden="true"
-                  className="font-[family-name:var(--font-mono)] text-[0.6rem] font-[560] leading-none text-[var(--bg)]"
+                  className={`font-[family-name:var(--font-mono)] text-[0.6rem] font-[560] leading-none ${
+                    says || on ? "text-[var(--bg)]" : "text-[var(--fg-soft)]"
+                  }`}
                 >
                   {cluster.people.length}
                 </span>
@@ -159,52 +207,47 @@ export function TechnicianMap({ technicians }: { technicians: readonly Technicia
       <div className="min-h-[6rem] border-x border-b border-[var(--line)] px-5 py-4">
         {active ? (
           <div className="space-y-4">
-            {active.people.map((person) => (
-              <div key={person.name}>
-                <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-                  <h3 className="font-[family-name:var(--font-display)] text-lg font-[560]">
-                    {person.name}
-                  </h3>
-                  <p className="font-[family-name:var(--font-mono)] text-[0.68rem] uppercase tracking-[0.14em] text-[var(--fg-soft)]">
-                    {person.location}
+            {/*
+              Under a filter the mark is solid if anyone here says yes,
+              so the panel has to carry the filter through as well. The
+              ones who say yes come first; the rest are kept, under a
+              line that says what they are, because they are at the
+              same place and might still be the right call once asked.
+            */}
+            {orderedPeople.map((person, n) => (
+              <div key={`sep-${person.name}`}>
+                {confirmed && wantedLabel && n === firstUnconfirmed && n > 0 && (
+                  <p className="mb-3 border-t border-[var(--line)] pt-3 font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.14em] text-[var(--fg-soft)]">
+                    Also here, but has not said they do this
                   </p>
-                </div>
-                <p className="mt-1.5 flex flex-wrap gap-x-5 gap-y-1 font-[family-name:var(--font-mono)] text-[0.7rem]">
-                  {person.url && (
-                    <a
-                      href={person.url}
-                      target="_blank"
-                      rel="noreferrer nofollow"
-                      className="text-[var(--accent)] underline underline-offset-4"
-                    >
-                      Their site ↗
-                    </a>
-                  )}
-                  {person.phone && <span className="text-[var(--fg-soft)]">{person.phone}</span>}
-                  {person.email && (
-                    <a
-                      href={`mailto:${person.email}`}
-                      className="text-[var(--accent)] underline underline-offset-4"
-                    >
-                      {person.email}
-                    </a>
-                  )}
-                  <a
-                    href={`#${slug(person.name)}`}
-                    className="text-[var(--fg-soft)] underline underline-offset-4 hover:text-[var(--accent)]"
-                  >
-                    What they do ↓
-                  </a>
-                </p>
+                )}
+                {confirmed && wantedLabel && n === 0 && firstUnconfirmed !== 0 && (
+                  <p className="mb-3 font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.14em] text-[var(--accent)]">
+                    {wantedLabel}
+                  </p>
+                )}
+                {renderPerson(person)}
               </div>
             ))}
           </div>
         ) : (
           <p className="text-sm leading-relaxed text-[var(--fg-soft)]">
-            {placed.length} workshops, placed by their town rather than their street address.
-            Choose a mark for the names and how to reach them, or read the full entries below.
-            A numbered mark holds that many workshops too close together to separate at this
-            scale.
+            {confirmed && wantedLabel ? (
+              <>
+                <span className="mr-1 inline-block h-2.5 w-2.5 translate-y-px rounded-full bg-[var(--fg)]" />
+                Filled marks say yes to {wantedLabel}.{" "}
+                <span className="mr-1 inline-block h-2.5 w-2.5 translate-y-px rounded-full border-2 border-[var(--fg-soft)]" />
+                Hollow ones have not said either way. Anyone who has said no is off the map.
+                Choose a mark for the names and how to reach them.
+              </>
+            ) : (
+              <>
+                {placed.length} workshops, placed by their town rather than their street
+                address. Choose a mark for the names and how to reach them, or read the full
+                entries below. A numbered mark holds that many workshops too close together to
+                separate at this scale.
+              </>
+            )}
             {unplaced.length > 0 && (
               <>
                 {" "}
@@ -228,5 +271,48 @@ export function TechnicianMap({ technicians }: { technicians: readonly Technicia
         )}
       </div>
     </section>
+  );
+}
+
+/** One person in the panel: name, where, and how to reach them. */
+function renderPerson(person: Technician) {
+  return (
+    <>
+      <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+        <h3 className="font-[family-name:var(--font-display)] text-lg font-[560]">
+          {person.name}
+        </h3>
+        <p className="font-[family-name:var(--font-mono)] text-[0.68rem] uppercase tracking-[0.14em] text-[var(--fg-soft)]">
+          {person.location}
+        </p>
+      </div>
+      <p className="mt-1.5 flex flex-wrap gap-x-5 gap-y-1 font-[family-name:var(--font-mono)] text-[0.7rem]">
+        {person.url && (
+          <a
+            href={person.url}
+            target="_blank"
+            rel="noreferrer nofollow"
+            className="text-[var(--accent)] underline underline-offset-4"
+          >
+            Their site ↗
+          </a>
+        )}
+        {person.phone && <span className="text-[var(--fg-soft)]">{person.phone}</span>}
+        {person.email && (
+          <a
+            href={`mailto:${person.email}`}
+            className="text-[var(--accent)] underline underline-offset-4"
+          >
+            {person.email}
+          </a>
+        )}
+        <a
+          href={`#${slug(person.name)}`}
+          className="text-[var(--fg-soft)] underline underline-offset-4 hover:text-[var(--accent)]"
+        >
+          What they do ↓
+        </a>
+      </p>
+    </>
   );
 }

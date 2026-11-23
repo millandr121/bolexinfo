@@ -261,3 +261,105 @@ they have uploaded.
 >
 > Merci,
 > Andrew
+
+## 8. Technicians, for the Facebook group
+
+Written to be sent by Andrew as a group member. Laid back, short, no
+em dashes. The point of each is to get a person to confirm their own
+details so the listing stops resting on hearsay, and to give them an
+easy no.
+
+### 8a. A post to the group
+
+> Hi all. I run bolexcollector.org, which is the old BolexCollector.com
+> brought back online. Michael Tisdale built that site over about
+> twenty years and it went down, so I have been putting it back up and
+> carrying it on.
+>
+> One thing I have added is a page of technicians who work on these
+> cameras, with a map, because the question people ask here most often
+> is who can fix this and is there anyone near me.
+>
+> I want to get it right rather than get it long. So if you are a
+> technician and you would like to be on it, or you are already on it
+> and something is wrong, let me know. What I would like from you:
+>
+> - the town you work from, no street address, just the town
+> - what you take in, and what you would rather not: 16mm, Super 16
+>   conversions, the electronic ones like the EBM and EL, 8mm and
+>   Double 8, Super 8, projectors, lenses
+> - how you want people to reach you
+> - rough prices if you are happy to say, or just "by quote"
+>
+> And if you would rather not be listed at all, say so and I will take
+> you off, no hard feelings.
+>
+> Nothing from this group gets quoted or copied onto the site, and I
+> am not putting anyone's name or email up that they have not told me
+> they are happy with.
+
+### 8b. To a technician who is already listed
+
+> Hi [name], I run bolexcollector.org, the old BolexCollector.com back
+> online and carried on.
+>
+> You are on the repair page there. I put it together from your own
+> site and from people in the Bolex group recommending you, so I would
+> rather hear it from you than guess.
+>
+> Could you tell me if this is right: [what the entry currently says].
+>
+> Mainly I want to know what you take in and what you do not, so
+> nobody posts you a camera you did not want. And whether the contact
+> details are the ones you want people using.
+>
+> Happy to change anything, or take it down if you would rather not be
+> on there. Either is fine.
+
+### 8c. To Robert M. Ditto
+
+> Hi Robert, I run bolexcollector.org, the old BolexCollector.com back
+> online.
+>
+> There is a repair page on it with a map, and you are the obvious gap
+> in it. I have read your posts on cinematography.com going back
+> years and you clearly know these cameras, but I cannot find a
+> location for you anywhere and the map needs a town to put a dot on.
+>
+> Would you like to be listed? If so I need the town you work from,
+> what you take in, and how you want people to get hold of you. Just
+> the town, not an address.
+>
+> No problem at all if you would rather not.
+
+### 8d. To Guido Wilhelm
+
+> Hi Guido, I run bolexcollector.org, the old BolexCollector.com back
+> online and carried on.
+>
+> I have added you to the repair page on it. Milan, overhauls, Super
+> 16 conversions, and the H8 and K2 as well, with wtv.milan@gmail.com
+> since that is the address you give people.
+>
+> One thing I am unsure about. The aciarfilm listing says you do the
+> SB and SBM but not the RX, EBM or EL, and someone in the group
+> posted this year about a REX-5 you serviced. Which is right? I do
+> not want to send you work you do not take.
+>
+> Also, do you want prices on there, or leave it as by quote?
+
+### 8e. Asking after Yves Bornand (to a group member, not to him)
+
+> Hi, I am trying to track down Yves Bornand. I run
+> bolexcollector.org, the old BolexCollector.com back online, and
+> there is a repair page on it.
+>
+> He keeps coming up as the man in Switzerland and apparently worked
+> in the Super 16 department at Bolex itself, but he publishes nothing
+> and I am not going to put a contact up that is being passed around
+> privately.
+>
+> Would you be willing to ask him whether he wants to be on the page?
+> If he does, I need the town, what he takes in, and whatever contact
+> he is happy to have public. If he would rather not, that is the end
+> of it and I will not mention him.
