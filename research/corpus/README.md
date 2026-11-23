@@ -57,7 +57,7 @@ not here, that is a fair thing to ask: say so and they come out. Drafts of
 the notes asking permission properly are in `../outreach.md`.
 ## bolex-reddit-corpus.jsonl
 
-**5,070 records · 981 threads · 1,497 contributors · 2011–2026 · 2.8 MB**
+**7,703 records · 1,259 threads · 2,536 contributors · 2011–2026 · 4.2 MB**
 
 Reddit, harvested by `research/scripts/harvest-reddit.py`. Same record
 shape as the forum corpus: source, thread_id, thread, url, n, author,
@@ -65,18 +65,20 @@ date, text, so one reader serves both.
 
 | Subreddit | Records | Threads | Span |
 | --- | --- | --- | --- |
-| r/bolex | 1,075 | 391 | 2013-10-11 → 2026-11-20 |
-| r/16mm | 1,840 | 247 | 2016-01-21 → 2026-11-19 |
+| r/bolex | 1,076 | 392 | 2013-10-11 → 2026-11-23 |
+| r/cinematography | 2,307 | 207 | 2012-05-23 → 2026-11-20 |
+| r/16mm | 1,852 | 248 | 2016-01-21 → 2026-11-23 |
 | r/8mm | 1,159 | 194 | 2016-04-12 → 2026-10-28 |
 | r/Filmmakers | 765 | 103 | 2011-07-25 → 2026-11-15 |
+| r/AnalogCommunity | 313 | 69 | 2019-07-24 → 2026-09-09 |
 | r/super8 | 231 | 46 | 2021-03-15 → 2026-11-16 |
 
 r/bolex and r/super8 are swept whole. The rest are searched by keyword,
 by title and by body separately, because a thread that mentions a Bolex
 in its text rarely says so in its title.
 
-**Six sweeps are still owed.** They are listed in `../roadmap.md` with
-where each stopped. Arctic Shift answers HTTP 422 when it wants the
+**Four sweeps are still owed**, down from six. They are listed in
+`../roadmap.md` with where each stopped. Arctic Shift answers HTTP 422 when it wants the
 caller to slow down rather than when a request is wrong, and a sweep
 refused that way stops short; the harvester reports each one instead of
 returning an empty page and treating the subreddit as finished.

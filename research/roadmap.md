@@ -32,7 +32,7 @@ Two things make this worth building rather than just nice:
 |---|---|---|
 | **cinematography.com forum 78** (Bolex) | **harvested** | 571 threads, ~65% with full text. See `findings/cinematography-forum.md` |
 | cinematography.com — other forums | not started | Bolex discussion also lands in the 16mm, lenses and telecine forums. 21,500+ archived topics site-wide; filter by slug |
-| **Reddit** | **harvested, with gaps** | 5,070 records, 981 threads, 1,497 named people in `corpus/bolex-reddit-corpus.jsonl`, via Arctic Shift. Six sweeps were refused mid-run and need re-running: see below |
+| **Reddit** | **harvested, with gaps** | 7,703 records, 1,259 threads, 2,536 named people in `corpus/bolex-reddit-corpus.jsonl`, via Arctic Shift. Four title sweeps are still owed: see below |
 | **Facebook group** 746982282801800 | blocked | Login wall. Only route is files brought in by hand |
 | **Live cinematography.com** | blocked to automation | A logged-in person can read what the archive missed |
 
@@ -47,20 +47,32 @@ when the request is wrong. The harvester now reports each sweep it could
 not finish rather than returning an empty page and pretending the
 subreddit ended there, so these are known rather than silent:
 
-| Subreddit | Field | Stopped at |
-|---|---|---|
-| r/16mm | title | 2026-08-12 |
-| r/AnalogCommunity | title | start of range |
-| r/AnalogCommunity | selftext | start of range |
-| r/Filmmakers | title | start of range |
-| r/cinematography | title | start of range |
-| r/cinematography | selftext | start of range |
+Re-run 2026-11-23. Four of the six came through, adding 2,633 records:
+r/cinematography selftext alone brought 134 threads and over 2,000
+posts, and r/AnalogCommunity 69 threads. What is still owed:
 
-Re-run with `python3 research/scripts/harvest-reddit.py`; each subreddit
-resumes from its own newest record, so nothing already held is fetched
-twice. r/Filmmakers (title) is the exception: its selftext sweep already
-set a recent watermark for that subreddit, so it needs an explicit
-`--since` to reach back past it.
+| Subreddit | Field | Reached back to |
+|---|---|---|
+| r/cinematography | title | 2022-11-18 |
+| r/AnalogCommunity | title | nothing fetched |
+| r/Filmmakers | title | 2026-11-14 |
+| r/super8 | title | 2026-11-15 |
+
+These are **title** sweeps, and the selftext sweep of each subreddit has
+already run, so what is missing is threads whose *title* names a Bolex
+but whose body does not. That is a real gap but a narrow one, and the
+corpus is already usable.
+
+Resuming only goes forward, and each subreddit resumes from its own
+newest record. Every one of these four now has a recent watermark from
+its selftext sweep, so a plain re-run will fetch nothing: each needs an
+explicit `--since` with the date in the table (or `--full`) to reach
+back past it. Running them one subreddit at a time, rather than all in
+one pass, is also likelier to stay under whatever Arctic Shift's 422
+actually measures.
+
+One thread's comments (`un1sra`) came back 422 and are absent; the
+submission itself is held.
 
 ## Building the search
 
