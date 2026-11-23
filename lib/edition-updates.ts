@@ -91,6 +91,25 @@ export const EDITION_UPDATES: readonly EditionUpdate[] = [
       "A directory of technicians who work on these cameras, each read from their own site.",
     href: "/technicians",
   },
+  {
+    date: "2026-11-23",
+    title: "Notes and Comments, back on every model page",
+    description:
+      "Michael wrote a Notes and Comments section on 71 of his 72 camera and projector " +
+      "pages: what changed with a model and why, what collectors call it against what " +
+      "Paillard called it, how to tell the variants apart. None of it had been showing. " +
+      "It is all there now, with his links and his citations.",
+    href: "/cameras",
+  },
+  {
+    date: "2026-11-23",
+    title: "A map of who repairs these cameras",
+    description:
+      "The repair directory now opens with a world map, so you can see at a glance whether " +
+      "anyone is near you instead of reading every entry to find out. No map service behind " +
+      "it: the outline is drawn from public-domain data held in this archive.",
+    href: "/technicians",
+  },
 ];
 
 /** Newest first, which is how the page reads. */

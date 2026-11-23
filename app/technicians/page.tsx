@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Reveal } from "@/components/Reveal";
-import { techniciansByRegion, TECHNICIANS } from "@/lib/technicians";
+import { TechnicianMap } from "@/components/TechnicianMap";
+import { slug, techniciansByRegion, TECHNICIANS } from "@/lib/technicians";
 
 export const metadata: Metadata = {
   title: "Repair & service",
@@ -60,6 +61,10 @@ export default function TechniciansPage() {
         </div>
       </Reveal>
 
+      <Reveal delay={0.05}>
+        <TechnicianMap technicians={TECHNICIANS} />
+      </Reveal>
+
       {groups.map((group, g) => (
         <Reveal key={group.region} delay={g === 0 ? 0.05 : 0}>
           <section className="mt-12" aria-labelledby={`region-${g}`}>
@@ -71,7 +76,11 @@ export default function TechniciansPage() {
             </h2>
             <ul className="mt-4 border-t border-[var(--line)]">
               {group.people.map((t) => (
-                <li key={t.name} className="border-b border-[var(--line)] py-5">
+                <li
+                key={t.name}
+                id={slug(t.name)}
+                className="scroll-mt-28 border-b border-[var(--line)] py-5"
+              >
                   <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
                     <h3 className="font-[family-name:var(--font-display)] text-xl font-[560]">
                       {t.url ? (

@@ -65,11 +65,18 @@ export interface Technician {
  *
  * See research/roadmap.md for how that is meant to be applied.
  *
- * There is no map yet, and no coordinates: an earlier version of this
- * comment said coordinates were carried, which was never true of any
- * entry. A map is planned — see research/roadmap.md — and wants a
- * longer list first, because seven dots on a world map is mostly
- * ocean.
+ * Six of the seven carry coordinates and appear on the map at the top
+ * of the page. They are town centres, never a street address: a repair
+ * shop is often somebody's home workshop. An entry whose stated
+ * location is no finer than a country or a region gets no coordinates
+ * at all and is named under the map instead, because a dot invented
+ * for it would put a business in a town it is not in.
+ *
+ * Seven dots is indeed mostly ocean, which was the argument for
+ * waiting. It turned out to be the wrong way round: the emptiness is
+ * information. Someone in continental Europe can see at a glance that
+ * their nearest listed workshop is in South Wales, and that is worth
+ * knowing before reading seven entries to work it out.
  */
 export const TECHNICIANS: readonly Technician[] = [
   {
@@ -241,4 +248,19 @@ export function techniciansByRegion(): Array<{ region: string; people: Technicia
     region,
     people: TECHNICIANS.filter((t) => t.region === region),
   })).filter((g) => g.people.length > 0);
+}
+
+/**
+ * The id a technician's entry carries in the list.
+ *
+ * Lives here rather than beside the map so the page, which is a server
+ * component, and the map, which is not, derive it the same way. A link
+ * from a dot to an entry that does not exist would be worse than no
+ * link at all.
+ */
+export function slug(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
 }

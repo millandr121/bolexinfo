@@ -326,20 +326,40 @@ near them, next to the list rather than instead of it. Clicking a dot
 opens that technician's details with a direct link to their site and
 their contact.
 
-What it needs:
+**Built, 2026-11-23.** How each requirement landed:
 
-- **Coordinates.** `lib/technicians.ts` claims in a comment that
-  coordinates are carried. They are not — there is no lat/lon field on
-  any of the six. That comment should go or become true.
-- **A base map with no API key and no tracking.** The whole site is a
-  static export with no third-party calls; a map that phones Google on
-  every view would be the first thing on it that does. An inline SVG
-  world outline, or a self-hosted vector basemap, keeps that intact.
-- **The list stays canonical.** Six dots on a world map is mostly empty
-  ocean, so the map earns its place once the list is longer. Until
-  then it is a second way to read the list, not the only way.
-- Accessibility: every dot reachable by keyboard, and the same
-  information available in the list for anyone who cannot use a map.
+- **Coordinates.** Six of the seven carry them, geocoded to the town
+  centre and never to a street address. The seventh gives no location
+  finer than a region and is named under the map rather than given an
+  invented dot.
+- **A base map with no API key and no tracking.** An inline SVG path,
+  generated into the repository by `scripts/build-world-map.mjs` from
+  Natural Earth's public-domain 110m land outline. 26 kB of path, about
+  12 kB over the wire. The page makes no third-party request, which
+  keeps the static export's one real promise intact.
+- **The list stays canonical.** The map carries names and contact only;
+  what each person does and what the entry rests on stay in the list,
+  and every mark links down into it.
+- **Accessibility.** The marks are real buttons positioned over the
+  map, so they tab, focus and take a ring like any other control, and
+  the map carries a text alternative pointing at the list.
+
+Two things that only showed up in the building:
+
+- **Marks have to cluster.** Pigeon Creek, Visual Products and Du-All
+  sit 13 to 22 frame units apart on a map of the whole world. At any
+  size a finger can hit they overlap, and whichever drew last took the
+  clicks meant for the others. They share one numbered mark, which is
+  also the truer reading at this scale.
+- **The dateline draws lines across the map.** Natural Earth cuts its
+  polygons at the antimeridian, so four rings run up one side at +180
+  and resume at −180; joined rather than split, each drew a stroke
+  clean across the world. Faint enough to miss in a screenshot, so
+  there is a test for it.
+
+Still wanted: a longer list. The map's emptiness is honest but it is
+also the argument for finding more people, particularly in continental
+Europe and Asia, where it currently shows nobody at all.
 
 ### Reddit names
 
