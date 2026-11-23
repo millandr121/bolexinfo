@@ -18,6 +18,22 @@ export interface Place {
   from: string;
 }
 
+/**
+ * The kinds of work someone might want done, as a reader would ask
+ * for them rather than as a workshop would bill them.
+ */
+export const CAPABILITIES = [
+  { id: "16mm", label: "16mm" },
+  { id: "super16", label: "Super 16 conversion" },
+  { id: "electronic", label: "Electronic bodies (EBM, EL)" },
+  { id: "double8", label: "8mm and Double 8" },
+  { id: "super8", label: "Super 8" },
+  { id: "projectors", label: "Projectors" },
+  { id: "lenses", label: "Lenses" },
+] as const;
+
+export type Capability = (typeof CAPABILITIES)[number]["id"];
+
 export interface Technician {
   name: string;
   /** Town and country as the business states them, or the best evidence available. */
@@ -36,6 +52,21 @@ export interface Technician {
   email?: string;
   /** What they actually do — not a blanket "camera repair". */
   work: string;
+  /**
+   * What they do, and what they have said they do not.
+   *
+   * Three states, not two. `does` is work the evidence actually
+   * supports; `doesNot` is work they have explicitly declined, which
+   * is worth as much to a reader as a yes; anything in neither list is
+   * simply not stated and is shown as such.
+   *
+   * Nothing is assumed, not even 16mm. It would be a fair guess for
+   * almost everyone here, and a guess is exactly what sends a camera
+   * to the wrong bench. Where a listing says 16mm it is because the
+   * source said so.
+   */
+  does?: readonly Capability[];
+  doesNot?: readonly Capability[];
   /** Indicative only; every one of these needs confirming before shipping. */
   pricing?: string;
   /**
@@ -81,6 +112,7 @@ export interface Technician {
 export const TECHNICIANS: readonly Technician[] = [
   {
     name: "Pigeon Creek Camera",
+    does: ["16mm", "lenses"],
     location: "Janetville, Ontario, Canada",
     place: { lat: 44.2144316, lon: -78.7243914, precision: "town", from: "OpenStreetMap / Nominatim, geocoded 2026-11-20" },
     region: "North America",
@@ -109,6 +141,8 @@ export const TECHNICIANS: readonly Technician[] = [
      * which settles it.
      */
     name: "Dom Jaeger, Cinetinker",
+    does: ["16mm", "lenses"],
+    doesNot: ["electronic"],
     location: "Melbourne, Victoria, Australia",
     place: { lat: -37.8142454, lon: 144.9631732, precision: "city", from: "OpenStreetMap / Nominatim, geocoded 2026-11-20" },
     region: "Rest of world",
@@ -138,6 +172,7 @@ export const TECHNICIANS: readonly Technician[] = [
      * their own site rather than from those posts.
      */
     name: "Du-All Camera",
+    does: ["16mm", "electronic", "lenses"],
     location: "Westfield, New Jersey, USA",
     place: { lat: 40.651726, lon: -74.3483059, precision: "town", from: "OpenStreetMap / Nominatim, geocoded 2026-11-20" },
     region: "North America",
@@ -161,6 +196,7 @@ export const TECHNICIANS: readonly Technician[] = [
   },
   {
     name: "Visual Products",
+    does: ["16mm", "super16", "lenses"],
     location: "Wellington, Ohio, USA",
     place: { lat: 41.1685867, lon: -82.2175679, precision: "town", from: "OpenStreetMap / Nominatim, geocoded 2026-11-20" },
     region: "North America",
@@ -184,6 +220,7 @@ export const TECHNICIANS: readonly Technician[] = [
   },
   {
     name: "Dr Bolex",
+    does: ["16mm", "super16"],
     location: "Tijeras, New Mexico, USA",
     place: { lat: 35.0796355, lon: -106.3879441, precision: "town", from: "OpenStreetMap / Nominatim, geocoded 2026-11-20" },
     region: "North America",
@@ -199,6 +236,7 @@ export const TECHNICIANS: readonly Technician[] = [
   },
   {
     name: "High Line Camera Rentals",
+    does: ["16mm", "super16"],
     location: "Los Angeles, California, USA",
     place: { lat: 34.0536923, lon: -118.2427676, precision: "city", from: "OpenStreetMap / Nominatim, geocoded 2026-11-20" },
     region: "North America",
@@ -233,6 +271,7 @@ export const TECHNICIANS: readonly Technician[] = [
      * naming the models.
      */
     name: "TCS, Technological Cinevideo Services",
+    does: ["16mm"],
     location: "Brooklyn, New York, USA",
     place: { lat: 40.6782, lon: -73.9442, precision: "city", from: "Brooklyn, from the address on their own site; the borough, not the street" },
     region: "North America",
@@ -261,6 +300,8 @@ export const TECHNICIANS: readonly Technician[] = [
      * phone number and the link are enough to reach him.
      */
     name: "Simon Wyss",
+    does: ["16mm", "double8", "projectors", "lenses"],
+    doesNot: ["super8", "super16", "electronic"],
     location: "Äsch, Basel-Landschaft, Switzerland",
     place: { lat: 47.4686, lon: 7.5947, precision: "town", from: "Äsch (Aesch BL), the town in the address on his own site" },
     region: "United Kingdom & Europe",
@@ -286,31 +327,65 @@ export const TECHNICIANS: readonly Technician[] = [
   },
   {
     /*
-     * The first European entry found, and the reason for looking: with
-     * Les Bosher gone the map had nothing between the eastern United
-     * States and Melbourne.
+     * The strongest word-of-mouth of anyone here, and the only entry
+     * resting on it rather than on a site of his own.
+     *
+     * He is named by a maintained public directory, aciarfilm.org, as
+     * the Italian technical assistance for Bolex. Separately, in the
+     * Bolex Camera Users group, customers describe a complete
+     * overhaul and a Super 16 conversion on an SBM, a serviced REX-5,
+     * and more besides, and he answers there himself about what he
+     * takes in. Several people call him the best in Europe.
+     *
+     * His email circulates in that group. It is not reproduced here:
+     * the group is closed, and an address shared inside it is not the
+     * same as one published on a shop window. Ask him first.
      */
-    name: "Sendean Cameras",
-    location: "London, United Kingdom",
-    place: { lat: 51.5074, lon: -0.1278, precision: "city", from: "London, from the city their own site gives; not their street address" },
+    name: "Guido Wilhelm",
+    location: "Milan, Italy",
+    place: { lat: 45.4642, lon: 9.19, precision: "city", from: "Milan, the city given in the directory listing and by customers" },
     region: "United Kingdom & Europe",
-    url: "https://www.sendeancameras.co.uk/camera-repairs",
-    phone: "+44 20 7242 7733",
-    email: "hello@sendeancameras.co.uk",
+    does: ["16mm", "super16", "double8"],
+    doesNot: ["electronic"],
+    url: "https://www.aciarfilm.org/En/Technical_Assistance.php",
     work:
-      "A family-run repair shop that lists Bolex among the makes it works on, and 16mm " +
-      "and 8mm among the formats. Light traps, jammed winders and meter calibration are " +
-      "the film-camera jobs they name. They take work by post as well as over the counter.",
+      "Overhaul, repair and Super 16 conversion. In his own words he also takes the H8, " +
+      "the small box cameras and the K2, so he is one of the few here who is not 16mm " +
+      "only. Customers describe him testing the camera and developing the film himself " +
+      "before it goes back.",
     evidence: {
-      kind: "site",
+      kind: "listed",
       note:
-        "Their own repairs page, read November 2026, which names Bolex directly, quotes " +
-        "one to three weeks, and says the shop has been going since 1926. Bolex is one " +
-        "make in a long list rather than a speciality, so say what the camera is when " +
-        "you write. A customer on r/bolex reported sending one for a complete overhaul " +
-        "and was happy with it, which is why this entry was followed up at all.",
+        "Named for Bolex in Italy by aciarfilm.org, whose page carries 2024 data and asks " +
+        "readers to report centres that have closed. That listing gives his scope as the SB " +
+        "and SBM and not the RX, EBM or EL, while customers writing in 2026 describe a " +
+        "serviced REX-5, so the range may be wider than the directory says. He publishes no " +
+        "site: the directory takes contact requests, and he is reachable in the Bolex Camera " +
+        "Users group on Facebook. Worth confirming with him directly.",
     },
   },
+  /*
+   * Sendean Cameras, London, was listed here on 23 November and is
+   * removed the same day.
+   *
+   * The entry rested on one customer who had reported a complete
+   * overhaul on r/bolex in 2023. The same person, by name, has since
+   * written in the Bolex Camera Users group about what Sendean did to
+   * his Bolex EL for £2,000: "One day I will tell the story. And it's
+   * not going to be a nice one." An endorsement its own author has
+   * withdrawn is not evidence, and it was the only thing raising this
+   * above "a shop that lists Bolex among forty makes".
+   *
+   * Two others in the same thread describe their cine work as vastly
+   * overpriced, one of them quoted £3,876 for a stuck motor and a
+   * service, which he declined. The only warm word is from someone
+   * they served in the mid-1970s.
+   *
+   * None of that is published anywhere on the site, and none of it
+   * needs to be. The bar is whether this project will stand behind an
+   * entry, and it will not stand behind this one. Omission is silent.
+   * See research/roadmap.md.
+   */
 ];
 
 export const TECHNICIAN_REGIONS = [

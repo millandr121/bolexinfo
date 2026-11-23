@@ -399,6 +399,58 @@ New Year, so the business may continue. Until that is established,
 listing it would send someone's camera and shipping money somewhere
 that may not answer.
 
+### The Bolex Camera Users group list
+
+The group keeps a maintained post, "The Ultimate Bolex H16 Repair /
+Service / CLA / Conversion Facility List", with its own legend for
+good and bad reviews, and a second list of the retired and the dead.
+It is better than anything findable on the open web, and its
+maintainer updates it from the comments.
+
+**It is a closed group.** Nothing from it is quoted or attributed on
+the public site, and no member's name or email appears there. It is
+used the way the forum corpus is used: to find out who exists, then
+verify each one independently before listing.
+
+What it establishes, which the open web did not:
+
+| Person | Where | Status per the group |
+|---|---|---|
+| Guido Wilhelm | Milan | Repeatedly named the best in Europe. Several first-hand overhauls and Super 16 conversions. He answers there himself. **Now listed.** |
+| Yves Bornand | Switzerland | Former technician of the original Bolex company. Contact passed privately between members; not published anywhere. |
+| Abdul Setoua, Cine Repair | New York | Named for EBM and EL. Also surfaced independently in the Reddit corpus as having overhauled a REX-4 in Queens. **Worth chasing: the only other name for electronic bodies besides Du-All.** |
+| Robert M. Ditto | USA | Group member, has taken over part of ProCam's university work. |
+| Back to Super 8 | France | Suggested, then checked by the list's maintainer, who found no sign of a service offering. Treat as a dead end unless someone says otherwise. |
+
+**Retired or dead**, per the group, which matters because several are
+still recommended elsewhere on the web:
+
+- Martin Stent, retired two years ago on health grounds; his last
+  customer says so. He had already been dropped from the directory
+  for having no contact details.
+- Jean-Louis Seguin, retired and taking no new customers. Confirmed by
+  a member who asked him directly after another member reported a
+  conversion done a year earlier.
+- Dieter Schaefer of ProCam, mostly retired.
+- Bernie O'Doherty of Super 16 Inc, which matches the parked domain.
+- Jaakko Kurhi of JK Camera; Jesse Chambless of Chambless Cine
+  Equipment; Otello Diotallevi of Bolex International.
+
+### Sendean Cameras, listed and then removed the same day
+
+Listed on the strength of a 2023 r/bolex post reporting a complete
+overhaul. The same person, by name, has since written in the group
+about what Sendean did to his Bolex EL for £2,000, promising a story
+that "is not going to be a nice one". Two others in that thread call
+their cine work vastly overpriced, one quoted £3,876 for a stuck
+motor and a service and declined it. The only warm word is from a
+customer they served in the mid-1970s.
+
+An endorsement withdrawn by its own author is not evidence, and it
+was the only thing lifting the entry above "a shop that lists Bolex
+among forty makes". Removed. Nothing about it is published on the
+site.
+
 ### Technician leads, not yet listed
 
 Found by searching the corpora for service talk outside North America,

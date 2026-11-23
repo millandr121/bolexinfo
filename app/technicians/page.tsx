@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Reveal } from "@/components/Reveal";
-import { TechnicianMap } from "@/components/TechnicianMap";
-import { slug, techniciansByRegion, TECHNICIANS } from "@/lib/technicians";
+import { TechnicianDirectory } from "@/components/TechnicianDirectory";
+import { TECHNICIANS } from "@/lib/technicians";
 
 /*
  * The page is headed "Bolex Technicians" while the navigation still
@@ -20,7 +20,6 @@ export const metadata: Metadata = {
 };
 
 export default function TechniciansPage() {
-  const groups = techniciansByRegion();
   const checked = TECHNICIANS.filter((t) => t.evidence.kind === "site").length;
 
   return (
@@ -60,8 +59,12 @@ export default function TechniciansPage() {
             ) : (
               <>
                 {checked} of these {TECHNICIANS.length} were read from the
-                business&rsquo;s own site; the {TECHNICIANS.length - checked} others come
-                from another directory and have not been confirmed here.
+                business&rsquo;s own site. The{" "}
+                {TECHNICIANS.length - checked === 1
+                  ? "other is named by a directory"
+                  : `other ${TECHNICIANS.length - checked} are named by directories`}{" "}
+                and by people who have used them, and could not be confirmed here from a
+                site of their own.
               </>
             )}{" "}
             That is not the same as a guarantee of their work: the small-gauge trade is
@@ -71,83 +74,7 @@ export default function TechniciansPage() {
         </div>
       </Reveal>
 
-      <Reveal delay={0.05}>
-        <TechnicianMap technicians={TECHNICIANS} />
-      </Reveal>
-
-      {groups.map((group, g) => (
-        <Reveal key={group.region} delay={g === 0 ? 0.05 : 0}>
-          <section className="mt-12" aria-labelledby={`region-${g}`}>
-            <h2
-              id={`region-${g}`}
-              className="font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.25em] text-[var(--accent)]"
-            >
-              {group.region}
-            </h2>
-            <ul className="mt-4 border-t border-[var(--line)]">
-              {group.people.map((t) => (
-                <li
-                key={t.name}
-                id={slug(t.name)}
-                className="scroll-mt-28 border-b border-[var(--line)] py-5"
-              >
-                  <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-                    <h3 className="font-[family-name:var(--font-display)] text-xl font-[560]">
-                      {t.url ? (
-                        <a
-                          href={t.url}
-                          target="_blank"
-                          rel="noreferrer nofollow"
-                          className="hover:text-[var(--accent)] transition-colors"
-                        >
-                          {t.name} <span aria-hidden="true" className="text-xs text-[var(--accent)]">↗</span>
-                        </a>
-                      ) : (
-                        t.name
-                      )}
-                    </h3>
-                    <p className="font-[family-name:var(--font-mono)] text-[0.68rem] uppercase tracking-[0.14em] text-[var(--fg-soft)]">
-                      {t.location}
-                    </p>
-                  </div>
-
-                  <p className="mt-2 text-sm leading-relaxed">{t.work}</p>
-
-                  <dl className="mt-3 flex flex-wrap gap-x-8 gap-y-1 font-[family-name:var(--font-mono)] text-[0.7rem] text-[var(--fg-soft)]">
-                    {t.pricing && (
-                      <div className="flex gap-2">
-                        <dt className="uppercase tracking-[0.12em]">Indicative</dt>
-                        <dd className="text-[var(--fg)]">{t.pricing}</dd>
-                      </div>
-                    )}
-                    {t.phone && (
-                      <div className="flex gap-2">
-                        <dt className="uppercase tracking-[0.12em]">Phone</dt>
-                        <dd className="text-[var(--fg)]">{t.phone}</dd>
-                      </div>
-                    )}
-                    {t.email && (
-                      <div className="flex gap-2">
-                        <dt className="uppercase tracking-[0.12em]">Email</dt>
-                        <dd className="text-[var(--fg)]">{t.email}</dd>
-                      </div>
-                    )}
-                  </dl>
-
-                  <p
-                    className={`mt-3 font-[family-name:var(--font-mono)] text-[0.66rem] leading-relaxed ${
-                      t.evidence.kind === "site" ? "text-[var(--fg-soft)]" : "text-[var(--accent)]"
-                    }`}
-                  >
-                    {t.evidence.kind === "site" ? "Read from their site: " : "Unconfirmed: "}
-                    {t.evidence.note}
-                  </p>
-                </li>
-              ))}
-            </ul>
-          </section>
-        </Reveal>
-      ))}
+      <TechnicianDirectory technicians={TECHNICIANS} />
 
       <Reveal>
         <aside className="rule mt-14 pt-4 font-[family-name:var(--font-mono)] text-xs leading-relaxed text-[var(--fg-soft)]">
