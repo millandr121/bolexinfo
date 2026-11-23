@@ -30,11 +30,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: "Bolex Collector — Classic Movie Cameras and Projectors",
-    template: "%s — Bolex Collector",
+    default: "Bolex Collector · Classic Movie Cameras and Projectors",
+    template: "%s · Bolex Collector",
   },
   description:
-    "The digital museum of Paillard-Bolex: cameras, projectors, lenses, accessories, serial numbers and ephemera — a preservation of the original BolexCollector.com.",
+    "The digital museum of Paillard-Bolex: cameras, projectors, lenses, accessories, serial numbers and ephemera, carrying on the original BolexCollector.com.",
   openGraph: {
     siteName: "Bolex Collector",
     type: "website",

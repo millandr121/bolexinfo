@@ -65,11 +65,18 @@ export interface Technician {
  *
  * See research/roadmap.md for how that is meant to be applied.
  *
- * There is no map yet, and no coordinates: an earlier version of this
- * comment said coordinates were carried, which was never true of any
- * entry. A map is planned — see research/roadmap.md — and wants a
- * longer list first, because seven dots on a world map is mostly
- * ocean.
+ * Six of the seven carry coordinates and appear on the map at the top
+ * of the page. They are town centres, never a street address: a repair
+ * shop is often somebody's home workshop. An entry whose stated
+ * location is no finer than a country or a region gets no coordinates
+ * at all and is named under the map instead, because a dot invented
+ * for it would put a business in a town it is not in.
+ *
+ * Seven dots is indeed mostly ocean, which was the argument for
+ * waiting. It turned out to be the wrong way round: the emptiness is
+ * information. Someone in continental Europe can see at a glance that
+ * their nearest listed workshop is in South Wales, and that is worth
+ * knowing before reading seven entries to work it out.
  */
 export const TECHNICIANS: readonly Technician[] = [
   {
@@ -86,7 +93,7 @@ export const TECHNICIANS: readonly Technician[] = [
       note:
         "Their own services page, read November 2026. Prices in CAD; the site carries a 2021 " +
         "copyright, so confirm they are taking work. The town comes from the map pin on their " +
-        "contact page, which sits at the centre of Janetville rather than on an address — they " +
+        "contact page, which sits at the centre of Janetville rather than on an address. They " +
         "publish no street address and none is given here.",
     },
   },
@@ -101,7 +108,7 @@ export const TECHNICIANS: readonly Technician[] = [
      * under his own business name with a published address for enquiries,
      * which settles it.
      */
-    name: "Dom Jaeger — Cinetinker",
+    name: "Dom Jaeger, Cinetinker",
     location: "Melbourne, Victoria, Australia",
     place: { lat: -37.8142454, lon: 144.9631732, precision: "city", from: "OpenStreetMap / Nominatim, geocoded 2026-11-20" },
     region: "Rest of world",
@@ -110,7 +117,7 @@ export const TECHNICIANS: readonly Technician[] = [
     work:
       "Freelance cine lens and camera technician. In his own words he works on mechanical " +
       "Bolexes and avoids the electronic ones even for a mechanical fault, because they are a " +
-      "real pain to work on — which is more use before shipping than most service pages offer. " +
+      "real pain to work on, which is more use before shipping than most service pages offer. " +
       "His blog carries full strip-down write-ups of cine cameras.",
     pricing: "By quote",
     evidence: {
@@ -170,8 +177,8 @@ export const TECHNICIANS: readonly Technician[] = [
       kind: "site",
       note:
         "Their own about page and departments, read November 2026, plus a recommendation " +
-        "from the site owner. They publish no Bolex-specific repair page — the service " +
-        "side is described around the equipment they sell — so ask directly whether they " +
+        "from the site owner. They publish no Bolex-specific repair page, since the service " +
+        "side is described around the equipment they sell, so ask directly whether they " +
         "will take in a camera that did not come from them.",
     },
   },
@@ -201,31 +208,107 @@ export const TECHNICIANS: readonly Technician[] = [
     pricing: "Full CLA around USD $800 + parts",
     evidence: {
       kind: "site",
-      note: "Their own Bolex service page, read November 2026 — the most recently updated of these.",
+      note: "Their own Bolex service page, read November 2026, the most recently updated of these.",
+    },
+  },
+  /*
+   * Les Bosher was here and has been removed. He died on 5 December
+   * 2025: a customer of his says so in a February 2026 thread on
+   * r/cinematography, and cinematography.com carries a "Les Bosher
+   * RIP" thread opened by his son. His site is still up, unchanged,
+   * written in his own voice and advertising accessories for a 2008
+   * camcorder, so it is no evidence that the business is trading.
+   *
+   * His son Chris worked with him and may carry it on. Until that can
+   * be established, an entry here would send someone's camera and
+   * shipping money to an address that may not answer, which is the one
+   * harm this page exists to prevent. Removing it says nothing about
+   * anyone: omission is silent. See research/roadmap.md.
+   */
+  {
+    /*
+     * Named by the user as worth checking and left out until their own
+     * site could be read. It turns out to be the strongest claim of
+     * any entry here: not "we repair most makes" but factory training,
+     * naming the models.
+     */
+    name: "TCS, Technological Cinevideo Services",
+    location: "Brooklyn, New York, USA",
+    place: { lat: 40.6782, lon: -73.9442, precision: "city", from: "Brooklyn, from the address on their own site; the borough, not the street" },
+    region: "North America",
+    url: "https://tcsfilm.com/service/",
+    phone: "+1 212-247-6517",
+    work:
+      "Repairs to all H16 spring-wound Bolex cameras, naming the RX4, RX5, SB, SBM " +
+      "and the non-reflex bodies. They describe themselves as a factory-trained and " +
+      "authorised Bolex dealer and service facility.",
+    evidence: {
+      kind: "site",
+      note:
+        "Their own service page, read November 2026, which carries a notice for this " +
+        "year's Thanksgiving closure, so the site is being kept current. Repairs are " +
+        "booked through a form on their site rather than by email.",
     },
   },
   {
     /*
-     * Spelled "Boscher" here until his own site was read, which was a
-     * misspelling of a real person's name on a page that exists to
-     * help people find him.
+     * His email is deliberately absent from this entry.
+     *
+     * His own page gives a phone number and then says: "Please take my
+     * E-Mail address from the terms of business down below. Spam bots
+     * would pick it up here." It is in the PDF, and copying it into a
+     * public HTML page would undo the one precaution he asked for. The
+     * phone number and the link are enough to reach him.
      */
-    name: "Les Bosher",
-    location: "South Wales, United Kingdom",
+    name: "Simon Wyss",
+    location: "Äsch, Basel-Landschaft, Switzerland",
+    place: { lat: 47.4686, lon: 7.5947, precision: "town", from: "Äsch (Aesch BL), the town in the address on his own site" },
     region: "United Kingdom & Europe",
-    url: "https://www.lesbosher.co.uk/",
+    url: "https://www.filmmechaniksimonwyss.biz/english/",
+    phone: "+41 77 406 65 65",
     work:
-      "Lens and camera conversions, lens mounts, adapters, range extenders and " +
-      "lens supports, made in-house on CNC and manual machinery. Manufacturing for " +
-      "film and television since 1982, run by Les Bosher with his son Chris. This " +
-      "is fabrication rather than general CLA work.",
+      "Examination, repair, overhaul and maintenance of mechanical cine equipment: " +
+      "cameras, projectors, printers, viewers, splicers and optics, all makes. He also " +
+      "makes Bolex parts, among them a new mainspring for the H 16 from 1962 on and a " +
+      "metal ocular adjustment ring for the H Reflex with the 10x finder. In his own " +
+      "words, conservative action and no modifications. Note what he does not take: no " +
+      "Super 8, no Single-8, and no electronics, so the EBM and EL are out unless the " +
+      "fault is in a mechanism that works independently of the control.",
+    pricing: "Published list: general overhaul CHF 600 for an H Standard, 650 for an H Reflex, SB or SBM; CHF 25 per quarter hour",
     evidence: {
       kind: "site",
       note:
-        "His own site, read November 2026 — a frameset from the early web, still up, " +
-        "stating 43 years as a camera engineer. It publishes no email or phone and no " +
-        "address beyond the work itself, so contact is through the site. The South Wales " +
-        "location comes from elsewhere and is not stated there.",
+        "His own site, read November 2026, with a price list effective March 2025 and " +
+        "terms of business dated January 2026, so it is being kept up. Business hours " +
+        "Monday to Friday. He has also answered Bolex questions on cinematography.com " +
+        "for years, and was recommended by name on r/cinematography in 2026.",
+    },
+  },
+  {
+    /*
+     * The first European entry found, and the reason for looking: with
+     * Les Bosher gone the map had nothing between the eastern United
+     * States and Melbourne.
+     */
+    name: "Sendean Cameras",
+    location: "London, United Kingdom",
+    place: { lat: 51.5074, lon: -0.1278, precision: "city", from: "London, from the city their own site gives; not their street address" },
+    region: "United Kingdom & Europe",
+    url: "https://www.sendeancameras.co.uk/camera-repairs",
+    phone: "+44 20 7242 7733",
+    email: "hello@sendeancameras.co.uk",
+    work:
+      "A family-run repair shop that lists Bolex among the makes it works on, and 16mm " +
+      "and 8mm among the formats. Light traps, jammed winders and meter calibration are " +
+      "the film-camera jobs they name. They take work by post as well as over the counter.",
+    evidence: {
+      kind: "site",
+      note:
+        "Their own repairs page, read November 2026, which names Bolex directly, quotes " +
+        "one to three weeks, and says the shop has been going since 1926. Bolex is one " +
+        "make in a long list rather than a speciality, so say what the camera is when " +
+        "you write. A customer on r/bolex reported sending one for a complete overhaul " +
+        "and was happy with it, which is why this entry was followed up at all.",
     },
   },
 ];
@@ -241,4 +324,19 @@ export function techniciansByRegion(): Array<{ region: string; people: Technicia
     region,
     people: TECHNICIANS.filter((t) => t.region === region),
   })).filter((g) => g.people.length > 0);
+}
+
+/**
+ * The id a technician's entry carries in the list.
+ *
+ * Lives here rather than beside the map so the page, which is a server
+ * component, and the map, which is not, derive it the same way. A link
+ * from a dot to an entry that does not exist would be worse than no
+ * link at all.
+ */
+export function slug(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
 }

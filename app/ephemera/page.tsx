@@ -6,7 +6,7 @@ import { decadeOf, ephemeraTypeOf, getRecoveredSection } from "@/lib/recovered";
 export const metadata: Metadata = {
   title: "Ephemera",
   description:
-    "Paillard-Bolex print advertising, catalogues, brochures and the Bolex Reporter magazine — scanned from the original collection and recovered from BolexCollector.com.",
+    "Paillard-Bolex print advertising, catalogues, brochures and the Bolex Reporter magazine, scanned from the original collection.",
 };
 
 const TYPE_ORDER = ["Advertising", "Brochures", "Catalogs", "Bolex Reporter", "Other"];
@@ -26,7 +26,7 @@ export default function EphemeraPage() {
         </h1>
         <p className="mt-4 max-w-2xl text-[var(--fg-soft)] leading-relaxed">
           The printed life of the company: period advertising, dealer catalogues, promotional
-          brochures and the <em>Bolex Reporter</em> magazine — {pages.length} pieces scanned
+          brochures and the <em>Bolex Reporter</em> magazine. {pages.length} pieces scanned
           from the original collection.
         </p>
       </Reveal>

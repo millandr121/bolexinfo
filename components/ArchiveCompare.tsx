@@ -83,7 +83,7 @@ export function ArchiveCompare({ originalHref, title }: { originalHref: string; 
                 <span className="text-sm leading-snug">
                   Open the preserved page full screen
                   <span className="block mt-1 text-xs text-[var(--fg-soft)]">
-                    Original 2000s layout — best viewed with pinch-to-zoom
+                    Original 2000s layout, best viewed with pinch-to-zoom
                   </span>
                 </span>
                 <span aria-hidden="true" className="text-[var(--accent)] text-xl shrink-0">

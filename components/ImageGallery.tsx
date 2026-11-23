@@ -124,7 +124,7 @@ export function ImageGallery({
           <p className="mt-2 font-[family-name:var(--font-mono)] text-xs text-[var(--fg-soft)]">
             {images.length === 1
               ? "Tap to enlarge"
-              : `${images.length} photographs — swipe, or tap to enlarge`}
+              : `${images.length} photographs. Swipe, or tap to enlarge`}
           </p>
         </div>
       ) : (

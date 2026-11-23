@@ -8,7 +8,7 @@ import { accessoryTypeOf, decadeOf, getRecoveredSection } from "@/lib/recovered"
 export const metadata: Metadata = {
   title: "Accessories",
   description:
-    "Accessories for Bolex cameras — motors, viewfinders, filters, cases, tripods, grips and editing equipment — recovered from BolexCollector.com and organised by type and decade.",
+    "Accessories for Bolex cameras: motors, viewfinders, filters, cases, tripods, grips and editing equipment, organised by type and decade.",
 };
 
 const TYPE_ORDER = [

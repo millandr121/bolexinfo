@@ -90,7 +90,7 @@ export default function CamerasPage() {
                         {model.name}
                       </h3>
                       <span className="font-[family-name:var(--font-mono)] text-xs text-[var(--fg-soft)] shrink-0">
-                        {model.introduced ?? "—"}
+                        {model.introduced ?? ""}
                       </span>
                     </div>
                     <p className="mt-2 font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.14em] text-[var(--fg-soft)]">

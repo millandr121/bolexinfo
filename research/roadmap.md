@@ -32,7 +32,7 @@ Two things make this worth building rather than just nice:
 |---|---|---|
 | **cinematography.com forum 78** (Bolex) | **harvested** | 571 threads, ~65% with full text. See `findings/cinematography-forum.md` |
 | cinematography.com — other forums | not started | Bolex discussion also lands in the 16mm, lenses and telecine forums. 21,500+ archived topics site-wide; filter by slug |
-| **Reddit** | **harvested, with gaps** | 5,070 records, 981 threads, 1,497 named people in `corpus/bolex-reddit-corpus.jsonl`, via Arctic Shift. Six sweeps were refused mid-run and need re-running: see below |
+| **Reddit** | **harvested, with gaps** | 7,703 records, 1,259 threads, 2,536 named people in `corpus/bolex-reddit-corpus.jsonl`, via Arctic Shift. Four title sweeps are still owed: see below |
 | **Facebook group** 746982282801800 | blocked | Login wall. Only route is files brought in by hand |
 | **Live cinematography.com** | blocked to automation | A logged-in person can read what the archive missed |
 
@@ -47,20 +47,32 @@ when the request is wrong. The harvester now reports each sweep it could
 not finish rather than returning an empty page and pretending the
 subreddit ended there, so these are known rather than silent:
 
-| Subreddit | Field | Stopped at |
-|---|---|---|
-| r/16mm | title | 2026-08-12 |
-| r/AnalogCommunity | title | start of range |
-| r/AnalogCommunity | selftext | start of range |
-| r/Filmmakers | title | start of range |
-| r/cinematography | title | start of range |
-| r/cinematography | selftext | start of range |
+Re-run 2026-11-23. Four of the six came through, adding 2,633 records:
+r/cinematography selftext alone brought 134 threads and over 2,000
+posts, and r/AnalogCommunity 69 threads. What is still owed:
 
-Re-run with `python3 research/scripts/harvest-reddit.py`; each subreddit
-resumes from its own newest record, so nothing already held is fetched
-twice. r/Filmmakers (title) is the exception: its selftext sweep already
-set a recent watermark for that subreddit, so it needs an explicit
-`--since` to reach back past it.
+| Subreddit | Field | Reached back to |
+|---|---|---|
+| r/cinematography | title | 2022-11-18 |
+| r/AnalogCommunity | title | nothing fetched |
+| r/Filmmakers | title | 2026-11-14 |
+| r/super8 | title | 2026-11-15 |
+
+These are **title** sweeps, and the selftext sweep of each subreddit has
+already run, so what is missing is threads whose *title* names a Bolex
+but whose body does not. That is a real gap but a narrow one, and the
+corpus is already usable.
+
+Resuming only goes forward, and each subreddit resumes from its own
+newest record. Every one of these four now has a recent watermark from
+its selftext sweep, so a plain re-run will fetch nothing: each needs an
+explicit `--since` with the date in the table (or `--full`) to reach
+back past it. Running them one subreddit at a time, rather than all in
+one pass, is also likelier to stay under whatever Arctic Shift's 422
+actually measures.
+
+One thread's comments (`un1sra`) came back 422 and are absent; the
+submission itself is held.
 
 ## Building the search
 
@@ -326,20 +338,98 @@ near them, next to the list rather than instead of it. Clicking a dot
 opens that technician's details with a direct link to their site and
 their contact.
 
-What it needs:
+**Built, 2026-11-23.** How each requirement landed:
 
-- **Coordinates.** `lib/technicians.ts` claims in a comment that
-  coordinates are carried. They are not — there is no lat/lon field on
-  any of the six. That comment should go or become true.
-- **A base map with no API key and no tracking.** The whole site is a
-  static export with no third-party calls; a map that phones Google on
-  every view would be the first thing on it that does. An inline SVG
-  world outline, or a self-hosted vector basemap, keeps that intact.
-- **The list stays canonical.** Six dots on a world map is mostly empty
-  ocean, so the map earns its place once the list is longer. Until
-  then it is a second way to read the list, not the only way.
-- Accessibility: every dot reachable by keyboard, and the same
-  information available in the list for anyone who cannot use a map.
+- **Coordinates.** Six of the seven carry them, geocoded to the town
+  centre and never to a street address. The seventh gives no location
+  finer than a region and is named under the map rather than given an
+  invented dot.
+- **A base map with no API key and no tracking.** An inline SVG path,
+  generated into the repository by `scripts/build-world-map.mjs` from
+  Natural Earth's public-domain 110m land outline. 26 kB of path, about
+  12 kB over the wire. The page makes no third-party request, which
+  keeps the static export's one real promise intact.
+- **The list stays canonical.** The map carries names and contact only;
+  what each person does and what the entry rests on stay in the list,
+  and every mark links down into it.
+- **Accessibility.** The marks are real buttons positioned over the
+  map, so they tab, focus and take a ring like any other control, and
+  the map carries a text alternative pointing at the list.
+
+Two things that only showed up in the building:
+
+- **Marks have to cluster.** Pigeon Creek, Visual Products and Du-All
+  sit 13 to 22 frame units apart on a map of the whole world. At any
+  size a finger can hit they overlap, and whichever drew last took the
+  clicks meant for the others. They share one numbered mark, which is
+  also the truer reading at this scale.
+- **The dateline draws lines across the map.** Natural Earth cuts its
+  polygons at the antimeridian, so four rings run up one side at +180
+  and resume at −180; joined rather than split, each drew a stroke
+  clean across the world. Faint enough to miss in a screenshot, so
+  there is a test for it.
+
+Still wanted: a longer list. The map's emptiness is honest but it is
+also the argument for finding more people, particularly in continental
+Europe and Asia, where it currently shows nobody at all.
+
+### Les Bosher has died
+
+**He was removed from the directory on 2026-11-23.** Two independent
+sources:
+
+- A customer writing on r/cinematography in February 2026: "I sent my
+  Bolex once to Les Bosher but he tragically passed away last year."
+- A thread on cinematography.com titled "Les Bosher RIP", opened by
+  his son, giving the date as 5 December. With the Reddit post that
+  places it in 2025.
+
+The cinematography.com thread could not be read directly from here:
+the live site answers 403 to anything non-interactive, and
+web.archive.org is unreachable from this container, so the snapshot
+that exists (20260218005138) could not be fetched. Worth confirming
+from a browser when someone has one.
+
+`lesbosher.co.uk` is **still up and unchanged**, written in his own
+voice ("run by myself & Chris, my son") and advertising accessories
+for a Sony EX-3 camcorder, so it dates from around 2008 and is no
+evidence either way about the business today. His son Chris worked
+with him and the RIP thread says enquiries would be answered in the
+New Year, so the business may continue. Until that is established,
+listing it would send someone's camera and shipping money somewhere
+that may not answer.
+
+### Technician leads, not yet listed
+
+Found by searching the corpora for service talk outside North America,
+then checking each against its own site. Recorded so the same ground
+is not re-walked.
+
+| Lead | Where | Why not listed |
+|---|---|---|
+| **Stecica** | Near London | A customer described a full CLA there in 2022 and named "Jamie". `stecica.com` no longer resolves. Probably gone. |
+| **Bolex International** | Switzerland | The manufacturer, and the obvious thing to try from Europe, but its own site has no repair or service page at all, only a contact form, and does not even give a town. Nothing to quote. People did send cameras there: a 2020 thread says they were "crazy busy" and not returning calls. |
+| **Guido Wilhelm** | Italy | Listed on aciarfilm.org for Bolex SB and SBM but not RX, EBM or EL. The page is undated. |
+| **Yves Bornand** | Switzerland | Same undated aciarfilm.org page, for all models except EL. |
+| **Cine Repair** | Queens, New York | Named in r/bolex as having overhauled a REX-4. Not yet checked against a site. |
+| **CameraCrate** | UK | Sells refurbished H16s rather than taking repairs in. |
+| **P+S Technik** | Munich | Suggested in a thread by someone who said themselves they did not know whether it handles Bolex. |
+| **ausgeknipst.de** | Germany | A directory of analogue repair workshops, apparently maintained. Worth reading properly as a source of further names. |
+
+Checked and **dead**: `super16inc.com`, named in r/bolex alongside
+Du-All and Visual Products, is now a parked domain offered for sale.
+
+**Simon Wyss is now listed** (2026-11-23). He was in the table above as
+unreachable, which was wrong: his site answers 403 to `curl` and to the
+fetch tool, but it loads perfectly in the headless Chromium this
+container already has. A 403 from a plain HTTP client means the client
+was refused, not the site. Reach for the browser before writing a site
+off — several of the leads above may be the same mistake.
+
+His page gives a phone number and withholds the email on purpose:
+"Please take my E-Mail address from the terms of business down below.
+Spam bots would pick it up here." It is in the PDF. It is deliberately
+not copied into his entry on the site, for the reason he gives.
 
 ### Reddit names
 

@@ -6,7 +6,7 @@ import { SUGGESTIONS_EMAIL } from "@/lib/suggestions";
 export const metadata: Metadata = {
   title: "Suggest an edit",
   description:
-    "Corrections, missing models, photographs and first-hand knowledge — how to contribute to the Bolex Collector archive.",
+    "Corrections, missing models, photographs and first-hand knowledge: how to contribute to the Bolex Collector archive.",
 };
 
 export default function SuggestPage() {
@@ -36,7 +36,7 @@ export default function SuggestPage() {
       </Reveal>
 
       <aside className="rule mt-16 pt-4 max-w-2xl font-[family-name:var(--font-mono)] text-xs leading-relaxed text-[var(--fg-soft)]">
-        <span className="uppercase tracking-[0.18em]">On credit — </span>
+        <span className="uppercase tracking-[0.18em]">On credit: </span>
         Anything used here is credited to whoever it came from, by the name they ask for. Material
         offered is not published without that being settled first, and a photograph or document
         can be withdrawn at any time by writing to {SUGGESTIONS_EMAIL}.

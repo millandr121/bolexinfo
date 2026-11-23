@@ -133,7 +133,7 @@ export function SuggestionForm({ defaultPage }: { defaultPage?: string }) {
             ` ${status.stored} file${status.stored === 1 ? "" : "s"} came with it.`}
           {contact.trim()
             ? " You will hear back if anything needs checking."
-            : " You did not leave a way to reply, so this is where it ends — which is fine, and thank you all the same."}
+            : " You did not leave a way to reply, so this is where it ends, which is fine, and thank you all the same."}
         </p>
         {status.rejected.length > 0 && (
           <div className="mt-4 border-l-2 border-[var(--accent)] pl-4 text-sm leading-relaxed">
@@ -144,7 +144,7 @@ export function SuggestionForm({ defaultPage }: { defaultPage?: string }) {
               ))}
             </ul>
             <p className="mt-2 text-[var(--fg-soft)]">
-              Nothing else was affected — the message itself is saved.
+              Nothing else was affected. The message itself is saved.
             </p>
           </div>
         )}
@@ -219,7 +219,7 @@ export function SuggestionForm({ defaultPage }: { defaultPage?: string }) {
             Photographs or scans (optional)
           </label>
           <p className="mt-1.5 text-sm leading-relaxed text-[var(--fg-soft)]">
-            Up to {cap.maxFiles} files, {Math.round(cap.maxFileBytes / (1024 * 1024))}MB each —
+            Up to {cap.maxFiles} files, {Math.round(cap.maxFileBytes / (1024 * 1024))}MB each, in
             JPEG, PNG, WebP, TIFF or PDF. Send the largest version you have; it can always be
             made smaller here, never bigger.
           </p>
@@ -274,7 +274,7 @@ export function SuggestionForm({ defaultPage }: { defaultPage?: string }) {
           Email, if you would like a reply (optional)
         </label>
         <p className="mt-1.5 text-sm leading-relaxed text-[var(--fg-soft)]">
-          Only used to answer this. Leave it blank and the suggestion still arrives — it just
+          Only used to answer this. Leave it blank and the suggestion still arrives, it just
           ends there.
         </p>
         <input
@@ -324,7 +324,7 @@ export function SuggestionForm({ defaultPage }: { defaultPage?: string }) {
             <a href={suggestionMailto(draft)} className="text-[var(--accent)] underline">
               send it by email instead
             </a>{" "}
-            — that opens your mail app with all of this already written.
+            That opens your mail app with all of this already written.
           </p>
         </div>
       )}

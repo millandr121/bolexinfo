@@ -59,7 +59,7 @@ export default function ArticlesPage() {
             <ul className="mt-5 grid gap-1.5 font-[family-name:var(--font-mono)] text-xs text-[var(--fg-soft)]">
               {knownArticlePages.map((page) => (
                 <li key={page.path}>
-                  {page.title.replace(/^Bolex Collector \| Articles \| /, "")} —{" "}
+                  {page.title.replace(/^Bolex Collector \| Articles \| /, "")}{": "}
                   <span className="opacity-70">{page.path}</span>
                 </li>
               ))}

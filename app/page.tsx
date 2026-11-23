@@ -65,7 +65,7 @@ export default function HomePage() {
                   catalogue ever grows. */}
               <p className="mt-5 max-w-[29rem] leading-[1.65] text-[var(--fg-soft)]">
                 Fifty-five cameras, seventeen projectors, the lenses and accessories that went
-                with them, and the paper that sold them — recovered, verified, and kept.
+                with them, and the paper that sold them, verified and kept.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <LookupCta>Identify my Bolex</LookupCta>
@@ -142,7 +142,7 @@ export default function HomePage() {
                   </span>
                 </h2>
                 <p className="mt-3 text-sm leading-relaxed text-[var(--fg-soft)]">
-                  Advice, answers, manuals, and buying and selling — the Bolex group on
+                  Advice, answers, manuals, and buying and selling. The Bolex group on
                   Facebook, busy most days.
                 </p>
               </a>
@@ -158,7 +158,7 @@ export default function HomePage() {
                   Find a technician
                 </h2>
                 <p className="mt-3 text-sm leading-relaxed text-[var(--fg-soft)]">
-                  Who services, repairs and converts these cameras — and how current each
+                  Who services, repairs and converts these cameras, and how current each
                   listing is.
                 </p>
               </Link>

@@ -4,7 +4,7 @@ import { OriginalFrame } from "@/components/OriginalFrame";
 export const metadata: Metadata = {
   title: "The original site",
   description:
-    "Browse BolexCollector.com as it was — the preserved pages, stylesheets and photographs of Michael Tisdale's original site, kept online while it is down.",
+    "Browse BolexCollector.com as it was: the preserved pages, stylesheets and photographs of Michael Tisdale's original site, kept online while it is down.",
 };
 
 /**

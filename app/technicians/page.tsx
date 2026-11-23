@@ -1,11 +1,22 @@
 import type { Metadata } from "next";
 import { Reveal } from "@/components/Reveal";
-import { techniciansByRegion, TECHNICIANS } from "@/lib/technicians";
+import { TechnicianMap } from "@/components/TechnicianMap";
+import { slug, techniciansByRegion, TECHNICIANS } from "@/lib/technicians";
 
+/*
+ * The page is headed "Bolex Technicians" while the navigation still
+ * says "Repair & service".
+ *
+ * Deliberate. In a menu the reader is scanning for the thing they
+ * want done, and "Repair & service" is what they are looking for;
+ * "Bolex Technicians" beside "Cameras" and "Lenses" would read as
+ * another catalogue. Arriving on the page, the subject is the people,
+ * and naming them is the point.
+ */
 export const metadata: Metadata = {
-  title: "Repair & service",
+  title: "Bolex Technicians",
   description:
-    "People who service, repair and convert Bolex cameras — what each one actually does, and how current the listing is.",
+    "The people who service, repair and convert Bolex cameras: what each one actually does, where they are, and how current the listing is.",
 };
 
 export default function TechniciansPage() {
@@ -16,7 +27,7 @@ export default function TechniciansPage() {
     <div className="pt-14 pb-8 max-w-3xl">
       <Reveal>
         <h1 className="font-[family-name:var(--font-display)] text-4xl sm:text-5xl font-[560] tracking-tight">
-          Repair &amp; service
+          Bolex Technicians
         </h1>
         <p className="mt-4 leading-relaxed text-[var(--fg-soft)]">
           A spring-wound Bolex is a mechanism, and a mechanism that has sat for forty years
@@ -60,6 +71,10 @@ export default function TechniciansPage() {
         </div>
       </Reveal>
 
+      <Reveal delay={0.05}>
+        <TechnicianMap technicians={TECHNICIANS} />
+      </Reveal>
+
       {groups.map((group, g) => (
         <Reveal key={group.region} delay={g === 0 ? 0.05 : 0}>
           <section className="mt-12" aria-labelledby={`region-${g}`}>
@@ -71,7 +86,11 @@ export default function TechniciansPage() {
             </h2>
             <ul className="mt-4 border-t border-[var(--line)]">
               {group.people.map((t) => (
-                <li key={t.name} className="border-b border-[var(--line)] py-5">
+                <li
+                key={t.name}
+                id={slug(t.name)}
+                className="scroll-mt-28 border-b border-[var(--line)] py-5"
+              >
                   <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
                     <h3 className="font-[family-name:var(--font-display)] text-xl font-[560]">
                       {t.url ? (
@@ -120,7 +139,7 @@ export default function TechniciansPage() {
                       t.evidence.kind === "site" ? "text-[var(--fg-soft)]" : "text-[var(--accent)]"
                     }`}
                   >
-                    {t.evidence.kind === "site" ? "Read from their site — " : "Unconfirmed — "}
+                    {t.evidence.kind === "site" ? "Read from their site: " : "Unconfirmed: "}
                     {t.evidence.note}
                   </p>
                 </li>
@@ -132,7 +151,7 @@ export default function TechniciansPage() {
 
       <Reveal>
         <aside className="rule mt-14 pt-4 font-[family-name:var(--font-mono)] text-xs leading-relaxed text-[var(--fg-soft)]">
-          <span className="uppercase tracking-[0.18em]">Know someone — </span>
+          <span className="uppercase tracking-[0.18em]">Know someone: </span>
           this list is short because every entry had to be found and read. If you have had
           good work done, or if an entry here is out of date, that is worth telling us.
         </aside>
