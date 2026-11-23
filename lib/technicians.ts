@@ -252,8 +252,42 @@ export const TECHNICIANS: readonly Technician[] = [
   },
   {
     /*
-     * The only entry in Europe, and the reason for looking: with Les
-     * Bosher gone the map had nothing between the eastern United
+     * His email is deliberately absent from this entry.
+     *
+     * His own page gives a phone number and then says: "Please take my
+     * E-Mail address from the terms of business down below. Spam bots
+     * would pick it up here." It is in the PDF, and copying it into a
+     * public HTML page would undo the one precaution he asked for. The
+     * phone number and the link are enough to reach him.
+     */
+    name: "Simon Wyss",
+    location: "Äsch, Basel-Landschaft, Switzerland",
+    place: { lat: 47.4686, lon: 7.5947, precision: "town", from: "Äsch (Aesch BL), the town in the address on his own site" },
+    region: "United Kingdom & Europe",
+    url: "https://www.filmmechaniksimonwyss.biz/english/",
+    phone: "+41 77 406 65 65",
+    work:
+      "Examination, repair, overhaul and maintenance of mechanical cine equipment: " +
+      "cameras, projectors, printers, viewers, splicers and optics, all makes. He also " +
+      "makes Bolex parts, among them a new mainspring for the H 16 from 1962 on and a " +
+      "metal ocular adjustment ring for the H Reflex with the 10x finder. In his own " +
+      "words, conservative action and no modifications. Note what he does not take: no " +
+      "Super 8, no Single-8, and no electronics, so the EBM and EL are out unless the " +
+      "fault is in a mechanism that works independently of the control.",
+    pricing: "Published list: general overhaul CHF 600 for an H Standard, 650 for an H Reflex, SB or SBM; CHF 25 per quarter hour",
+    evidence: {
+      kind: "site",
+      note:
+        "His own site, read November 2026, with a price list effective March 2025 and " +
+        "terms of business dated January 2026, so it is being kept up. Business hours " +
+        "Monday to Friday. He has also answered Bolex questions on cinematography.com " +
+        "for years, and was recommended by name on r/cinematography in 2026.",
+    },
+  },
+  {
+    /*
+     * The first European entry found, and the reason for looking: with
+     * Les Bosher gone the map had nothing between the eastern United
      * States and Melbourne.
      */
     name: "Sendean Cameras",

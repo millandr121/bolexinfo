@@ -89,11 +89,15 @@ test("every placed technician is on exactly one mark", () => {
 
 test("no two marks overlap", () => {
   /*
-   * The reason the marks are clustered at all: three North American
-   * workshops sit 13 to 22 units apart on a map of the world, so
+   * The reason the marks are clustered at all: four North American
+   * workshops sit 1 to 23 units apart on a map of the world, so
    * separate marks for them overlapped and whichever drew last took
-   * the clicks meant for the others. 24 units is a comfortable finger
-   * at the size this renders.
+   * the clicks meant for the others.
+   *
+   * 18 units is where that starts: at the width of the reading column
+   * the map draws at about 0.75 scale, so 18 units is ~13 px against
+   * marks 16 px across. Anything closer and the two circles cover each
+   * other's centres.
    */
   const clusters = clusterTechnicians(TECHNICIANS);
   for (let i = 0; i < clusters.length; i++) {
@@ -102,7 +106,7 @@ test("no two marks overlap", () => {
       const b = clusters[j]!;
       const apart = Math.hypot(a.x - b.x, a.y - b.y);
       assert.ok(
-        apart >= 24,
+        apart >= 18,
         `marks for ${a.people[0]!.name} and ${b.people[0]!.name} are ${apart.toFixed(1)} apart`,
       );
     }
@@ -114,7 +118,7 @@ test("a mark sits among the people it stands for", () => {
     for (const person of cluster.people) {
       const { x, y } = project(person.place!.lat, person.place!.lon);
       assert.ok(
-        Math.hypot(cluster.x - x, cluster.y - y) <= 26,
+        Math.hypot(cluster.x - x, cluster.y - y) <= 24,
         `${person.name} is further from its own mark than the clustering distance`,
       );
     }

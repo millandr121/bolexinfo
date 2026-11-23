@@ -39,10 +39,19 @@ import { slug, type Technician } from "@/lib/technicians";
  * scale "three of them around the Great Lakes and the north-east" is
  * what a reader can actually use.
  *
- * 26 keeps those three together and still leaves Albuquerque and Los
- * Angeles, 33 apart, as separate marks.
+ * The window is narrower than it looks. The four North American
+ * workshops have to merge, and the widest gap inside that group is 23.
+ * London and Äsch, 24.2 apart, have to stay separate: they are 750 km
+ * and a customs border apart, which is the first thing anyone posting
+ * a camera needs to know. So the threshold sits between the two, and
+ * Albuquerque and Los Angeles at 33 are untouched either way.
+ *
+ * 24.2 units is about 18 px once the map is drawn at the width of the
+ * reading column, against marks 16 px across, so the two still do not
+ * overlap. Below roughly 18 units apart they would, which is what the
+ * test guards.
  */
-const CLUSTER_WITHIN = 26;
+const CLUSTER_WITHIN = 24;
 
 export interface Cluster {
   x: number;

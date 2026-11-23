@@ -407,7 +407,6 @@ is not re-walked.
 
 | Lead | Where | Why not listed |
 |---|---|---|
-| **Simon Wyss** | Basel, Switzerland | Recommended by name on r/cinematography and a long-standing cinematography.com contributor. `filmmechaniksimonwyss.biz` exists but answers 403 to us, so it has never been read. **The best lead here** — needs a browser. |
 | **Stecica** | Near London | A customer described a full CLA there in 2022 and named "Jamie". `stecica.com` no longer resolves. Probably gone. |
 | **Bolex International** | Switzerland | The manufacturer, and the obvious thing to try from Europe, but its own site has no repair or service page at all, only a contact form, and does not even give a town. Nothing to quote. People did send cameras there: a 2020 thread says they were "crazy busy" and not returning calls. |
 | **Guido Wilhelm** | Italy | Listed on aciarfilm.org for Bolex SB and SBM but not RX, EBM or EL. The page is undated. |
@@ -419,6 +418,18 @@ is not re-walked.
 
 Checked and **dead**: `super16inc.com`, named in r/bolex alongside
 Du-All and Visual Products, is now a parked domain offered for sale.
+
+**Simon Wyss is now listed** (2026-11-23). He was in the table above as
+unreachable, which was wrong: his site answers 403 to `curl` and to the
+fetch tool, but it loads perfectly in the headless Chromium this
+container already has. A 403 from a plain HTTP client means the client
+was refused, not the site. Reach for the browser before writing a site
+off — several of the leads above may be the same mistake.
+
+His page gives a phone number and withholds the email on purpose:
+"Please take my E-Mail address from the terms of business down below.
+Spam bots would pick it up here." It is in the PDF. It is deliberately
+not copied into his entry on the site, for the reason he gives.
 
 ### Reddit names
 
