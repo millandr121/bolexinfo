@@ -189,14 +189,32 @@ export const TECHNICIANS: readonly Technician[] = [
     evidence: {
       kind: "site",
       note:
-        "Their own about page and shop, read November 2026. The site has no Bolex-specific " +
-        "service page, so the Bolex work is attested by customers on r/bolex rather than " +
-        "advertised; confirm scope and turnaround before shipping.",
+        "Their own about page and shop, read November 2026, which has no Bolex-specific " +
+        "service page. The Bolex work is evidenced elsewhere: aciarfilm.org lists them by " +
+        "name for the H-16 reflex bodies at $395 to $450 and separately for the EBM and " +
+        "EL, which is where the electronic work here comes from, and customers name them " +
+        "on r/bolex more often than anyone else. Confirm scope and turnaround before " +
+        "shipping.",
     },
   },
   {
+    /*
+     * The only entry here with no capability at all against its name,
+     * and it should stay that way until something changes.
+     *
+     * Their site, re-read on 23 November, does not mention Bolex
+     * anywhere: the brands it names are Arri, Aaton, Red, Moviecam,
+     * Canon, Sony and Panasonic. It advertises no conversion service
+     * and no lens service. The one Super 16 conversion on the page is
+     * a customer's testimonial about his own CP16, which is somebody
+     * else's camera and somebody else's job.
+     *
+     * The entry stays because it came recommended by someone who has
+     * dealt with them, and they plainly have a machine shop and a
+     * service facility. But a tag here is a claim, and there is
+     * nothing on their own pages to support one.
+     */
     name: "Visual Products",
-    does: ["16mm", "super16", "lenses"],
     location: "Wellington, Ohio, USA",
     place: { lat: 41.1685867, lon: -82.2175679, precision: "town", from: "OpenStreetMap / Nominatim, geocoded 2026-11-20" },
     region: "North America",
@@ -204,18 +222,19 @@ export const TECHNICIANS: readonly Technician[] = [
     phone: "+1 440-647-4999",
     email: "sales@visualproducts.com",
     work:
-      "Dealer in used and refurbished motion picture equipment, including S16 and " +
-      "16mm cameras, with an in-house machine shop and camera and lens departments. " +
-      "They refurbish what they sell and make conversions, and their staff includes " +
-      "engineers and technicians rather than sales alone. In business over thirty years.",
+      "Dealer in used and refurbished motion picture equipment, 16mm and Super 16 " +
+      "among it, with an in-house machine shop. They recondition and rebuild gear to " +
+      "factory specification, and a customer writes of having used their service " +
+      "facility for his motion picture cameras. In business over thirty years.",
     pricing: "By quote",
     evidence: {
       kind: "site",
       note:
-        "Their own about page and departments, read November 2026, plus a recommendation " +
-        "from the site owner. They publish no Bolex-specific repair page, since the service " +
-        "side is described around the equipment they sell, so ask directly whether they " +
-        "will take in a camera that did not come from them.",
+        "Their own site, read twice in November 2026, plus a recommendation from someone " +
+        "who has dealt with them. Be aware of what the site does not say: it never " +
+        "mentions Bolex, the makes it lists are Arri, Aaton, Red, Moviecam, Canon, Sony " +
+        "and Panasonic, and it advertises neither a conversion service nor lens work. " +
+        "Ask before assuming they will take in a Bolex that did not come from them.",
     },
   },
   /*

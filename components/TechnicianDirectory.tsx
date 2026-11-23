@@ -60,7 +60,11 @@ export function TechnicianDirectory({ technicians }: { technicians: readonly Tec
         </div>
       </section>
 
-      <TechnicianMap technicians={shownOnMap} />
+      <TechnicianMap
+        technicians={shownOnMap}
+        confirmed={wanted ? new Set(yes.map((t) => t.name)) : undefined}
+        wantedLabel={wanted ? CAPABILITIES.find((c) => c.id === wanted)?.label : undefined}
+      />
 
       {wanted && (
         <p className="mt-6 text-sm leading-relaxed text-[var(--fg-soft)]">
