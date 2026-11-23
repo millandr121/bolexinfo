@@ -373,6 +373,53 @@ Still wanted: a longer list. The map's emptiness is honest but it is
 also the argument for finding more people, particularly in continental
 Europe and Asia, where it currently shows nobody at all.
 
+### Les Bosher has died
+
+**He was removed from the directory on 2026-11-23.** Two independent
+sources:
+
+- A customer writing on r/cinematography in February 2026: "I sent my
+  Bolex once to Les Bosher but he tragically passed away last year."
+- A thread on cinematography.com titled "Les Bosher RIP", opened by
+  his son, giving the date as 5 December. With the Reddit post that
+  places it in 2025.
+
+The cinematography.com thread could not be read directly from here:
+the live site answers 403 to anything non-interactive, and
+web.archive.org is unreachable from this container, so the snapshot
+that exists (20260218005138) could not be fetched. Worth confirming
+from a browser when someone has one.
+
+`lesbosher.co.uk` is **still up and unchanged**, written in his own
+voice ("run by myself & Chris, my son") and advertising accessories
+for a Sony EX-3 camcorder, so it dates from around 2008 and is no
+evidence either way about the business today. His son Chris worked
+with him and the RIP thread says enquiries would be answered in the
+New Year, so the business may continue. Until that is established,
+listing it would send someone's camera and shipping money somewhere
+that may not answer.
+
+### Technician leads, not yet listed
+
+Found by searching the corpora for service talk outside North America,
+then checking each against its own site. Recorded so the same ground
+is not re-walked.
+
+| Lead | Where | Why not listed |
+|---|---|---|
+| **Simon Wyss** | Basel, Switzerland | Recommended by name on r/cinematography and a long-standing cinematography.com contributor. `filmmechaniksimonwyss.biz` exists but answers 403 to us, so it has never been read. **The best lead here** — needs a browser. |
+| **Stecica** | Near London | A customer described a full CLA there in 2022 and named "Jamie". `stecica.com` no longer resolves. Probably gone. |
+| **Bolex International** | Switzerland | The manufacturer, and the obvious thing to try from Europe, but its own site has no repair or service page at all, only a contact form, and does not even give a town. Nothing to quote. People did send cameras there: a 2020 thread says they were "crazy busy" and not returning calls. |
+| **Guido Wilhelm** | Italy | Listed on aciarfilm.org for Bolex SB and SBM but not RX, EBM or EL. The page is undated. |
+| **Yves Bornand** | Switzerland | Same undated aciarfilm.org page, for all models except EL. |
+| **Cine Repair** | Queens, New York | Named in r/bolex as having overhauled a REX-4. Not yet checked against a site. |
+| **CameraCrate** | UK | Sells refurbished H16s rather than taking repairs in. |
+| **P+S Technik** | Munich | Suggested in a thread by someone who said themselves they did not know whether it handles Bolex. |
+| **ausgeknipst.de** | Germany | A directory of analogue repair workshops, apparently maintained. Worth reading properly as a source of further names. |
+
+Checked and **dead**: `super16inc.com`, named in r/bolex alongside
+Du-All and Visual Products, is now a parked domain offered for sale.
+
 ### Reddit names
 
 Asked whether the respected Reddit contributors can be surfaced too.

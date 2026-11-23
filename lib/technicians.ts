@@ -211,28 +211,70 @@ export const TECHNICIANS: readonly Technician[] = [
       note: "Their own Bolex service page, read November 2026 — the most recently updated of these.",
     },
   },
+  /*
+   * Les Bosher was here and has been removed. He died on 5 December
+   * 2025: a customer of his says so in a February 2026 thread on
+   * r/cinematography, and cinematography.com carries a "Les Bosher
+   * RIP" thread opened by his son. His site is still up, unchanged,
+   * written in his own voice and advertising accessories for a 2008
+   * camcorder, so it is no evidence that the business is trading.
+   *
+   * His son Chris worked with him and may carry it on. Until that can
+   * be established, an entry here would send someone's camera and
+   * shipping money to an address that may not answer, which is the one
+   * harm this page exists to prevent. Removing it says nothing about
+   * anyone: omission is silent. See research/roadmap.md.
+   */
   {
     /*
-     * Spelled "Boscher" here until his own site was read, which was a
-     * misspelling of a real person's name on a page that exists to
-     * help people find him.
+     * Named by the user as worth checking and left out until their own
+     * site could be read. It turns out to be the strongest claim of
+     * any entry here: not "we repair most makes" but factory training,
+     * naming the models.
      */
-    name: "Les Bosher",
-    location: "South Wales, United Kingdom",
-    region: "United Kingdom & Europe",
-    url: "https://www.lesbosher.co.uk/",
+    name: "TCS — Technological Cinevideo Services",
+    location: "Brooklyn, New York, USA",
+    place: { lat: 40.6782, lon: -73.9442, precision: "city", from: "Brooklyn, from the address on their own site; the borough, not the street" },
+    region: "North America",
+    url: "https://tcsfilm.com/service/",
+    phone: "+1 212-247-6517",
     work:
-      "Lens and camera conversions, lens mounts, adapters, range extenders and " +
-      "lens supports, made in-house on CNC and manual machinery. Manufacturing for " +
-      "film and television since 1982, run by Les Bosher with his son Chris. This " +
-      "is fabrication rather than general CLA work.",
+      "Repairs to all H16 spring-wound Bolex cameras, naming the RX4, RX5, SB, SBM " +
+      "and the non-reflex bodies. They describe themselves as a factory-trained and " +
+      "authorised Bolex dealer and service facility.",
     evidence: {
       kind: "site",
       note:
-        "His own site, read November 2026 — a frameset from the early web, still up, " +
-        "stating 43 years as a camera engineer. It publishes no email or phone and no " +
-        "address beyond the work itself, so contact is through the site. The South Wales " +
-        "location comes from elsewhere and is not stated there.",
+        "Their own service page, read November 2026, which carries a notice for this " +
+        "year's Thanksgiving closure, so the site is being kept current. Repairs are " +
+        "booked through a form on their site rather than by email.",
+    },
+  },
+  {
+    /*
+     * The only entry in Europe, and the reason for looking: with Les
+     * Bosher gone the map had nothing between the eastern United
+     * States and Melbourne.
+     */
+    name: "Sendean Cameras",
+    location: "London, United Kingdom",
+    place: { lat: 51.5074, lon: -0.1278, precision: "city", from: "London, from the city their own site gives; not their street address" },
+    region: "United Kingdom & Europe",
+    url: "https://www.sendeancameras.co.uk/camera-repairs",
+    phone: "+44 20 7242 7733",
+    email: "hello@sendeancameras.co.uk",
+    work:
+      "A family-run repair shop that lists Bolex among the makes it works on, and 16mm " +
+      "and 8mm among the formats. Light traps, jammed winders and meter calibration are " +
+      "the film-camera jobs they name. They take work by post as well as over the counter.",
+    evidence: {
+      kind: "site",
+      note:
+        "Their own repairs page, read November 2026, which names Bolex directly, quotes " +
+        "one to three weeks, and says the shop has been going since 1926. Bolex is one " +
+        "make in a long list rather than a speciality, so say what the camera is when " +
+        "you write. A customer on r/bolex reported sending one for a complete overhaul " +
+        "and was happy with it, which is why this entry was followed up at all.",
     },
   },
 ];
