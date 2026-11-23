@@ -96,7 +96,7 @@ export function ObjectPage({
         )}
         <dl className="mt-6 flex flex-wrap gap-x-10 gap-y-3 font-[family-name:var(--font-mono)] text-sm border-y border-[var(--line)] py-4">
           {model.format && <Fact label="Format">{model.format}</Fact>}
-          <Fact label="Introduced">{model.introduced ?? "—"}</Fact>
+          <Fact label="Introduced">{model.introduced ?? "Not known"}</Fact>
           {archiveHref && (
             <Fact label="Original archive">
               <a href={archiveHref} className="text-[var(--accent)] underline underline-offset-4">
@@ -254,7 +254,7 @@ export function ObjectPage({
             archiveHref ? "mt-6" : ""
           }`}
         >
-          <span className="uppercase tracking-[0.18em]">Source — </span>
+          <span className="uppercase tracking-[0.18em]">Source: </span>
         {model.recovered ? (
           <>
             Specifications, serial ranges and photographs by{" "}
@@ -297,7 +297,7 @@ export function ObjectPage({
                       ) : (
                         <span className="text-[var(--fg)]">{s.title}</span>
                       )}
-                      {s.note ? ` — ${s.note}` : ""}
+                      {s.note ? `: ${s.note}` : ""}
                     </span>
                   </li>
                 ))}

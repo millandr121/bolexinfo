@@ -9,7 +9,7 @@ import { originalArchiveHref } from "@/lib/archive";
 export const metadata: Metadata = {
   title: "Timeline",
   description:
-    "The chronological development of Swiss-manufactured Bolex cameras and projectors — from the earliest cinema pioneers through Paillard's Bolex era.",
+    "The chronological development of Swiss-manufactured Bolex cameras and projectors, from the earliest cinema pioneers through Paillard's Bolex era.",
 };
 
 /**
@@ -46,7 +46,7 @@ export default function TimelinePage() {
             the first date arrives, so the piece starts rather than lurches. */}
         <header data-beat className="min-h-[46vh] flex flex-col justify-center py-14">
           <p className="font-[family-name:var(--font-mono)] text-[0.68rem] uppercase tracking-[0.25em] text-[var(--accent)]">
-            {first && last ? `${first} — ${last}` : "A chronology"}
+            {first && last ? `${first} to ${last}` : "A chronology"}
           </p>
           <h1 className="mt-4 font-[family-name:var(--font-display)] text-4xl sm:text-5xl font-[560] tracking-tight leading-[1.08]">
             How Bolex came to be
@@ -74,7 +74,7 @@ export default function TimelinePage() {
               &ldquo;pie-ard&rdquo;
             </span>
             <span className="text-xs">
-              — the <i>ll</i> is silent.{" "}
+              the <i>ll</i> is silent.{" "}
               <Link
                 href="/articles/07-01-26"
                 className="underline underline-offset-2 hover:text-[var(--accent)]"

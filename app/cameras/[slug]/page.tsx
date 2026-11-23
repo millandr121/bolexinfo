@@ -19,11 +19,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const model = getCameraRecord(slug);
   if (!model) return {};
   return {
-    title: `${model.name} — Cameras`,
+    title: `${model.name} · Cameras`,
     description:
       model.summary ??
       (model.specs[0]
-        ? `${model.name}: ${model.specs[0].label} — ${model.specs[0].value}`
+        ? `${model.name}: ${model.specs[0].label}, ${model.specs[0].value}`
         : `Paillard-Bolex ${model.name}.`),
   };
 }

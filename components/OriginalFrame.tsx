@@ -33,7 +33,7 @@ export function OriginalFrame({ lazy = false }: { lazy?: boolean }) {
             <span className="font-medium">BolexCollector.com as it was</span>
             <span className="hidden opacity-75 sm:inline">
               {" "}
-              — the work of Michael Tisdale, kept online while the original is down
+              the work of Michael Tisdale, kept online while the original is down
             </span>
           </p>
           <ViewToggle

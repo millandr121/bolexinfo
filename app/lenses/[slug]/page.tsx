@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const page = getRecoveredPage("lenses", slug);
   if (!page) return {};
-  return { title: `${page.title} — Lenses`, description: page.description };
+  return { title: `${page.title} · Lenses`, description: page.description };
 }
 
 export default async function LensPage({ params }: Props) {

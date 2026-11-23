@@ -9,7 +9,7 @@ import { originalArchiveHref } from "@/lib/archive";
 export const metadata: Metadata = {
   title: "Updates",
   description:
-    "What has been added to this archive and when — Michael Tisdale's own log from 2005 to 2011, continued since.",
+    "What has been added to this archive and when: Michael Tisdale's own log from 2005 to 2011, continued since.",
 };
 
 const ORIGINAL_PATH = "/archives.html";

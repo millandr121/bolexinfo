@@ -28,7 +28,7 @@ export function SupportCallout() {
         The original site kept a small invitation to buy its author a cup of coffee. This
         edition points that same gesture somewhere fitting: {SUPPORT.organization},{" "}
         {SUPPORT.purpose}. These cameras were built for people making films far from any
-        studio &mdash; this helps keep them running.
+        studio. This helps keep them running.
       </p>
 
       <a

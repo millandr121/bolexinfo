@@ -93,7 +93,7 @@ export const TECHNICIANS: readonly Technician[] = [
       note:
         "Their own services page, read November 2026. Prices in CAD; the site carries a 2021 " +
         "copyright, so confirm they are taking work. The town comes from the map pin on their " +
-        "contact page, which sits at the centre of Janetville rather than on an address — they " +
+        "contact page, which sits at the centre of Janetville rather than on an address. They " +
         "publish no street address and none is given here.",
     },
   },
@@ -108,7 +108,7 @@ export const TECHNICIANS: readonly Technician[] = [
      * under his own business name with a published address for enquiries,
      * which settles it.
      */
-    name: "Dom Jaeger — Cinetinker",
+    name: "Dom Jaeger, Cinetinker",
     location: "Melbourne, Victoria, Australia",
     place: { lat: -37.8142454, lon: 144.9631732, precision: "city", from: "OpenStreetMap / Nominatim, geocoded 2026-11-20" },
     region: "Rest of world",
@@ -117,7 +117,7 @@ export const TECHNICIANS: readonly Technician[] = [
     work:
       "Freelance cine lens and camera technician. In his own words he works on mechanical " +
       "Bolexes and avoids the electronic ones even for a mechanical fault, because they are a " +
-      "real pain to work on — which is more use before shipping than most service pages offer. " +
+      "real pain to work on, which is more use before shipping than most service pages offer. " +
       "His blog carries full strip-down write-ups of cine cameras.",
     pricing: "By quote",
     evidence: {
@@ -177,8 +177,8 @@ export const TECHNICIANS: readonly Technician[] = [
       kind: "site",
       note:
         "Their own about page and departments, read November 2026, plus a recommendation " +
-        "from the site owner. They publish no Bolex-specific repair page — the service " +
-        "side is described around the equipment they sell — so ask directly whether they " +
+        "from the site owner. They publish no Bolex-specific repair page, since the service " +
+        "side is described around the equipment they sell, so ask directly whether they " +
         "will take in a camera that did not come from them.",
     },
   },
@@ -208,7 +208,7 @@ export const TECHNICIANS: readonly Technician[] = [
     pricing: "Full CLA around USD $800 + parts",
     evidence: {
       kind: "site",
-      note: "Their own Bolex service page, read November 2026 — the most recently updated of these.",
+      note: "Their own Bolex service page, read November 2026, the most recently updated of these.",
     },
   },
   /*
@@ -232,7 +232,7 @@ export const TECHNICIANS: readonly Technician[] = [
      * any entry here: not "we repair most makes" but factory training,
      * naming the models.
      */
-    name: "TCS — Technological Cinevideo Services",
+    name: "TCS, Technological Cinevideo Services",
     location: "Brooklyn, New York, USA",
     place: { lat: 40.6782, lon: -73.9442, precision: "city", from: "Brooklyn, from the address on their own site; the borough, not the street" },
     region: "North America",

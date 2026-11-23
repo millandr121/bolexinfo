@@ -6,7 +6,7 @@ import { ARCHIVAL_PHOTOGRAPHS, creditLine } from "@/lib/archival";
 export const metadata: Metadata = {
   title: "Archive photographs",
   description:
-    "Photographs of Paillard and Bolex from public collections — the works at Sainte-Croix, a 1937 projector, a Bolex rigged to film an eclipse — with the photographer, holding institution and licence for each.",
+    "Photographs of Paillard and Bolex from public collections: the works at Sainte-Croix, a 1937 projector, a Bolex rigged to film an eclipse, each with its photographer, holding institution and licence.",
 };
 
 /**
@@ -57,7 +57,7 @@ export default function PhotographsPage() {
               {/*
                 Capped by height rather than width. Several of these are
                 portrait glass plates, and a portrait plate given the full
-                width of a desktop page is three screens tall — the reader
+                width of a desktop page is three screens tall, and the reader
                 never sees the photograph, only part of it.
               */}
               <div className="bg-[var(--bg-raised)] border border-[var(--line)] p-3 sm:p-5 flex justify-center">
@@ -189,7 +189,7 @@ export default function PhotographsPage() {
       </Reveal>
 
       <aside className="rule mt-14 pt-4 text-xs leading-relaxed text-[var(--fg-soft)] font-[family-name:var(--font-mono)]">
-        <span className="uppercase tracking-[0.18em]">Credits — </span>
+        <span className="uppercase tracking-[0.18em]">Credits: </span>
         {ARCHIVAL_PHOTOGRAPHS.map((p, i) => (
           <span key={p.slug}>
             {i > 0 && " · "}

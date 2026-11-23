@@ -115,7 +115,7 @@ export function SerialLookup({ rows, models }: { rows: SerialRow[]; models: Seri
                 </>
               )}
               {matches.length} possible {matches.length === 1 ? "model" : "models"}
-              {matches.length > 1 && " — compare the tells below to narrow it down"}
+              {matches.length > 1 && ". Compare the tells below to narrow it down"}
             </p>
 
             <ul className="mt-4 grid gap-px bg-[var(--line)] border border-[var(--line)]">
@@ -164,7 +164,7 @@ export function SerialLookup({ rows, models }: { rows: SerialRow[]; models: Seri
             <p className="font-[family-name:var(--font-display)] text-2xl font-[560]">{years.join(" or ")}</p>
             <p className="mt-2 text-sm leading-relaxed text-[var(--fg-soft)]">
               The master table dates this serial, but no individual model page published a range
-              covering it — the year is documented, the model is not.
+              covering it: the year is documented, the model is not.
             </p>
           </div>
         )}
@@ -191,7 +191,7 @@ export function SerialLookup({ rows, models }: { rows: SerialRow[]; models: Seri
 
         {!active && (
           <p className="text-sm leading-relaxed text-[var(--fg-soft)]">
-            The serial is stamped on the body — on H-series cameras, inside the film chamber or on
+            The serial is stamped on the body. On H-series cameras, inside the film chamber or on
             the base. Type the digits and the matching models appear here.
           </p>
         )}

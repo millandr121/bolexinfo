@@ -37,7 +37,7 @@ export const SUGGESTION_KINDS: readonly SuggestionKindSpec[] = [
     label: "Something here is wrong",
     blurb: "A wrong date, specification, model name or description.",
     prompt:
-      "What does the page say, and what should it say? If you know where the correct figure comes from — a manual, a catalogue, the camera in your hands — say so, as that is what lets it be checked.",
+      "What does the page say, and what should it say? If you know where the correct figure comes from, a manual, a catalogue, the camera in your hands, say so, as that is what lets it be checked.",
   },
   {
     id: "missing",
@@ -51,7 +51,7 @@ export const SUGGESTION_KINDS: readonly SuggestionKindSpec[] = [
     label: "I have photographs or documents",
     blurb: "Photographs, manuals, brochures, advertising, memorabilia.",
     prompt:
-      "What do you have? Attach anything you like to the email this opens. Tell us how you would like to be credited — this site names its sources.",
+      "What do you have? Attach anything you like to the email this opens. Tell us how you would like to be credited, because this site names its sources.",
   },
   {
     id: "knowledge",
@@ -81,7 +81,7 @@ export interface SuggestionDraft {
 /** What lands in the subject line, so a full inbox stays sortable. */
 export function suggestionSubject(draft: SuggestionDraft): string {
   const spec = kindSpec(draft.kind);
-  const where = draft.page ? ` — ${draft.page}` : "";
+  const where = draft.page ? `: ${draft.page}` : "";
   return `Bolex Collector: ${spec.label.toLowerCase()}${where}`;
 }
 

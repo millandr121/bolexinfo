@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const model = record(slug);
   if (!model) return {};
   return {
-    title: `${model.name} — Projectors`,
+    title: `${model.name} · Projectors`,
     description: model.summary ?? `Paillard-Bolex ${model.name} projector.`,
   };
 }

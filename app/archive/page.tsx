@@ -67,7 +67,7 @@ export default function ArchivePage() {
         </h1>
         <p className="mt-4 max-w-2xl text-[var(--fg-soft)] leading-relaxed">
           This project treats the original BolexCollector.com as a historical document. Below
-          is the public ledger of what has been preserved — recovered from the Internet
+          is the public ledger of what has been preserved, recovered from the Internet
           Archive, stored byte-for-byte, and verified against a checksum manifest.
         </p>
         <dl className="mt-8 flex flex-wrap gap-x-12 gap-y-4 font-[family-name:var(--font-mono)] text-sm border-y border-[var(--line)] py-4">
@@ -100,8 +100,8 @@ export default function ArchivePage() {
                 Revisit the original site
               </span>
               <span className="mt-2 block text-sm leading-relaxed text-[var(--fg-soft)]">
-                Every page of BolexCollector.com as it was published — its own layout,
-                typefaces and photographs — browsable from the front page.
+                Every page of BolexCollector.com as it was published, with its own layout,
+                typefaces and photographs, browsable from the front page.
               </span>
             </span>
             <span aria-hidden="true" className="shrink-0 text-2xl text-[var(--accent)]">
@@ -146,7 +146,7 @@ export default function ArchivePage() {
             <p className="mt-3 text-sm leading-relaxed text-[var(--fg-soft)]">
               Every page in the verified URL inventory has been recovered. Some images and
               outbound links referenced by those pages were never archived and cannot be
-              retrieved from any source — those are recorded in the pipeline&rsquo;s
+              retrieved from any source. Those are recorded in the pipeline&rsquo;s
               verification report rather than hidden.
             </p>
           ) : (
@@ -166,7 +166,7 @@ export default function ArchivePage() {
       </Reveal>
 
       <aside className="rule mt-14 pt-4 text-xs leading-relaxed text-[var(--fg-soft)] font-[family-name:var(--font-mono)] max-w-2xl">
-        <span className="uppercase tracking-[0.18em]">Provenance — </span>
+        <span className="uppercase tracking-[0.18em]">Provenance: </span>
         Counts are read directly from <span className="text-[var(--fg)]">archive/meta/manifest.json</span>,
         which records the original URL, capture timestamp, MIME type, byte size and SHA-1 of
         every stored asset. Integrity is re-verified on every commit.

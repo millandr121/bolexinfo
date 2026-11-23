@@ -15,7 +15,7 @@
 export function SourceNote({ children }: { children: React.ReactNode }) {
   return (
     <aside className="rule mt-12 pt-4 text-xs leading-relaxed text-[var(--fg-soft)] font-[family-name:var(--font-mono)] max-w-2xl">
-      <span className="uppercase tracking-[0.18em]">Source — </span>
+      <span className="uppercase tracking-[0.18em]">Source: </span>
       {children}
     </aside>
   );

@@ -9,7 +9,7 @@ import { getGlossary, glossaryCount, type GlossaryPart } from "@/lib/glossary";
 export const metadata: Metadata = {
   title: "Glossary",
   description:
-    "105 Bolex and filmmaking terms defined, recovered from the original BolexCollector.com — from AMBOL and anamorphic lenses to zoom viewfinders.",
+    "105 Bolex and filmmaking terms defined, from AMBOL and anamorphic lenses to zoom viewfinders.",
 };
 
 /**

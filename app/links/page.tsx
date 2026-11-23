@@ -9,7 +9,7 @@ import { COMMUNITY_LINKS } from "@/lib/community";
 export const metadata: Metadata = {
   title: "Links",
   description:
-    "The directory of Bolex and filmmaking resources recommended by BolexCollector.com — manufacturers, repair specialists, film stock, and cinema history.",
+    "The directory of Bolex and filmmaking resources recommended by BolexCollector.com: manufacturers, repair specialists, film stock, and cinema history.",
 };
 
 const ORIGINAL_PATH = "/links.html";
@@ -36,7 +36,7 @@ export default function LinksPage() {
          */}
         <p className="mt-4 font-[family-name:var(--font-mono)] text-xs leading-relaxed text-[var(--fg-soft)]">
           {total} links in {categories.length} sections, as listed on the original site. External
-          sites are beyond this archive&rsquo;s keeping — some may have moved or closed since.
+          sites are beyond this archive&rsquo;s keeping, so some may have moved or closed since.
         </p>
       </Reveal>
 
@@ -53,7 +53,7 @@ export default function LinksPage() {
             id="community"
             className="font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.25em] text-[var(--accent)]"
           >
-            Where people talk — added by this archive
+            Where people talk, added by this archive
           </h2>
           <ul className="mt-4 border-t border-[var(--line)]">
             {COMMUNITY_LINKS.map((link) => (

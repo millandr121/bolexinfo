@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const page = getRecoveredPage("ephemera", slug);
   if (!page) return {};
-  return { title: `${page.title} — Ephemera`, description: page.description };
+  return { title: `${page.title} · Ephemera`, description: page.description };
 }
 
 export default async function EphemeraItemPage({ params }: Props) {

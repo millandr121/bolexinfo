@@ -19,7 +19,7 @@ export async function generateMetadata({
   const model = getCameraRecord(slug);
   const name = model?.name ?? slug;
   return {
-    title: `${name} — controls`,
+    title: `${name} · controls`,
     description: `Every named control and part of the Paillard-Bolex ${name}, numbered as the original instructions numbered them.`,
   };
 }
