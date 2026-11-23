@@ -436,6 +436,51 @@ still recommended elsewhere on the web:
 - Jaakko Kurhi of JK Camera; Jesse Chambless of Chambless Cine
   Equipment; Otello Diotallevi of Bolex International.
 
+### Dr Bolex, removed
+
+Two independent accounts, neither hearsay:
+
+- On r/16mm, February 2023, someone answering a request for a Super
+  16 conversion says flatly that he is a scammer and names Abdul
+  Setoua instead.
+- In the Bolex Camera Users group, a customer sets out an EBM Omni 16
+  conversion paid for in March 2022 and still undelivered a year
+  later, with screenshots of the paid invoice and the email chain,
+  and a run of missed dates. He says it was the fourth camera he had
+  sent.
+
+Neither says the work is bad once it arrives, and both are around
+three years old, so this is not a finding about his craft. But the
+page exists so that someone can post a camera and several hundred
+pounds to a stranger, and that is the thing in question. The bar is
+whether this project will stand behind the entry. Removed, silently.
+
+### Added from the group, verified elsewhere
+
+- **Abdul Setoua, Cine Repair, Queens.** No site. Listed anyway,
+  because `cinerepair@aol.com` is published openly on r/16mm and
+  r/cinematography by three different people across 2021, 2022 and
+  2023, each recommending him, and the group's list names him for the
+  EBM and EL. With Du-All he is one of only two names anywhere for the
+  electronic bodies.
+- **Guido Wilhelm's email** is now published. He gives it out himself
+  for repair enquiries on the open cinematography.com forum as well
+  as in the group, which is advertising rather than an address taken
+  from behind a login.
+
+### Robert M. Ditto, not listed yet
+
+A real and active Bolex technician: fourteen years of public
+technical posting on cinematography.com signing himself a Bolex
+repair tech, publicly advertising an "Economical Bolex Repair"
+service there in 2011, selling fully serviced cameras, and an admin
+of the users' group. The obstacles are practical rather than
+doubts. **No location of any kind could be found**, which a
+map-first directory needs, and there is no current public page: the
+2011 advertisement is fourteen years old and his email appears only
+in the closed group. Worth asking him directly where he is and
+whether he wants listing.
+
 ### Sendean Cameras, listed and then removed the same day
 
 Listed on the strength of a 2023 r/bolex post reporting a complete

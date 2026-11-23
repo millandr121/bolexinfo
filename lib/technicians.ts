@@ -218,20 +218,49 @@ export const TECHNICIANS: readonly Technician[] = [
         "will take in a camera that did not come from them.",
     },
   },
+  /*
+   * Dr Bolex was listed here and is removed on 23 November.
+   *
+   * Two independent accounts, neither of them hearsay. On r/16mm in
+   * February 2023 someone answering a request for a Super 16
+   * conversion says flatly that he is a scammer and names someone
+   * else. In the Bolex Camera Users group a customer sets out, with
+   * screenshots of the paid invoice and the emails, an EBM Omni 16
+   * conversion paid for in March 2022 and still undelivered a year
+   * later, after a run of missed dates.
+   *
+   * Neither says the work is bad when it arrives, and the complaints
+   * are three years old. But this page exists so that someone can
+   * post a camera and a few hundred pounds to a stranger, and that is
+   * exactly what is in question. Standing behind the entry is the
+   * bar, and it is not met. Omission is silent: nothing about this
+   * appears on the site. See research/roadmap.md.
+   */
   {
-    name: "Dr Bolex",
-    does: ["16mm", "super16"],
-    location: "Tijeras, New Mexico, USA",
-    place: { lat: 35.0796355, lon: -106.3879441, precision: "town", from: "OpenStreetMap / Nominatim, geocoded 2026-11-20" },
+    /*
+     * No website, and listed anyway. The evidence is better than a
+     * website would be: the same address given out by three different
+     * people on two subreddits across 2021, 2022 and 2023, each
+     * recommending him for the work, one of them answering a request
+     * for a Super 16 conversion with little else to say.
+     */
+    name: "Abdul Setoua, Cine Repair",
+    location: "Queens, New York, USA",
+    place: { lat: 40.7282, lon: -73.7949, precision: "city", from: "Queens, the borough named by the people who send him cameras" },
     region: "North America",
-    url: "https://www.drbolex.com/cla-1",
-    phone: "+1 214-870-5608",
-    email: "spline1@sbcglobal.net",
-    work: "H16 repair and CLA, including non-reflex bodies; Super 16 and Omni 16 format conversion.",
-    pricing: "By quote",
+    does: ["16mm", "super16", "electronic"],
+    email: "cinerepair@aol.com",
+    work:
+      "CLA, overhaul and Super 16 conversion. One of only two names anywhere in this " +
+      "directory for the electronic bodies, the EBM and the EL, which most of the trade " +
+      "will not touch.",
     evidence: {
-      kind: "site",
-      note: "Their own CLA page, read November 2026; site carries a 2024 copyright.",
+      kind: "listed",
+      note:
+        "No site of his own. The address is published openly on r/16mm and r/cinematography " +
+        "by customers recommending him, most recently in 2023, and he is named for the EBM " +
+        "and EL on the Bolex users' own repair list. Nothing here was read from a page he " +
+        "controls, so ask what he is taking in before you post anything.",
     },
   },
   {
@@ -337,9 +366,10 @@ export const TECHNICIANS: readonly Technician[] = [
      * and more besides, and he answers there himself about what he
      * takes in. Several people call him the best in Europe.
      *
-     * His email circulates in that group. It is not reproduced here:
-     * the group is closed, and an address shared inside it is not the
-     * same as one published on a shop window. Ask him first.
+     * His email is given here because he hands it out himself for
+     * repair enquiries, on the open cinematography.com forum as well
+     * as in the group. That is a man advertising, not an address
+     * taken from behind a login.
      */
     name: "Guido Wilhelm",
     location: "Milan, Italy",
@@ -348,6 +378,7 @@ export const TECHNICIANS: readonly Technician[] = [
     does: ["16mm", "super16", "double8"],
     doesNot: ["electronic"],
     url: "https://www.aciarfilm.org/En/Technical_Assistance.php",
+    email: "wtv.milan@gmail.com",
     work:
       "Overhaul, repair and Super 16 conversion. In his own words he also takes the H8, " +
       "the small box cameras and the K2, so he is one of the few here who is not 16mm " +
@@ -360,8 +391,8 @@ export const TECHNICIANS: readonly Technician[] = [
         "readers to report centres that have closed. That listing gives his scope as the SB " +
         "and SBM and not the RX, EBM or EL, while customers writing in 2026 describe a " +
         "serviced REX-5, so the range may be wider than the directory says. He publishes no " +
-        "site: the directory takes contact requests, and he is reachable in the Bolex Camera " +
-        "Users group on Facebook. Worth confirming with him directly.",
+        "site: he gives this address out for repair enquiries on cinematography.com and in " +
+        "the Bolex Camera Users group, and the directory also takes contact requests.",
     },
   },
   /*

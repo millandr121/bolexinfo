@@ -35,43 +35,26 @@ export default function TechniciansPage() {
         </p>
 
         {/*
-         * The caveat is the most important thing on the page. The small-gauge
-         * trade is thin, businesses go quiet without taking their sites down,
-         * and a stale listing here costs somebody a camera and a shipping bill
-         * — so the page says plainly what each entry rests on rather than
-         * presenting all of them with the same confidence.
+         * The caveat, in one line.
+         *
+         * It was a bordered box of five lines, which is a lot of screen to
+         * spend saying "ring first", and a warning that large is one a
+         * reader learns to skip. The substance is unchanged: every entry
+         * says underneath it what it rests on, which is where someone
+         * about to post a camera will actually look.
          */}
-        <div className="mt-8 border-l-2 border-[var(--accent)] bg-[var(--bg-raised)] px-5 py-4">
-          {/*
-            Written from the counts rather than around them. The old copy
-            said "{checked} of these {total} were read from the business's
-            own site; the rest come from another directory" — which, once
-            the one unconfirmed entry was removed, read "6 of these 6 …
-            the rest come from another directory", describing a remainder
-            that does not exist.
-          */}
-          <p className="text-sm leading-relaxed">
-            <strong className="font-[560]">Check before you ship.</strong>{" "}
-            {checked === TECHNICIANS.length ? (
-              <>
-                Every entry here was read from the business&rsquo;s own site.
-              </>
-            ) : (
-              <>
-                {checked} of these {TECHNICIANS.length} were read from the
-                business&rsquo;s own site. The{" "}
-                {TECHNICIANS.length - checked === 1
-                  ? "other is named by a directory"
-                  : `other ${TECHNICIANS.length - checked} are named by directories`}{" "}
-                and by people who have used them, and could not be confirmed here from a
-                site of their own.
-              </>
-            )}{" "}
-            That is not the same as a guarantee of their work: the small-gauge trade is
-            thin, businesses go quiet without taking their sites down, and prices and
-            turnarounds move. Write first and ask whether they are taking work.
-          </p>
-        </div>
+        <p className="mt-6 border-l-2 border-[var(--accent)] pl-4 text-sm leading-relaxed text-[var(--fg-soft)]">
+          <strong className="font-[560] text-[var(--fg)]">Write before you ship.</strong> The
+          small-gauge trade is thin, prices and turnarounds move, and businesses go quiet
+          without taking their sites down. Each entry says below it what it rests on
+          {checked < TECHNICIANS.length && (
+            <>
+              , and {TECHNICIANS.length - checked} of these {TECHNICIANS.length} have no site
+              of their own
+            </>
+          )}
+          .
+        </p>
       </Reveal>
 
       <TechnicianDirectory technicians={TECHNICIANS} />
