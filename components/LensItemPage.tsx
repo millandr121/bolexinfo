@@ -88,7 +88,9 @@ export function LensItemPage({ item }: { item: LensItem }) {
             <p className="text-lg leading-relaxed">
               Offered by the American Bolex Company for {item.catalogue.offeredFor} in its{" "}
               {item.catalogue.year} catalogue, listed there as &ldquo;
-              {item.catalogue.asPrinted}&rdquo;. The original site recorded the lens without
+              {item.catalogue.asPrinted}&rdquo;
+              {item.catalogue.price ? ` at ${item.catalogue.price}` : ""}. The original site
+              recorded the lens without
               describing it, so what is known of it is what the catalogue says.{" "}
               <Link
                 href={`/suggest?page=${encodeURIComponent(`/lenses/${item.slug}`)}`}
@@ -151,13 +153,18 @@ export function LensItemPage({ item }: { item: LensItem }) {
                 id="catalogue"
                 className="font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.16em] text-[var(--accent)]"
               >
-                In the {item.catalogue.year} catalogue
+                In the {item.catalogue.month ? `${item.catalogue.month} ` : ""}
+                {item.catalogue.year} catalogue
               </h2>
               <p className="mt-3 font-[family-name:var(--font-mono)] text-[0.72rem] leading-relaxed text-[var(--fg-soft)]">
-                Offered for {item.catalogue.offeredFor}, as &ldquo;{item.catalogue.asPrinted}
-                &rdquo;.{item.catalogue.note ? ` ${item.catalogue.note}` : ""}{" "}
+                {item.catalogue.price ? (
+                  <span className="text-[var(--fg)]">{item.catalogue.price}</span>
+                ) : null}{" "}
+                Listed as &ldquo;{item.catalogue.asPrinted}&rdquo;
+                {item.catalogue.price ? "" : `, offered for ${item.catalogue.offeredFor}`}.
+                {item.catalogue.note ? ` ${item.catalogue.note}` : ""}{" "}
                 <a
-                  href="https://www.pacificrimcamera.com/rl/02027/02027.pdf"
+                  href={`https://www.pacificrimcamera.com/rl/${item.catalogue.doc}/${item.catalogue.doc}.pdf`}
                   target="_blank"
                   rel="noreferrer nofollow"
                   className="text-[var(--accent)] underline underline-offset-4"

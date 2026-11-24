@@ -99,6 +99,38 @@ export function AccessoryItemPage({ item }: { item: AccessoryItem }) {
           )}
 
           {/*
+            The catalogues, which reach back further than the dealer price
+            lists do. The earliest is February 1952, and for most of these
+            objects it is the only price anyone has recorded.
+          */}
+          {item.catalogue && (
+            <section className="rule mt-10 pt-4" aria-labelledby="catalogue">
+              <h2
+                id="catalogue"
+                className="font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.16em] text-[var(--accent)]"
+              >
+                In the {item.catalogue.month ? `${item.catalogue.month} ` : ""}
+                {item.catalogue.year} Bolex retail price list
+              </h2>
+              <p className="mt-3 font-[family-name:var(--font-mono)] text-[0.72rem] leading-relaxed text-[var(--fg-soft)]">
+                {item.catalogue.price && (
+                  <span className="text-[var(--fg)]">{item.catalogue.price}</span>
+                )}{" "}
+                · listed as &ldquo;{item.catalogue.asPrinted}&rdquo;
+                {item.catalogue.note ? `. ${item.catalogue.note}` : "."}{" "}
+                <a
+                  href={`https://www.pacificrimcamera.com/rl/${item.catalogue.doc}/${item.catalogue.doc}.pdf`}
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                  className="text-[var(--accent)] underline underline-offset-4"
+                >
+                  the catalogue ↗
+                </a>
+              </p>
+            </section>
+          )}
+
+          {/*
             Paillard's own dealer price lists, which are the only hard
             dates on most of these pages and the only place the archive
             has ever had a code for an accessory. Where a thing appears in

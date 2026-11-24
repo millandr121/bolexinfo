@@ -32,6 +32,16 @@ export interface AccessoryItem {
   /** Appearances in Paillard's own dated dealer price lists. */
   listings?: Array<{ price: string; date: string; doc: string; asPrinted: string }>;
   listingNote?: string;
+  /** Priced in a dated catalogue. Reaches back further than the price lists. */
+  catalogue?: {
+    year: number;
+    month?: string;
+    doc: string;
+    date?: string;
+    asPrinted: string;
+    price?: string;
+    note?: string;
+  };
   from: { page: string; heading: string | null; originalPath: string };
 }
 

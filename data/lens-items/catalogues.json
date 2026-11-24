@@ -25,59 +25,152 @@
     "f/2.7, 2\" f/1.5 and 2\" f/3.5 are not in it, and neither is the 4\" or",
     "6\" under 8mm, so they get nothing.",
     "",
-    "Re-run scripts/extract-lens-items.mjs after editing."
+    "Re-run scripts/extract-lens-items.mjs after editing.",
+    "",
+    "Entries carry the document id: 02027 is the 1946 catalogue, 01775 the February 1952 one, whose pages 21 and 22 are a full Bolex retail price list and which does carry prices."
   ],
-
   "cine-velostigmat-1-f-1-5": {
     "year": 1946,
     "offeredFor": "the Bolex H-16",
-    "asPrinted": "1\" f/1.5"
+    "asPrinted": "1\" f/1.5",
+    "doc": "02027"
   },
   "cine-velostigmat-17mm-f-2-7": {
     "year": 1946,
     "offeredFor": "the Bolex H-16",
-    "asPrinted": "17 mm f/2.7 (wide-angle) in focusing mount"
+    "asPrinted": "17 mm f/2.7 (wide-angle) in focusing mount",
+    "doc": "02027"
   },
   "cine-velostigmat-17mm-f-2-7-fixed-focus": {
     "year": 1946,
     "offeredFor": "the Bolex H-16",
-    "asPrinted": "17 mm f/2.7 (wide-angle) fixed focus"
+    "asPrinted": "17 mm f/2.7 (wide-angle) fixed focus",
+    "doc": "02027"
   },
   "cine-velostigmat-3-f-4": {
     "year": 1946,
     "offeredFor": "the Bolex H-16",
-    "asPrinted": "3\" f/4 (telephoto) in focusing mount"
+    "asPrinted": "3\" f/4 (telephoto) in focusing mount",
+    "doc": "02027"
   },
   "cine-velostigmat-4-f-4-5-1940": {
     "year": 1946,
     "offeredFor": "the Bolex H-16",
-    "asPrinted": "4\" f/4.5 (telephoto) in focusing mount"
+    "asPrinted": "4\" f/4.5 (telephoto) in focusing mount",
+    "doc": "02027"
   },
   "cine-velostigmat-6-f-4-5-1940": {
     "year": 1946,
     "offeredFor": "the Bolex H-16",
-    "asPrinted": "6\" f/4.5 (telephoto) in focusing mount"
+    "asPrinted": "6\" f/4.5 (telephoto) in focusing mount",
+    "doc": "02027"
   },
-
   "cine-velostigmat-12-5mm-f-2-5-fixed-focus": {
     "year": 1946,
     "offeredFor": "the Bolex H-8 and the L-8",
-    "asPrinted": "12½ mm f/2.5 fixed focus"
+    "asPrinted": "12½ mm f/2.5 fixed focus",
+    "doc": "02027"
   },
   "cine-velostigmat-1-2-f-1-9": {
     "year": 1946,
     "offeredFor": "the Bolex H-8 and the L-8",
     "asPrinted": "12½ mm f/1.9 in focusing mount",
-    "note": "Michael lists it as ½\", the catalogue as 12½ mm. Wollensak marked the same lens both ways; half an inch is 12.7 mm."
+    "note": "Michael lists it as ½\", the catalogue as 12½ mm. Wollensak marked the same lens both ways; half an inch is 12.7 mm.",
+    "doc": "02027"
   },
   "cine-velostigmat-1-f-2-7": {
     "year": 1946,
     "offeredFor": "the Bolex H-8 and the L-8",
-    "asPrinted": "1\" f/2.7 (telephoto) in focusing mount"
+    "asPrinted": "1\" f/2.7 (telephoto) in focusing mount",
+    "doc": "02027"
   },
   "cine-velostigmat-11-2-f-3-5": {
     "year": 1946,
     "offeredFor": "the Bolex H-8 and the L-8",
-    "asPrinted": "1½\" f/3.5 (telephoto) in focusing mount"
+    "asPrinted": "1½\" f/3.5 (telephoto) in focusing mount",
+    "doc": "02027"
+  },
+  "yveri": {
+    "year": 1952,
+    "doc": "01775",
+    "offeredFor": "Bolex cameras",
+    "asPrinted": "Yvar 16mm F:2.8, \"C\" mount",
+    "price": "$76.50",
+    "month": "February"
+  },
+  "switar-25mm-f-1-4": {
+    "year": 1952,
+    "doc": "01775",
+    "offeredFor": "Bolex cameras",
+    "asPrinted": "Switar 25mm (1\") F:1.4, for Bolex only",
+    "price": "$178.50",
+    "month": "February",
+    "note": "The archive carries two entries for this designation, this one and the later Visifocus SWITA. The list does not distinguish them, and Michael says the lens was first made in the 1940s and stayed in production, so the price is attached to the earlier entry."
+  },
+  "switar-25mm-f-1-5-visifocus": {
+    "year": 1952,
+    "doc": "01775",
+    "offeredFor": "Bolex cameras",
+    "asPrinted": "Switar 25mm (1\") F:1.5, for Bolex only",
+    "price": "$122.00",
+    "month": "February"
+  },
+  "hapiz": {
+    "year": 1952,
+    "doc": "01775",
+    "offeredFor": "Bolex cameras",
+    "asPrinted": "Pizar 26mm (1\") F:1.9, \"C\" mount",
+    "price": "$94.25",
+    "month": "February"
+  },
+  "yvora": {
+    "year": 1952,
+    "doc": "01775",
+    "offeredFor": "Bolex cameras",
+    "asPrinted": "Yvar 75mm (3\") F:2.8, \"C\" mount",
+    "price": "$87.50",
+    "month": "February"
+  },
+  "yvent": {
+    "year": 1952,
+    "doc": "01775",
+    "offeredFor": "Bolex cameras",
+    "asPrinted": "Yvar 100mm (4\") F:3.3, \"C\" mount",
+    "price": "$106.00",
+    "month": "February"
+  },
+  "yvong": {
+    "year": 1952,
+    "doc": "01775",
+    "offeredFor": "Bolex cameras",
+    "asPrinted": "Yvar 150mm (6\") F:4.0, \"C\" mount",
+    "price": "$145.75",
+    "month": "February"
+  },
+  "switar-12-5-f-1-5": {
+    "year": 1952,
+    "doc": "01775",
+    "offeredFor": "Bolex cameras",
+    "asPrinted": "Switar 12.5mm (½\") F:1.5, Standard A.S.A. mount",
+    "price": "$120.50",
+    "month": "February"
+  },
+  "yvar-25mm-f-2-5": {
+    "year": 1952,
+    "doc": "01775",
+    "offeredFor": "Bolex cameras",
+    "asPrinted": "Yvar 25mm (1\") F:2.5, Standard A.S.A. mount",
+    "price": "$55.00",
+    "month": "February",
+    "note": "The archive also has a Visifocus version of this lens. The list names no Visifocus, so the price is attached to the plain entry."
+  },
+  "yvar-36mm-f-2-8": {
+    "year": 1952,
+    "doc": "01775",
+    "offeredFor": "Bolex cameras",
+    "asPrinted": "Yvar 36mm (1½\") F:2.8, Standard A.S.A. mount",
+    "price": "$58.95",
+    "month": "February",
+    "note": "The archive also has a Visifocus version of this lens. The list names no Visifocus, so the price is attached to the plain entry."
   }
 }

@@ -36,10 +36,27 @@ Both image-only scans were rendered at 300 dpi and run through
 tesseract, and the pages that mattered were then read by eye.
 
 **The Feb 1952 catalogue carries a full Bolex retail price list** on its
-pages 21 and 22: camera and lens combinations, Kern-Paillard lens
-prices in both gauges, cases, accessories, projectors, the Titler, and
-the cost of having a filter slot or an Octameter fitted. None of it is
-published yet.
+pages 21 and 22, and it is now published: 10 lenses and 15 accessories
+carry a February 1952 price, in `data/lens-items/catalogues.json` and
+`data/accessory-items/catalogues.json`. Both pages were OCR'd and then
+read by eye, because the prices are the whole point and OCR gets digits
+wrong.
+
+It corroborates Michael in three places. He put the L-8 cable release
+at $4.90 and the list says $4.90. He dated the filter slot
+modification from "a 1952 catalog", and this is that catalogue. He
+could date the Titler no further back than a September 1950 price
+list, and here it is again. It also corrects him once: he has the
+Trifilm splicer at $22.71 in 1948, and by February 1952 it had come
+down to $14.95.
+
+Two prices did not move at all between 1952 and 1965: the eye-level
+focus at $37.75 and the prismatic focuser at $19.75, thirteen years
+apart.
+
+Still unpublished from these two pages: the camera-and-lens
+combinations (an H-16 De luxe with three lenses and an H-1 case was
+$705.50), the L-8 outfits, and the projectors.
 
 **The 1946 catalogue, page 29, is the Wollensak page.** It carries the
 American Bolex Company's own statement of why it chose Wollensak, and

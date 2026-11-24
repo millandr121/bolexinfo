@@ -66,6 +66,11 @@ const REVIEW = readReview(path.join(OUT_DIR, "year-review.json"));
  */
 const LISTINGS = readReview(path.join(OUT_DIR, "listings.json"));
 const listingsUsed = new Set();
+
+/** Prices from a dated catalogue, which reach back further than the
+ *  dealer price lists do: the earliest here is February 1952. */
+const CATALOGUES = readReview(path.join(OUT_DIR, "catalogues.json"));
+const cataloguesUsed = new Set();
 const used = new Set();
 const seen = new Map();
 
@@ -94,6 +99,8 @@ const items = raw.map((entry) => {
 
   const found = LISTINGS[slug];
   if (found) listingsUsed.add(slug);
+  const catalogued = CATALOGUES[slug];
+  if (catalogued) cataloguesUsed.add(slug);
 
   return {
     slug,
@@ -107,6 +114,7 @@ const items = raw.map((entry) => {
     images: entry.images,
     sources: entry.sources,
     ...(found?.listings ? { listings: found.listings } : {}),
+    ...(catalogued ? { catalogue: catalogued } : {}),
     ...(found?.note ? { listingNote: found.note } : {}),
     from: {
       page: entry.page,
@@ -124,5 +132,8 @@ items.sort(
 fs.writeFileSync(OUT, `${JSON.stringify({ items }, null, 2)}\n`);
 report(perPage, items, REVIEW, used, "data/accessory-items/items.json");
 console.log(`  in a dated price list: ${items.filter((i) => i.listings).length}`);
+console.log(`  in a dated catalogue:  ${items.filter((i) => i.catalogue).length}`);
 const stray = Object.keys(LISTINGS).filter((slug) => !listingsUsed.has(slug));
 if (stray.length) console.log(`\n  STRAY listings, no such item: ${stray.join(", ")}`);
+const strayCat = Object.keys(CATALOGUES).filter((slug) => !cataloguesUsed.has(slug));
+if (strayCat.length) console.log(`  STRAY catalogue entries, no such item: ${strayCat.join(", ")}`);

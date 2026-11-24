@@ -1,0 +1,147 @@
+{
+  "_": [
+    "Accessories priced in the February 1952 Bolex retail price list.",
+    "",
+    "Source: Bolex Catalog, Feb 1952 (Pacific Rim rl/01775), pages 21 and",
+    "22. An image-only scan, OCR'd and then read by eye, because the",
+    "prices are the whole point and OCR gets digits wrong.",
+    "",
+    "This is the earliest pricing the archive has, and it corroborates",
+    "Michael in three places: he put the L-8 cable release at $4.90 and the",
+    "list says $4.90; he dated the filter slot modification from a 1952",
+    "catalogue, and this is that catalogue; he could date the Titler only",
+    "as far back as a September 1950 price list, and here it is again.",
+    "",
+    "Re-run scripts/extract-accessory-items.mjs after editing."
+  ],
+  "trifocal-viewfinder": {
+    "year": 1952,
+    "month": "February",
+    "doc": "01775",
+    "date": "February 1952",
+    "asPrinted": "Trifocal Viewfinder",
+    "price": "$29.50"
+  },
+  "eye-level-focus": {
+    "year": 1952,
+    "month": "February",
+    "doc": "01775",
+    "date": "February 1952",
+    "asPrinted": "Eye-level focus",
+    "price": "$37.75",
+    "note": "Still $37.75 in the 1965 dealer list, thirteen years later, where it is code REFTU."
+  },
+  "prismatic-focuser": {
+    "year": 1952,
+    "month": "February",
+    "doc": "01775",
+    "date": "February 1952",
+    "asPrinted": "Prismatic Focuser with Case",
+    "price": "$19.75",
+    "note": "Still $19.75 in the 1965 dealer list, where it is code CADIL and called the new type."
+  },
+  "bolex-angle-viewer": {
+    "year": 1952,
+    "month": "February",
+    "doc": "01775",
+    "date": "February 1952",
+    "asPrinted": "Angle Viewer",
+    "price": "$7.50"
+  },
+  "h-cable-release": {
+    "year": 1952,
+    "month": "February",
+    "doc": "01775",
+    "date": "February 1952",
+    "asPrinted": "Cable Release — 18in",
+    "price": "$6.50",
+    "note": "The list prices both lengths Michael describes: 18in at $6.50 and 40in at $7.50."
+  },
+  "trigger-handle": {
+    "year": 1952,
+    "month": "February",
+    "doc": "01775",
+    "date": "February 1952",
+    "asPrinted": "Trigger Handle",
+    "price": "$13.75"
+  },
+  "l-8-cable-release": {
+    "year": 1952,
+    "month": "February",
+    "doc": "01775",
+    "date": "February 1952",
+    "asPrinted": "Cable Release — 18in, for the L-8",
+    "price": "$4.90",
+    "note": "Exactly the price Michael gives for it, from his own reading of a late 1940s source."
+  },
+  "l-8-ring-adaptor": {
+    "year": 1952,
+    "month": "February",
+    "doc": "01775",
+    "date": "February 1952",
+    "asPrinted": "L-8 Ring Adapter BC 1469",
+    "price": "$1.50"
+  },
+  "parallax-corrector-prisms": {
+    "year": 1952,
+    "month": "February",
+    "doc": "01775",
+    "date": "February 1952",
+    "asPrinted": "Parallax Corrector Lenses",
+    "price": "$10.45"
+  },
+  "paillard-trifilm-splicer": {
+    "year": 1952,
+    "month": "February",
+    "doc": "01775",
+    "date": "February 1952",
+    "asPrinted": "Paillard Trifilm Splicer",
+    "price": "$14.95",
+    "note": "Michael records it at $22.71 in 1948. By February 1952 it is $14.95, so the price came down."
+  },
+  "bolex-titler": {
+    "year": 1952,
+    "month": "February",
+    "doc": "01775",
+    "date": "February 1952",
+    "asPrinted": "Titler complete",
+    "price": "$295.50",
+    "note": "The same list prices the basic equipment alone at $154.50 and an accessory kit at $141.00."
+  },
+  "bolex-filterslot-modification": {
+    "year": 1952,
+    "month": "February",
+    "doc": "01775",
+    "date": "February 1952",
+    "asPrinted": "Filter Slot Installation with 6 Filter holders in leather case",
+    "price": "$30.00",
+    "note": "This is the 1952 catalogue Michael cites for the modification."
+  },
+  "octameter": {
+    "year": 1952,
+    "month": "February",
+    "doc": "01775",
+    "date": "February 1952",
+    "asPrinted": "Octameter Installation",
+    "price": "$75.50",
+    "note": "With $18.00 credited back if the Trifocal Viewfinder was returned, which is what the Octameter replaced."
+  },
+  "h-1": {
+    "year": 1952,
+    "month": "February",
+    "doc": "01775",
+    "date": "February 1952",
+    "asPrinted": "H-1 Case",
+    "price": "$45.00",
+    "note": "The archive has two H-1 case entries, this one and a 1950s revision. The list says only H-1, so the price is attached to the original design."
+  },
+  "h-2-zipper": {
+    "year": 1952,
+    "month": "February",
+    "doc": "01775",
+    "date": "February 1952",
+    "asPrinted": "H-2 Case",
+    "price": "$32.50",
+    "note": "The list says only H-2. This is the archive's only plain H-2 entry."
+  }
+}
