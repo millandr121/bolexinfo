@@ -286,6 +286,56 @@ function reconcile(seedFile: string, extractedDir: string): ModelRecord[] {
   return records.sort((a, b) => Number(b.recovered) - Number(a.recovered) || a.name.localeCompare(b.name));
 }
 
+/**
+ * Entries this archive added, in a section the original site organised some
+ * other way.
+ *
+ * Cameras and projectors were a page per model, so a new one slots straight
+ * into `reconcile` above. Accessories were not: Michael grouped them by type
+ * and decade, so "Motors, 1950s" is a page and the Unimotor is a paragraph
+ * inside it. There was therefore nowhere to put a thing like the Bolex
+ * Stereo, which is one object with its own history and no decade page to
+ * belong to.
+ *
+ * Rather than restructure what he wrote, which would mean deciding on his
+ * behalf how his pages should have been arranged, added items run alongside
+ * the recovered ones as their own track. The decade pages stay exactly as
+ * they are; new objects get a page each, and the index says plainly which is
+ * which. That also answers the thing we actually want this site to do, which
+ * is to keep taking in Bolex equipment the original never covered.
+ *
+ * Seed-only by definition: a slug that the pipeline also recovered is not an
+ * addition, it is a recovered page, and is left to `reconcile`.
+ */
+export function getAddedRecords(section: "accessories" | "lenses"): ModelRecord[] {
+  const seedDoc = readJson<{ models?: SeedEntry[] }>(dataDir("models", `${section}.json`));
+  const recovered = readExtractedDir(section);
+
+  return (seedDoc?.models ?? [])
+    .filter((s) => !recovered.has(s.slug))
+    .map((s) => ({
+      slug: s.slug,
+      name: s.name,
+      format: s.format,
+      introduced: s.introduced ?? null,
+      summary: s.summary,
+      specs: [],
+      images: sourcedImages(s.images),
+      serialRows: [],
+      originalPath: s.originalPath,
+      recovered: false,
+      ...(s.sources?.length ? { sources: s.sources } : {}),
+    }))
+    .sort((a, b) => (a.introduced ?? 9999) - (b.introduced ?? 9999) || a.name.localeCompare(b.name));
+}
+
+export function getAddedRecord(
+  section: "accessories" | "lenses",
+  slug: string,
+): ModelRecord | undefined {
+  return getAddedRecords(section).find((m) => m.slug === slug);
+}
+
 export function getCameraRecords(): ModelRecord[] {
   return reconcile("cameras.json", "cameras");
 }
