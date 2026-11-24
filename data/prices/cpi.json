@@ -1,0 +1,35 @@
+{
+  "_": [
+    "US CPI-U annual averages, 1982-84 = 100, for turning the prices in",
+    "Paillard's dated price lists into money a reader today can feel.",
+    "",
+    "Only the years this archive actually holds prices for are here.",
+    "1952 to 1979 are the BLS published annual averages, which are given",
+    "to one decimal place before 2007. The base year is the latest",
+    "complete annual average.",
+    "",
+    "A caveat worth keeping: the base figure for 2025 was taken from",
+    "secondary compilations of the BLS series rather than from a BLS",
+    "annual-average table read directly, so it may be revised. Every",
+    "adjusted figure on the site is therefore shown rounded and described",
+    "as approximate. The 1952-1979 values are the official ones.",
+    "",
+    "CPI measures a general basket of consumer goods. It is the standard",
+    "way to do this and it is still a blunt instrument for one camera: it",
+    "says nothing about what happened to the Swiss franc, to tariffs, or",
+    "to the cost of precision optics in particular. The chart says so."
+  ],
+  "base": { "year": 2025, "cpi": 321.943, "note": "latest complete annual average" },
+  "years": {
+    "1952": 26.5,
+    "1965": 31.5,
+    "1967": 33.4,
+    "1972": 41.8,
+    "1979": 72.6
+  },
+  "source": {
+    "title": "Consumer Price Index for All Urban Consumers (CPI-U), annual averages",
+    "publisher": "US Bureau of Labor Statistics",
+    "url": "https://www.bls.gov/cpi/tables/supplemental-files/historical-cpi-u-202412.pdf"
+  }
+}

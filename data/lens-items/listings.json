@@ -95,6 +95,18 @@
         "date": "March 1965",
         "doc": "04929",
         "asPrinted": "Macro-Yvar 150mm f/3.3Rx"
+      },
+      {
+        "price": "$261.50",
+        "date": "February 1972",
+        "doc": "04932",
+        "asPrinted": "Macro-Yvar 150mm f/3.3 Preset"
+      },
+      {
+        "price": "$590.00",
+        "date": "November 1979",
+        "doc": "02209",
+        "asPrinted": "Macro-Yvar 150mm f/3.3 Preset"
       }
     ],
     "note": "The archive carries two entries for the Macro Yvar 150mm f/3.3, this one and a later redesign. The code and price are attached here, to the 1962 original, because the 1965 list predates the redesign."
@@ -164,6 +176,30 @@
         "date": "May 1967",
         "doc": "04933",
         "asPrinted": "Switar 10mm f/1.6 RX"
+      },
+      {
+        "price": "$165.00",
+        "date": "February 1972",
+        "doc": "04932",
+        "asPrinted": "Switar 10mm f/1.6"
+      },
+      {
+        "price": "$261.50",
+        "date": "February 1972",
+        "doc": "04932",
+        "asPrinted": "Switar 10mm f/1.6 Rx Preset"
+      },
+      {
+        "price": "$614.00",
+        "date": "November 1979",
+        "doc": "02209",
+        "asPrinted": "Switar 10mm f/1.6 Rx Preset"
+      },
+      {
+        "price": "$814.00",
+        "date": "November 1979",
+        "doc": "02209",
+        "asPrinted": "Switar 10mm f/1.6 Rx Preset multicoated"
       }
     ]
   },
@@ -180,6 +216,12 @@
         "date": "May 1967",
         "doc": "04933",
         "asPrinted": "Switar 16mm f/1.8 RX"
+      },
+      {
+        "price": "$99.50",
+        "date": "February 1972",
+        "doc": "04932",
+        "asPrinted": "Switar 16mm f/1.8"
       }
     ]
   },
@@ -233,6 +275,66 @@
         "date": "May 1967",
         "doc": "04933",
         "asPrinted": "Pan Cinor 85 Compact, 17-85mm f/3.8"
+      },
+      {
+        "price": "$595.00",
+        "date": "November 1979",
+        "doc": "02209",
+        "asPrinted": "Pan Cinor Compact 17-85mm f/3.8 C Mt."
+      }
+    ]
+  },
+  "macro-switar-26mm-f-1-1-rx": {
+    "listings": [
+      {
+        "price": "$321.50",
+        "date": "February 1972",
+        "doc": "04932",
+        "asPrinted": "Macro-Switar 26mm f/1.1 Rx Preset"
+      },
+      {
+        "price": "$964.00",
+        "date": "November 1979",
+        "doc": "02209",
+        "asPrinted": "Macro-Switar 26mm f/1.1 Rx Preset multicoated"
+      }
+    ]
+  },
+  "macro-switar-75mm-f-1-9": {
+    "listings": [
+      {
+        "price": "$300.00",
+        "date": "February 1972",
+        "doc": "04932",
+        "asPrinted": "Macro-Switar 75mm f/1.9 Preset"
+      },
+      {
+        "price": "$945.00",
+        "date": "November 1979",
+        "doc": "02209",
+        "asPrinted": "Macro-Switar 75mm f/1.9 Preset multicoated"
+      }
+    ]
+  },
+  "vario-switar-100-poe-f-1-9-16-100mm": {
+    "listings": [
+      {
+        "price": "$800.00",
+        "date": "February 1972",
+        "doc": "04932",
+        "asPrinted": "Vario-Switar 16-100mm POE f/1.9, bayonet mount"
+      },
+      {
+        "price": "$2,890.00",
+        "date": "November 1979",
+        "doc": "02209",
+        "asPrinted": "Vario-Switar 16-100mm POE f/1.9 C Mt."
+      },
+      {
+        "price": "$2,436.00",
+        "date": "November 1979",
+        "doc": "02209",
+        "asPrinted": "Vario-Switar 16-100mm POE f/1.9 Bay. Mt."
       }
     ]
   }

@@ -60,6 +60,12 @@
         "date": "May 1967",
         "doc": "04933",
         "asPrinted": "Matte Box"
+      },
+      {
+        "price": "$412.00",
+        "date": "November 1979",
+        "doc": "02209",
+        "asPrinted": "Matte Box B"
       }
     ]
   },
@@ -336,6 +342,12 @@
         "date": "May 1967",
         "doc": "04933",
         "asPrinted": "Rexofader 40"
+      },
+      {
+        "price": "$177.00",
+        "date": "November 1979",
+        "doc": "02209",
+        "asPrinted": "Rex-O-Fader 40 f/REX 5, SBM"
       }
     ]
   },
@@ -408,6 +420,12 @@
         "date": "May 1967",
         "doc": "04933",
         "asPrinted": "16mm Extension Tubes"
+      },
+      {
+        "price": "$120.00",
+        "date": "November 1979",
+        "doc": "02209",
+        "asPrinted": "Extension Tubes (set of 4)"
       }
     ]
   }
