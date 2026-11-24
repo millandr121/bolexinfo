@@ -74,10 +74,18 @@ Picked out of the Pacific Rim list because they close a known gap:
 
 - `rl/00936/00936.pdf` — **Bolex 16 Pro Sales Brochure**. Primary source,
   Paillard Inc., dating code 7/70. Read; see findings/bolex-16-pro.md.
+- `rl/02239/02239.pdf` — **Bolex 5120 dealer sheet**, Ehrenreich
+  Photo-Optical Industries, code P-76. Read. Settles that the 5120 is a
+  Super 8 sound camera, not a projector, and heads the Sound-8 line above
+  the 581 and the 551XL.
 - `rl/01775`, `01859`, `02027`, `04916` — Bolex catalogues, 1946, Feb 1952,
   Nov 1952, Feb 1965. Useful for dating models the archive left undated.
 - "Bolex Sterero Instruction Book" (their spelling) — the Stereo/Triorama.
-- "Bolex SP8/SP80 Instruction Book" — projectors absent from this site.
+- The SP 80 is **not on Pacific Rim**, despite an earlier note here saying
+  an "SP8/SP80 Instruction Book" was listed. It is not. The SP59 to SP62
+  codes on that site are its own bulletin numbering, not model names. The
+  SP 80 entry rests on dealer and collector listings only, and a
+  manufacturer document for it is still wanted.
 - 29 technical bulletins, 1959–1962 — repair and service material.
 
 ## How material gets here

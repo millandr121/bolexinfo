@@ -258,7 +258,24 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--full", action="store_true", help="ignore what is already harvested")
     parser.add_argument("--since", default=None, help="YYYY-MM-DD to start from")
+    # The gaps this leaves are never a whole subreddit: they are one
+    # field of one subreddit, because a 422 stopped that sweep and not
+    # the other. Re-running everything to recover them asks Arctic
+    # Shift for tens of thousands of records it has already given us,
+    # which is how the rate limit gets hit again.
+    parser.add_argument(
+        "--only",
+        default=None,
+        help="comma-separated subreddits to sweep, e.g. super8,Filmmakers",
+    )
+    parser.add_argument(
+        "--field",
+        default=None,
+        choices=["title", "selftext"],
+        help="sweep only this search field",
+    )
     args = parser.parse_args()
+    only = {s.strip().lower() for s in args.only.split(",")} if args.only else None
 
     forced = int(time.mktime(time.strptime(args.since, "%Y-%m-%d"))) if args.since else None
     watermarks = {} if (args.full or forced is not None) else newest_per_source()
@@ -296,6 +313,15 @@ def main() -> int:
     for subreddit in SUBREDDITS_SEARCHED:
         targets.append((subreddit, "title", QUERY))
         targets.append((subreddit, "selftext", QUERY))
+
+    if only is not None:
+        targets = [t for t in targets if t[0].lower() in only]
+    if args.field is not None:
+        targets = [t for t in targets if t[1] == args.field]
+    if not targets:
+        print("Nothing matches --only/--field; check the names.")
+        return 1
+    print(f"Sweeping {len(targets)}: " + ", ".join(f"r/{a} {b or 'whole'}" for a, b, _ in targets))
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     if args.full and OUT.exists():
