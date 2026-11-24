@@ -1,0 +1,189 @@
+import Link from "next/link";
+import { Reveal } from "./Reveal";
+import { ImageGallery } from "./ImageGallery";
+import { ArchiveCompare } from "./ArchiveCompare";
+import { originalArchiveHref } from "@/lib/archive";
+import { lensDateLabel, type LensItem } from "@/lib/lens-types";
+
+/**
+ * One lens.
+ *
+ * The facts row leads with the code, because that is what someone arriving
+ * with a lens in their hand is holding: five letters engraved on the barrel
+ * and nothing else to go on. Then focal length and aperture, then the date,
+ * which for most of these is only a decade and says so.
+ */
+export function LensItemPage({ item }: { item: LensItem }) {
+  const archiveHref = originalArchiveHref(item.from.originalPath);
+  const images = item.images.map((i) => ({ src: i.src, alt: i.alt || item.name }));
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: item.name,
+    brand: item.maker,
+    ...(item.codes.length ? { mpn: item.codes[0] } : {}),
+    description: item.description.slice(0, 300),
+    ...(item.year ? { releaseDate: String(item.year) } : {}),
+  };
+
+  return (
+    <article className="pt-14 pb-8 max-w-5xl">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
+      <Reveal>
+        <nav
+          aria-label="Breadcrumb"
+          className="font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.2em] text-[var(--fg-soft)]"
+        >
+          <Link href="/lenses" className="hover:text-[var(--accent)]">
+            Lenses
+          </Link>
+          <span aria-hidden="true"> / </span>
+          <span aria-current="page">{item.name}</span>
+        </nav>
+        <h1 className="mt-4 font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-[560] tracking-tight">
+          {item.name}
+        </h1>
+      </Reveal>
+
+      <Reveal>
+        <dl className="rule mt-8 grid grid-cols-2 gap-x-8 gap-y-4 pt-6 sm:grid-cols-4">
+          {item.codes.length > 0 && (
+            <Fact label={item.codes.length > 1 ? "Codes" : "Code"}>
+              <span className="font-[family-name:var(--font-mono)] text-base">
+                {item.codes.join(" · ")}
+              </span>
+            </Fact>
+          )}
+          <Fact label="Maker">{item.maker}</Fact>
+          {item.focalLength && <Fact label="Focal length">{item.focalLength}</Fact>}
+          {item.aperture && <Fact label="Maximum aperture">{item.aperture}</Fact>}
+          {item.mount && <Fact label="Mount">{item.mount}</Fact>}
+          {item.gauge && <Fact label="For">{item.gauge} cameras</Fact>}
+          <Fact label={item.year ? "Introduced" : "Documented as"}>{lensDateLabel(item)}</Fact>
+        </dl>
+      </Reveal>
+
+      <div className="mt-10 grid gap-10 lg:grid-cols-[1fr_20rem]">
+        <Reveal>
+          {/*
+            Forty-one of these have no description at all. That is not a
+            gap in the extraction: on the Wollensak, Meyer and Goerz pages
+            he listed the lenses that existed and wrote about the company
+            instead. Saying so is better than an empty column, and better
+            than pretending the page is incomplete.
+          */}
+          {item.description ? (
+            <p className="whitespace-pre-line text-lg leading-relaxed">{item.description}</p>
+          ) : (
+            <p className="text-lg leading-relaxed text-[var(--fg-soft)]">
+              The original site listed this lens without describing it: the{" "}
+              <Link
+                href={`/lenses/${item.from.page}`}
+                className="text-[var(--accent)] underline underline-offset-4"
+              >
+                {item.maker} page
+              </Link>{" "}
+              gives its name and the mount it takes, and puts its writing into the account of
+              the company instead. If you know this lens,{" "}
+              <Link
+                href={`/suggest?page=${encodeURIComponent(`/lenses/${item.slug}`)}`}
+                className="text-[var(--accent)] underline underline-offset-4"
+              >
+                tell us about it
+              </Link>
+              .
+            </p>
+          )}
+
+          {item.sources.length > 0 && (
+            <section className="rule mt-10 pt-4" aria-labelledby="notes">
+              <h2
+                id="notes"
+                className="font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.16em] text-[var(--fg-soft)]"
+              >
+                Notes
+              </h2>
+              <ol className="mt-3 space-y-2">
+                {item.sources.map((source, n) => (
+                  <li
+                    key={source}
+                    className="font-[family-name:var(--font-mono)] text-[0.7rem] leading-relaxed text-[var(--fg-soft)]"
+                  >
+                    <span className="text-[var(--accent)]">{n + 1}</span> {source}
+                  </li>
+                ))}
+              </ol>
+            </section>
+          )}
+
+          {item.yearNote && (
+            <p className="mt-6 font-[family-name:var(--font-mono)] text-[0.66rem] leading-relaxed text-[var(--fg-soft)]">
+              On the date: {item.yearNote}
+            </p>
+          )}
+        </Reveal>
+
+        {images.length > 0 && (
+          <Reveal>
+            <ImageGallery images={images} caption={item.name} layout="feature" />
+          </Reveal>
+        )}
+      </div>
+
+      <Reveal>
+        <section className="rule mt-14 pt-4" aria-labelledby="provenance">
+          <h2
+            id="provenance"
+            className="font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.16em] text-[var(--fg-soft)]"
+          >
+            Source
+          </h2>
+          <p className="mt-3 text-sm leading-relaxed text-[var(--fg-soft)]">
+            Written by Michael Tisdale for BolexCollector.com, on his{" "}
+            <Link
+              href={`/lenses/${item.from.page}`}
+              className="text-[var(--accent)] underline underline-offset-4"
+            >
+              {item.maker} page
+            </Link>
+            , which opens with an account of the company and then lists its lenses. The words
+            above are his; this archive has given the lens a page of its own so it can be dated,
+            searched, and found by its code.
+          </p>
+        </section>
+      </Reveal>
+
+      {archiveHref && (
+        <Reveal>
+          <ArchiveCompare originalHref={archiveHref} title={item.name} />
+        </Reveal>
+      )}
+
+      <p className="rule mt-12 pt-4 font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.16em] text-[var(--fg-soft)]">
+        Something wrong, or something to add?{" "}
+        <Link
+          href={`/suggest?page=${encodeURIComponent(`/lenses/${item.slug}`)}`}
+          className="text-[var(--accent)] underline underline-offset-2"
+        >
+          Tell us
+        </Link>
+      </p>
+    </article>
+  );
+}
+
+function Fact({ label, children }: { label: string; children: React.ReactNode }) {
+  return (
+    <div>
+      <dt className="font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.16em] text-[var(--fg-soft)]">
+        {label}
+      </dt>
+      <dd className="mt-1 font-[family-name:var(--font-display)] text-lg font-[560]">{children}</dd>
+    </div>
+  );
+}

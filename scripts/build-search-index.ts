@@ -10,6 +10,7 @@ import path from "node:path";
 import matter from "gray-matter";
 import { getCameraRecords, getProjectorRecords } from "../lib/museum";
 import { getAccessoryItems } from "../lib/accessory-items";
+import { getLensItems } from "../lib/lens-items";
 import { getRecoveredSection } from "../lib/recovered";
 import { getLinkDirectory, getUpdates } from "../lib/directory";
 
@@ -87,6 +88,33 @@ for (const item of getAccessoryItems()) {
       .filter(Boolean)
       .join(" "),
     summary: item.description.slice(0, 160),
+  });
+}
+
+/*
+ * Every lens as its own entry, with its codes in the keywords. Someone
+ * holding a lens reads five letters off the barrel; typing SWINQ should
+ * land on that lens, which is the whole reason the codes were parsed out.
+ */
+for (const lens of getLensItems()) {
+  docs.push({
+    title: lens.name,
+    href: `/lenses/${lens.slug}`,
+    section: "lenses",
+    keywords: [
+      ...lens.codes,
+      lens.maker,
+      lens.series ?? "",
+      lens.focalLength ?? "",
+      lens.aperture ?? "",
+      lens.mount ? `${lens.mount} mount` : "",
+      lens.gauge ?? "",
+      lens.year ?? "",
+      lens.decade ? `${lens.decade}s` : "",
+    ]
+      .filter(Boolean)
+      .join(" "),
+    summary: lens.description.slice(0, 160),
   });
 }
 

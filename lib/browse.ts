@@ -17,6 +17,7 @@
 import { getCameraRecords, getProjectorRecords, type ModelRecord } from "./museum";
 import { accessoryTypeOf, getRecoveredSection, type RecoveredPage } from "./recovered";
 import { getAccessoryItems, ACCESSORY_TYPES } from "./accessory-items";
+import { getLensItems, LENS_MAKERS } from "./lens-items";
 import { thumbnailFor } from "./thumbnails";
 
 /**
@@ -167,12 +168,37 @@ function accessorySection(): BrowseSection {
   return { id: "accessories", label: "Accessories", href: "/accessories", groups };
 }
 
+/**
+ * Lenses, one per card, grouped by maker like the index. The note under
+ * each is its code where it has one, because that is the identifying mark;
+ * otherwise its date.
+ */
+function lensSection(): BrowseSection {
+  const items = getLensItems();
+  const groups = LENS_MAKERS.map((maker) => ({
+    id: maker,
+    label: maker,
+    items: items
+      .filter((i) => i.maker === maker)
+      .sort((a, b) => (a.year ?? a.decade ?? 9999) - (b.year ?? b.decade ?? 9999) || a.name.localeCompare(b.name))
+      .map((i) => ({
+        slug: i.slug,
+        label: i.name,
+        href: `/lenses/${i.slug}`,
+        thumb: i.images[0]?.src,
+        note: i.codes[0] ?? (i.year ? String(i.year) : i.decade ? `${i.decade}s` : undefined),
+      })),
+  })).filter((g) => g.items.length > 0);
+
+  return { id: "lenses", label: "Lenses", href: "/lenses", groups };
+}
+
 /** Everything, in nav order. */
 export function getBrowseIndex(): BrowseSection[] {
   return [
     modelSection("cameras", "Cameras", getCameraRecords()),
     modelSection("projectors", "Projectors", getProjectorRecords()),
-    recoveredSection("lenses", "Lenses", (p) => makerOf(p.slug)),
+    lensSection(),
     accessorySection(),
   ].filter((s) => s.groups.length > 0);
 }

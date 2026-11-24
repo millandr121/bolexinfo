@@ -1,0 +1,29 @@
+{
+  "_": [
+    "Dates checked by hand, overriding what the extractor guessed.",
+    "",
+    "Same discipline as the accessories. The extractor reads a year out of",
+    "Michael's prose; prose about lenses is full of years belonging to other",
+    "things, most often the reflex version of a lens rather than the lens, or",
+    "the arrival of Visifocus rather than the lens that carries it. Every",
+    "candidate was read back against its sentence and the misses looked for.",
+    "",
+    "year: null means the prose states no date of introduction for this lens,",
+    "whatever numbers appear in it.",
+    "Re-run scripts/extract-lens-items.mjs after editing."
+  ],
+
+  "swita": {
+    "year": null,
+    "note": "The lens 'was first manufactured in the 1940s'. The 1956 is when the RX version appeared, not the lens."
+  },
+  "yvar-25mm-f-1-8-visifocus": {
+    "year": null,
+    "note": "'Appears to have been introduced in 1958 or 1959.' He would not pick between them, so neither does this."
+  },
+
+  "pizar-50mm-f-1-8-visifocus-st-and-rx-versions": {
+    "year": 1959,
+    "note": "'Introduced in the late 1959.' Missed by the patterns because of the stray 'the'."
+  }
+}

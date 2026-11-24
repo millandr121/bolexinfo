@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import { Reveal } from "@/components/Reveal";
 import { RecoveredContent } from "@/components/RecoveredContent";
 import { ArchiveCompare } from "@/components/ArchiveCompare";
+import { LensItemPage } from "@/components/LensItemPage";
+import { getLensItem, getLensItems } from "@/lib/lens-items";
 import { getRecoveredPage, getRecoveredSection } from "@/lib/recovered";
 import { originalArchiveHref } from "@/lib/archive";
 import { getBrowseIndex } from "@/lib/browse";
@@ -15,21 +17,39 @@ interface Props {
 
 export const dynamicParams = false;
 
+/*
+ * Two kinds of page live here: Michael's maker essays, one per maker and
+ * decade, and the individual lenses lifted out of them.
+ */
 export function generateStaticParams() {
-  return getRecoveredSection("lenses").map((p) => ({ slug: p.slug }));
+  return [
+    ...getRecoveredSection("lenses").map((p) => ({ slug: p.slug })),
+    ...getLensItems().map((i) => ({ slug: i.slug })),
+  ];
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const page = getRecoveredPage("lenses", slug);
-  if (!page) return {};
-  return { title: `${page.title} · Lenses`, description: page.description };
+  if (page) return { title: `${page.title} · Lenses`, description: page.description };
+  const item = getLensItem(slug);
+  if (item) {
+    return {
+      title: `${item.name} · Lenses`,
+      description: item.description.slice(0, 180),
+    };
+  }
+  return {};
 }
 
 export default async function LensPage({ params }: Props) {
   const { slug } = await params;
   const page = getRecoveredPage("lenses", slug);
-  if (!page) notFound();
+  if (!page) {
+    const item = getLensItem(slug);
+    if (!item) notFound();
+    return <LensItemPage item={item} />;
+  }
   const archiveHref = originalArchiveHref(page.originalPath);
 
   return (
