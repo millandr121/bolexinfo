@@ -1,0 +1,83 @@
+{
+  "_": [
+    "Lenses confirmed in the American Bolex Company's 1946 catalogue.",
+    "",
+    "Source: Bolex Catalog, 1946, scanned by Pacific Rim Camera as",
+    "rl/02027. 68 pages, an image-only scan, OCR'd here with tesseract and",
+    "page 29 read by eye. Note that an earlier note in research/sources.md",
+    "had this id pointing at the February 1952 catalogue, which would have",
+    "backdated everything taken from it by six years.",
+    "",
+    "Page 29 is the Wollensak page. It carries the American Bolex",
+    "Company's statement of why it chose Wollensak, and then a table of",
+    "exactly which Wollensak lenses were offered for the H-16, the H-8 and",
+    "the L-8. That table is the point of this file: these lenses have no",
+    "description at all on the original site, because Michael listed what",
+    "existed and put his writing into the company history. The catalogue",
+    "says which camera each was sold for, and proves it was on offer in",
+    "1946.",
+    "",
+    "The catalogue carries no prices. It says 'Consult price list for lens",
+    "prices and camera combinations with different lens equipment', and",
+    "that price list is not among the documents found so far.",
+    "",
+    "Only lenses the catalogue actually lists are here. Our Wollensak 15mm",
+    "f/2.7, 2\" f/1.5 and 2\" f/3.5 are not in it, and neither is the 4\" or",
+    "6\" under 8mm, so they get nothing.",
+    "",
+    "Re-run scripts/extract-lens-items.mjs after editing."
+  ],
+
+  "cine-velostigmat-1-f-1-5": {
+    "year": 1946,
+    "offeredFor": "the Bolex H-16",
+    "asPrinted": "1\" f/1.5"
+  },
+  "cine-velostigmat-17mm-f-2-7": {
+    "year": 1946,
+    "offeredFor": "the Bolex H-16",
+    "asPrinted": "17 mm f/2.7 (wide-angle) in focusing mount"
+  },
+  "cine-velostigmat-17mm-f-2-7-fixed-focus": {
+    "year": 1946,
+    "offeredFor": "the Bolex H-16",
+    "asPrinted": "17 mm f/2.7 (wide-angle) fixed focus"
+  },
+  "cine-velostigmat-3-f-4": {
+    "year": 1946,
+    "offeredFor": "the Bolex H-16",
+    "asPrinted": "3\" f/4 (telephoto) in focusing mount"
+  },
+  "cine-velostigmat-4-f-4-5-1940": {
+    "year": 1946,
+    "offeredFor": "the Bolex H-16",
+    "asPrinted": "4\" f/4.5 (telephoto) in focusing mount"
+  },
+  "cine-velostigmat-6-f-4-5-1940": {
+    "year": 1946,
+    "offeredFor": "the Bolex H-16",
+    "asPrinted": "6\" f/4.5 (telephoto) in focusing mount"
+  },
+
+  "cine-velostigmat-12-5mm-f-2-5-fixed-focus": {
+    "year": 1946,
+    "offeredFor": "the Bolex H-8 and the L-8",
+    "asPrinted": "12½ mm f/2.5 fixed focus"
+  },
+  "cine-velostigmat-1-2-f-1-9": {
+    "year": 1946,
+    "offeredFor": "the Bolex H-8 and the L-8",
+    "asPrinted": "12½ mm f/1.9 in focusing mount",
+    "note": "Michael lists it as ½\", the catalogue as 12½ mm. Wollensak marked the same lens both ways; half an inch is 12.7 mm."
+  },
+  "cine-velostigmat-1-f-2-7": {
+    "year": 1946,
+    "offeredFor": "the Bolex H-8 and the L-8",
+    "asPrinted": "1\" f/2.7 (telephoto) in focusing mount"
+  },
+  "cine-velostigmat-11-2-f-3-5": {
+    "year": 1946,
+    "offeredFor": "the Bolex H-8 and the L-8",
+    "asPrinted": "1½\" f/3.5 (telephoto) in focusing mount"
+  }
+}

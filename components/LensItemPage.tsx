@@ -79,6 +79,25 @@ export function LensItemPage({ item }: { item: LensItem }) {
           */}
           {item.description ? (
             <p className="whitespace-pre-line text-lg leading-relaxed">{item.description}</p>
+          ) : item.catalogue ? (
+            /*
+              No description from Michael, but the catalogue says what it
+              was and who it was for, which is most of what a reader wants.
+              Better to lead with the document than with an apology.
+            */
+            <p className="text-lg leading-relaxed">
+              Offered by the American Bolex Company for {item.catalogue.offeredFor} in its{" "}
+              {item.catalogue.year} catalogue, listed there as &ldquo;
+              {item.catalogue.asPrinted}&rdquo;. The original site recorded the lens without
+              describing it, so what is known of it is what the catalogue says.{" "}
+              <Link
+                href={`/suggest?page=${encodeURIComponent(`/lenses/${item.slug}`)}`}
+                className="text-[var(--accent)] underline underline-offset-4"
+              >
+                If you know more, tell us
+              </Link>
+              .
+            </p>
           ) : (
             <p className="text-lg leading-relaxed text-[var(--fg-soft)]">
               The original site listed this lens without describing it: the{" "}
@@ -118,6 +137,34 @@ export function LensItemPage({ item }: { item: LensItem }) {
                   </li>
                 ))}
               </ol>
+            </section>
+          )}
+
+          {/*
+            The catalogue entry, where there is one and the lens also has
+            prose of its own. Where it does not, the catalogue is already
+            the description above and this would repeat it.
+          */}
+          {item.catalogue && item.description && (
+            <section className="rule mt-10 pt-4" aria-labelledby="catalogue">
+              <h2
+                id="catalogue"
+                className="font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.16em] text-[var(--accent)]"
+              >
+                In the {item.catalogue.year} catalogue
+              </h2>
+              <p className="mt-3 font-[family-name:var(--font-mono)] text-[0.72rem] leading-relaxed text-[var(--fg-soft)]">
+                Offered for {item.catalogue.offeredFor}, as &ldquo;{item.catalogue.asPrinted}
+                &rdquo;.{item.catalogue.note ? ` ${item.catalogue.note}` : ""}{" "}
+                <a
+                  href="https://www.pacificrimcamera.com/rl/02027/02027.pdf"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                  className="text-[var(--accent)] underline underline-offset-4"
+                >
+                  the catalogue ↗
+                </a>
+              </p>
             </section>
           )}
 
@@ -196,9 +243,10 @@ export function LensItemPage({ item }: { item: LensItem }) {
             >
               {item.maker} page
             </Link>
-            , which opens with an account of the company and then lists its lenses. The words
-            above are his; this archive has given the lens a page of its own so it can be dated,
-            searched, and found by its code.
+            , which opens with an account of the company and then lists its lenses.{" "}
+            {item.description
+              ? "The words above are his; this archive has given the lens a page of its own so it can be dated, searched, and found by its code."
+              : "He listed this lens there without describing it, so the words above are not his: they are what the catalogue says, and the page exists so the lens can be dated, searched and linked to."}
           </p>
         </section>
       </Reveal>

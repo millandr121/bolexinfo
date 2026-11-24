@@ -40,6 +40,8 @@ export interface LensItem {
   /** Appearances in Paillard's own dated dealer price lists. */
   listings?: Array<{ price: string; date: string; doc: string; asPrinted: string }>;
   listingNote?: string;
+  /** Confirmed in a dated catalogue, with the camera it was sold for. */
+  catalogue?: { year: number; offeredFor: string; asPrinted: string; note?: string };
   from: { page: string; heading: string | null; originalPath: string };
 }
 

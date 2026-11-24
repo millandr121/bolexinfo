@@ -15,6 +15,11 @@
       "description": "",
       "images": [],
       "sources": [],
+      "catalogue": {
+        "year": 1946,
+        "offeredFor": "the Bolex H-16",
+        "asPrinted": "1\" f/1.5"
+      },
       "from": {
         "page": "40wollensak",
         "heading": "C Mount Lenses for 16mm Cameras",
@@ -36,6 +41,11 @@
       "description": "",
       "images": [],
       "sources": [],
+      "catalogue": {
+        "year": 1946,
+        "offeredFor": "the Bolex H-8 and the L-8",
+        "asPrinted": "1\" f/2.7 (telephoto) in focusing mount"
+      },
       "from": {
         "page": "40wollensak",
         "heading": "D Mount Lenses for 8mm Cameras",
@@ -78,6 +88,12 @@
       "description": "",
       "images": [],
       "sources": [],
+      "catalogue": {
+        "year": 1946,
+        "offeredFor": "the Bolex H-8 and the L-8",
+        "asPrinted": "12½ mm f/1.9 in focusing mount",
+        "note": "Michael lists it as ½\", the catalogue as 12½ mm. Wollensak marked the same lens both ways; half an inch is 12.7 mm."
+      },
       "from": {
         "page": "40wollensak",
         "heading": "D Mount Lenses for 8mm Cameras",
@@ -99,6 +115,11 @@
       "description": "",
       "images": [],
       "sources": [],
+      "catalogue": {
+        "year": 1946,
+        "offeredFor": "the Bolex H-8 and the L-8",
+        "asPrinted": "1½\" f/3.5 (telephoto) in focusing mount"
+      },
       "from": {
         "page": "40wollensak",
         "heading": "D Mount Lenses for 8mm Cameras",
@@ -120,6 +141,11 @@
       "description": "",
       "images": [],
       "sources": [],
+      "catalogue": {
+        "year": 1946,
+        "offeredFor": "the Bolex H-8 and the L-8",
+        "asPrinted": "12½ mm f/2.5 fixed focus"
+      },
       "from": {
         "page": "40wollensak",
         "heading": "D Mount Lenses for 8mm Cameras",
@@ -162,6 +188,11 @@
       "description": "",
       "images": [],
       "sources": [],
+      "catalogue": {
+        "year": 1946,
+        "offeredFor": "the Bolex H-16",
+        "asPrinted": "17 mm f/2.7 (wide-angle) in focusing mount"
+      },
       "from": {
         "page": "40wollensak",
         "heading": "C Mount Lenses for 16mm Cameras",
@@ -183,6 +214,11 @@
       "description": "",
       "images": [],
       "sources": [],
+      "catalogue": {
+        "year": 1946,
+        "offeredFor": "the Bolex H-16",
+        "asPrinted": "17 mm f/2.7 (wide-angle) fixed focus"
+      },
       "from": {
         "page": "40wollensak",
         "heading": "C Mount Lenses for 16mm Cameras",
@@ -246,6 +282,11 @@
       "description": "",
       "images": [],
       "sources": [],
+      "catalogue": {
+        "year": 1946,
+        "offeredFor": "the Bolex H-16",
+        "asPrinted": "3\" f/4 (telephoto) in focusing mount"
+      },
       "from": {
         "page": "40wollensak",
         "heading": "C Mount Lenses for 16mm Cameras",
@@ -288,6 +329,11 @@
       "description": "",
       "images": [],
       "sources": [],
+      "catalogue": {
+        "year": 1946,
+        "offeredFor": "the Bolex H-16",
+        "asPrinted": "4\" f/4.5 (telephoto) in focusing mount"
+      },
       "from": {
         "page": "40wollensak",
         "heading": "C Mount Lenses for 16mm Cameras",
@@ -330,6 +376,11 @@
       "description": "",
       "images": [],
       "sources": [],
+      "catalogue": {
+        "year": 1946,
+        "offeredFor": "the Bolex H-16",
+        "asPrinted": "6\" f/4.5 (telephoto) in focusing mount"
+      },
       "from": {
         "page": "40wollensak",
         "heading": "C Mount Lenses for 16mm Cameras",

@@ -19,12 +19,36 @@ anything a web search returns.
 | `rl/02226` | Super 8 cameras and projectors | April 1979 | not read |
 | `rl/02209` | 16mm cameras and projectors | November 1979 | yes |
 
-Catalogues read alongside them: `rl/01859` (February 1952) and
-`rl/04916` (February 1965) carry text. `rl/01775` (1946) and `rl/02027`
-(November 1952) are image-only scans and would need OCR; both are
-large, and the 1946 one is the only thing likely to date the
-Wollensak, Meyer and Goerz lenses that currently have no description at
-all.
+## The catalogues, and a correction
+
+The ids were paired to the wrong dates in `research/sources.md`, which
+would have backdated everything read out of the February 1952
+catalogue by six years. Correctly:
+
+| Document | Date | State |
+|---|---|---|
+| `rl/02027` | **1946** | image-only, 122 MB; OCR'd here |
+| `rl/01775` | **Feb 1952** | image-only, 78 MB; OCR'd here |
+| `rl/01859` | **Nov 1952** | carries text |
+| `rl/04916` | **Feb 1965** | carries text |
+
+Both image-only scans were rendered at 300 dpi and run through
+tesseract, and the pages that mattered were then read by eye.
+
+**The Feb 1952 catalogue carries a full Bolex retail price list** on its
+pages 21 and 22: camera and lens combinations, Kern-Paillard lens
+prices in both gauges, cases, accessories, projectors, the Titler, and
+the cost of having a filter slot or an Octameter fitted. None of it is
+published yet.
+
+**The 1946 catalogue, page 29, is the Wollensak page.** It carries the
+American Bolex Company's own statement of why it chose Wollensak, and
+a table of exactly which Wollensak lenses were sold for the H-16, the
+H-8 and the L-8. Ten of them are now matched in
+`data/lens-items/catalogues.json`, which is what those lens pages show
+in place of a description, since Michael never wrote one. The
+catalogue has no prices: it says to consult a price list, and that
+price list has not been found.
 
 ## What has been taken from them so far
 

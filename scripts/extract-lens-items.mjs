@@ -157,6 +157,14 @@ const REVIEW = readReview(path.join(OUT_DIR, "year-review.json"));
  */
 const LISTINGS = readReview(path.join(OUT_DIR, "listings.json"));
 const listingsUsed = new Set();
+
+/**
+ * Appearances in a dated Paillard or American Bolex catalogue. A
+ * different claim from a price list: the catalogue says which camera a
+ * lens was sold for, and carries no prices at all.
+ */
+const CATALOGUES = readReview(path.join(OUT_DIR, "catalogues.json"));
+const cataloguesUsed = new Set();
 const used = new Set();
 const seen = new Map();
 
@@ -186,6 +194,8 @@ const items = raw.map((entry) => {
 
   const found = LISTINGS[slug];
   if (found) listingsUsed.add(slug);
+  const catalogued = CATALOGUES[slug];
+  if (catalogued) cataloguesUsed.add(slug);
   const codes = found?.addCodes ? [...new Set([...parsed.codes, ...found.addCodes])] : parsed.codes;
 
   return {
@@ -202,6 +212,7 @@ const items = raw.map((entry) => {
     images: entry.images,
     sources: entry.sources,
     ...(found?.listings ? { listings: found.listings } : {}),
+    ...(catalogued ? { catalogue: catalogued } : {}),
     ...(found?.note ? { listingNote: found.note } : {}),
     from: {
       page: entry.page,
@@ -220,6 +231,9 @@ fs.mkdirSync(OUT_DIR, { recursive: true });
 fs.writeFileSync(OUT, `${JSON.stringify({ items }, null, 2)}\n`);
 report(perPage, items, REVIEW, used, "data/lens-items/items.json");
 console.log(`  in a dated price list: ${items.filter((i) => i.listings).length}`);
+console.log(`  in a dated catalogue:  ${items.filter((i) => i.catalogue).length}`);
 const strayListings = Object.keys(LISTINGS).filter((slug) => !listingsUsed.has(slug));
 if (strayListings.length) console.log(`\n  STRAY listings, no such lens: ${strayListings.join(", ")}`);
+const strayCat = Object.keys(CATALOGUES).filter((slug) => !cataloguesUsed.has(slug));
+if (strayCat.length) console.log(`  STRAY catalogue entries, no such lens: ${strayCat.join(", ")}`);
 console.log(`  with a product code: ${items.filter((i) => i.codes.length).length}`);
