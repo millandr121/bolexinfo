@@ -70,6 +70,38 @@ interface Row {
   status: string | null;
 }
 
+/**
+ * Approve or decline one price report.
+ *
+ * The only write this endpoint allows, and the narrowest one that makes
+ * the queue usable: an id and one of two words. Nothing on the public
+ * side reads a report until it has been through here.
+ */
+export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
+  if (!authorised(request, env)) return json({ error: "Not authorised." }, 401);
+  if (!env.DB) return json({ error: "No database is bound to this deployment." }, 503);
+
+  let body: { id?: string; status?: string };
+  try {
+    body = (await request.json()) as typeof body;
+  } catch {
+    return json({ error: "Expected JSON." }, 400);
+  }
+
+  const id = typeof body.id === "string" ? body.id.slice(0, 64) : null;
+  const status = body.status === "approved" || body.status === "declined" ? body.status : null;
+  if (!id || !status) return json({ error: "Give an id and approved or declined." }, 400);
+
+  try {
+    const result = await env.DB.prepare("UPDATE price_reports SET status = ? WHERE id = ?")
+      .bind(status, id)
+      .run();
+    return json({ ok: true, changed: result.meta?.changes ?? 0 });
+  } catch (error) {
+    return json({ error: `Could not update that: ${String(error)}` }, 500);
+  }
+};
+
 export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
   if (!authorised(request, env)) {
     return json({ error: "Not authorised." }, 401);
@@ -101,7 +133,35 @@ export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
       "SELECT COUNT(*) AS n FROM suggestions WHERE status IS NULL OR status = 'new'",
     ).first<{ n: number }>();
 
-    return json({ rows, pending: pending?.n ?? 0, limit });
+    /*
+     * The price reports ride along in the same response. They are a
+     * different kind of thing, but they are read by the same person at
+     * the same moment and a second round trip to say "nothing new"
+     * would be a worse page.
+     */
+    let reports: unknown[] = [];
+    let reportsPending = 0;
+    try {
+      const got = await env.DB.prepare(
+        `SELECT id, created_at, slug, section, amount, currency, sold_on, condition,
+                venue, side, notes, name, contact, country, status
+           FROM price_reports
+          ORDER BY (status = 'new') DESC, created_at DESC
+          LIMIT ?`,
+      )
+        .bind(limit)
+        .all();
+      reports = got.results ?? [];
+      const waiting = await env.DB.prepare(
+        "SELECT COUNT(*) AS n FROM price_reports WHERE status = 'new'",
+      ).first<{ n: number }>();
+      reportsPending = waiting?.n ?? 0;
+    } catch {
+      /* The table may not exist yet. An inbox that can show suggestions
+         should show them rather than fail over a missing second table. */
+    }
+
+    return json({ rows, pending: pending?.n ?? 0, limit, reports, reportsPending });
   } catch (error) {
     return json({ error: `Could not read the queue: ${String(error)}` }, 500);
   }

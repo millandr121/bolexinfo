@@ -6,6 +6,7 @@ import { ModelNotes } from "./ModelNotes";
 import { partitionSpecs } from "@/lib/specs";
 import type { ModelRecord } from "@/lib/museum";
 import { getNotes } from "@/lib/notes";
+import { PriceReports } from "./PriceReports";
 import { originalArchiveHref } from "@/lib/archive";
 import { hasControls } from "@/lib/controls";
 import { BrowseCarousel } from "@/components/BrowseCarousel";
@@ -351,6 +352,27 @@ export function ObjectPage({
             </p>
           </section>
         )}
+
+        {/*
+          Taken from the breadcrumb's href rather than from section.kind,
+          because kind is only set for cameras and projectors. This same
+          template also renders accessories the archive added itself, the
+          Bolex Stereo among them, and those would otherwise file their
+          price reports under cameras.
+        */}
+        <PriceReports
+          slug={model.slug}
+          section={
+            section.href === "/projectors"
+              ? "projectors"
+              : section.href === "/accessories"
+                ? "accessories"
+                : section.href === "/lenses"
+                  ? "lenses"
+                  : "cameras"
+          }
+          name={model.name}
+        />
 
         {/* Carries the page with it, so the form opens knowing what it is about. */}
         <p className="mt-3 font-[family-name:var(--font-mono)] text-xs leading-relaxed text-[var(--fg-soft)]">

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Reveal } from "./Reveal";
 import { ImageGallery } from "./ImageGallery";
 import { ArchiveCompare } from "./ArchiveCompare";
+import { PriceReports } from "./PriceReports";
 import { originalArchiveHref } from "@/lib/archive";
 import { lensDateLabel, type LensItem } from "@/lib/lens-types";
 
@@ -277,6 +278,10 @@ export function LensItemPage({ item }: { item: LensItem }) {
             </p>
           )}
         </section>
+      </Reveal>
+
+      <Reveal>
+        <PriceReports slug={item.slug} section="lenses" name={item.name} />
       </Reveal>
 
       {archiveHref && (
