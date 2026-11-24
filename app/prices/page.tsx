@@ -58,12 +58,12 @@ export default function PricesPage() {
             These are shop prices from the 1950s to the 1970s, not valuations. What a Bolex
             sells for today turns far more on condition than on model &mdash; a recently
             serviced H-16 and a seized one are the same entry here and several times apart in
-            price. Current second-hand prices are the next thing to add, and the most useful
-            thing you can do is{" "}
-            <Link href="/suggest" className="text-[var(--accent)] underline underline-offset-4">
-              tell us what you paid
-            </Link>
-            .
+            price.{" "}
+            <Link href="/worth" className="text-[var(--accent)] underline underline-offset-4">
+              How to work out what yours is worth
+            </Link>{" "}
+            is its own page, and every item page takes what you paid so the archive can
+            eventually answer it properly.
           </p>
         </aside>
       </Reveal>

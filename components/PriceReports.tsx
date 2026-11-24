@@ -34,6 +34,13 @@ import {
  * archive whose whole argument is that every figure is cited cannot
  * start printing medians of whatever strangers typed, and one mistyped
  * zero would poison an average for years.
+ *
+ * And until there is something to say, it says nothing. No heading, no
+ * empty state, no explanation of why there are no numbers — an item
+ * page is about the object, and a paragraph apologising for missing
+ * data on every one of three hundred pages is clutter that teaches the
+ * reader to skip the section for good. All that remains is one quiet
+ * line offering the form. The collecting carries on either way.
  */
 
 interface Summary {
@@ -136,17 +143,44 @@ export function PriceReports({
   }
 
   const groups = data?.groups ?? [];
+  const hasFigures = groups.length > 0;
+
+  /*
+   * Quiet by default. With nothing to show and nothing being asked,
+   * this is a single line of small type among the other utility links
+   * at the foot of the page, not a section.
+   */
+  if (!hasFigures && !formOpen && !sent) {
+    return (
+      <p className="mt-4 font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.16em] text-[var(--fg-soft)]">
+        Know what one of these goes for?{" "}
+        <button
+          type="button"
+          onClick={() => setFormOpen(true)}
+          className="text-[var(--accent)] underline underline-offset-2"
+        >
+          Add what you paid
+        </button>
+        {" · "}
+        <a href="/worth" className="underline underline-offset-2 hover:text-[var(--accent)]">
+          How to value one
+        </a>
+      </p>
+    );
+  }
 
   return (
-    <section className="rule mt-14 pt-4" aria-labelledby="reports">
-      <h2
-        id="reports"
-        className="font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.16em] text-[var(--accent)]"
-      >
-        What people have paid
-      </h2>
+    <section className={hasFigures ? "rule mt-14 pt-4" : "mt-8"} aria-labelledby="reports">
+      {hasFigures && (
+        <h2
+          id="reports"
+          className="font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.16em] text-[var(--accent)]"
+        >
+          What people have paid
+        </h2>
+      )}
 
-      {groups.length > 0 ? (
+      {hasFigures && (
         <div className="mt-3 space-y-5">
           {groups.map((group) => (
             <div key={group.currency}>
@@ -201,16 +235,6 @@ export function PriceReports({
             treat a small number of reports as exactly that.
           </p>
         </div>
-      ) : (
-        <p className="mt-3 text-sm leading-relaxed text-[var(--fg-soft)]">
-          Nobody has reported a price for the {name} yet
-          {data && data.total > 0 && data.total < (data.minToShow ?? 2)
-            ? ", or not enough to show one honestly"
-            : ""}
-          . The archive knows what Paillard charged for it new and nothing about what it trades
-          for now, because no public record of that exists: eBay keeps ninety days and Facebook
-          keeps nothing.
-        </p>
       )}
 
       {sent ? (
@@ -340,13 +364,19 @@ export function PriceReports({
           </p>
         </form>
       ) : (
-        <button
-          type="button"
-          onClick={() => setFormOpen(true)}
-          className="mt-4 border border-[var(--line)] px-3 py-1.5 font-[family-name:var(--font-mono)] text-[0.7rem] uppercase tracking-[0.1em] text-[var(--fg-soft)] transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)]"
-        >
-          Add what you paid
-        </button>
+        <p className="mt-4 font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.16em] text-[var(--fg-soft)]">
+          <button
+            type="button"
+            onClick={() => setFormOpen(true)}
+            className="text-[var(--accent)] underline underline-offset-2"
+          >
+            Add what you paid
+          </button>
+          {" · "}
+          <a href="/worth" className="underline underline-offset-2 hover:text-[var(--accent)]">
+            How to value one
+          </a>
+        </p>
       )}
     </section>
   );

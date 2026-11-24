@@ -53,6 +53,7 @@ export const NAVIGATION: readonly NavEntry[] = [
       { href: "/ephemera", label: "Ephemera", blurb: "168 pieces, by kind or year" },
       { href: "/manuals", label: "Technical bulletins", blurb: "Paillard to its dealers, 1959–62" },
       { href: "/prices", label: "Prices", blurb: "What it cost new, 1952–1979" },
+      { href: "/worth", label: "What one is worth", blurb: "How to value yours" },
       { href: "/photographs", label: "Archive photographs", blurb: "The works, from public collections" },
       { href: "/timeline", label: "Timeline", blurb: "Paillard, 1814 onwards" },
       { href: "/glossary", label: "Glossary", blurb: "The terms, defined" },
