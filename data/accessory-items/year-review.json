@@ -1,0 +1,48 @@
+{
+  "_": [
+    "Dates checked by hand, overriding what the extractor guessed.",
+    "",
+    "The extractor reads a year out of Michael's prose, and prose about old",
+    "equipment is full of years belonging to other things: the price list a",
+    "figure came from, the issue of the Bolex Reporter that announced a motor,",
+    "the camera an accessory was made to fit. A wrong date is worse than no",
+    "date on a page people use to identify what they own, so every year the",
+    "extractor proposed was read back against its sentence, and the ones it",
+    "missed were looked for.",
+    "",
+    "year: null means the prose states no date for this object, whatever",
+    "numbers appear in it. Each entry says what the sentence actually said.",
+    "Re-run scripts/extract-accessory-items.mjs after editing."
+  ],
+
+  "cinelac-film-preserver": {
+    "year": null,
+    "note": "The 1942 is the date of an article recommending it on microfilm, not of the product. Advertised through the 1940s, undated."
+  },
+  "l-1": {
+    "year": null,
+    "note": "The 1947 belongs to the later model of the L-8 camera. The case is described only as late 1940s, introduced 'shortly after'."
+  },
+
+  "eye-level-focuser-early": {
+    "year": null,
+    "note": "'Introduced in late 1948 or early 1949.' Michael would not pick between them, so neither does this."
+  },
+
+  "ambol-evn-pan-tripod": {
+    "year": 1946,
+    "note": "'The Evn-Pan was introduced in early 1946.' Missed because of the word early."
+  },
+  "eye-level-focus": {
+    "year": 1949,
+    "note": "'This updated version appeared in 1949', standard on the Deluxe and Standard from 1950."
+  },
+  "american-bolex-norwood-light-meter": {
+    "year": 1948,
+    "note": "'In 1948, the American Bolex Company began to manufacture and distribute the Norwood Director.'"
+  },
+  "mst": {
+    "year": 1967,
+    "note": "'Perfectone modified their sync motor in 1967.' That modification is the MST."
+  }
+}

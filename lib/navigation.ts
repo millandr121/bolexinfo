@@ -42,7 +42,7 @@ export const NAVIGATION: readonly NavEntry[] = [
       { href: "/cameras", label: "Cameras", blurb: "56 models, 1928–1976" },
       { href: "/projectors", label: "Projectors", blurb: "18 models" },
       { href: "/lenses", label: "Lenses", blurb: "Kern, Berthiot, Angénieux" },
-      { href: "/accessories", label: "Accessories", blurb: "Motors, cases, viewfinders" },
+      { href: "/accessories", label: "Accessories", blurb: "99 objects, by type or year" },
     ],
   },
   {

@@ -5,6 +5,8 @@ import { Reveal } from "@/components/Reveal";
 import { RecoveredContent } from "@/components/RecoveredContent";
 import { ArchiveCompare } from "@/components/ArchiveCompare";
 import { ObjectPage } from "@/components/ObjectPage";
+import { AccessoryItemPage } from "@/components/AccessoryItemPage";
+import { getAccessoryItem, getAccessoryItems } from "@/lib/accessory-items";
 import { getAddedRecord, getAddedRecords } from "@/lib/museum";
 import { getRecoveredPage, getRecoveredSection } from "@/lib/recovered";
 import { originalArchiveHref } from "@/lib/archive";
@@ -28,6 +30,7 @@ export function generateStaticParams() {
   return [
     ...getRecoveredSection("accessories").map((p) => ({ slug: p.slug })),
     ...getAddedRecords("accessories").map((m) => ({ slug: m.slug })),
+    ...getAccessoryItems().map((i) => ({ slug: i.slug })),
   ];
 }
 
@@ -42,6 +45,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: added.summary ?? `The ${added.name}, a Bolex accessory.`,
     };
   }
+  const item = getAccessoryItem(slug);
+  if (item) {
+    return {
+      title: `${item.name} · Accessories`,
+      description: item.description.slice(0, 180),
+    };
+  }
   return {};
 }
 
@@ -49,6 +59,8 @@ export default async function AccessoryPage({ params }: Props) {
   const { slug } = await params;
   const page = getRecoveredPage("accessories", slug);
   if (!page) {
+    const item = getAccessoryItem(slug);
+    if (item) return <AccessoryItemPage item={item} />;
     const added = getAddedRecord("accessories", slug);
     if (!added) notFound();
     return (

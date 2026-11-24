@@ -9,6 +9,7 @@ import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 import { getCameraRecords, getProjectorRecords } from "../lib/museum";
+import { getAccessoryItems } from "../lib/accessory-items";
 import { getRecoveredSection } from "../lib/recovered";
 import { getLinkDirectory, getUpdates } from "../lib/directory";
 
@@ -68,6 +69,24 @@ for (const m of getProjectorRecords()) {
     section: "projectors",
     keywords: `${m.format ?? ""} projector ${m.specs.map((s) => s.label).join(" ")}`,
     summary: m.summary ?? undefined,
+  });
+}
+
+/*
+ * Every accessory as its own entry. This is the point of having broken the
+ * decade pages into objects: someone searching "Rexofader" or "Octameter"
+ * should land on the thing, not on the page that happens to mention it. The
+ * year goes in the keywords so a search for 1962 finds what was made then.
+ */
+for (const item of getAccessoryItems()) {
+  docs.push({
+    title: item.name,
+    href: `/accessories/${item.slug}`,
+    section: "accessories",
+    keywords: [item.type, item.year ?? "", item.decade ? `${item.decade}s` : "", ...item.images.map((i) => i.alt)]
+      .filter(Boolean)
+      .join(" "),
+    summary: item.description.slice(0, 160),
   });
 }
 

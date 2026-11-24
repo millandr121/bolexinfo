@@ -16,6 +16,7 @@
 
 import { getCameraRecords, getProjectorRecords, type ModelRecord } from "./museum";
 import { accessoryTypeOf, getRecoveredSection, type RecoveredPage } from "./recovered";
+import { getAccessoryItems, ACCESSORY_TYPES } from "./accessory-items";
 import { thumbnailFor } from "./thumbnails";
 
 /**
@@ -138,13 +139,41 @@ function recoveredSection(
   return { id, label, href: `/${id}`, groups: groups.filter((g) => g.items.length > 0) };
 }
 
+/**
+ * Accessories, one object per card.
+ *
+ * Until the decade pages were broken apart this walked "Motors 1950s" and
+ * "Cases 1940s", which made the carousel the only place on the site where
+ * the shelf held pages rather than things. Now it holds the 98 objects,
+ * grouped by type like the index, with the date under each.
+ */
+function accessorySection(): BrowseSection {
+  const items = getAccessoryItems();
+  const groups = ACCESSORY_TYPES.map((type) => ({
+    id: type,
+    label: type,
+    items: items
+      .filter((i) => i.type === type)
+      .sort((a, b) => (a.year ?? a.decade ?? 9999) - (b.year ?? b.decade ?? 9999) || a.name.localeCompare(b.name))
+      .map((i) => ({
+        slug: i.slug,
+        label: i.name,
+        href: `/accessories/${i.slug}`,
+        thumb: i.images[0]?.src,
+        note: i.year ? String(i.year) : i.decade ? `${i.decade}s` : undefined,
+      })),
+  })).filter((g) => g.items.length > 0);
+
+  return { id: "accessories", label: "Accessories", href: "/accessories", groups };
+}
+
 /** Everything, in nav order. */
 export function getBrowseIndex(): BrowseSection[] {
   return [
     modelSection("cameras", "Cameras", getCameraRecords()),
     modelSection("projectors", "Projectors", getProjectorRecords()),
     recoveredSection("lenses", "Lenses", (p) => makerOf(p.slug)),
-    recoveredSection("accessories", "Accessories", (p) => accessoryTypeOf(p.slug)),
+    accessorySection(),
   ].filter((s) => s.groups.length > 0);
 }
 
