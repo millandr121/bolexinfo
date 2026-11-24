@@ -215,3 +215,74 @@ export function getPriceSeries(): PriceSeries[] {
 
   return series.sort((a, b) => b.span - a.span || b.points.length - a.points.length);
 }
+
+export interface PricedItem {
+  name: string;
+  slug: string;
+  section: PricePoint["section"];
+  /** Where the item's own page is, for the link. */
+  href: string;
+  /** Every price, oldest first. */
+  prices: PricePoint[];
+  /** The earliest and latest, for the one-line summary. */
+  first: PricePoint;
+  last: PricePoint;
+}
+
+/**
+ * Everything with a price, grouped, for someone looking up one thing.
+ *
+ * The chart answers "how did prices move"; this answers "what did mine
+ * cost", which is the question people actually arrive with. Camera and
+ * projector outfits collapse into one entry per model, with each
+ * combination listed inside it, because a reader looking up an H-16 De
+ * luxe wants the model and then the variants, not nine separate rows
+ * competing in a search.
+ */
+export function getPricedItems(): PricedItem[] {
+  const bySlug = new Map<string, PricePoint[]>();
+  for (const p of getPricePoints()) {
+    const list = bySlug.get(p.slug) ?? [];
+    list.push(p);
+    bySlug.set(p.slug, list);
+  }
+
+  const items: PricedItem[] = [];
+  for (const [slug, prices] of bySlug) {
+    prices.sort((a, b) => a.year - b.year || a.nominal - b.nominal);
+    const first = prices[0]!;
+    /*
+     * Model entries take the model's name rather than the first
+     * variant's printed line, which would read "H-16 De luxe with
+     * Switar 25mm F:1.4, Yvar 16mm..." as the heading.
+     */
+    const isModel = first.section === "cameras" || first.section === "projectors";
+    items.push({
+      name: isModel ? modelName(slug) : first.name,
+      slug,
+      section: first.section,
+      href: `/${first.section}/${slug}`,
+      prices,
+      first,
+      last: prices[prices.length - 1]!,
+    });
+  }
+
+  return items.sort((a, b) => a.name.localeCompare(b.name));
+}
+
+/** "h16deluxe" → "H-16 De luxe". Only the eight models that carry prices. */
+function modelName(slug: string): string {
+  return (
+    {
+      h16deluxe: "H-16 De luxe",
+      h16leader: "H-16 Leader",
+      h8deluxe: "H-8 De luxe",
+      h8leader: "H-8 Leader",
+      l8lm: "L-8 (late model)",
+      m8: "M-8 projector",
+      m8r: "M-8R projector",
+      "model-g": "Model G projector (the G8-16)",
+    }[slug] ?? slug
+  );
+}
