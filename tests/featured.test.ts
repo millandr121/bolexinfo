@@ -155,8 +155,18 @@ function spelled(word: string): number {
     .reduce((total, part) => total + (NUMBER_WORDS[part] ?? Number.NaN), 0);
 }
 
+/*
+ * Read from the source, not from out/.
+ *
+ * Every other built-page test here skips when there is no build, and CI
+ * runs the tests before the build, so a guard would have meant this one
+ * never ran where it matters. The sentence lives in app/page.tsx and the
+ * words are what go stale, so reading the source checks the same thing
+ * and checks it on every push. This test failed in CI exactly once, for
+ * exactly this reason, which is how it came to be written this way.
+ */
 test("the hero's spelled-out counts still match the catalogue", () => {
-  const html = fs.readFileSync("out/index.html", "utf8");
+  const html = fs.readFileSync("app/page.tsx", "utf8");
   const sentence = /([A-Za-z-]+) cameras, ([a-z-]+) projectors/.exec(html);
   assert.ok(sentence, "the hero sentence giving the counts in words has moved or changed shape");
 
