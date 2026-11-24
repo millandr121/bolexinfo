@@ -89,6 +89,39 @@ export interface ModelRecord {
   recovered: boolean;
   /** Cited sources, for an entry that was researched rather than recovered. */
   sources?: Array<{ title: string; url?: string; note?: string }>;
+  /**
+   * What it cost, from a dated catalogue. Cameras were sold as outfits
+   * rather than bodies, so this is a list of combinations and not one
+   * figure.
+   */
+  catalogue?: CataloguePrices;
+}
+
+export interface CataloguePrices {
+  year: number;
+  month?: string;
+  /** Pacific Rim's id for the scan, for the citation link. */
+  doc: string;
+  note?: string;
+  variants: Array<{ asPrinted: string; price: string }>;
+}
+
+/**
+ * Prices read out of a dated catalogue and matched to models by hand.
+ *
+ * Kept beside the seed data rather than in it because it comes from a
+ * different place and carries its own citation: see
+ * data/models/catalogue-prices.json for which document, and for the two
+ * matches that are judgement calls.
+ */
+function readCataloguePrices(): Map<string, CataloguePrices> {
+  const raw = readJson<Record<string, unknown>>(dataDir("models", "catalogue-prices.json"));
+  const out = new Map<string, CataloguePrices>();
+  for (const [slug, value] of Object.entries(raw ?? {})) {
+    if (slug === "_") continue;
+    out.set(slug, value as CataloguePrices);
+  }
+  return out;
 }
 
 // ————————————————————————————————————————————————————————————————
@@ -245,6 +278,7 @@ function headerFacts(originalPath?: string): { format?: string; introduced?: num
 }
 
 function reconcile(seedFile: string, extractedDir: string): ModelRecord[] {
+  const prices = readCataloguePrices();
   const seedDoc = readJson<{ models?: SeedEntry[] }>(dataDir("models", seedFile));
   const seed = new Map((seedDoc?.models ?? []).map((m) => [m.slug, m]));
   const extracted = readExtractedDir(extractedDir);
@@ -280,10 +314,61 @@ function reconcile(seedFile: string, extractedDir: string): ModelRecord[] {
       capturedAt: e?.capturedAt,
       recovered: Boolean(e),
       ...(s?.sources?.length ? { sources: s.sources } : {}),
+      ...(prices.has(slug) ? { catalogue: prices.get(slug) } : {}),
     });
   }
 
   return records.sort((a, b) => Number(b.recovered) - Number(a.recovered) || a.name.localeCompare(b.name));
+}
+
+/**
+ * Entries this archive added, in a section the original site organised some
+ * other way.
+ *
+ * Cameras and projectors were a page per model, so a new one slots straight
+ * into `reconcile` above. Accessories were not: Michael grouped them by type
+ * and decade, so "Motors, 1950s" is a page and the Unimotor is a paragraph
+ * inside it. There was therefore nowhere to put a thing like the Bolex
+ * Stereo, which is one object with its own history and no decade page to
+ * belong to.
+ *
+ * Rather than restructure what he wrote, which would mean deciding on his
+ * behalf how his pages should have been arranged, added items run alongside
+ * the recovered ones as their own track. The decade pages stay exactly as
+ * they are; new objects get a page each, and the index says plainly which is
+ * which. That also answers the thing we actually want this site to do, which
+ * is to keep taking in Bolex equipment the original never covered.
+ *
+ * Seed-only by definition: a slug that the pipeline also recovered is not an
+ * addition, it is a recovered page, and is left to `reconcile`.
+ */
+export function getAddedRecords(section: "accessories" | "lenses"): ModelRecord[] {
+  const seedDoc = readJson<{ models?: SeedEntry[] }>(dataDir("models", `${section}.json`));
+  const recovered = readExtractedDir(section);
+
+  return (seedDoc?.models ?? [])
+    .filter((s) => !recovered.has(s.slug))
+    .map((s) => ({
+      slug: s.slug,
+      name: s.name,
+      format: s.format,
+      introduced: s.introduced ?? null,
+      summary: s.summary,
+      specs: [],
+      images: sourcedImages(s.images),
+      serialRows: [],
+      originalPath: s.originalPath,
+      recovered: false,
+      ...(s.sources?.length ? { sources: s.sources } : {}),
+    }))
+    .sort((a, b) => (a.introduced ?? 9999) - (b.introduced ?? 9999) || a.name.localeCompare(b.name));
+}
+
+export function getAddedRecord(
+  section: "accessories" | "lenses",
+  slug: string,
+): ModelRecord | undefined {
+  return getAddedRecords(section).find((m) => m.slug === slug);
 }
 
 export function getCameraRecords(): ModelRecord[] {

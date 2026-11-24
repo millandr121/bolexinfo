@@ -307,6 +307,51 @@ export function ObjectPage({
         )}
         </p>
 
+        {/*
+         * What it cost, from Paillard's own dated price list.
+         *
+         * A list rather than a figure because these were sold as outfits:
+         * the body, a lens, sometimes three lenses and a case. The spread
+         * is the point. An H-16 De luxe with a Lytar was $372.75 and the
+         * same camera with a Switar f/1.4 was $496.50, so the glass was a
+         * third of what a buyer paid.
+         */}
+        {model.catalogue && (
+          <section className="rule mt-12 pt-4" aria-labelledby="catalogue-prices">
+            <h2
+              id="catalogue-prices"
+              className="font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.16em] text-[var(--accent)]"
+            >
+              In the {model.catalogue.month ? `${model.catalogue.month} ` : ""}
+              {model.catalogue.year} Bolex retail price list
+            </h2>
+            <ul className="mt-3 space-y-1.5">
+              {model.catalogue.variants.map((variant) => (
+                <li
+                  key={variant.asPrinted}
+                  className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-0.5 border-b border-[var(--line)] pb-1.5 font-[family-name:var(--font-mono)] text-[0.72rem] leading-relaxed"
+                >
+                  <span className="text-[var(--fg-soft)]">{variant.asPrinted}</span>
+                  <span className="text-[var(--fg)]">{variant.price}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-3 font-[family-name:var(--font-mono)] text-[0.66rem] leading-relaxed text-[var(--fg-soft)]">
+              Prices include tax where applicable, as the list puts it. Scanned by Pacific Rim
+              Camera; the page was read by eye rather than trusted to OCR.
+              {model.catalogue.note ? ` ${model.catalogue.note}` : ""}{" "}
+              <a
+                href={`https://www.pacificrimcamera.com/rl/${model.catalogue.doc}/${model.catalogue.doc}.pdf`}
+                target="_blank"
+                rel="noreferrer nofollow"
+                className="text-[var(--accent)] underline underline-offset-4"
+              >
+                the catalogue ↗
+              </a>
+            </p>
+          </section>
+        )}
+
         {/* Carries the page with it, so the form opens knowing what it is about. */}
         <p className="mt-3 font-[family-name:var(--font-mono)] text-xs leading-relaxed text-[var(--fg-soft)]">
           Something wrong, or something to add?{" "}

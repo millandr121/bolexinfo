@@ -9,6 +9,9 @@ import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 import { getCameraRecords, getProjectorRecords } from "../lib/museum";
+import { getAccessoryItems } from "../lib/accessory-items";
+import { getLensItems } from "../lib/lens-items";
+import { getEphemeraItems } from "../lib/ephemera-items";
 import { getRecoveredSection } from "../lib/recovered";
 import { getLinkDirectory, getUpdates } from "../lib/directory";
 
@@ -68,6 +71,65 @@ for (const m of getProjectorRecords()) {
     section: "projectors",
     keywords: `${m.format ?? ""} projector ${m.specs.map((s) => s.label).join(" ")}`,
     summary: m.summary ?? undefined,
+  });
+}
+
+/*
+ * Every accessory as its own entry. This is the point of having broken the
+ * decade pages into objects: someone searching "Rexofader" or "Octameter"
+ * should land on the thing, not on the page that happens to mention it. The
+ * year goes in the keywords so a search for 1962 finds what was made then.
+ */
+for (const item of getAccessoryItems()) {
+  docs.push({
+    title: item.name,
+    href: `/accessories/${item.slug}`,
+    section: "accessories",
+    keywords: [item.type, item.year ?? "", item.decade ? `${item.decade}s` : "", ...(item.codes ?? []), ...item.images.map((i) => i.alt)]
+      .filter(Boolean)
+      .join(" "),
+    summary: item.description.slice(0, 160),
+  });
+}
+
+/*
+ * Every lens as its own entry, with its codes in the keywords. Someone
+ * holding a lens reads five letters off the barrel; typing SWINQ should
+ * land on that lens, which is the whole reason the codes were parsed out.
+ */
+for (const lens of getLensItems()) {
+  docs.push({
+    title: lens.name,
+    href: `/lenses/${lens.slug}`,
+    section: "lenses",
+    keywords: [
+      ...lens.codes,
+      lens.maker,
+      lens.series ?? "",
+      lens.focalLength ?? "",
+      lens.aperture ?? "",
+      lens.mount ? `${lens.mount} mount` : "",
+      lens.gauge ?? "",
+      lens.year ?? "",
+      lens.decade ? `${lens.decade}s` : "",
+    ]
+      .filter(Boolean)
+      .join(" "),
+    summary: lens.description.slice(0, 160),
+  });
+}
+
+/* Ephemera with its year in the keywords, so a search for 1944 finds
+ * the advertising from 1944. */
+for (const piece of getEphemeraItems()) {
+  docs.push({
+    title: piece.title,
+    href: `/ephemera/${piece.slug}`,
+    section: "ephemera",
+    keywords: [piece.type, piece.year ?? "", piece.month ?? "", piece.decade ? `${piece.decade}s` : ""]
+      .filter(Boolean)
+      .join(" "),
+    summary: piece.description.slice(0, 160),
   });
 }
 

@@ -17,8 +17,15 @@
  *
  * It must be set up to forward before this is any use. Cloudflare Email
  * Routing does it free on a domain already served by Cloudflare Pages.
+ *
+ * This was `suggestions@` for a while, which was the better name and which
+ * nothing delivered: the routing rule that exists is for `mail@`. An address
+ * that bounces on a public page is worse than a plain one that works, so it
+ * is `mail@` until a second rule exists. Adding `suggestions@` in Cloudflare
+ * costs nothing and takes a minute, and this line can change back the moment
+ * it is there.
  */
-export const SUGGESTIONS_EMAIL = "suggestions@bolexcollector.org";
+export const SUGGESTIONS_EMAIL = "mail@bolexcollector.org";
 
 export type SuggestionKind = "correction" | "missing" | "media" | "knowledge";
 

@@ -130,18 +130,54 @@ test("the front page leads with the lookup, not with statistics", { skip: !fs.ex
 });
 
 /*
- * The hero says "Fifty-four cameras, seventeen projectors" in words, because
- * a sentence reads better there than a row of figures. Words cannot be
- * derived from the data the way a rendered count can, so this is what stops
- * them going quietly stale as the catalogue grows.
+ * The hero gives its counts in words, because a sentence reads better
+ * there than a row of figures. Words cannot be derived from the data the
+ * way a rendered count can, so this reads the words back out of the
+ * built page and turns them into numbers, rather than carrying a copy of
+ * the numbers here. A test holding its own copy of the answer goes stale
+ * in exactly the same way the page does, which is how this one came to
+ * be asserting fifty-five after the page had moved on.
+ */
+const NUMBER_WORDS: Record<string, number> = {
+  ten: 10, eleven: 11, twelve: 12, thirteen: 13, fourteen: 14, fifteen: 15,
+  sixteen: 16, seventeen: 17, eighteen: 18, nineteen: 19, twenty: 20,
+  thirty: 30, forty: 40, fifty: 50, sixty: 60, seventy: 70, eighty: 80,
+  ninety: 90, one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7,
+  eight: 8, nine: 9,
+};
+
+/** "Fifty-six" or "eighteen" to a number. Tens and units only, which is
+ *  all the catalogue will plausibly need. */
+function spelled(word: string): number {
+  return word
+    .toLowerCase()
+    .split("-")
+    .reduce((total, part) => total + (NUMBER_WORDS[part] ?? Number.NaN), 0);
+}
+
+/*
+ * Read from the source, not from out/.
+ *
+ * Every other built-page test here skips when there is no build, and CI
+ * runs the tests before the build, so a guard would have meant this one
+ * never ran where it matters. The sentence lives in app/page.tsx and the
+ * words are what go stale, so reading the source checks the same thing
+ * and checks it on every push. This test failed in CI exactly once, for
+ * exactly this reason, which is how it came to be written this way.
  */
 test("the hero's spelled-out counts still match the catalogue", () => {
-  const cameras = getCameraRecords().length;
-  const projectors = getProjectorRecords().length;
-  assert.equal(cameras, 55, `the front page says "Fifty-five cameras" but there are ${cameras}`);
+  const html = fs.readFileSync("app/page.tsx", "utf8");
+  const sentence = /([A-Za-z-]+) cameras, ([a-z-]+) projectors/.exec(html);
+  assert.ok(sentence, "the hero sentence giving the counts in words has moved or changed shape");
+
   assert.equal(
-    projectors,
-    17,
-    `the front page says "seventeen projectors" but there are ${projectors}`,
+    spelled(sentence[1]!),
+    getCameraRecords().length,
+    `the front page says "${sentence[1]} cameras" but there are ${getCameraRecords().length}`,
+  );
+  assert.equal(
+    spelled(sentence[2]!),
+    getProjectorRecords().length,
+    `the front page says "${sentence[2]} projectors" but there are ${getProjectorRecords().length}`,
   );
 });

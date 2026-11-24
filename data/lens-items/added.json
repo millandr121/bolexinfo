@@ -1,0 +1,70 @@
+{
+  "_": [
+    "Lenses the original site never listed, found in Paillard's own",
+    "documents while matching codes and prices to the ones it did.",
+    "",
+    "These are not recovered from BolexCollector.com. Each exists here",
+    "because a dated Paillard price list or catalogue names it, prices it",
+    "and gives its code, and the archive had no page for it. The entry",
+    "says no more than the document does, which is the rule: the",
+    "description below each is what can be read off the page and nothing",
+    "inferred.",
+    "",
+    "Merged into items.json by scripts/extract-lens-items.mjs and marked",
+    "added: true, so the page can say plainly that this one is ours."
+  ],
+
+  "cinet": {
+    "name": "Cinor 25mm f/1.8 (CINET)",
+    "maker": "SOM Berthiot",
+    "series": "Cinor",
+    "focalLength": "25mm",
+    "aperture": "f/1.8",
+    "codes": ["CINET"],
+    "mount": "C",
+    "gauge": "16mm",
+    "decade": 1960,
+    "year": null,
+    "description": "A standard focal length lens for the H-16, listed by Paillard under Standard Lenses at $70.00 in the dealer price list of May 1967. Nothing else about it has been established here. The archive holds a Cinor 25mm f/0.95 and a Cinor 25mm f/1.4 RX, and this is neither of them.",
+    "listings": [
+      { "price": "$70.00", "date": "May 1967", "doc": "04933", "asPrinted": "Cinor 25mm f/1.8" }
+    ]
+  },
+  "lyset": {
+    "name": "Cinor 16mm f/2.8 (LYSET)",
+    "maker": "SOM Berthiot",
+    "series": "Cinor",
+    "focalLength": "16mm",
+    "aperture": "f/2.8",
+    "codes": ["LYSET"],
+    "mount": "C",
+    "gauge": "16mm",
+    "decade": 1960,
+    "year": null,
+    "description": "A wide angle lens for the H-16, listed by Paillard under Wide Angle Lenses at $59.50 in the dealer price list of May 1967, beside the Switar 10mm and 16mm. The archive has no other Cinor at this focal length.",
+    "listings": [
+      { "price": "$59.50", "date": "May 1967", "doc": "04933", "asPrinted": "Cinor 16mm f/2.8" }
+    ]
+  },
+  "pizar-12-5mm-f-1-9-1952": {
+    "name": "Pizar 12.5mm f/1.9",
+    "maker": "Kern-Paillard",
+    "series": "Pizar",
+    "focalLength": "12.5mm",
+    "aperture": "f/1.9",
+    "codes": [],
+    "mount": "D",
+    "gauge": "8mm",
+    "decade": 1950,
+    "year": null,
+    "description": "An 8mm lens in standard A.S.A. mount, $95.75 in the Bolex retail price list of February 1952, where it sits between the Switar 12.5mm f/1.5 at $120.50 and the Lytar at $50.00. The same list prices an H-8 De luxe fitted with it at $413.75 and an L-8 outfit at $172.00, so it was a regular factory option rather than a rarity. The archive holds Pizars at 5.5mm, 25mm, 26mm and 50mm, but had none at 12.5mm.",
+    "catalogue": {
+      "year": 1952,
+      "month": "February",
+      "doc": "01775",
+      "offeredFor": "the Bolex H-8 and the L-8",
+      "asPrinted": "Pizar 12.5mm (½\") F:1.9, Standard A.S.A. mount",
+      "price": "$95.75"
+    }
+  }
+}

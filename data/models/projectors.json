@@ -91,6 +91,25 @@
       "originalPath": "/projectors/s321.html",
       "summary": null,
       "recovery": "pending"
+    },
+    {
+      "slug": "sp80",
+      "name": "SP 80",
+      "format": "Super 8",
+      "introduced": 1973,
+      "summary": "A Super 8 and Single-8 projector with magnetic sound it can both record and play back, with automatic threading, forward and reverse running, 18 and 24 frames a second and 600ft reels. From after Eumig acquired Bolex in 1969, and built on Eumig's own mechanism rather than a Sainte-Croix design. A variant was sold as the SP 80 Special.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "Dealer and collector listings, read November 2026",
+          "note": "Everything above comes from people selling or restoring the machine, not from Paillard or Eumig. They agree on the format, the sound, the speeds and the reel size, and date it to 1973 to 1975. They disagree on which Eumig chassis underlies it, the 700 or the 800 series, so this entry does not say. No manufacturer document has been read, and one is wanted."
+        },
+        {
+          "title": "Eumig acquired Bolex in 1969",
+          "url": "https://en.wikipedia.org/wiki/Eumig",
+          "note": "Which is the context for a Bolex-badged projector built on an Austrian mechanism."
+        }
+      ]
     }
   ]
 }

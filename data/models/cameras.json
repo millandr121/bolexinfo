@@ -277,6 +277,25 @@
           "note": "secondary and not confirmed here: accounts place it against the Arriflex 16 BL. No primary source for the year has been found"
         }
       ]
+    },
+    {
+      "slug": "5120",
+      "name": "5120",
+      "format": "Super 8",
+      "introduced": 1976,
+      "summary": "The top of the Bolex Sound-8 range: a Super 8 sound camera with a 12-to-1 variable speed power Macrozoom lens, electronic through-the-lens metering, automatic or manual sound level control, in-camera fades, a built-in intervalometer, electronically controlled filming speeds and an electromagnetic release. Sold alongside the 581, with an 8-to-1 zoom, and the 551XL, with an f/1.2 lens for low light.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "Bolex 5120 dealer notebook page, Ehrenreich Photo-Optical Industries",
+          "url": "https://www.pacificrimcamera.com/rl/02239/02239.pdf",
+          "note": "The distributor's own sheet, and the source of every specification here. Its literature code is P-76, which dates it to 1976; EPOI of Woodbury, New York distributed Bolex in the United States."
+        },
+        {
+          "title": "Not a projector",
+          "note": "This archive's own backlog had the 5120 down as a projector. The dealer sheet settles it: it is a camera, and the line it heads is called Sound-8."
+        }
+      ]
     }
   ]
 }

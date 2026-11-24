@@ -1,0 +1,22 @@
+{
+  "_": [
+    "Hand corrections to the dates extracted for the ephemera.",
+    "",
+    "Empty, so far, which is worth recording rather than leaving implied.",
+    "The dates come from Michael's own description of each piece, which is",
+    "his summary of the paper itself and is reliable: 'a 1945 magazine",
+    "advertisement', 'March 1944 magazine ad'. Only where the description",
+    "gives nothing does the extractor look at the body, and then only for",
+    "forms about the piece rather than its subject.",
+    "",
+    "All six dates that came from a body rather than a description were",
+    "read back against the page. All six were right, including the one",
+    "that looked wrong: the Sonorizer brochure's text opens 'Although it",
+    "wasn't commercially available until 1960', but goes on to say the",
+    "Sonorizer 'was advertised in this brochure from 1959'. 1959 is the",
+    "brochure; 1960 is the product.",
+    "",
+    "Add entries as {\"slug\": {\"year\": null, \"note\": \"why\"}}.",
+    "Re-run npx tsx scripts/extract-ephemera-items.ts after editing."
+  ]
+}

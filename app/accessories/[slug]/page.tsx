@@ -4,6 +4,10 @@ import { notFound } from "next/navigation";
 import { Reveal } from "@/components/Reveal";
 import { RecoveredContent } from "@/components/RecoveredContent";
 import { ArchiveCompare } from "@/components/ArchiveCompare";
+import { ObjectPage } from "@/components/ObjectPage";
+import { AccessoryItemPage } from "@/components/AccessoryItemPage";
+import { getAccessoryItem, getAccessoryItems } from "@/lib/accessory-items";
+import { getAddedRecord, getAddedRecords } from "@/lib/museum";
 import { getRecoveredPage, getRecoveredSection } from "@/lib/recovered";
 import { originalArchiveHref } from "@/lib/archive";
 import { getBrowseIndex } from "@/lib/browse";
@@ -15,21 +19,57 @@ interface Props {
 
 export const dynamicParams = false;
 
+/*
+ * Two kinds of page live under this route. The recovered ones are Michael's
+ * own, a page per type and decade. The added ones are single objects this
+ * archive researched, which the original site had nowhere to put. They share
+ * a URL space because a reader does not care which is which, and the page
+ * itself says so where it matters.
+ */
 export function generateStaticParams() {
-  return getRecoveredSection("accessories").map((p) => ({ slug: p.slug }));
+  return [
+    ...getRecoveredSection("accessories").map((p) => ({ slug: p.slug })),
+    ...getAddedRecords("accessories").map((m) => ({ slug: m.slug })),
+    ...getAccessoryItems().map((i) => ({ slug: i.slug })),
+  ];
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const page = getRecoveredPage("accessories", slug);
-  if (!page) return {};
-  return { title: `${page.title} · Accessories`, description: page.description };
+  if (page) return { title: `${page.title} · Accessories`, description: page.description };
+  const added = getAddedRecord("accessories", slug);
+  if (added) {
+    return {
+      title: `${added.name} · Accessories`,
+      description: added.summary ?? `The ${added.name}, a Bolex accessory.`,
+    };
+  }
+  const item = getAccessoryItem(slug);
+  if (item) {
+    return {
+      title: `${item.name} · Accessories`,
+      description: item.description.slice(0, 180),
+    };
+  }
+  return {};
 }
 
 export default async function AccessoryPage({ params }: Props) {
   const { slug } = await params;
   const page = getRecoveredPage("accessories", slug);
-  if (!page) notFound();
+  if (!page) {
+    const item = getAccessoryItem(slug);
+    if (item) return <AccessoryItemPage item={item} />;
+    const added = getAddedRecord("accessories", slug);
+    if (!added) notFound();
+    return (
+      <ObjectPage
+        model={added}
+        section={{ label: "Accessories", href: "/accessories" }}
+      />
+    );
+  }
   const archiveHref = originalArchiveHref(page.originalPath);
 
   return (

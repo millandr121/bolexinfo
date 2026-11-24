@@ -10,7 +10,7 @@ Reachability was tested on 2026-11-18 from this project's cloud session.
 
 | Source | Holds | Reachable | Terms |
 |---|---|---|---|
-| [pacificrimcamera.com](https://www.pacificrimcamera.com/rl/rlBolex.htm) | **83 Bolex PDFs** — 72 misc (brochures, instruction books, catalogues 1946–1965, *Bolex Reporter* 1967–72, 29 technical bulletins), 8 price lists, 3 projector | yes | none stated; describes itself as "an online library of photo related PDF files" |
+| [pacificrimcamera.com](https://www.pacificrimcamera.com/rl/rlBolex.htm) | **83 Bolex PDFs** — 72 misc (brochures, instruction books, catalogues 1946–1965, *Bolex Reporter* 1967–72, 16 technical bulletins), 8 price lists, 3 projector | yes | none stated; describes itself as "an online library of photo related PDF files" |
 | [camera-wiki.org](https://camera-wiki.org/wiki/Bolex) | encyclopaedia entries | yes | **GFDL 1.3** — reusable with attribution and share-alike |
 | [filmatlas.com](https://www.filmatlas.com/entry/150) | Bolex Stereo / Triorama, detailed | yes | no licence stated; cite Hess, Hillary (2024), *Film Atlas*, FIAF / George Eastman Museum. Some images credited individually |
 | [pathefilm.uk](https://pathefilm.uk/95gear/95gearBolex.htm) | 9.5mm gear, Pathé side | yes | none stated |
@@ -74,11 +74,30 @@ Picked out of the Pacific Rim list because they close a known gap:
 
 - `rl/00936/00936.pdf` — **Bolex 16 Pro Sales Brochure**. Primary source,
   Paillard Inc., dating code 7/70. Read; see findings/bolex-16-pro.md.
-- `rl/01775`, `01859`, `02027`, `04916` — Bolex catalogues, 1946, Feb 1952,
-  Nov 1952, Feb 1965. Useful for dating models the archive left undated.
+- `rl/02239/02239.pdf` — **Bolex 5120 dealer sheet**, Ehrenreich
+  Photo-Optical Industries, code P-76. Read. Settles that the 5120 is a
+  Super 8 sound camera, not a projector, and heads the Sound-8 line above
+  the 581 and the 551XL.
+- Bolex catalogues, paired to the right ids. This file previously listed
+  them in the wrong order, which would have dated a Feb 1952 catalogue to
+  1946 and backdated everything read out of it by six years:
+  - `rl/02027` — **1946**. Image-only scan, 122 MB.
+  - `rl/01775` — **Feb 1952**. Image-only, 78 MB; OCR'd, and its pages 21
+    and 22 are a full Bolex retail price list.
+  - `rl/01859` — **Nov 1952**. Carries text.
+  - `rl/04916` — **Feb 1965**. Carries text.
 - "Bolex Sterero Instruction Book" (their spelling) — the Stereo/Triorama.
-- "Bolex SP8/SP80 Instruction Book" — projectors absent from this site.
-- 29 technical bulletins, 1959–1962 — repair and service material.
+- The SP 80 is **not on Pacific Rim**, despite an earlier note here saying
+  an "SP8/SP80 Instruction Book" was listed. It is not. The SP59 to SP62
+  codes on that site are its own bulletin numbering, not model names. The
+  SP 80 entry rests on dealer and collector listings only, and a
+  manufacturer document for it is still wanted.
+- **15 technical bulletins, 1959–1962, downloaded and hosted** at /manuals.
+  Not repair material, which is what this file and the roadmap both said:
+  they are dealer literature. Lens charts, accessories, the Tripod H, the
+  Pan Cinors, anamorphic projection, photomicrography. The count of 29 was
+  wrong too. The series runs to at least No. 36, Pacific Rim holds 16, and
+  one of those (No. 3, `rl/02108/02108.pdf`) 404s on their own server.
 
 ## How material gets here
 

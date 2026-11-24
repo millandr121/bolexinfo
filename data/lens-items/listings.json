@@ -1,0 +1,341 @@
+{
+  "_": [
+    "Lenses found in Paillard's own dated dealer price lists, hand-matched.",
+    "",
+    "Source: the Bolex dealer price lists scanned by Pacific Rim Camera.",
+    "These are primary documents. Each gives a lens, Paillard's five-letter",
+    "code and a price on a stated date, which is harder evidence than",
+    "anything on the open web: a price in the May 1967 dealer list proves",
+    "the lens was on sale in May 1967.",
+    "",
+    "Matched by hand, not by script. The scans are OCR'd and the columns",
+    "interleave, so a code can end up printed next to the previous entry's",
+    "description. Every row here was read back against the page. asPrinted",
+    "is the document's own wording, kept so the match can be re-checked",
+    "without opening the PDF.",
+    "",
+    "addCodes adds a code our extraction did not have, because Michael did",
+    "not give one in the lens's name. Those are the valuable ones: a code is",
+    "what is engraved on the barrel.",
+    "",
+    "Re-run scripts/extract-lens-items.mjs after editing."
+  ],
+  "macro-switar-50mm-f-1-4-rx": {
+    "addCodes": [
+      "DACRO"
+    ],
+    "listings": [
+      {
+        "price": "$200.00",
+        "date": "May 1967",
+        "doc": "04933",
+        "asPrinted": "Macro-Switar 50mm f/1.4 Rx"
+      }
+    ]
+  },
+  "macro-switar-12-5-f-1-3-h8-rx": {
+    "addCodes": [
+      "DAREX"
+    ],
+    "listings": [
+      {
+        "price": "$115.00",
+        "date": "March 1965",
+        "doc": "04929",
+        "asPrinted": "Macro-Switar 12.5mm f/1.3Rx"
+      }
+    ]
+  },
+  "macro-switar-36mm-f-1-4-h8-rx": {
+    "addCodes": [
+      "DAROU"
+    ],
+    "listings": [
+      {
+        "price": "$119.50",
+        "date": "March 1965",
+        "doc": "04929",
+        "asPrinted": "Macro-Switar 36mm f/1.4Rx"
+      }
+    ]
+  },
+  "switar-5-5mm-f-1-6-h8-rx": {
+    "addCodes": [
+      "DARIF"
+    ],
+    "listings": [
+      {
+        "price": "$129.50",
+        "date": "March 1965",
+        "doc": "04929",
+        "asPrinted": "Switar 5.5mm f/1.6Rx"
+      }
+    ]
+  },
+  "macro-yvar-100mm-f-2-8": {
+    "addCodes": [
+      "HIENT"
+    ],
+    "listings": [
+      {
+        "price": "$109.50",
+        "date": "March 1965",
+        "doc": "04929",
+        "asPrinted": "Macro-Yvar 100mm f/2.8Rx"
+      }
+    ]
+  },
+  "macro-yvar-150mm-f-3-3": {
+    "addCodes": [
+      "HIONG"
+    ],
+    "listings": [
+      {
+        "price": "$169.50",
+        "date": "March 1965",
+        "doc": "04929",
+        "asPrinted": "Macro-Yvar 150mm f/3.3Rx"
+      },
+      {
+        "price": "$261.50",
+        "date": "February 1972",
+        "doc": "04932",
+        "asPrinted": "Macro-Yvar 150mm f/3.3 Preset"
+      },
+      {
+        "price": "$590.00",
+        "date": "November 1979",
+        "doc": "02209",
+        "asPrinted": "Macro-Yvar 150mm f/3.3 Preset"
+      }
+    ],
+    "note": "The archive carries two entries for the Macro Yvar 150mm f/3.3, this one and a later redesign. The code and price are attached here, to the 1962 original, because the 1965 list predates the redesign."
+  },
+  "pan-cinor-40-rx": {
+    "addCodes": [
+      "PAHUX"
+    ],
+    "listings": [
+      {
+        "price": "$215.00",
+        "date": "March 1965",
+        "doc": "04929",
+        "asPrinted": "Zoom: Pan Cinor 40 f/1.9Rx"
+      }
+    ]
+  },
+  "vario-switar-36ee-8mm-36mm-f-1-9": {
+    "addCodes": [
+      "VASOT"
+    ],
+    "listings": [
+      {
+        "price": "$375.00",
+        "date": "March 1965",
+        "doc": "04929",
+        "asPrinted": "Zoom: Varioswitar 36 EE f/1.9"
+      }
+    ]
+  },
+  "vario-switar-86ee-18mm-86mm-f-2-5": {
+    "addCodes": [
+      "VAMAT"
+    ],
+    "listings": [
+      {
+        "price": "$520.00",
+        "date": "May 1967",
+        "doc": "04933",
+        "asPrinted": "Vario-Switar 86EE 18-86mm f/2.5"
+      }
+    ]
+  },
+  "pan-cinor-85-2-f-2-17mm-85mm": {
+    "addCodes": [
+      "PATEM"
+    ],
+    "listings": [
+      {
+        "price": "$420.00",
+        "date": "May 1967",
+        "doc": "04933",
+        "asPrinted": "Pan Cinor 85-2, 17-85mm f/2.0"
+      }
+    ]
+  },
+  "swedi": {
+    "listings": [
+      {
+        "price": "$165.00",
+        "date": "May 1967",
+        "doc": "04933",
+        "asPrinted": "Switar 10mm f/1.6"
+      },
+      {
+        "price": "$165.00",
+        "date": "May 1967",
+        "doc": "04933",
+        "asPrinted": "Switar 10mm f/1.6 RX"
+      },
+      {
+        "price": "$165.00",
+        "date": "February 1972",
+        "doc": "04932",
+        "asPrinted": "Switar 10mm f/1.6"
+      },
+      {
+        "price": "$261.50",
+        "date": "February 1972",
+        "doc": "04932",
+        "asPrinted": "Switar 10mm f/1.6 Rx Preset"
+      },
+      {
+        "price": "$614.00",
+        "date": "November 1979",
+        "doc": "02209",
+        "asPrinted": "Switar 10mm f/1.6 Rx Preset"
+      },
+      {
+        "price": "$814.00",
+        "date": "November 1979",
+        "doc": "02209",
+        "asPrinted": "Switar 10mm f/1.6 Rx Preset multicoated"
+      }
+    ]
+  },
+  "swese": {
+    "listings": [
+      {
+        "price": "$99.50",
+        "date": "May 1967",
+        "doc": "04933",
+        "asPrinted": "Switar 16mm f/1.8"
+      },
+      {
+        "price": "$99.50",
+        "date": "May 1967",
+        "doc": "04933",
+        "asPrinted": "Switar 16mm f/1.8 RX"
+      },
+      {
+        "price": "$99.50",
+        "date": "February 1972",
+        "doc": "04932",
+        "asPrinted": "Switar 16mm f/1.8"
+      }
+    ]
+  },
+  "swita": {
+    "listings": [
+      {
+        "price": "$148.00",
+        "date": "May 1967",
+        "doc": "04933",
+        "asPrinted": "Switar 25mm f/1.4"
+      }
+    ]
+  },
+  "daora": {
+    "listings": [
+      {
+        "price": "$145.00",
+        "date": "May 1967",
+        "doc": "04933",
+        "asPrinted": "Switar 75mm f/1.9"
+      }
+    ]
+  },
+  "yvora": {
+    "listings": [
+      {
+        "price": "$69.50",
+        "date": "May 1967",
+        "doc": "04933",
+        "asPrinted": "Yvar 75mm f/2.8"
+      }
+    ]
+  },
+  "huvar": {
+    "listings": [
+      {
+        "price": "$64.50",
+        "date": "March 1965",
+        "doc": "04929",
+        "asPrinted": "Yvar 13mm f/1.8 f.m."
+      }
+    ]
+  },
+  "pan-cinor-85-compact-f-3-8-17mm-85mm": {
+    "addCodes": [
+      "PACOM"
+    ],
+    "listings": [
+      {
+        "price": "$250.00",
+        "date": "May 1967",
+        "doc": "04933",
+        "asPrinted": "Pan Cinor 85 Compact, 17-85mm f/3.8"
+      },
+      {
+        "price": "$595.00",
+        "date": "November 1979",
+        "doc": "02209",
+        "asPrinted": "Pan Cinor Compact 17-85mm f/3.8 C Mt."
+      }
+    ]
+  },
+  "macro-switar-26mm-f-1-1-rx": {
+    "listings": [
+      {
+        "price": "$321.50",
+        "date": "February 1972",
+        "doc": "04932",
+        "asPrinted": "Macro-Switar 26mm f/1.1 Rx Preset"
+      },
+      {
+        "price": "$964.00",
+        "date": "November 1979",
+        "doc": "02209",
+        "asPrinted": "Macro-Switar 26mm f/1.1 Rx Preset multicoated"
+      }
+    ]
+  },
+  "macro-switar-75mm-f-1-9": {
+    "listings": [
+      {
+        "price": "$300.00",
+        "date": "February 1972",
+        "doc": "04932",
+        "asPrinted": "Macro-Switar 75mm f/1.9 Preset"
+      },
+      {
+        "price": "$945.00",
+        "date": "November 1979",
+        "doc": "02209",
+        "asPrinted": "Macro-Switar 75mm f/1.9 Preset multicoated"
+      }
+    ]
+  },
+  "vario-switar-100-poe-f-1-9-16-100mm": {
+    "listings": [
+      {
+        "price": "$800.00",
+        "date": "February 1972",
+        "doc": "04932",
+        "asPrinted": "Vario-Switar 16-100mm POE f/1.9, bayonet mount"
+      },
+      {
+        "price": "$2,890.00",
+        "date": "November 1979",
+        "doc": "02209",
+        "asPrinted": "Vario-Switar 16-100mm POE f/1.9 C Mt."
+      },
+      {
+        "price": "$2,436.00",
+        "date": "November 1979",
+        "doc": "02209",
+        "asPrinted": "Vario-Switar 16-100mm POE f/1.9 Bay. Mt."
+      }
+    ]
+  }
+}

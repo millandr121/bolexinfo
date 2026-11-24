@@ -1,0 +1,432 @@
+{
+  "_": [
+    "Accessories found in Paillard's own dated dealer price lists.",
+    "",
+    "Same source and the same discipline as data/lens-items/listings.json:",
+    "the dealer price lists scanned by Pacific Rim Camera, read back against",
+    "the page one row at a time rather than matched by script. asPrinted is",
+    "the document's own wording.",
+    "",
+    "Where a code appears in more than one list the prices are all kept, so",
+    "the entry shows what the thing cost over time. A few went up between",
+    "1965 and 1967 and a few did not move at all.",
+    "",
+    "addCodes gives the accessory Paillard's five-letter code, which the",
+    "original site never recorded for any of them.",
+    "",
+    "Re-run scripts/extract-accessory-items.mjs after editing."
+  ],
+  "prismatic-focuser": {
+    "addCodes": [
+      "CADIL"
+    ],
+    "listings": [
+      {
+        "price": "$19.75",
+        "date": "June 1965",
+        "doc": "04928",
+        "asPrinted": "Prismatic Focuser (New type)"
+      }
+    ],
+    "note": "The lists distinguish a new type and an old type at the same price. The new type is matched to this entry and the old type to the 1940s Prismatic Focus, on the order they were documented in. Nothing in the lists states which is which."
+  },
+  "prismatic-focus": {
+    "addCodes": [
+      "CADRO"
+    ],
+    "listings": [
+      {
+        "price": "$19.75",
+        "date": "June 1965",
+        "doc": "04928",
+        "asPrinted": "Prismatic Focuser (Old type)"
+      }
+    ],
+    "note": "Matched to this, the earlier of the archive’s two prismatic focusers, because the lists call it the old type. The lists do not say more than that."
+  },
+  "matte-box": {
+    "addCodes": [
+      "COPEN"
+    ],
+    "listings": [
+      {
+        "price": "$84.50",
+        "date": "March 1965",
+        "doc": "04929",
+        "asPrinted": "Matte Box"
+      },
+      {
+        "price": "$96.50",
+        "date": "May 1967",
+        "doc": "04933",
+        "asPrinted": "Matte Box"
+      },
+      {
+        "price": "$412.00",
+        "date": "November 1979",
+        "doc": "02209",
+        "asPrinted": "Matte Box B"
+      }
+    ]
+  },
+  "18-5-compartment-screen-case": {
+    "addCodes": [
+      "DUHLU"
+    ],
+    "listings": [
+      {
+        "price": "$19.50",
+        "date": "March 1965",
+        "doc": "04929",
+        "asPrinted": "Compartment-Screen Case"
+      }
+    ]
+  },
+  "rexofader-32": {
+    "addCodes": [
+      "FAOUI"
+    ],
+    "listings": [
+      {
+        "price": "$41.50",
+        "date": "June 1965",
+        "doc": "04928",
+        "asPrinted": "Rexofader 32"
+      }
+    ]
+  },
+  "gossen-light-meter-for-bolex": {
+    "addCodes": [
+      "FOGOS"
+    ],
+    "listings": [
+      {
+        "price": "$45.00",
+        "date": "March 1965",
+        "doc": "04929",
+        "asPrinted": "Lightmeter for H Rex"
+      },
+      {
+        "price": "$45.00",
+        "date": "June 1965",
+        "doc": "04928",
+        "asPrinted": "Lightmeter for H Rex"
+      },
+      {
+        "price": "$48.00",
+        "date": "May 1967",
+        "doc": "04933",
+        "asPrinted": "Lightmeter for H Rex"
+      }
+    ]
+  },
+  "underwater-housing": {
+    "addCodes": [
+      "HETEX",
+      "HAMAR"
+    ],
+    "listings": [
+      {
+        "price": "$525.00",
+        "date": "June 1965",
+        "doc": "04928",
+        "asPrinted": "Underwater Housing Complete"
+      },
+      {
+        "price": "$525.00",
+        "date": "May 1967",
+        "doc": "04933",
+        "asPrinted": "Underwater Housing Complete H-16"
+      }
+    ]
+  },
+  "h-1b": {
+    "addCodes": [
+      "MALOV"
+    ],
+    "listings": [
+      {
+        "price": "$54.50",
+        "date": "March 1965",
+        "doc": "04929",
+        "asPrinted": "Leather Carrying Case H-1B"
+      },
+      {
+        "price": "$54.50",
+        "date": "June 1965",
+        "doc": "04928",
+        "asPrinted": "Leather Carrying Case H-1B"
+      },
+      {
+        "price": "$54.50",
+        "date": "May 1967",
+        "doc": "04933",
+        "asPrinted": "Leather Carrying Case H-1B"
+      }
+    ]
+  },
+  "bolex-unimotor-mc-17": {
+    "addCodes": [
+      "MOSTE"
+    ],
+    "listings": [
+      {
+        "price": "$87.50",
+        "date": "March 1965",
+        "doc": "04929",
+        "asPrinted": "Unimotor Only"
+      },
+      {
+        "price": "$87.50",
+        "date": "June 1965",
+        "doc": "04928",
+        "asPrinted": "Unimotor Only"
+      },
+      {
+        "price": "$97.50",
+        "date": "May 1967",
+        "doc": "04933",
+        "asPrinted": "Unimotor Only"
+      }
+    ],
+    "note": "The lists call it only \"Unimotor\". It is matched to the MC-17 because that is the version Paillard was selling by 1965; the earlier U-62 had been superseded. An inference, not a statement in the document."
+  },
+  "perfectone": {
+    "addCodes": [
+      "PERAM"
+    ],
+    "listings": [
+      {
+        "price": "$240.00",
+        "date": "June 1965",
+        "doc": "04928",
+        "asPrinted": "Perfectone Motor w/ Generator"
+      },
+      {
+        "price": "$240.00",
+        "date": "May 1967",
+        "doc": "04933",
+        "asPrinted": "Perfectone Motor w/ Generator"
+      }
+    ]
+  },
+  "eye-level-focus": {
+    "addCodes": [
+      "REFTU"
+    ],
+    "listings": [
+      {
+        "price": "$37.75",
+        "date": "June 1965",
+        "doc": "04928",
+        "asPrinted": "Eye-level focus for H-8"
+      }
+    ]
+  },
+  "panhead-ball-joint": {
+    "addCodes": [
+      "ROTAL"
+    ],
+    "listings": [
+      {
+        "price": "$28.00",
+        "date": "June 1965",
+        "doc": "04928",
+        "asPrinted": "Ball Joint only"
+      },
+      {
+        "price": "$28.00",
+        "date": "May 1967",
+        "doc": "04933",
+        "asPrinted": "Ball Joint only"
+      }
+    ]
+  },
+  "lens-and-accessory-support": {
+    "addCodes": [
+      "SUTEL"
+    ],
+    "listings": [
+      {
+        "price": "$160.00",
+        "date": "March 1965",
+        "doc": "04929",
+        "asPrinted": "Lens and Accessory Support"
+      },
+      {
+        "price": "$160.00",
+        "date": "June 1965",
+        "doc": "04928",
+        "asPrinted": "Lens and Accessory Support"
+      },
+      {
+        "price": "$160.00",
+        "date": "May 1967",
+        "doc": "04933",
+        "asPrinted": "Lens and Accessory Support"
+      }
+    ]
+  },
+  "paillard-bolex-tripod-h": {
+    "addCodes": [
+      "TRICA"
+    ],
+    "listings": [
+      {
+        "price": "$99.50",
+        "date": "March 1965",
+        "doc": "04929",
+        "asPrinted": "Tripod H (including panhead)"
+      },
+      {
+        "price": "$99.50",
+        "date": "June 1965",
+        "doc": "04928",
+        "asPrinted": "Tripod H (including panhead)"
+      },
+      {
+        "price": "$99.50",
+        "date": "May 1967",
+        "doc": "04933",
+        "asPrinted": "Tripod H (including panhead)"
+      }
+    ]
+  },
+  "mm-take-up-motor": {
+    "addCodes": [
+      "CASMO"
+    ],
+    "listings": [
+      {
+        "price": "$95.00",
+        "date": "May 1967",
+        "doc": "04933",
+        "asPrinted": "12 Volt Take-up Motor"
+      }
+    ],
+    "note": "Listed among the components for the 400ft Bolex, which is what the MM drives."
+  },
+  "h-20-cable-release": {
+    "addCodes": [
+      "DECLA"
+    ],
+    "listings": [
+      {
+        "price": "$7.00",
+        "date": "May 1967",
+        "doc": "04933",
+        "asPrinted": "H-20\" Cable Release"
+      }
+    ]
+  },
+  "automatic-selftimer": {
+    "addCodes": [
+      "DEMAT"
+    ],
+    "listings": [
+      {
+        "price": "$13.95",
+        "date": "May 1967",
+        "doc": "04933",
+        "asPrinted": "Automatic Selftimer Model \"A\""
+      }
+    ]
+  },
+  "rexofader-40": {
+    "addCodes": [
+      "FADOM"
+    ],
+    "listings": [
+      {
+        "price": "$46.00",
+        "date": "May 1967",
+        "doc": "04933",
+        "asPrinted": "Rexofader 40"
+      },
+      {
+        "price": "$177.00",
+        "date": "November 1979",
+        "doc": "02209",
+        "asPrinted": "Rex-O-Fader 40 f/REX 5, SBM"
+      }
+    ]
+  },
+  "zoom-camera-case": {
+    "addCodes": [
+      "HAZCA"
+    ],
+    "listings": [
+      {
+        "price": "$69.50",
+        "date": "May 1967",
+        "doc": "04933",
+        "asPrinted": "16mm Zoom Camera Case B"
+      }
+    ]
+  },
+  "unimotor-b": {
+    "addCodes": [
+      "MOLEC"
+    ],
+    "listings": [
+      {
+        "price": "$110.00",
+        "date": "May 1967",
+        "doc": "04933",
+        "asPrinted": "Unimotor B"
+      }
+    ]
+  },
+  "bolex-monopod": {
+    "addCodes": [
+      "MONOP",
+      "MONTO"
+    ],
+    "listings": [
+      {
+        "price": "$13.50",
+        "date": "May 1967",
+        "doc": "04933",
+        "asPrinted": "Monopod"
+      },
+      {
+        "price": "$18.50",
+        "date": "May 1967",
+        "doc": "04933",
+        "asPrinted": "Monopod with Ball Joint"
+      }
+    ]
+  },
+  "bellows-extension-unit": {
+    "addCodes": [
+      "NOVOF"
+    ],
+    "listings": [
+      {
+        "price": "$185.00",
+        "date": "May 1967",
+        "doc": "04933",
+        "asPrinted": "Bellows Extension Unit"
+      }
+    ]
+  },
+  "lens-extension-tubes": {
+    "addCodes": [
+      "TUBEX"
+    ],
+    "listings": [
+      {
+        "price": "$18.00",
+        "date": "May 1967",
+        "doc": "04933",
+        "asPrinted": "16mm Extension Tubes"
+      },
+      {
+        "price": "$120.00",
+        "date": "November 1979",
+        "doc": "02209",
+        "asPrinted": "Extension Tubes (set of 4)"
+      }
+    ]
+  }
+}

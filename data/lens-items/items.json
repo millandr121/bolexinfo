@@ -1,0 +1,3367 @@
+{
+  "items": [
+    {
+      "slug": "cine-velostigmat-1-f-1-5",
+      "name": "Cine-Velostigmat 1\" f/1.5",
+      "maker": "Wollensak",
+      "series": "Cine-Velostigmat",
+      "focalLength": "1\"",
+      "aperture": "f/1.5",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "catalogue": {
+        "year": 1946,
+        "offeredFor": "the Bolex H-16",
+        "asPrinted": "1\" f/1.5",
+        "doc": "02027"
+      },
+      "from": {
+        "page": "40wollensak",
+        "heading": "C Mount Lenses for 16mm Cameras",
+        "originalPath": "/lenses/40wollensak.html"
+      }
+    },
+    {
+      "slug": "cine-velostigmat-1-f-2-7",
+      "name": "Cine-Velostigmat 1\" f/2.7",
+      "maker": "Wollensak",
+      "series": "Cine-Velostigmat",
+      "focalLength": "1\"",
+      "aperture": "f/2.7",
+      "codes": [],
+      "mount": "D",
+      "gauge": "8mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "catalogue": {
+        "year": 1946,
+        "offeredFor": "the Bolex H-8 and the L-8",
+        "asPrinted": "1\" f/2.7 (telephoto) in focusing mount",
+        "doc": "02027"
+      },
+      "from": {
+        "page": "40wollensak",
+        "heading": "D Mount Lenses for 8mm Cameras",
+        "originalPath": "/lenses/40wollensak.html"
+      }
+    },
+    {
+      "slug": "cine-velostigmat-1-f-2-7-1940",
+      "name": "Cine-Velostigmat 1\" f/2.7",
+      "maker": "Wollensak",
+      "series": "Cine-Velostigmat",
+      "focalLength": "1\"",
+      "aperture": "f/2.7",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "from": {
+        "page": "40wollensak",
+        "heading": "C Mount Lenses for 16mm Cameras",
+        "originalPath": "/lenses/40wollensak.html"
+      }
+    },
+    {
+      "slug": "cine-velostigmat-1-2-f-1-9",
+      "name": "Cine-Velostigmat ½\" f/1.9",
+      "maker": "Wollensak",
+      "series": "Cine-Velostigmat",
+      "focalLength": "½\"",
+      "aperture": "f/1.9",
+      "codes": [],
+      "mount": "D",
+      "gauge": "8mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "catalogue": {
+        "year": 1946,
+        "offeredFor": "the Bolex H-8 and the L-8",
+        "asPrinted": "12½ mm f/1.9 in focusing mount",
+        "note": "Michael lists it as ½\", the catalogue as 12½ mm. Wollensak marked the same lens both ways; half an inch is 12.7 mm.",
+        "doc": "02027"
+      },
+      "from": {
+        "page": "40wollensak",
+        "heading": "D Mount Lenses for 8mm Cameras",
+        "originalPath": "/lenses/40wollensak.html"
+      }
+    },
+    {
+      "slug": "cine-velostigmat-11-2-f-3-5",
+      "name": "Cine-Velostigmat 1½\" f/3.5",
+      "maker": "Wollensak",
+      "series": "Cine-Velostigmat",
+      "focalLength": "1½\"",
+      "aperture": "f/3.5",
+      "codes": [],
+      "mount": "D",
+      "gauge": "8mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "catalogue": {
+        "year": 1946,
+        "offeredFor": "the Bolex H-8 and the L-8",
+        "asPrinted": "1½\" f/3.5 (telephoto) in focusing mount",
+        "doc": "02027"
+      },
+      "from": {
+        "page": "40wollensak",
+        "heading": "D Mount Lenses for 8mm Cameras",
+        "originalPath": "/lenses/40wollensak.html"
+      }
+    },
+    {
+      "slug": "cine-velostigmat-12-5mm-f-2-5-fixed-focus",
+      "name": "Cine-Velostigmat 12.5mm f/2.5 Fixed Focus",
+      "maker": "Wollensak",
+      "series": "Cine-Velostigmat",
+      "focalLength": "12.5mm",
+      "aperture": "f/2.5",
+      "codes": [],
+      "mount": "D",
+      "gauge": "8mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "catalogue": {
+        "year": 1946,
+        "offeredFor": "the Bolex H-8 and the L-8",
+        "asPrinted": "12½ mm f/2.5 fixed focus",
+        "doc": "02027"
+      },
+      "from": {
+        "page": "40wollensak",
+        "heading": "D Mount Lenses for 8mm Cameras",
+        "originalPath": "/lenses/40wollensak.html"
+      }
+    },
+    {
+      "slug": "cine-velostigmat-15mm-f-2-7",
+      "name": "Cine-Velostigmat 15mm f/2.7",
+      "maker": "Wollensak",
+      "series": "Cine-Velostigmat",
+      "focalLength": "15mm",
+      "aperture": "f/2.7",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "from": {
+        "page": "40wollensak",
+        "heading": "C Mount Lenses for 16mm Cameras",
+        "originalPath": "/lenses/40wollensak.html"
+      }
+    },
+    {
+      "slug": "cine-velostigmat-17mm-f-2-7",
+      "name": "Cine-Velostigmat 17mm f/2.7",
+      "maker": "Wollensak",
+      "series": "Cine-Velostigmat",
+      "focalLength": "17mm",
+      "aperture": "f/2.7",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "catalogue": {
+        "year": 1946,
+        "offeredFor": "the Bolex H-16",
+        "asPrinted": "17 mm f/2.7 (wide-angle) in focusing mount",
+        "doc": "02027"
+      },
+      "from": {
+        "page": "40wollensak",
+        "heading": "C Mount Lenses for 16mm Cameras",
+        "originalPath": "/lenses/40wollensak.html"
+      }
+    },
+    {
+      "slug": "cine-velostigmat-17mm-f-2-7-fixed-focus",
+      "name": "Cine-Velostigmat 17mm f/2.7 Fixed Focus",
+      "maker": "Wollensak",
+      "series": "Cine-Velostigmat",
+      "focalLength": "17mm",
+      "aperture": "f/2.7",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "catalogue": {
+        "year": 1946,
+        "offeredFor": "the Bolex H-16",
+        "asPrinted": "17 mm f/2.7 (wide-angle) fixed focus",
+        "doc": "02027"
+      },
+      "from": {
+        "page": "40wollensak",
+        "heading": "C Mount Lenses for 16mm Cameras",
+        "originalPath": "/lenses/40wollensak.html"
+      }
+    },
+    {
+      "slug": "cine-velostigmat-2-f-1-5",
+      "name": "Cine-Velostigmat 2\" f/1.5",
+      "maker": "Wollensak",
+      "series": "Cine-Velostigmat",
+      "focalLength": "2\"",
+      "aperture": "f/1.5",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "from": {
+        "page": "40wollensak",
+        "heading": "C Mount Lenses for 16mm Cameras",
+        "originalPath": "/lenses/40wollensak.html"
+      }
+    },
+    {
+      "slug": "cine-velostigmat-2-f-3-5",
+      "name": "Cine-Velostigmat 2\" f/3.5",
+      "maker": "Wollensak",
+      "series": "Cine-Velostigmat",
+      "focalLength": "2\"",
+      "aperture": "f/3.5",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "from": {
+        "page": "40wollensak",
+        "heading": "C Mount Lenses for 16mm Cameras",
+        "originalPath": "/lenses/40wollensak.html"
+      }
+    },
+    {
+      "slug": "cine-velostigmat-3-f-4",
+      "name": "Cine-Velostigmat 3\" f/4",
+      "maker": "Wollensak",
+      "series": "Cine-Velostigmat",
+      "focalLength": "3\"",
+      "aperture": "f/4",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "catalogue": {
+        "year": 1946,
+        "offeredFor": "the Bolex H-16",
+        "asPrinted": "3\" f/4 (telephoto) in focusing mount",
+        "doc": "02027"
+      },
+      "from": {
+        "page": "40wollensak",
+        "heading": "C Mount Lenses for 16mm Cameras",
+        "originalPath": "/lenses/40wollensak.html"
+      }
+    },
+    {
+      "slug": "cine-velostigmat-4-f-4-5",
+      "name": "Cine-Velostigmat 4\" f/4.5",
+      "maker": "Wollensak",
+      "series": "Cine-Velostigmat",
+      "focalLength": "4\"",
+      "aperture": "f/4.5",
+      "codes": [],
+      "mount": "D",
+      "gauge": "8mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "from": {
+        "page": "40wollensak",
+        "heading": "D Mount Lenses for 8mm Cameras",
+        "originalPath": "/lenses/40wollensak.html"
+      }
+    },
+    {
+      "slug": "cine-velostigmat-4-f-4-5-1940",
+      "name": "Cine-Velostigmat 4\" f/4.5",
+      "maker": "Wollensak",
+      "series": "Cine-Velostigmat",
+      "focalLength": "4\"",
+      "aperture": "f/4.5",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "catalogue": {
+        "year": 1946,
+        "offeredFor": "the Bolex H-16",
+        "asPrinted": "4\" f/4.5 (telephoto) in focusing mount",
+        "doc": "02027"
+      },
+      "from": {
+        "page": "40wollensak",
+        "heading": "C Mount Lenses for 16mm Cameras",
+        "originalPath": "/lenses/40wollensak.html"
+      }
+    },
+    {
+      "slug": "cine-velostigmat-6-f-4-5",
+      "name": "Cine-Velostigmat 6\" f/4.5",
+      "maker": "Wollensak",
+      "series": "Cine-Velostigmat",
+      "focalLength": "6\"",
+      "aperture": "f/4.5",
+      "codes": [],
+      "mount": "D",
+      "gauge": "8mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "from": {
+        "page": "40wollensak",
+        "heading": "D Mount Lenses for 8mm Cameras",
+        "originalPath": "/lenses/40wollensak.html"
+      }
+    },
+    {
+      "slug": "cine-velostigmat-6-f-4-5-1940",
+      "name": "Cine-Velostigmat 6\" f/4.5",
+      "maker": "Wollensak",
+      "series": "Cine-Velostigmat",
+      "focalLength": "6\"",
+      "aperture": "f/4.5",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "catalogue": {
+        "year": 1946,
+        "offeredFor": "the Bolex H-16",
+        "asPrinted": "6\" f/4.5 (telephoto) in focusing mount",
+        "doc": "02027"
+      },
+      "from": {
+        "page": "40wollensak",
+        "heading": "C Mount Lenses for 16mm Cameras",
+        "originalPath": "/lenses/40wollensak.html"
+      }
+    },
+    {
+      "slug": "kino-plasmat-12-5mm-f-1-5",
+      "name": "Kino Plasmat 12.5mm f/1.5",
+      "maker": "Hugo Meyer",
+      "series": "Kino Plasmat",
+      "focalLength": "12.5mm",
+      "aperture": "f/1.5",
+      "codes": [],
+      "mount": "D",
+      "gauge": "8mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "from": {
+        "page": "40meyer",
+        "heading": "D Mount Lenses for H-8 Cameras",
+        "originalPath": "/lenses/40meyer.html"
+      }
+    },
+    {
+      "slug": "kino-hypar-anastigmat-6-f-2-7-15mm",
+      "name": "Kino-Hypar Anastigmat .6\" f/2.7 (15mm)",
+      "maker": "C.P. Goerz",
+      "series": "Kino-Hypar Anastigmat",
+      "focalLength": "15mm",
+      "aperture": "f/2.7",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "from": {
+        "page": "40goerz",
+        "heading": "C Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/40goerz.html"
+      }
+    },
+    {
+      "slug": "kino-hypar-anastigmat-1-5-8-f-2-7-40mm",
+      "name": "Kino-Hypar Anastigmat 1 5/8\" f/2.7 (40mm)",
+      "maker": "C.P. Goerz",
+      "series": "Kino-Hypar Anastigmat",
+      "focalLength": "40mm",
+      "aperture": "f/2.7",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "from": {
+        "page": "40goerz",
+        "heading": "C Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/40goerz.html"
+      }
+    },
+    {
+      "slug": "kino-hypar-anastigmat-1-5-8-f-3-40mm",
+      "name": "Kino-Hypar Anastigmat 1 5/8\" f/3 (40mm)",
+      "maker": "C.P. Goerz",
+      "series": "Kino-Hypar Anastigmat",
+      "focalLength": "40mm",
+      "aperture": "f/3",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "from": {
+        "page": "40goerz",
+        "heading": "C Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/40goerz.html"
+      }
+    },
+    {
+      "slug": "kino-hypar-anastigmat-1-f-2-7-25mm",
+      "name": "Kino-Hypar Anastigmat 1\" f/2.7 (25mm)",
+      "maker": "C.P. Goerz",
+      "series": "Kino-Hypar Anastigmat",
+      "focalLength": "25mm",
+      "aperture": "f/2.7",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "from": {
+        "page": "40goerz",
+        "heading": "C Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/40goerz.html"
+      }
+    },
+    {
+      "slug": "kino-hypar-anastigmat-2-f-2-7-50mm",
+      "name": "Kino-Hypar Anastigmat 2\" f/2.7 (50mm)",
+      "maker": "C.P. Goerz",
+      "series": "Kino-Hypar Anastigmat",
+      "focalLength": "50mm",
+      "aperture": "f/2.7",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "from": {
+        "page": "40goerz",
+        "heading": "C Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/40goerz.html"
+      }
+    },
+    {
+      "slug": "kino-hypar-anastigmat-2-f-3-50mm",
+      "name": "Kino-Hypar Anastigmat 2\" f/3 (50mm)",
+      "maker": "C.P. Goerz",
+      "series": "Kino-Hypar Anastigmat",
+      "focalLength": "50mm",
+      "aperture": "f/3",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "from": {
+        "page": "40goerz",
+        "heading": "C Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/40goerz.html"
+      }
+    },
+    {
+      "slug": "kino-hypar-anastigmat-3-f-2-7-75mm",
+      "name": "Kino-Hypar Anastigmat 3\" f/2.7 (75mm)",
+      "maker": "C.P. Goerz",
+      "series": "Kino-Hypar Anastigmat",
+      "focalLength": "75mm",
+      "aperture": "f/2.7",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "from": {
+        "page": "40goerz",
+        "heading": "C Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/40goerz.html"
+      }
+    },
+    {
+      "slug": "kino-hypar-anastigmat-3-f-3-75mm",
+      "name": "Kino-Hypar Anastigmat 3\" f/3 (75mm)",
+      "maker": "C.P. Goerz",
+      "series": "Kino-Hypar Anastigmat",
+      "focalLength": "75mm",
+      "aperture": "f/3",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "from": {
+        "page": "40goerz",
+        "heading": "C Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/40goerz.html"
+      }
+    },
+    {
+      "slug": "kino-hypar-anastigmat-4-f-2-7-100mm",
+      "name": "Kino-Hypar Anastigmat 4\" f/2.7 (100mm)",
+      "maker": "C.P. Goerz",
+      "series": "Kino-Hypar Anastigmat",
+      "focalLength": "100mm",
+      "aperture": "f/2.7",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "from": {
+        "page": "40goerz",
+        "heading": "C Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/40goerz.html"
+      }
+    },
+    {
+      "slug": "kino-hypar-anastigmat-4-f-3-100mm",
+      "name": "Kino-Hypar Anastigmat 4\" f/3 (100mm)",
+      "maker": "C.P. Goerz",
+      "series": "Kino-Hypar Anastigmat",
+      "focalLength": "100mm",
+      "aperture": "f/3",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "from": {
+        "page": "40goerz",
+        "heading": "C Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/40goerz.html"
+      }
+    },
+    {
+      "slug": "kino-plasmat-15mm-f-1-5",
+      "name": "Kino-Plasmat 15mm f/1.5",
+      "maker": "Hugo Meyer",
+      "series": "Kino-Plasmat",
+      "focalLength": "15mm",
+      "aperture": "f/1.5",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "from": {
+        "page": "40meyer",
+        "heading": "C Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/40meyer.html"
+      }
+    },
+    {
+      "slug": "kino-plasmat-2-f-1-5",
+      "name": "Kino-Plasmat 2\" f/1.5",
+      "maker": "Hugo Meyer",
+      "series": "Kino-Plasmat",
+      "focalLength": "2\"",
+      "aperture": "f/1.5",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "from": {
+        "page": "40meyer",
+        "heading": "C Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/40meyer.html"
+      }
+    },
+    {
+      "slug": "pizar-25mm-f-1-5",
+      "name": "Pizar 25mm f/1.5",
+      "maker": "Kern-Paillard",
+      "series": "Pizar",
+      "focalLength": "25mm",
+      "aperture": "f/1.5",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "Introduced in the late '40s as a less expensive standard focal length lens, compared to the Switar 25mm f/1.4. This lens had no depth of field scale.",
+      "images": [
+        {
+          "src": "/images/lenses/40kern_09.jpg",
+          "alt": "Pizar 25mm f/1.5"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "40kern",
+        "heading": "C Mount Lenses for 16mm Cameras",
+        "originalPath": "/lenses/40kern.html"
+      }
+    },
+    {
+      "slug": "switar-12-5-f-1-5",
+      "name": "Switar 12.5 f/1.5",
+      "maker": "Kern-Paillard",
+      "series": "Switar",
+      "focalLength": "12.5mm",
+      "aperture": "f/1.5",
+      "codes": [],
+      "mount": "D",
+      "gauge": "8mm",
+      "decade": 1940,
+      "year": null,
+      "description": "A standard focal length lens in normal D-mount with an engraved depth of field scale.",
+      "images": [
+        {
+          "src": "/images/lenses/40kern_02.jpg",
+          "alt": "Switar 12.5 f/1.5"
+        }
+      ],
+      "sources": [],
+      "catalogue": {
+        "year": 1952,
+        "doc": "01775",
+        "offeredFor": "Bolex cameras",
+        "asPrinted": "Switar 12.5mm (½\") F:1.5, Standard A.S.A. mount",
+        "price": "$120.50",
+        "month": "February"
+      },
+      "from": {
+        "page": "40kern",
+        "heading": "D Mount Lenses for 8mm Cameras",
+        "originalPath": "/lenses/40kern.html"
+      }
+    },
+    {
+      "slug": "switar-25mm-f-1-4",
+      "name": "Switar 25mm f/1.4",
+      "maker": "Kern-Paillard",
+      "series": "Switar",
+      "focalLength": "25mm",
+      "aperture": "f/1.4",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "A fast standard focal length lens. Production of this lens seems to have continued into the 1950s, even with the introduction of the Visifocus lenses. The Switar 25mm F/1.4 had a standard depth of field scale.",
+      "images": [
+        {
+          "src": "/images/lenses/40kern_08.jpg",
+          "alt": "Switar 25mm f/1.4"
+        }
+      ],
+      "sources": [],
+      "catalogue": {
+        "year": 1952,
+        "doc": "01775",
+        "offeredFor": "Bolex cameras",
+        "asPrinted": "Switar 25mm (1\") F:1.4, for Bolex only",
+        "price": "$178.50",
+        "month": "February",
+        "note": "The archive carries two entries for this designation, this one and the later Visifocus SWITA. The list does not distinguish them, and Michael says the lens was first made in the 1940s and stayed in production, so the price is attached to the earlier entry."
+      },
+      "from": {
+        "page": "40kern",
+        "heading": "C Mount Lenses for 16mm Cameras",
+        "originalPath": "/lenses/40kern.html"
+      }
+    },
+    {
+      "slug": "tele-megor-3-f-4",
+      "name": "Tele-Megor 3\" f/4",
+      "maker": "Hugo Meyer",
+      "series": "Tele-Megor",
+      "focalLength": "3\"",
+      "aperture": "f/4",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "from": {
+        "page": "40meyer",
+        "heading": "C Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/40meyer.html"
+      }
+    },
+    {
+      "slug": "tele-megor-4-f-4",
+      "name": "Tele-Megor 4\" f/4",
+      "maker": "Hugo Meyer",
+      "series": "Tele-Megor",
+      "focalLength": "4\"",
+      "aperture": "f/4",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "from": {
+        "page": "40meyer",
+        "heading": "C Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/40meyer.html"
+      }
+    },
+    {
+      "slug": "tele-megor-6-f-4",
+      "name": "Tele-Megor 6\" f/4",
+      "maker": "Hugo Meyer",
+      "series": "Tele-Megor",
+      "focalLength": "6\"",
+      "aperture": "f/4",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "from": {
+        "page": "40meyer",
+        "heading": "C Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/40meyer.html"
+      }
+    },
+    {
+      "slug": "tele-megor-7-f-5-5",
+      "name": "Tele-Megor 7\" f/5.5",
+      "maker": "Hugo Meyer",
+      "series": "Tele-Megor",
+      "focalLength": "7\"",
+      "aperture": "f/5.5",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "from": {
+        "page": "40meyer",
+        "heading": "C Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/40meyer.html"
+      }
+    },
+    {
+      "slug": "tele-megor-9-f-4",
+      "name": "Tele-Megor 9\" f/4",
+      "maker": "Hugo Meyer",
+      "series": "Tele-Megor",
+      "focalLength": "9\"",
+      "aperture": "f/4",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "from": {
+        "page": "40meyer",
+        "heading": "C Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/40meyer.html"
+      }
+    },
+    {
+      "slug": "trioplan-15mm-f-2-8",
+      "name": "Trioplan 15mm f/2.8",
+      "maker": "Hugo Meyer",
+      "series": "Trioplan",
+      "focalLength": "15mm",
+      "aperture": "f/2.8",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "fixed focus lens",
+      "images": [],
+      "sources": [],
+      "from": {
+        "page": "40meyer",
+        "heading": "C Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/40meyer.html"
+      }
+    },
+    {
+      "slug": "trioplan-15mm-f-2-8-1940",
+      "name": "Trioplan 15mm f/2.8",
+      "maker": "Hugo Meyer",
+      "series": "Trioplan",
+      "focalLength": "15mm",
+      "aperture": "f/2.8",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "with focus mount",
+      "images": [],
+      "sources": [],
+      "from": {
+        "page": "40meyer",
+        "heading": "C Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/40meyer.html"
+      }
+    },
+    {
+      "slug": "trioplan-2-f-2-8",
+      "name": "Trioplan 2\" f/2.8",
+      "maker": "Hugo Meyer",
+      "series": "Trioplan",
+      "focalLength": "2\"",
+      "aperture": "f/2.8",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "from": {
+        "page": "40meyer",
+        "heading": "C Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/40meyer.html"
+      }
+    },
+    {
+      "slug": "trioplan-25mm-f-2-5",
+      "name": "Trioplan 25mm f/2.5",
+      "maker": "Hugo Meyer",
+      "series": "Trioplan",
+      "focalLength": "25mm",
+      "aperture": "f/2.5",
+      "codes": [],
+      "mount": "D",
+      "gauge": "8mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "from": {
+        "page": "40meyer",
+        "heading": "D Mount Lenses for H-8 Cameras",
+        "originalPath": "/lenses/40meyer.html"
+      }
+    },
+    {
+      "slug": "trioplan-3-f-2-8",
+      "name": "Trioplan 3\" f/2.8",
+      "maker": "Hugo Meyer",
+      "series": "Trioplan",
+      "focalLength": "3\"",
+      "aperture": "f/2.8",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "from": {
+        "page": "40meyer",
+        "heading": "C Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/40meyer.html"
+      }
+    },
+    {
+      "slug": "trioplan-3-f-4-5",
+      "name": "Trioplan 3\" f/4.5",
+      "maker": "Hugo Meyer",
+      "series": "Trioplan",
+      "focalLength": "3\"",
+      "aperture": "f/4.5",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "from": {
+        "page": "40meyer",
+        "heading": "C Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/40meyer.html"
+      }
+    },
+    {
+      "slug": "trioplan-36mm-f-2-8",
+      "name": "Trioplan 36mm f/2.8",
+      "maker": "Hugo Meyer",
+      "series": "Trioplan",
+      "focalLength": "36mm",
+      "aperture": "f/2.8",
+      "codes": [],
+      "mount": "D",
+      "gauge": "8mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "from": {
+        "page": "40meyer",
+        "heading": "D Mount Lenses for H-8 Cameras",
+        "originalPath": "/lenses/40meyer.html"
+      }
+    },
+    {
+      "slug": "trioplan-4-f-2-8",
+      "name": "Trioplan 4\" f/2.8",
+      "maker": "Hugo Meyer",
+      "series": "Trioplan",
+      "focalLength": "4\"",
+      "aperture": "f/2.8",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "from": {
+        "page": "40meyer",
+        "heading": "C Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/40meyer.html"
+      }
+    },
+    {
+      "slug": "trioplan-4-f-4-5",
+      "name": "Trioplan 4\" f/4.5",
+      "maker": "Hugo Meyer",
+      "series": "Trioplan",
+      "focalLength": "4\"",
+      "aperture": "f/4.5",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "",
+      "images": [],
+      "sources": [],
+      "from": {
+        "page": "40meyer",
+        "heading": "C Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/40meyer.html"
+      }
+    },
+    {
+      "slug": "yvar-12-5mm-f-2-8-designed-for-l-8",
+      "name": "Yvar 12.5mm f/2.8 (DESIGNED FOR L-8)",
+      "maker": "Kern-Paillard",
+      "series": "Yvar",
+      "focalLength": "12.5mm",
+      "aperture": "f/2.8",
+      "codes": [],
+      "mount": "D",
+      "gauge": "8mm",
+      "decade": 1940,
+      "year": null,
+      "description": "This lens was intended for use on L-8 cameras. It was available in both fixed focus and focus mount versions; the fixed focus lens is pictured here. Although the thread diameter is identical to a normal D-mount lens (15.8mm or 5/8\"), the optical distance from film plane to lens seat is 7.8mm (0.3075\").",
+      "images": [
+        {
+          "src": "/images/lenses/40kern_03.jpg",
+          "alt": "Yvar 12.5 for L-8 cameras"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "40kern",
+        "heading": "D Mount Lenses for 8mm Cameras",
+        "originalPath": "/lenses/40kern.html"
+      }
+    },
+    {
+      "slug": "yvar-15mm-f-2-8",
+      "name": "Yvar 15mm f/2.8",
+      "maker": "Kern-Paillard",
+      "series": "Yvar",
+      "focalLength": "15mm",
+      "aperture": "f/2.8",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "A moderately wide angle lens.",
+      "images": [
+        {
+          "src": "/images/lenses/40kern_07.jpg",
+          "alt": "Yvar 15mm f/2.8"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "40kern",
+        "heading": "C Mount Lenses for 16mm Cameras",
+        "originalPath": "/lenses/40kern.html"
+      }
+    },
+    {
+      "slug": "yvar-25mm-f-2-5",
+      "name": "Yvar 25mm f/2.5",
+      "maker": "Kern-Paillard",
+      "series": "Yvar",
+      "focalLength": "25mm",
+      "aperture": "f/2.5",
+      "codes": [],
+      "mount": "D",
+      "gauge": "8mm",
+      "decade": 1940,
+      "year": null,
+      "description": "A moderate telephoto lens. It had no DOF scale; focus range was 1 1/2 feet to infinity.",
+      "images": [
+        {
+          "src": "/images/lenses/40kern_04.jpg",
+          "alt": "Yvar 25mm f/2.5"
+        }
+      ],
+      "sources": [],
+      "catalogue": {
+        "year": 1952,
+        "doc": "01775",
+        "offeredFor": "Bolex cameras",
+        "asPrinted": "Yvar 25mm (1\") F:2.5, Standard A.S.A. mount",
+        "price": "$55.00",
+        "month": "February",
+        "note": "The archive also has a Visifocus version of this lens. The list names no Visifocus, so the price is attached to the plain entry."
+      },
+      "from": {
+        "page": "40kern",
+        "heading": "D Mount Lenses for 8mm Cameras",
+        "originalPath": "/lenses/40kern.html"
+      }
+    },
+    {
+      "slug": "yvar-36mm-f-2-8",
+      "name": "Yvar 36mm f/2.8",
+      "maker": "Kern-Paillard",
+      "series": "Yvar",
+      "focalLength": "36mm",
+      "aperture": "f/2.8",
+      "codes": [],
+      "mount": "D",
+      "gauge": "8mm",
+      "decade": 1940,
+      "year": null,
+      "description": "A telephoto lens with no depth of field scale; focus range from 2' to infinity.",
+      "images": [
+        {
+          "src": "/images/lenses/40kern_05.jpg",
+          "alt": "Yvar 36mm f/2.8"
+        }
+      ],
+      "sources": [],
+      "catalogue": {
+        "year": 1952,
+        "doc": "01775",
+        "offeredFor": "Bolex cameras",
+        "asPrinted": "Yvar 36mm (1½\") F:2.8, Standard A.S.A. mount",
+        "price": "$58.95",
+        "month": "February",
+        "note": "The archive also has a Visifocus version of this lens. The list names no Visifocus, so the price is attached to the plain entry."
+      },
+      "from": {
+        "page": "40kern",
+        "heading": "D Mount Lenses for 8mm Cameras",
+        "originalPath": "/lenses/40kern.html"
+      }
+    },
+    {
+      "slug": "yvar-75mm-f-2-5",
+      "name": "Yvar 75mm f/2.5",
+      "maker": "Kern-Paillard",
+      "series": "Yvar",
+      "focalLength": "75mm",
+      "aperture": "f/2.5",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1940,
+      "year": null,
+      "description": "A telephoto lens with micrometer click-stops. It does not appear to have been manufactured after the introduction of Visifocus lenses in 1950; specifically, the YVORA 75mm f/2.8.",
+      "images": [
+        {
+          "src": "/images/lenses/40kern_11.jpg",
+          "alt": "Yvar 75mm f2.5"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "40kern",
+        "heading": "C Mount Lenses for 16mm Cameras",
+        "originalPath": "/lenses/40kern.html"
+      }
+    },
+    {
+      "slug": "cinor-10mm-f-1-9-rx",
+      "name": "Cinor 10mm f/1.9 RX",
+      "maker": "SOM Berthiot",
+      "series": "Cinor",
+      "focalLength": "10mm",
+      "aperture": "f/1.9",
+      "codes": [],
+      "mount": "C or RX",
+      "gauge": "16mm",
+      "decade": 1950,
+      "year": null,
+      "description": "Wide angle lens; designed for H-16 reflex cameras.",
+      "images": [
+        {
+          "src": "/images/lenses/50som_07.jpg",
+          "alt": "Cinor 10mm Lens"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "50berthiot",
+        "heading": "C and RX Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/50berthiot.html"
+      }
+    },
+    {
+      "slug": "cinor-25mm-f-0-95",
+      "name": "Cinor 25mm f/0.95",
+      "maker": "SOM Berthiot",
+      "series": "Cinor",
+      "focalLength": "25mm",
+      "aperture": "f/0.95",
+      "codes": [],
+      "mount": "C or RX",
+      "gauge": "16mm",
+      "decade": 1950,
+      "year": null,
+      "description": "A fast lens of standard focal length; normal C mount, for non reflex cameras.",
+      "images": [
+        {
+          "src": "/images/lenses/50som_08.jpg",
+          "alt": "Cinor 25mm f0.95"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "50berthiot",
+        "heading": "C and RX Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/50berthiot.html"
+      }
+    },
+    {
+      "slug": "cinor-25mm-f-1-4-rx",
+      "name": "Cinor 25mm f/1.4 RX",
+      "maker": "SOM Berthiot",
+      "series": "Cinor",
+      "focalLength": "25mm",
+      "aperture": "f/1.4",
+      "codes": [],
+      "mount": "C or RX",
+      "gauge": "16mm",
+      "decade": 1950,
+      "year": null,
+      "description": "Standard focal length lens; designed for H-16 reflex cameras.",
+      "images": [
+        {
+          "src": "/images/lenses/50som_10.jpg",
+          "alt": "Cinor 25mm f1.4 RX"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "50berthiot",
+        "heading": "C and RX Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/50berthiot.html"
+      }
+    },
+    {
+      "slug": "lytar-12-5-f-2-5",
+      "name": "Lytar 12.5 f/2.5",
+      "maker": "SOM Berthiot",
+      "series": "Lytar",
+      "focalLength": "12.5mm",
+      "aperture": "f/2.5",
+      "codes": [],
+      "mount": "D",
+      "gauge": "8mm",
+      "decade": 1950,
+      "year": null,
+      "description": "Standard focal length lens; fixed focus. It was commonly sold with the Bolex C-8S camera.",
+      "images": [
+        {
+          "src": "/images/lenses/lens_blank.jpg",
+          "alt": "unavailable"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "50berthiot",
+        "heading": "D Mount Lenses for 8mm Cameras",
+        "originalPath": "/lenses/50berthiot.html"
+      }
+    },
+    {
+      "slug": "lytar-12-5mm-f-1-9",
+      "name": "Lytar 12.5mm f/1.9",
+      "maker": "SOM Berthiot",
+      "series": "Lytar",
+      "focalLength": "12.5mm",
+      "aperture": "f/1.9",
+      "codes": [],
+      "mount": "D",
+      "gauge": "8mm",
+      "decade": 1950,
+      "year": null,
+      "description": "Standard focal length lens with focus ring.",
+      "images": [
+        {
+          "src": "/images/lenses/lens_blank.jpg",
+          "alt": "unavailable"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "50berthiot",
+        "heading": "D Mount Lenses for 8mm Cameras",
+        "originalPath": "/lenses/50berthiot.html"
+      }
+    },
+    {
+      "slug": "lytar-13mm-f-1-9",
+      "name": "Lytar 13mm f/1.9",
+      "maker": "SOM Berthiot",
+      "series": "Lytar",
+      "focalLength": "13mm",
+      "aperture": "f/1.9",
+      "codes": [],
+      "mount": "D",
+      "gauge": "8mm",
+      "decade": 1950,
+      "year": null,
+      "description": "Standard focal length lens; fixed focus.",
+      "images": [
+        {
+          "src": "/images/lenses/lens_blank.jpg",
+          "alt": "unavailable"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "50berthiot",
+        "heading": "D Mount Lenses for 8mm Cameras",
+        "originalPath": "/lenses/50berthiot.html"
+      }
+    },
+    {
+      "slug": "lytar-25mm-f-1-8",
+      "name": "Lytar 25mm f/1.8",
+      "maker": "SOM Berthiot",
+      "series": "Lytar",
+      "focalLength": "25mm",
+      "aperture": "f/1.8",
+      "codes": [],
+      "mount": "C or RX",
+      "gauge": "16mm",
+      "decade": 1950,
+      "year": null,
+      "description": "Standard focal length lens; introduced as a lower priced lens than the \"Cinor\" series. Normal C mount with a focus range from 1.5' to infinity.",
+      "images": [
+        {
+          "src": "/images/lenses/50som_11.jpg",
+          "alt": "Lytar 25mm f1.9"
+        }
+      ],
+      "sources": [],
+      "catalogue": {
+        "year": 1952,
+        "month": "February",
+        "doc": "01775",
+        "offeredFor": "Bolex cameras",
+        "asPrinted": "Lytar 25mm (1\") F:1.9, \"C\" mount",
+        "price": "$60.00",
+        "note": "The catalogue says f/1.9 and this entry says f/1.8. Nothing found so far settles which is right, or whether Paillard sold both. The price is recorded here because a 25mm Lytar at $60.00 is plainly this lens or its twin, and the discrepancy is worth seeing rather than smoothing over."
+      },
+      "from": {
+        "page": "50berthiot",
+        "heading": "C and RX Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/50berthiot.html"
+      }
+    },
+    {
+      "slug": "pizar-12-5mm-f-1-9-1952",
+      "sources": [],
+      "images": [],
+      "added": true,
+      "name": "Pizar 12.5mm f/1.9",
+      "maker": "Kern-Paillard",
+      "series": "Pizar",
+      "focalLength": "12.5mm",
+      "aperture": "f/1.9",
+      "codes": [],
+      "mount": "D",
+      "gauge": "8mm",
+      "decade": 1950,
+      "year": null,
+      "description": "An 8mm lens in standard A.S.A. mount, $95.75 in the Bolex retail price list of February 1952, where it sits between the Switar 12.5mm f/1.5 at $120.50 and the Lytar at $50.00. The same list prices an H-8 De luxe fitted with it at $413.75 and an L-8 outfit at $172.00, so it was a regular factory option rather than a rarity. The archive holds Pizars at 5.5mm, 25mm, 26mm and 50mm, but had none at 12.5mm.",
+      "catalogue": {
+        "year": 1952,
+        "month": "February",
+        "doc": "01775",
+        "offeredFor": "the Bolex H-8 and the L-8",
+        "asPrinted": "Pizar 12.5mm (½\") F:1.9, Standard A.S.A. mount",
+        "price": "$95.75"
+      },
+      "from": {
+        "page": null,
+        "heading": null,
+        "originalPath": null
+      }
+    },
+    {
+      "slug": "hapiz",
+      "name": "Pizar 26mm f/1.9 Visifocus (HAPIZ)",
+      "maker": "Kern-Paillard",
+      "series": "Pizar",
+      "focalLength": "26mm",
+      "aperture": "f/1.9",
+      "codes": [
+        "HAPIZ"
+      ],
+      "mount": "C or RX",
+      "gauge": "16mm",
+      "decade": 1950,
+      "year": null,
+      "description": "Standard focal length lens, for use with non-reflex 16mm cameras; normal c-mount, with a visifocus depth of field scale",
+      "images": [
+        {
+          "src": "/images/lenses/50kern_22.jpg",
+          "alt": "HAPIZ"
+        }
+      ],
+      "sources": [],
+      "catalogue": {
+        "year": 1952,
+        "doc": "01775",
+        "offeredFor": "Bolex cameras",
+        "asPrinted": "Pizar 26mm (1\") F:1.9, \"C\" mount",
+        "price": "$94.25",
+        "month": "February"
+      },
+      "from": {
+        "page": "50kern",
+        "heading": "C and RX Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/50kern.html"
+      }
+    },
+    {
+      "slug": "swiho",
+      "name": "Switar 12.5mm f/1.9 (SWIHO)",
+      "maker": "Kern-Paillard",
+      "series": "Switar",
+      "focalLength": "12.5mm",
+      "aperture": "f/1.9",
+      "codes": [
+        "SWIHO"
+      ],
+      "mount": "D",
+      "gauge": "8mm",
+      "decade": 1950,
+      "year": null,
+      "description": "Standard focal length lens with an engraved depth of field scale.",
+      "images": [
+        {
+          "src": "/images/lenses/50kern_05.jpg",
+          "alt": "SWIHO"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "50kern",
+        "heading": "D Mount Lenses for 8mm Cameras",
+        "originalPath": "/lenses/50kern.html"
+      }
+    },
+    {
+      "slug": "swita",
+      "name": "Switar 25mm f/1.4 (st. SWITA, RX DAITA)",
+      "maker": "Kern-Paillard",
+      "series": "Switar",
+      "focalLength": "25mm",
+      "aperture": "f/1.4",
+      "codes": [
+        "SWITA",
+        "DAITA"
+      ],
+      "mount": "C or RX",
+      "gauge": "16mm",
+      "decade": 1950,
+      "year": null,
+      "yearNote": "The lens 'was first manufactured in the 1940s'. The 1956 is when the RX version appeared, not the lens.",
+      "description": "This standard focal length lens was first manufactured in the 1940s, but production continued until the late '50s, approximately. It used a standard \"compass-style\" depth of field scale. A RX mount version was available in 1956, for H-16 reflex cameras.",
+      "images": [
+        {
+          "src": "/images/lenses/50kern_19.jpg",
+          "alt": "SWITA, RX DAITA"
+        }
+      ],
+      "sources": [],
+      "listings": [
+        {
+          "price": "$148.00",
+          "date": "May 1967",
+          "doc": "04933",
+          "asPrinted": "Switar 25mm f/1.4"
+        }
+      ],
+      "from": {
+        "page": "50kern",
+        "heading": "C and RX Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/50kern.html"
+      }
+    },
+    {
+      "slug": "switar-25mm-f-1-5-visifocus",
+      "name": "Switar 25mm f/1.5 Visifocus",
+      "maker": "Kern-Paillard",
+      "series": "Switar",
+      "focalLength": "25mm",
+      "aperture": "f/1.5",
+      "codes": [],
+      "mount": "C or RX",
+      "gauge": "16mm",
+      "decade": 1950,
+      "year": null,
+      "description": "A standard focal length lens with a Visifocus depth of field scale; for non reflex 16mm cameras with a standard c-mount.",
+      "images": [
+        {
+          "src": "/images/lenses/50kern_20.jpg",
+          "alt": "Switar 25mm Visifocus"
+        }
+      ],
+      "sources": [],
+      "catalogue": {
+        "year": 1952,
+        "doc": "01775",
+        "offeredFor": "Bolex cameras",
+        "asPrinted": "Switar 25mm (1\") F:1.5, for Bolex only",
+        "price": "$122.00",
+        "month": "February"
+      },
+      "from": {
+        "page": "50kern",
+        "heading": "C and RX Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/50kern.html"
+      }
+    },
+    {
+      "slug": "daora",
+      "name": "Switar 75mm f/1.9 (DAORA)",
+      "maker": "Kern-Paillard",
+      "series": "Switar",
+      "focalLength": "75mm",
+      "aperture": "f/1.9",
+      "codes": [
+        "DAORA"
+      ],
+      "mount": "C or RX",
+      "gauge": "16mm",
+      "decade": 1950,
+      "year": null,
+      "description": "Standard C mount; fast telephoto lens. It came with a detachable lens shade.",
+      "images": [
+        {
+          "src": "/images/lenses/50kern_25.jpg",
+          "alt": "DAORA"
+        }
+      ],
+      "sources": [],
+      "listings": [
+        {
+          "price": "$145.00",
+          "date": "May 1967",
+          "doc": "04933",
+          "asPrinted": "Switar 75mm f/1.9"
+        }
+      ],
+      "from": {
+        "page": "50kern",
+        "heading": "C and RX Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/50kern.html"
+      }
+    },
+    {
+      "slug": "tele-cinor-75mm-f-2-5",
+      "name": "Tele-Cinor 75mm f/2.5",
+      "maker": "SOM Berthiot",
+      "series": "Tele-Cinor",
+      "focalLength": "75mm",
+      "aperture": "f/2.5",
+      "codes": [],
+      "mount": "C or RX",
+      "gauge": "16mm",
+      "decade": 1950,
+      "year": null,
+      "description": "A C mount telephoto lens with a focus range from 3.3' to infinity.",
+      "images": [
+        {
+          "src": "/images/lenses/50som_12.jpg",
+          "alt": "Tele Cinor 75mm"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "50berthiot",
+        "heading": "C and RX Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/50berthiot.html"
+      }
+    },
+    {
+      "slug": "yvent",
+      "name": "Yvar 100mm f/3.3 (YVENT)",
+      "maker": "Kern-Paillard",
+      "series": "Yvar",
+      "focalLength": "100mm",
+      "aperture": "f/3.3",
+      "codes": [
+        "YVENT"
+      ],
+      "mount": "C or RX",
+      "gauge": "16mm",
+      "decade": 1950,
+      "year": 1950,
+      "description": "Telephoto lens with 4x magnification compared to a standard 25mm focal length lens; visifocus depth of field scale. Introduced in 1950. It came with a detachable lens shade and leather case. With its length of 6 1/2\", it was recommended only as an accessory lens as it would obstruct the field of view of shorter focal length lenses.",
+      "images": [
+        {
+          "src": "/images/lenses/50kern_27.jpg",
+          "alt": "YVENT"
+        }
+      ],
+      "sources": [],
+      "catalogue": {
+        "year": 1952,
+        "doc": "01775",
+        "offeredFor": "Bolex cameras",
+        "asPrinted": "Yvar 100mm (4\") F:3.3, \"C\" mount",
+        "price": "$106.00",
+        "month": "February"
+      },
+      "from": {
+        "page": "50kern",
+        "heading": "C and RX Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/50kern.html"
+      }
+    },
+    {
+      "slug": "becin",
+      "name": "Yvar 12.5mm f/2.5 (BECIN)",
+      "maker": "Kern-Paillard",
+      "series": "Yvar",
+      "focalLength": "12.5mm",
+      "aperture": "f/2.5",
+      "codes": [
+        "BECIN"
+      ],
+      "mount": "D",
+      "gauge": "8mm",
+      "decade": 1950,
+      "year": null,
+      "description": "Standard focal length lens with a focusing ring and engraved depth of field scale.",
+      "images": [
+        {
+          "src": "/images/lenses/50kern_07.jpg",
+          "alt": "BECIN"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "50kern",
+        "heading": "D Mount Lenses for 8mm Cameras",
+        "originalPath": "/lenses/50kern.html"
+      }
+    },
+    {
+      "slug": "ficin",
+      "name": "Yvar 12.5mm f/2.5 (FICIN)",
+      "maker": "Kern-Paillard",
+      "series": "Yvar",
+      "focalLength": "12.5mm",
+      "aperture": "f/2.5",
+      "codes": [
+        "FICIN"
+      ],
+      "mount": "D",
+      "gauge": "8mm",
+      "decade": 1950,
+      "year": null,
+      "description": "A standard focal length lens; fixed focus.",
+      "images": [
+        {
+          "src": "/images/lenses/50kern_06.jpg",
+          "alt": "FICIN"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "50kern",
+        "heading": "D Mount Lenses for 8mm Cameras",
+        "originalPath": "/lenses/50kern.html"
+      }
+    },
+    {
+      "slug": "yvar-13mm-f-1-9-fix-focus",
+      "name": "Yvar 13mm f/1.9 Fix-Focus",
+      "maker": "Kern-Paillard",
+      "series": "Yvar",
+      "focalLength": "13mm",
+      "aperture": "f/1.9",
+      "codes": [],
+      "mount": "D",
+      "gauge": "8mm",
+      "decade": 1950,
+      "year": null,
+      "description": "A fixed focus, standard focal length lens.",
+      "images": [
+        {
+          "src": "/images/lenses/50kern_12b.jpg",
+          "alt": "HUVAR"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "50kern",
+        "heading": "D Mount Lenses for 8mm Cameras",
+        "originalPath": "/lenses/50kern.html"
+      }
+    },
+    {
+      "slug": "huvar",
+      "name": "Yvar 13mm f/1.9 Visifocus (HUVAR)",
+      "maker": "Kern-Paillard",
+      "series": "Yvar",
+      "focalLength": "13mm",
+      "aperture": "f/1.9",
+      "codes": [
+        "HUVAR"
+      ],
+      "mount": "D",
+      "gauge": "8mm",
+      "decade": 1950,
+      "year": null,
+      "description": "A standard focal length lens, with focusing ring and Visifocus depth of field scale.",
+      "images": [
+        {
+          "src": "/images/lenses/50kern_12.jpg",
+          "alt": "HUVAR"
+        }
+      ],
+      "sources": [],
+      "listings": [
+        {
+          "price": "$64.50",
+          "date": "March 1965",
+          "doc": "04929",
+          "asPrinted": "Yvar 13mm f/1.8 f.m."
+        }
+      ],
+      "from": {
+        "page": "50kern",
+        "heading": "D Mount Lenses for 8mm Cameras",
+        "originalPath": "/lenses/50kern.html"
+      }
+    },
+    {
+      "slug": "yvong",
+      "name": "Yvar 150mm f/4 (YVONG)",
+      "maker": "Kern-Paillard",
+      "series": "Yvar",
+      "focalLength": "150mm",
+      "aperture": "f/4",
+      "codes": [
+        "YVONG"
+      ],
+      "mount": "C or RX",
+      "gauge": "16mm",
+      "decade": 1950,
+      "year": 1950,
+      "description": "Extreme telephoto lens, approximately 7 1/2 inches in length with a weight of 7.5 ounces. It was introduced in 1950 and came complete with a leather carrying case and shoulder strap. A detachable lens shade was also included. Because of its over-all length, it was recommended only as an accessory lens and not intended to be mounted with lenses of shorter focal lengths.",
+      "images": [
+        {
+          "src": "/images/lenses/50kern_28.jpg",
+          "alt": "YVONG"
+        }
+      ],
+      "sources": [],
+      "catalogue": {
+        "year": 1952,
+        "doc": "01775",
+        "offeredFor": "Bolex cameras",
+        "asPrinted": "Yvar 150mm (6\") F:4.0, \"C\" mount",
+        "price": "$145.75",
+        "month": "February"
+      },
+      "from": {
+        "page": "50kern",
+        "heading": "C and RX Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/50kern.html"
+      }
+    },
+    {
+      "slug": "yveri",
+      "name": "Yvar 16mm f/2.8 (st. YVERI)",
+      "maker": "Kern-Paillard",
+      "series": "Yvar",
+      "focalLength": "16mm",
+      "aperture": "f/2.8",
+      "codes": [
+        "YVERI"
+      ],
+      "mount": "C or RX",
+      "gauge": "16mm",
+      "decade": 1950,
+      "year": null,
+      "description": "A moderately wide angle lens with Visifocus scale; normal C Mount.",
+      "images": [
+        {
+          "src": "/images/lenses/50kern_18.jpg",
+          "alt": "YVERI"
+        }
+      ],
+      "sources": [],
+      "catalogue": {
+        "year": 1952,
+        "doc": "01775",
+        "offeredFor": "Bolex cameras",
+        "asPrinted": "Yvar 16mm F:2.8, \"C\" mount",
+        "price": "$76.50",
+        "month": "February"
+      },
+      "from": {
+        "page": "50kern",
+        "heading": "C and RX Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/50kern.html"
+      }
+    },
+    {
+      "slug": "yvar-25mm-f-1-8-visifocus",
+      "name": "Yvar 25mm f/1.8 Visifocus",
+      "maker": "Kern-Paillard",
+      "series": "Yvar",
+      "focalLength": "25mm",
+      "aperture": "f/1.8",
+      "codes": [],
+      "mount": "C or RX",
+      "gauge": "16mm",
+      "decade": 1950,
+      "year": null,
+      "yearNote": "'Appears to have been introduced in 1958 or 1959.' He would not pick between them, so neither does this.",
+      "description": "This lens appears to have been introduced in 1958 or 1959. It was only available in standard C mount, and priced the lowest among standard focal length lenses.",
+      "images": [
+        {
+          "src": "/images/lenses/50kern_21b.jpg",
+          "alt": "yvar 25mm visifocus"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "50kern",
+        "heading": "C and RX Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/50kern.html"
+      }
+    },
+    {
+      "slug": "huaro",
+      "name": "Yvar 25mm f/2.5 Visifocus (HUARO)",
+      "maker": "Kern-Paillard",
+      "series": "Yvar",
+      "focalLength": "25mm",
+      "aperture": "f/2.5",
+      "codes": [
+        "HUARO"
+      ],
+      "mount": "D",
+      "gauge": "8mm",
+      "decade": 1950,
+      "year": null,
+      "description": "Standard focal length lens; Visifocus scale.",
+      "images": [
+        {
+          "src": "/images/lenses/50kern_13.jpg",
+          "alt": "HUARO"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "50kern",
+        "heading": "D Mount Lenses for 8mm Cameras",
+        "originalPath": "/lenses/50kern.html"
+      }
+    },
+    {
+      "slug": "yvita",
+      "name": "Yvar 36mm f/2.8 Visifocus (YVITA)",
+      "maker": "Kern-Paillard",
+      "series": "Yvar",
+      "focalLength": "36mm",
+      "aperture": "f/2.8",
+      "codes": [
+        "YVITA"
+      ],
+      "mount": "D",
+      "gauge": "8mm",
+      "decade": 1950,
+      "year": null,
+      "description": "Telephoto lens with a Visifocus DOF scale.",
+      "images": [
+        {
+          "src": "/images/lenses/50kern_15.jpg",
+          "alt": "YVITA"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "50kern",
+        "heading": "D Mount Lenses for 8mm Cameras",
+        "originalPath": "/lenses/50kern.html"
+      }
+    },
+    {
+      "slug": "yvora",
+      "name": "Yvar 75mm f/2.8 (YVORA)",
+      "maker": "Kern-Paillard",
+      "series": "Yvar",
+      "focalLength": "75mm",
+      "aperture": "f/2.8",
+      "codes": [
+        "YVORA"
+      ],
+      "mount": "C or RX",
+      "gauge": "16mm",
+      "decade": 1950,
+      "year": 1950,
+      "description": "Telephoto lens with Visifocus DOF scale, introduced in 1950; a detachable lens shade and leather case was included. This lens could be mounted on the turret with any compliment of shorter focal length lenses without obstructing the field of view.",
+      "images": [
+        {
+          "src": "/images/lenses/50kern_26.jpg",
+          "alt": "YVORA"
+        }
+      ],
+      "sources": [],
+      "listings": [
+        {
+          "price": "$69.50",
+          "date": "May 1967",
+          "doc": "04933",
+          "asPrinted": "Yvar 75mm f/2.8"
+        }
+      ],
+      "catalogue": {
+        "year": 1952,
+        "doc": "01775",
+        "offeredFor": "Bolex cameras",
+        "asPrinted": "Yvar 75mm (3\") F:2.8, \"C\" mount",
+        "price": "$87.50",
+        "month": "February"
+      },
+      "from": {
+        "page": "50kern",
+        "heading": "C and RX Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/50kern.html"
+      }
+    },
+    {
+      "slug": "panci",
+      "name": "Pan Cinor 20mm-60mm f/2.8 Zoom Lens with Viewfinder (PANCI)",
+      "maker": "SOM Berthiot",
+      "series": "Pan Cinor",
+      "focalLength": "20mm",
+      "aperture": "f/2.8",
+      "codes": [
+        "PANCI"
+      ],
+      "mount": "C or RX",
+      "gauge": "16mm",
+      "decade": 1950,
+      "year": 1953,
+      "description": "A C mount zoom lens with an attached viewfinder, introduced in 1953. The field shown in the parallax corrected viewfinder was coupled to the focal length distance of the lens.",
+      "images": [
+        {
+          "src": "/images/lenses/50som_13.jpg",
+          "alt": "Pan Cinor 60"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "50berthiot",
+        "heading": "C and RX Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/50berthiot.html"
+      }
+    },
+    {
+      "slug": "hupan",
+      "name": "Pan Cinor 12.5mm-36mm f/2.8 zoom lens (HUPAN)",
+      "maker": "SOM Berthiot",
+      "series": "Pan Cinor",
+      "focalLength": "12.5mm",
+      "aperture": "f/2.8",
+      "codes": [
+        "HUPAN"
+      ],
+      "mount": "D",
+      "gauge": "8mm",
+      "decade": 1950,
+      "year": 1954,
+      "description": "A D mount zoom lens with an attached viewfinder. Introduced in 1954; sometimes referred to as the \"Pan Cinor 36\".",
+      "images": [
+        {
+          "src": "/images/lenses/50som_04.jpg",
+          "alt": "Pan Cinor 36"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "50berthiot",
+        "heading": "D Mount Lenses for 8mm Cameras",
+        "originalPath": "/lenses/50berthiot.html"
+      }
+    },
+    {
+      "slug": "swese",
+      "name": "Switar 16mm f/1.8 (st. SWESE, RX DAESE)",
+      "maker": "Kern-Paillard",
+      "series": "Switar",
+      "focalLength": "16mm",
+      "aperture": "f/1.8",
+      "codes": [
+        "SWESE",
+        "DAESE"
+      ],
+      "mount": "C or RX",
+      "gauge": "16mm",
+      "decade": 1950,
+      "year": 1954,
+      "description": "This Visifocus lens was introduced in 1954, with a standard C mount (SWESE); a RX mount version (DAESE) was available in 1956.",
+      "images": [
+        {
+          "src": "/images/lenses/50kern_17.jpg",
+          "alt": "SWESE, RX DAESE"
+        }
+      ],
+      "sources": [],
+      "listings": [
+        {
+          "price": "$99.50",
+          "date": "May 1967",
+          "doc": "04933",
+          "asPrinted": "Switar 16mm f/1.8"
+        },
+        {
+          "price": "$99.50",
+          "date": "May 1967",
+          "doc": "04933",
+          "asPrinted": "Switar 16mm f/1.8 RX"
+        },
+        {
+          "price": "$99.50",
+          "date": "February 1972",
+          "doc": "04932",
+          "asPrinted": "Switar 16mm f/1.8"
+        }
+      ],
+      "from": {
+        "page": "50kern",
+        "heading": "C and RX Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/50kern.html"
+      }
+    },
+    {
+      "slug": "swinq",
+      "name": "Switar 5.5mm f/1.8 (SWINQ)",
+      "maker": "Kern-Paillard",
+      "series": "Switar",
+      "focalLength": "5.5mm",
+      "aperture": "f/1.8",
+      "codes": [
+        "SWINQ"
+      ],
+      "mount": "D",
+      "gauge": "8mm",
+      "decade": 1950,
+      "year": 1954,
+      "description": "Wide angle lens, introduced in 1954.",
+      "images": [
+        {
+          "src": "/images/lenses/50kern_01.jpg",
+          "alt": "SWINQ"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "50kern",
+        "heading": "D Mount Lenses for 8mm Cameras",
+        "originalPath": "/lenses/50kern.html"
+      }
+    },
+    {
+      "slug": "swifi",
+      "name": "Switar 50mm f/1.4 (St. SWIFI, RX DAIFI)",
+      "maker": "Kern-Paillard",
+      "series": "Switar",
+      "focalLength": "50mm",
+      "aperture": "f/1.4",
+      "codes": [
+        "SWIFI",
+        "DAIFI"
+      ],
+      "mount": "C or RX",
+      "gauge": "16mm",
+      "decade": 1950,
+      "year": 1954,
+      "description": "A telephoto lens that was available in both standard c-mount and \"RX\" mount; the standard version (SWIFI) was introduced in 1954, while the RX mount version (DAIFI) was introduced in 1956. It came with a detachable lens shade.",
+      "images": [
+        {
+          "src": "/images/lenses/50kern_23.jpg",
+          "alt": "SWIFI, RX DAIFI"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "50kern",
+        "heading": "C and RX Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/50kern.html"
+      }
+    },
+    {
+      "slug": "filti",
+      "name": "Yvar Filtin 12.5mm f/2.8 (FILTI)",
+      "maker": "Kern-Paillard",
+      "series": "Yvar",
+      "focalLength": "12.5mm",
+      "aperture": "f/2.8",
+      "codes": [
+        "FILTI"
+      ],
+      "mount": "D",
+      "gauge": "8mm",
+      "decade": 1950,
+      "year": 1954,
+      "description": "This lens was introduced in 1954 and contained four (4) built in filters; yellow, red, \"daylight\" and \"skylight\". Filters could be selected by turning a knurled index ring. Four \"no filter\" positions were marked between each filter position. The Filtin could focus from 1 1/2 feet to infinity and close down to f/22.",
+      "images": [
+        {
+          "src": "/images/lenses/50kern_10.jpg",
+          "alt": "FILTI"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "50kern",
+        "heading": "D Mount Lenses for 8mm Cameras",
+        "originalPath": "/lenses/50kern.html"
+      }
+    },
+    {
+      "slug": "pan-cinor-70-17-5mm-70mm-f-2-4-zoom-lens-with-viewfinder",
+      "name": "Pan Cinor 70 (17.5mm-70mm f/2.4) Zoom Lens with viewfinder)",
+      "maker": "SOM Berthiot",
+      "series": "Pan Cinor",
+      "focalLength": "17.5mm",
+      "aperture": "f/2.4",
+      "codes": [],
+      "mount": "C or RX",
+      "gauge": "16mm",
+      "decade": 1950,
+      "year": 1955,
+      "description": "Introduced in 1955, this lens offered a built-in viewfinder which offered through-the-lens viewing and framing of the subject. Pan Cinor 100 (25mm-100mm f/3.4) The Pan Cinor 100 was available in the same year, and offered an increased focal length of 25mm-100m, but at a slightly lower speed of f/3.4. It is otherwise similar in appearance to the Pan Cinor 70 (pictured above).",
+      "images": [
+        {
+          "src": "/images/lenses/50som_14.jpg",
+          "alt": "Berthiot Pan Cinor Lenses"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "50berthiot",
+        "heading": "C and RX Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/50berthiot.html"
+      }
+    },
+    {
+      "slug": "swedi",
+      "name": "Switar 10mm f/1.6 (st. SWEDI, RX DAADI)",
+      "maker": "Kern-Paillard",
+      "series": "Switar",
+      "focalLength": "10mm",
+      "aperture": "f/1.6",
+      "codes": [
+        "SWEDI",
+        "DAADI"
+      ],
+      "mount": "C or RX",
+      "gauge": "16mm",
+      "decade": 1950,
+      "year": 1956,
+      "description": "These wide angle lenses were introduced in 1956. Two versions were available; in standard C mount for non-reflex cameras (SWEDI) and in RX mount for the H-16 Reflex (DAADI).",
+      "images": [
+        {
+          "src": "/images/lenses/50kern_16.jpg",
+          "alt": "SWEDI, RX DAADI"
+        }
+      ],
+      "sources": [],
+      "listings": [
+        {
+          "price": "$165.00",
+          "date": "May 1967",
+          "doc": "04933",
+          "asPrinted": "Switar 10mm f/1.6"
+        },
+        {
+          "price": "$165.00",
+          "date": "May 1967",
+          "doc": "04933",
+          "asPrinted": "Switar 10mm f/1.6 RX"
+        },
+        {
+          "price": "$165.00",
+          "date": "February 1972",
+          "doc": "04932",
+          "asPrinted": "Switar 10mm f/1.6"
+        },
+        {
+          "price": "$261.50",
+          "date": "February 1972",
+          "doc": "04932",
+          "asPrinted": "Switar 10mm f/1.6 Rx Preset"
+        },
+        {
+          "price": "$614.00",
+          "date": "November 1979",
+          "doc": "02209",
+          "asPrinted": "Switar 10mm f/1.6 Rx Preset"
+        },
+        {
+          "price": "$814.00",
+          "date": "November 1979",
+          "doc": "02209",
+          "asPrinted": "Switar 10mm f/1.6 Rx Preset multicoated"
+        }
+      ],
+      "from": {
+        "page": "50kern",
+        "heading": "C and RX Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/50kern.html"
+      }
+    },
+    {
+      "slug": "pizar-25mm-f-1-5-rx",
+      "name": "Pizar 25mm f/1.5 RX",
+      "maker": "Kern-Paillard",
+      "series": "Pizar",
+      "focalLength": "25mm",
+      "aperture": "f/1.5",
+      "codes": [],
+      "mount": "C or RX",
+      "gauge": "16mm",
+      "decade": 1950,
+      "year": 1957,
+      "description": "Standard focal length lens with Visifocus DOF scale, introduced in 1957; in \"RX mount\" for H-16 reflex cameras.",
+      "images": [
+        {
+          "src": "/images/lenses/50kern_21.jpg",
+          "alt": "Pizar 25mm RX"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "50kern",
+        "heading": "C and RX Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/50kern.html"
+      }
+    },
+    {
+      "slug": "pizui",
+      "name": "Pizar 5.5mm f/2 (also f/1.9) (PIZUI)",
+      "maker": "Kern-Paillard",
+      "series": "Pizar",
+      "focalLength": "5.5mm",
+      "aperture": "f/2",
+      "codes": [
+        "PIZUI"
+      ],
+      "mount": "D",
+      "gauge": "8mm",
+      "decade": 1950,
+      "year": 1957,
+      "description": "Wide angle lens with fixed focus and a maximum aperture of f/2; introduced in 1957. A later version was available in 1959; it had a maximum aperture of f/1.9. Both were fixed focus lenses and were identical in appearance.",
+      "images": [
+        {
+          "src": "/images/lenses/50kern_02.jpg",
+          "alt": "PIZUI"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "50kern",
+        "heading": "D Mount Lenses for 8mm Cameras",
+        "originalPath": "/lenses/50kern.html"
+      }
+    },
+    {
+      "slug": "pan-cinor-30-dv-10mm-30mm-f-2-8",
+      "name": "Pan Cinor 30 DV (10mm-30mm f/2.8)",
+      "maker": "SOM Berthiot",
+      "series": "Pan Cinor",
+      "focalLength": "10mm",
+      "aperture": "f/2.8",
+      "codes": [],
+      "mount": "D",
+      "gauge": "8mm",
+      "decade": 1950,
+      "year": 1958,
+      "description": "Introduced in 1958, the Pan Cinor 30 \"Direct View\" zoom lens had a built-in zoom lever and adjustable viewfinder. It was available in standard D mount with a zoom range of 10mm-30mm focal length.",
+      "images": [
+        {
+          "src": "/images/lenses/50som_05.jpg",
+          "alt": "Pan CInor 30L"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "50berthiot",
+        "heading": "D Mount Lenses for 8mm Cameras",
+        "originalPath": "/lenses/50berthiot.html"
+      }
+    },
+    {
+      "slug": "pan-cinor-85-17mm-85mm-f-2-c-mount",
+      "name": "Pan Cinor 85 (17mm-85mm f/2) C mount",
+      "maker": "SOM Berthiot",
+      "series": "Pan Cinor",
+      "focalLength": "17mm",
+      "aperture": "f/2",
+      "codes": [],
+      "mount": "C or RX",
+      "gauge": "16mm",
+      "decade": 1950,
+      "year": 1959,
+      "description": "The Pan Cinor 85 was introduced in 1959. It was designed for use with H-16 cameras. The attached viewfinder featured a split-image rangefinder focusing aid. Although it's similar in appearance to the earlier Pan Cinor series, it is identifiable by a black finish.",
+      "images": [
+        {
+          "src": "/images/lenses/50som_16.jpg",
+          "alt": "generic"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "50berthiot",
+        "heading": "C and RX Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/50berthiot.html"
+      }
+    },
+    {
+      "slug": "pizar-50mm-f-1-8-visifocus-st-and-rx-versions",
+      "name": "Pizar 50mm f/1.8 Visifocus (St. and RX versions)",
+      "maker": "Kern-Paillard",
+      "series": "Pizar",
+      "focalLength": "50mm",
+      "aperture": "f/1.8",
+      "codes": [],
+      "mount": "C or RX",
+      "gauge": "16mm",
+      "decade": 1950,
+      "year": 1959,
+      "yearNote": "'Introduced in the late 1959.' Missed by the patterns because of the stray 'the'.",
+      "description": "Introduced in the late 1959, this telephoto lens was available in both C mount and RX mount; both with a Visifocus DOF scale.",
+      "images": [
+        {
+          "src": "/images/lenses/50kern_24.jpg",
+          "alt": "Pizar 50mm"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "50kern",
+        "heading": "C and RX Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/50kern.html"
+      }
+    },
+    {
+      "slug": "switar-13mm-f-0-9-visifocus",
+      "name": "Switar 13mm f/0.9 Visifocus",
+      "maker": "Kern-Paillard",
+      "series": "Switar",
+      "focalLength": "13mm",
+      "aperture": "f/0.9",
+      "codes": [],
+      "mount": "D",
+      "gauge": "8mm",
+      "decade": 1950,
+      "year": 1959,
+      "description": "A very fast lens of standard focal length, introduced in 1959.",
+      "images": [
+        {
+          "src": "/images/lenses/50kern_11.jpg",
+          "alt": "Switar 13mm Visifocus"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "50kern",
+        "heading": "D Mount Lenses for 8mm Cameras",
+        "originalPath": "/lenses/50kern.html"
+      }
+    },
+    {
+      "slug": "switar-36mm-f-1-8-visifocus",
+      "name": "Switar 36mm f/1.8 Visifocus",
+      "maker": "Kern-Paillard",
+      "series": "Switar",
+      "focalLength": "36mm",
+      "aperture": "f/1.8",
+      "codes": [],
+      "mount": "D",
+      "gauge": "8mm",
+      "decade": 1950,
+      "year": 1959,
+      "description": "A fast telephoto lens, introduced in 1959. It came with a detachable lens hood.",
+      "images": [
+        {
+          "src": "/images/lenses/50kern_14.jpg",
+          "alt": "Switar 36mm Visifocus"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "50kern",
+        "heading": "D Mount Lenses for 8mm Cameras",
+        "originalPath": "/lenses/50kern.html"
+      }
+    },
+    {
+      "slug": "yvar-13mm-f-1-8-visifocus",
+      "name": "Yvar 13mm f/1.8 Visifocus",
+      "maker": "Kern-Paillard",
+      "series": "Yvar",
+      "focalLength": "13mm",
+      "aperture": "f/1.8",
+      "codes": [],
+      "mount": "D",
+      "gauge": "8mm",
+      "decade": 1950,
+      "year": 1959,
+      "description": "This standard focal length lens, introduced in 1959, used the Visifocus depth of field scale.",
+      "images": [
+        {
+          "src": "/images/lenses/50kern_11b.jpg",
+          "alt": "generic"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "50kern",
+        "heading": "D Mount Lenses for 8mm Cameras",
+        "originalPath": "/lenses/50kern.html"
+      }
+    },
+    {
+      "slug": "angenieux-120-f-2-2-12-120",
+      "name": "Angenieux 120 (f/2.2 12-120)",
+      "maker": "Angénieux",
+      "series": "Angenieux",
+      "focalLength": null,
+      "aperture": "f/2.2",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1960,
+      "year": null,
+      "description": "C mount versions of the Angenieux 120 were available that were optically corrected for Bolex reflex cameras; these were marked RX near the base. A built in geared crank allowed slow zooms, while a detachable 1\" rod permitted faster zooms. The 120 used a standard Seriex IX filter and was approximately 1 pound, 12 ounces.",
+      "images": [
+        {
+          "src": "/images/lenses/60ang_02.jpg",
+          "alt": "Angenieux 120 Lens"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "60angenieux",
+        "heading": "C Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/60angenieux.html"
+      }
+    },
+    {
+      "slug": "angenieux-120-bda-f-2-2-12-120-auto-diaphragm",
+      "name": "Angenieux 120 BDA (f/2.2 12-120 auto diaphragm)",
+      "maker": "Angénieux",
+      "series": "Angenieux",
+      "focalLength": null,
+      "aperture": "f/2.2",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1960,
+      "year": null,
+      "description": "Optically corrected versions of this lens were recommended for H-16 reflex cameras. The lens featured an automatic diaphragm with built in exposure meter; it was powered by either two (2) TR132 or four (4) RM-1 batteries. The TR132 was a 2.7V battery, while the RM-1 was a 1.35V battery; both were mercury cell, and both have been discontinued. However, the auto diaphragm could be switched off and adjusted manually from f/2.2 to f/22. It could be fitted with Series IX filters and weighed 2 lbs and 12 oz.",
+      "images": [
+        {
+          "src": "/images/lenses/60ang_03.jpg",
+          "alt": "Angenieux 120 BDA"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "60angenieux",
+        "heading": "C Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/60angenieux.html"
+      }
+    },
+    {
+      "slug": "angenieux-120-w-viewfinder-f-2-2-12-120",
+      "name": "Angenieux 120 w/ Viewfinder (f/2.2 12-120)",
+      "maker": "Angénieux",
+      "series": "Angenieux",
+      "focalLength": null,
+      "aperture": "f/2.2",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1960,
+      "year": null,
+      "description": "This version of the Angenieux 120 was equipped with a viewfinder and designed for C mount cameras; Bolex recommended its use with the H-16 M and H-16 S non-reflex series. It used a Series IX filter and weighed 2 lbs, 6 oz.",
+      "images": [],
+      "sources": [],
+      "from": {
+        "page": "60angenieux",
+        "heading": "C Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/60angenieux.html"
+      }
+    },
+    {
+      "slug": "angenieux-95-w-viewfinder-f-2-2-9-5-95mm",
+      "name": "Angenieux 95 w/ Viewfinder / f/2.2 9.5-95mm",
+      "maker": "Angénieux",
+      "series": "Angenieux",
+      "focalLength": "9.5-95mm",
+      "aperture": "f/2.2",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1960,
+      "year": null,
+      "description": "This version of the Angenieux 95 was designed for C-mount cameras and recommended for use with the H-16M series. The viewfinder had a ground glass focusing aid and was designed to fit over the top of H model cameras. Shown here, it is attached to an H-16 S-4, with a built in turret support. Weight was approximately 3 1/2 lbs. Filter size: 103.5mm Angenieux 95 f/2.2 9.5-95mm This version was optically corrected for Bolex H-16 reflex cameras. It was otherwise the same lens, but without the viewfinder. A built in geared crank allowed slow zooms; a 1\" lever could be attached for faster zooms. Weight was approximately 2 lbs, 12 oz. Filter size: 103.5mm",
+      "images": [
+        {
+          "src": "/images/lenses/60ang_01.jpg",
+          "alt": "Angenieux 95 Lens"
+        },
+        {
+          "src": "/images/lenses/60ang_01b.jpg",
+          "alt": "Angenieux c mount"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "60angenieux",
+        "heading": "C Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/60angenieux.html"
+      }
+    },
+    {
+      "slug": "lyset",
+      "sources": [],
+      "images": [],
+      "added": true,
+      "name": "Cinor 16mm f/2.8 (LYSET)",
+      "maker": "SOM Berthiot",
+      "series": "Cinor",
+      "focalLength": "16mm",
+      "aperture": "f/2.8",
+      "codes": [
+        "LYSET"
+      ],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1960,
+      "year": null,
+      "description": "A wide angle lens for the H-16, listed by Paillard under Wide Angle Lenses at $59.50 in the dealer price list of May 1967, beside the Switar 10mm and 16mm. The archive has no other Cinor at this focal length.",
+      "listings": [
+        {
+          "price": "$59.50",
+          "date": "May 1967",
+          "doc": "04933",
+          "asPrinted": "Cinor 16mm f/2.8"
+        }
+      ],
+      "from": {
+        "page": null,
+        "heading": null,
+        "originalPath": null
+      }
+    },
+    {
+      "slug": "cinet",
+      "sources": [],
+      "images": [],
+      "added": true,
+      "name": "Cinor 25mm f/1.8 (CINET)",
+      "maker": "SOM Berthiot",
+      "series": "Cinor",
+      "focalLength": "25mm",
+      "aperture": "f/1.8",
+      "codes": [
+        "CINET"
+      ],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1960,
+      "year": null,
+      "description": "A standard focal length lens for the H-16, listed by Paillard under Standard Lenses at $70.00 in the dealer price list of May 1967. Nothing else about it has been established here. The archive holds a Cinor 25mm f/0.95 and a Cinor 25mm f/1.4 RX, and this is neither of them.",
+      "listings": [
+        {
+          "price": "$70.00",
+          "date": "May 1967",
+          "doc": "04933",
+          "asPrinted": "Cinor 25mm f/1.8"
+        }
+      ],
+      "from": {
+        "page": null,
+        "heading": null,
+        "originalPath": null
+      }
+    },
+    {
+      "slug": "macro-switar-12-5-f-1-3-h8-rx",
+      "name": "Macro Switar 12.5 f/1.3 H8 rx",
+      "maker": "Kern-Paillard",
+      "series": "Macro",
+      "focalLength": "12.5mm",
+      "aperture": "f/1.3",
+      "codes": [
+        "DAREX"
+      ],
+      "mount": null,
+      "gauge": "8mm",
+      "decade": 1960,
+      "year": null,
+      "description": "Standard focal length lens for the H-8 REX; pre-set diaphragm with Visifocus DOF scale and built in macro extension. Focus from 3\" to infinity. Uses Series V filters; detachable lens hood.",
+      "images": [
+        {
+          "src": "/images/lenses/60kern_02.jpg",
+          "alt": "Macro Switar 12.5 H8rx"
+        }
+      ],
+      "sources": [],
+      "listings": [
+        {
+          "price": "$115.00",
+          "date": "March 1965",
+          "doc": "04929",
+          "asPrinted": "Macro-Switar 12.5mm f/1.3Rx"
+        }
+      ],
+      "from": {
+        "page": "60kern",
+        "heading": "Lenses for H-8 Reflex Cameras",
+        "originalPath": "/lenses/60kern.html"
+      }
+    },
+    {
+      "slug": "macro-switar-36mm-f-1-4-h8-rx",
+      "name": "Macro Switar 36mm f/1.4 H8 rx",
+      "maker": "Kern-Paillard",
+      "series": "Macro",
+      "focalLength": "36mm",
+      "aperture": "f/1.4",
+      "codes": [
+        "DAROU"
+      ],
+      "mount": null,
+      "gauge": "8mm",
+      "decade": 1960,
+      "year": null,
+      "description": "Telephoto lens for the H-8 REX; pre-set diaphragm with Visifocus DOF scale and built in macro extension. Focus from 10 1/2\" to infinity. Uses Series V filters; detachable lens hood.",
+      "images": [
+        {
+          "src": "/images/lenses/60kern_04.jpg",
+          "alt": "Macro Switar 36mm H8rx"
+        }
+      ],
+      "sources": [],
+      "listings": [
+        {
+          "price": "$119.50",
+          "date": "March 1965",
+          "doc": "04929",
+          "asPrinted": "Macro-Switar 36mm f/1.4Rx"
+        }
+      ],
+      "from": {
+        "page": "60kern",
+        "heading": "Lenses for H-8 Reflex Cameras",
+        "originalPath": "/lenses/60kern.html"
+      }
+    },
+    {
+      "slug": "macro-yvar-150mm-f-3-3-1960",
+      "name": "Macro Yvar 150mm f/3.3",
+      "maker": "Kern-Paillard",
+      "series": "Macro",
+      "focalLength": "150mm",
+      "aperture": "f/3.3",
+      "codes": [],
+      "mount": "C or RX",
+      "gauge": "16mm",
+      "decade": 1960,
+      "year": null,
+      "description": "The Macro Yvar 150mm was redesigned in 1970 to include a pre-set diaphragm. It also featured Visifocus DOF scale and built in macro extension. Minimum focus distance: 6 feet. Minimum diaphragm setting: f/32. Accepts Series VI drop in filters.",
+      "images": [
+        {
+          "src": "/images/lenses/60kern_23.jpg",
+          "alt": "Kern Macro Yvar 150mm Preset"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "60kern",
+        "heading": "C and RX Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/60kern.html"
+      }
+    },
+    {
+      "slug": "pan-cinor-40-pan-cinor-40-r",
+      "name": "Pan Cinor 40 / Pan Cinor 40 R",
+      "maker": "SOM Berthiot",
+      "series": "Pan Cinor",
+      "focalLength": null,
+      "aperture": null,
+      "codes": [],
+      "mount": null,
+      "gauge": "8mm",
+      "decade": 1960,
+      "year": 1960,
+      "description": "This lens was available in two versions; both were introduced in 1960 and offered through the lens viewing with an adjustable finder, a zoom range of 8mm to 40mm and a speed of f/1.9. The 40R version featured a split image rangefinder focusing aid, and was slightly more expensive.",
+      "images": [
+        {
+          "src": "/images/lenses/60som_02.jpg",
+          "alt": "generic"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "60berthiot",
+        "heading": "Lenses for 8mm Cameras",
+        "originalPath": "/lenses/60berthiot.html"
+      }
+    },
+    {
+      "slug": "switar-5-5mm-f-1-6-h8-rx",
+      "name": "Switar 5.5mm f/1.6 H8 rx",
+      "maker": "Kern-Paillard",
+      "series": "Switar",
+      "focalLength": "5.5mm",
+      "aperture": "f/1.6",
+      "codes": [
+        "DARIF"
+      ],
+      "mount": null,
+      "gauge": "8mm",
+      "decade": 1960,
+      "year": null,
+      "description": "Wide angle lens, specifically designed for the H-8 REX camera. It featured a pre-set diaphragm, Visifocus depth of field scale and minimum focusing distance of 4 1/2 inches. Series V filters could be attached.",
+      "images": [
+        {
+          "src": "/images/lenses/60kern_01.jpg",
+          "alt": "Switar 5.5 H8rx"
+        }
+      ],
+      "sources": [],
+      "listings": [
+        {
+          "price": "$129.50",
+          "date": "March 1965",
+          "doc": "04929",
+          "asPrinted": "Switar 5.5mm f/1.6Rx"
+        }
+      ],
+      "from": {
+        "page": "60kern",
+        "heading": "Lenses for H-8 Reflex Cameras",
+        "originalPath": "/lenses/60kern.html"
+      }
+    },
+    {
+      "slug": "vario-switar-86",
+      "name": "Vario Switar 86",
+      "maker": "Kern-Paillard",
+      "series": "Vario",
+      "focalLength": null,
+      "aperture": null,
+      "codes": [],
+      "mount": "C or RX",
+      "gauge": "16mm",
+      "decade": 1960,
+      "year": 1961,
+      "description": "Introduced in 1961; designed specifically for H-16 reflex cameras. It incorporated an automatic pre-set diaphragm feature which opened the diaphragm for viewing and focusing and closed it automatically prior to exposure. The pre-set aperture control and camera release mechanism were combined with a zoom lever; this could be couple to the Declic H grip with a special accessory cable (not shown). Zoom range from 18-86mm; maximum aperture f/2.5, minimum aperture f/22. The lens could accept Series VIII filters and weighed 2 lbs and 4 oz.",
+      "images": [
+        {
+          "src": "/images/lenses/60kern_24.jpg",
+          "alt": "Vario Switar 86"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "60kern",
+        "heading": "C and RX Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/60kern.html"
+      }
+    },
+    {
+      "slug": "macro-yvar-150mm-f-3-3",
+      "name": "Macro Yvar 150mm f/3.3",
+      "maker": "Kern-Paillard",
+      "series": "Macro",
+      "focalLength": "150mm",
+      "aperture": "f/3.3",
+      "codes": [
+        "HIONG"
+      ],
+      "mount": "C or RX",
+      "gauge": "16mm",
+      "decade": 1960,
+      "year": 1962,
+      "description": "Introduced in 1962; C mount, extreme telephoto lens with Visifocus DOF scale and built in macro extension. Minimum focus distance of 6 feet; minimum aperture of f/32. Accepts Series VI drop in filters.",
+      "images": [
+        {
+          "src": "/images/lenses/60kern_22b.jpg",
+          "alt": "Kern Macro Yvar 150mm"
+        }
+      ],
+      "sources": [],
+      "listings": [
+        {
+          "price": "$169.50",
+          "date": "March 1965",
+          "doc": "04929",
+          "asPrinted": "Macro-Yvar 150mm f/3.3Rx"
+        },
+        {
+          "price": "$261.50",
+          "date": "February 1972",
+          "doc": "04932",
+          "asPrinted": "Macro-Yvar 150mm f/3.3 Preset"
+        },
+        {
+          "price": "$590.00",
+          "date": "November 1979",
+          "doc": "02209",
+          "asPrinted": "Macro-Yvar 150mm f/3.3 Preset"
+        }
+      ],
+      "listingNote": "The archive carries two entries for the Macro Yvar 150mm f/3.3, this one and a later redesign. The code and price are attached here, to the 1962 original, because the 1965 list predates the redesign.",
+      "from": {
+        "page": "60kern",
+        "heading": "C and RX Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/60kern.html"
+      }
+    },
+    {
+      "slug": "pan-cinor-40-rx",
+      "name": "Pan Cinor 40 RX",
+      "maker": "SOM Berthiot",
+      "series": "Pan Cinor",
+      "focalLength": null,
+      "aperture": null,
+      "codes": [
+        "PAHUX"
+      ],
+      "mount": null,
+      "gauge": "8mm",
+      "decade": 1960,
+      "year": 1962,
+      "description": "Introduced in 1962 and designed for the H-8 REX. It offered a 5:1 zoom range from 8mm to 40mm, with a maximum aperture of f/1.9.",
+      "images": [
+        {
+          "src": "/images/lenses/60som_04.jpg",
+          "alt": "generic"
+        }
+      ],
+      "sources": [],
+      "listings": [
+        {
+          "price": "$215.00",
+          "date": "March 1965",
+          "doc": "04929",
+          "asPrinted": "Zoom: Pan Cinor 40 f/1.9Rx"
+        }
+      ],
+      "from": {
+        "page": "60berthiot",
+        "heading": "Lenses for 8mm Cameras",
+        "originalPath": "/lenses/60berthiot.html"
+      }
+    },
+    {
+      "slug": "vario-switar-36-f-1-9-8mm-36mm",
+      "name": "Vario Switar 36 f/1.9 (8mm-36mm)",
+      "maker": "Kern-Paillard",
+      "series": "Vario",
+      "focalLength": "8mm",
+      "aperture": "f/1.9",
+      "codes": [],
+      "mount": null,
+      "gauge": "8mm",
+      "decade": 1960,
+      "year": 1962,
+      "description": "Introduced in 1962 and designed by Kern for the H-8 reflex. It incorporated an automatic pre-set diaphragm feature which opened the diaphragm for viewing and focusing and closed it automatically prior to exposure. The pre-set aperture control and camera release mechanism were combined with a zoom lever; this could be couple to the Declic H grip with a special accessory cable (not shown). It could accept Series VI filters and weighed 13.5 ounces.",
+      "images": [
+        {
+          "src": "/images/lenses/60kern_07.jpg",
+          "alt": "Vario Switar 36"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "60kern",
+        "heading": "Lenses for H-8 Reflex Cameras",
+        "originalPath": "/lenses/60kern.html"
+      }
+    },
+    {
+      "slug": "macro-yvar-100mm-f-2-8",
+      "name": "Macro Yvar 100mm f/2.8",
+      "maker": "Kern-Paillard",
+      "series": "Macro",
+      "focalLength": "100mm",
+      "aperture": "f/2.8",
+      "codes": [
+        "HIENT"
+      ],
+      "mount": "C or RX",
+      "gauge": "16mm",
+      "decade": 1960,
+      "year": 1963,
+      "description": "Introduced in 1963; C mount telephoto lens with Visifocus depth of field scale and built in macro extension. Minimum focus distance of 4 feet. Accepts Series VI drop in filters.",
+      "images": [
+        {
+          "src": "/images/lenses/60kern_22.jpg",
+          "alt": "Kern Macro Yvar 100mm"
+        }
+      ],
+      "sources": [],
+      "listings": [
+        {
+          "price": "$109.50",
+          "date": "March 1965",
+          "doc": "04929",
+          "asPrinted": "Macro-Yvar 100mm f/2.8Rx"
+        }
+      ],
+      "from": {
+        "page": "60kern",
+        "heading": "C and RX Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/60kern.html"
+      }
+    },
+    {
+      "slug": "macro-switar-50mm-f-1-4-rx",
+      "name": "Macro Switar 50mm f/1.4 Rx",
+      "maker": "Kern-Paillard",
+      "series": "Macro",
+      "focalLength": "50mm",
+      "aperture": "f/1.4",
+      "codes": [
+        "DACRO"
+      ],
+      "mount": "C or RX",
+      "gauge": "16mm",
+      "decade": 1960,
+      "year": 1964,
+      "description": "Telephoto lens for H-16 reflex cameras, introduced in 1964. Pre set diaphragm, Visifocus DOF scale, built in macro extension and minimum focus distance of 15\".",
+      "images": [
+        {
+          "src": "/images/lenses/60kern_17.jpg",
+          "alt": "Macro Switar 50mm RX"
+        }
+      ],
+      "sources": [],
+      "listings": [
+        {
+          "price": "$200.00",
+          "date": "May 1967",
+          "doc": "04933",
+          "asPrinted": "Macro-Switar 50mm f/1.4 Rx"
+        }
+      ],
+      "from": {
+        "page": "60kern",
+        "heading": "C and RX Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/60kern.html"
+      }
+    },
+    {
+      "slug": "pan-cinor-85-compact-f-3-8-17mm-85mm",
+      "name": "Pan Cinor 85 Compact (f/3.8 17mm-85mm)",
+      "maker": "SOM Berthiot",
+      "series": "Pan Cinor",
+      "focalLength": "17mm",
+      "aperture": "f/3.8",
+      "codes": [
+        "PACOM"
+      ],
+      "mount": null,
+      "gauge": "16mm",
+      "decade": 1960,
+      "year": 1964,
+      "description": "This zoom lens was introduced in 1964 and designed specifically for H-16 reflex cameras. The compact size permitted permitted its use in conjuction with other lenses on the turret. It featured a built in zoom lever with 5:1 zoom range from 17mm to 85mm and a minimum aperture of f/22. The lens could focus from 3 1/2 feet to infinity and weighed approximately 10 ounces. It could accept Series VII filters.",
+      "images": [
+        {
+          "src": "/images/lenses/60som_10.jpg",
+          "alt": "Pan Cinor 85 Compact"
+        }
+      ],
+      "sources": [],
+      "listings": [
+        {
+          "price": "$250.00",
+          "date": "May 1967",
+          "doc": "04933",
+          "asPrinted": "Pan Cinor 85 Compact, 17-85mm f/3.8"
+        },
+        {
+          "price": "$595.00",
+          "date": "November 1979",
+          "doc": "02209",
+          "asPrinted": "Pan Cinor Compact 17-85mm f/3.8 C Mt."
+        }
+      ],
+      "from": {
+        "page": "60berthiot",
+        "heading": "Lenses for H-16 Cameras",
+        "originalPath": "/lenses/60berthiot.html"
+      }
+    },
+    {
+      "slug": "pan-cinor-85-2-f-2-17mm-85mm",
+      "name": "Pan Cinor 85-2 (f/2 17mm-85mm)",
+      "maker": "SOM Berthiot",
+      "series": "Pan Cinor",
+      "focalLength": "17mm",
+      "aperture": "f/2",
+      "codes": [
+        "PATEM"
+      ],
+      "mount": null,
+      "gauge": "16mm",
+      "decade": 1960,
+      "year": 1964,
+      "description": "Introduced in 1964, the Pan Cinor 85-2 zoom lens had a built in reflex viewfinder with a coincident image rangefinder focusing aid. The viewfinder had an adjustable eyepiece and was supplied with a rubber eyecup; it could be placed over the top of non reflex H-16 cameras, or placed at a 45° angle on H-16 reflex cameras. The lens came with a detachable shade and zoom lever and could accept Series VIII filters. Minimum focus distance: 6 feet. Minimum aperture: f/16. Weight: 2 lbs. 4 oz. This lens was also available in C mount for Auricon cine cameras; this version had an extended viewfinder of approximately 10 inches (2\" longer than the H-16 version).",
+      "images": [
+        {
+          "src": "/images/lenses/60som_09.jpg",
+          "alt": "Pan Cinor 85-2 Lens"
+        }
+      ],
+      "sources": [],
+      "listings": [
+        {
+          "price": "$420.00",
+          "date": "May 1967",
+          "doc": "04933",
+          "asPrinted": "Pan Cinor 85-2, 17-85mm f/2.0"
+        }
+      ],
+      "from": {
+        "page": "60berthiot",
+        "heading": "Lenses for H-16 Cameras",
+        "originalPath": "/lenses/60berthiot.html"
+      }
+    },
+    {
+      "slug": "vario-switar-36ee-8mm-36mm-f-1-9",
+      "name": "Vario Switar 36EE (8mm-36mm f/1.9)",
+      "maker": "Kern-Paillard",
+      "series": "Vario",
+      "focalLength": "8mm",
+      "aperture": "f/1.9",
+      "codes": [
+        "VASOT"
+      ],
+      "mount": null,
+      "gauge": "8mm",
+      "decade": 1960,
+      "year": 1964,
+      "description": "The Vario Switar 36EE (\"Electric Eye\") was introduced in 1964. It featured a fully automatic diaphragm control with a cadmium sulphide photo resistor which was sensitive to film ratings from 10-400 ASA. The exposure meter was powered by one (1) PX-13 1.35v mercury cell battery. The lens could be fitted with Series VI filters and weighed 18 ounces.",
+      "images": [
+        {
+          "src": "/images/lenses/60kern_08.jpg",
+          "alt": "Vario Switar 36EE"
+        }
+      ],
+      "sources": [],
+      "listings": [
+        {
+          "price": "$375.00",
+          "date": "March 1965",
+          "doc": "04929",
+          "asPrinted": "Zoom: Varioswitar 36 EE f/1.9"
+        }
+      ],
+      "from": {
+        "page": "60kern",
+        "heading": "Lenses for H-8 Reflex Cameras",
+        "originalPath": "/lenses/60kern.html"
+      }
+    },
+    {
+      "slug": "vario-switar-86ee-18mm-86mm-f-2-5",
+      "name": "Vario Switar 86EE (18mm-86mm f/2.5)",
+      "maker": "Kern-Paillard",
+      "series": "Vario",
+      "focalLength": "18mm",
+      "aperture": "f/2.5",
+      "codes": [
+        "VAMAT"
+      ],
+      "mount": "C or RX",
+      "gauge": "16mm",
+      "decade": 1960,
+      "year": 1964,
+      "description": "This lens was introduced in 1964, as the first \"Electric Eye\" 16mm zoom lens. It was designed specifically for H-16 reflex cameras and featured a fully automatic diaphragm control with a cadmium sulphide photo resistor which was sensitive to film ratings from 10-400 ASA. The exposure meter was powered by one (1) PX-13 1.35v mercury cell battery. Minimum aperture of f/16. Weight: 2 lbs, 4 oz. Accepts Series VIII filters.",
+      "images": [
+        {
+          "src": "/images/lenses/60kern_25.jpg",
+          "alt": "Kern Vario Switar 86EE lens"
+        }
+      ],
+      "sources": [],
+      "listings": [
+        {
+          "price": "$520.00",
+          "date": "May 1967",
+          "doc": "04933",
+          "asPrinted": "Vario-Switar 86EE 18-86mm f/2.5"
+        }
+      ],
+      "from": {
+        "page": "60kern",
+        "heading": "C and RX Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/60kern.html"
+      }
+    },
+    {
+      "slug": "macro-switar-26mm-f-1-1-rx",
+      "name": "Macro Switar 26mm f/1.1 RX",
+      "maker": "Kern-Paillard",
+      "series": "Macro",
+      "focalLength": "26mm",
+      "aperture": "f/1.1",
+      "codes": [],
+      "mount": "C or RX",
+      "gauge": "16mm",
+      "decade": 1960,
+      "year": 1968,
+      "description": "Standard focal length lens with built in macro extension, pre set diaphragm, Visifocus DOF scale and minimum focus distance of 7 1/2\". Introduced in 1968 for use with H-16 reflex cameras.",
+      "images": [
+        {
+          "src": "/images/lenses/60kern_16.jpg",
+          "alt": "Macro Switar 26mm RX"
+        }
+      ],
+      "sources": [],
+      "listings": [
+        {
+          "price": "$321.50",
+          "date": "February 1972",
+          "doc": "04932",
+          "asPrinted": "Macro-Switar 26mm f/1.1 Rx Preset"
+        },
+        {
+          "price": "$964.00",
+          "date": "November 1979",
+          "doc": "02209",
+          "asPrinted": "Macro-Switar 26mm f/1.1 Rx Preset multicoated"
+        }
+      ],
+      "from": {
+        "page": "60kern",
+        "heading": "C and RX Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/60kern.html"
+      }
+    },
+    {
+      "slug": "switar-10mm-f-1-6-rx",
+      "name": "Switar 10mm f/1.6 RX",
+      "maker": "Kern-Paillard",
+      "series": "Switar",
+      "focalLength": "10mm",
+      "aperture": "f/1.6",
+      "codes": [],
+      "mount": "C or RX",
+      "gauge": "16mm",
+      "decade": 1960,
+      "year": 1968,
+      "description": "Wide angle lens with pre-set diaphragm, vVisifocus depth of field scale and minimum focus distance of 1\". Introduced in 1968 for use with H-16 reflex cameras.",
+      "images": [
+        {
+          "src": "/images/lenses/60kern_10.jpg",
+          "alt": "Switar 10mm Preset RX"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "60kern",
+        "heading": "C and RX Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/60kern.html"
+      }
+    },
+    {
+      "slug": "vario-switar-86-oe-18mm-86mm-f-2-5",
+      "name": "Vario-Switar 86-OE (18mm-86mm f/2.5)",
+      "maker": "Kern-Paillard",
+      "series": "Vario-Switar",
+      "focalLength": "18mm",
+      "aperture": "f/2.5",
+      "codes": [],
+      "mount": "C or RX",
+      "gauge": "16mm",
+      "decade": 1960,
+      "year": 1968,
+      "description": "The 86-OE was introduced in 1968. It featured an automatic diaphragm, but unlike the 86EE, exposure measurements were taken through the lens. The built in meter was sensitive to film speeds from 10 to 200 ASA and powered by one (1) PX-13 1.35v mercury cell battery. Minimum aperture: f/16. Weight: approximately 2 1/2 lbs. Accepts Series VIII filters.",
+      "images": [
+        {
+          "src": "/images/lenses/60kern_26.jpg",
+          "alt": "Kern Vario Switar 86OE lens"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "60kern",
+        "heading": "C and RX Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/60kern.html"
+      }
+    },
+    {
+      "slug": "macro-switar-75mm-f-1-9",
+      "name": "Macro-Switar 75mm f/1.9",
+      "maker": "Kern-Paillard",
+      "series": "Macro-Switar",
+      "focalLength": "75mm",
+      "aperture": "f/1.9",
+      "codes": [],
+      "mount": "C or RX",
+      "gauge": "16mm",
+      "decade": 1960,
+      "year": 1970,
+      "description": "C mount Telephoto lens, introduced in 1970. Pre set diaphragm, Visifocus DOF scale, built in macro extension and minimum focus distance of 5 feet.",
+      "images": [
+        {
+          "src": "/images/lenses/60kern_19.jpg",
+          "alt": "Macro Switar 75mm RX"
+        }
+      ],
+      "sources": [],
+      "listings": [
+        {
+          "price": "$300.00",
+          "date": "February 1972",
+          "doc": "04932",
+          "asPrinted": "Macro-Switar 75mm f/1.9 Preset"
+        },
+        {
+          "price": "$945.00",
+          "date": "November 1979",
+          "doc": "02209",
+          "asPrinted": "Macro-Switar 75mm f/1.9 Preset multicoated"
+        }
+      ],
+      "from": {
+        "page": "60kern",
+        "heading": "C and RX Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/60kern.html"
+      }
+    },
+    {
+      "slug": "pan-cinor-120-f-3-3-12-120-no-viewfinder",
+      "name": "Pan Cinor 120 (f/3.3 12-120 no viewfinder)",
+      "maker": "SOM Berthiot",
+      "series": "Pan Cinor",
+      "focalLength": null,
+      "aperture": "f/3.3",
+      "codes": [],
+      "mount": null,
+      "gauge": "16mm",
+      "decade": 1960,
+      "year": 1970,
+      "description": "The Pan Cinor 120 was introduced in 1970 for H-16 reflex cameras. It had a maximum aperture of f/3.3 and could be stopped down to f/32 or fully closed. The diaphragm, zoom and focus rings could all be control with separate levers. The lens had a 10:1 zoom range of 12mm to 120mm with a minimum focus distance of 4 1/4 feet (approximately 1.3 meters). The detachable lens shade could hold Series VIII filters. Lens weight: 1 lb. 11 oz.",
+      "images": [
+        {
+          "src": "/images/lenses/60som_11.jpg",
+          "alt": "Pan Cinor 120 Lens"
+        }
+      ],
+      "sources": [],
+      "from": {
+        "page": "60berthiot",
+        "heading": "Lenses for H-16 Cameras",
+        "originalPath": "/lenses/60berthiot.html"
+      }
+    },
+    {
+      "slug": "vario-switar-100-poe-f-1-9-16-100mm",
+      "name": "Vario Switar 100 POE (f/1.9 16-100mm)",
+      "maker": "Kern-Paillard",
+      "series": "Vario",
+      "focalLength": "16-100mm",
+      "aperture": "f/1.9",
+      "codes": [],
+      "mount": "C or RX",
+      "gauge": "16mm",
+      "decade": 1960,
+      "year": 1970,
+      "description": "Introduced in 1970, the Kern Vario Switar 100 POE featured through the lens exposure and power zoom control. The exposure meter was powered by one (1) PX1 1.35v mercury cell battery; power for the zoom motor was supplied by two (2) RM1 1.35V mercury batteries batteries. It accepts series IX filters and weighs approximately 3 lbs.",
+      "images": [
+        {
+          "src": "/images/lenses/60kern_27.jpg",
+          "alt": "Kern Vario Switar 100POE lens"
+        }
+      ],
+      "sources": [],
+      "listings": [
+        {
+          "price": "$800.00",
+          "date": "February 1972",
+          "doc": "04932",
+          "asPrinted": "Vario-Switar 16-100mm POE f/1.9, bayonet mount"
+        },
+        {
+          "price": "$2,890.00",
+          "date": "November 1979",
+          "doc": "02209",
+          "asPrinted": "Vario-Switar 16-100mm POE f/1.9 C Mt."
+        },
+        {
+          "price": "$2,436.00",
+          "date": "November 1979",
+          "doc": "02209",
+          "asPrinted": "Vario-Switar 16-100mm POE f/1.9 Bay. Mt."
+        }
+      ],
+      "from": {
+        "page": "60kern",
+        "heading": "C and RX Mount Lenses for H-16 Cameras",
+        "originalPath": "/lenses/60kern.html"
+      }
+    }
+  ]
+}

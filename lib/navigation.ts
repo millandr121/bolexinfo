@@ -39,10 +39,10 @@ export const NAVIGATION: readonly NavEntry[] = [
   {
     label: "Equipment",
     items: [
-      { href: "/cameras", label: "Cameras", blurb: "54 models, 1928–1970" },
-      { href: "/projectors", label: "Projectors", blurb: "17 models" },
-      { href: "/lenses", label: "Lenses", blurb: "Kern, Berthiot, Angénieux" },
-      { href: "/accessories", label: "Accessories", blurb: "Motors, cases, viewfinders" },
+      { href: "/cameras", label: "Cameras", blurb: "56 models, 1928–1976" },
+      { href: "/projectors", label: "Projectors", blurb: "18 models" },
+      { href: "/lenses", label: "Lenses", blurb: "119 lenses, by maker, year or code" },
+      { href: "/accessories", label: "Accessories", blurb: "99 objects, by type or year" },
     ],
   },
   {
@@ -50,7 +50,9 @@ export const NAVIGATION: readonly NavEntry[] = [
     items: [
       { href: "/technicians", label: "Repair & service", blurb: "Who works on these cameras" },
       { href: "/articles", label: "Articles", blurb: "Recovered from the original site" },
-      { href: "/ephemera", label: "Ephemera", blurb: "Advertising, brochures, catalogues" },
+      { href: "/ephemera", label: "Ephemera", blurb: "168 pieces, by kind or year" },
+      { href: "/manuals", label: "Technical bulletins", blurb: "Paillard to its dealers, 1959–62" },
+      { href: "/prices", label: "Prices", blurb: "What it cost new, 1952–1979" },
       { href: "/photographs", label: "Archive photographs", blurb: "The works, from public collections" },
       { href: "/timeline", label: "Timeline", blurb: "Paillard, 1814 onwards" },
       { href: "/glossary", label: "Glossary", blurb: "The terms, defined" },
