@@ -55,6 +55,13 @@ export function AccessoryItemPage({ item }: { item: AccessoryItem }) {
       <Reveal>
         <dl className="rule mt-8 grid grid-cols-2 gap-x-8 gap-y-4 pt-6 sm:grid-cols-3">
           <Fact label="Type">{item.type}</Fact>
+          {item.codes && item.codes.length > 0 && (
+            <Fact label={item.codes.length > 1 ? "Codes" : "Code"}>
+              <span className="font-[family-name:var(--font-mono)] text-base">
+                {item.codes.join(" · ")}
+              </span>
+            </Fact>
+          )}
           <Fact label={item.year ? "Introduced" : "Documented as"}>{dateLabel(item)}</Fact>
           {!item.year && item.decade && (
             <Fact label="Exact year">Not stated</Fact>
@@ -88,6 +95,50 @@ export function AccessoryItemPage({ item }: { item: AccessoryItem }) {
                   </li>
                 ))}
               </ol>
+            </section>
+          )}
+
+          {/*
+            Paillard's own dealer price lists, which are the only hard
+            dates on most of these pages and the only place the archive
+            has ever had a code for an accessory. Where a thing appears in
+            several lists all the prices are kept, because what it cost
+            over time is itself worth knowing.
+          */}
+          {item.listings && item.listings.length > 0 && (
+            <section className="rule mt-10 pt-4" aria-labelledby="listings">
+              <h2
+                id="listings"
+                className="font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.16em] text-[var(--accent)]"
+              >
+                In Paillard&rsquo;s dealer price lists
+              </h2>
+              <ul className="mt-3 space-y-2">
+                {item.listings.map((listing) => (
+                  <li
+                    key={`${listing.doc}-${listing.asPrinted}`}
+                    className="font-[family-name:var(--font-mono)] text-[0.72rem] leading-relaxed"
+                  >
+                    <span className="text-[var(--fg)]">{listing.price}</span>
+                    <span className="text-[var(--fg-soft)]">
+                      {" "}
+                      · {listing.date} · listed as &ldquo;{listing.asPrinted}&rdquo; ·{" "}
+                      <a
+                        href={`https://www.pacificrimcamera.com/rl/${listing.doc}/${listing.doc}.pdf`}
+                        target="_blank"
+                        rel="noreferrer nofollow"
+                        className="text-[var(--accent)] underline underline-offset-4"
+                      >
+                        the list ↗
+                      </a>
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-3 font-[family-name:var(--font-mono)] text-[0.66rem] leading-relaxed text-[var(--fg-soft)]">
+                Scanned by Pacific Rim Camera. Matched to this object by hand, not by script.
+                {item.listingNote ? ` ${item.listingNote}` : ""}
+              </p>
             </section>
           )}
 

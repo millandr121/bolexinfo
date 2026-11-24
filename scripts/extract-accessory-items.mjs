@@ -58,6 +58,14 @@ function typeOf(slug) {
 }
 
 const REVIEW = readReview(path.join(OUT_DIR, "year-review.json"));
+
+/**
+ * Codes and dated prices from Paillard's own dealer price lists, matched
+ * to these objects by hand. See listings.json, and the lens file beside
+ * it, for the sources and why the matching is not scripted.
+ */
+const LISTINGS = readReview(path.join(OUT_DIR, "listings.json"));
+const listingsUsed = new Set();
 const used = new Set();
 const seen = new Map();
 
@@ -84,6 +92,9 @@ const items = raw.map((entry) => {
   const reviewed = REVIEW[slug];
   if (reviewed) used.add(slug);
 
+  const found = LISTINGS[slug];
+  if (found) listingsUsed.add(slug);
+
   return {
     slug,
     name: entry.name,
@@ -92,8 +103,11 @@ const items = raw.map((entry) => {
     year: reviewed ? reviewed.year : guessed,
     ...(reviewed?.note ? { yearNote: reviewed.note } : {}),
     description,
+    ...(found?.addCodes ? { codes: found.addCodes } : {}),
     images: entry.images,
     sources: entry.sources,
+    ...(found?.listings ? { listings: found.listings } : {}),
+    ...(found?.note ? { listingNote: found.note } : {}),
     from: {
       page: entry.page,
       heading: entry.heading,
@@ -109,3 +123,6 @@ items.sort(
 
 fs.writeFileSync(OUT, `${JSON.stringify({ items }, null, 2)}\n`);
 report(perPage, items, REVIEW, used, "data/accessory-items/items.json");
+console.log(`  in a dated price list: ${items.filter((i) => i.listings).length}`);
+const stray = Object.keys(LISTINGS).filter((slug) => !listingsUsed.has(slug));
+if (stray.length) console.log(`\n  STRAY listings, no such item: ${stray.join(", ")}`);

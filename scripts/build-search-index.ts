@@ -84,7 +84,7 @@ for (const item of getAccessoryItems()) {
     title: item.name,
     href: `/accessories/${item.slug}`,
     section: "accessories",
-    keywords: [item.type, item.year ?? "", item.decade ? `${item.decade}s` : "", ...item.images.map((i) => i.alt)]
+    keywords: [item.type, item.year ?? "", item.decade ? `${item.decade}s` : "", ...(item.codes ?? []), ...item.images.map((i) => i.alt)]
       .filter(Boolean)
       .join(" "),
     summary: item.description.slice(0, 160),

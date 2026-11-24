@@ -400,6 +400,9 @@
       "decade": 1940,
       "year": null,
       "description": "The prismatic focuser was inserted into the film gate, and allowed focusing at the film plane through the taking lens. Although useful for cinemicrophotography, animation and title work, its use is rather limited for normal filming as the film door and pressure pad are removed while focusing. The model shown here is compatible with Bolex H-16 cameras having a serial number lower than 100,401, or H-8 cameras lower than 97,801.",
+      "codes": [
+        "CADRO"
+      ],
       "images": [
         {
           "src": "/images/accessories/view40_3.jpg",
@@ -407,6 +410,15 @@
         }
       ],
       "sources": [],
+      "listings": [
+        {
+          "price": "$19.75",
+          "date": "June 1965",
+          "doc": "04928",
+          "asPrinted": "Prismatic Focuser (Old type)"
+        }
+      ],
+      "listingNote": "Matched to this, the earlier of the archive’s two prismatic focusers, because the lists call it the old type. The lists do not say more than that.",
       "from": {
         "page": "view40",
         "heading": "Accessory Viewfinders",
@@ -627,6 +639,9 @@
       "year": 1949,
       "yearNote": "'This updated version appeared in 1949', standard on the Deluxe and Standard from 1950.",
       "description": "This updated version appeared in 1949, but became standard equipment on H-8/H-16 Deluxe and Standard models in 1950. It enables critical focusing of lenses in the top position to be done at eye level from the rear of the camera. Unlike the previous version, this one allows the user to adjust for his or her eyesight. Originally $43.41 US with tax included, according to a September, 1950 retail price list.",
+      "codes": [
+        "REFTU"
+      ],
       "images": [
         {
           "src": "/images/accessories/view50_2.jpg",
@@ -634,6 +649,14 @@
         }
       ],
       "sources": [],
+      "listings": [
+        {
+          "price": "$37.75",
+          "date": "June 1965",
+          "doc": "04928",
+          "asPrinted": "Eye-level focus for H-8"
+        }
+      ],
       "from": {
         "page": "view50",
         "heading": "Accessory Viewfinders",
@@ -815,6 +838,9 @@
       "decade": 1950,
       "year": null,
       "description": "A later version of the Unimotor, the MC-17, was constructed with a newer friction shaft [1] and a lower attachment knob that secured to the side of the Bolex H-16 REX and later model H cameras. The new drive shaft allowed the camera to be started and stopped from the release button on the camera, rather than the electrical switch on the cord. It also permitted single frame filming for an entire 100 ft spool, without having to manually wind the spring. This model can be operated on batteries, or on AC power with the Bolex transformer, at speeds of 12-32 fps on the H-16 (12-64 fps on the H-8).",
+      "codes": [
+        "MOSTE"
+      ],
       "images": [
         {
           "src": "/images/accessories/motor50_3.jpg",
@@ -824,6 +850,27 @@
       "sources": [
         "\"What's New At Bolex,\" Bolex Reporter, Fall 1959, 30."
       ],
+      "listings": [
+        {
+          "price": "$87.50",
+          "date": "March 1965",
+          "doc": "04929",
+          "asPrinted": "Unimotor Only"
+        },
+        {
+          "price": "$87.50",
+          "date": "June 1965",
+          "doc": "04928",
+          "asPrinted": "Unimotor Only"
+        },
+        {
+          "price": "$97.50",
+          "date": "May 1967",
+          "doc": "04933",
+          "asPrinted": "Unimotor Only"
+        }
+      ],
+      "listingNote": "The lists call it only \"Unimotor\". It is matched to the MC-17 because that is the version Paillard was selling by 1965; the earlier U-62 had been superseded. An inference, not a statement in the document.",
       "from": {
         "page": "motor50",
         "heading": "Camera Motors",
@@ -990,6 +1037,9 @@
       "decade": 1950,
       "year": null,
       "description": "These Paillard Bolex extension tubes were available for filming extreme close-ups on the H-16. The tubes are c-mount only and came as a set of four: 5mm, 10mm, 20mm and 40mm.",
+      "codes": [
+        "TUBEX"
+      ],
       "images": [
         {
           "src": "/images/accessories/filter50_6.jpg",
@@ -997,6 +1047,14 @@
         }
       ],
       "sources": [],
+      "listings": [
+        {
+          "price": "$18.00",
+          "date": "May 1967",
+          "doc": "04933",
+          "asPrinted": "16mm Extension Tubes"
+        }
+      ],
       "from": {
         "page": "filter50",
         "heading": "Filters and Lens Accessories",
@@ -1072,8 +1130,20 @@
       "decade": 1950,
       "year": null,
       "description": "Pictured to the right is the original prismatic focuser (CADRO) introduced in the 1940s. In 1954, the model H camera was redesigned with, among other things, a new pressure pad and gate assembly. The Prismatic Focuser, therefore, had to be redesigned to allow proper focusing through the gate.",
+      "codes": [
+        "CADIL"
+      ],
       "images": [],
       "sources": [],
+      "listings": [
+        {
+          "price": "$19.75",
+          "date": "June 1965",
+          "doc": "04928",
+          "asPrinted": "Prismatic Focuser (New type)"
+        }
+      ],
+      "listingNote": "The lists distinguish a new type and an old type at the same price. The new type is matched to this entry and the old type to the 1940s Prismatic Focus, on the order they were documented in. Nothing in the lists states which is which.",
       "from": {
         "page": "view50",
         "heading": "Accessory Viewfinders",
@@ -1285,6 +1355,10 @@
       "decade": 1950,
       "year": 1955,
       "description": "This camera housing was introduced in 1955 to accommodate the H-16 for underwater filming. The unit was watertight down to depths of 330 ft. [1] Three controls were located on the outside for the operation of the lens diaphragm, motor winding and camera release. The device was equipped with a parallax corrected viewfinder and originally supplied with two diaphragm collars: one for a Switar 10mm f/1.6 and the other for either Switar 16mm f/1.8 or Yvar f/2.8 lenses. [2] Later versions were available with diaphram collars to support H-8 and RX lenses. Weight, out of water and without camera was 22lbs; 4 1/2 lbs while submerged. It sold for $430.00 US in a 1958 retail price list.",
+      "codes": [
+        "HETEX",
+        "HAMAR"
+      ],
       "images": [
         {
           "src": "/images/accessories/misc50_3.jpg",
@@ -1294,6 +1368,20 @@
       "sources": [
         "Myron Matzkin, \"New Bolex Underwater Case,\" Bolex Reporter, Christmas 1956, 19.",
         "Ibid., 19."
+      ],
+      "listings": [
+        {
+          "price": "$525.00",
+          "date": "June 1965",
+          "doc": "04928",
+          "asPrinted": "Underwater Housing Complete"
+        },
+        {
+          "price": "$525.00",
+          "date": "May 1967",
+          "doc": "04933",
+          "asPrinted": "Underwater Housing Complete H-16"
+        }
       ],
       "from": {
         "page": "misc50",
@@ -1465,6 +1553,9 @@
       "decade": 1950,
       "year": 1959,
       "description": "This model, constructed entirely of aluminum, was introduced in 1959. The first head supplied with this tripod included a \"plug-on\" style platform which attached to the camera. [2] Later versions (pictured here) included a quick release disc, similar to those found on the Declic H grip. A pan-handle was available to accomodate a 21\" cable release and could be adjusted for left or right handed use. The head contains a built-in spirit level and allows 360 degree panning and 135 degree tilt, with an engraved degree scale. This version weighs approximately 8 lbs and 6 ounces, with an extended height of 61\" (37\" when retracted). Price in 1959: $99.50",
+      "codes": [
+        "TRICA"
+      ],
       "images": [
         {
           "src": "/images/accessories/support50_7.jpg",
@@ -1473,6 +1564,26 @@
       ],
       "sources": [
         "\"What's New At Bolex,\" Bolex Reporter, Fall 1959, 30."
+      ],
+      "listings": [
+        {
+          "price": "$99.50",
+          "date": "March 1965",
+          "doc": "04929",
+          "asPrinted": "Tripod H (including panhead)"
+        },
+        {
+          "price": "$99.50",
+          "date": "June 1965",
+          "doc": "04928",
+          "asPrinted": "Tripod H (including panhead)"
+        },
+        {
+          "price": "$99.50",
+          "date": "May 1967",
+          "doc": "04933",
+          "asPrinted": "Tripod H (including panhead)"
+        }
       ],
       "from": {
         "page": "support50",
@@ -1507,6 +1618,9 @@
       "decade": 1960,
       "year": null,
       "description": "This case was designed for the 18-5 projector and available as an accessory. It not only served as a carrying case for projector and film reels, but as a portable projection screen. The inside of the lid contained a small screen for viewing movies, while the lid itself served as a shade.",
+      "codes": [
+        "DUHLU"
+      ],
       "images": [
         {
           "src": "/images/accessories/case60_4.jpg",
@@ -1518,6 +1632,14 @@
         }
       ],
       "sources": [],
+      "listings": [
+        {
+          "price": "$19.50",
+          "date": "March 1965",
+          "doc": "04929",
+          "asPrinted": "Compartment-Screen Case"
+        }
+      ],
       "from": {
         "page": "case60",
         "heading": "Cases",
@@ -1613,6 +1735,9 @@
       "decade": 1960,
       "year": null,
       "description": "A 20 inch cable release; all metal construction, with a Paillard Bolex logo at the trigger tip. A new style adapter was introduced to allow continuous or single frame filming with the Rexofader attached. H-40 Cable Release: Same as the H-20, but 40 inches long.",
+      "codes": [
+        "DECLA"
+      ],
       "images": [
         {
           "src": "/images/accessories/misc60_6.jpg",
@@ -1620,6 +1745,14 @@
         }
       ],
       "sources": [],
+      "listings": [
+        {
+          "price": "$7.00",
+          "date": "May 1967",
+          "doc": "04933",
+          "asPrinted": "H-20\" Cable Release"
+        }
+      ],
       "from": {
         "page": "misc60",
         "heading": "Miscellaneous Accessories",
@@ -1633,6 +1766,9 @@
       "decade": 1960,
       "year": null,
       "description": "The 400' magazine on the H-16 REX 5 or M-5 was driven by the Bolex Take-up Motor. It was a 12 V DC motor, attached to the 400' magazine with a bayonet mount, with power supplied through the MST motor with battery pack; or by a voltage regulator used in conjunction with the Unimotor B.",
+      "codes": [
+        "CASMO"
+      ],
       "images": [
         {
           "src": "/images/accessories/motor60_4.jpg",
@@ -1640,6 +1776,15 @@
         }
       ],
       "sources": [],
+      "listings": [
+        {
+          "price": "$95.00",
+          "date": "May 1967",
+          "doc": "04933",
+          "asPrinted": "12 Volt Take-up Motor"
+        }
+      ],
+      "listingNote": "Listed among the components for the 400ft Bolex, which is what the MM drives.",
       "from": {
         "page": "motor60",
         "heading": "Camera Motors",
@@ -1653,6 +1798,9 @@
       "decade": 1960,
       "year": null,
       "description": "The camera base of the Bolex Panhead was modified in 1964 to include a quick release method of attaching the camera. This was identical to the quick release disc found on the Declic H grip, and allowed the camera, with disc attached, to be switched quickly from grip to tripod, and vice versa. In 1965, a ball joint accessory was designed which could be inserted between the legs and head. This allowed the camera to be levelled from the head, rather than by adjusting the legs.",
+      "codes": [
+        "ROTAL"
+      ],
       "images": [
         {
           "src": "/images/accessories/support60_5.jpg",
@@ -1660,6 +1808,20 @@
         }
       ],
       "sources": [],
+      "listings": [
+        {
+          "price": "$28.00",
+          "date": "June 1965",
+          "doc": "04928",
+          "asPrinted": "Ball Joint only"
+        },
+        {
+          "price": "$28.00",
+          "date": "May 1967",
+          "doc": "04933",
+          "asPrinted": "Ball Joint only"
+        }
+      ],
       "from": {
         "page": "support60",
         "heading": "Tripods & Grips",
@@ -1673,8 +1835,19 @@
       "decade": 1960,
       "year": null,
       "description": "For H-8 REX cameras, a new Rexofader was designed to produce timed fades of 32 frames. It is attached to the side of the camera, and operates in the same manner as the other Rexofaders. This H-8 version can be identified by the name \"H8-32\", located on the lever.",
+      "codes": [
+        "FAOUI"
+      ],
       "images": [],
       "sources": [],
+      "listings": [
+        {
+          "price": "$41.50",
+          "date": "June 1965",
+          "doc": "04928",
+          "asPrinted": "Rexofader 32"
+        }
+      ],
       "from": {
         "page": "misc60",
         "heading": "Miscellaneous Accessories",
@@ -1688,9 +1861,20 @@
       "decade": 1960,
       "year": null,
       "description": "The Rexofader 40 operated in the same way as the original Rexofader, but was redesigned with a larger lever that could be operated with the left hand, while the right hand operated the camera release. [1] The device was used on H-16 REX cameras to operate the variable shutter, creating timed fades of 40 frames. These are marked \"H16-40\" on the lever.",
+      "codes": [
+        "FADOM"
+      ],
       "images": [],
       "sources": [
         "Bolex H8-H16 Catalogue (New Jersey: Paillard Incorporated, July 1964), 18."
+      ],
+      "listings": [
+        {
+          "price": "$46.00",
+          "date": "May 1967",
+          "doc": "04933",
+          "asPrinted": "Rexofader 40"
+        }
       ],
       "from": {
         "page": "misc60",
@@ -1725,6 +1909,9 @@
       "decade": 1960,
       "year": null,
       "description": "Although it was designed to hold H-16 cameras with larger zoom lenses attached, it could also hold any combination of H-8 and lenses. [3] The case was similar to the Omnibolex B, but with less compartment space and no room available to hold the Declic H handle while attached. Size: 19 1/2\" x 10\" x 8\"",
+      "codes": [
+        "HAZCA"
+      ],
       "images": [
         {
           "src": "/images/accessories/case60_3.jpg",
@@ -1733,6 +1920,14 @@
       ],
       "sources": [
         "\"Perfect 16mm Professional Team,\" Bolex Reporter, Vol. 12, No. 2, 1962-1963, 29."
+      ],
+      "listings": [
+        {
+          "price": "$69.50",
+          "date": "May 1967",
+          "doc": "04933",
+          "asPrinted": "16mm Zoom Camera Case B"
+        }
       ],
       "from": {
         "page": "case60",
@@ -1747,6 +1942,10 @@
       "decade": 1960,
       "year": 1961,
       "description": "A sturdy, lightweight (11oz) monopod introduced in 1961. It was originally designed to be used with the smaller B, C and D models, but continued to be advertised throughout the 1960s as it was easily compatible with the later 8mm and super 8 Bolex cameras. Telescopic style extension; 23\" long when retracted and 61\" fully extended. A detachable wrist strap was included. It was also available with a ball-joint head.",
+      "codes": [
+        "MONOP",
+        "MONTO"
+      ],
       "images": [
         {
           "src": "/images/accessories/support60_1.jpg",
@@ -1758,6 +1957,20 @@
         }
       ],
       "sources": [],
+      "listings": [
+        {
+          "price": "$13.50",
+          "date": "May 1967",
+          "doc": "04933",
+          "asPrinted": "Monopod"
+        },
+        {
+          "price": "$18.50",
+          "date": "May 1967",
+          "doc": "04933",
+          "asPrinted": "Monopod with Ball Joint"
+        }
+      ],
       "from": {
         "page": "support60",
         "heading": "Tripods & Grips",
@@ -1771,6 +1984,9 @@
       "decade": 1960,
       "year": 1962,
       "description": "This accessory was introduced in 1962. It was designed to trigger the camera release within 6 seconds of setting the timing mechanism, and allowed the user to enter the picture. The timer can be adjusted to film a scene from 5 to 20 seconds in length. It fits into the cable release socket of any pocket size 8mm camera, or any H camera with a cable release adapter.",
+      "codes": [
+        "DEMAT"
+      ],
       "images": [
         {
           "src": "/images/accessories/misc60_2.jpg",
@@ -1778,6 +1994,14 @@
         }
       ],
       "sources": [],
+      "listings": [
+        {
+          "price": "$13.95",
+          "date": "May 1967",
+          "doc": "04933",
+          "asPrinted": "Automatic Selftimer Model \"A\""
+        }
+      ],
       "from": {
         "page": "misc60",
         "heading": "Miscellaneous Accessories",
@@ -1791,6 +2015,9 @@
       "decade": 1960,
       "year": 1962,
       "description": "The H-1B was introduced in 1962. [1] Similar to the H-1A, the B version was slightly larger at 14 1/2\" x 11\" x 6 1/2\". The case was designed to accommodate 100' H cameras with room available for film and small accessories. Two latches with key lock were added and a leather shoulder strap was included.",
+      "codes": [
+        "MALOV"
+      ],
       "images": [
         {
           "src": "/images/accessories/case60_1.jpg",
@@ -1799,6 +2026,26 @@
       ],
       "sources": [
         "Bolex Reporter, Vol. 12, No. 2, 1962-1963, 21."
+      ],
+      "listings": [
+        {
+          "price": "$54.50",
+          "date": "March 1965",
+          "doc": "04929",
+          "asPrinted": "Leather Carrying Case H-1B"
+        },
+        {
+          "price": "$54.50",
+          "date": "June 1965",
+          "doc": "04928",
+          "asPrinted": "Leather Carrying Case H-1B"
+        },
+        {
+          "price": "$54.50",
+          "date": "May 1967",
+          "doc": "04933",
+          "asPrinted": "Leather Carrying Case H-1B"
+        }
       ],
       "from": {
         "page": "case60",
@@ -1813,6 +2060,9 @@
       "decade": 1960,
       "year": 1962,
       "description": "The Bolex Matte Box was introduced in 1962 and can be used with any H camera. However, the through-the-lens viewing of REX cameras was recommended. [1] It allowed the cinematographer to produce different effects with masks, and also served as a filter holder and lens shade. The device was attached to a removeable flat base. Later model H cameras with the built-in flat base were designed to easily accept the matte box without the accessory base. The unit was supplied with keyhole, binocular and heart shaped masks, blank masks, acetate sheets, and front and rear frame glassplates. Two versions were available: One for use with zoom lenses (bottom left) and the other for focal length lenses up to 26mm (bottom right).",
+      "codes": [
+        "COPEN"
+      ],
       "images": [
         {
           "src": "/images/accessories/filter60_1.jpg",
@@ -1825,6 +2075,20 @@
       ],
       "sources": [
         "Ernst Wildi, \"The Matte Box,\" Bolex Reporter, Vol. 13, No. 1, 1963, 29."
+      ],
+      "listings": [
+        {
+          "price": "$84.50",
+          "date": "March 1965",
+          "doc": "04929",
+          "asPrinted": "Matte Box"
+        },
+        {
+          "price": "$96.50",
+          "date": "May 1967",
+          "doc": "04933",
+          "asPrinted": "Matte Box"
+        }
       ],
       "from": {
         "page": "filter60",
@@ -1881,6 +2145,9 @@
       "decade": 1960,
       "year": 1964,
       "description": "Gossen manufactured this light meter for Paillard in 1964. It was calibrated for the shutter speeds of the REX cameras and measured both reflected and incident light. It used a PX-13 battery and had a sensitivity of 6 to 1600 ASA, with settings for camera speeds from 12-24 frames per second and variable shutter openings. All H model cameras manufactured after 1962 contained an accessory attachment shoe located above the turret; the side of the Gossen meter was designed to fit into this slot.",
+      "codes": [
+        "FOGOS"
+      ],
       "images": [
         {
           "src": "/images/accessories/misc60_5.jpg",
@@ -1892,6 +2159,26 @@
         }
       ],
       "sources": [],
+      "listings": [
+        {
+          "price": "$45.00",
+          "date": "March 1965",
+          "doc": "04929",
+          "asPrinted": "Lightmeter for H Rex"
+        },
+        {
+          "price": "$45.00",
+          "date": "June 1965",
+          "doc": "04928",
+          "asPrinted": "Lightmeter for H Rex"
+        },
+        {
+          "price": "$48.00",
+          "date": "May 1967",
+          "doc": "04933",
+          "asPrinted": "Lightmeter for H Rex"
+        }
+      ],
       "from": {
         "page": "misc60",
         "heading": "Miscellaneous Accessories",
@@ -1905,6 +2192,9 @@
       "decade": 1960,
       "year": 1964,
       "description": "This Bolex accessory served multiple purposes: as a device to support heavy lenses; to allow the Bolex matte box to be used in front of long telephoto lenses; as a stand for macro filming, and as a portable titling unit. It consisted of a 20\" long optical bench, with 12\" and 27 1/2\" extension rods, an adjustable lens support with lock for lenses up to 4\" in diameter, and a titling frame. This unit appears to have been first available in 1964.",
+      "codes": [
+        "SUTEL"
+      ],
       "images": [
         {
           "src": "/images/accessories/filter60_2.jpg",
@@ -1916,6 +2206,26 @@
         }
       ],
       "sources": [],
+      "listings": [
+        {
+          "price": "$160.00",
+          "date": "March 1965",
+          "doc": "04929",
+          "asPrinted": "Lens and Accessory Support"
+        },
+        {
+          "price": "$160.00",
+          "date": "June 1965",
+          "doc": "04928",
+          "asPrinted": "Lens and Accessory Support"
+        },
+        {
+          "price": "$160.00",
+          "date": "May 1967",
+          "doc": "04933",
+          "asPrinted": "Lens and Accessory Support"
+        }
+      ],
       "from": {
         "page": "filter60",
         "heading": "Filters and Lens Accessories",
@@ -1949,6 +2259,9 @@
       "decade": 1960,
       "year": 1965,
       "description": "The first sound synchronous motor for Bolex cameras was manufactured in 1965 by Perfectone of Bienne, Switzerland. It was designed to run 100' H cameras with a 1:1 frame shaft at a speed of 24 frames per second. The motor was available with a sync generator for recording synchronous sound with picture on tape recorders with a pilot head. It was powered by AC supply or with a rechargeable battery pack.",
+      "codes": [
+        "PERAM"
+      ],
       "images": [
         {
           "src": "/images/accessories/motor60_1.jpg",
@@ -1956,6 +2269,20 @@
         }
       ],
       "sources": [],
+      "listings": [
+        {
+          "price": "$240.00",
+          "date": "June 1965",
+          "doc": "04928",
+          "asPrinted": "Perfectone Motor w/ Generator"
+        },
+        {
+          "price": "$240.00",
+          "date": "May 1967",
+          "doc": "04933",
+          "asPrinted": "Perfectone Motor w/ Generator"
+        }
+      ],
       "from": {
         "page": "motor60",
         "heading": "Camera Motors",
@@ -1969,6 +2296,9 @@
       "decade": 1960,
       "year": 1967,
       "description": "The Bellows Extension unit was intended for H-16 cameras with reflex viewing and allowed continuous focusing from 4 1/2\" to infinity. The unit was attached to the camera by using two built-in turret screws. It was equipped with a geared focus knob, pre-set diaphragm lever and 5\" long optical bench engraved with distance and exposure indicators. A special 75mm Yvar lens was included, as well as two adapter rings; one for use with C mount telephoto lenses, and the other for the Switar 25mm lens.",
+      "codes": [
+        "NOVOF"
+      ],
       "images": [
         {
           "src": "/images/accessories/filter60_3.jpg",
@@ -1980,6 +2310,14 @@
         }
       ],
       "sources": [],
+      "listings": [
+        {
+          "price": "$185.00",
+          "date": "May 1967",
+          "doc": "04933",
+          "asPrinted": "Bellows Extension Unit"
+        }
+      ],
       "from": {
         "page": "filter60",
         "heading": "Filters and Lens Accessories",
@@ -2014,6 +2352,9 @@
       "decade": 1960,
       "year": 1968,
       "description": "The Unimotor B was introduced in 1968 and was designed for all H model cameras. Unlike earlier versions, it was able to power an H camera with 400' magazine attached. However, this required the use of a Bolex Voltage Regulator and battery pack specifically designed for the Unimotor B. It allowed speeds of 12-32 frames per second with the H-16; 12-64 fps with the H-8.",
+      "codes": [
+        "MOLEC"
+      ],
       "images": [
         {
           "src": "/images/accessories/motor60_3.jpg",
@@ -2021,6 +2362,14 @@
         }
       ],
       "sources": [],
+      "listings": [
+        {
+          "price": "$110.00",
+          "date": "May 1967",
+          "doc": "04933",
+          "asPrinted": "Unimotor B"
+        }
+      ],
       "from": {
         "page": "motor60",
         "heading": "Camera Motors",

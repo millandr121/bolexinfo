@@ -27,6 +27,11 @@ export interface AccessoryItem {
   images: AccessoryImage[];
   /** His own footnotes, for the ones this object cites. */
   sources: string[];
+  /** Paillard's five-letter code, where a dealer price list gives one. */
+  codes?: string[];
+  /** Appearances in Paillard's own dated dealer price lists. */
+  listings?: Array<{ price: string; date: string; doc: string; asPrinted: string }>;
+  listingNote?: string;
   from: { page: string; heading: string | null; originalPath: string };
 }
 

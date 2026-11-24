@@ -39,7 +39,8 @@ export function AccessoryBrowser({ items }: { items: readonly AccessoryItem[] })
       (i) =>
         i.name.toLowerCase().includes(q) ||
         i.description.toLowerCase().includes(q) ||
-        i.type.toLowerCase().includes(q),
+        i.type.toLowerCase().includes(q) ||
+        (i.codes ?? []).some((c) => c.toLowerCase().includes(q)),
     );
   }, [items, query]);
 
@@ -131,6 +132,15 @@ export function AccessoryBrowser({ items }: { items: readonly AccessoryItem[] })
                         <> · {item.type}</>
                       )}
                     </p>
+                    {item.codes && item.codes.length > 0 && (
+                      <p className="mt-1.5 flex flex-wrap gap-1.5 font-[family-name:var(--font-mono)] text-[0.62rem]">
+                        {item.codes.map((code) => (
+                          <span key={code} className="border border-[var(--line)] px-1.5 py-0.5">
+                            {code}
+                          </span>
+                        ))}
+                      </p>
+                    )}
                   </div>
                 </Link>
               </li>
