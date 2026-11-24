@@ -89,6 +89,39 @@ export interface ModelRecord {
   recovered: boolean;
   /** Cited sources, for an entry that was researched rather than recovered. */
   sources?: Array<{ title: string; url?: string; note?: string }>;
+  /**
+   * What it cost, from a dated catalogue. Cameras were sold as outfits
+   * rather than bodies, so this is a list of combinations and not one
+   * figure.
+   */
+  catalogue?: CataloguePrices;
+}
+
+export interface CataloguePrices {
+  year: number;
+  month?: string;
+  /** Pacific Rim's id for the scan, for the citation link. */
+  doc: string;
+  note?: string;
+  variants: Array<{ asPrinted: string; price: string }>;
+}
+
+/**
+ * Prices read out of a dated catalogue and matched to models by hand.
+ *
+ * Kept beside the seed data rather than in it because it comes from a
+ * different place and carries its own citation: see
+ * data/models/catalogue-prices.json for which document, and for the two
+ * matches that are judgement calls.
+ */
+function readCataloguePrices(): Map<string, CataloguePrices> {
+  const raw = readJson<Record<string, unknown>>(dataDir("models", "catalogue-prices.json"));
+  const out = new Map<string, CataloguePrices>();
+  for (const [slug, value] of Object.entries(raw ?? {})) {
+    if (slug === "_") continue;
+    out.set(slug, value as CataloguePrices);
+  }
+  return out;
 }
 
 // ————————————————————————————————————————————————————————————————
@@ -245,6 +278,7 @@ function headerFacts(originalPath?: string): { format?: string; introduced?: num
 }
 
 function reconcile(seedFile: string, extractedDir: string): ModelRecord[] {
+  const prices = readCataloguePrices();
   const seedDoc = readJson<{ models?: SeedEntry[] }>(dataDir("models", seedFile));
   const seed = new Map((seedDoc?.models ?? []).map((m) => [m.slug, m]));
   const extracted = readExtractedDir(extractedDir);
@@ -280,6 +314,7 @@ function reconcile(seedFile: string, extractedDir: string): ModelRecord[] {
       capturedAt: e?.capturedAt,
       recovered: Boolean(e),
       ...(s?.sources?.length ? { sources: s.sources } : {}),
+      ...(prices.has(slug) ? { catalogue: prices.get(slug) } : {}),
     });
   }
 
