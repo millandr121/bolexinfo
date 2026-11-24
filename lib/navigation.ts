@@ -39,8 +39,8 @@ export const NAVIGATION: readonly NavEntry[] = [
   {
     label: "Equipment",
     items: [
-      { href: "/cameras", label: "Cameras", blurb: "54 models, 1928–1970" },
-      { href: "/projectors", label: "Projectors", blurb: "17 models" },
+      { href: "/cameras", label: "Cameras", blurb: "56 models, 1928–1976" },
+      { href: "/projectors", label: "Projectors", blurb: "18 models" },
       { href: "/lenses", label: "Lenses", blurb: "Kern, Berthiot, Angénieux" },
       { href: "/accessories", label: "Accessories", blurb: "Motors, cases, viewfinders" },
     ],
@@ -51,6 +51,7 @@ export const NAVIGATION: readonly NavEntry[] = [
       { href: "/technicians", label: "Repair & service", blurb: "Who works on these cameras" },
       { href: "/articles", label: "Articles", blurb: "Recovered from the original site" },
       { href: "/ephemera", label: "Ephemera", blurb: "Advertising, brochures, catalogues" },
+      { href: "/manuals", label: "Technical bulletins", blurb: "Paillard to its dealers, 1959–62" },
       { href: "/photographs", label: "Archive photographs", blurb: "The works, from public collections" },
       { href: "/timeline", label: "Timeline", blurb: "Paillard, 1814 onwards" },
       { href: "/glossary", label: "Glossary", blurb: "The terms, defined" },
