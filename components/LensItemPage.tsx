@@ -121,6 +121,51 @@ export function LensItemPage({ item }: { item: LensItem }) {
             </section>
           )}
 
+          {/*
+            Hard evidence, and the only kind on this page that is not
+            Michael's: Paillard's own dealer price lists give a lens, its
+            code and a price on a stated date. A price in the May 1967
+            list proves the lens was on sale in May 1967, which is more
+            than most of these entries could say before.
+          */}
+          {item.listings && item.listings.length > 0 && (
+            <section className="rule mt-10 pt-4" aria-labelledby="listings">
+              <h2
+                id="listings"
+                className="font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.16em] text-[var(--accent)]"
+              >
+                In Paillard&rsquo;s dealer price lists
+              </h2>
+              <ul className="mt-3 space-y-2">
+                {item.listings.map((listing) => (
+                  <li
+                    key={`${listing.doc}-${listing.asPrinted}`}
+                    className="font-[family-name:var(--font-mono)] text-[0.72rem] leading-relaxed"
+                  >
+                    <span className="text-[var(--fg)]">{listing.price}</span>
+                    <span className="text-[var(--fg-soft)]">
+                      {" "}
+                      · {listing.date} · listed as &ldquo;{listing.asPrinted}&rdquo; ·{" "}
+                      <a
+                        href={`https://www.pacificrimcamera.com/rl/${listing.doc}/${listing.doc}.pdf`}
+                        target="_blank"
+                        rel="noreferrer nofollow"
+                        className="text-[var(--accent)] underline underline-offset-4"
+                      >
+                        the list ↗
+                      </a>
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-3 font-[family-name:var(--font-mono)] text-[0.66rem] leading-relaxed text-[var(--fg-soft)]">
+                Scanned by Pacific Rim Camera. Matched to this lens by hand, not by script: the
+                scans interleave their columns, so a code can land beside the wrong description.
+                {item.listingNote ? ` ${item.listingNote}` : ""}
+              </p>
+            </section>
+          )}
+
           {item.yearNote && (
             <p className="mt-6 font-[family-name:var(--font-mono)] text-[0.66rem] leading-relaxed text-[var(--fg-soft)]">
               On the date: {item.yearNote}

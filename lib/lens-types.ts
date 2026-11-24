@@ -37,6 +37,9 @@ export interface LensItem {
   description: string;
   images: LensImage[];
   sources: string[];
+  /** Appearances in Paillard's own dated dealer price lists. */
+  listings?: Array<{ price: string; date: string; doc: string; asPrinted: string }>;
+  listingNote?: string;
   from: { page: string; heading: string | null; originalPath: string };
 }
 
