@@ -50,7 +50,7 @@ export const NAVIGATION: readonly NavEntry[] = [
     items: [
       { href: "/technicians", label: "Repair & service", blurb: "Who works on these cameras" },
       { href: "/articles", label: "Articles", blurb: "Recovered from the original site" },
-      { href: "/ephemera", label: "Ephemera", blurb: "Advertising, brochures, catalogues" },
+      { href: "/ephemera", label: "Ephemera", blurb: "168 pieces, by kind or year" },
       { href: "/manuals", label: "Technical bulletins", blurb: "Paillard to its dealers, 1959–62" },
       { href: "/photographs", label: "Archive photographs", blurb: "The works, from public collections" },
       { href: "/timeline", label: "Timeline", blurb: "Paillard, 1814 onwards" },

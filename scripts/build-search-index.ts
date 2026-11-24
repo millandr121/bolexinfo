@@ -11,6 +11,7 @@ import matter from "gray-matter";
 import { getCameraRecords, getProjectorRecords } from "../lib/museum";
 import { getAccessoryItems } from "../lib/accessory-items";
 import { getLensItems } from "../lib/lens-items";
+import { getEphemeraItems } from "../lib/ephemera-items";
 import { getRecoveredSection } from "../lib/recovered";
 import { getLinkDirectory, getUpdates } from "../lib/directory";
 
@@ -115,6 +116,20 @@ for (const lens of getLensItems()) {
       .filter(Boolean)
       .join(" "),
     summary: lens.description.slice(0, 160),
+  });
+}
+
+/* Ephemera with its year in the keywords, so a search for 1944 finds
+ * the advertising from 1944. */
+for (const piece of getEphemeraItems()) {
+  docs.push({
+    title: piece.title,
+    href: `/ephemera/${piece.slug}`,
+    section: "ephemera",
+    keywords: [piece.type, piece.year ?? "", piece.month ?? "", piece.decade ? `${piece.decade}s` : ""]
+      .filter(Boolean)
+      .join(" "),
+    summary: piece.description.slice(0, 160),
   });
 }
 
