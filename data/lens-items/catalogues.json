@@ -172,5 +172,14 @@
     "price": "$58.95",
     "month": "February",
     "note": "The archive also has a Visifocus version of this lens. The list names no Visifocus, so the price is attached to the plain entry."
+  },
+  "lytar-25mm-f-1-8": {
+    "year": 1952,
+    "month": "February",
+    "doc": "01775",
+    "offeredFor": "Bolex cameras",
+    "asPrinted": "Lytar 25mm (1\") F:1.9, \"C\" mount",
+    "price": "$60.00",
+    "note": "The catalogue says f/1.9 and this entry says f/1.8. Nothing found so far settles which is right, or whether Paillard sold both. The price is recorded here because a 25mm Lytar at $60.00 is plainly this lens or its twin, and the discrepancy is worth seeing rather than smoothing over."
   }
 }

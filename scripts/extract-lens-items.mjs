@@ -222,6 +222,23 @@ const items = raw.map((entry) => {
   };
 });
 
+/**
+ * Lenses the original site never listed, found in Paillard's own
+ * documents. Appended rather than extracted, and flagged, because they
+ * are the archive's own work and the page says so.
+ */
+const ADDED = readReview(path.join(OUT_DIR, "added.json"));
+for (const [slug, entry] of Object.entries(ADDED)) {
+  items.push({
+    slug,
+    sources: [],
+    images: [],
+    added: true,
+    ...entry,
+    from: { page: null, heading: null, originalPath: null },
+  });
+}
+
 items.sort(
   (a, b) =>
     (a.year ?? a.decade ?? 9999) - (b.year ?? b.decade ?? 9999) || a.name.localeCompare(b.name),
@@ -237,3 +254,4 @@ if (strayListings.length) console.log(`\n  STRAY listings, no such lens: ${stray
 const strayCat = Object.keys(CATALOGUES).filter((slug) => !cataloguesUsed.has(slug));
 if (strayCat.length) console.log(`  STRAY catalogue entries, no such lens: ${strayCat.join(", ")}`);
 console.log(`  with a product code: ${items.filter((i) => i.codes.length).length}`);
+console.log(`  added by this archive: ${items.filter((i) => i.added).length}`);

@@ -14,7 +14,7 @@ import { lensDateLabel, type LensItem } from "@/lib/lens-types";
  * which for most of these is only a decade and says so.
  */
 export function LensItemPage({ item }: { item: LensItem }) {
-  const archiveHref = originalArchiveHref(item.from.originalPath);
+  const archiveHref = originalArchiveHref(item.from.originalPath ?? undefined);
   const images = item.images.map((i) => ({ src: i.src, alt: i.alt || item.name }));
 
   const jsonLd = {
@@ -242,19 +242,40 @@ export function LensItemPage({ item }: { item: LensItem }) {
           >
             Source
           </h2>
-          <p className="mt-3 text-sm leading-relaxed text-[var(--fg-soft)]">
-            Written by Michael Tisdale for BolexCollector.com, on his{" "}
-            <Link
-              href={`/lenses/${item.from.page}`}
-              className="text-[var(--accent)] underline underline-offset-4"
-            >
-              {item.maker} page
-            </Link>
-            , which opens with an account of the company and then lists its lenses.{" "}
-            {item.description
-              ? "The words above are his; this archive has given the lens a page of its own so it can be dated, searched, and found by its code."
-              : "He listed this lens there without describing it, so the words above are not his: they are what the catalogue says, and the page exists so the lens can be dated, searched and linked to."}
-          </p>
+          {item.added ? (
+            /*
+              Not Michael's at all. Found in Paillard's own documents while
+              matching codes and prices to the lenses he did list, and said
+              so plainly rather than quietly filed among his.
+            */
+            <p className="mt-3 text-sm leading-relaxed text-[var(--fg-soft)]">
+              <span className="text-[var(--fg)]">Added by this archive.</span> The original site
+              never listed this lens. It is here because Paillard&rsquo;s own price list or
+              catalogue names it, prices it and gives its code, and the entry says no more than
+              those documents do.{" "}
+              <Link
+                href={`/suggest?page=${encodeURIComponent(`/lenses/${item.slug}`)}`}
+                className="text-[var(--accent)] underline underline-offset-4"
+              >
+                If you have one, or know more, tell us
+              </Link>
+              .
+            </p>
+          ) : (
+            <p className="mt-3 text-sm leading-relaxed text-[var(--fg-soft)]">
+              Written by Michael Tisdale for BolexCollector.com, on his{" "}
+              <Link
+                href={`/lenses/${item.from.page}`}
+                className="text-[var(--accent)] underline underline-offset-4"
+              >
+                {item.maker} page
+              </Link>
+              , which opens with an account of the company and then lists its lenses.{" "}
+              {item.description
+                ? "The words above are his; this archive has given the lens a page of its own so it can be dated, searched, and found by its code."
+                : "He listed this lens there without describing it, so the words above are not his: they are what the catalogue says, and the page exists so the lens can be dated, searched and linked to."}
+            </p>
+          )}
         </section>
       </Reveal>
 

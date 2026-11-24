@@ -50,7 +50,9 @@ export interface LensItem {
     price?: string;
     note?: string;
   };
-  from: { page: string; heading: string | null; originalPath: string };
+  from: { page: string | null; heading: string | null; originalPath: string | null };
+  /** True where the original site never listed this lens at all. */
+  added?: boolean;
 }
 
 /** Makers in the order the collection reads best. */

@@ -16,6 +16,7 @@ export default function LensesPage() {
   const pages = getRecoveredSection("lenses");
   const coded = items.filter((i) => i.codes.length).length;
   const dated = items.filter((i) => i.year).length;
+  const added = items.filter((i) => i.added).length;
 
   return (
     <div className="pt-14 pb-8">
@@ -36,7 +37,13 @@ export default function LensesPage() {
           {coded} carry Paillard&rsquo;s five-letter code — SWINQ, PIZUI, DAESE — which is
           engraved on the barrel and is what to search if you are holding one. {dated} carry a
           year the original writing states; the rest show the decade of the page they were
-          documented on. A decade is never shown as though it were a year.
+          documented on. A decade is never shown as though it were a year.{" "}
+          {added > 0 && (
+            <>
+              {added} were never on the original site at all, and were found in Paillard&rsquo;s
+              own price lists while matching codes to the rest.
+            </>
+          )}
         </p>
       </Reveal>
 
