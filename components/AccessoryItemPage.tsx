@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Reveal } from "./Reveal";
 import { ImageGallery } from "./ImageGallery";
 import { ArchiveCompare } from "./ArchiveCompare";
-import { PriceReports } from "./PriceReports";
+import { PriceAsk } from "./PriceAsk";
 import { originalArchiveHref } from "@/lib/archive";
 import { dateLabel, type AccessoryItem } from "@/lib/accessory-items";
 
@@ -218,7 +218,7 @@ export function AccessoryItemPage({ item }: { item: AccessoryItem }) {
       </Reveal>
 
       <Reveal>
-        <PriceReports slug={item.slug} section="accessories" name={item.name} />
+        <PriceAsk slug={item.slug} section="accessories" name={item.name} />
       </Reveal>
 
       {archiveHref && (

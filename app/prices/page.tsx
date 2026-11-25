@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { PriceChart } from "@/components/PriceChart";
 import { PriceFinder } from "@/components/PriceFinder";
@@ -26,11 +25,9 @@ export default function PricesPage() {
           Prices
         </h1>
         <p className="mt-4 leading-relaxed text-[var(--fg-soft)]">
-          What {items.length} pieces of Bolex equipment cost{" "}
-          <span className="text-[var(--fg)]">new</span>, from Paillard&rsquo;s own dated price
-          lists, {years[0]} to {years[years.length - 1]}. Every figure is in{" "}
-          <span className="text-[var(--fg)]">US dollars</span>, was read off the page rather
-          than taken from a scan&rsquo;s OCR, and names the document it came from.
+          What Bolex equipment cost <span className="text-[var(--fg)]">new</span>, from
+          Paillard&rsquo;s own dated price lists, {years[0]} to {years[years.length - 1]}, in{" "}
+          <span className="text-[var(--fg)]">US dollars</span>.
         </p>
       </Reveal>
 
@@ -41,31 +38,6 @@ export default function PricesPage() {
        */}
       <Reveal delay={0.05}>
         <PriceFinder items={items} baseYear={base} />
-      </Reveal>
-
-      {/*
-       * Said once, plainly, and early. The question people actually
-       * arrive with is what their camera is worth, and this page does
-       * not answer it. Better to be told that in the second screen than
-       * to work it out from a methodology note at the bottom.
-       */}
-      <Reveal delay={0.05}>
-        <aside className="mt-12 border border-[var(--line)] bg-[var(--bg-raised)] px-5 py-4">
-          <h2 className="font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.2em] text-[var(--accent)]">
-            This is not what yours is worth
-          </h2>
-          <p className="mt-2.5 text-sm leading-relaxed text-[var(--fg-soft)]">
-            These are shop prices from the 1950s to the 1970s, not valuations. What a Bolex
-            sells for today turns far more on condition than on model &mdash; a recently
-            serviced H-16 and a seized one are the same entry here and several times apart in
-            price.{" "}
-            <Link href="/articles/what-one-is-worth" className="text-[var(--accent)] underline underline-offset-4">
-              How to work out what yours is worth
-            </Link>{" "}
-            is its own page, and every item page takes what you paid so the archive can
-            eventually answer it properly.
-          </p>
-        </aside>
       </Reveal>
 
       <Reveal delay={0.1}>

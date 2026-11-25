@@ -6,7 +6,7 @@ import { ModelNotes } from "./ModelNotes";
 import { partitionSpecs } from "@/lib/specs";
 import type { ModelRecord } from "@/lib/museum";
 import { getNotes } from "@/lib/notes";
-import { PriceReports } from "./PriceReports";
+import { PriceAsk } from "./PriceAsk";
 import { originalArchiveHref } from "@/lib/archive";
 import { hasControls } from "@/lib/controls";
 import { BrowseCarousel } from "@/components/BrowseCarousel";
@@ -371,7 +371,7 @@ export function ObjectPage({
           Bolex Stereo among them, and those would otherwise file their
           price reports under cameras.
         */}
-        <PriceReports
+        <PriceAsk
           slug={model.slug}
           section={
             section.href === "/projectors"
