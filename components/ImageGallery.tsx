@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import type { ModelImage } from "@/lib/museum";
@@ -59,6 +59,45 @@ export function ImageGallery({
     };
   }, [open, close, step]);
 
+  /*
+   * How far the strip can still go, each way. Recomputed on scroll and
+   * on resize, because the strip turns into a grid at `lg` and both
+   * ends then report themselves as reached.
+   */
+  const strip = useRef<HTMLUListElement>(null);
+  const [canLeft, setCanLeft] = useState(false);
+  const [canRight, setCanRight] = useState(false);
+
+  const measure = useCallback(() => {
+    const el = strip.current;
+    if (!el) return;
+    /* A one-pixel margin: sub-pixel widths otherwise leave an arrow lit
+       at a end it cannot actually move from. */
+    setCanLeft(el.scrollLeft > 1);
+    setCanRight(el.scrollLeft + el.clientWidth < el.scrollWidth - 1);
+  }, []);
+
+  useEffect(() => {
+    const el = strip.current;
+    if (!el) return;
+    measure();
+    el.addEventListener("scroll", measure, { passive: true });
+    const observer = new ResizeObserver(measure);
+    observer.observe(el);
+    return () => {
+      el.removeEventListener("scroll", measure);
+      observer.disconnect();
+    };
+  }, [measure, images.length]);
+
+  const nudge = useCallback((dir: number) => {
+    const el = strip.current;
+    if (!el) return;
+    /* A touch under a full width, so the next plate is already partly
+       visible and it is obvious there is more. */
+    el.scrollBy({ left: dir * el.clientWidth * 0.85, behavior: "smooth" });
+  }, []);
+
   if (images.length === 0) return null;
   const current = open === null ? null : images[open];
 
@@ -80,7 +119,10 @@ export function ImageGallery({
            * the first photograph spans the full rail as the lead plate, the
            * rest sit beneath it as square thumbnails.
            */}
-          <ul className="scroll-x flex snap-x snap-mandatory gap-3 pb-1 lg:grid lg:grid-cols-4 lg:gap-2 lg:overflow-visible lg:pb-0">
+          <div className="relative">
+          <ul
+            ref={strip}
+            className="scroll-x flex snap-x snap-mandatory gap-3 pb-1 lg:grid lg:grid-cols-4 lg:gap-2 lg:overflow-visible lg:pb-0">
             {images.map((img, i) => {
               const isLead = i === 0;
               return (
@@ -116,16 +158,23 @@ export function ImageGallery({
           </ul>
 
           {/*
-           * A single shared line rather than a caption per photograph: on a
-           * phone a caption under every slide was pure added height, and each
-           * image's own description is shown in the lightbox where there is
-           * room for it.
+           * Arrows, for the strip only.
+           *
+           * A touch screen already has swiping and a pointer did not: on a
+           * narrow desktop window the strip could only be dragged by its
+           * scrollbar, which is a poor control and looked like a fault. The
+           * arrows appear where there is something to scroll to and hide at
+           * `lg`, where the strip becomes a grid and there is nothing to
+           * scroll. They sit over the edges of the strip rather than under
+           * it so they cost no height.
            */}
-          <p className="mt-2 font-[family-name:var(--font-mono)] text-xs text-[var(--fg-soft)]">
-            {images.length === 1
-              ? "Tap to enlarge"
-              : `${images.length} photographs. Swipe, or tap to enlarge`}
-          </p>
+          {images.length > 1 && (
+            <>
+              <StripArrow side="left" onClick={() => nudge(-1)} show={canLeft} />
+              <StripArrow side="right" onClick={() => nudge(1)} show={canRight} />
+            </>
+          )}
+          </div>
         </div>
       ) : (
         <ul className={`grid gap-3 ${images.length === 1 ? "sm:grid-cols-1 max-w-md" : "grid-cols-2"}`}>
@@ -240,5 +289,36 @@ export function ImageGallery({
           document.body,
         )}
     </>
+  );
+}
+
+/**
+ * One edge arrow for the strip.
+ *
+ * Hidden at `lg`, where the strip becomes a grid and there is nothing
+ * to scroll, and removed rather than dimmed at an end it cannot move
+ * from, so it never offers a control that would do nothing.
+ */
+function StripArrow({
+  side,
+  onClick,
+  show,
+}: {
+  side: "left" | "right";
+  onClick: () => void;
+  show: boolean;
+}) {
+  if (!show) return null;
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-label={side === "left" ? "Scroll to earlier photographs" : "Scroll to more photographs"}
+      className={`absolute top-1/2 z-10 -translate-y-1/2 border border-[var(--line)] bg-[var(--bg)]/90 px-2 py-3 text-lg leading-none text-[var(--fg-soft)] backdrop-blur-sm transition-colors hover:text-[var(--accent)] lg:hidden ${
+        side === "left" ? "left-1" : "right-1"
+      }`}
+    >
+      <span aria-hidden="true">{side === "left" ? "‹" : "›"}</span>
+    </button>
   );
 }

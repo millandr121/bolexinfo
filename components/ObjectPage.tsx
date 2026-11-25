@@ -309,62 +309,6 @@ export function ObjectPage({
         </p>
 
         {/*
-         * What it cost, from Paillard's own dated price list.
-         *
-         * A list rather than a figure because these were sold as outfits:
-         * the body, a lens, sometimes three lenses and a case. The spread
-         * is the point. An H-16 De luxe with a Lytar was $372.75 and the
-         * same camera with a Switar f/1.4 was $496.50, so the glass was a
-         * third of what a buyer paid.
-         */}
-        {model.catalogues?.length ? (
-          <section className="rule mt-12 pt-4" aria-labelledby="catalogue-prices">
-            <h2
-              id="catalogue-prices"
-              className="font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.16em] text-[var(--accent)]"
-            >
-              What it cost new
-            </h2>
-            {model.catalogues.map((list, index) => (
-              <div key={`${list.doc}-${list.year}`} className={index === 0 ? "mt-4" : "mt-8"}>
-                <h3 className="font-[family-name:var(--font-mono)] text-[0.66rem] uppercase tracking-[0.14em] text-[var(--fg)]">
-                  {list.month ? `${list.month} ` : ""}
-                  {list.year}
-                </h3>
-                <ul className="mt-2.5 space-y-1.5">
-                  {list.variants.map((variant) => (
-                    <li
-                      key={variant.asPrinted}
-                      className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-0.5 border-b border-[var(--line)] pb-1.5 font-[family-name:var(--font-mono)] text-[0.72rem] leading-relaxed"
-                    >
-                      <span className="text-[var(--fg-soft)]">{variant.asPrinted}</span>
-                      <span className="text-[var(--fg)]">{variant.price}</span>
-                    </li>
-                  ))}
-                </ul>
-                <p className="mt-2.5 font-[family-name:var(--font-mono)] text-[0.66rem] leading-relaxed text-[var(--fg-soft)]">
-                  {list.note ? `${list.note} ` : ""}
-                  <a
-                    href={`https://www.pacificrimcamera.com/rl/${list.doc}/${list.doc}.pdf`}
-                    target="_blank"
-                    rel="noreferrer nofollow"
-                    className="text-[var(--accent)] underline underline-offset-4"
-                  >
-                    the list ↗
-                  </a>
-                </p>
-              </div>
-            ))}
-            <p className="mt-6 font-[family-name:var(--font-mono)] text-[0.66rem] leading-relaxed text-[var(--fg-soft)]">
-              Every figure is what the list gives as the price to the buyer, never the
-              dealer&rsquo;s own cost, and the lists do not all print those two columns in the
-              same order. Scanned by Pacific Rim Camera; each page was read by eye rather than
-              trusted to OCR.
-            </p>
-          </section>
-        ) : null}
-
-        {/*
           Taken from the breadcrumb's href rather than from section.kind,
           because kind is only set for cameras and projectors. This same
           template also renders accessories the archive added itself, the

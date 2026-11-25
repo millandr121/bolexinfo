@@ -139,10 +139,58 @@ test("an article the archive wrote is not cleaned like a recovered one", async (
         `"${firstLine.slice(0, 60)}". The recovered-article cleaner has ` +
         `most likely been let loose on it.`,
     );
-    assert.ok(
-      article.body.includes("##"),
-      `${article.slug} has lost its headings, which the cleaner removes ` +
-        `down to the first H2`,
+    /* Length, not headings. The first version of this checked that the
+       body still contained an "##", which only worked while every
+       article happened to have subheadings; an article written as plain
+       paragraphs then failed a test meant to catch truncation. Comparing
+       what was read against what is on disk catches the amputation
+       whatever the article's shape. */
+    assert.equal(
+      article.body.trim().length,
+      body.length,
+      `${article.slug} is ${body.length - article.body.trim().length} characters ` +
+        `shorter than its file. Something is trimming it.`,
+    );
+  }
+});
+
+/**
+ * The counts in the navigation blurbs are real counts.
+ *
+ * Four of them had drifted: the menu offered "56 models" when there
+ * were 65, and "18 models" against 24. Nothing failed, because nothing
+ * was checking — the numbers are prose in a config file and they go
+ * stale silently every time an entry is added. The front page's own
+ * counts have had a test for exactly this reason; the menu should not
+ * be the honest-looking part of the site that quietly lies.
+ */
+test("the navigation's counts match the catalogue", async () => {
+  const { NAVIGATION, isGroup } = await import("../lib/navigation");
+  const { getCameraRecords, getProjectorRecords, getAddedRecords } = await import(
+    "../lib/museum"
+  );
+  const { getLensItems } = await import("../lib/lens-items");
+  const { getAccessoryItems } = await import("../lib/accessory-items");
+  const { getEphemeraItems } = await import("../lib/ephemera-items");
+
+  const actual: Record<string, number> = {
+    "/cameras": getCameraRecords().length,
+    "/projectors": getProjectorRecords().length,
+    "/lenses": getLensItems().length + getAddedRecords("lenses").length,
+    "/accessories": getAccessoryItems().length + getAddedRecords("accessories").length,
+    "/ephemera": getEphemeraItems().length,
+  };
+
+  const leaves = NAVIGATION.flatMap((entry) => (isGroup(entry) ? [...entry.items] : [entry]));
+  for (const leaf of leaves) {
+    const expected = actual[leaf.href];
+    if (expected === undefined || !leaf.blurb) continue;
+    const claimed = Number(/^(\d[\d,]*)/.exec(leaf.blurb)?.[1]?.replace(/,/g, ""));
+    if (Number.isNaN(claimed)) continue;
+    assert.equal(
+      claimed,
+      expected,
+      `the menu says "${leaf.blurb}" for ${leaf.href}, but there are ${expected}`,
     );
   }
 });

@@ -39,10 +39,10 @@ export const NAVIGATION: readonly NavEntry[] = [
   {
     label: "Equipment",
     items: [
-      { href: "/cameras", label: "Cameras", blurb: "56 models, 1928–1976" },
-      { href: "/projectors", label: "Projectors", blurb: "18 models" },
-      { href: "/lenses", label: "Lenses", blurb: "119 lenses, by maker, year or code" },
-      { href: "/accessories", label: "Accessories", blurb: "99 objects, by type or year" },
+      { href: "/cameras", label: "Cameras", blurb: "65 models, 1928–1976" },
+      { href: "/projectors", label: "Projectors", blurb: "24 models" },
+      { href: "/lenses", label: "Lenses", blurb: "120 lenses, by maker, year or code" },
+      { href: "/accessories", label: "Accessories", blurb: "101 objects, by type or year" },
     ],
   },
   {
