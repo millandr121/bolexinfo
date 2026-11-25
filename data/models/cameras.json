@@ -66,6 +66,66 @@
       "recovery": "summary-only"
     },
     {
+      "slug": "h16ebm",
+      "name": "H-16 EBM",
+      "format": "16mm",
+      "introduced": 1971,
+      "summary": "Bolex's first electric-drive H-16, and the camera that took the line into sync sound. A built-in motor runs at 10, 18, 24, 25 and 50 frames a second off a rechargeable cell in the contoured power grip, good for 2400ft and recharged in the grip in twelve hours. A sound position on the speed selector takes a crystal unit for cordless sync, or a sync-pulse generator on a cord, and a slating system built into the camera does away with a separate clapstick. Reflex finder at 14x, 170 degree rotary shutter, automatic threading with loop formers that retract as the door closes, and a two-position filter slot behind the lens taking 2x2in gelatin. Bayonet mount, with an adapter for C-mount, and it came with the Vario-Switar 100 POE. 13½ by 6 by 3¾ inches and 9.5lbs complete with battery and grip. Product 41754, earlier 1750.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "Bolex H-16 Professional 16mm Motion Picture Systems, EPOI brochure",
+          "url": "https://www.pacificrimcamera.com/rl/02241/02241.pdf",
+          "note": "Paillard's American distributor describing its own range, five models to a booklet. Every specification here comes from it and the product numbers match the dated price lists exactly. Undated, but it gives the EPOI Woodbury address and the same five bodies and product numbers as the October 1976 list, which places it there. Read off the rendered page: this scan's OCR mangles the fractions, printing 13½ as 13112 and 3¾ as 3314. Scanned by Pacific Rim Camera."
+        },
+        {
+          "title": "Dated in collector sources to 1971",
+          "url": "https://my16mm.com/cameras/bolex16hebm.php",
+          "note": "Several collector sources give 1971 and agree with each other; no Bolex document read here dates it. The earliest primary evidence the archive holds is the February 1972 price list, which sells the body at $1,320.00, so 1971 is at least consistent with it."
+        }
+      ]
+    },
+    {
+      "slug": "h16el",
+      "name": "H-16 EL",
+      "format": "16mm",
+      "introduced": null,
+      "summary": "The electronic one, and the last serious development of the H-16. An integral motor runs at nine speeds, 10, 12, 18, 20, 24, 25, 32, 40 and 50 frames a second, with reverse, continuous and single-frame besides, off a 13oz nicad that drives 600ft a charge or 2000ft on the heavy-duty battery. Metering is through the lens at the film plane, a silicon cell read off match-the-diode LEDs in the finder, ASA 10 to 630 at any speed through any lens or filter. A crystal position on the speed dial takes a crystal module for cordless sync, good to within a frame in 400ft. The lens mount is the 60mm bayonet, so secure that the brochure says the camera may be carried by the lens, with an adapter for C-mount. Reflex finder at 13x, 170 degree rotary shutter, automatic threading and loop restoration, 100ft internally and 400ft on the magazine. 4.5 by 6.8 by 9.5 inches and 7lbs with the battery, less lens. Product 41900.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "Bolex H-16 Professional 16mm Motion Picture Systems, EPOI brochure",
+          "url": "https://www.pacificrimcamera.com/rl/02241/02241.pdf",
+          "note": "Paillard's American distributor describing its own range, five models to a booklet. Every specification here comes from it and the product numbers match the dated price lists exactly. Undated, but it gives the EPOI Woodbury address and the same five bodies and product numbers as the October 1976 list, which places it there. Read off the rendered page: this scan's OCR mangles the fractions, printing 13½ as 13112 and 3¾ as 3314. Scanned by Pacific Rim Camera."
+        },
+        {
+          "title": "Bolex 16mm price lists, February 1972 and October 1976",
+          "url": "https://www.pacificrimcamera.com/rl/02211/02211.pdf",
+          "note": "No year is given here because no source consulted gives one, and the archive would rather say nothing than guess. What the documents do settle is a bracket: the February 1972 list (rl/04932) sells the EBM, SBM, REX-5 and M-5 and has no EL in it at all, and the October 1976 list has the EL as product 41900 at $3,300.00. So it arrived between those two dates. Collector sources date the later EL Series 3 to 1980 and none of them date the first."
+        }
+      ]
+    },
+    {
+      "slug": "h16sbm",
+      "name": "H-16 SBM",
+      "format": "16mm",
+      "introduced": 1970,
+      "summary": "The spring-wound bayonet model, and the camera that ended the three-lens turret. A governor-controlled spring motor gives 12, 16, 18, 24, 32, 48 and 64 frames a second plus single frame, 16.4ft to a wind, with an audible click every 30 frames for timing a shot by ear. The rotary shutter is variable from 0 to 130 degrees with the opening shown in the finder, and the RexoFader will time a fade over 40 frames. Reflex finder at 10x with a full-focusing groundglass. It takes the ESM and EM motors for longer runs, the 400ft magazine, and the Vario-Switar POE-4 16-100mm for through-the-lens metering. 3 by 6 by 9 inches and 6.75lbs less lens. The REX-5 is the same camera with a three-lens C-mount turret and a one-position filter slot. Product 41810, earlier 1810.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "Bolex H-16 Professional 16mm Motion Picture Systems, EPOI brochure",
+          "url": "https://www.pacificrimcamera.com/rl/02241/02241.pdf",
+          "note": "Paillard's American distributor describing its own range, five models to a booklet. Every specification here comes from it and the product numbers match the dated price lists exactly. Undated, but it gives the EPOI Woodbury address and the same five bodies and product numbers as the October 1976 list, which places it there. Read off the rendered page: this scan's OCR mangles the fractions, printing 13½ as 13112 and 3¾ as 3314. Scanned by Pacific Rim Camera."
+        },
+        {
+          "title": "Dated in collector sources to 1970",
+          "url": "http://bolexh16user.net/H16SBAndSBM.htm",
+          "note": "Collector sources agree on 1970 for the SB and SBM, and on this being the first Bolex to carry the bayonet mount that the EBM and EL then took. No Bolex document read here dates it. The archive's earliest primary evidence is the February 1972 price list at $720.00."
+        }
+      ]
+    },
+    {
       "slug": "h16m5",
       "name": "H-16 M-5",
       "format": "16mm",

@@ -109,13 +109,25 @@ Picked out of the Pacific Rim list because they close a known gap:
     from both would publish a dealer's cost as a shop price, roughly a
     third under. Both headers were read off the rendered page, and so was
     every figure taken from them. The same rule holds for the rest.
-  - These two also price the **H-16 EL, EBM and SBM**, which the archive
-    has no entries for at all. Three major production cameras with no
-    page: the clearest gap the price lists have turned up. They are part
-    of a longer list, in
-    findings/models-the-price-lists-name.md: fifteen models the lists
-    price and the archive never covered, each with a product number and a
-    dated figure already read off the page.
+  - These two also price the **H-16 EL, EBM and SBM**. All three now have
+    entries, written from `rl/02241`, the EPOI brochure covering the five
+    H-16 models, which gives full specifications and the same product
+    numbers the lists use. The rest of the gap is in
+    findings/models-the-price-lists-name.md.
+- **Two more price lists exist and are not on Pacific Rim.** Both of the
+  February 1972 lists are headed modifications of earlier ones:
+  - `rl/04932` (16mm) replaces a list dated **July 1971**.
+  - `rl/04942` (Super 8) replaces one dated **June 1971**.
+  Neither 1971 list is on the site. They would be the earliest pricing
+  the archive could hold for the EBM and the Super 8 line, and worth
+  watching for.
+- **`rl/04932` holds camera bodies, not only lenses.** It was mined for
+  lenses first and the bodies were missed: the EBM at $1,320.00 body
+  only, the SBM at $720.00, the REX-5 and the M-5. It also has **no EL
+  in it at all**, which with the EL present in October 1976 brackets
+  that camera's arrival between the two dates. Its OCR renders every
+  capital B as an E, so BOLEX reads EOLEX and SBM reads SEM; read it by
+  eye.
 - **The two Super 8 price lists, downloaded and mined.** Both have a
   single Suggested Retail column, so neither carries the 16mm lists' trap.
   - `rl/04942` — **23 February 1972**, Paillard Inc., Linden NJ and Los

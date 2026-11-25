@@ -376,6 +376,22 @@
           "price": "$739.00"
         }
       ]
+    },
+    {
+      "year": 1972,
+      "month": "February",
+      "doc": "04932",
+      "note": "The February 1972 16mm list, headed confidential and sold to dealers, with one Suggested Retail column. Paillard Incorporated, Linden NJ.",
+      "variants": [
+        {
+          "asPrinted": "H-16 M-5 w/Multifocal VF, Single C Mt.",
+          "price": "$370.00"
+        },
+        {
+          "asPrinted": "H-16 M-5 w/o VF, Single C Mt.",
+          "price": "$330.00"
+        }
+      ]
     }
   ],
   "h16rex5": [
@@ -400,6 +416,22 @@
         {
           "asPrinted": "H-16 REX 5 Three-lens Turret, w/o Multifocal Viewfinder",
           "price": "$2,491.00"
+        }
+      ]
+    },
+    {
+      "year": 1972,
+      "month": "February",
+      "doc": "04932",
+      "note": "The February 1972 16mm list, headed confidential and sold to dealers, with one Suggested Retail column. Paillard Incorporated, Linden NJ.",
+      "variants": [
+        {
+          "asPrinted": "H-16 Rex-5 w/Multifocal VF, Rx-Turret",
+          "price": "$790.00"
+        },
+        {
+          "asPrinted": "H-16 Rex-5 w/o VF, Rx-Turret",
+          "price": "$750.00"
         }
       ]
     }
@@ -516,6 +548,120 @@
         {
           "asPrinted": "Bolex SM-80 Programmatic",
           "price": "$780.00"
+        }
+      ]
+    }
+  ],
+  "h16ebm": [
+    {
+      "year": 1972,
+      "month": "February",
+      "doc": "04932",
+      "note": "The February 1972 16mm list, headed confidential and sold to dealers, with one Suggested Retail column. Paillard Incorporated, Linden NJ.",
+      "variants": [
+        {
+          "asPrinted": "H-16 EBM Complete (Body Only) w/o 400' mag. & w/o lens, Bay. Mt.",
+          "price": "$1,320.00"
+        },
+        {
+          "asPrinted": "H-16 EBM Complete with 400' mag., Take-Up Motor, Connecting Cord, Vario-Switar POE 100 zoom lens",
+          "price": "$2,446.70"
+        },
+        {
+          "asPrinted": "H-16 EBM Complete with 400' mag., Take-Up Motor, Connecting Cord, Vario-Switar POE 100-4 zoom lens",
+          "price": "$2,586.70"
+        }
+      ]
+    },
+    {
+      "year": 1976,
+      "month": "October",
+      "doc": "02211",
+      "note": "The suggested retail price. This list prints dealer cost first and suggested retail second.",
+      "variants": [
+        {
+          "asPrinted": "H-16 EBM Camera Complete - Bay. Mt. w/Power Grip, Battery, Charger, 3' Cable w/Vario-Switar 100 POE Zoom Lens",
+          "price": "$3,170.00"
+        }
+      ]
+    },
+    {
+      "year": 1978,
+      "month": "January",
+      "doc": "02210",
+      "note": "The suggested retail price. This list prints suggested retail first and dealer net second, the opposite way round from the 1976 one.",
+      "variants": [
+        {
+          "asPrinted": "H-16 EBM Camera Complete - Bay. Mt. w/Power Grip, Battery, Charger",
+          "price": "$3,499.00"
+        }
+      ]
+    }
+  ],
+  "h16sbm": [
+    {
+      "year": 1972,
+      "month": "February",
+      "doc": "04932",
+      "note": "The February 1972 16mm list, headed confidential and sold to dealers, with one Suggested Retail column. Paillard Incorporated, Linden NJ.",
+      "variants": [
+        {
+          "asPrinted": "H-16 SBM w/o VF, Bay. Mt.",
+          "price": "$720.00"
+        }
+      ]
+    },
+    {
+      "year": 1978,
+      "month": "January",
+      "doc": "02210",
+      "note": "The suggested retail price. This list prints suggested retail first and dealer net second, the opposite way round from the 1976 one.",
+      "variants": [
+        {
+          "asPrinted": "H-16 SBM Bayonet Mount w/o Multifocal VF",
+          "price": "$2,500.00"
+        }
+      ]
+    },
+    {
+      "year": 1976,
+      "month": "October",
+      "doc": "02211",
+      "note": "The suggested retail price. This list prints dealer cost first and suggested retail second.",
+      "variants": [
+        {
+          "asPrinted": "H-16 SBM Bayonet Mount w/o Multifocal VF",
+          "price": "$1,493.00"
+        }
+      ]
+    }
+  ],
+  "h16el": [
+    {
+      "year": 1976,
+      "month": "October",
+      "doc": "02211",
+      "note": "The suggested retail price. This list prints dealer cost first and suggested retail second.",
+      "variants": [
+        {
+          "asPrinted": "H-16 EL Camera Body with Battery (#41920), Charger (#41928), Remote Control Cable, Filter Holder and Gelatin Filters",
+          "price": "$3,300.00"
+        }
+      ]
+    },
+    {
+      "year": 1978,
+      "month": "January",
+      "doc": "02210",
+      "note": "The suggested retail price. This list prints suggested retail first and dealer net second, the opposite way round from the 1976 one.",
+      "variants": [
+        {
+          "asPrinted": "H-16 EL Camera Body with Battery (#41920), Charger (#41928), Remote Control Cable, Filter Holder and Gelatin Filters",
+          "price": "$4,918.00"
+        },
+        {
+          "asPrinted": "H-16 EL/TV same as above, but with built-in TV frame in the viewfinder",
+          "price": "$5,059.00"
         }
       ]
     }
