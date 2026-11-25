@@ -86,6 +86,23 @@ Picked out of the Pacific Rim list because they close a known gap:
     and 22 are a full Bolex retail price list.
   - `rl/01859` — **Nov 1952**. Carries text.
   - `rl/04916` — **Feb 1965**. Carries text.
+- **The dealer price lists, and a trap in the 1970s ones.** Seven of the
+  eight Pacific Rim holds have now been mined: `rl/04928`, `rl/04929`,
+  `rl/04932`, `rl/04933` (1965–67), `rl/02211`, `rl/02210`, `rl/02209`
+  (1976–79). Transcriptions are in `research/price-lists/`.
+  - `rl/02211` — **1 October 1976**, EPOI. Columns print as **Dealer Cost
+    then Suggested Retail**, so retail is the *second* number.
+  - `rl/02210` — **1 January 1978**, EPOI. Columns print as **Suggested
+    Retail then Dealer Net**, the other way round, so retail is the
+    *first* number.
+  - Nothing distinguishes them but the column headers, which the OCR does
+    not reliably keep beside their own numbers. Taking the same column
+    from both would publish a dealer's cost as a shop price, roughly a
+    third under. Both headers were read off the rendered page, and so was
+    every figure taken from them. The same rule holds for the rest.
+  - These two also price the **H-16 EL, EBM and SBM**, which the archive
+    has no entries for at all. Three major production cameras with no
+    page: the clearest gap the price lists have turned up.
 - "Bolex Sterero Instruction Book" (their spelling) — the Stereo/Triorama.
 - The SP 80 is **not on Pacific Rim**, despite an earlier note here saying
   an "SP8/SP80 Instruction Book" was listed. It is not. The SP59 to SP62

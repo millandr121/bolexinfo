@@ -8,6 +8,14 @@
     "to one decimal place before 2007. The base year is the latest",
     "complete annual average.",
     "",
+    "Add the year here BEFORE publishing a price from a new price list.",
+    "lib/prices.ts now throws on a year that is missing, because it used",
+    "to quietly return the price unadjusted, which reads on the page as a",
+    "1976 camera having cost the same in today's money as it did then.",
+    "The annual average is the mean of the twelve monthly indexes, and the",
+    "BLS table prints it in its own column; both were checked against each",
+    "other for every year here.",
+    "",
     "A caveat worth keeping: the base figure for 2025 was taken from",
     "secondary compilations of the BLS series rather than from a BLS",
     "annual-average table read directly, so it may be revised. Every",
@@ -25,6 +33,8 @@
     "1965": 31.5,
     "1967": 33.4,
     "1972": 41.8,
+    "1976": 56.9,
+    "1978": 65.2,
     "1979": 72.6
   },
   "source": {

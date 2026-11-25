@@ -77,11 +77,13 @@ export default function PricesPage() {
             How prices moved
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-[var(--fg-soft)]">
-            The five things the archive can follow across the most years. Paillard held its
-            American prices remarkably still: the eye-level focus was US$37.75 in 1952 and
-            US$37.75 in 1965, and the Yvar 75mm actually came <em>down</em>. Then the 1970s
-            arrive. Switch the reading to see the same figures in {base} money, where the flat
-            ones are quietly falling all along.
+            The five things the archive can follow across the most price lists. The matte box
+            is the fullest of them, in five of the seven: US$84.50 in 1965 and US$412.00 in
+            1979, which looks like a thing getting five times dearer. Switch the reading to{" "}
+            {base} money and it roughly doubles instead, the rest of the climb being the 1970s
+            happening to everything at once. The Pan Cinor Compact, on the same switch, barely
+            moves at all. That gap, between what the sticker did and what it meant, is most of
+            what this chart is for.
           </p>
           <PriceChart series={series} baseYear={base} />
         </section>
@@ -142,10 +144,12 @@ export default function PricesPage() {
               the official ones.
             </p>
             <p>
-              <span className="text-[var(--fg)]">What is missing.</span> Seven price lists have
-              been read and four more exist, including the Super 8 ones. There is nothing
-              before 1952: the 1946 catalogue tells the reader to consult a price list that has
-              not been found.
+              <span className="text-[var(--fg)]">What is missing.</span> Seven of the eight
+              Bolex price lists Pacific Rim holds have been read, together with the retail list
+              bound into the February 1952 catalogue. There is nothing before 1952: the 1946
+              catalogue tells the reader to consult a price list that has not been found. And
+              nothing here is a Super 8 price, nor an H-16 EL, EBM or SBM, because the archive
+              has no page for those three cameras to put a price on.
             </p>
           </div>
         </section>

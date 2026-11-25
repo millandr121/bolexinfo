@@ -1151,6 +1151,12 @@
           "asPrinted": "16mm Extension Tubes"
         },
         {
+          "price": "$98.00",
+          "date": "January 1978",
+          "doc": "02210",
+          "asPrinted": "Extension Tubes (set of 4)"
+        },
+        {
           "price": "$120.00",
           "date": "November 1979",
           "doc": "02209",
@@ -1818,6 +1824,21 @@
       "sources": [
         "Bolex H8-H16 Catalogue (New Jersey: Paillard Incorporated, April 1966), 28."
       ],
+      "listings": [
+        {
+          "price": "$469.00",
+          "date": "October 1976",
+          "doc": "02211",
+          "asPrinted": "Aluminum Case f/H-16 Camera"
+        },
+        {
+          "price": "$475.00",
+          "date": "January 1978",
+          "doc": "02210",
+          "asPrinted": "Aluminum Case f/H-16 Camera"
+        }
+      ],
+      "listingNote": "Product 40459, the case for the camera. Both lists also carry 40458, a smaller case for a 100' H-16 EBM, which is not this.",
       "from": {
         "page": "case60",
         "heading": "Cases",
@@ -2232,12 +2253,25 @@
           "asPrinted": "Matte Box"
         },
         {
+          "price": "$272.35",
+          "date": "October 1976",
+          "doc": "02211",
+          "asPrinted": "Matte Box B"
+        },
+        {
+          "price": "$363.00",
+          "date": "January 1978",
+          "doc": "02210",
+          "asPrinted": "Matte Box B"
+        },
+        {
           "price": "$412.00",
           "date": "November 1979",
           "doc": "02209",
           "asPrinted": "Matte Box B"
         }
       ],
+      "listingNote": "The 1976 and 1978 lists call it the Matte Box B. Nothing in them says what the B distinguishes, and the archive has only the one matte box, so the figures are kept here with the document's own wording.",
       "from": {
         "page": "filter60",
         "heading": "Filters and Lens Accessories",

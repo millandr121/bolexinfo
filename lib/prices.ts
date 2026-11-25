@@ -72,10 +72,26 @@ function yearOf(date: string): number | null {
   return m ? Number(m[1]) : null;
 }
 
+/**
+ * A price in base-year money.
+ *
+ * Throws on a year the index does not cover, and that is deliberate.
+ * This used to return the nominal figure instead, which meant that
+ * adding a price list for a new year published 1976's $272.35 as
+ * "$272 in today's money" on a page whose own caption said the number
+ * had been adjusted. A build that stops is the cheap version of that
+ * mistake; cpi.json is three lines of work to extend.
+ */
 export function adjust(nominal: number, year: number): number {
   const cpi = getCpi();
   const then = cpi.years[String(year)];
-  if (!then) return nominal;
+  if (!then) {
+    throw new Error(
+      `No CPI annual average for ${year}. Add it to data/prices/cpi.json ` +
+        `before publishing a price from that year, or every adjusted figure ` +
+        `for it will silently be the nominal one.`,
+    );
+  }
   return (nominal * cpi.base.cpi) / then;
 }
 
@@ -155,22 +171,27 @@ export function getPricePoints(): PricePoint[] {
     /^(m8|m8r|model-|18|s[0-9]|sm8|sp)/.test(slug) ? "projectors" : "cameras";
   for (const [slug, raw] of Object.entries(models)) {
     if (slug === "_") continue;
-    const entry = raw as {
+    type Entry = {
       year: number;
       month?: string;
       doc: string;
       variants: Array<{ asPrinted: string; price: string }>;
     };
-    for (const v of entry.variants) {
-      push(
-        v.asPrinted,
-        slug,
-        sectionFor(slug),
-        `${entry.month ?? ""} ${entry.year}`.trim(),
-        v.price,
-        v.asPrinted,
-        entry.doc,
-      );
+    /* A model that stayed in production appears in several lists, so the
+       value is an array; a single object is still accepted. */
+    const entries = (Array.isArray(raw) ? raw : [raw]) as Entry[];
+    for (const entry of entries) {
+      for (const v of entry.variants) {
+        push(
+          v.asPrinted,
+          slug,
+          sectionFor(slug),
+          `${entry.month ?? ""} ${entry.year}`.trim(),
+          v.price,
+          v.asPrinted,
+          entry.doc,
+        );
+      }
     }
   }
 
@@ -213,7 +234,15 @@ export function getPriceSeries(): PriceSeries[] {
     });
   }
 
-  return series.sort((a, b) => b.span - a.span || b.points.length - a.points.length);
+  /*
+   * Most figures first, then the longest span. It used to be the other
+   * way round, which made sense when almost everything had two points
+   * and the only question was how far apart they were. With the 1976 and
+   * 1978 lists in, several things have four and five, and a line drawn
+   * through five readings says more about how prices moved than a longer
+   * line drawn through two.
+   */
+  return series.sort((a, b) => b.points.length - a.points.length || b.span - a.span);
 }
 
 export interface PricedItem {

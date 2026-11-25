@@ -18,6 +18,14 @@
     "not give one in the lens's name. Those are the valuable ones: a code is",
     "what is engraved on the barrel.",
     "",
+    "",
+    "A trap in the two 1970s lists, written down because it would publish a",
+    "dealer's cost as a shop price. October 1976 prints its columns as",
+    "Dealer Cost then Suggested Retail. January 1978 prints them the other",
+    "way round, Suggested Retail then Dealer Net. Everything here is the",
+    "retail figure, which is the second number in the 1976 list and the",
+    "first in the 1978 one. Both headers were read off the rendered page.",
+    "",
     "Re-run scripts/extract-lens-items.mjs after editing."
   ],
   "macro-switar-50mm-f-1-4-rx": {
@@ -107,6 +115,12 @@
         "date": "November 1979",
         "doc": "02209",
         "asPrinted": "Macro-Yvar 150mm f/3.3 Preset"
+      },
+      {
+        "price": "$670.00",
+        "date": "January 1978",
+        "doc": "02210",
+        "asPrinted": "Macro-Yvar 150mm f/3.3 Preset"
       }
     ],
     "note": "The archive carries two entries for the Macro Yvar 150mm f/3.3, this one and a later redesign. The code and price are attached here, to the 1962 original, because the 1965 list predates the redesign."
@@ -160,6 +174,18 @@
         "date": "May 1967",
         "doc": "04933",
         "asPrinted": "Pan Cinor 85-2, 17-85mm f/2.0"
+      },
+      {
+        "price": "$1,578.00",
+        "date": "October 1976",
+        "doc": "02211",
+        "asPrinted": "Pan Cinor 85-2 17-85mm"
+      },
+      {
+        "price": "$2,025.00",
+        "date": "January 1978",
+        "doc": "02210",
+        "asPrinted": "Pan Cinor 85-2 17-85mm"
       }
     ]
   },
@@ -281,6 +307,18 @@
         "date": "November 1979",
         "doc": "02209",
         "asPrinted": "Pan Cinor Compact 17-85mm f/3.8 C Mt."
+      },
+      {
+        "price": "$399.00",
+        "date": "October 1976",
+        "doc": "02211",
+        "asPrinted": "Pan Cinor Compact 17-85mm"
+      },
+      {
+        "price": "$447.00",
+        "date": "January 1978",
+        "doc": "02210",
+        "asPrinted": "Pan Cinor Compact 17-85mm"
       }
     ]
   },
@@ -297,6 +335,12 @@
         "date": "November 1979",
         "doc": "02209",
         "asPrinted": "Macro-Switar 26mm f/1.1 Rx Preset multicoated"
+      },
+      {
+        "price": "$858.00",
+        "date": "January 1978",
+        "doc": "02210",
+        "asPrinted": "Macro-Switar 26mm f/1.1 Rx"
       }
     ]
   },
@@ -313,6 +357,12 @@
         "date": "November 1979",
         "doc": "02209",
         "asPrinted": "Macro-Switar 75mm f/1.9 Preset multicoated"
+      },
+      {
+        "price": "$670.00",
+        "date": "January 1978",
+        "doc": "02210",
+        "asPrinted": "Macro-Switar 75mm f/1.9"
       }
     ]
   },
@@ -335,6 +385,28 @@
         "date": "November 1979",
         "doc": "02209",
         "asPrinted": "Vario-Switar 16-100mm POE f/1.9 Bay. Mt."
+      },
+      {
+        "price": "$2,568.00",
+        "date": "January 1978",
+        "doc": "02210",
+        "asPrinted": "Vario-Switar 16-100mm POE-4 C Mt"
+      },
+      {
+        "price": "$2,612.00",
+        "date": "January 1978",
+        "doc": "02210",
+        "asPrinted": "Vario-Switar 16-100mm POE-4 Bayonet Mt"
+      }
+    ]
+  },
+  "switar-10mm-f-1-6-rx": {
+    "listings": [
+      {
+        "price": "$697.00",
+        "date": "January 1978",
+        "doc": "02210",
+        "asPrinted": "Switar 10mm f/1.6 Rx Preset"
       }
     ]
   }

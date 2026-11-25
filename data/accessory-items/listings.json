@@ -14,6 +14,14 @@
     "addCodes gives the accessory Paillard's five-letter code, which the",
     "original site never recorded for any of them.",
     "",
+    "",
+    "A trap in the two 1970s lists, written down because it would publish a",
+    "dealer's cost as a shop price. October 1976 prints its columns as",
+    "Dealer Cost then Suggested Retail. January 1978 prints them the other",
+    "way round, Suggested Retail then Dealer Net. Everything here is the",
+    "retail figure, which is the second number in the 1976 list and the",
+    "first in the 1978 one. Both headers were read off the rendered page.",
+    "",
     "Re-run scripts/extract-accessory-items.mjs after editing."
   ],
   "prismatic-focuser": {
@@ -66,8 +74,21 @@
         "date": "November 1979",
         "doc": "02209",
         "asPrinted": "Matte Box B"
+      },
+      {
+        "price": "$272.35",
+        "date": "October 1976",
+        "doc": "02211",
+        "asPrinted": "Matte Box B"
+      },
+      {
+        "price": "$363.00",
+        "date": "January 1978",
+        "doc": "02210",
+        "asPrinted": "Matte Box B"
       }
-    ]
+    ],
+    "note": "The 1976 and 1978 lists call it the Matte Box B. Nothing in them says what the B distinguishes, and the archive has only the one matte box, so the figures are kept here with the document's own wording."
   },
   "18-5-compartment-screen-case": {
     "addCodes": [
@@ -426,7 +447,30 @@
         "date": "November 1979",
         "doc": "02209",
         "asPrinted": "Extension Tubes (set of 4)"
+      },
+      {
+        "price": "$98.00",
+        "date": "January 1978",
+        "doc": "02210",
+        "asPrinted": "Extension Tubes (set of 4)"
       }
     ]
+  },
+  "aluminum-case": {
+    "listings": [
+      {
+        "price": "$469.00",
+        "date": "October 1976",
+        "doc": "02211",
+        "asPrinted": "Aluminum Case f/H-16 Camera"
+      },
+      {
+        "price": "$475.00",
+        "date": "January 1978",
+        "doc": "02210",
+        "asPrinted": "Aluminum Case f/H-16 Camera"
+      }
+    ],
+    "note": "Product 40459, the case for the camera. Both lists also carry 40458, a smaller case for a 100' H-16 EBM, which is not this."
   }
 }

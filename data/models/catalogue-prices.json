@@ -1,8 +1,12 @@
 {
   "_": [
-    "Cameras and projectors priced in the February 1952 Bolex retail",
-    "price list, pages 21 and 22 of the Feb 1952 catalogue (Pacific Rim",
-    "rl/01775). An image-only scan, OCR'd and then read by eye.",
+    "Cameras and projectors priced in Paillard's own dated American price",
+    "lists. Each model holds a list of the documents it appears in, oldest",
+    "first, because one that stayed in production turns up in several.",
+    "A single object is still read as one entry.",
+    "",
+    "February 1952 (Pacific Rim rl/01775, pages 21 and 22 of the catalogue)",
+    "is an image-only scan, OCR'd and then read by eye.",
     "",
     "Cameras were sold as outfits, not bodies, so each one carries the",
     "several combinations the list prices rather than a single figure.",
@@ -10,114 +14,234 @@
     "De luxe with a Lytar and the same camera with a Switar f/1.4 was",
     "$123.75, a third of the price of the camera.",
     "",
-    "Prices include tax where applicable, which is how the list puts it.",
+    "A trap in the two 1970s lists, written down because it would publish",
+    "a dealer's cost as a shop price. October 1976 (rl/02211) prints its",
+    "columns as Dealer Cost then Suggested Retail. January 1978 (rl/02210)",
+    "prints them the other way round, Suggested Retail then Dealer Net.",
+    "Everything here is the retail figure, which is the second number in",
+    "the 1976 list and the first in the 1978 one. Both headers were read",
+    "off the rendered page.",
     "",
     "Read by lib/museum.ts and shown on the object page."
   ],
-
-  "h16deluxe": {
-    "year": 1952,
-    "month": "February",
-    "doc": "01775",
-    "variants": [
-      {
-        "asPrinted": "H-16 De luxe with Switar 25mm F:1.4, Yvar 16mm F:2.8, Yvar 75mm F:2.8 and H-1 carrying case",
-        "price": "$705.50"
-      },
-      { "asPrinted": "H-16 De luxe with Switar 25mm F:1.4", "price": "$496.50" },
-      { "asPrinted": "H-16 De luxe with Switar 25mm F:1.5", "price": "$440.00" },
-      { "asPrinted": "H-16 De luxe with Pizar 26mm F:1.9", "price": "$412.25" },
-      { "asPrinted": "H-16 De luxe with Lytar 25mm F:1.9", "price": "$372.75" }
-    ]
-  },
-  "h16leader": {
-    "year": 1952,
-    "month": "February",
-    "doc": "01775",
-    "variants": [
-      { "asPrinted": "H-16 Leader with Switar 25mm F:1.4", "price": "$423.25" },
-      { "asPrinted": "H-16 Leader with Switar 25mm F:1.5", "price": "$366.75" },
-      { "asPrinted": "H-16 Leader with Pizar 26mm F:1.9", "price": "$339.00" },
-      { "asPrinted": "H-16 Leader with Lytar 25mm F:1.9", "price": "$299.50" }
-    ]
-  },
-  "h8deluxe": {
-    "year": 1952,
-    "month": "February",
-    "doc": "01775",
-    "variants": [
-      {
-        "asPrinted": "H-8 De luxe with Switar 12½mm F:1.5, Yvar 25mm F:2.5, Yvar 36mm F:2.8 and H-1 carrying case",
-        "price": "$597.45"
-      },
-      { "asPrinted": "H-8 De luxe with Switar 12½mm F:1.5", "price": "$438.50" },
-      { "asPrinted": "H-8 De luxe with Pizar 12½mm F:1.9", "price": "$413.75" },
-      { "asPrinted": "H-8 De luxe with Lytar 12½mm F:1.9", "price": "$364.75" }
-    ]
-  },
-  "h8leader": {
-    "year": 1952,
-    "month": "February",
-    "doc": "01775",
-    "variants": [
-      { "asPrinted": "H-8 Leader with Switar 12½mm F:1.5", "price": "$365.25" },
-      { "asPrinted": "H-8 Leader with Pizar 12½mm F:1.9", "price": "$340.50" },
-      { "asPrinted": "H-8 Leader with Lytar 12½mm F:1.9", "price": "$291.50" }
-    ]
-  },
-  "l8lm": {
-    "year": 1952,
-    "month": "February",
-    "doc": "01775",
-    "note": "The list says only L-8. The prices are attached to the late model because it was the current one by February 1952, the later L-8 having appeared in 1947. The list does not distinguish the two.",
-    "variants": [
-      {
-        "asPrinted": "Complete with Yvar 12.5mm (½\") F:2.8 fixed focus lens and leather strap",
-        "price": "$97.00"
-      },
-      {
-        "asPrinted": "Complete with Yvar 12.5mm (½\") F:2.8 focusing mount lens, pigskin case and leather strap",
-        "price": "$116.50"
-      },
-      { "asPrinted": "Complete as above with Pizar 12.5mm (½\") F:1.9 lens", "price": "$172.00" },
-      { "asPrinted": "Complete as above with Switar 12.5mm (½\") F:1.5 lens", "price": "$197.50" }
-    ]
-  },
-
-  "m8": {
-    "year": 1952,
-    "month": "February",
-    "doc": "01775",
-    "variants": [
-      {
-        "asPrinted": "M-8, 110-120 volt, 50-60 cycle, AC/DC, boxed, complete",
-        "price": "$176.50"
-      },
-      { "asPrinted": "M-8 De luxe Case", "price": "$18.75" }
-    ]
-  },
-  "m8r": {
-    "year": 1952,
-    "month": "February",
-    "doc": "01775",
-    "variants": [
-      {
-        "asPrinted": "M-8R, 110-220 volt, 50-60 cycle, AC/DC, boxed, complete",
-        "price": "$207.50"
-      }
-    ]
-  },
-  "model-g": {
-    "year": 1952,
-    "month": "February",
-    "doc": "01775",
-    "note": "The list calls it the G8-16. It is matched here because the description fits this projector and nothing else in the archive: the Model G's multifilm version adapts between gauges, and its own specification gives 400ft arms with 800ft available at extra cost, which is exactly the pair of prices the list quotes.",
-    "variants": [
-      {
-        "asPrinted": "G8-16, complete for 8mm and 16mm film, 400' arms, with de luxe case",
-        "price": "$353.00"
-      },
-      { "asPrinted": "G8-16, complete as above, 800' arms", "price": "$390.00" }
-    ]
-  }
+  "h16deluxe": [
+    {
+      "year": 1952,
+      "month": "February",
+      "doc": "01775",
+      "variants": [
+        {
+          "asPrinted": "H-16 De luxe with Switar 25mm F:1.4, Yvar 16mm F:2.8, Yvar 75mm F:2.8 and H-1 carrying case",
+          "price": "$705.50"
+        },
+        {
+          "asPrinted": "H-16 De luxe with Switar 25mm F:1.4",
+          "price": "$496.50"
+        },
+        {
+          "asPrinted": "H-16 De luxe with Switar 25mm F:1.5",
+          "price": "$440.00"
+        },
+        {
+          "asPrinted": "H-16 De luxe with Pizar 26mm F:1.9",
+          "price": "$412.25"
+        },
+        {
+          "asPrinted": "H-16 De luxe with Lytar 25mm F:1.9",
+          "price": "$372.75"
+        }
+      ],
+      "note": "Prices include tax where applicable, which is how the list puts it."
+    }
+  ],
+  "h16leader": [
+    {
+      "year": 1952,
+      "month": "February",
+      "doc": "01775",
+      "variants": [
+        {
+          "asPrinted": "H-16 Leader with Switar 25mm F:1.4",
+          "price": "$423.25"
+        },
+        {
+          "asPrinted": "H-16 Leader with Switar 25mm F:1.5",
+          "price": "$366.75"
+        },
+        {
+          "asPrinted": "H-16 Leader with Pizar 26mm F:1.9",
+          "price": "$339.00"
+        },
+        {
+          "asPrinted": "H-16 Leader with Lytar 25mm F:1.9",
+          "price": "$299.50"
+        }
+      ],
+      "note": "Prices include tax where applicable, which is how the list puts it."
+    }
+  ],
+  "h8deluxe": [
+    {
+      "year": 1952,
+      "month": "February",
+      "doc": "01775",
+      "variants": [
+        {
+          "asPrinted": "H-8 De luxe with Switar 12½mm F:1.5, Yvar 25mm F:2.5, Yvar 36mm F:2.8 and H-1 carrying case",
+          "price": "$597.45"
+        },
+        {
+          "asPrinted": "H-8 De luxe with Switar 12½mm F:1.5",
+          "price": "$438.50"
+        },
+        {
+          "asPrinted": "H-8 De luxe with Pizar 12½mm F:1.9",
+          "price": "$413.75"
+        },
+        {
+          "asPrinted": "H-8 De luxe with Lytar 12½mm F:1.9",
+          "price": "$364.75"
+        }
+      ],
+      "note": "Prices include tax where applicable, which is how the list puts it."
+    }
+  ],
+  "h8leader": [
+    {
+      "year": 1952,
+      "month": "February",
+      "doc": "01775",
+      "variants": [
+        {
+          "asPrinted": "H-8 Leader with Switar 12½mm F:1.5",
+          "price": "$365.25"
+        },
+        {
+          "asPrinted": "H-8 Leader with Pizar 12½mm F:1.9",
+          "price": "$340.50"
+        },
+        {
+          "asPrinted": "H-8 Leader with Lytar 12½mm F:1.9",
+          "price": "$291.50"
+        }
+      ],
+      "note": "Prices include tax where applicable, which is how the list puts it."
+    }
+  ],
+  "l8lm": [
+    {
+      "year": 1952,
+      "month": "February",
+      "doc": "01775",
+      "note": "The list says only L-8. The prices are attached to the late model because it was the current one by February 1952, the later L-8 having appeared in 1947. The list does not distinguish the two.",
+      "variants": [
+        {
+          "asPrinted": "Complete with Yvar 12.5mm (½\") F:2.8 fixed focus lens and leather strap",
+          "price": "$97.00"
+        },
+        {
+          "asPrinted": "Complete with Yvar 12.5mm (½\") F:2.8 focusing mount lens, pigskin case and leather strap",
+          "price": "$116.50"
+        },
+        {
+          "asPrinted": "Complete as above with Pizar 12.5mm (½\") F:1.9 lens",
+          "price": "$172.00"
+        },
+        {
+          "asPrinted": "Complete as above with Switar 12.5mm (½\") F:1.5 lens",
+          "price": "$197.50"
+        }
+      ]
+    }
+  ],
+  "m8": [
+    {
+      "year": 1952,
+      "month": "February",
+      "doc": "01775",
+      "variants": [
+        {
+          "asPrinted": "M-8, 110-120 volt, 50-60 cycle, AC/DC, boxed, complete",
+          "price": "$176.50"
+        },
+        {
+          "asPrinted": "M-8 De luxe Case",
+          "price": "$18.75"
+        }
+      ],
+      "note": "Prices include tax where applicable, which is how the list puts it."
+    }
+  ],
+  "m8r": [
+    {
+      "year": 1952,
+      "month": "February",
+      "doc": "01775",
+      "variants": [
+        {
+          "asPrinted": "M-8R, 110-220 volt, 50-60 cycle, AC/DC, boxed, complete",
+          "price": "$207.50"
+        }
+      ],
+      "note": "Prices include tax where applicable, which is how the list puts it."
+    }
+  ],
+  "model-g": [
+    {
+      "year": 1952,
+      "month": "February",
+      "doc": "01775",
+      "note": "The list calls it the G8-16. It is matched here because the description fits this projector and nothing else in the archive: the Model G's multifilm version adapts between gauges, and its own specification gives 400ft arms with 800ft available at extra cost, which is exactly the pair of prices the list quotes.",
+      "variants": [
+        {
+          "asPrinted": "G8-16, complete for 8mm and 16mm film, 400' arms, with de luxe case",
+          "price": "$353.00"
+        },
+        {
+          "asPrinted": "G8-16, complete as above, 800' arms",
+          "price": "$390.00"
+        }
+      ]
+    }
+  ],
+  "h16m5": [
+    {
+      "year": 1976,
+      "month": "October",
+      "doc": "02211",
+      "note": "The suggested retail price. This list prints dealer cost first and suggested retail second.",
+      "variants": [
+        {
+          "asPrinted": "H-16 M-5 Single C mount, w/o Multifocal VF",
+          "price": "$739.00"
+        }
+      ]
+    }
+  ],
+  "h16rex5": [
+    {
+      "year": 1976,
+      "month": "October",
+      "doc": "02211",
+      "note": "The suggested retail price. This list prints dealer cost first and suggested retail second.",
+      "variants": [
+        {
+          "asPrinted": "H-16 REX 5 Three-lens Turret, w/o Multifocal Viewfinder",
+          "price": "$1,425.00"
+        }
+      ]
+    },
+    {
+      "year": 1978,
+      "month": "January",
+      "doc": "02210",
+      "note": "The suggested retail price. This list prints suggested retail first and dealer net second, the opposite way round from the 1976 one.",
+      "variants": [
+        {
+          "asPrinted": "H-16 REX 5 Three-lens Turret, w/o Multifocal Viewfinder",
+          "price": "$2,491.00"
+        }
+      ]
+    }
+  ]
 }
