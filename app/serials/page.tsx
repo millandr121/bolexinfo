@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Reveal } from "@/components/Reveal";
 import { SourceNote } from "@/components/RecoveryBadge";
-import { getSerialDataset } from "@/lib/content";
+import { getSerialDataset, getSerialLandmarks } from "@/lib/content";
 import { serialModels } from "@/lib/serial-models";
 import { formatYearSpan } from "@/lib/serials";
 import { SerialLookup } from "./SerialLookup";
@@ -16,6 +16,7 @@ export default function SerialsPage() {
   const dataset = getSerialDataset();
   const rows = dataset.ranges;
   const models = serialModels();
+  const { note, landmarks } = getSerialLandmarks();
 
   return (
     <div className="pt-14 pb-8">
@@ -86,6 +87,61 @@ export default function SerialsPage() {
               </table>
             </div>
           </details>
+        </Reveal>
+      )}
+
+      {landmarks.length > 0 && (
+        <Reveal delay={0.2}>
+          {/*
+           * Not a second table. These are the individual numbers Paillard,
+           * EPOI and Bolex printed in their own documents as the point where
+           * something about a camera changed, and they answer a question the
+           * range table cannot: not when was mine built, but what is
+           * different about mine. The last of them is the only thing here
+           * that reaches past 1976, where the bulletin's table ends.
+           */}
+          <section className="mt-16 max-w-2xl">
+            <h2 className="font-[family-name:var(--font-display)] text-2xl font-[560]">
+              Numbers Bolex drew a line at
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-[var(--fg-soft)]">{note}</p>
+
+            <ul className="mt-6 border-t border-[var(--line)]">
+              {landmarks.map((l) => (
+                <li key={l.serial} className="border-b border-[var(--line)] py-4">
+                  <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <span className="font-[family-name:var(--font-mono)] text-base tabular-nums text-[var(--accent)]">
+                      {l.serial.toLocaleString()}
+                    </span>
+                    <span className="text-sm text-[var(--fg)]">{l.model}</span>
+                    <span className="font-[family-name:var(--font-mono)] text-[0.68rem] uppercase tracking-[0.12em] text-[var(--fg-soft)]">
+                      {l.year === null ? "past the end of the table" : l.year}
+                    </span>
+                  </div>
+                  <p className="mt-2 text-sm leading-relaxed text-[var(--fg-soft)]">{l.what}</p>
+                  <p className="mt-2 font-[family-name:var(--font-mono)] text-[0.66rem] text-[var(--fg-soft)]">
+                    {l.sources.map((src, i) => (
+                      <span key={src.title}>
+                        {i > 0 && "; "}
+                        {src.url ? (
+                          <a
+                            href={src.url}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="text-[var(--accent)] underline underline-offset-2"
+                          >
+                            {src.title}
+                          </a>
+                        ) : (
+                          src.title
+                        )}
+                      </span>
+                    ))}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </section>
         </Reveal>
       )}
 
