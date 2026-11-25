@@ -268,7 +268,10 @@ export function ObjectPage({
             {credits.length > 0 && (
               <>
                 {" "}
-                Photographs by{" "}
+                {/* Not "photographs by": most of these are the
+                    manufacturer's own brochure figures, and a document
+                    does not take a photograph. */}
+                Photographs:{" "}
                 <span className="text-[var(--fg)]">{credits.join(", ")}</span>.
               </>
             )}

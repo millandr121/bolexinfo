@@ -1,8 +1,6 @@
 export interface NavLeaf {
   href: string;
   label: string;
-  /** One line shown under the label in a desktop menu. */
-  blurb?: string;
 }
 
 export interface NavGroup {
@@ -39,31 +37,31 @@ export const NAVIGATION: readonly NavEntry[] = [
   {
     label: "Equipment",
     items: [
-      { href: "/cameras", label: "Cameras", blurb: "67 models, 1928–1979" },
-      { href: "/projectors", label: "Projectors", blurb: "27 models" },
-      { href: "/lenses", label: "Lenses", blurb: "120 lenses, by maker, year or code" },
-      { href: "/accessories", label: "Accessories", blurb: "101 objects, by type or year" },
+      { href: "/cameras", label: "Cameras" },
+      { href: "/projectors", label: "Projectors" },
+      { href: "/lenses", label: "Lenses" },
+      { href: "/accessories", label: "Accessories" },
     ],
   },
   {
     label: "Library",
     items: [
-      { href: "/technicians", label: "Repair & service", blurb: "Who works on these cameras" },
-      { href: "/articles", label: "Articles", blurb: "Recovered from the original site" },
-      { href: "/ephemera", label: "Ephemera", blurb: "168 pieces, by kind or year" },
-      { href: "/manuals", label: "Technical bulletins", blurb: "Paillard to its dealers, 1959–62" },
-      { href: "/prices", label: "Prices", blurb: "What it cost new, 1952–1979" },
-      { href: "/photographs", label: "Archive photographs", blurb: "The works, from public collections" },
-      { href: "/timeline", label: "Timeline", blurb: "Paillard, 1814 onwards" },
-      { href: "/glossary", label: "Glossary", blurb: "The terms, defined" },
-      { href: "/links", label: "Links", blurb: "Resources worth your time" },
-      { href: "/suggest", label: "Suggest an edit", blurb: "Corrections, photographs, what you know" },
+      { href: "/technicians", label: "Repair & service" },
+      { href: "/articles", label: "Articles" },
+      { href: "/ephemera", label: "Ephemera" },
+      { href: "/manuals", label: "Technical bulletins" },
+      { href: "/prices", label: "Prices" },
+      { href: "/photographs", label: "Archive photographs" },
+      { href: "/timeline", label: "Timeline" },
+      { href: "/glossary", label: "Glossary" },
+      { href: "/links", label: "Links" },
+      { href: "/suggest", label: "Suggest an edit" },
     ],
   },
   {
     label: "The Archive",
     items: [
-      { href: "/updates", label: "Updates", blurb: "What has been added, 2005 to now" },
+      { href: "/updates", label: "Updates" },
       { href: "/about", label: "About this archive" },
       { href: "/tribute", label: "Michael Tisdale" },
     ],

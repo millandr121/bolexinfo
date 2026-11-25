@@ -83,6 +83,13 @@
           "url": "https://my16mm.com/cameras/bolex16hebm.php",
           "note": "Several collector sources give 1971 and agree with each other; no Bolex document read here dates it. The earliest primary evidence the archive holds is the February 1972 price list, which sells the body at $1,320.00, so 1971 is at least consistent with it."
         }
+      ],
+      "images": [
+        {
+          "src": "/sourced/cameras/h16ebm/h16ebm-with-zoom.webp",
+          "alt": "Bolex H-16 EBM with a zoom and lens hood fitted and the power grip below, the remote cord trailing",
+          "credit": "Bolex H-16 Professional 16mm Motion Picture Systems brochure, EPOI"
+        }
       ]
     },
     {
@@ -103,6 +110,18 @@
           "url": "https://www.pacificrimcamera.com/rl/02211/02211.pdf",
           "note": "No year is given here because no source consulted gives one, and the archive would rather say nothing than guess. What the documents do settle is a bracket: the February 1972 list (rl/04932) sells the EBM, SBM, REX-5 and M-5 and has no EL in it at all, and the October 1976 list has the EL as product 41900 at $3,300.00. So it arrived between those two dates. Collector sources date the later EL Series 3 to 1980 and none of them date the first."
         }
+      ],
+      "images": [
+        {
+          "src": "/sourced/cameras/h16el/h16el-with-zoom.webp",
+          "alt": "Bolex H-16 EL with a Vario-Switar zoom fitted, seen from the right",
+          "credit": "Bolex H-16 Professional 16mm Motion Picture Systems brochure, EPOI"
+        },
+        {
+          "src": "/sourced/cameras/h16el/h16el-body-left.webp",
+          "alt": "Bolex H-16 EL body with the eyecup fitted, the nameplate reading BOLEX H16 EL, MADE IN SWITZERLAND",
+          "credit": "Bolex H-16 Professional 16mm Motion Picture Systems brochure, EPOI"
+        }
       ]
     },
     {
@@ -122,6 +141,13 @@
           "title": "Dated in collector sources to 1970",
           "url": "http://bolexh16user.net/H16SBAndSBM.htm",
           "note": "Collector sources agree on 1970 for the SB and SBM, and on this being the first Bolex to carry the bayonet mount that the EBM and EL then took. No Bolex document read here dates it. The archive's earliest primary evidence is the February 1972 price list at $720.00."
+        }
+      ],
+      "images": [
+        {
+          "src": "/sourced/cameras/h16sbm/h16sbm-left.webp",
+          "alt": "Bolex H-16 SBM from the left, the single bayonet mount in place of the old three-lens turret",
+          "credit": "Bolex H-16 Professional 16mm Motion Picture Systems brochure, EPOI"
         }
       ]
     },
