@@ -1499,7 +1499,13 @@
     {
       "slug": "pizar-12-5mm-f-1-9-1952",
       "sources": [],
-      "images": [],
+      "images": [
+        {
+          "src": "/sourced/lenses/pizar-12-5mm-f-1-9-1952/pizar-12-5mm-f-1-9.webp",
+          "alt": "Kern-Paillard Pizar 12.5mm f/1.9 in D mount with its cap beside it, the barrel engraved PIZAR 1:1.9 Kern-Paillard",
+          "credit": "Bolex catalogue, February 1952, Paillard Products Inc."
+        }
+      ],
       "added": true,
       "name": "Pizar 12.5mm f/1.9",
       "maker": "Kern-Paillard",
