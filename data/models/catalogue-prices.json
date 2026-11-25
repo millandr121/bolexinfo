@@ -1100,5 +1100,78 @@
         }
       ]
     }
+  ],
+  "5122": [
+    {
+      "year": 1979,
+      "month": "April",
+      "doc": "02226",
+      "note": "Bolex (U.S.A.) Inc., Super 8 price list no. S1, one Suggested Retail column.",
+      "variants": [
+        {
+          "asPrinted": "Bolex 5122 Macrozoom Sound Camera",
+          "price": "$887.00"
+        }
+      ]
+    }
+  ],
+  "564xl": [
+    {
+      "year": 1979,
+      "month": "April",
+      "doc": "02226",
+      "note": "Bolex (U.S.A.) Inc., Super 8 price list no. S1, one Suggested Retail column.",
+      "variants": [
+        {
+          "asPrinted": "Bolex 564 XL AF Sound Camera with automatic focusing",
+          "price": "$823.00"
+        }
+      ]
+    }
+  ],
+  "714": [
+    {
+      "year": 1979,
+      "month": "April",
+      "doc": "02226",
+      "section": "projectors",
+      "note": "Bolex (U.S.A.) Inc., Super 8 price list no. S1, one Suggested Retail column.",
+      "variants": [
+        {
+          "asPrinted": "Bolex Sound 714 15-30mm f/1.3",
+          "price": "$472.00"
+        }
+      ]
+    }
+  ],
+  "715": [
+    {
+      "year": 1979,
+      "month": "April",
+      "doc": "02226",
+      "section": "projectors",
+      "note": "Bolex (U.S.A.) Inc., Super 8 price list no. S1, one Suggested Retail column.",
+      "variants": [
+        {
+          "asPrinted": "Bolex Sound 715 14-30mm f/1.3 with optical height adjustment",
+          "price": "$518.00"
+        }
+      ]
+    }
+  ],
+  "815": [
+    {
+      "year": 1979,
+      "month": "April",
+      "doc": "02226",
+      "section": "projectors",
+      "note": "Bolex (U.S.A.) Inc., Super 8 price list no. S1, one Suggested Retail column.",
+      "variants": [
+        {
+          "asPrinted": "Bolex Sound 815",
+          "price": "$590.00"
+        }
+      ]
+    }
   ]
 }

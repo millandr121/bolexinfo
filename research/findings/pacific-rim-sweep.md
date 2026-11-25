@@ -58,10 +58,37 @@ Every one is mined. `04946` is the exception and is explained below.
 | `04946` | **Bolex/Hasselblad Federal Supply Schedule**, 30 Mar to 30 Nov 1970, 16pp | **no** |
 
 `04946` is a GSA contract list covering Bolex cameras, Super 8
-projectors, Hasselblad and the Bolex 16 Pro. Government contract prices
-are not retail and mixing them into the price series would be wrong
-without saying so loudly. Left for a decision rather than quietly
-included.
+projectors, Hasselblad and the Bolex 16 Pro.
+
+**It was described here, and to Andrew, as carrying government or
+dealer prices. That was wrong, and the correction matters.** Its tables
+have three columns: **Retail Price, Gov't Discount, Gov't Price**. The
+retail column is ordinary retail, and it can be checked, because the
+February 1970 dealer list covers the same year:
+
+| | `rl/04950` Feb 1970 | `rl/04946` retail |
+| --- | --- | --- |
+| H-16 Rex-5 complete | $730.00 | $730.00 |
+| H-16 Rex-5 w/o viewfinder | $690.00 | $690.00 |
+| Macro-Switar 75mm Preset | $220.00 | $220.00 |
+| MST Constant Speed Motor | $290.00 | $290.00 |
+
+Identical. So the government price is simply retail less a flat
+discount, 22 per cent on most lines and 16 per cent on the 16 Pro, and
+the retail column is as publishable as any other list here.
+
+**What it adds that nothing else has: the Bolex 16 Pro.** Product 2510,
+**$5,538.00** retail for the body, with the Angenieux 12-120 at
+$1,032.90, a 400ft magazine at $373.50 and the complete power pack at
+$1,677.25. Read off page 5 by eye. No other document the archive holds
+prices the 16 Pro at all, and at $5,538 it is far and away the most
+expensive Bolex in it.
+
+**Not published yet**, because Andrew asked for this list to stay in
+the notes while he believed it held dealer prices. The premise has
+changed and the 16 Pro figure is verified and ready to add on his word.
+The rest of the list duplicates February 1970 and is worth keeping only
+as the independent confirmation above.
 
 ### Lists that exist and are not here
 
@@ -116,6 +143,21 @@ Written up from these documents, with prices where the lists carry them:
 - **Whether technical bulletin No. 3 can be had.** No. Still 404.
 
 ---
+
+## The gap list is finished
+
+All fifteen models the price lists named now have entries. The last
+five, written from the April 1979 list with Super8Data for the
+specifications, were the 5122 and 564 XL AF cameras and the Sound 714,
+715 and 815 projectors.
+
+One fact out of that worth keeping: Super8Data has the **5122 and the
+564 XL AF made in Japan by Chinon**, where the projectors of the same
+years were made in Austria by Eumig. The Sainte-Croix cameras and the
+Austrian projectors are the Bolex story people tell; by the late 1970s
+the Super 8 cameras were being built somewhere else again. It rests on
+a collector database and no Bolex document read here says it, so both
+entries say so.
 
 ## The lens brochure, mined
 

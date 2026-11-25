@@ -428,6 +428,46 @@
       ]
     },
     {
+      "slug": "5122",
+      "name": "5122 Sound Macrozoom",
+      "format": "Super 8",
+      "introduced": 1977,
+      "summary": "The 5120's successor and the last of the Sound-8 flagships. A 6 to 72mm f/1.8 Macrozoom, twelve to one like the 5120 before it, focusing into macro. Three speeds at 18, 24 and 36 frames a second plus single frame, a 120 degree shutter, exposure automatic or manual on a through-the-lens cell with compensation, film speed read from the cartridge, and both an 85A conversion filter and a neutral density filter built in. Fades run themselves in and out, and an interval timer covers one second to sixty. Sound is recorded single-system onto the film's own stripe, levelled automatically or by hand against a meter. 2400g, and 75 by 225 by 230mm. $887.00 in April 1979, the dearest Super 8 camera Bolex sold.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "Bolex Super 8 Cameras and Projectors, price list no. S1, 1 April 1979",
+          "url": "https://www.pacificrimcamera.com/rl/02226/02226.pdf",
+          "note": "Bolex (U.S.A.) Inc.'s own list, one Suggested Retail column, read off the rendered page. The scan's text layer runs neighbouring model numbers into their lens specifications and invents models that never existed, so it cannot be used here."
+        },
+        {
+          "title": "Super8Data",
+          "url": "https://www.filmkorn.org/super8data/database/cameras_list/cameras_bolex/bolex_5122.htm",
+          "note": "A collector database, so secondary, and the source of everything here except the price. It dates the camera to 1977 and says it was made in Japan by Chinon, which is worth knowing: the Sainte-Croix cameras and the Austrian projectors are the Bolex story people tell, and by the late 1970s the Super 8 cameras were being built somewhere else again."
+        }
+      ]
+    },
+    {
+      "slug": "564xl",
+      "name": "564 XL Auto Focus Sound",
+      "format": "Super 8",
+      "introduced": 1979,
+      "summary": "The 563 XL with autofocus and no macro, which is how Super8Data puts it and how the price list bears it out: the two sat four dollars apart in April 1979. An 8 to 48mm f/1.2 zoom, six to one, focusing itself in about a second or by hand on a split image. Speeds of 18, 24 and 36 plus single frame, a 220 degree shutter, through-the-lens metering automatic or manual with compensation, an 85A filter built in, automatic fades and a lap dissolve, an interval timer from one second to sixty, and two microphone inputs. Sound goes on the film's own stripe. 1500g. $823.00 in April 1979.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "Bolex Super 8 Cameras and Projectors, price list no. S1, 1 April 1979",
+          "url": "https://www.pacificrimcamera.com/rl/02226/02226.pdf",
+          "note": "Bolex (U.S.A.) Inc.'s own list, one Suggested Retail column, read off the rendered page. The scan's text layer runs neighbouring model numbers into their lens specifications and invents models that never existed, so it cannot be used here."
+        },
+        {
+          "title": "Super8Data",
+          "url": "https://www.filmkorn.org/super8data/database/cameras_list/cameras_bolex/bolex_564xl_af.htm",
+          "note": "A collector database, so secondary. It dates the camera to 1979, calls it the same as the 563 XL but with auto focusing and without the macro lens, and says it was made in Japan by Chinon. The archive's 563 XL entry is written from Bolex's own brochure, which says nothing about where either was built, so that last point rests on this source alone."
+        }
+      ]
+    },
+    {
       "slug": "563xl",
       "name": "563 XL Sound Macrozoom",
       "format": "Super 8",

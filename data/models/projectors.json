@@ -235,6 +235,66 @@
           "note": "Bolex International's own range brochure, whose last pages describe the 16mm projectors. The source of every specification here. Undated. Scanned by Pacific Rim Camera. Its OCR interleaves the columns and misreads the model names, turning 501 into 507 and running factory codes into headings, so the models and their descriptions were read off the rendered page."
         }
       ]
+    },
+    {
+      "slug": "714",
+      "name": "Sound 714",
+      "format": "Super 8",
+      "introduced": 1978,
+      "summary": "A Super 8 sound projector that plays and records on both tracks, in mono or duo. The lens is a Bolex Hi-Fi f/1.3, 15 to 30mm. A 100W 12V EFP lamp, 600ft reels, magnetic sound recorded on both tracks with fading and sound-on-sound, levels set automatically or by hand, mixing, microphone and gramophone inputs, and a public-address output. 10W sinusoidal and 15W music power, into a 10W speaker. About 6kg, 221 by 206 by 335mm. Built in Austria by Eumig. It is the 715 without that projector's adjustable lens height, and nothing else separates them. $472.00 in April 1979.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "Bolex Super 8 Cameras and Projectors, price list no. S1, 1 April 1979",
+          "url": "https://www.pacificrimcamera.com/rl/02226/02226.pdf",
+          "note": "Bolex (U.S.A.) Inc.'s own list, one Suggested Retail column, read off the rendered page. The scan's text layer runs neighbouring model numbers into their lens specifications and invents models that never existed, so it cannot be used here."
+        },
+        {
+          "title": "Super8Data",
+          "url": "https://www.filmkorn.org/super8data/database/projectors_list/projectors_bolex/bolex_sound714.htm",
+          "note": "A collector database, so secondary, and the source of everything but the price. It dates the machine to 1978 and states outright that it is the Sound 715 without the optical level system, which is why the two entries here read almost identically: on the evidence available they are almost the same projector."
+        }
+      ]
+    },
+    {
+      "slug": "715",
+      "name": "Sound 715",
+      "format": "Super 8",
+      "introduced": 1978,
+      "summary": "The Sound 714 with an adjustable lens height, which is the only working difference between them, and a slightly wider lens: a Bolex Hi-Fi Nivar f/1.3, 14 to 30mm against the 714's 15 to 30mm. Otherwise the same machine. Plays and records magnetically on both tracks, mono or duo. A 100W 12V EFP lamp, 600ft reels, magnetic sound recorded on both tracks with fading and sound-on-sound, levels set automatically or by hand, mixing, microphone and gramophone inputs, and a public-address output. 10W sinusoidal and 15W music power, into a 10W speaker. About 6kg, 221 by 206 by 335mm. Built in Austria by Eumig. $518.00 in April 1979, forty-six dollars more than the 714.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "Bolex Super 8 Cameras and Projectors, price list no. S1, 1 April 1979",
+          "url": "https://www.pacificrimcamera.com/rl/02226/02226.pdf",
+          "note": "Bolex (U.S.A.) Inc.'s own list, one Suggested Retail column, read off the rendered page. The scan's text layer runs neighbouring model numbers into their lens specifications and invents models that never existed, so it cannot be used here."
+        },
+        {
+          "title": "Super8Data",
+          "url": "https://www.filmkorn.org/super8data/database/projectors_list/projectors_bolex/bolex_sound715.htm",
+          "note": "A collector database, so secondary. Its page for each of the two projectors points at the other and names the difference, so the pair is documented as a pair rather than guessed at."
+        }
+      ]
+    },
+    {
+      "slug": "815",
+      "name": "Sound 815",
+      "format": "Super 8",
+      "introduced": 1978,
+      "summary": "The odd one of the three, and Super8Data calls it a television type projector. Its lens is fixed rather than a zoom, a Bolex f/1.3 of 13.6mm, which is the short throw that description implies. It plays back on the main track only, in mono, but still records on both with fading and sound-on-sound. A 100W 12V EFP lamp, 600ft reels, 10W sinusoidal and 15W music power into a 10W speaker, levels automatic or manual, mixing, microphone and gramophone inputs and a public-address output. Built in Austria by Eumig. $590.00 in April 1979, the dearest of the three.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "Bolex Super 8 Cameras and Projectors, price list no. S1, 1 April 1979",
+          "url": "https://www.pacificrimcamera.com/rl/02226/02226.pdf",
+          "note": "Bolex (U.S.A.) Inc.'s own list, one Suggested Retail column, read off the rendered page. The scan's text layer runs neighbouring model numbers into their lens specifications and invents models that never existed, so it cannot be used here."
+        },
+        {
+          "title": "Super8Data",
+          "url": "https://www.filmkorn.org/super8data/database/projectors_list/projectors_bolex/bolex_sound815.htm",
+          "note": "A collector database, so secondary. It gives no weight and no dimensions for this machine, and no signal-to-noise or frequency figures, where it has them for the 714 and 715; those fields are absent here rather than estimated."
+        }
+      ]
     }
   ]
 }
