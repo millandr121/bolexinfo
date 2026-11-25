@@ -73,12 +73,29 @@ export default function WorthPage() {
               </li>
             </ol>
             <p>
-              That gives roughly the last ninety days. If you sell on eBay at all, your{" "}
-              <span className="text-[var(--fg)]">Seller Hub has a Research tab</span> — the
-              tool that used to be sold separately as Terapeak, which eBay bought and folded
-              in. It is free, and it reaches back about three years instead of ninety days,
-              which for equipment that sells a few times a month is the difference between a
-              figure and a guess.
+              That gives roughly the last ninety days, and it is the whole of what anyone can
+              see without an account.
+            </p>
+            <p>
+              <span className="text-[var(--fg)]">
+                If you sell on eBay, there is a much better tool and it is free.
+              </span>{" "}
+              Do not go looking for Terapeak: it was a separate company and a separate site,
+              eBay bought it, and there is nothing left to visit. It now lives inside your own
+              account, at{" "}
+              <span className="text-[var(--fg)]">
+                Seller Hub → Research → Product research
+              </span>
+              . It reaches back about three years instead of ninety days, which for equipment
+              that sells a few times a month is the difference between a figure and a guess.
+            </p>
+            <p>
+              The catch is that eBay gates it behind selling. Their help pages say you need at
+              least one active listing, or to have sold something in the last ninety days, and
+              the pages disagree with each other about whether every seller gets it or only
+              Store subscribers. So it is worth a look if you list anything at all, and not
+              worth opening an account for on its own. For everyone else the Sold items filter
+              above is the tool, and three years of history is simply not available.
             </p>
           </div>
         </section>
