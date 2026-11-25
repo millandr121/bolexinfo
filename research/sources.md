@@ -10,7 +10,7 @@ Reachability was tested on 2026-11-18 from this project's cloud session.
 
 | Source | Holds | Reachable | Terms |
 |---|---|---|---|
-| [pacificrimcamera.com](https://www.pacificrimcamera.com/rl/rlBolex.htm) | **83 Bolex PDFs** — 72 misc (brochures, instruction books, catalogues 1946–1965, *Bolex Reporter* 1967–72, 16 technical bulletins), 8 price lists, 3 projector | yes | none stated; describes itself as "an online library of photo related PDF files" |
+| [pacificrimcamera.com](https://www.pacificrimcamera.com/rl/rlBolex.htm) | **75 Bolex PDFs**, all downloaded and catalogued — 72 misc (brochures, instruction books, catalogues 1946–1965, *Bolex Reporter*, 16 technical bulletins), 11 price lists, 3 projector, with overlaps. The earlier count of 83 here was wrong, and so was "8 price lists" | yes | none stated; describes itself as "an online library of photo related PDF files" |
 | [camera-wiki.org](https://camera-wiki.org/wiki/Bolex) | encyclopaedia entries | yes | **GFDL 1.3** — reusable with attribution and share-alike |
 | [filmatlas.com](https://www.filmatlas.com/entry/150) | Bolex Stereo / Triorama, detailed | yes | no licence stated; cite Hess, Hillary (2024), *Film Atlas*, FIAF / George Eastman Museum. Some images credited individually |
 | [pathefilm.uk](https://pathefilm.uk/95gear/95gearBolex.htm) | 9.5mm gear, Pathé side | yes | none stated |
@@ -69,6 +69,12 @@ material it did not create:
 - Nothing is **attributed** to a named person that they did not write.
 
 ## Notable documents
+
+**All 75 Bolex PDFs on Pacific Rim were downloaded and catalogued on 25
+November 2026. The full list, what each one is, which are mined and
+which are not, is in findings/pacific-rim-sweep.md.** That file also
+collects the OCR traps document by document, which is the part worth
+reading before opening any of them.
 
 Picked out of the Pacific Rim list because they close a known gap:
 
@@ -181,9 +187,12 @@ Picked out of the Pacific Rim list because they close a known gap:
   and 18-5 Automatic in six configurations each, by case and by lens,
   with a five-letter code for every one, plus the separate projector
   lenses. Those are in now. It also prices an **18-5R Automatic
-  Projector**, identical in price to the 18-5 Automatic, which the
-  archive has no entry for and no description of; the R is not explained
-  anywhere in the document. Left unwritten rather than guessed at.
+  Projector**, identical in price to the 18-5 Automatic, and the price
+  list does not say what the R means. **`rl/04924` does: "A 50-cycle
+  version R is available for use outside of the U.S.A."** So the 18-5R
+  is the export 18-5 Automatic and not a separate model, which is why it
+  costs the same to the cent. No entry needed, and the question is
+  closed.
 - `rl/04927` — **Paillard's factory service charges**, Service and
   Technical Division, New York and Los Angeles. Undated; the footer print
   code reads SU-58, and the Octameter installation is at the same $75.50
