@@ -91,9 +91,38 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
     return json({ error: "That did not arrive as a form." }, 400);
   }
 
-  /* A field no person sees. A bot that fills every input gives itself
-     away, and is told nothing useful about why. */
+  /*
+   * Three cheap gates before anything is read, in rising order of how
+   * often they are wrong.
+   *
+   * All of them answer `ok` rather than an error. A bot told exactly
+   * which check it failed is a bot that is one edit from passing, and
+   * nobody legitimate ever sees these.
+   */
+
+  /* One: a field no person sees. A filler that completes every input
+     gives itself away. */
   if (clean(form.get("website"), 10)) return json({ ok: true });
+
+  /* Two: where it was posted from. A browser sends Origin on a form
+     post to its own site, so a mismatch is a submission from somewhere
+     that is not this site. A missing Origin is allowed through, because
+     some privacy tooling strips it and a reader should not be punished
+     for that. */
+  const origin = request.headers.get("origin");
+  if (origin && new URL(origin).host !== new URL(request.url).host) {
+    return json({ ok: true });
+  }
+
+  /* Three: how long the form was open. The field is stamped when the
+     form renders, so the gap is how long somebody spent filling it in.
+     Under three seconds is not a person choosing a condition from a
+     list; a day old is a stale tab, or a replayed capture. */
+  const openedAt = Number(clean(form.get("opened"), 20) ?? "");
+  if (Number.isFinite(openedAt) && openedAt > 0) {
+    const elapsed = Date.now() - openedAt;
+    if (elapsed < 3_000 || elapsed > 86_400_000) return json({ ok: true });
+  }
 
   const slug = clean(form.get("slug"), 120);
   const section = oneOf(clean(form.get("section"), 20), SECTIONS);

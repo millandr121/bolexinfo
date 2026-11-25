@@ -66,6 +66,9 @@ export function PriceAsk({
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const linger = useRef<ReturnType<typeof setTimeout> | null>(null);
+  /* Stamped when the form is opened, checked on the server. A form
+     filled in under three seconds was not filled in by a person. */
+  const openedAt = useRef<number>(0);
 
   const quieten = useCallback(
     (persist: boolean) => {
@@ -109,6 +112,7 @@ export function PriceAsk({
     const form = new FormData(event.currentTarget);
     form.set("slug", slug);
     form.set("section", section);
+    form.set("opened", String(openedAt.current));
     try {
       const response = await fetch("/api/price-report", { method: "POST", body: form });
       const body = (await response.json()) as { ok?: boolean; message?: string; error?: string };
@@ -276,6 +280,7 @@ export function PriceAsk({
                 type="button"
                 onClick={() => {
                   hold();
+                  openedAt.current = Date.now();
                   setOpen(true);
                 }}
                 className="text-[var(--accent)] underline underline-offset-2"
