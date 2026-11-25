@@ -154,13 +154,22 @@ without a table, or are on pages whose tables were not reproduced.
 ## Everything else, by what it is
 
 **Bolex Reporter**, Paillard's own magazine, nine issues: `02589` (Vol
-17 No. 2, 1967-68, carries an SM8 article), `02689` (Vol 18 No. 2),
-`02810` (Vol 20 No. 2, 1970), `02628`, `02655`, `02670`, `02731`,
-`02746`, `03040` (carries the moon landing). Editorial rather than
-specification, and the 1970 price list keys its rows to a **Bolex
-Reporter Product Buying Guide** by page number, so the matching issue
-would pair a picture and a description to each priced line. Not yet
-identified which issue that is.
+17 No. 2, 1967-68, carries an SM8 article), `02689` (Vol 18 No. 2,
+1968), `03040` (Vol 19 No. 2, 1969, carries the moon landing), `02731`
+(Vol 20 No. 1, 1970), `02810` (Vol 20 No. 2, 1970), `02628`, `02655`,
+`02670`, `02746`. Editorial rather than specification.
+
+**The Product Buying Guide is a separate document, and it is not here.**
+The February 1970 price list keys every row to it by page number, which
+looked at first as though it meant a Reporter issue. It does not.
+`03040` carries Paillard's own advertisement for it: "For the free
+32-page 16mm Product Buying Guide, write Paillard Incorporated, 1900
+Lower Rd., Linden, New Jersey 07036." So it is its own 32-page
+publication, given away, and nothing on Pacific Rim matches it.
+
+Finding it would pair a picture and a description with every line of the
+densest price list the archive holds. Worth watching for alongside the
+three missing price lists.
 
 **Instruction books**: `03154` (150), `03949` (155), `03242` (B8),
 `01522`, `01795` (exposure meter), `03796` (Model H), `04265` (H-16 REX,
