@@ -318,6 +318,13 @@
           "url": "https://www.pacificrimcamera.com/rl/04942/04942.pdf",
           "note": "Paillard's dealer list, one Suggested Retail column. The bracketed figure beside each row is the dealer's cost, not a product code. Read off the rendered page."
         }
+      ],
+      "images": [
+        {
+          "src": "/sourced/cameras/280/280-macrozoom.webp",
+          "alt": "Bolex 280 Macrozoom from the left, the zoom at the front and the pistol grip folded below",
+          "credit": "Bolex Super 8 movie cameras and projectors brochure, Bolex International S.A."
+        }
       ]
     },
     {
@@ -362,6 +369,13 @@
           "title": "Bolex Super 8mm Confidential Price List, 23 February 1972",
           "url": "https://www.pacificrimcamera.com/rl/04942/04942.pdf",
           "note": "Paillard's dealer list, one Suggested Retail column. The bracketed figure beside each row is the dealer's cost, not a product code. Read off the rendered page."
+        }
+      ],
+      "images": [
+        {
+          "src": "/sourced/cameras/233-compact/233-compact.webp",
+          "alt": "Bolex 233 Compact from three-quarters front, the nameplate reading BOLEX 233 COMPACT",
+          "credit": "Bolex Super 8 movie cameras and projectors brochure, Bolex International S.A."
         }
       ]
     },
@@ -451,6 +465,13 @@
           "title": "Not a projector",
           "note": "This archive's own backlog had the 5120 down as a projector. The dealer sheet settles it: it is a camera, and the line it heads is called Sound-8."
         }
+      ],
+      "images": [
+        {
+          "src": "/sourced/cameras/5120/5120-macrozoom.webp",
+          "alt": "Bolex 5120 Sound Macrozoom from three-quarters front, nameplate reading BOLEX 5120 SOUND",
+          "credit": "Bolex H-16 Professional 16mm Motion Picture Systems brochure, EPOI"
+        }
       ]
     },
     {
@@ -511,6 +532,13 @@
           "url": "https://www.pacificrimcamera.com/rl/02226/02226.pdf",
           "note": "Bolex (U.S.A.) Inc.'s own list, one Suggested Retail column. Read off the rendered page: the scan's text layer runs neighbouring model numbers into their lens specifications."
         }
+      ],
+      "images": [
+        {
+          "src": "/sourced/cameras/563xl/563xl-and-583.webp",
+          "alt": "The Bolex 563 XL Sound Macro-Zoom in front and the 583 Sound Macro-Zoom behind, both with microphones fitted",
+          "credit": "Bolex 583 & 563 XL Sound Macro Zoom brochure, Bolex (U.S.A.) Inc."
+        }
       ]
     },
     {
@@ -531,6 +559,18 @@
           "url": "https://www.pacificrimcamera.com/rl/02226/02226.pdf",
           "note": "Bolex (U.S.A.) Inc.'s own list, one Suggested Retail column. Read off the rendered page: the scan's text layer runs neighbouring model numbers into their lens specifications."
         }
+      ],
+      "images": [
+        {
+          "src": "/sourced/cameras/583/583-sound-macro-zoom.webp",
+          "alt": "Bolex 583 Sound Macro-Zoom, nameplate legible, with the 563 XL standing behind it",
+          "credit": "Bolex 583 and 563 XL Sound Macro-Zoom brochure, Bolex International S.A."
+        },
+        {
+          "src": "/sourced/cameras/583/583-and-563xl.webp",
+          "alt": "The Bolex 563 XL Sound Macro-Zoom in front and the 583 Sound Macro-Zoom behind, both with microphones fitted",
+          "credit": "Bolex 583 & 563 XL Sound Macro Zoom brochure, Bolex (U.S.A.) Inc."
+        }
       ]
     },
     {
@@ -550,6 +590,13 @@
           "title": "Bolex Super 8 Cameras and Projectors, price list no. S1, 1 April 1979",
           "url": "https://www.pacificrimcamera.com/rl/02226/02226.pdf",
           "note": "Bolex (U.S.A.) Inc.'s own list, one Suggested Retail column. Read off the rendered page: the scan's text layer runs neighbouring model numbers into their lens specifications."
+        }
+      ],
+      "images": [
+        {
+          "src": "/sourced/cameras/680/680-macro-zoom.webp",
+          "alt": "Bolex 680 Macro Zoom from three-quarters front, the zoom and the pistol grip in view",
+          "credit": "Bolex 680 Macro Zoom brochure, Bolex (U.S.A.) Inc."
         }
       ]
     }
