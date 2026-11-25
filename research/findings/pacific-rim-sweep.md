@@ -93,6 +93,21 @@ Written up from these documents, with prices where the lists carry them:
 - **What a service cost** (`04927`): an H camera overhaul at $48.00,
   cited in the valuation article.
 
+### Accessories worth their own entries
+
+- **`02231`**, the underwater housing for the electric-motor H-16. Not
+  the housing already listed: that one was for the spring-wound camera
+  at $525.00 in 1965, this one carries the batteries an EBM or EL needs
+  and cost $2,534.00 by 1978. Written up. Note that `02241` gives its
+  depth as 328 feet where `02231` says 320.
+- **`02988`**, the **Pellegrini-Piek variable shutter**, a San Francisco
+  shop fitting variable shutters into Bolex H cameras that were never
+  built with one. $125.00 for any H camera, 8, 16 or RX. Written up,
+  with its claims labelled as the sales claims they are. The booklet is
+  a seventh edition and its letters run to August 1961, so this was a
+  going concern. The archive is about what people did with these
+  cameras, and enough of them did this to keep a shop in work.
+
 ### Two questions closed
 
 - **What the R means on an 18-5R.** `04924`: "A 50-cycle version R is

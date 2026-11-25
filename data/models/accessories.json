@@ -27,6 +27,41 @@
           "note": "A Paillard instruction sheet has since been read and is cited above, which covers fitting and projection. Pacific Rim also lists a \"Bolex Sterero Instruction Book\" (their spelling); whether that is the same document under another name is not settled. The end of production is also unsettled: about 1954 is the Film Atlas reading, and how many were sold at that price is not recorded anywhere found so far."
         }
       ]
+    },
+    {
+      "slug": "underwater-housing-electric",
+      "name": "Underwater Housing for the electric H-16",
+      "format": "16mm",
+      "introduced": null,
+      "summary": "A second and much later underwater housing, and not the one the archive already lists. That one was for the spring-wound H-16 at $525.00 in 1965; this is for the H-16 with a built-in electric motor, the EBM and the EL, and carries the batteries those cameras need. It is a light alloy case in two parts, sealed by O-rings and shut with patented locking cams, good to 320 feet, with every metal part inside and out protected against corrosion and stabiliser fins to hold it steady in the water. Focusing and framing are done through the camera's own reflex finder by way of an adaptor on the eyepiece, which Bolex points out solves parallax and is accurate enough for macro work, where a finder bolted to the outside of a housing is neither. Preparing the camera is two toothed collars on the lens and the eyepiece adaptor, and it takes the Switar 10mm f/1.6 or the Macro-Switar 26mm f/1.1. There are holes for an underwater lamp. $1,918.00 in October 1976 and $2,534.00 in January 1978, against the spring-wound housing's $580.00 in 1970.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "Bolex underwater housing, Bolex International sheet",
+          "url": "https://www.pacificrimcamera.com/rl/02231/02231.pdf",
+          "note": "Bolex's own sheet, and the source of the construction and the depth. Note that the H-16 systems brochure rl/02241 gives the EL housing as 328 feet, or 100 metres, where this says 320. The two are close enough to be the same claim rounded differently, and far enough apart to be worth not averaging. Scanned by Pacific Rim Camera."
+        },
+        {
+          "title": "Bolex 16mm price lists, October 1976 and January 1978",
+          "url": "https://www.pacificrimcamera.com/rl/02210/02210.pdf",
+          "note": "Where the prices come from. The January 1978 list sells it twice, product 40301 for the EBM with a battery container and connection cable and 40300 for the EL with a lever for switching the photocell, at the same $2,534.00."
+        }
+      ]
+    },
+    {
+      "slug": "pellegrini-piek-variable-shutter",
+      "name": "Pellegrini-Piek Variable Shutter",
+      "format": "16mm",
+      "introduced": null,
+      "summary": "Not a Bolex product at all, but a conversion: a San Francisco shop fitting variable shutters into Bolex H cameras that were never built with one. You shipped the camera stripped of lenses, Octameter and spools, and it came back with a control lever through a new opening in the body and, they say, film tested with the proof sent to you. The claim is a working range of 1/18 second at 8 frames to 1/560 at 64, no neutral density filters needed for fast film outdoors, and two stops more light for reflex viewing with the shutter a quarter open. An optional automatic dissolve attachment did lap dissolves regardless of camera speed and stopped the camera at the end of a fade. $125.00 for the shutter on any H camera, 8, 16 or RX, $57.00 for the dissolve attachment fitted at the same time or $66.00 later, return postage paid, guaranteed a year. The booklet is a seventh edition and the correspondence in it runs to August 1961, so the business was long established by then. It is here because the archive is about what people actually did with these cameras, and enough of them did this to keep a shop in work.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "Information booklet on the Pellegrini-Piek variable shutter units for Bolex H16, H8 and H16 Reflex",
+          "url": "https://www.pacificrimcamera.com/rl/02988/02988.pdf",
+          "note": "The firm's own booklet, seventh edition, Pellegrini-Piek of 634 Hearst Avenue, San Francisco, formerly 1545 Lombard Street. Every figure above is theirs and none of it is independently checked: it is a sales booklet, and the performance claims are claims. The dates come from letters reproduced in it, the latest August 1961. Scanned by Pacific Rim Camera."
+        }
+      ]
     }
   ]
 }

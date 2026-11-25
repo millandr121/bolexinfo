@@ -1068,5 +1068,37 @@
         }
       ]
     }
+  ],
+  "underwater-housing-electric": [
+    {
+      "year": 1976,
+      "month": "October",
+      "doc": "02211",
+      "section": "accessories",
+      "note": "The suggested retail price. This list prints dealer cost first and suggested retail second.",
+      "variants": [
+        {
+          "asPrinted": "Underwater Housing f/H-16 EBM",
+          "price": "$1,918.00"
+        }
+      ]
+    },
+    {
+      "year": 1978,
+      "month": "January",
+      "doc": "02210",
+      "section": "accessories",
+      "note": "The suggested retail price. This list prints suggested retail first and dealer net second.",
+      "variants": [
+        {
+          "asPrinted": "Underwater Housing f/H-16 EBM with Battery Container and connection cable",
+          "price": "$2,534.00"
+        },
+        {
+          "asPrinted": "Underwater Housing f/H-16 EL with lever for switching photocell and connection cable",
+          "price": "$2,534.00"
+        }
+      ]
+    }
   ]
 }
