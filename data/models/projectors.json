@@ -93,6 +93,31 @@
       "recovery": "pending"
     },
     {
+      "slug": "sm80",
+      "name": "SM 80 Programmatic",
+      "format": "Super 8",
+      "introduced": 1977,
+      "summary": "The top of Bolex's Super 8 sound range at the end of the 1970s, and a different machine from the SP 80 despite the name. It records on both sound tracks rather than one, takes 800ft reels rather than 600, and carries a Bolex Hi-Fi f/1.2 12.5 to 25mm zoom and a 100W halogen lamp with a dichroic reflector. A track selector gives either track or both, with fading, sound-on-sound, an automatic level limiter, manual override and an LED meter; a sync socket also drives an outside tape recorder, so it works single or double system. 18 and 24 frames a second, with a counter. Built in Austria by Eumig. Bolex (U.S.A.) listed it at $780.00 in April 1979, the dearest projector on the page.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "Bolex Super 8 Cameras and Projectors, price list no. S1, 1 April 1979",
+          "url": "https://www.pacificrimcamera.com/rl/02226/02226.pdf",
+          "note": "Bolex (U.S.A.) Inc.'s own list: \"Bolex SM-80 Programmatic\", product 93480, $780.00 suggested retail. Read off the rendered page, which matters here: the scan's text layer runs the neighbouring rows' model numbers into their lens specifications and invents models that do not exist. The list hyphenates the name; this entry does not, to match the SM 8 and SP 80 beside it."
+        },
+        {
+          "title": "Super8Data, Bolex SM 80 Programmatic",
+          "url": "https://www.filmkorn.org/super8data/database/projectors_list/projectors_bolex/bolex_sm80p.htm",
+          "note": "A collector database, so secondary. Everything above except the price comes from it, and it is also what settles the machine's identity: it dates the SM 80 Programmatic to 1977 with a 240m reel, recording on both tracks and a f/1.2 12.5 to 25mm lens, against the SP 80's 1973 to 1974 run, 180m reel and single track. The two are not the same projector under two names, which is the easy mistake to make from the price list alone."
+        },
+        {
+          "title": "Eumig acquired Bolex in 1969",
+          "url": "https://en.wikipedia.org/wiki/Eumig",
+          "note": "Which is the context for a Bolex-badged projector built on an Austrian mechanism."
+        }
+      ]
+    },
+    {
       "slug": "sp8",
       "name": "SP 8",
       "format": "Super 8",

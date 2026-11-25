@@ -505,5 +505,19 @@
         }
       ]
     }
+  ],
+  "sm80": [
+    {
+      "year": 1979,
+      "month": "April",
+      "doc": "02226",
+      "note": "Bolex (U.S.A.) Inc., Super 8 price list no. S1, one Suggested Retail column.",
+      "variants": [
+        {
+          "asPrinted": "Bolex SM-80 Programmatic",
+          "price": "$780.00"
+        }
+      ]
+    }
   ]
 }

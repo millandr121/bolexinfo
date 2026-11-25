@@ -111,7 +111,11 @@ Picked out of the Pacific Rim list because they close a known gap:
     every figure taken from them. The same rule holds for the rest.
   - These two also price the **H-16 EL, EBM and SBM**, which the archive
     has no entries for at all. Three major production cameras with no
-    page: the clearest gap the price lists have turned up.
+    page: the clearest gap the price lists have turned up. They are part
+    of a longer list, in
+    findings/models-the-price-lists-name.md: fifteen models the lists
+    price and the archive never covered, each with a product number and a
+    dated figure already read off the page.
 - **The two Super 8 price lists, downloaded and mined.** Both have a
   single Suggested Retail column, so neither carries the 16mm lists' trap.
   - `rl/04942` — **23 February 1972**, Paillard Inc., Linden NJ and Los

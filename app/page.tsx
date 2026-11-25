@@ -64,7 +64,7 @@ export default function HomePage() {
                   sentence instead. A test keeps the words honest if the
                   catalogue ever grows. */}
               <p className="mt-5 max-w-[29rem] leading-[1.65] text-[var(--fg-soft)]">
-                Fifty-six cameras, nineteen projectors, the lenses and accessories that went
+                Fifty-six cameras, twenty projectors, the lenses and accessories that went
                 with them, and the paper that sold them, verified and kept.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
