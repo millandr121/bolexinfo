@@ -356,6 +356,66 @@
           "note": "This archive's own backlog had the 5120 down as a projector. The dealer sheet settles it: it is a camera, and the line it heads is called Sound-8."
         }
       ]
+    },
+    {
+      "slug": "563xl",
+      "name": "563 XL Sound Macrozoom",
+      "format": "Super 8",
+      "introduced": null,
+      "summary": "The low-light half of a pair with the 583, and the same camera but for the lens: a 6x zoom, 8 to 48mm, at f/1.2, which is what the XL is for. Everything else is shared, and Bolex's brochure sets the two side by side to say so. The release works in two stages so the film only moves once the sound capstan is at speed, picture and sound dissolves run over 72 frames, the diaphragm is manual or automatic on TTL measurement, the shutter opens to 220 degrees, and there is a synchro-flash socket, remote control from the microphone or a cable, and a counter settable to any starting point. Takes silent Super 8 cartridges as well as sound, and the Aspheron super wide-angle fits it. $693.00 in April 1979, six dollars under the 583.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "Bolex 583 and 563 XL Sound Macro-Zoom, Bolex (U.S.A.) brochure",
+          "url": "https://www.pacificrimcamera.com/rl/02232/02232.pdf",
+          "note": "Bolex's own brochure, covering both cameras together. Its closing section, \"How the two models differ\", gives the 563 XL the 6x 8 to 48mm f/1.2 against the 583's 8x 7.5 to 60mm f/1.7 and separates them on nothing else. Scanned by Pacific Rim Camera."
+        },
+        {
+          "title": "Bolex Super 8 Cameras and Projectors, price list no. S1, 1 April 1979",
+          "url": "https://www.pacificrimcamera.com/rl/02226/02226.pdf",
+          "note": "Bolex (U.S.A.) Inc.'s own list, one Suggested Retail column. Read off the rendered page: the scan's text layer runs neighbouring model numbers into their lens specifications."
+        }
+      ]
+    },
+    {
+      "slug": "583",
+      "name": "583 Sound Macrozoom",
+      "format": "Super 8",
+      "introduced": null,
+      "summary": "A Super 8 sound camera built so that recording is as free as filming silent. An 8x zoom, 7.5 to 60mm at f/1.7. The release works in two stages and the film only moves once the sound capstan is at speed, so the break in sound between two takes comes down to very little; with background music you can stop and restart as often as you like. Picture and sound dissolves run over 72 frames. Diaphragm manual or automatic on TTL measurement, shutter opening 220 degrees, synchro-flash socket, remote control from the microphone or an accessory cable, a counter with a movable scale that can be set to any starting point, and it will take silent Super 8 cartridges too. The Aspheron super wide-angle fits the front. Sold beside the 563 XL, which is the same camera with a faster, shorter zoom. $699.00 in April 1979.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "Bolex 583 and 563 XL Sound Macro-Zoom, Bolex (U.S.A.) brochure",
+          "url": "https://www.pacificrimcamera.com/rl/02232/02232.pdf",
+          "note": "Bolex's own brochure, covering both cameras and ending with a section on how the two differ, which is where the lens specifications come from. A shorter sheet on the same pair is rl/02224. Scanned by Pacific Rim Camera."
+        },
+        {
+          "title": "Bolex Super 8 Cameras and Projectors, price list no. S1, 1 April 1979",
+          "url": "https://www.pacificrimcamera.com/rl/02226/02226.pdf",
+          "note": "Bolex (U.S.A.) Inc.'s own list, one Suggested Retail column. Read off the rendered page: the scan's text layer runs neighbouring model numbers into their lens specifications."
+        }
+      ]
+    },
+    {
+      "slug": "680",
+      "name": "680 Macrozoom",
+      "format": "Super 8",
+      "introduced": null,
+      "summary": "A Super 8 silent camera that takes sound cartridges as well, and the most capable of the late silent Bolexes. The lens is a multicoated 7 to 56mm f/1.8 macro zoom of thirteen elements, 8 to 1, and the macro will focus with the front element touching the subject. Four speeds, 9, 18 and 24 frames a second with 45 for slow motion, plus single frame, and a Vario-Timer for time lapse from one frame every 0.2 seconds to one every 60. Exposure is TTL by CdS cell, automatic or manual, with an automatic shutter running 1/12 to 1/60 of a second for poor light, backlight compensation on one button, and film speed keyed by the cartridge from ASA 25 to 160. Optical fades of 2½ seconds by push button, takes preselectable from 2 to 10 seconds, two-speed power zoom on a single control, and a Director finder with LED readouts for focus, aperture, over and under exposure and film run. Five AA cells or a rechargeable nicad left in the camera. The Aspheron super-wide is included and multiplies the wide angle 3.5 times. 8 by 7¾ by 2½ inches, 3lbs. Product 90002, $515.00 in April 1979.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "Bolex 680 Macro Zoom, Bolex (U.S.A.) dealer sheet",
+          "url": "https://www.pacificrimcamera.com/rl/02223/02223.pdf",
+          "note": "Bolex's own sheet, and the source of everything above. It gives the product number 90002, which matches the April 1979 price list exactly. Undated, but the Great Neck address and that product number place it with the 1979 list. Scanned by Pacific Rim Camera."
+        },
+        {
+          "title": "Bolex Super 8 Cameras and Projectors, price list no. S1, 1 April 1979",
+          "url": "https://www.pacificrimcamera.com/rl/02226/02226.pdf",
+          "note": "Bolex (U.S.A.) Inc.'s own list, one Suggested Retail column. Read off the rendered page: the scan's text layer runs neighbouring model numbers into their lens specifications."
+        }
+      ]
     }
   ]
 }

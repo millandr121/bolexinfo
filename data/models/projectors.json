@@ -122,13 +122,18 @@
       "name": "SP 8",
       "format": "Super 8",
       "introduced": 1972,
-      "summary": "A Super 8 magnetic sound projector that records as well as plays back, sold from 1972 with a f/1.3 15 to 30mm zoom, a 100W 12V lamp, automatic threading, forward and reverse running, 18 and 24 frames a second and 600ft reels. Sound goes on the main track, with fading and sound-on-sound, and the level can be set by hand or left to an automatic limiter. Built in Austria by Eumig, who had bought Bolex in 1969, on the same chassis as Eumig's own Mark S. Paillard's February 1972 dealer list prices it at $299.50, between the 18-5L Super at $199.50 and the SM8 Sound at $449.50. A SP 8 Special was also sold, and the later SP 80 is built on it.",
+      "summary": "A Super 8 magnetic sound projector that records as well as plays back, sold from 1972 with a f/1.3 15 to 30mm zoom, a 100W 12V lamp, automatic threading, forward and reverse running, 18 and 24 frames a second and 600ft reels. Sound goes on the main track, with fading and sound-on-sound, and the level can be set by hand or left to an automatic limiter. Built in Austria by Eumig, who had bought Bolex in 1969, on the same chassis as Eumig's own Mark S. Paillard's February 1972 dealer list prices it at $299.50, between the 18-5L Super at $199.50 and the SM8 Sound at $449.50. A SP 8 Special was also sold, and the later SP 80 is built on it: Bolex's booklet covering both Specials calls them practically identical, the SP 8 special's amplifier being the smaller at 6W sinusoidal against 10W.",
       "recovery": "pending",
       "sources": [
         {
           "title": "Bolex Super 8mm Confidential Price List, 23 February 1972",
           "url": "https://www.pacificrimcamera.com/rl/04942/04942.pdf",
           "note": "The primary source, and the reason this entry exists. Paillard's own dealer list: \"SP8 SOUND, product 2480, w/f/1.3 15-30mm Zoom Lens\", $299.50 suggested retail. Read off the rendered page. Scanned by Pacific Rim Camera."
+        },
+        {
+          "title": "Bolex SP 80 special and SP 8 special, instruction booklet",
+          "url": "https://www.pacificrimcamera.com/rl/04328/04328.pdf",
+          "note": "A Bolex document for this family at last, where this file long said one was wanted. It covers the two Special variants together and opens by saying they are \"practically identical, except for a few details\", which is Bolex settling in its own words that the SP 8 and SP 80 are one design. One of the few details is power: the booklet gives the SP 80 special 10W sinusoidal and 15W musical against the SP 8 special's 6W and 8W. Both are supplied with a Bolex Hi-Fi zoom, a 12V 100W halogen lamp with a dichroic mirror and a 400ft reel, and both are for silent and magnetic sound Super 8. Response 75 to 10,000 cycles at 18 f.p.s., signal to noise 45dB, wow under 0.4 per cent, footage counter reading one unit to 18 frames. It describes the Special variants rather than the plain models, so it is evidence about the family and not a datasheet for either base machine. Scanned by Pacific Rim Camera."
         },
         {
           "title": "Super8Data, Bolex SP 8",
@@ -147,12 +152,17 @@
       "name": "SP 80",
       "format": "Super 8",
       "introduced": 1973,
-      "summary": "A Super 8 and Single-8 projector with magnetic sound it can both record and play back, with automatic threading, forward and reverse running, 18 and 24 frames a second and 600ft reels. From after Eumig acquired Bolex in 1969, and built on Eumig's own mechanism rather than a Sainte-Croix design. A variant was sold as the SP 80 Special.",
+      "summary": "A Super 8 and Single-8 projector with magnetic sound it can both record and play back, with automatic threading, forward and reverse running, 18 and 24 frames a second and 600ft reels. From after Eumig acquired Bolex in 1969, and built on Eumig's own mechanism rather than a Sainte-Croix design. A variant was sold as the SP 80 Special, and Bolex's own booklet for it says the SP 80 special and SP 8 special are practically identical, differing mainly in amplifier power: 10W sinusoidal against the SP 8 special's 6W.",
       "recovery": "pending",
       "sources": [
         {
+          "title": "Bolex SP 80 special and SP 8 special, instruction booklet",
+          "url": "https://www.pacificrimcamera.com/rl/04328/04328.pdf",
+          "note": "A Bolex document for this family at last, where this file long said one was wanted. It covers the two Special variants together and opens by saying they are \"practically identical, except for a few details\", which is Bolex settling in its own words that the SP 8 and SP 80 are one design. One of the few details is power: the booklet gives the SP 80 special 10W sinusoidal and 15W musical against the SP 8 special's 6W and 8W. Both are supplied with a Bolex Hi-Fi zoom, a 12V 100W halogen lamp with a dichroic mirror and a 400ft reel, and both are for silent and magnetic sound Super 8. Response 75 to 10,000 cycles at 18 f.p.s., signal to noise 45dB, wow under 0.4 per cent, footage counter reading one unit to 18 frames. It describes the Special variants rather than the plain models, so it is evidence about the family and not a datasheet for either base machine. Scanned by Pacific Rim Camera."
+        },
+        {
           "title": "Dealer and collector listings, read November 2026",
-          "note": "Everything above comes from people selling or restoring the machine, not from Paillard or Eumig. They agree on the format, the sound, the speeds and the reel size, and date it to 1973 to 1975. They disagree on which Eumig chassis underlies it, the 700 or the 800 series, so this entry does not say. No manufacturer document has been read, and one is wanted."
+          "note": "Everything above comes from people selling or restoring the machine, not from Paillard or Eumig. They agree on the format, the sound, the speeds and the reel size, and date it to 1973 to 1975. They disagree on which Eumig chassis underlies it, the 700 or the 800 series, so this entry does not say. A Bolex booklet for the Special variants has since been read and is cited above; it does not date the machine or settle the chassis question, so those still rest on the listings."
         },
         {
           "title": "Eumig acquired Bolex in 1969",

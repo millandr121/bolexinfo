@@ -739,5 +739,47 @@
         }
       ]
     }
+  ],
+  "680": [
+    {
+      "year": 1979,
+      "month": "April",
+      "doc": "02226",
+      "note": "Bolex (U.S.A.) Inc., Super 8 price list no. S1, one Suggested Retail column.",
+      "variants": [
+        {
+          "asPrinted": "Bolex 680 Macrozoom Camera with Aspheron attachment",
+          "price": "$515.00"
+        }
+      ]
+    }
+  ],
+  "583": [
+    {
+      "year": 1979,
+      "month": "April",
+      "doc": "02226",
+      "note": "Bolex (U.S.A.) Inc., Super 8 price list no. S1, one Suggested Retail column.",
+      "variants": [
+        {
+          "asPrinted": "Bolex 583 Macrozoom Sound Camera with Aspheron attachment",
+          "price": "$699.00"
+        }
+      ]
+    }
+  ],
+  "563xl": [
+    {
+      "year": 1979,
+      "month": "April",
+      "doc": "02226",
+      "note": "Bolex (U.S.A.) Inc., Super 8 price list no. S1, one Suggested Retail column.",
+      "variants": [
+        {
+          "asPrinted": "Bolex 563 XL Macrozoom Sound Camera with Aspheron attachment",
+          "price": "$693.00"
+        }
+      ]
+    }
   ]
 }
