@@ -167,6 +167,10 @@ export function getPricePoints(): PricePoint[] {
    * own point and the model's name carries which one.
    */
   const models = readJson<Record<string, unknown>>("data", "models", "catalogue-prices.json");
+  /* The slug tells cameras from projectors for everything Michael
+     catalogued. It cannot tell an accessory, because the price lists
+     only started reaching those when the archive began adding entries
+     of its own, so an entry may name its section outright. */
   const sectionFor = (slug: string): PricePoint["section"] =>
     /^(m8|m8r|model-|18|s[0-9]|sm8|sp)/.test(slug) ? "projectors" : "cameras";
   for (const [slug, raw] of Object.entries(models)) {
@@ -175,6 +179,7 @@ export function getPricePoints(): PricePoint[] {
       year: number;
       month?: string;
       doc: string;
+      section?: PricePoint["section"];
       variants: Array<{ asPrinted: string; price: string }>;
     };
     /* A model that stayed in production appears in several lists, so the
@@ -185,7 +190,7 @@ export function getPricePoints(): PricePoint[] {
         push(
           v.asPrinted,
           slug,
-          sectionFor(slug),
+          entry.section ?? sectionFor(slug),
           `${entry.month ?? ""} ${entry.year}`.trim(),
           v.price,
           v.asPrinted,

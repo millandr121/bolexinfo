@@ -52,6 +52,34 @@
         }
       ],
       "note": "Prices include tax where applicable, which is how the list puts it."
+    },
+    {
+      "year": 1952,
+      "month": "November",
+      "doc": "01859",
+      "note": "The November 1952 list, bound into the catalogue the same way the February one is. Prices include tax where applicable, which is how the list puts it.",
+      "variants": [
+        {
+          "asPrinted": "H-16 De luxe with Switar 25mm F:1.4, Yvar 16mm F:2.8, Yvar 75mm F:2.8 and H-1 carrying case",
+          "price": "$712.50"
+        },
+        {
+          "asPrinted": "H-16 De luxe with Switar 25mm F:1.4",
+          "price": "$496.50"
+        },
+        {
+          "asPrinted": "H-16 De luxe with Switar 25mm F:1.5",
+          "price": "$440.00"
+        },
+        {
+          "asPrinted": "H-16 De luxe with Pizar 26mm F:1.9",
+          "price": "$412.25"
+        },
+        {
+          "asPrinted": "H-16 De luxe with Lytar 25mm F:1.9",
+          "price": "$372.75"
+        }
+      ]
     }
   ],
   "h16leader": [
@@ -78,6 +106,30 @@
         }
       ],
       "note": "Prices include tax where applicable, which is how the list puts it."
+    },
+    {
+      "year": 1952,
+      "month": "November",
+      "doc": "01859",
+      "note": "The November 1952 list, bound into the catalogue the same way the February one is. Prices include tax where applicable, which is how the list puts it.",
+      "variants": [
+        {
+          "asPrinted": "H-16 Leader with Switar 25mm F:1.4",
+          "price": "$423.25"
+        },
+        {
+          "asPrinted": "H-16 Leader with Switar 25mm F:1.5",
+          "price": "$366.75"
+        },
+        {
+          "asPrinted": "H-16 Leader with Pizar 26mm F:1.9",
+          "price": "$339.00"
+        },
+        {
+          "asPrinted": "H-16 Leader with Lytar 25mm F:1.9",
+          "price": "$299.50"
+        }
+      ]
     }
   ],
   "h8deluxe": [
@@ -104,6 +156,30 @@
         }
       ],
       "note": "Prices include tax where applicable, which is how the list puts it."
+    },
+    {
+      "year": 1952,
+      "month": "November",
+      "doc": "01859",
+      "note": "The November 1952 list, bound into the catalogue the same way the February one is. Prices include tax where applicable, which is how the list puts it.",
+      "variants": [
+        {
+          "asPrinted": "H-8 De luxe with Switar 12½mm F:1.5, Yvar 25mm F:2.5, Yvar 36mm F:2.8 and H-1 carrying case",
+          "price": "$605.50"
+        },
+        {
+          "asPrinted": "H-8 De luxe with Switar 12½mm F:1.5",
+          "price": "$438.50"
+        },
+        {
+          "asPrinted": "H-8 De Luxe with Yvar 13mm F:1.9",
+          "price": "$397.00"
+        },
+        {
+          "asPrinted": "H-8 De luxe with Lytar 12½mm F:1.9",
+          "price": "$364.75"
+        }
+      ]
     }
   ],
   "h8leader": [
@@ -126,6 +202,26 @@
         }
       ],
       "note": "Prices include tax where applicable, which is how the list puts it."
+    },
+    {
+      "year": 1952,
+      "month": "November",
+      "doc": "01859",
+      "note": "The November 1952 list, bound into the catalogue the same way the February one is. Prices include tax where applicable, which is how the list puts it.",
+      "variants": [
+        {
+          "asPrinted": "H-8 Leader with Switar 12½mm F:1.5",
+          "price": "$365.25"
+        },
+        {
+          "asPrinted": "H-8 Leader with Yvar 13mm F:1.9",
+          "price": "$323.75"
+        },
+        {
+          "asPrinted": "H-8 Leader with Lytar 12½mm F:1.9",
+          "price": "$291.50"
+        }
+      ]
     }
   ],
   "l8lm": [
@@ -152,6 +248,30 @@
           "price": "$197.50"
         }
       ]
+    },
+    {
+      "year": 1952,
+      "month": "November",
+      "doc": "01859",
+      "note": "The November 1952 list, bound into the catalogue the same way the February one is. Prices include tax where applicable, which is how the list puts it.",
+      "variants": [
+        {
+          "asPrinted": "Complete with Yvar 12.5mm (½\") F:2.8 fixed focus lens and leather strap",
+          "price": "$97.00"
+        },
+        {
+          "asPrinted": "Complete with Yvar 12.5mm (½\") F:2.8 focusing mount lens, pigskin case and leather strap",
+          "price": "$116.50"
+        },
+        {
+          "asPrinted": "Complete as above with Yvar 13mm (½\") F:1.9 lens",
+          "price": "$156.00"
+        },
+        {
+          "asPrinted": "Complete as above with Switar 12.5mm (½\") F:1.5 lens",
+          "price": "$197.50"
+        }
+      ]
     }
   ],
   "m8": [
@@ -170,6 +290,18 @@
         }
       ],
       "note": "Prices include tax where applicable, which is how the list puts it."
+    },
+    {
+      "year": 1952,
+      "month": "November",
+      "doc": "01859",
+      "note": "The November 1952 list, bound into the catalogue the same way the February one is. Prices include tax where applicable, which is how the list puts it.",
+      "variants": [
+        {
+          "asPrinted": "M-8, 110-120 volt, 50-60 cycle, AC/DC, boxed, complete",
+          "price": "$176.50"
+        }
+      ]
     }
   ],
   "m8r": [
@@ -184,6 +316,18 @@
         }
       ],
       "note": "Prices include tax where applicable, which is how the list puts it."
+    },
+    {
+      "year": 1952,
+      "month": "November",
+      "doc": "01859",
+      "note": "The November 1952 list, bound into the catalogue the same way the February one is. Prices include tax where applicable, which is how the list puts it.",
+      "variants": [
+        {
+          "asPrinted": "M-8R, 110-220 volt, 50-60 cycle, AC/DC, boxed, complete",
+          "price": "$207.50"
+        }
+      ]
     }
   ],
   "model-g": [
@@ -199,6 +343,22 @@
         },
         {
           "asPrinted": "G8-16, complete as above, 800' arms",
+          "price": "$390.00"
+        }
+      ]
+    },
+    {
+      "year": 1952,
+      "month": "November",
+      "doc": "01859",
+      "note": "The November 1952 list, bound into the catalogue the same way the February one is. Prices include tax where applicable, which is how the list puts it.",
+      "variants": [
+        {
+          "asPrinted": "G8-16, complete for 8mm and 16mm film. 400ft arms, with de luxe case",
+          "price": "$353.00"
+        },
+        {
+          "asPrinted": "G8-16, complete as above, 800ft arms",
           "price": "$390.00"
         }
       ]
@@ -240,6 +400,25 @@
         {
           "asPrinted": "H-16 REX 5 Three-lens Turret, w/o Multifocal Viewfinder",
           "price": "$2,491.00"
+        }
+      ]
+    }
+  ],
+  "stereo": [
+    {
+      "year": 1952,
+      "month": "November",
+      "doc": "01859",
+      "section": "accessories",
+      "note": "The November 1952 list, bound into the catalogue the same way the February one is. Prices include tax where applicable, which is how the list puts it.",
+      "variants": [
+        {
+          "asPrinted": "Bolex Stereo Kit, complete as below",
+          "price": "$397.50"
+        },
+        {
+          "asPrinted": "Bolex Stereo Kit, complete as below with H-16 De Luxe camera",
+          "price": "$715.50"
         }
       ]
     }

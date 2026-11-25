@@ -716,6 +716,14 @@
         }
       ],
       "sources": [],
+      "listings": [
+        {
+          "price": "$120.50",
+          "date": "November 1952",
+          "doc": "01859",
+          "asPrinted": "Switar 12.5mm (½\") F:1.5, Standard A.S.A. mount"
+        }
+      ],
       "catalogue": {
         "year": 1952,
         "doc": "01775",
@@ -750,6 +758,14 @@
         }
       ],
       "sources": [],
+      "listings": [
+        {
+          "price": "$178.50",
+          "date": "November 1952",
+          "doc": "01859",
+          "asPrinted": "Switar 25mm (1\") F:1.4, for Bolex only"
+        }
+      ],
       "catalogue": {
         "year": 1952,
         "doc": "01775",
@@ -1131,6 +1147,14 @@
         }
       ],
       "sources": [],
+      "listings": [
+        {
+          "price": "$59.50",
+          "date": "November 1952",
+          "doc": "01859",
+          "asPrinted": "Yvar 25mm (1\") F:2.5, Standard A.S.A. mount"
+        }
+      ],
       "catalogue": {
         "year": 1952,
         "doc": "01775",
@@ -1166,6 +1190,14 @@
         }
       ],
       "sources": [],
+      "listings": [
+        {
+          "price": "$62.50",
+          "date": "November 1952",
+          "doc": "01859",
+          "asPrinted": "Yvar 36mm (1½\") F:2.8, Standard A.S.A. mount"
+        }
+      ],
       "catalogue": {
         "year": 1952,
         "doc": "01775",
@@ -1450,6 +1482,14 @@
         }
       ],
       "sources": [],
+      "listings": [
+        {
+          "price": "$94.25",
+          "date": "November 1952",
+          "doc": "01859",
+          "asPrinted": "Pizar 26mm (1\") F:1.9, \"C\" mount"
+        }
+      ],
       "catalogue": {
         "year": 1952,
         "doc": "01775",
@@ -1550,6 +1590,14 @@
         }
       ],
       "sources": [],
+      "listings": [
+        {
+          "price": "$122.00",
+          "date": "November 1952",
+          "doc": "01859",
+          "asPrinted": "Switar 25mm (1\") F:1.5, for Bolex only"
+        }
+      ],
       "catalogue": {
         "year": 1952,
         "doc": "01775",
@@ -1648,6 +1696,14 @@
         }
       ],
       "sources": [],
+      "listings": [
+        {
+          "price": "$106.00",
+          "date": "November 1952",
+          "doc": "01859",
+          "asPrinted": "Yvar 100mm (4\") F:3.3, \"C\" mount"
+        }
+      ],
       "catalogue": {
         "year": 1952,
         "doc": "01775",
@@ -1738,6 +1794,14 @@
         }
       ],
       "sources": [],
+      "listings": [
+        {
+          "price": "$79.00",
+          "date": "November 1952",
+          "doc": "01859",
+          "asPrinted": "Yvar 13mm (½\") F:1.9, Standard A.S.A. mount"
+        }
+      ],
       "from": {
         "page": "50kern",
         "heading": "D Mount Lenses for 8mm Cameras",
@@ -1802,6 +1866,14 @@
         }
       ],
       "sources": [],
+      "listings": [
+        {
+          "price": "$145.75",
+          "date": "November 1952",
+          "doc": "01859",
+          "asPrinted": "Yvar 150mm (6\") F:4.0, \"C\" mount"
+        }
+      ],
       "catalogue": {
         "year": 1952,
         "doc": "01775",
@@ -1838,6 +1910,14 @@
         }
       ],
       "sources": [],
+      "listings": [
+        {
+          "price": "$76.50",
+          "date": "November 1952",
+          "doc": "01859",
+          "asPrinted": "Yvar 16mm F:2.8, \"C\" mount"
+        }
+      ],
       "catalogue": {
         "year": 1952,
         "doc": "01775",
@@ -1958,6 +2038,12 @@
       ],
       "sources": [],
       "listings": [
+        {
+          "price": "$94.50",
+          "date": "November 1952",
+          "doc": "01859",
+          "asPrinted": "Yvar 75mm (3\") F:2.8, \"C\" mount"
+        },
         {
           "price": "$69.50",
           "date": "May 1967",

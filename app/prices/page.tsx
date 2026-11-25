@@ -124,6 +124,18 @@ export default function PricesPage() {
             </p>
             <p>
               <span className="text-[var(--fg)]">
+                Two lists nine months apart, and almost nothing moved.
+              </span>{" "}
+              Both 1952 catalogues carry a full retail list, February and November, and setting
+              them side by side is the closest thing here to watching Paillard think. Every
+              H-16 and H-8 outfit sold with a single lens held its price to the cent. What rose
+              was the three-lens outfits, by $7.00 and $8.05, and four lenses bought on their
+              own: the Yvar 75mm from $87.50 to $94.50, and the three small Yvars by a few
+              dollars each. The November list also prices an H-8 with the Yvar 13mm that the
+              February one does not sell at all.
+            </p>
+            <p>
+              <span className="text-[var(--fg)]">
                 The {base} figures are approximate, and CPI is blunt.
               </span>{" "}
               Converted with the US consumer price index, annual averages, from the{" "}
@@ -145,8 +157,8 @@ export default function PricesPage() {
             </p>
             <p>
               <span className="text-[var(--fg)]">What is missing.</span> Seven of the eight
-              Bolex price lists Pacific Rim holds have been read, together with the retail list
-              bound into the February 1952 catalogue. There is nothing before 1952: the 1946
+              Bolex price lists Pacific Rim holds have been read, together with the retail
+              lists bound into both 1952 catalogues. There is nothing before 1952: the 1946
               catalogue tells the reader to consult a price list that has not been found. And
               nothing here is a Super 8 price, nor an H-16 EL, EBM or SBM, because the archive
               has no page for those three cameras to put a price on.

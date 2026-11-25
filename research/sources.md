@@ -84,8 +84,17 @@ Picked out of the Pacific Rim list because they close a known gap:
   - `rl/02027` — **1946**. Image-only scan, 122 MB.
   - `rl/01775` — **Feb 1952**. Image-only, 78 MB; OCR'd, and its pages 21
     and 22 are a full Bolex retail price list.
-  - `rl/01859` — **Nov 1952**. Carries text.
-  - `rl/04916` — **Feb 1965**. Carries text.
+  - `rl/01859` — **Nov 1952**. Carries text, and **pages 21 and 22 are a
+    second full retail price list**, nine months after the February one.
+    Mined. It prices the **Bolex Stereo** in full, kit by kit, which no
+    other document here does. Setting it beside February: every H-16 and
+    H-8 outfit with a single lens held its price exactly, the two
+    three-lens outfits rose $7.00 and $8.05, the Yvar 75mm went $87.50 to
+    $94.50 and three small Yvars rose a few dollars, and an H-8 with the
+    Yvar 13mm appears that February does not sell.
+  - `rl/04916` — **Feb 1965**. Carries text. Mined for prices and has
+    **none**: not a price in the document. Worth knowing so nobody opens
+    122 MB looking again.
 - **The dealer price lists, and a trap in the 1970s ones.** Seven of the
   eight Pacific Rim holds have now been mined: `rl/04928`, `rl/04929`,
   `rl/04932`, `rl/04933` (1965–67), `rl/02211`, `rl/02210`, `rl/02209`

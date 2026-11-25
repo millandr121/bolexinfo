@@ -352,6 +352,11 @@ function reconcile(seedFile: string, extractedDir: string): ModelRecord[] {
 export function getAddedRecords(section: "accessories" | "lenses"): ModelRecord[] {
   const seedDoc = readJson<{ models?: SeedEntry[] }>(dataDir("models", `${section}.json`));
   const recovered = readExtractedDir(section);
+  /* An entry the archive added can be priced too. The Bolex Stereo is
+     the case that found this: it is in the November 1952 list in full,
+     and this path quietly dropped the prices because only reconcile()
+     was reading them. */
+  const prices = readCataloguePrices();
 
   return (seedDoc?.models ?? [])
     .filter((s) => !recovered.has(s.slug))
@@ -367,6 +372,7 @@ export function getAddedRecords(section: "accessories" | "lenses"): ModelRecord[
       originalPath: s.originalPath,
       recovered: false,
       ...(s.sources?.length ? { sources: s.sources } : {}),
+      ...(prices.has(s.slug) ? { catalogues: prices.get(s.slug) } : {}),
     }))
     .sort((a, b) => (a.introduced ?? 9999) - (b.introduced ?? 9999) || a.name.localeCompare(b.name));
 }

@@ -34,6 +34,12 @@
         "date": "June 1965",
         "doc": "04928",
         "asPrinted": "Prismatic Focuser (New type)"
+      },
+      {
+        "price": "$19.75",
+        "date": "November 1952",
+        "doc": "01859",
+        "asPrinted": "Prismatic Focuser with Case"
       }
     ],
     "note": "The lists distinguish a new type and an old type at the same price. The new type is matched to this entry and the old type to the 1940s Prismatic Focus, on the order they were documented in. Nothing in the lists states which is which."
@@ -241,6 +247,12 @@
         "date": "June 1965",
         "doc": "04928",
         "asPrinted": "Eye-level focus for H-8"
+      },
+      {
+        "price": "$37.75",
+        "date": "November 1952",
+        "doc": "01859",
+        "asPrinted": "Eye-level focus"
       }
     ]
   },
@@ -453,6 +465,12 @@
         "date": "January 1978",
         "doc": "02210",
         "asPrinted": "Extension Tubes (set of 4)"
+      },
+      {
+        "price": "$15.00",
+        "date": "November 1952",
+        "doc": "01859",
+        "asPrinted": "Extension Tubes (set of four)"
       }
     ]
   },
@@ -472,5 +490,137 @@
       }
     ],
     "note": "Product 40459, the case for the camera. Both lists also carry 40458, a smaller case for a 100' H-16 EBM, which is not this."
+  },
+  "h-cable-release": {
+    "listings": [
+      {
+        "price": "$6.50",
+        "date": "November 1952",
+        "doc": "01859",
+        "asPrinted": "Cable Release — 18in"
+      }
+    ]
+  },
+  "trigger-handle": {
+    "listings": [
+      {
+        "price": "$13.75",
+        "date": "November 1952",
+        "doc": "01859",
+        "asPrinted": "Trigger Handle"
+      }
+    ]
+  },
+  "paillard-trifilm-splicer": {
+    "listings": [
+      {
+        "price": "$14.95",
+        "date": "November 1952",
+        "doc": "01859",
+        "asPrinted": "Paillard Trifilm Splicer"
+      }
+    ]
+  },
+  "bolex-titler": {
+    "listings": [
+      {
+        "price": "$295.50",
+        "date": "November 1952",
+        "doc": "01859",
+        "asPrinted": "Titler complete"
+      }
+    ]
+  },
+  "octameter": {
+    "listings": [
+      {
+        "price": "$75.50",
+        "date": "November 1952",
+        "doc": "01859",
+        "asPrinted": "Octameter Installation"
+      }
+    ]
+  },
+  "h-1": {
+    "listings": [
+      {
+        "price": "$45.00",
+        "date": "November 1952",
+        "doc": "01859",
+        "asPrinted": "H-1 Case"
+      }
+    ]
+  },
+  "h-2-zipper": {
+    "listings": [
+      {
+        "price": "$32.50",
+        "date": "November 1952",
+        "doc": "01859",
+        "asPrinted": "H-2 Case"
+      }
+    ]
+  },
+  "bolex-filterslot-modification": {
+    "listings": [
+      {
+        "price": "$30.00",
+        "date": "November 1952",
+        "doc": "01859",
+        "asPrinted": "Filter Slot Installation with 6 Filter holders in metal box"
+      }
+    ]
+  },
+  "l-8-cable-release": {
+    "listings": [
+      {
+        "price": "$4.90",
+        "date": "November 1952",
+        "doc": "01859",
+        "asPrinted": "Cable Release — 18in"
+      }
+    ]
+  },
+  "l-8-ring-adaptor": {
+    "listings": [
+      {
+        "price": "$1.50",
+        "date": "November 1952",
+        "doc": "01859",
+        "asPrinted": "L-8 Ring Adapter BC 1469"
+      }
+    ]
+  },
+  "parallax-corrector-prisms": {
+    "listings": [
+      {
+        "price": "$10.45",
+        "date": "November 1952",
+        "doc": "01859",
+        "asPrinted": "Parallax Corrector Lenses"
+      }
+    ]
+  },
+  "stereo-kit": {
+    "listings": [
+      {
+        "price": "$397.50",
+        "date": "November 1952",
+        "doc": "01859",
+        "asPrinted": "Bolex Stereo Kit, complete as below"
+      }
+    ],
+    "note": "The list itemises the kit and the parts come to the same $397.50: taking lens $178.50, projection lens $165.50, projector adapter sleeve $3.00, viewfinder bracket $9.00, viewfinder mask $1.50, two sunshades at $1.75 each, two Polaroid viewing glasses at $4.50 each, and the 26 by 34 inch screen at $27.50. With an H-16 De Luxe camera the whole thing was $715.50."
+  },
+  "stereo-projection-screens": {
+    "listings": [
+      {
+        "price": "$27.50",
+        "date": "November 1952",
+        "doc": "01859",
+        "asPrinted": "Screen, size 26in x 34in"
+      }
+    ],
+    "note": "The one screen priced in the Stereo kit, which is the size this entry describes. The list gives no other screen, so a larger one, if it was sold, is not priced here."
   }
 }
