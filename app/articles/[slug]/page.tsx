@@ -45,13 +45,39 @@ export default async function ArticlePage({ params }: Props) {
       </nav>
       <div className="prose-archive mt-6">
         <h1>{article.title}</h1>
+        {/*
+          Every article says who wrote it. Michael's carry his credit at
+          the foot, as they always did on his site; everything written
+          since is bylined at the top. That is the whole of what a reader
+          needs, and no article has to justify its existence: this
+          section preserves his work and carries it on, which is the
+          point of the modern site.
+        */}
+        {article.author && (
+          <p className="not-prose font-[family-name:var(--font-mono)] text-[0.66rem] uppercase tracking-[0.18em] text-[var(--fg-soft)]">
+            By {article.author}
+            {article.date ? ` · ${formatDate(article.date)}` : ""}
+          </p>
+        )}
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </div>
-      {article.originalUrl && (
+      {article.originalUrl ? (
         <SourceNote>Written by Michael Tisdale for BolexCollector.com.</SourceNote>
-      )}
+      ) : null}
     </article>
   );
+}
+
+/** "2026-11-25" to "25 November 2026", without pulling in a date library. */
+function formatDate(iso: string): string {
+  const d = new Date(`${iso}T00:00:00Z`);
+  if (Number.isNaN(d.getTime())) return iso;
+  return d.toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  });
 }
 
 function PendingRecovery() {

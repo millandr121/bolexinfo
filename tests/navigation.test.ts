@@ -19,7 +19,25 @@ test("every destination resolves to a real route", () => {
   for (const leaf of flattenNavigation()) {
     const segment = leaf.href.replace(/^\//, "");
     const page = path.join(process.cwd(), "app", segment, "page.tsx");
-    assert.ok(fs.existsSync(page), `${leaf.href} has no page at app/${segment}/page.tsx`);
+    if (fs.existsSync(page)) continue;
+
+    /*
+     * A destination can also be one page of a dynamic route, which has
+     * no file of its own: /articles/what-one-is-worth is served by
+     * app/articles/[slug]/page.tsx out of a markdown file. Check that
+     * the parent route and the content behind it both exist, which is
+     * the same promise the literal check makes.
+     */
+    const parts = segment.split("/");
+    const slug = parts.pop()!;
+    const parent = parts.join("/");
+    const dynamic = path.join(process.cwd(), "app", parent, "[slug]", "page.tsx");
+    const content = path.join(process.cwd(), "content", parent, `${slug}.md`);
+    assert.ok(
+      fs.existsSync(dynamic) && fs.existsSync(content),
+      `${leaf.href} has no page at app/${segment}/page.tsx, and no ` +
+        `content/${parent}/${slug}.md behind app/${parent}/[slug]/page.tsx either`,
+    );
   }
 });
 
@@ -90,5 +108,41 @@ test("the mobile rail still reaches everything the menus do", () => {
     for (const href of hrefs) {
       assert.ok(rail.includes(href), `${href} is unreachable on a phone`);
     }
+  }
+});
+
+/**
+ * An article this archive wrote keeps all of its words.
+ *
+ * The recovered articles are cleaned on the way out: everything up to
+ * and including the first H2 is dropped, because that is where the
+ * captured HTML keeps its masthead and navigation. Run that cleaner
+ * over an article written here and it eats the opening paragraphs and
+ * the first heading. The page still builds and every other test still
+ * passes; it just starts in the middle. This is the only thing that
+ * would notice.
+ */
+test("an article the archive wrote is not cleaned like a recovered one", async () => {
+  const { getRecoveredArticles } = await import("../lib/content");
+  const ours = getRecoveredArticles().filter((a) => a.author && !a.originalUrl);
+  for (const article of ours) {
+    const source = fs.readFileSync(
+      path.join(process.cwd(), "content", "articles", `${article.slug}.md`),
+      "utf8",
+    );
+    const body = source.replace(/^---\n[\s\S]*?\n---\n/, "").trim();
+    const firstLine = body.split("\n").find((l) => l.trim().length > 0)!.trim();
+    assert.ok(
+      article.body.trim().startsWith(firstLine),
+      `${article.slug} does not start where its file does. It begins ` +
+        `"${article.body.trim().slice(0, 60)}" but the file begins ` +
+        `"${firstLine.slice(0, 60)}". The recovered-article cleaner has ` +
+        `most likely been let loose on it.`,
+    );
+    assert.ok(
+      article.body.includes("##"),
+      `${article.slug} has lost its headings, which the cleaner removes ` +
+        `down to the first H2`,
+    );
   }
 });

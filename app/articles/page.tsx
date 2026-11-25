@@ -21,9 +21,9 @@ export default function ArticlesPage() {
         </h1>
         <p className="mt-4 max-w-2xl text-[var(--fg-soft)] leading-relaxed">
           Tips, stories, factory films, serial number references and Paillard-Bolex items not
-          covered elsewhere. These were written for BolexCollector.com by Michael Tisdale and
-          are kept exactly as he wrote them. New articles are added here as the research turns
-          them up.
+          covered elsewhere. Michael Tisdale&rsquo;s are kept exactly as he wrote them for
+          BolexCollector.com. New ones are written here and more are coming, from whoever has
+          something worth saying about this equipment. Every article says who wrote it.
         </p>
       </Reveal>
 
@@ -40,6 +40,12 @@ export default function ArticlesPage() {
                 </h2>
                 {article.description && (
                   <p className="mt-2 text-sm text-[var(--fg-soft)]">{article.description}</p>
+                )}
+                {/* Whoever wrote it, said on the card. */}
+                {article.author && (
+                  <p className="mt-2 font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.18em] text-[var(--accent)]">
+                    By {article.author}
+                  </p>
                 )}
               </Link>
             </Reveal>

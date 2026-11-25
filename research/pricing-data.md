@@ -1,4 +1,32 @@
-# Applying to eBay for sold-listing data
+# eBay sold-listing data: decided against, and what replaced it
+
+**Decision, 2026-11-25: the API route is dropped.** Not because it is
+impossible, but because it is the wrong shape for this archive. What
+follows is kept as the record of why, and because the fallback turned
+out to be the better plan all along.
+
+The replacement is two things, both built:
+
+- **`/articles/what-one-is-worth`** — an article that teaches a reader to value their own
+  equipment, from what collectors who actually trade it report. Sold
+  listings over asking prices, auctions as the fairest figures, the
+  user groups next, Marketplace as luck.
+- **Our own dataset** — every item page takes what readers paid, with
+  condition and venue, moderated before publishing and silent until
+  there is enough to be honest with.
+
+One correction worth keeping, because it is a common misreading:
+**eBay buying Terapeak did not end it.** The tool was folded into
+Seller Hub and renamed Research. It is free to any seller and reaches
+back about three years, against the ninety days the public search
+shows. That is a better source than the API would have been, and it
+needs no application at all.
+
+---
+
+## The original write-up, kept for the record
+
+
 
 Written to be used, not filed. The application is an account action and
 has to be done by the person who owns the eBay account; what is here is

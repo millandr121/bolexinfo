@@ -90,11 +90,12 @@ export interface ModelRecord {
   /** Cited sources, for an entry that was researched rather than recovered. */
   sources?: Array<{ title: string; url?: string; note?: string }>;
   /**
-   * What it cost, from a dated catalogue. Cameras were sold as outfits
-   * rather than bodies, so this is a list of combinations and not one
-   * figure.
+   * What it cost, from Paillard's dated price lists. Cameras were sold
+   * as outfits rather than bodies, so each list gives a set of
+   * combinations and not one figure, and a model that survived into the
+   * 1970s appears in several lists. Oldest first.
    */
-  catalogue?: CataloguePrices;
+  catalogues?: CataloguePrices[];
 }
 
 export interface CataloguePrices {
@@ -114,12 +115,18 @@ export interface CataloguePrices {
  * data/models/catalogue-prices.json for which document, and for the two
  * matches that are judgement calls.
  */
-function readCataloguePrices(): Map<string, CataloguePrices> {
+function readCataloguePrices(): Map<string, CataloguePrices[]> {
   const raw = readJson<Record<string, unknown>>(dataDir("models", "catalogue-prices.json"));
-  const out = new Map<string, CataloguePrices>();
+  const out = new Map<string, CataloguePrices[]>();
   for (const [slug, value] of Object.entries(raw ?? {})) {
     if (slug === "_") continue;
-    out.set(slug, value as CataloguePrices);
+    /* A single object is still accepted, so a model priced in one list
+       needs no array around it in the JSON. */
+    const list = (Array.isArray(value) ? value : [value]) as CataloguePrices[];
+    out.set(
+      slug,
+      [...list].sort((a, b) => a.year - b.year),
+    );
   }
   return out;
 }
@@ -314,7 +321,7 @@ function reconcile(seedFile: string, extractedDir: string): ModelRecord[] {
       capturedAt: e?.capturedAt,
       recovered: Boolean(e),
       ...(s?.sources?.length ? { sources: s.sources } : {}),
-      ...(prices.has(slug) ? { catalogue: prices.get(slug) } : {}),
+      ...(prices.has(slug) ? { catalogues: prices.get(slug) } : {}),
     });
   }
 
@@ -345,6 +352,11 @@ function reconcile(seedFile: string, extractedDir: string): ModelRecord[] {
 export function getAddedRecords(section: "accessories" | "lenses"): ModelRecord[] {
   const seedDoc = readJson<{ models?: SeedEntry[] }>(dataDir("models", `${section}.json`));
   const recovered = readExtractedDir(section);
+  /* An entry the archive added can be priced too. The Bolex Stereo is
+     the case that found this: it is in the November 1952 list in full,
+     and this path quietly dropped the prices because only reconcile()
+     was reading them. */
+  const prices = readCataloguePrices();
 
   return (seedDoc?.models ?? [])
     .filter((s) => !recovered.has(s.slug))
@@ -360,6 +372,7 @@ export function getAddedRecords(section: "accessories" | "lenses"): ModelRecord[
       originalPath: s.originalPath,
       recovered: false,
       ...(s.sources?.length ? { sources: s.sources } : {}),
+      ...(prices.has(s.slug) ? { catalogues: prices.get(s.slug) } : {}),
     }))
     .sort((a, b) => (a.introduced ?? 9999) - (b.introduced ?? 9999) || a.name.localeCompare(b.name));
 }

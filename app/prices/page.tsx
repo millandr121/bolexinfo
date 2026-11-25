@@ -58,12 +58,12 @@ export default function PricesPage() {
             These are shop prices from the 1950s to the 1970s, not valuations. What a Bolex
             sells for today turns far more on condition than on model &mdash; a recently
             serviced H-16 and a seized one are the same entry here and several times apart in
-            price. Current second-hand prices are the next thing to add, and the most useful
-            thing you can do is{" "}
-            <Link href="/suggest" className="text-[var(--accent)] underline underline-offset-4">
-              tell us what you paid
-            </Link>
-            .
+            price.{" "}
+            <Link href="/articles/what-one-is-worth" className="text-[var(--accent)] underline underline-offset-4">
+              How to work out what yours is worth
+            </Link>{" "}
+            is its own page, and every item page takes what you paid so the archive can
+            eventually answer it properly.
           </p>
         </aside>
       </Reveal>
@@ -77,11 +77,13 @@ export default function PricesPage() {
             How prices moved
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-[var(--fg-soft)]">
-            The five things the archive can follow across the most years. Paillard held its
-            American prices remarkably still: the eye-level focus was US$37.75 in 1952 and
-            US$37.75 in 1965, and the Yvar 75mm actually came <em>down</em>. Then the 1970s
-            arrive. Switch the reading to see the same figures in {base} money, where the flat
-            ones are quietly falling all along.
+            The five things the archive can follow across the most price lists. The matte box
+            is the fullest of them, in five of the seven: US$84.50 in 1965 and US$412.00 in
+            1979, which looks like a thing getting five times dearer. Switch the reading to{" "}
+            {base} money and it roughly doubles instead, the rest of the climb being the 1970s
+            happening to everything at once. The Pan Cinor Compact, on the same switch, barely
+            moves at all. That gap, between what the sticker did and what it meant, is most of
+            what this chart is for.
           </p>
           <PriceChart series={series} baseYear={base} />
         </section>
@@ -122,6 +124,18 @@ export default function PricesPage() {
             </p>
             <p>
               <span className="text-[var(--fg)]">
+                Two lists nine months apart, and almost nothing moved.
+              </span>{" "}
+              Both 1952 catalogues carry a full retail list, February and November, and setting
+              them side by side is the closest thing here to watching Paillard think. Every
+              H-16 and H-8 outfit sold with a single lens held its price to the cent. What rose
+              was the three-lens outfits, by $7.00 and $8.05, and four lenses bought on their
+              own: the Yvar 75mm from $87.50 to $94.50, and the three small Yvars by a few
+              dollars each. The November list also prices an H-8 with the Yvar 13mm that the
+              February one does not sell at all.
+            </p>
+            <p>
+              <span className="text-[var(--fg)]">
                 The {base} figures are approximate, and CPI is blunt.
               </span>{" "}
               Converted with the US consumer price index, annual averages, from the{" "}
@@ -142,10 +156,13 @@ export default function PricesPage() {
               the official ones.
             </p>
             <p>
-              <span className="text-[var(--fg)]">What is missing.</span> Seven price lists have
-              been read and four more exist, including the Super 8 ones. There is nothing
-              before 1952: the 1946 catalogue tells the reader to consult a price list that has
-              not been found.
+              <span className="text-[var(--fg)]">What is missing.</span> Nine of Paillard&rsquo;s
+              dated price lists have been read, together with the retail lists bound into both
+              1952 catalogues, and every one Pacific Rim holds has now been mined. There is
+              nothing before 1952: the 1946 catalogue names its lenses but tells the reader to
+              consult a price list that has not been found. The 1965 catalogue prices nothing
+              at all. And the H-16 EL, EBM and SBM are priced in the documents but absent here,
+              because the archive has no page for those three cameras to put a price on.
             </p>
           </div>
         </section>

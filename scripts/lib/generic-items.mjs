@@ -231,3 +231,40 @@ export function report(perPage, items, review, used, outPath) {
   const stale = Object.keys(review).filter((slug) => !used.has(slug));
   if (stale.length) console.log(`\n  STALE review entries, no such item: ${stale.join(", ")}`);
 }
+
+const MONTHS = [
+  "january",
+  "february",
+  "march",
+  "april",
+  "may",
+  "june",
+  "july",
+  "august",
+  "september",
+  "october",
+  "november",
+  "december",
+];
+
+/**
+ * Put price-list rows in date order, oldest first.
+ *
+ * listings.json is grouped by item rather than by document, and new
+ * documents get appended to whichever item they touch, so the file's own
+ * order is the order the lists were mined and not the order they were
+ * printed. A page showing 1965, 1967, 1979, 1976 reads as a mistake even
+ * though every figure in it is right.
+ *
+ * A row whose date cannot be parsed keeps its place at the end rather
+ * than being dropped or guessed at.
+ */
+export function sortListings(listings) {
+  const key = (row) => {
+    const m = /^\s*(?:([A-Za-z]+)\s+)?(\d{4})\s*$/.exec(row?.date ?? "");
+    if (!m) return Number.MAX_SAFE_INTEGER;
+    const month = m[1] ? MONTHS.indexOf(m[1].toLowerCase()) : -1;
+    return Number(m[2]) * 12 + (month < 0 ? 0 : month);
+  };
+  return [...listings].sort((a, b) => key(a) - key(b));
+}

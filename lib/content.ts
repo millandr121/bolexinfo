@@ -83,6 +83,12 @@ export interface Article {
   originalPath?: string;
   capturedAt?: string;
   kind?: string;
+  /**
+   * Who wrote it, for an article this archive wrote rather than
+   * recovered. Michael's carry originalUrl instead and are credited to
+   * him; the two are never allowed to look like each other.
+   */
+  author?: string;
   body: string;
 }
 
@@ -115,6 +121,18 @@ function cleanArticleBody(md: string): string {
   return s.replace(/\n\s*\*\s*\*\s*\*\s*$/, "").trim();
 }
 
+/**
+ * `clean` means "strip the chrome off a page recovered from the old
+ * site", and it is only ever right for a recovered page.
+ *
+ * cleanArticleBody drops everything up to and including the first H2,
+ * because that is where Michael's captured HTML keeps its masthead and
+ * navigation. Run it over an article this archive wrote and it silently
+ * eats the opening paragraphs and the first heading, leaving a page that
+ * builds, passes, and starts in the middle of a sentence. It did exactly
+ * that once. So the decision is made per article, on whether the file
+ * came from the old site, and not per directory.
+ */
 function readMarkdownDir(dir: string, clean: boolean): Article[] {
   if (!fs.existsSync(dir)) return [];
   return fs
@@ -123,16 +141,19 @@ function readMarkdownDir(dir: string, clean: boolean): Article[] {
     .map((f) => {
       const { data, content } = matter(fs.readFileSync(path.join(dir, f), "utf8"));
       const rawTitle = (data.title as string) ?? path.basename(f, ".md");
+      const recovered = typeof data.originalUrl === "string";
+      const tidy = clean && recovered;
       return {
         slug: path.basename(f, ".md"),
-        title: clean ? cleanTitle(rawTitle) : rawTitle,
+        title: tidy ? cleanTitle(rawTitle) : rawTitle,
         date: data.date as string | undefined,
         description: data.description as string | undefined,
         originalUrl: data.originalUrl as string | undefined,
         originalPath: data.originalPath as string | undefined,
         capturedAt: data.capturedAt as string | undefined,
         kind: data.kind as string | undefined,
-        body: clean ? cleanArticleBody(content) : content,
+        author: data.author as string | undefined,
+        body: tidy ? cleanArticleBody(content) : content,
       };
     })
     .sort((a, b) => (b.date ?? "").localeCompare(a.date ?? ""));

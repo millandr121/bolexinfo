@@ -31,6 +31,7 @@ import {
   slugify,
   statedYear,
   stripLeadingYear,
+  sortListings,
 } from "./lib/generic-items.mjs";
 
 const ROOT = process.cwd();
@@ -211,7 +212,7 @@ const items = raw.map((entry) => {
     description,
     images: entry.images,
     sources: entry.sources,
-    ...(found?.listings ? { listings: found.listings } : {}),
+    ...(found?.listings ? { listings: sortListings(found.listings) } : {}),
     ...(catalogued ? { catalogue: catalogued } : {}),
     ...(found?.note ? { listingNote: found.note } : {}),
     from: {

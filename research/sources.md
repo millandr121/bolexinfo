@@ -84,8 +84,64 @@ Picked out of the Pacific Rim list because they close a known gap:
   - `rl/02027` — **1946**. Image-only scan, 122 MB.
   - `rl/01775` — **Feb 1952**. Image-only, 78 MB; OCR'd, and its pages 21
     and 22 are a full Bolex retail price list.
-  - `rl/01859` — **Nov 1952**. Carries text.
-  - `rl/04916` — **Feb 1965**. Carries text.
+  - `rl/01859` — **Nov 1952**. Carries text, and **pages 21 and 22 are a
+    second full retail price list**, nine months after the February one.
+    Mined. It prices the **Bolex Stereo** in full, kit by kit, which no
+    other document here does. Setting it beside February: every H-16 and
+    H-8 outfit with a single lens held its price exactly, the two
+    three-lens outfits rose $7.00 and $8.05, the Yvar 75mm went $87.50 to
+    $94.50 and three small Yvars rose a few dollars, and an H-8 with the
+    Yvar 13mm appears that February does not sell.
+  - `rl/04916` — **Feb 1965**. Carries text. Mined for prices and has
+    **none**: not a price in the document. Worth knowing so nobody opens
+    122 MB looking again.
+- **The dealer price lists, and a trap in the 1970s ones.** Seven of the
+  eight Pacific Rim holds have now been mined: `rl/04928`, `rl/04929`,
+  `rl/04932`, `rl/04933` (1965–67), `rl/02211`, `rl/02210`, `rl/02209`
+  (1976–79). Transcriptions are in `research/price-lists/`.
+  - `rl/02211` — **1 October 1976**, EPOI. Columns print as **Dealer Cost
+    then Suggested Retail**, so retail is the *second* number.
+  - `rl/02210` — **1 January 1978**, EPOI. Columns print as **Suggested
+    Retail then Dealer Net**, the other way round, so retail is the
+    *first* number.
+  - Nothing distinguishes them but the column headers, which the OCR does
+    not reliably keep beside their own numbers. Taking the same column
+    from both would publish a dealer's cost as a shop price, roughly a
+    third under. Both headers were read off the rendered page, and so was
+    every figure taken from them. The same rule holds for the rest.
+  - These two also price the **H-16 EL, EBM and SBM**, which the archive
+    has no entries for at all. Three major production cameras with no
+    page: the clearest gap the price lists have turned up. They are part
+    of a longer list, in
+    findings/models-the-price-lists-name.md: fifteen models the lists
+    price and the archive never covered, each with a product number and a
+    dated figure already read off the page.
+- **The two Super 8 price lists, downloaded and mined.** Both have a
+  single Suggested Retail column, so neither carries the 16mm lists' trap.
+  - `rl/04942` — **23 February 1972**, Paillard Inc., Linden NJ and Los
+    Angeles. Headed "BOLEX SUPER 8MM CONFIDENTIAL PRICE LIST,
+    MODIFICATION OF PRICE LIST DATED JUNE, 1971", so a **June 1971 list
+    exists** and is not on Pacific Rim. The bracketed number beside each
+    row is the dealer's cost, not a product code: the 160 Macrozoom reads
+    `(08200-00)` against a $300.00 retail, which is $200.00 to the dealer
+    and $190.00 at three or more.
+  - `rl/02226` — **1 April 1979**, Bolex (U.S.A.) Inc., list no. S1.
+  - **This was the manufacturer document for the SP8**, which the archive
+    had no entry for: "SP8 SOUND, product 2480, w/f/1.3 15-30mm Zoom
+    Lens, $299.50". The SP 8 entry is now written from it. The same page
+    prices the SM8 Sound at $449.50 and the 18-5L Super at $199.50, both
+    of which the archive had undated and unpriced.
+  - **The SM-80 question, answered.** The April 1979 list has no SP 80.
+    It has an **SM-80 Programmatic** at $780.00, which looked at first
+    like the SP 80 under another name. It is not. Super8Data has it as
+    its own 1977 model with a 240m reel, recording on both tracks and a
+    f/1.2 12.5-25mm lens, against the SP 80's 180m reel, single track and
+    1973 to 1974 run. So the SP 80 still has **no** manufacturer document
+    and the entry is unchanged. An SM 80 Programmatic entry is a separate
+    thing the archive could add, and it now has a price for it.
+  - Same source on the family: the SP 8 runs on Eumig's Mark S chassis,
+    and the SP 80 on the SP 8 Special's. That is a collector database,
+    not Bolex, so it is cited as one.
 - "Bolex Sterero Instruction Book" (their spelling) — the Stereo/Triorama.
 - The SP 80 is **not on Pacific Rim**, despite an earlier note here saying
   an "SP8/SP80 Instruction Book" was listed. It is not. The SP59 to SP62
