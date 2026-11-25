@@ -270,6 +270,76 @@
       "recovery": "summary-only"
     },
     {
+      "slug": "280",
+      "name": "280 Macrozoom",
+      "format": "Super 8",
+      "introduced": null,
+      "summary": "The top of the silent Super 8 range before the 680, and the camera the brochure calls brand new. An 8 to 1 zoom, 7mm wide angle to 56mm telephoto, with the macro focusing Bolex had pioneered: from infinity down to the front element of the lens, no attachment and no trick to it, with power focusing in the macro range. Macro work is done at the wide end, which is where a camera held in the hands is steadiest. Two-speed power zoom, viewing, focusing and metering all through the lens, single frame, a dioptre eyepiece, and a manual override for snow, bright beaches and reflections. $349.50 in February 1972.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "Bolex Super 8 range brochure, \"From the people who build the best\"",
+          "url": "https://www.pacificrimcamera.com/rl/02675/02675.pdf",
+          "note": "Bolex's own brochure, a page to each camera, covering the 280, 160, 155 and 233 Compact and the 18-9 DUO and Multimatic projectors. Undated. Scanned by Pacific Rim Camera."
+        },
+        {
+          "title": "Bolex Reporter, Super 8 range feature",
+          "url": "https://www.pacificrimcamera.com/rl/02670/02670.pdf",
+          "note": "Paillard's own magazine, running through the Super 8 line with a paragraph each. Where it and the range brochure overlap they agree. Scanned by Pacific Rim Camera."
+        },
+        {
+          "title": "Bolex Super 8mm Confidential Price List, 23 February 1972",
+          "url": "https://www.pacificrimcamera.com/rl/04942/04942.pdf",
+          "note": "Paillard's dealer list, one Suggested Retail column. The bracketed figure beside each row is the dealer's cost, not a product code. Read off the rendered page."
+        }
+      ]
+    },
+    {
+      "slug": "250",
+      "name": "250",
+      "format": "Super 8",
+      "introduced": null,
+      "summary": "The economical one, and Bolex says so outright: the same ruggedness as the advanced cameras with the accent on price. A 5 to 1 zoom, exposure fully automatic, power zoom, and a bright finder. Film speed sets itself from the cartridge, ASA 25 to 160, which at the time meant Kodachrome or the new Ektachrome 160 for filming indoors without lights. $229.50 in February 1972.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "Bolex Reporter, Super 8 range feature",
+          "url": "https://www.pacificrimcamera.com/rl/02670/02670.pdf",
+          "note": "Paillard's own magazine, running through the Super 8 line with a paragraph each. Where it and the range brochure overlap they agree. Scanned by Pacific Rim Camera."
+        },
+        {
+          "title": "Bolex Super 8mm Confidential Price List, 23 February 1972",
+          "url": "https://www.pacificrimcamera.com/rl/04942/04942.pdf",
+          "note": "Paillard's dealer list, one Suggested Retail column. The bracketed figure beside each row is the dealer's cost, not a product code. Read off the rendered page."
+        }
+      ]
+    },
+    {
+      "slug": "233-compact",
+      "name": "233 Compact",
+      "format": "Super 8",
+      "introduced": null,
+      "summary": "The pocket one, sold on its size and nothing else. An inch and three quarters thick and three inches high, 21 ounces, small enough for a jacket pocket or a glove compartment. A 9 to 30mm zoom, automatic electric eye exposure, a bright finder, and focusing from four feet to infinity. The brochure's own pitch is that it is the camera you will actually have with you, and that if Ian Fleming were alive he would have given one to Bond. Also sold as the 233S Compact. $120.00 in February 1972, the cheapest camera on the list.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "Bolex Super 8 range brochure, \"From the people who build the best\"",
+          "url": "https://www.pacificrimcamera.com/rl/02675/02675.pdf",
+          "note": "Bolex's own brochure, a page to each camera, covering the 280, 160, 155 and 233 Compact and the 18-9 DUO and Multimatic projectors. Undated. Scanned by Pacific Rim Camera."
+        },
+        {
+          "title": "Bolex Reporter, Super 8 range feature",
+          "url": "https://www.pacificrimcamera.com/rl/02670/02670.pdf",
+          "note": "Paillard's own magazine, running through the Super 8 line with a paragraph each. Where it and the range brochure overlap they agree. Scanned by Pacific Rim Camera."
+        },
+        {
+          "title": "Bolex Super 8mm Confidential Price List, 23 February 1972",
+          "url": "https://www.pacificrimcamera.com/rl/04942/04942.pdf",
+          "note": "Paillard's dealer list, one Suggested Retail column. The bracketed figure beside each row is the dealer's cost, not a product code. Read off the rendered page."
+        }
+      ]
+    },
+    {
       "slug": "75macro",
       "name": "7.5 Macrozoom",
       "format": "Super 8",

@@ -43,6 +43,8 @@ Facebook Marketplace and the local classifieds are the worst place to find a pri
 
 **Condition is most of the price.** A recently serviced body and an untested one are the same model and nowhere near the same money. A camera that has not run in twenty years will want a service costing a meaningful fraction of what the camera is worth, and that cost comes off the price, not out of the buyer's goodwill.
 
+This was true when the cameras were new. Paillard's own factory service centres in New York and Los Angeles charged **$48.00 to overhaul the mechanism of an H camera** and $30.00 to clean and lubricate one, parts extra, against $22.00 and $14.50 for an 8mm L8, C8 or B8. An H-16 Leader cost $299.50 at the time, so a full overhaul was about a sixth of the camera. Sixty years later the proportion has not improved, and the camera is older.
+
 **What is attached matters as much.** The glass is often worth more than the body it is on. A turret with three good Switars is a different object from the same camera bare, and a rare lens can carry an otherwise ordinary outfit.
 
 **Three sales is not a market.** This gear sells rarely enough that any figure you arrive at is a range, not a price. Treat the middle of several recent sold results as the honest answer and the extremes as noise.

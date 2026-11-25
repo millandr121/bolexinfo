@@ -170,6 +170,26 @@
           "note": "Which is the context for a Bolex-badged projector built on an Austrian mechanism."
         }
       ]
+    },
+    {
+      "slug": "189duo",
+      "name": "18-9 DUO",
+      "format": "Super 8",
+      "introduced": null,
+      "summary": "The projector that takes everything. Reels from 50 to 400 feet, Kodak cartridges from 50 to 400 feet, and regular 8 as well as Super 8, which is what the DUO means. 18 frames a second or 9 for slow motion. A f/1.3 15-30mm Paillard Bolex Hi-Fi zoom and a 100W mirror halogen lamp. It stops itself at the end of the film, the film can stay attached to the reel so nothing needs fixing on before a rewind, and it rewinds fast through the gate or reel to reel, whether the film ran all the way through or not. $189.50 in February 1972.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "Bolex Super 8 range brochure, \"From the people who build the best\"",
+          "url": "https://www.pacificrimcamera.com/rl/02675/02675.pdf",
+          "note": "Bolex's own brochure, a page to each camera, covering the 280, 160, 155 and 233 Compact and the 18-9 DUO and Multimatic projectors. Undated. Scanned by Pacific Rim Camera."
+        },
+        {
+          "title": "Bolex Super 8mm Confidential Price List, 23 February 1972",
+          "url": "https://www.pacificrimcamera.com/rl/04942/04942.pdf",
+          "note": "Paillard's dealer list, one Suggested Retail column. The bracketed figure beside each row is the dealer's cost, not a product code. Read off the rendered page."
+        }
+      ]
     }
   ]
 }

@@ -176,6 +176,27 @@ Picked out of the Pacific Rim list because they close a known gap:
   - Same source on the family: the SP 8 runs on Eumig's Mark S chassis,
     and the SP 80 on the SP 8 Special's. That is a collector database,
     not Bolex, so it is cited as one.
+- `rl/04927` — **Paillard's factory service charges**, Service and
+  Technical Division, New York and Los Angeles. Undated; the footer print
+  code reads SU-58, and the Octameter installation is at the same $75.50
+  the November 1952 list gives while the sound-sprocket installation has
+  gone from $13.50 to $16.50, so it is later than 1952. Retail and Dealer
+  Net columns, in that order, read by eye.
+  - **An H camera overhaul was $48.00, a clean and lubrication $30.00**,
+    parts extra. An 8mm L8, C8 or B8 was $22.00 and $14.50, an M8
+    projector $22.50, a G816 $58.00. Cited in the "What one is worth"
+    article, which until now asserted that servicing costs a meaningful
+    fraction of a camera's value without anything behind it.
+  - It also prices **conversions and modernizations**, which is history
+    the archive does not otherwise hold: a new Supreme Turret fitted to
+    an H-8 or H-16 for $74.50 less $10.00 for the old one, a Deluxe
+    Turret for $49.00 less the same, an Octameter installation, a filter
+    slot with holders and gelatins, sound sprockets for H-16 only, a new
+    pressure pad, a 20 per cent stronger spring motor, a third turret
+    focusing lock, and **conversion of a C-8 to a B-8**. Worth an entry
+    or an article of its own; not yet written up.
+  - Several figures in it are OCR-damaged, $48.00 printing as $~8.00 and
+    $74.50 as $?q.50. Read the page.
 - "Bolex Sterero Instruction Book" (their spelling) — the Stereo/Triorama.
 - The SP 80 is **not on Pacific Rim**, despite an earlier note here saying
   an "SP8/SP80 Instruction Book" was listed. It is not. The SP59 to SP62
@@ -188,6 +209,9 @@ Picked out of the Pacific Rim list because they close a known gap:
   Pan Cinors, anamorphic projection, photomicrography. The count of 29 was
   wrong too. The series runs to at least No. 36, Pacific Rim holds 16, and
   one of those (No. 3, `rl/02108/02108.pdf`) 404s on their own server.
+  **Re-checked 25 November 2026: still 404, and the archive hosts all 15
+  that do resolve.** The bulletin series is therefore complete as far as
+  Pacific Rim can make it.
 
 ## How material gets here
 
