@@ -46,10 +46,12 @@ export default async function ArticlePage({ params }: Props) {
       <div className="prose-archive mt-6">
         <h1>{article.title}</h1>
         {/*
-          A byline only where one is needed. Michael's articles are the
-          house voice of this site and carry his credit at the foot, as
-          they always did. An article the archive wrote says so at the
-          top, before the reader has taken it for his.
+          Every article says who wrote it. Michael's carry his credit at
+          the foot, as they always did on his site; everything written
+          since is bylined at the top. That is the whole of what a reader
+          needs, and no article has to justify its existence: this
+          section preserves his work and carries it on, which is the
+          point of the modern site.
         */}
         {article.author && (
           <p className="not-prose font-[family-name:var(--font-mono)] text-[0.66rem] uppercase tracking-[0.18em] text-[var(--fg-soft)]">
@@ -61,12 +63,6 @@ export default async function ArticlePage({ params }: Props) {
       </div>
       {article.originalUrl ? (
         <SourceNote>Written by Michael Tisdale for BolexCollector.com.</SourceNote>
-      ) : article.author ? (
-        <SourceNote>
-          Written for this archive, not by Michael Tisdale. It is here because the question it
-          answers is the one readers arrive with most often and the original site never covered
-          it.
-        </SourceNote>
       ) : null}
     </article>
   );
