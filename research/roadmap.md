@@ -511,7 +511,7 @@ is not re-walked.
 | **Cine Repair** | Queens, New York | Named in r/bolex as having overhauled a REX-4. Not yet checked against a site. |
 | **CameraCrate** | UK | Sells refurbished H16s rather than taking repairs in. |
 | **P+S Technik** | Munich | Suggested in a thread by someone who said themselves they did not know whether it handles Bolex. |
-| **ausgeknipst.de** | Germany | A directory of analogue repair workshops, apparently maintained. Worth reading properly as a source of further names. |
+| **ausgeknipst.de** | Germany | **Read, 25 November 2026. No new names.** See technicians.md. |
 
 Checked and **dead**: `super16inc.com`, named in r/bolex alongside
 Du-All and Visual Products, is now a parked domain offered for sale.

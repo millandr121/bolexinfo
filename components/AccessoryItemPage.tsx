@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Reveal } from "./Reveal";
 import { ImageGallery } from "./ImageGallery";
 import { ArchiveCompare } from "./ArchiveCompare";
-import { PriceReports } from "./PriceReports";
+import { PriceAsk } from "./PriceAsk";
 import { originalArchiveHref } from "@/lib/archive";
 import { dateLabel, type AccessoryItem } from "@/lib/accessory-items";
 
@@ -99,81 +99,6 @@ export function AccessoryItemPage({ item }: { item: AccessoryItem }) {
             </section>
           )}
 
-          {/*
-            The catalogues, which reach back further than the dealer price
-            lists do. The earliest is February 1952, and for most of these
-            objects it is the only price anyone has recorded.
-          */}
-          {item.catalogue && (
-            <section className="rule mt-10 pt-4" aria-labelledby="catalogue">
-              <h2
-                id="catalogue"
-                className="font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.16em] text-[var(--accent)]"
-              >
-                In the {item.catalogue.month ? `${item.catalogue.month} ` : ""}
-                {item.catalogue.year} Bolex retail price list
-              </h2>
-              <p className="mt-3 font-[family-name:var(--font-mono)] text-[0.72rem] leading-relaxed text-[var(--fg-soft)]">
-                {item.catalogue.price && (
-                  <span className="text-[var(--fg)]">{item.catalogue.price}</span>
-                )}{" "}
-                · listed as &ldquo;{item.catalogue.asPrinted}&rdquo;
-                {item.catalogue.note ? `. ${item.catalogue.note}` : "."}{" "}
-                <a
-                  href={`https://www.pacificrimcamera.com/rl/${item.catalogue.doc}/${item.catalogue.doc}.pdf`}
-                  target="_blank"
-                  rel="noreferrer nofollow"
-                  className="text-[var(--accent)] underline underline-offset-4"
-                >
-                  the catalogue ↗
-                </a>
-              </p>
-            </section>
-          )}
-
-          {/*
-            Paillard's own dealer price lists, which are the only hard
-            dates on most of these pages and the only place the archive
-            has ever had a code for an accessory. Where a thing appears in
-            several lists all the prices are kept, because what it cost
-            over time is itself worth knowing.
-          */}
-          {item.listings && item.listings.length > 0 && (
-            <section className="rule mt-10 pt-4" aria-labelledby="listings">
-              <h2
-                id="listings"
-                className="font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.16em] text-[var(--accent)]"
-              >
-                In Paillard&rsquo;s dealer price lists
-              </h2>
-              <ul className="mt-3 space-y-2">
-                {item.listings.map((listing) => (
-                  <li
-                    key={`${listing.doc}-${listing.asPrinted}`}
-                    className="font-[family-name:var(--font-mono)] text-[0.72rem] leading-relaxed"
-                  >
-                    <span className="text-[var(--fg)]">{listing.price}</span>
-                    <span className="text-[var(--fg-soft)]">
-                      {" "}
-                      · {listing.date} · listed as &ldquo;{listing.asPrinted}&rdquo; ·{" "}
-                      <a
-                        href={`https://www.pacificrimcamera.com/rl/${listing.doc}/${listing.doc}.pdf`}
-                        target="_blank"
-                        rel="noreferrer nofollow"
-                        className="text-[var(--accent)] underline underline-offset-4"
-                      >
-                        the list ↗
-                      </a>
-                    </span>
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-3 font-[family-name:var(--font-mono)] text-[0.66rem] leading-relaxed text-[var(--fg-soft)]">
-                Scanned by Pacific Rim Camera. Matched to this object by hand, not by script.
-                {item.listingNote ? ` ${item.listingNote}` : ""}
-              </p>
-            </section>
-          )}
 
           {item.yearNote && (
             <p className="mt-6 font-[family-name:var(--font-mono)] text-[0.66rem] leading-relaxed text-[var(--fg-soft)]">
@@ -218,7 +143,7 @@ export function AccessoryItemPage({ item }: { item: AccessoryItem }) {
       </Reveal>
 
       <Reveal>
-        <PriceReports slug={item.slug} section="accessories" name={item.name} />
+        <PriceAsk slug={item.slug} section="accessories" name={item.name} />
       </Reveal>
 
       {archiveHref && (

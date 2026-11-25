@@ -37,6 +37,6 @@ export const COMMUNITY_LINKS: readonly CommunityLink[] = [
   {
     href: "https://www.photrio.com/forum/",
     label: "Photrio",
-    blurb: "Analogue photography forums, with a motion-picture corner.",
+    blurb: "Film photography forums, with a motion-picture corner.",
   },
 ];

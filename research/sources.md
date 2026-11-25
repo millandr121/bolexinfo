@@ -10,7 +10,7 @@ Reachability was tested on 2026-11-18 from this project's cloud session.
 
 | Source | Holds | Reachable | Terms |
 |---|---|---|---|
-| [pacificrimcamera.com](https://www.pacificrimcamera.com/rl/rlBolex.htm) | **83 Bolex PDFs** — 72 misc (brochures, instruction books, catalogues 1946–1965, *Bolex Reporter* 1967–72, 16 technical bulletins), 8 price lists, 3 projector | yes | none stated; describes itself as "an online library of photo related PDF files" |
+| [pacificrimcamera.com](https://www.pacificrimcamera.com/rl/rlBolex.htm) | **75 Bolex PDFs**, all downloaded and catalogued — 72 misc (brochures, instruction books, catalogues 1946–1965, *Bolex Reporter*, 16 technical bulletins), 11 price lists, 3 projector, with overlaps. The earlier count of 83 here was wrong, and so was "8 price lists" | yes | none stated; describes itself as "an online library of photo related PDF files" |
 | [camera-wiki.org](https://camera-wiki.org/wiki/Bolex) | encyclopaedia entries | yes | **GFDL 1.3** — reusable with attribution and share-alike |
 | [filmatlas.com](https://www.filmatlas.com/entry/150) | Bolex Stereo / Triorama, detailed | yes | no licence stated; cite Hess, Hillary (2024), *Film Atlas*, FIAF / George Eastman Museum. Some images credited individually |
 | [pathefilm.uk](https://pathefilm.uk/95gear/95gearBolex.htm) | 9.5mm gear, Pathé side | yes | none stated |
@@ -70,6 +70,12 @@ material it did not create:
 
 ## Notable documents
 
+**All 75 Bolex PDFs on Pacific Rim were downloaded and catalogued on 25
+November 2026. The full list, what each one is, which are mined and
+which are not, is in findings/pacific-rim-sweep.md.** That file also
+collects the OCR traps document by document, which is the part worth
+reading before opening any of them.
+
 Picked out of the Pacific Rim list because they close a known gap:
 
 - `rl/00936/00936.pdf` — **Bolex 16 Pro Sales Brochure**. Primary source,
@@ -109,13 +115,47 @@ Picked out of the Pacific Rim list because they close a known gap:
     from both would publish a dealer's cost as a shop price, roughly a
     third under. Both headers were read off the rendered page, and so was
     every figure taken from them. The same rule holds for the rest.
-  - These two also price the **H-16 EL, EBM and SBM**, which the archive
-    has no entries for at all. Three major production cameras with no
-    page: the clearest gap the price lists have turned up. They are part
-    of a longer list, in
-    findings/models-the-price-lists-name.md: fifteen models the lists
-    price and the archive never covered, each with a product number and a
-    dated figure already read off the page.
+  - These two also price the **H-16 EL, EBM and SBM**. All three now have
+    entries, written from `rl/02241`, the EPOI brochure covering the five
+    H-16 models, which gives full specifications and the same product
+    numbers the lists use. The rest of the gap is in
+    findings/models-the-price-lists-name.md.
+- **The price-list index holds ELEVEN, not eight.** This file said eight
+  for a long time and it was wrong: `rl/rlBolexPriceLists.htm` lists
+  eleven, one of which is a projector sheet. All ten Bolex ones are now
+  mined. The two found late were:
+  - `rl/04950` — **13 February 1970**, H-16 dealer list, two pages, one
+    Suggested Retail Price column. It fills the 1967 to 1972 gap, which
+    was the widest the chart had, and it is the densest single document
+    the archive holds: lenses, accessories, tripods, motors, cases, the
+    S-311 and S-321 projectors and the camera bodies, each with its
+    five-letter code. Its OCR corrupts the prices themselves, printing
+    48.00 as 4B.00 and 59.50 as 59_50, so every figure was read off the
+    rendered page.
+  - `rl/04946` — **Bolex/Hasselblad Federal Supply Schedule**, 30 March
+    to 30 November 1970, 16 pages. A GSA contract price list covering
+    Bolex cameras, Super 8 projectors, Hasselblad and **the Bolex 16
+    Pro**. Downloaded, not yet mined. Government contract prices are not
+    retail and would need saying so plainly if used.
+- **Three more price lists exist and are not on Pacific Rim.** Each is
+  named as the one its successor replaced:
+  - `rl/04950` (Feb 1970, 16mm) replaces a list dated **February 1969**.
+  - `rl/04932` (Feb 1972, 16mm) replaces one dated **July 1971**.
+  - `rl/04942` (Feb 1972, Super 8) replaces one dated **June 1971**.
+  The 1971 pair would be the earliest pricing the archive could hold for
+  the EBM and the Super 8 line. Worth watching for.
+- **The Feb 1970 list keys every row to the Bolex Reporter Product
+  Buying Guide**, by page number. Pacific Rim holds Bolex Reporter
+  issues 1967 to 1972 in its Misc section. That guide is therefore a
+  real document with a known structure, and finding the matching issue
+  would pair a picture and a description to each priced line.
+- **`rl/04932` holds camera bodies, not only lenses.** It was mined for
+  lenses first and the bodies were missed: the EBM at $1,320.00 body
+  only, the SBM at $720.00, the REX-5 and the M-5. It also has **no EL
+  in it at all**, which with the EL present in October 1976 brackets
+  that camera's arrival between the two dates. Its OCR renders every
+  capital B as an E, so BOLEX reads EOLEX and SBM reads SEM; read it by
+  eye.
 - **The two Super 8 price lists, downloaded and mined.** Both have a
   single Suggested Retail column, so neither carries the 16mm lists' trap.
   - `rl/04942` — **23 February 1972**, Paillard Inc., Linden NJ and Los
@@ -142,6 +182,38 @@ Picked out of the Pacific Rim list because they close a known gap:
   - Same source on the family: the SP 8 runs on Eumig's Mark S chassis,
     and the SP 80 on the SP 8 Special's. That is a collector database,
     not Bolex, so it is cited as one.
+- **The 1965 lists hold projectors, and the archive had only taken lenses
+  and accessories out of them.** `rl/04929` (June 1965) prices the 18-5
+  and 18-5 Automatic in six configurations each, by case and by lens,
+  with a five-letter code for every one, plus the separate projector
+  lenses. Those are in now. It also prices an **18-5R Automatic
+  Projector**, identical in price to the 18-5 Automatic, and the price
+  list does not say what the R means. **`rl/04924` does: "A 50-cycle
+  version R is available for use outside of the U.S.A."** So the 18-5R
+  is the export 18-5 Automatic and not a separate model, which is why it
+  costs the same to the cent. No entry needed, and the question is
+  closed.
+- `rl/04927` — **Paillard's factory service charges**, Service and
+  Technical Division, New York and Los Angeles. Undated; the footer print
+  code reads SU-58, and the Octameter installation is at the same $75.50
+  the November 1952 list gives while the sound-sprocket installation has
+  gone from $13.50 to $16.50, so it is later than 1952. Retail and Dealer
+  Net columns, in that order, read by eye.
+  - **An H camera overhaul was $48.00, a clean and lubrication $30.00**,
+    parts extra. An 8mm L8, C8 or B8 was $22.00 and $14.50, an M8
+    projector $22.50, a G816 $58.00. Cited in the "What one is worth"
+    article, which until now asserted that servicing costs a meaningful
+    fraction of a camera's value without anything behind it.
+  - It also prices **conversions and modernizations**, which is history
+    the archive does not otherwise hold: a new Supreme Turret fitted to
+    an H-8 or H-16 for $74.50 less $10.00 for the old one, a Deluxe
+    Turret for $49.00 less the same, an Octameter installation, a filter
+    slot with holders and gelatins, sound sprockets for H-16 only, a new
+    pressure pad, a 20 per cent stronger spring motor, a third turret
+    focusing lock, and **conversion of a C-8 to a B-8**. Worth an entry
+    or an article of its own; not yet written up.
+  - Several figures in it are OCR-damaged, $48.00 printing as $~8.00 and
+    $74.50 as $?q.50. Read the page.
 - "Bolex Sterero Instruction Book" (their spelling) — the Stereo/Triorama.
 - The SP 80 is **not on Pacific Rim**, despite an earlier note here saying
   an "SP8/SP80 Instruction Book" was listed. It is not. The SP59 to SP62
@@ -154,6 +226,9 @@ Picked out of the Pacific Rim list because they close a known gap:
   Pan Cinors, anamorphic projection, photomicrography. The count of 29 was
   wrong too. The series runs to at least No. 36, Pacific Rim holds 16, and
   one of those (No. 3, `rl/02108/02108.pdf`) 404s on their own server.
+  **Re-checked 25 November 2026: still 404, and the archive hosts all 15
+  that do resolve.** The bulletin series is therefore complete as far as
+  Pacific Rim can make it.
 
 ## How material gets here
 

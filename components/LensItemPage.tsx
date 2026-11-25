@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Reveal } from "./Reveal";
 import { ImageGallery } from "./ImageGallery";
 import { ArchiveCompare } from "./ArchiveCompare";
-import { PriceReports } from "./PriceReports";
+import { PriceAsk } from "./PriceAsk";
 import { originalArchiveHref } from "@/lib/archive";
 import { lensDateLabel, type LensItem } from "@/lib/lens-types";
 
@@ -14,6 +14,24 @@ import { lensDateLabel, type LensItem } from "@/lib/lens-types";
  * and nothing else to go on. Then focal length and aperture, then the date,
  * which for most of these is only a decade and says so.
  */
+/** The brochure's own row names, in plain words. */
+const SPEC_LABELS: Record<string, string> = {
+  catalogueNumber: "Catalogue number",
+  designedFor: "Designed for",
+  maximumAperture: "Maximum aperture",
+  minimumDiaphragm: "Minimum diaphragm",
+  angleOfView: "Angle of view",
+  minimumFocus: "Minimum focusing distance",
+  areaAtMinimumFocus: "Area covered, closest",
+  areaAt20Feet: "Area covered at 20ft",
+  depthOfFieldScale: "Depth of field scale",
+  lengthAtInfinity: "Length at infinity",
+  frontDiameter: "Front diameter",
+  maximumDiameter: "Maximum diameter",
+  weight: "Weight",
+  filterAdapter: "Filter adapter",
+};
+
 export function LensItemPage({ item }: { item: LensItem }) {
   const archiveHref = originalArchiveHref(item.from.originalPath ?? undefined);
   const images = item.images.map((i) => ({ src: i.src, alt: i.alt || item.name }));
@@ -144,82 +162,50 @@ export function LensItemPage({ item }: { item: LensItem }) {
           )}
 
           {/*
-            The catalogue entry, where there is one and the lens also has
-            prose of its own. Where it does not, the catalogue is already
-            the description above and this would repeat it.
+            What Paillard measured. Shown as the brochure's own table
+            rather than folded into prose, because the useful thing about
+            a weight or a minimum focusing distance is being able to find
+            it and compare it, not read about it.
           */}
-          {item.catalogue && item.description && (
-            <section className="rule mt-10 pt-4" aria-labelledby="catalogue">
+          {item.specs && (
+            <section className="rule mt-10 pt-4" aria-labelledby="specs">
               <h2
-                id="catalogue"
+                id="specs"
                 className="font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.16em] text-[var(--accent)]"
               >
-                In the {item.catalogue.month ? `${item.catalogue.month} ` : ""}
-                {item.catalogue.year} catalogue
+                Measured
               </h2>
-              <p className="mt-3 font-[family-name:var(--font-mono)] text-[0.72rem] leading-relaxed text-[var(--fg-soft)]">
-                {item.catalogue.price ? (
-                  <span className="text-[var(--fg)]">{item.catalogue.price}</span>
-                ) : null}{" "}
-                Listed as &ldquo;{item.catalogue.asPrinted}&rdquo;
-                {item.catalogue.price ? "" : `, offered for ${item.catalogue.offeredFor}`}.
-                {item.catalogue.note ? ` ${item.catalogue.note}` : ""}{" "}
+              <dl className="mt-3 grid gap-x-6 gap-y-1.5 sm:grid-cols-[max-content_1fr]">
+                {Object.entries(item.specs).map(([label, value]) => (
+                  <div
+                    key={label}
+                    className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-0.5 border-b border-[var(--line)] pb-1.5 font-[family-name:var(--font-mono)] text-[0.72rem] leading-relaxed sm:contents"
+                  >
+                    <dt className="text-[var(--fg-soft)] sm:border-b sm:border-[var(--line)] sm:pb-1.5">
+                      {SPEC_LABELS[label] ?? label}
+                    </dt>
+                    <dd className="text-[var(--fg)] sm:border-b sm:border-[var(--line)] sm:pb-1.5">
+                      {value}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+              <p className="mt-3 font-[family-name:var(--font-mono)] text-[0.66rem] leading-relaxed text-[var(--fg-soft)]">
+                From Paillard&rsquo;s own{" "}
                 <a
-                  href={`https://www.pacificrimcamera.com/rl/${item.catalogue.doc}/${item.catalogue.doc}.pdf`}
+                  href="https://www.pacificrimcamera.com/rl/01992/01992.pdf"
                   target="_blank"
                   rel="noreferrer nofollow"
                   className="text-[var(--accent)] underline underline-offset-4"
                 >
-                  the catalogue ↗
+                  Lenses for 16mm Motion Picture and Television Cameras ↗
                 </a>
+                , read off the page rather than the scan&rsquo;s text, which pairs every figure
+                with the wrong lens.
               </p>
             </section>
           )}
 
-          {/*
-            Hard evidence, and the only kind on this page that is not
-            Michael's: Paillard's own dealer price lists give a lens, its
-            code and a price on a stated date. A price in the May 1967
-            list proves the lens was on sale in May 1967, which is more
-            than most of these entries could say before.
-          */}
-          {item.listings && item.listings.length > 0 && (
-            <section className="rule mt-10 pt-4" aria-labelledby="listings">
-              <h2
-                id="listings"
-                className="font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.16em] text-[var(--accent)]"
-              >
-                In Paillard&rsquo;s dealer price lists
-              </h2>
-              <ul className="mt-3 space-y-2">
-                {item.listings.map((listing) => (
-                  <li
-                    key={`${listing.doc}-${listing.asPrinted}`}
-                    className="font-[family-name:var(--font-mono)] text-[0.72rem] leading-relaxed"
-                  >
-                    <span className="text-[var(--fg)]">{listing.price}</span>
-                    <span className="text-[var(--fg-soft)]">
-                      {" "}
-                      · {listing.date} · listed as &ldquo;{listing.asPrinted}&rdquo; ·{" "}
-                      <a
-                        href={`https://www.pacificrimcamera.com/rl/${listing.doc}/${listing.doc}.pdf`}
-                        target="_blank"
-                        rel="noreferrer nofollow"
-                        className="text-[var(--accent)] underline underline-offset-4"
-                      >
-                        the list ↗
-                      </a>
-                    </span>
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-3 font-[family-name:var(--font-mono)] text-[0.66rem] leading-relaxed text-[var(--fg-soft)]">
-                Scanned by Pacific Rim Camera. Matched to this lens by hand, not by script: the
-                scans interleave their columns, so a code can land beside the wrong description.
-                {item.listingNote ? ` ${item.listingNote}` : ""}
-              </p>
-            </section>
-          )}
 
           {item.yearNote && (
             <p className="mt-6 font-[family-name:var(--font-mono)] text-[0.66rem] leading-relaxed text-[var(--fg-soft)]">
@@ -281,7 +267,7 @@ export function LensItemPage({ item }: { item: LensItem }) {
       </Reveal>
 
       <Reveal>
-        <PriceReports slug={item.slug} section="lenses" name={item.name} />
+        <PriceAsk slug={item.slug} section="lenses" name={item.name} />
       </Reveal>
 
       {archiveHref && (

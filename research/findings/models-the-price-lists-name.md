@@ -8,8 +8,9 @@ source rather than from dealer listings.
 
 This is a shopping list, not a plan. Nothing here has been added.
 
-Two of the fifteen have been done since this file was written, and are
-kept at the bottom as the worked examples.
+Five of the fifteen have been done since this file was written: the SP 8
+and SM 80 Programmatic as worked examples at the bottom, and the H-16
+EL, EBM and SBM. **Ten remain, all Super 8.**
 
 ---
 
@@ -23,10 +24,12 @@ almost the same gap.
 
 ---
 
-## 16mm, from the October 1976 and January 1978 dealer lists
+## 16mm: done
 
-The clearest omissions in the whole archive. Three major production
-cameras, all electric drive, all priced twice.
+The clearest omissions in the archive, and now written. The EL, EBM and
+SBM have entries, from `rl/02241`, the EPOI brochure covering all five
+H-16 models, with prices from every list that carries them. Kept here
+for the figures.
 
 | Model | Product | Oct 1976 | Jan 1978 |
 | --- | --- | --- | --- |
@@ -34,6 +37,10 @@ cameras, all electric drive, all priced twice.
 | H-16 EL/TV, as above with a TV frame in the finder | 41902 | — | $5,059.00 |
 | H-16 EBM, complete, bayonet, with power grip and zoom | 41754 / 41750 | $3,170.00 | $3,499.00 |
 | H-16 SBM, bayonet mount, w/o multifocal VF | 41810 | $1,493.00 | $2,500.00 |
+
+The February 1972 list (`rl/04932`) adds the EBM at $1,320.00 body only
+and the SBM at $720.00, and has no EL in it, which brackets the EL's
+arrival between February 1972 and October 1976.
 
 Sources: `rl/02211` and `rl/02210`. **Both lists print their two price
 columns in opposite orders.** 1976 is Dealer Cost then Suggested Retail;

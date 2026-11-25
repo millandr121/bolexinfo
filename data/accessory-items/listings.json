@@ -144,13 +144,20 @@
         "date": "May 1967",
         "doc": "04933",
         "asPrinted": "Lightmeter for H Rex"
+      },
+      {
+        "price": "$48.00",
+        "date": "February 1970",
+        "doc": "04950",
+        "asPrinted": "Lightmeter for H Rex"
       }
     ]
   },
   "underwater-housing": {
     "addCodes": [
       "HETEX",
-      "HAMAR"
+      "HAMAR",
+      "HAPRE"
     ],
     "listings": [
       {
@@ -163,6 +170,12 @@
         "price": "$525.00",
         "date": "May 1967",
         "doc": "04933",
+        "asPrinted": "Underwater Housing Complete H-16"
+      },
+      {
+        "price": "$580.00",
+        "date": "February 1970",
+        "doc": "04950",
         "asPrinted": "Underwater Housing Complete H-16"
       }
     ]
@@ -189,6 +202,12 @@
         "date": "May 1967",
         "doc": "04933",
         "asPrinted": "Leather Carrying Case H-1B"
+      },
+      {
+        "price": "$59.50",
+        "date": "February 1970",
+        "doc": "04950",
+        "asPrinted": "H-1B Leather Carrying Case"
       }
     ]
   },
@@ -272,6 +291,12 @@
         "date": "May 1967",
         "doc": "04933",
         "asPrinted": "Ball Joint only"
+      },
+      {
+        "price": "$29.00",
+        "date": "February 1970",
+        "doc": "04950",
+        "asPrinted": "Ball Joint Only"
       }
     ]
   },
@@ -296,6 +321,12 @@
         "price": "$160.00",
         "date": "May 1967",
         "doc": "04933",
+        "asPrinted": "Lens and Accessory Support"
+      },
+      {
+        "price": "$175.00",
+        "date": "February 1970",
+        "doc": "04950",
         "asPrinted": "Lens and Accessory Support"
       }
     ]
@@ -322,6 +353,12 @@
         "date": "May 1967",
         "doc": "04933",
         "asPrinted": "Tripod H (including panhead)"
+      },
+      {
+        "price": "$119.50",
+        "date": "February 1970",
+        "doc": "04950",
+        "asPrinted": "Tripod H (including panhead)"
       }
     ]
   },
@@ -335,6 +372,12 @@
         "date": "May 1967",
         "doc": "04933",
         "asPrinted": "12 Volt Take-up Motor"
+      },
+      {
+        "price": "$99.50",
+        "date": "February 1970",
+        "doc": "04950",
+        "asPrinted": "12-Volt 400 Ft. Magazine Take-up Motor"
       }
     ],
     "note": "Listed among the components for the 400ft Bolex, which is what the MM drives."
@@ -349,6 +392,12 @@
         "date": "May 1967",
         "doc": "04933",
         "asPrinted": "H-20\" Cable Release"
+      },
+      {
+        "price": "$7.00",
+        "date": "February 1970",
+        "doc": "04950",
+        "asPrinted": "H-20in Cable Release"
       }
     ]
   },
@@ -361,6 +410,12 @@
         "price": "$13.95",
         "date": "May 1967",
         "doc": "04933",
+        "asPrinted": "Automatic Selftimer Model \"A\""
+      },
+      {
+        "price": "$13.95",
+        "date": "February 1970",
+        "doc": "04950",
         "asPrinted": "Automatic Selftimer Model \"A\""
       }
     ]
@@ -394,6 +449,12 @@
         "date": "May 1967",
         "doc": "04933",
         "asPrinted": "16mm Zoom Camera Case B"
+      },
+      {
+        "price": "$69.50",
+        "date": "February 1970",
+        "doc": "04950",
+        "asPrinted": "16mm Zoom Camera Case B"
       }
     ]
   },
@@ -407,13 +468,20 @@
         "date": "May 1967",
         "doc": "04933",
         "asPrinted": "Unimotor B"
+      },
+      {
+        "price": "$110.00",
+        "date": "February 1970",
+        "doc": "04950",
+        "asPrinted": "Unimotor B"
       }
     ]
   },
   "bolex-monopod": {
     "addCodes": [
       "MONOP",
-      "MONTO"
+      "MONTO",
+      "MONRA"
     ],
     "listings": [
       {
@@ -457,6 +525,24 @@
         "date": "April 1979",
         "doc": "02226",
         "asPrinted": "Monopod with Ball joint"
+      },
+      {
+        "price": "$14.50",
+        "date": "February 1970",
+        "doc": "04950",
+        "asPrinted": "Monopod"
+      },
+      {
+        "price": "$18.50",
+        "date": "February 1970",
+        "doc": "04950",
+        "asPrinted": "Monopod with Ball Joint"
+      },
+      {
+        "price": "$6.50",
+        "date": "February 1970",
+        "doc": "04950",
+        "asPrinted": "Ball Joint Only f/Monopod"
       }
     ],
     "note": "Priced in the 16mm list and in both Super 8 lists, which fits the entry: an 11oz monopod sold from 1961 and still catalogued for the Super 8 cameras. The Pro Monopod of the 1976 and 1978 16mm lists, at ten times the money, is a different and much heavier thing and is not here."
@@ -502,6 +588,12 @@
         "date": "November 1952",
         "doc": "01859",
         "asPrinted": "Extension Tubes (set of four)"
+      },
+      {
+        "price": "$26.00",
+        "date": "February 1970",
+        "doc": "04950",
+        "asPrinted": "16mm Extension Tubes"
       }
     ]
   },
@@ -653,5 +745,44 @@
       }
     ],
     "note": "The one screen priced in the Stereo kit, which is the size this entry describes. The list gives no other screen, so a larger one, if it was sold, is not priced here."
+  },
+  "electric-grip": {
+    "listings": [
+      {
+        "price": "$50.00",
+        "date": "February 1970",
+        "doc": "04950",
+        "asPrinted": "Electric Camera Grip"
+      }
+    ],
+    "addCodes": [
+      "HAFEL"
+    ]
+  },
+  "trifocal-viewfinder": {
+    "listings": [
+      {
+        "price": "$40.00",
+        "date": "February 1970",
+        "doc": "04950",
+        "asPrinted": "Multifocal Viewfinder"
+      }
+    ],
+    "addCodes": [
+      "VITOC"
+    ]
+  },
+  "bolex-unimotor": {
+    "listings": [
+      {
+        "price": "$97.50",
+        "date": "February 1970",
+        "doc": "04950",
+        "asPrinted": "Unimotor Only"
+      }
+    ],
+    "addCodes": [
+      "MOSTE"
+    ]
   }
 }

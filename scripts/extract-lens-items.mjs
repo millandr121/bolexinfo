@@ -228,6 +228,13 @@ const items = raw.map((entry) => {
  * documents. Appended rather than extracted, and flagged, because they
  * are the archive's own work and the page says so.
  */
+/*
+ * Physical specifications from Paillard's lens brochure, keyed by slug.
+ * Applied to extracted and added lenses alike, after both exist, so the
+ * two paths cannot disagree about which lens a table row belongs to.
+ */
+const SPECS = readReview(path.join(OUT_DIR, "specs.json"));
+
 const ADDED = readReview(path.join(OUT_DIR, "added.json"));
 for (const [slug, entry] of Object.entries(ADDED)) {
   items.push({
@@ -239,6 +246,16 @@ for (const [slug, entry] of Object.entries(ADDED)) {
     from: { page: null, heading: null, originalPath: null },
   });
 }
+
+const specsUsed = new Set();
+for (const item of items) {
+  const spec = SPECS[item.slug];
+  if (!spec) continue;
+  item.specs = spec;
+  specsUsed.add(item.slug);
+}
+const straySpecs = Object.keys(SPECS).filter((slug) => !specsUsed.has(slug));
+if (straySpecs.length) console.log(`\n  STRAY specs, no such lens: ${straySpecs.join(", ")}`);
 
 items.sort(
   (a, b) =>
@@ -256,3 +273,4 @@ const strayCat = Object.keys(CATALOGUES).filter((slug) => !cataloguesUsed.has(sl
 if (strayCat.length) console.log(`  STRAY catalogue entries, no such lens: ${strayCat.join(", ")}`);
 console.log(`  with a product code: ${items.filter((i) => i.codes.length).length}`);
 console.log(`  added by this archive: ${items.filter((i) => i.added).length}`);
+console.log(`  with measured specifications: ${items.filter((i) => i.specs).length}`);

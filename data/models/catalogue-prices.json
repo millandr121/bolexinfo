@@ -376,6 +376,38 @@
           "price": "$739.00"
         }
       ]
+    },
+    {
+      "year": 1972,
+      "month": "February",
+      "doc": "04932",
+      "note": "The February 1972 16mm list, headed confidential and sold to dealers, with one Suggested Retail column. Paillard Incorporated, Linden NJ.",
+      "variants": [
+        {
+          "asPrinted": "H-16 M-5 w/Multifocal VF, Single C Mt.",
+          "price": "$370.00"
+        },
+        {
+          "asPrinted": "H-16 M-5 w/o VF, Single C Mt.",
+          "price": "$330.00"
+        }
+      ]
+    },
+    {
+      "year": 1970,
+      "month": "February",
+      "doc": "04950",
+      "note": "The February 13, 1970 dealer list, one Suggested Retail Price column. It replaces a list dated February 1969 and keys every row to a page of the Bolex Reporter Product Buying Guide.",
+      "variants": [
+        {
+          "asPrinted": "H-16 M-5 w/viewfinder",
+          "price": "$330.00"
+        },
+        {
+          "asPrinted": "H-16 M-5 w/o viewfinder",
+          "price": "$290.00"
+        }
+      ]
     }
   ],
   "h16rex5": [
@@ -400,6 +432,54 @@
         {
           "asPrinted": "H-16 REX 5 Three-lens Turret, w/o Multifocal Viewfinder",
           "price": "$2,491.00"
+        }
+      ]
+    },
+    {
+      "year": 1972,
+      "month": "February",
+      "doc": "04932",
+      "note": "The February 1972 16mm list, headed confidential and sold to dealers, with one Suggested Retail column. Paillard Incorporated, Linden NJ.",
+      "variants": [
+        {
+          "asPrinted": "H-16 Rex-5 w/Multifocal VF, Rx-Turret",
+          "price": "$790.00"
+        },
+        {
+          "asPrinted": "H-16 Rex-5 w/o VF, Rx-Turret",
+          "price": "$750.00"
+        }
+      ]
+    },
+    {
+      "year": 1970,
+      "month": "February",
+      "doc": "04950",
+      "note": "The February 13, 1970 dealer list, one Suggested Retail Price column. It replaces a list dated February 1969 and keys every row to a page of the Bolex Reporter Product Buying Guide.",
+      "variants": [
+        {
+          "asPrinted": "H-16 Rex-5 complete",
+          "price": "$730.00"
+        },
+        {
+          "asPrinted": "H-16 Rex-5 w/o viewfinder",
+          "price": "$690.00"
+        }
+      ]
+    },
+    {
+      "year": 1979,
+      "month": "November",
+      "doc": "02209",
+      "note": "The November 1979 list, price list no. P2, one Suggested Retail column. Its product numbers carry an 8 where the 1976 and 1978 lists carry a 4, the last four digits being the same part: 81900 here is 41900 there.",
+      "variants": [
+        {
+          "asPrinted": "H-16 REX 5 Three-lens Turret, w/o Multifocal Viewfinder",
+          "price": "$3,090.00"
+        },
+        {
+          "asPrinted": "H-16 REX 5/TV, Three-lens Turret, w/o Multifocal VF with built-in TV mask in the viewfinder",
+          "price": "$3,445.00"
         }
       ]
     }
@@ -480,6 +560,19 @@
   ],
   "sm8": [
     {
+      "year": 1967,
+      "month": "May",
+      "doc": "04933",
+      "section": "projectors",
+      "note": "The May 1967 dealer list, one Price column, with a five-letter code on every row.",
+      "variants": [
+        {
+          "asPrinted": "SM8 Super 8 Sound Projector w/14-25mm f/1.3 Zoom Lens",
+          "price": "$390.00"
+        }
+      ]
+    },
+    {
       "year": 1972,
       "month": "February",
       "doc": "04942",
@@ -516,6 +609,494 @@
         {
           "asPrinted": "Bolex SM-80 Programmatic",
           "price": "$780.00"
+        }
+      ]
+    }
+  ],
+  "h16ebm": [
+    {
+      "year": 1972,
+      "month": "February",
+      "doc": "04932",
+      "note": "The February 1972 16mm list, headed confidential and sold to dealers, with one Suggested Retail column. Paillard Incorporated, Linden NJ.",
+      "variants": [
+        {
+          "asPrinted": "H-16 EBM Complete (Body Only) w/o 400' mag. & w/o lens, Bay. Mt.",
+          "price": "$1,320.00"
+        },
+        {
+          "asPrinted": "H-16 EBM Complete with 400' mag., Take-Up Motor, Connecting Cord, Vario-Switar POE 100 zoom lens",
+          "price": "$2,446.70"
+        },
+        {
+          "asPrinted": "H-16 EBM Complete with 400' mag., Take-Up Motor, Connecting Cord, Vario-Switar POE 100-4 zoom lens",
+          "price": "$2,586.70"
+        }
+      ]
+    },
+    {
+      "year": 1976,
+      "month": "October",
+      "doc": "02211",
+      "note": "The suggested retail price. This list prints dealer cost first and suggested retail second.",
+      "variants": [
+        {
+          "asPrinted": "H-16 EBM Camera Complete - Bay. Mt. w/Power Grip, Battery, Charger, 3' Cable w/Vario-Switar 100 POE Zoom Lens",
+          "price": "$3,170.00"
+        }
+      ]
+    },
+    {
+      "year": 1978,
+      "month": "January",
+      "doc": "02210",
+      "note": "The suggested retail price. This list prints suggested retail first and dealer net second, the opposite way round from the 1976 one.",
+      "variants": [
+        {
+          "asPrinted": "H-16 EBM Camera Complete - Bay. Mt. w/Power Grip, Battery, Charger",
+          "price": "$3,499.00"
+        }
+      ]
+    },
+    {
+      "year": 1979,
+      "month": "November",
+      "doc": "02209",
+      "note": "The November 1979 list, price list no. P2, one Suggested Retail column. Its product numbers carry an 8 where the 1976 and 1978 lists carry a 4, the last four digits being the same part: 81900 here is 41900 there.",
+      "variants": [
+        {
+          "asPrinted": "H-16 EBM Camera Complete - Bay. Mt. w/Power Grip (#80834), Battery (#81766) and Charger (#81768)",
+          "price": "$3,075.00"
+        }
+      ]
+    }
+  ],
+  "h16sbm": [
+    {
+      "year": 1972,
+      "month": "February",
+      "doc": "04932",
+      "note": "The February 1972 16mm list, headed confidential and sold to dealers, with one Suggested Retail column. Paillard Incorporated, Linden NJ.",
+      "variants": [
+        {
+          "asPrinted": "H-16 SBM w/o VF, Bay. Mt.",
+          "price": "$720.00"
+        }
+      ]
+    },
+    {
+      "year": 1978,
+      "month": "January",
+      "doc": "02210",
+      "note": "The suggested retail price. This list prints suggested retail first and dealer net second, the opposite way round from the 1976 one.",
+      "variants": [
+        {
+          "asPrinted": "H-16 SBM Bayonet Mount w/o Multifocal VF",
+          "price": "$2,500.00"
+        }
+      ]
+    },
+    {
+      "year": 1976,
+      "month": "October",
+      "doc": "02211",
+      "note": "The suggested retail price. This list prints dealer cost first and suggested retail second.",
+      "variants": [
+        {
+          "asPrinted": "H-16 SBM Bayonet Mount w/o Multifocal VF",
+          "price": "$1,493.00"
+        }
+      ]
+    },
+    {
+      "year": 1979,
+      "month": "November",
+      "doc": "02209",
+      "note": "The November 1979 list, price list no. P2, one Suggested Retail column. Its product numbers carry an 8 where the 1976 and 1978 lists carry a 4, the last four digits being the same part: 81900 here is 41900 there.",
+      "variants": [
+        {
+          "asPrinted": "H-16 SBM/TV Bayonet Mount w/o Multifocal VF with built-in TV mask in the viewfinder",
+          "price": "$3,445.00"
+        }
+      ]
+    }
+  ],
+  "h16el": [
+    {
+      "year": 1976,
+      "month": "October",
+      "doc": "02211",
+      "note": "The suggested retail price. This list prints dealer cost first and suggested retail second.",
+      "variants": [
+        {
+          "asPrinted": "H-16 EL Camera Body with Battery (#41920), Charger (#41928), Remote Control Cable, Filter Holder and Gelatin Filters",
+          "price": "$3,300.00"
+        }
+      ]
+    },
+    {
+      "year": 1978,
+      "month": "January",
+      "doc": "02210",
+      "note": "The suggested retail price. This list prints suggested retail first and dealer net second, the opposite way round from the 1976 one.",
+      "variants": [
+        {
+          "asPrinted": "H-16 EL Camera Body with Battery (#41920), Charger (#41928), Remote Control Cable, Filter Holder and Gelatin Filters",
+          "price": "$4,918.00"
+        },
+        {
+          "asPrinted": "H-16 EL/TV same as above, but with built-in TV frame in the viewfinder",
+          "price": "$5,059.00"
+        }
+      ]
+    },
+    {
+      "year": 1979,
+      "month": "November",
+      "doc": "02209",
+      "note": "The November 1979 list, price list no. P2, one Suggested Retail column. Its product numbers carry an 8 where the 1976 and 1978 lists carry a 4, the last four digits being the same part: 81900 here is 41900 there.",
+      "variants": [
+        {
+          "asPrinted": "H-16 EL Camera Body with Battery (#81920), Charger (#81928), Remote Control Cable (#81925), Filter mounts (#80090) and Gelatin Filters (#80093)",
+          "price": "$4,800.00"
+        },
+        {
+          "asPrinted": "H-16 EL/TV same as above, but with built-in TV mask in the viewfinder, X-sync, LED battery test indicator",
+          "price": "$5,885.00"
+        }
+      ]
+    }
+  ],
+  "h16rex4": [
+    {
+      "year": 1970,
+      "month": "February",
+      "doc": "04950",
+      "note": "The February 13, 1970 dealer list, one Suggested Retail Price column. It replaces a list dated February 1969 and keys every row to a page of the Bolex Reporter Product Buying Guide.",
+      "variants": [
+        {
+          "asPrinted": "H-16 Rex-4 body only w/o viewfinder",
+          "price": "$630.00"
+        }
+      ]
+    }
+  ],
+  "s321": [
+    {
+      "year": 1970,
+      "month": "February",
+      "doc": "04950",
+      "note": "The February 13, 1970 dealer list, one Suggested Retail Price column. It replaces a list dated February 1969 and keys every row to a page of the Bolex Reporter Product Buying Guide.",
+      "variants": [
+        {
+          "asPrinted": "Bolex S-321 Optical/Magnetic Sound Projector Complete",
+          "price": "$1,500.00"
+        }
+      ]
+    },
+    {
+      "year": 1972,
+      "month": "February",
+      "doc": "04932",
+      "section": "projectors",
+      "note": "The February 1972 16mm list, headed confidential and sold to dealers, with one Suggested Retail column.",
+      "variants": [
+        {
+          "asPrinted": "BOLEX S-321 Optical/Magnetic Sound Projector Complete w/Sound/Picture Standardization Unit",
+          "price": "$1,590.00"
+        },
+        {
+          "asPrinted": "BOLEX S-321 Optical/Magnetic Sound Projector",
+          "price": "$1,540.00"
+        }
+      ]
+    }
+  ],
+  "s311": [
+    {
+      "year": 1970,
+      "month": "February",
+      "doc": "04950",
+      "note": "The February 13, 1970 dealer list, one Suggested Retail Price column. It replaces a list dated February 1969 and keys every row to a page of the Bolex Reporter Product Buying Guide.",
+      "variants": [
+        {
+          "asPrinted": "Bolex S-311 Optical Sound Projector",
+          "price": "$1,150.00"
+        }
+      ]
+    }
+  ],
+  "680": [
+    {
+      "year": 1979,
+      "month": "April",
+      "doc": "02226",
+      "note": "Bolex (U.S.A.) Inc., Super 8 price list no. S1, one Suggested Retail column.",
+      "variants": [
+        {
+          "asPrinted": "Bolex 680 Macrozoom Camera with Aspheron attachment",
+          "price": "$515.00"
+        }
+      ]
+    }
+  ],
+  "583": [
+    {
+      "year": 1979,
+      "month": "April",
+      "doc": "02226",
+      "note": "Bolex (U.S.A.) Inc., Super 8 price list no. S1, one Suggested Retail column.",
+      "variants": [
+        {
+          "asPrinted": "Bolex 583 Macrozoom Sound Camera with Aspheron attachment",
+          "price": "$699.00"
+        }
+      ]
+    }
+  ],
+  "563xl": [
+    {
+      "year": 1979,
+      "month": "April",
+      "doc": "02226",
+      "note": "Bolex (U.S.A.) Inc., Super 8 price list no. S1, one Suggested Retail column.",
+      "variants": [
+        {
+          "asPrinted": "Bolex 563 XL Macrozoom Sound Camera with Aspheron attachment",
+          "price": "$693.00"
+        }
+      ]
+    }
+  ],
+  "280": [
+    {
+      "year": 1972,
+      "month": "February",
+      "doc": "04942",
+      "note": "The February 1972 Super 8 list, headed confidential and sold to dealers, with one Suggested Retail column. The figures in brackets beside each row are the dealer's own cost, which is not what is shown here.",
+      "variants": [
+        {
+          "asPrinted": "280 S Macrozoom",
+          "price": "$349.50"
+        }
+      ]
+    }
+  ],
+  "250": [
+    {
+      "year": 1972,
+      "month": "February",
+      "doc": "04942",
+      "note": "The February 1972 Super 8 list, headed confidential and sold to dealers, with one Suggested Retail column. The figures in brackets beside each row are the dealer's own cost, which is not what is shown here.",
+      "variants": [
+        {
+          "asPrinted": "250",
+          "price": "$229.50"
+        }
+      ]
+    }
+  ],
+  "233-compact": [
+    {
+      "year": 1972,
+      "month": "February",
+      "doc": "04942",
+      "note": "The February 1972 Super 8 list, headed confidential and sold to dealers, with one Suggested Retail column. The figures in brackets beside each row are the dealer's own cost, which is not what is shown here.",
+      "variants": [
+        {
+          "asPrinted": "233 S Compact",
+          "price": "$120.00"
+        }
+      ]
+    }
+  ],
+  "189duo": [
+    {
+      "year": 1972,
+      "month": "February",
+      "doc": "04942",
+      "section": "projectors",
+      "note": "The February 1972 Super 8 list, headed confidential and sold to dealers, with one Suggested Retail column. The figures in brackets beside each row are the dealer's own cost, which is not what is shown here.",
+      "variants": [
+        {
+          "asPrinted": "18-9 DUO w/f/1.3 15-30mm",
+          "price": "$189.50"
+        }
+      ]
+    }
+  ],
+  "185auto": [
+    {
+      "year": 1965,
+      "month": "June",
+      "doc": "04929",
+      "section": "projectors",
+      "note": "The June 1965 dealer list, one Price column. Each configuration is a separate product number and five-letter code; the bracketed figure is the dealer's cost.",
+      "variants": [
+        {
+          "asPrinted": "18-5 Automatic Projector w/Zipper Case and 12.5mm to 25mm Zoom Lens (SIXLU)",
+          "price": "$199.50"
+        },
+        {
+          "asPrinted": "18-5 Automatic Projector w/Zipper Case and 15mm Lens (SIXLO)",
+          "price": "$169.50"
+        },
+        {
+          "asPrinted": "18-5 Automatic Projector w/Zipper Case and 20mm Lens (SIXLA)",
+          "price": "$169.50"
+        },
+        {
+          "asPrinted": "18-5 Automatic Projector w/Screen Case and 12.5mm to 25mm Zoom Lens (SIXTU)",
+          "price": "$209.50"
+        },
+        {
+          "asPrinted": "18-5 Automatic Projector w/Screen Case and 15mm Lens (SIXTO)",
+          "price": "$179.50"
+        },
+        {
+          "asPrinted": "18-5 Automatic Projector w/Screen Case and 20mm Lens (SIXTA)",
+          "price": "$179.50"
+        }
+      ]
+    }
+  ],
+  "185": [
+    {
+      "year": 1965,
+      "month": "June",
+      "doc": "04929",
+      "section": "projectors",
+      "note": "The June 1965 dealer list, one Price column. Each configuration is a separate product number and five-letter code; the bracketed figure is the dealer's cost.",
+      "variants": [
+        {
+          "asPrinted": "18-5 Projector w/Zipper Case and 12.5mm to 25mm Zoom Lens (DUZOO)",
+          "price": "$159.50"
+        },
+        {
+          "asPrinted": "18-5 Projector w/Zipper Case and 15mm Lens (DUORO)",
+          "price": "$129.50"
+        },
+        {
+          "asPrinted": "18-5 Projector w/Zipper Case and 20mm Lens (DUOKO)",
+          "price": "$129.50"
+        },
+        {
+          "asPrinted": "18-5 Projector w/Screen Case and 12.5mm to 25mm Zoom Lens (DUZOC)",
+          "price": "$169.50"
+        },
+        {
+          "asPrinted": "18-5 Projector w/Screen Case and 15mm Lens (DUOTO)",
+          "price": "$139.50"
+        },
+        {
+          "asPrinted": "18-5 Projector w/Screen Case and 20mm Lens (DUOPO)",
+          "price": "$139.50"
+        },
+        {
+          "asPrinted": "Lens f/18-5 Projector, 12.5mm to 25mm Zoom (DUZUM)",
+          "price": "$55.00"
+        },
+        {
+          "asPrinted": "Lens f/18-5 Projector, 15mm (DUWID)",
+          "price": "$25.00"
+        }
+      ]
+    }
+  ],
+  "s221": [
+    {
+      "year": 1967,
+      "month": "May",
+      "doc": "04933",
+      "section": "projectors",
+      "note": "The May 1967 dealer list, one Price column, with a five-letter code on every row.",
+      "variants": [
+        {
+          "asPrinted": "Bolex S-221 Optical/Magnetic Sound Projector Complete (SONOR)",
+          "price": "$1,400.00"
+        }
+      ]
+    }
+  ],
+  "s211": [
+    {
+      "year": 1967,
+      "month": "May",
+      "doc": "04933",
+      "section": "projectors",
+      "note": "The May 1967 dealer list, one Price column, with a five-letter code on every row.",
+      "variants": [
+        {
+          "asPrinted": "Bolex S-211 Optical Sound Projector (SOTOP)",
+          "price": "$1,150.00"
+        }
+      ]
+    }
+  ],
+  "521": [
+    {
+      "year": 1978,
+      "month": "January",
+      "doc": "02210",
+      "section": "projectors",
+      "note": "The suggested retail price. This list prints suggested retail first and dealer net second.",
+      "variants": [
+        {
+          "asPrinted": "Bolex 521 Sound Projector w/f1.6 35-65MM zoom lens - complete",
+          "price": "$3,727.00"
+        },
+        {
+          "asPrinted": "Bolex 521 Sound Projector w/f. 50MM 1:1.3 ISCO Kiptaron lens - complete",
+          "price": "$3,567.00"
+        }
+      ]
+    },
+    {
+      "year": 1979,
+      "month": "November",
+      "doc": "02209",
+      "section": "projectors",
+      "note": "The November 1979 list, price list no. P2, one Suggested Retail column.",
+      "variants": [
+        {
+          "asPrinted": "Bolex 521 Sound Projector w/f1.6 35-65 MM zoom lens - complete",
+          "price": "$3,472.00"
+        },
+        {
+          "asPrinted": "Bolex 521 Sound Projector with 50mm f/1.3 ISCO Kiptaron lens - complete",
+          "price": "$3,258.00"
+        }
+      ]
+    }
+  ],
+  "underwater-housing-electric": [
+    {
+      "year": 1976,
+      "month": "October",
+      "doc": "02211",
+      "section": "accessories",
+      "note": "The suggested retail price. This list prints dealer cost first and suggested retail second.",
+      "variants": [
+        {
+          "asPrinted": "Underwater Housing f/H-16 EBM",
+          "price": "$1,918.00"
+        }
+      ]
+    },
+    {
+      "year": 1978,
+      "month": "January",
+      "doc": "02210",
+      "section": "accessories",
+      "note": "The suggested retail price. This list prints suggested retail first and dealer net second.",
+      "variants": [
+        {
+          "asPrinted": "Underwater Housing f/H-16 EBM with Battery Container and connection cable",
+          "price": "$2,534.00"
+        },
+        {
+          "asPrinted": "Underwater Housing f/H-16 EL with lever for switching photocell and connection cable",
+          "price": "$2,534.00"
         }
       ]
     }

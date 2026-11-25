@@ -694,6 +694,21 @@
         "page": "40kern",
         "heading": "C Mount Lenses for 16mm Cameras",
         "originalPath": "/lenses/40kern.html"
+      },
+      "specs": {
+        "catalogueNumber": "3",
+        "designedFor": "Bolex Reflex only",
+        "angleOfView": "22° x 16°",
+        "minimumFocus": "1½ft",
+        "areaAtMinimumFocus": "4½in x 6in",
+        "areaAt20Feet": "5ft x 7ft",
+        "minimumDiaphragm": "f/22",
+        "depthOfFieldScale": "Visifocus",
+        "lengthAtInfinity": "1⅜in",
+        "frontDiameter": "34mm",
+        "maximumDiameter": "37mm",
+        "weight": "5oz",
+        "filterAdapter": "#500"
       }
     },
     {
@@ -1289,6 +1304,21 @@
         "page": "50berthiot",
         "heading": "C and RX Mount Lenses for H-16 Cameras",
         "originalPath": "/lenses/50berthiot.html"
+      },
+      "specs": {
+        "catalogueNumber": "21",
+        "designedFor": "C mount and Vidicon",
+        "angleOfView": "22° x 16°",
+        "minimumFocus": "1¾ft",
+        "areaAtMinimumFocus": "5½in x 7½in",
+        "areaAt20Feet": "5ft x 7ft",
+        "minimumDiaphragm": "f/22",
+        "depthOfFieldScale": "Engraved",
+        "lengthAtInfinity": "2¼in, or 1¾in without the shade",
+        "frontDiameter": "39.5mm",
+        "maximumDiameter": "40.5mm",
+        "weight": "6oz",
+        "filterAdapter": "Drop-in arrangement"
       }
     },
     {
@@ -1562,12 +1592,33 @@
           "date": "May 1967",
           "doc": "04933",
           "asPrinted": "Switar 25mm f/1.4"
+        },
+        {
+          "price": "$168.00",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Switar 25mm f/1.4 RX"
         }
       ],
+      "listingNote": "The 1970 list prices the RX version, DAITA, which is this entry's code. The archive carries two entries for this designation and the earlier one takes the 1952 catalogue price; the 1967 and 1970 dealer prices are the later lens and belong here.",
       "from": {
         "page": "50kern",
         "heading": "C and RX Mount Lenses for H-16 Cameras",
         "originalPath": "/lenses/50kern.html"
+      },
+      "specs": {
+        "catalogueNumber": "20 (C mount and Vidicon), 2 (Bolex Reflex)",
+        "angleOfView": "22° x 16°",
+        "minimumFocus": "1½ft",
+        "areaAtMinimumFocus": "4½in x 6in",
+        "areaAt20Feet": "5ft x 7ft",
+        "minimumDiaphragm": "f/22",
+        "depthOfFieldScale": "Compass",
+        "lengthAtInfinity": "1⅛in",
+        "frontDiameter": "35mm",
+        "maximumDiameter": "37mm",
+        "weight": "5oz",
+        "filterAdapter": "#500"
       }
     },
     {
@@ -1930,6 +1981,21 @@
         "page": "50kern",
         "heading": "C and RX Mount Lenses for H-16 Cameras",
         "originalPath": "/lenses/50kern.html"
+      },
+      "specs": {
+        "catalogueNumber": "32",
+        "designedFor": "C mount and Vidicon",
+        "angleOfView": "34° x 25°",
+        "minimumFocus": "1ft",
+        "areaAtMinimumFocus": "4½in x 6½in",
+        "areaAt20Feet": "9ft x 12ft",
+        "minimumDiaphragm": "f/22",
+        "depthOfFieldScale": "Visifocus",
+        "lengthAtInfinity": "1⅛in",
+        "frontDiameter": "34mm",
+        "maximumDiameter": "34mm",
+        "weight": "2oz",
+        "filterAdapter": "#500"
       }
     },
     {
@@ -2159,6 +2225,18 @@
         },
         {
           "price": "$99.50",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Switar 16mm f/1.8 RX"
+        },
+        {
+          "price": "$99.50",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Switar 16mm f/1.8"
+        },
+        {
+          "price": "$99.50",
           "date": "February 1972",
           "doc": "04932",
           "asPrinted": "Switar 16mm f/1.8"
@@ -2168,6 +2246,20 @@
         "page": "50kern",
         "heading": "C and RX Mount Lenses for H-16 Cameras",
         "originalPath": "/lenses/50kern.html"
+      },
+      "specs": {
+        "catalogueNumber": "30 (C mount and Vidicon), 4 (Bolex Reflex)",
+        "angleOfView": "34° x 25°",
+        "minimumFocus": "8in",
+        "areaAtMinimumFocus": "3in x 4in",
+        "areaAt20Feet": "9ft x 12ft",
+        "minimumDiaphragm": "f/22",
+        "depthOfFieldScale": "Visifocus",
+        "lengthAtInfinity": "1¼in",
+        "frontDiameter": "35mm",
+        "maximumDiameter": "37mm",
+        "weight": "5oz",
+        "filterAdapter": "#500"
       }
     },
     {
@@ -2279,6 +2371,18 @@
         "page": "50berthiot",
         "heading": "C and RX Mount Lenses for H-16 Cameras",
         "originalPath": "/lenses/50berthiot.html"
+      },
+      "specs": {
+        "catalogueNumber": "51 (C mount and Vidicon), 52 (\"S\", Kodak)",
+        "maximumAperture": "f/2.4",
+        "minimumDiaphragm": "f/22",
+        "angleOfView": "8° x 6° at 70mm, 32° x 24° at 17.5mm",
+        "minimumFocus": "7ft",
+        "areaAtMinimumFocus": "9½in x 6¾in at 70mm, 38in x 27½in at 17.5mm",
+        "areaAt20Feet": "30in x 21in at 70mm, 120in x 84in at 17.5mm",
+        "lengthAtInfinity": "7¾in, or 6½in without the sunshade",
+        "frontDiameter": "2¾in without the sunshade",
+        "weight": "2½lb"
       }
     },
     {
@@ -2290,7 +2394,8 @@
       "aperture": "f/1.6",
       "codes": [
         "SWEDI",
-        "DAADI"
+        "DAADI",
+        "PRESE"
       ],
       "mount": "C or RX",
       "gauge": "16mm",
@@ -2316,6 +2421,18 @@
           "date": "May 1967",
           "doc": "04933",
           "asPrinted": "Switar 10mm f/1.6 RX"
+        },
+        {
+          "price": "$250.00",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Switar 10mm f/1.6 RX Preset"
+        },
+        {
+          "price": "$165.00",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Switar 10mm f/1.6"
         },
         {
           "price": "$165.00",
@@ -2346,6 +2463,20 @@
         "page": "50kern",
         "heading": "C and RX Mount Lenses for H-16 Cameras",
         "originalPath": "/lenses/50kern.html"
+      },
+      "specs": {
+        "catalogueNumber": "34 (C mount and Vidicon), 5 (Bolex Reflex)",
+        "angleOfView": "52° x 38°",
+        "minimumFocus": "8in",
+        "areaAtMinimumFocus": "5in x 7in",
+        "areaAt20Feet": "14ft x 20ft",
+        "minimumDiaphragm": "f/22",
+        "depthOfFieldScale": "Visifocus",
+        "lengthAtInfinity": "1⅞in",
+        "frontDiameter": "35mm",
+        "maximumDiameter": "37mm",
+        "weight": "6oz",
+        "filterAdapter": "#502"
       }
     },
     {
@@ -2452,6 +2583,18 @@
         "page": "50berthiot",
         "heading": "C and RX Mount Lenses for H-16 Cameras",
         "originalPath": "/lenses/50berthiot.html"
+      },
+      "specs": {
+        "catalogueNumber": "53 (C mount and Vidicon), 54 (\"S\", Kodak)",
+        "maximumAperture": "f/2",
+        "minimumDiaphragm": "f/16",
+        "angleOfView": "6½° x 5° at 85mm, 32° x 24° at 17mm",
+        "minimumFocus": "6ft",
+        "areaAtMinimumFocus": "6½in x 5in at 85mm, 33in x 25in at 17mm",
+        "areaAt20Feet": "24in x 15in at 85mm, 120in x 85in at 17mm",
+        "lengthAtInfinity": "7¼in, or 6¼in without the sunshade",
+        "frontDiameter": "2¾in without the sunshade",
+        "weight": "2¼lb"
       }
     },
     {
@@ -2825,6 +2968,40 @@
       }
     },
     {
+      "slug": "pan-cinor-100",
+      "sources": [],
+      "images": [],
+      "added": true,
+      "name": "Pan Cinor 100 (25mm-100mm f/3.4)",
+      "maker": "SOM Berthiot",
+      "series": "Pan Cinor",
+      "focalLength": "25mm",
+      "aperture": "f/3.4",
+      "codes": [],
+      "mount": "C",
+      "gauge": "16mm",
+      "decade": 1960,
+      "year": null,
+      "description": "The long end of the Pan Cinor range, 25 to 100mm at f/3.4, and the only one of the four zooms in Paillard's lens brochure that the original site never listed. It is the tightest of them: 5½ by 4 degrees at the long end against the Pan Cinor 85's 6½ by 5, and at twenty feet it frames 20 by 15 inches where the 85 frames 24 by 15. Like the Pan Cinor 70 it offers viewing only, so focusing is done on the camera's groundglass or by measuring the distance, where the 85's finder has a split-image rangefinder. Sold under two catalogue numbers, 55 for C mount and Vidicon and 57 for the \"S\" Kodak mount, and available without the finder for vidicon cameras.",
+      "from": {
+        "page": null,
+        "heading": null,
+        "originalPath": null
+      },
+      "specs": {
+        "catalogueNumber": "55 (C mount and Vidicon), 57 (\"S\", Kodak)",
+        "maximumAperture": "f/3.4",
+        "minimumDiaphragm": "f/22",
+        "angleOfView": "5½° x 4° at 100mm, 22° x 16° at 25mm",
+        "minimumFocus": "7ft",
+        "areaAtMinimumFocus": "6½in x 4¾in at 100mm, 26½in x 19in at 25mm",
+        "areaAt20Feet": "20in x 15in at 100mm, 80in x 60in at 25mm",
+        "lengthAtInfinity": "8½in, or 7¼in without the sunshade",
+        "frontDiameter": "2¾in without the sunshade",
+        "weight": "2½lb"
+      }
+    },
+    {
       "slug": "pan-cinor-40-pan-cinor-40-r",
       "name": "Pan Cinor 40 / Pan Cinor 40 R",
       "maker": "SOM Berthiot",
@@ -2910,6 +3087,19 @@
         "page": "60kern",
         "heading": "C and RX Mount Lenses for H-16 Cameras",
         "originalPath": "/lenses/60kern.html"
+      },
+      "specs": {
+        "catalogueNumber": "49",
+        "designedFor": "Bolex Reflex only",
+        "maximumAperture": "f/2.5",
+        "minimumDiaphragm": "f/22",
+        "angleOfView": "6½° x 5° at 86mm, 31° x 23° at 18mm",
+        "minimumFocus": "5¼ft",
+        "areaAtMinimumFocus": "6in x 4½in at 86mm, 29in x 20in at 18mm",
+        "areaAt20Feet": "24in x 15in at 86mm",
+        "lengthAtInfinity": "8¾in, or 7¾in without the sunshade",
+        "frontDiameter": "2⅝in without the sunshade",
+        "weight": "2¼lb"
       }
     },
     {
@@ -2920,7 +3110,8 @@
       "focalLength": "150mm",
       "aperture": "f/3.3",
       "codes": [
-        "HIONG"
+        "HIONG",
+        "PRERI"
       ],
       "mount": "C or RX",
       "gauge": "16mm",
@@ -2940,6 +3131,12 @@
           "date": "March 1965",
           "doc": "04929",
           "asPrinted": "Macro-Yvar 150mm f/3.3Rx"
+        },
+        {
+          "price": "$199.50",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Macro-Yvar 150mm f/3.3 Preset"
         },
         {
           "price": "$261.50",
@@ -3037,7 +3234,8 @@
       "focalLength": "100mm",
       "aperture": "f/2.8",
       "codes": [
-        "HIENT"
+        "HIENT",
+        "YREMO"
       ],
       "mount": "C or RX",
       "gauge": "16mm",
@@ -3057,6 +3255,12 @@
           "date": "March 1965",
           "doc": "04929",
           "asPrinted": "Macro-Yvar 100mm f/2.8Rx"
+        },
+        {
+          "price": "$109.50",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Macro-Yvar 100mm f/2.8"
         }
       ],
       "from": {
@@ -3131,6 +3335,12 @@
           "asPrinted": "Pan Cinor 85 Compact, 17-85mm f/3.8"
         },
         {
+          "price": "$250.00",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Pan Cinor 85 Compact, 17-85mm f/3.8"
+        },
+        {
           "price": "$399.00",
           "date": "October 1976",
           "doc": "02211",
@@ -3182,6 +3392,12 @@
           "price": "$420.00",
           "date": "May 1967",
           "doc": "04933",
+          "asPrinted": "Pan Cinor 85-2, 17-85mm f/2.0"
+        },
+        {
+          "price": "$480.00",
+          "date": "February 1970",
+          "doc": "04950",
           "asPrinted": "Pan Cinor 85-2, 17-85mm f/2.0"
         },
         {
@@ -3282,7 +3498,9 @@
       "series": "Macro",
       "focalLength": "26mm",
       "aperture": "f/1.1",
-      "codes": [],
+      "codes": [
+        "PRENO"
+      ],
       "mount": "C or RX",
       "gauge": "16mm",
       "decade": 1960,
@@ -3296,6 +3514,12 @@
       ],
       "sources": [],
       "listings": [
+        {
+          "price": "$300.00",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Macro-Switar 26mm f/1.1 RX Preset"
+        },
         {
           "price": "$321.50",
           "date": "February 1972",
@@ -3362,7 +3586,9 @@
       "series": "Vario-Switar",
       "focalLength": "18mm",
       "aperture": "f/2.5",
-      "codes": [],
+      "codes": [
+        "VAMOE"
+      ],
       "mount": "C or RX",
       "gauge": "16mm",
       "decade": 1960,
@@ -3375,6 +3601,14 @@
         }
       ],
       "sources": [],
+      "listings": [
+        {
+          "price": "$625.00",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Vario-Switar 86-OE"
+        }
+      ],
       "from": {
         "page": "60kern",
         "heading": "C and RX Mount Lenses for H-16 Cameras",
@@ -3388,7 +3622,9 @@
       "series": "Macro-Switar",
       "focalLength": "75mm",
       "aperture": "f/1.9",
-      "codes": [],
+      "codes": [
+        "PRELA"
+      ],
       "mount": "C or RX",
       "gauge": "16mm",
       "decade": 1960,
@@ -3402,6 +3638,12 @@
       ],
       "sources": [],
       "listings": [
+        {
+          "price": "$220.00",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Macro-Switar 75mm f/1.9 Preset"
+        },
         {
           "price": "$300.00",
           "date": "February 1972",
@@ -3434,7 +3676,9 @@
       "series": "Pan Cinor",
       "focalLength": null,
       "aperture": "f/3.3",
-      "codes": [],
+      "codes": [
+        "PAHUN"
+      ],
       "mount": null,
       "gauge": "16mm",
       "decade": 1960,
@@ -3447,6 +3691,14 @@
         }
       ],
       "sources": [],
+      "listings": [
+        {
+          "price": "$715.00",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Pan Cinor 12-120mm f/3.3"
+        }
+      ],
       "from": {
         "page": "60berthiot",
         "heading": "Lenses for H-16 Cameras",
@@ -3460,7 +3712,9 @@
       "series": "Vario",
       "focalLength": "16-100mm",
       "aperture": "f/1.9",
-      "codes": [],
+      "codes": [
+        "VAPOL"
+      ],
       "mount": "C or RX",
       "gauge": "16mm",
       "decade": 1960,
@@ -3474,6 +3728,12 @@
       ],
       "sources": [],
       "listings": [
+        {
+          "price": "$800.00",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Vario-Switar 16-100mm POE f/1.9"
+        },
         {
           "price": "$800.00",
           "date": "February 1972",

@@ -27,11 +27,16 @@
     "says nothing about what happened to the Swiss franc, to tariffs, or",
     "to the cost of precision optics in particular. The chart says so."
   ],
-  "base": { "year": 2025, "cpi": 321.943, "note": "latest complete annual average" },
+  "base": {
+    "year": 2025,
+    "cpi": 321.943,
+    "note": "latest complete annual average"
+  },
   "years": {
     "1952": 26.5,
     "1965": 31.5,
     "1967": 33.4,
+    "1970": 38.8,
     "1972": 41.8,
     "1976": 56.9,
     "1978": 65.2,

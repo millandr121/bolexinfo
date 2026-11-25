@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { SearchButton } from "./SearchPalette";
-import { DesktopNav, SectionRail } from "./NavLinks";
+import { DesktopNav, SectionMenu } from "./NavLinks";
 import { RevisitButton } from "./RevisitButton";
 import { ThemeToggle } from "./ThemeToggle";
 
@@ -38,12 +38,12 @@ export function SiteHeader() {
       </div>
 
       {/*
-       * Mobile section rail. Kept as a swipeable rail rather than a hamburger:
-       * with this many destinations a menu would add a tap and hide the site's
-       * structure, where a rail keeps every section one tap away and shows
-       * which one you are in.
+       * Narrow screens get the same two levels the desktop menus have,
+       * in a panel. It replaced a flat rail of every destination that
+       * scrolled sideways: with this many places to go that had become a
+       * long drag under a scrollbar, and it looked broken on a tablet.
        */}
-      <SectionRail />
+      <SectionMenu />
     </header>
   );
 }

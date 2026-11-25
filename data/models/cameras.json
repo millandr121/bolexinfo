@@ -66,6 +66,66 @@
       "recovery": "summary-only"
     },
     {
+      "slug": "h16ebm",
+      "name": "H-16 EBM",
+      "format": "16mm",
+      "introduced": 1971,
+      "summary": "Bolex's first electric-drive H-16, and the camera that took the line into sync sound. A built-in motor runs at 10, 18, 24, 25 and 50 frames a second off a rechargeable cell in the contoured power grip, good for 2400ft and recharged in the grip in twelve hours. A sound position on the speed selector takes a crystal unit for cordless sync, or a sync-pulse generator on a cord, and a slating system built into the camera does away with a separate clapstick. Reflex finder at 14x, 170 degree rotary shutter, automatic threading with loop formers that retract as the door closes, and a two-position filter slot behind the lens taking 2x2in gelatin. Bayonet mount, with an adapter for C-mount, and it came with the Vario-Switar 100 POE. 13½ by 6 by 3¾ inches and 9.5lbs complete with battery and grip. Product 41754, earlier 1750.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "Bolex H-16 Professional 16mm Motion Picture Systems, EPOI brochure",
+          "url": "https://www.pacificrimcamera.com/rl/02241/02241.pdf",
+          "note": "Paillard's American distributor describing its own range, five models to a booklet. Every specification here comes from it and the product numbers match the dated price lists exactly. Undated, but it gives the EPOI Woodbury address and the same five bodies and product numbers as the October 1976 list, which places it there. Read off the rendered page: this scan's OCR mangles the fractions, printing 13½ as 13112 and 3¾ as 3314. Scanned by Pacific Rim Camera."
+        },
+        {
+          "title": "Dated in collector sources to 1971",
+          "url": "https://my16mm.com/cameras/bolex16hebm.php",
+          "note": "Several collector sources give 1971 and agree with each other; no Bolex document read here dates it. The earliest primary evidence the archive holds is the February 1972 price list, which sells the body at $1,320.00, so 1971 is at least consistent with it."
+        }
+      ]
+    },
+    {
+      "slug": "h16el",
+      "name": "H-16 EL",
+      "format": "16mm",
+      "introduced": null,
+      "summary": "The electronic one, and the last serious development of the H-16. An integral motor runs at nine speeds, 10, 12, 18, 20, 24, 25, 32, 40 and 50 frames a second, with reverse, continuous and single-frame besides, off a 13oz nicad that drives 600ft a charge or 2000ft on the heavy-duty battery. Metering is through the lens at the film plane, a silicon cell read off match-the-diode LEDs in the finder, ASA 10 to 630 at any speed through any lens or filter. A crystal position on the speed dial takes a crystal module for cordless sync, good to within a frame in 400ft. The lens mount is the 60mm bayonet, so secure that the brochure says the camera may be carried by the lens, with an adapter for C-mount. Reflex finder at 13x, 170 degree rotary shutter, automatic threading and loop restoration, 100ft internally and 400ft on the magazine. 4.5 by 6.8 by 9.5 inches and 7lbs with the battery, less lens. Product 41900.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "Bolex H-16 Professional 16mm Motion Picture Systems, EPOI brochure",
+          "url": "https://www.pacificrimcamera.com/rl/02241/02241.pdf",
+          "note": "Paillard's American distributor describing its own range, five models to a booklet. Every specification here comes from it and the product numbers match the dated price lists exactly. Undated, but it gives the EPOI Woodbury address and the same five bodies and product numbers as the October 1976 list, which places it there. Read off the rendered page: this scan's OCR mangles the fractions, printing 13½ as 13112 and 3¾ as 3314. Scanned by Pacific Rim Camera."
+        },
+        {
+          "title": "Bolex 16mm price lists, February 1972 and October 1976",
+          "url": "https://www.pacificrimcamera.com/rl/02211/02211.pdf",
+          "note": "No year is given here because no source consulted gives one, and the archive would rather say nothing than guess. What the documents do settle is a bracket: the February 1972 list (rl/04932) sells the EBM, SBM, REX-5 and M-5 and has no EL in it at all, and the October 1976 list has the EL as product 41900 at $3,300.00. So it arrived between those two dates. Collector sources date the later EL Series 3 to 1980 and none of them date the first."
+        }
+      ]
+    },
+    {
+      "slug": "h16sbm",
+      "name": "H-16 SBM",
+      "format": "16mm",
+      "introduced": 1970,
+      "summary": "The spring-wound bayonet model, and the camera that ended the three-lens turret. A governor-controlled spring motor gives 12, 16, 18, 24, 32, 48 and 64 frames a second plus single frame, 16.4ft to a wind, with an audible click every 30 frames for timing a shot by ear. The rotary shutter is variable from 0 to 130 degrees with the opening shown in the finder, and the RexoFader will time a fade over 40 frames. Reflex finder at 10x with a full-focusing groundglass. It takes the ESM and EM motors for longer runs, the 400ft magazine, and the Vario-Switar POE-4 16-100mm for through-the-lens metering. 3 by 6 by 9 inches and 6.75lbs less lens. The REX-5 is the same camera with a three-lens C-mount turret and a one-position filter slot. Product 41810, earlier 1810.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "Bolex H-16 Professional 16mm Motion Picture Systems, EPOI brochure",
+          "url": "https://www.pacificrimcamera.com/rl/02241/02241.pdf",
+          "note": "Paillard's American distributor describing its own range, five models to a booklet. Every specification here comes from it and the product numbers match the dated price lists exactly. Undated, but it gives the EPOI Woodbury address and the same five bodies and product numbers as the October 1976 list, which places it there. Read off the rendered page: this scan's OCR mangles the fractions, printing 13½ as 13112 and 3¾ as 3314. Scanned by Pacific Rim Camera."
+        },
+        {
+          "title": "Dated in collector sources to 1970",
+          "url": "http://bolexh16user.net/H16SBAndSBM.htm",
+          "note": "Collector sources agree on 1970 for the SB and SBM, and on this being the first Bolex to carry the bayonet mount that the EBM and EL then took. No Bolex document read here dates it. The archive's earliest primary evidence is the February 1972 price list at $720.00."
+        }
+      ]
+    },
+    {
       "slug": "h16m5",
       "name": "H-16 M-5",
       "format": "16mm",
@@ -210,6 +270,76 @@
       "recovery": "summary-only"
     },
     {
+      "slug": "280",
+      "name": "280 Macrozoom",
+      "format": "Super 8",
+      "introduced": null,
+      "summary": "The top of the silent Super 8 range before the 680, and the camera the brochure calls brand new. An 8 to 1 zoom, 7mm wide angle to 56mm telephoto, with the macro focusing Bolex had pioneered: from infinity down to the front element of the lens, no attachment and no trick to it, with power focusing in the macro range. Macro work is done at the wide end, which is where a camera held in the hands is steadiest. Two-speed power zoom, viewing, focusing and metering all through the lens, single frame, a dioptre eyepiece, and a manual override for snow, bright beaches and reflections. $349.50 in February 1972.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "Bolex Super 8 range brochure, \"From the people who build the best\"",
+          "url": "https://www.pacificrimcamera.com/rl/02675/02675.pdf",
+          "note": "Bolex's own brochure, a page to each camera, covering the 280, 160, 155 and 233 Compact and the 18-9 DUO and Multimatic projectors. Undated. Scanned by Pacific Rim Camera."
+        },
+        {
+          "title": "Bolex Reporter, Super 8 range feature",
+          "url": "https://www.pacificrimcamera.com/rl/02670/02670.pdf",
+          "note": "Paillard's own magazine, running through the Super 8 line with a paragraph each. Where it and the range brochure overlap they agree. Scanned by Pacific Rim Camera."
+        },
+        {
+          "title": "Bolex Super 8mm Confidential Price List, 23 February 1972",
+          "url": "https://www.pacificrimcamera.com/rl/04942/04942.pdf",
+          "note": "Paillard's dealer list, one Suggested Retail column. The bracketed figure beside each row is the dealer's cost, not a product code. Read off the rendered page."
+        }
+      ]
+    },
+    {
+      "slug": "250",
+      "name": "250",
+      "format": "Super 8",
+      "introduced": null,
+      "summary": "The economical one, and Bolex says so outright: the same ruggedness as the advanced cameras with the accent on price. A 5 to 1 zoom, exposure fully automatic, power zoom, and a bright finder. Film speed sets itself from the cartridge, ASA 25 to 160, which at the time meant Kodachrome or the new Ektachrome 160 for filming indoors without lights. $229.50 in February 1972.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "Bolex Reporter, Super 8 range feature",
+          "url": "https://www.pacificrimcamera.com/rl/02670/02670.pdf",
+          "note": "Paillard's own magazine, running through the Super 8 line with a paragraph each. Where it and the range brochure overlap they agree. Scanned by Pacific Rim Camera."
+        },
+        {
+          "title": "Bolex Super 8mm Confidential Price List, 23 February 1972",
+          "url": "https://www.pacificrimcamera.com/rl/04942/04942.pdf",
+          "note": "Paillard's dealer list, one Suggested Retail column. The bracketed figure beside each row is the dealer's cost, not a product code. Read off the rendered page."
+        }
+      ]
+    },
+    {
+      "slug": "233-compact",
+      "name": "233 Compact",
+      "format": "Super 8",
+      "introduced": null,
+      "summary": "The pocket one, sold on its size and nothing else. An inch and three quarters thick and three inches high, 21 ounces, small enough for a jacket pocket or a glove compartment. A 9 to 30mm zoom, automatic electric eye exposure, a bright finder, and focusing from four feet to infinity. The brochure's own pitch is that it is the camera you will actually have with you, and that if Ian Fleming were alive he would have given one to Bond. Also sold as the 233S Compact. $120.00 in February 1972, the cheapest camera on the list.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "Bolex Super 8 range brochure, \"From the people who build the best\"",
+          "url": "https://www.pacificrimcamera.com/rl/02675/02675.pdf",
+          "note": "Bolex's own brochure, a page to each camera, covering the 280, 160, 155 and 233 Compact and the 18-9 DUO and Multimatic projectors. Undated. Scanned by Pacific Rim Camera."
+        },
+        {
+          "title": "Bolex Reporter, Super 8 range feature",
+          "url": "https://www.pacificrimcamera.com/rl/02670/02670.pdf",
+          "note": "Paillard's own magazine, running through the Super 8 line with a paragraph each. Where it and the range brochure overlap they agree. Scanned by Pacific Rim Camera."
+        },
+        {
+          "title": "Bolex Super 8mm Confidential Price List, 23 February 1972",
+          "url": "https://www.pacificrimcamera.com/rl/04942/04942.pdf",
+          "note": "Paillard's dealer list, one Suggested Retail column. The bracketed figure beside each row is the dealer's cost, not a product code. Read off the rendered page."
+        }
+      ]
+    },
+    {
       "slug": "75macro",
       "name": "7.5 Macrozoom",
       "format": "Super 8",
@@ -294,6 +424,66 @@
         {
           "title": "Not a projector",
           "note": "This archive's own backlog had the 5120 down as a projector. The dealer sheet settles it: it is a camera, and the line it heads is called Sound-8."
+        }
+      ]
+    },
+    {
+      "slug": "563xl",
+      "name": "563 XL Sound Macrozoom",
+      "format": "Super 8",
+      "introduced": null,
+      "summary": "The low-light half of a pair with the 583, and the same camera but for the lens: a 6x zoom, 8 to 48mm, at f/1.2, which is what the XL is for. Everything else is shared, and Bolex's brochure sets the two side by side to say so. The release works in two stages so the film only moves once the sound capstan is at speed, picture and sound dissolves run over 72 frames, the diaphragm is manual or automatic on TTL measurement, the shutter opens to 220 degrees, and there is a synchro-flash socket, remote control from the microphone or a cable, and a counter settable to any starting point. Takes silent Super 8 cartridges as well as sound, and the Aspheron super wide-angle fits it. $693.00 in April 1979, six dollars under the 583.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "Bolex 583 and 563 XL Sound Macro-Zoom, Bolex (U.S.A.) brochure",
+          "url": "https://www.pacificrimcamera.com/rl/02232/02232.pdf",
+          "note": "Bolex's own brochure, covering both cameras together. Its closing section, \"How the two models differ\", gives the 563 XL the 6x 8 to 48mm f/1.2 against the 583's 8x 7.5 to 60mm f/1.7 and separates them on nothing else. Scanned by Pacific Rim Camera."
+        },
+        {
+          "title": "Bolex Super 8 Cameras and Projectors, price list no. S1, 1 April 1979",
+          "url": "https://www.pacificrimcamera.com/rl/02226/02226.pdf",
+          "note": "Bolex (U.S.A.) Inc.'s own list, one Suggested Retail column. Read off the rendered page: the scan's text layer runs neighbouring model numbers into their lens specifications."
+        }
+      ]
+    },
+    {
+      "slug": "583",
+      "name": "583 Sound Macrozoom",
+      "format": "Super 8",
+      "introduced": null,
+      "summary": "A Super 8 sound camera built so that recording is as free as filming silent. An 8x zoom, 7.5 to 60mm at f/1.7. The release works in two stages and the film only moves once the sound capstan is at speed, so the break in sound between two takes comes down to very little; with background music you can stop and restart as often as you like. Picture and sound dissolves run over 72 frames. Diaphragm manual or automatic on TTL measurement, shutter opening 220 degrees, synchro-flash socket, remote control from the microphone or an accessory cable, a counter with a movable scale that can be set to any starting point, and it will take silent Super 8 cartridges too. The Aspheron super wide-angle fits the front. Sold beside the 563 XL, which is the same camera with a faster, shorter zoom. $699.00 in April 1979.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "Bolex 583 and 563 XL Sound Macro-Zoom, Bolex (U.S.A.) brochure",
+          "url": "https://www.pacificrimcamera.com/rl/02232/02232.pdf",
+          "note": "Bolex's own brochure, covering both cameras and ending with a section on how the two differ, which is where the lens specifications come from. A shorter sheet on the same pair is rl/02224. Scanned by Pacific Rim Camera."
+        },
+        {
+          "title": "Bolex Super 8 Cameras and Projectors, price list no. S1, 1 April 1979",
+          "url": "https://www.pacificrimcamera.com/rl/02226/02226.pdf",
+          "note": "Bolex (U.S.A.) Inc.'s own list, one Suggested Retail column. Read off the rendered page: the scan's text layer runs neighbouring model numbers into their lens specifications."
+        }
+      ]
+    },
+    {
+      "slug": "680",
+      "name": "680 Macrozoom",
+      "format": "Super 8",
+      "introduced": null,
+      "summary": "A Super 8 silent camera that takes sound cartridges as well, and the most capable of the late silent Bolexes. The lens is a multicoated 7 to 56mm f/1.8 macro zoom of thirteen elements, 8 to 1, and the macro will focus with the front element touching the subject. Four speeds, 9, 18 and 24 frames a second with 45 for slow motion, plus single frame, and a Vario-Timer for time lapse from one frame every 0.2 seconds to one every 60. Exposure is TTL by CdS cell, automatic or manual, with an automatic shutter running 1/12 to 1/60 of a second for poor light, backlight compensation on one button, and film speed keyed by the cartridge from ASA 25 to 160. Optical fades of 2½ seconds by push button, takes preselectable from 2 to 10 seconds, two-speed power zoom on a single control, and a Director finder with LED readouts for focus, aperture, over and under exposure and film run. Five AA cells or a rechargeable nicad left in the camera. The Aspheron super-wide is included and multiplies the wide angle 3.5 times. 8 by 7¾ by 2½ inches, 3lbs. Product 90002, $515.00 in April 1979.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "Bolex 680 Macro Zoom, Bolex (U.S.A.) dealer sheet",
+          "url": "https://www.pacificrimcamera.com/rl/02223/02223.pdf",
+          "note": "Bolex's own sheet, and the source of everything above. It gives the product number 90002, which matches the April 1979 price list exactly. Undated, but the Great Neck address and that product number place it with the 1979 list. Scanned by Pacific Rim Camera."
+        },
+        {
+          "title": "Bolex Super 8 Cameras and Projectors, price list no. S1, 1 April 1979",
+          "url": "https://www.pacificrimcamera.com/rl/02226/02226.pdf",
+          "note": "Bolex (U.S.A.) Inc.'s own list, one Suggested Retail column. Read off the rendered page: the scan's text layer runs neighbouring model numbers into their lens specifications."
         }
       ]
     }
