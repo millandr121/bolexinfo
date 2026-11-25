@@ -111,10 +111,38 @@ busy" and not returning calls. Otello Diotallevi, their technician,
 is on the group's retired list.
 **Nothing to quote, so nothing to list.**
 
-### ausgeknipst.de
-A German directory of analogue repair workshops, apparently
-maintained. Not a technician: a source of further names, and worth
-reading properly.
+### ausgeknipst.de — read, and it yields nobody new
+A German directory of analogue repair workshops. Not a technician: it
+was on the list as a possible source of further names. Read properly on
+25 November 2026, and the answer is no.
+
+It is a real and largely maintained list, 319 workshops across 34
+countries, with notes dated into November 2026 beside a long tail of
+stale entries. But it is a **stills** directory almost end to end.
+Around six entries touch cine work at all, and of those:
+
+- **Bolex International** is the only entry that names Bolex, as
+  "offizieller Werksservice". Already ruled out above: the company's own
+  site has no service page, no town and answers nobody.
+- **Film-Mechanik** is Simon Wyss, already listed here.
+- **Camera Services Bogner** (Germany) is marked retired, and did Arri
+  and Aaton rather than Bolex.
+- **Guy Merzbarn** (Berlin) is Braun Nizo Super 8 only.
+- **J. A. Coelho da Silva** (Lisbon) lists "Laufbildkameras" among much
+  else, with nothing said about Bolex.
+- **Hansom's Repairs** (Matthews, North Carolina) looked the most
+  promising: a cine entry with a community note dated 10 November 2026.
+  Their own site was then read, and it **never mentions Bolex, Paillard,
+  8mm, Super 8 or 16mm**. It says "cinema camera repairs tailored for
+  filmmakers", which undefined almost certainly means modern digital
+  cinema bodies, and every brand it does name is a stills brand. Not
+  listable on this evidence. If someone reports a Bolex they actually
+  serviced, that changes.
+
+Paillard is not mentioned anywhere on the directory.
+
+**Conclusion: closed as a source.** Worth one more look in a year, since
+it is maintained, but it is not where the European Bolex people are.
 
 ---
 
