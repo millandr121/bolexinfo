@@ -122,17 +122,22 @@ Picked out of the Pacific Rim list because they close a known gap:
     `(08200-00)` against a $300.00 retail, which is $200.00 to the dealer
     and $190.00 at three or more.
   - `rl/02226` — **1 April 1979**, Bolex (U.S.A.) Inc., list no. S1.
-  - **This is the manufacturer document for the SP8**, which the archive
-    has no entry for: "SP8 SOUND, product 2480, w/f/1.3 15-30mm Zoom
-    Lens, $299.50". The same page prices the SM8 Sound at $449.50 and the
-    18-5L Super at $199.50, both of which the archive had undated and
-    unpriced. An SP8 entry can now be written from a primary source.
-  - **A lead on the SP 80.** The April 1979 list has no SP 80. It has a
-    **SM-80 Programmatic** sound projector at $780.00, and refers to it
-    again as SM/80. Whether that is the SP 80 under an American name or a
-    sibling is not settled here, and the entry has not been changed. But
-    the SP 80 currently rests on dealer listings alone, and this is the
-    nearest a Bolex document has come to it.
+  - **This was the manufacturer document for the SP8**, which the archive
+    had no entry for: "SP8 SOUND, product 2480, w/f/1.3 15-30mm Zoom
+    Lens, $299.50". The SP 8 entry is now written from it. The same page
+    prices the SM8 Sound at $449.50 and the 18-5L Super at $199.50, both
+    of which the archive had undated and unpriced.
+  - **The SM-80 question, answered.** The April 1979 list has no SP 80.
+    It has an **SM-80 Programmatic** at $780.00, which looked at first
+    like the SP 80 under another name. It is not. Super8Data has it as
+    its own 1977 model with a 240m reel, recording on both tracks and a
+    f/1.2 12.5-25mm lens, against the SP 80's 180m reel, single track and
+    1973 to 1974 run. So the SP 80 still has **no** manufacturer document
+    and the entry is unchanged. An SM 80 Programmatic entry is a separate
+    thing the archive could add, and it now has a price for it.
+  - Same source on the family: the SP 8 runs on Eumig's Mark S chassis,
+    and the SP 80 on the SP 8 Special's. That is a collector database,
+    not Bolex, so it is cited as one.
 - "Bolex Sterero Instruction Book" (their spelling) — the Stereo/Triorama.
 - The SP 80 is **not on Pacific Rim**, despite an earlier note here saying
   an "SP8/SP80 Instruction Book" was listed. It is not. The SP59 to SP62

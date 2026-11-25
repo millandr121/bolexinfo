@@ -93,6 +93,31 @@
       "recovery": "pending"
     },
     {
+      "slug": "sp8",
+      "name": "SP 8",
+      "format": "Super 8",
+      "introduced": 1972,
+      "summary": "A Super 8 magnetic sound projector that records as well as plays back, sold from 1972 with a f/1.3 15 to 30mm zoom, a 100W 12V lamp, automatic threading, forward and reverse running, 18 and 24 frames a second and 600ft reels. Sound goes on the main track, with fading and sound-on-sound, and the level can be set by hand or left to an automatic limiter. Built in Austria by Eumig, who had bought Bolex in 1969, on the same chassis as Eumig's own Mark S. Paillard's February 1972 dealer list prices it at $299.50, between the 18-5L Super at $199.50 and the SM8 Sound at $449.50. A SP 8 Special was also sold, and the later SP 80 is built on it.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "Bolex Super 8mm Confidential Price List, 23 February 1972",
+          "url": "https://www.pacificrimcamera.com/rl/04942/04942.pdf",
+          "note": "The primary source, and the reason this entry exists. Paillard's own dealer list: \"SP8 SOUND, product 2480, w/f/1.3 15-30mm Zoom Lens\", $299.50 suggested retail. Read off the rendered page. Scanned by Pacific Rim Camera."
+        },
+        {
+          "title": "Super8Data, Bolex SP 8",
+          "url": "https://www.filmkorn.org/super8data/database/projectors_list/projectors_bolex/bolex_sp8.htm",
+          "note": "A collector database, so secondary, but it dates the machine to 1972 and gives the same f/1.3 15 to 30mm lens the price list does, which is the two sources agreeing without having seen each other. Everything above beyond the price and the lens comes from here: the lamp, the reel size, the speeds, the sound arrangement and the Eumig Mark S chassis. The specifications it gives beyond that, down to the amplifier's transistor count, have not been repeated here because none of them has been checked against a Bolex document."
+        },
+        {
+          "title": "Eumig acquired Bolex in 1969",
+          "url": "https://en.wikipedia.org/wiki/Eumig",
+          "note": "Which is the context for a Bolex-badged projector built on an Austrian mechanism."
+        }
+      ]
+    },
+    {
       "slug": "sp80",
       "name": "SP 80",
       "format": "Super 8",

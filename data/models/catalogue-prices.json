@@ -491,5 +491,19 @@
         }
       ]
     }
+  ],
+  "sp8": [
+    {
+      "year": 1972,
+      "month": "February",
+      "doc": "04942",
+      "note": "The February 1972 Super 8 list, headed confidential and sold to dealers, with one Suggested Retail column. The figures in brackets beside each row are the dealer's own cost, which is not what is shown here.",
+      "variants": [
+        {
+          "asPrinted": "SP8 SOUND w/f/1.3 15-30mm Zoom Lens",
+          "price": "$299.50"
+        }
+      ]
+    }
   ]
 }
