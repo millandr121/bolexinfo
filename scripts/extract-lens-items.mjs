@@ -235,6 +235,19 @@ const items = raw.map((entry) => {
  */
 const SPECS = readReview(path.join(OUT_DIR, "specs.json"));
 
+/*
+ * Photographs this archive went and found, keyed by slug. Michael had
+ * none for the pre-war third-party lenses: his pages for Wollensak,
+ * Meyer and Goerz carry a maker's logo and one generic picture of a
+ * lens between them. Where a dated Bolex catalogue illustrates the
+ * actual lens, the figure is cut from the scan and credited here.
+ *
+ * Kept out of items.json by hand the same way the specifications are,
+ * because items.json is regenerated from Michael's pages and anything
+ * written into it directly would be lost on the next run.
+ */
+const PHOTOS = readReview(path.join(OUT_DIR, "photos.json"));
+
 const ADDED = readReview(path.join(OUT_DIR, "added.json"));
 for (const [slug, entry] of Object.entries(ADDED)) {
   items.push({
@@ -256,6 +269,23 @@ for (const item of items) {
 }
 const straySpecs = Object.keys(SPECS).filter((slug) => !specsUsed.has(slug));
 if (straySpecs.length) console.log(`\n  STRAY specs, no such lens: ${straySpecs.join(", ")}`);
+
+const photosUsed = new Set();
+for (const item of items) {
+  const photos = PHOTOS[item.slug];
+  if (!photos) continue;
+  item.images = [
+    ...photos.map((p) => ({
+      src: `/sourced/lenses/${item.slug}/${p.file}`,
+      alt: p.alt,
+      credit: p.credit,
+    })),
+    ...item.images,
+  ];
+  photosUsed.add(item.slug);
+}
+const strayPhotos = Object.keys(PHOTOS).filter((slug) => !photosUsed.has(slug));
+if (strayPhotos.length) console.log(`  STRAY photos, no such lens: ${strayPhotos.join(", ")}`);
 
 items.sort(
   (a, b) =>
