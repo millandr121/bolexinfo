@@ -838,5 +838,83 @@
         }
       ]
     }
+  ],
+  "185auto": [
+    {
+      "year": 1965,
+      "month": "June",
+      "doc": "04929",
+      "section": "projectors",
+      "note": "The June 1965 dealer list, one Price column. Each configuration is a separate product number and five-letter code; the bracketed figure is the dealer's cost.",
+      "variants": [
+        {
+          "asPrinted": "18-5 Automatic Projector w/Zipper Case and 12.5mm to 25mm Zoom Lens (SIXLU)",
+          "price": "$199.50"
+        },
+        {
+          "asPrinted": "18-5 Automatic Projector w/Zipper Case and 15mm Lens (SIXLO)",
+          "price": "$169.50"
+        },
+        {
+          "asPrinted": "18-5 Automatic Projector w/Zipper Case and 20mm Lens (SIXLA)",
+          "price": "$169.50"
+        },
+        {
+          "asPrinted": "18-5 Automatic Projector w/Screen Case and 12.5mm to 25mm Zoom Lens (SIXTU)",
+          "price": "$209.50"
+        },
+        {
+          "asPrinted": "18-5 Automatic Projector w/Screen Case and 15mm Lens (SIXTO)",
+          "price": "$179.50"
+        },
+        {
+          "asPrinted": "18-5 Automatic Projector w/Screen Case and 20mm Lens (SIXTA)",
+          "price": "$179.50"
+        }
+      ]
+    }
+  ],
+  "185": [
+    {
+      "year": 1965,
+      "month": "June",
+      "doc": "04929",
+      "section": "projectors",
+      "note": "The June 1965 dealer list, one Price column. Each configuration is a separate product number and five-letter code; the bracketed figure is the dealer's cost.",
+      "variants": [
+        {
+          "asPrinted": "18-5 Projector w/Zipper Case and 12.5mm to 25mm Zoom Lens (DUZOO)",
+          "price": "$159.50"
+        },
+        {
+          "asPrinted": "18-5 Projector w/Zipper Case and 15mm Lens (DUORO)",
+          "price": "$129.50"
+        },
+        {
+          "asPrinted": "18-5 Projector w/Zipper Case and 20mm Lens (DUOKO)",
+          "price": "$129.50"
+        },
+        {
+          "asPrinted": "18-5 Projector w/Screen Case and 12.5mm to 25mm Zoom Lens (DUZOC)",
+          "price": "$169.50"
+        },
+        {
+          "asPrinted": "18-5 Projector w/Screen Case and 15mm Lens (DUOTO)",
+          "price": "$139.50"
+        },
+        {
+          "asPrinted": "18-5 Projector w/Screen Case and 20mm Lens (DUOPO)",
+          "price": "$139.50"
+        },
+        {
+          "asPrinted": "Lens f/18-5 Projector, 12.5mm to 25mm Zoom (DUZUM)",
+          "price": "$55.00"
+        },
+        {
+          "asPrinted": "Lens f/18-5 Projector, 15mm (DUWID)",
+          "price": "$25.00"
+        }
+      ]
+    }
   ]
 }

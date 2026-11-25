@@ -176,6 +176,14 @@ Picked out of the Pacific Rim list because they close a known gap:
   - Same source on the family: the SP 8 runs on Eumig's Mark S chassis,
     and the SP 80 on the SP 8 Special's. That is a collector database,
     not Bolex, so it is cited as one.
+- **The 1965 lists hold projectors, and the archive had only taken lenses
+  and accessories out of them.** `rl/04929` (June 1965) prices the 18-5
+  and 18-5 Automatic in six configurations each, by case and by lens,
+  with a five-letter code for every one, plus the separate projector
+  lenses. Those are in now. It also prices an **18-5R Automatic
+  Projector**, identical in price to the 18-5 Automatic, which the
+  archive has no entry for and no description of; the R is not explained
+  anywhere in the document. Left unwritten rather than guessed at.
 - `rl/04927` — **Paillard's factory service charges**, Service and
   Technical Division, New York and Los Angeles. Undated; the footer print
   code reads SU-58, and the Octameter installation is at the same $75.50
