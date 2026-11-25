@@ -145,6 +145,13 @@
           "url": "https://en.wikipedia.org/wiki/Eumig",
           "note": "Which is the context for a Bolex-badged projector built on an Austrian mechanism."
         }
+      ],
+      "images": [
+        {
+          "src": "/sourced/projectors/sp8/sp8-and-sp80.webp",
+          "alt": "The Bolex SP 80 spécial at the left and the SP 8 spécial at the right, from the cover of the instruction book that covers both",
+          "credit": "Bolex SP 80 and SP 8 spécial instructions for use, Bolex International S.A."
+        }
       ]
     },
     {
@@ -168,6 +175,13 @@
           "title": "Eumig acquired Bolex in 1969",
           "url": "https://en.wikipedia.org/wiki/Eumig",
           "note": "Which is the context for a Bolex-badged projector built on an Austrian mechanism."
+        }
+      ],
+      "images": [
+        {
+          "src": "/sourced/projectors/sp80/sp80-and-sp8.webp",
+          "alt": "The Bolex SP 80 spécial at the left and the SP 8 spécial at the right, from the cover of the instruction book that covers both",
+          "credit": "Bolex SP 80 and SP 8 spécial instructions for use, Bolex International S.A."
         }
       ]
     },
@@ -210,6 +224,13 @@
           "title": "The Bolex H16 range, Bolex International brochure",
           "url": "https://www.pacificrimcamera.com/rl/00953/00953.pdf",
           "note": "Bolex International's own range brochure, whose last pages describe the 16mm projectors. The source of every specification here. Undated. Scanned by Pacific Rim Camera. Its OCR interleaves the columns and misreads the model names, turning 501 into 507 and running factory codes into headings, so the models and their descriptions were read off the rendered page."
+        }
+      ],
+      "images": [
+        {
+          "src": "/sourced/projectors/521/521.webp",
+          "alt": "Bolex 521 sound projector from the left, both reels fitted and the speaker beside it",
+          "credit": "16mm Bolex: the H16 range brochure, Bolex (U.S.A.) Inc."
         }
       ]
     },

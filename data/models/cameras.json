@@ -468,6 +468,11 @@
       ],
       "images": [
         {
+          "src": "/sourced/cameras/5120/5120-colour.webp",
+          "alt": "Bolex 5120 Sound Macrozoom in colour, microphone beside it, from Bolex's own advertisement",
+          "credit": "Bolex 5120 advertisement, Ehrenreich Photo-Optical Industries"
+        },
+        {
           "src": "/sourced/cameras/5120/5120-macrozoom.webp",
           "alt": "Bolex 5120 Sound Macrozoom from three-quarters front, nameplate reading BOLEX 5120 SOUND",
           "credit": "Bolex H-16 Professional 16mm Motion Picture Systems brochure, EPOI"
