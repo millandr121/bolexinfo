@@ -114,13 +114,35 @@ Picked out of the Pacific Rim list because they close a known gap:
     H-16 models, which gives full specifications and the same product
     numbers the lists use. The rest of the gap is in
     findings/models-the-price-lists-name.md.
-- **Two more price lists exist and are not on Pacific Rim.** Both of the
-  February 1972 lists are headed modifications of earlier ones:
-  - `rl/04932` (16mm) replaces a list dated **July 1971**.
-  - `rl/04942` (Super 8) replaces one dated **June 1971**.
-  Neither 1971 list is on the site. They would be the earliest pricing
-  the archive could hold for the EBM and the Super 8 line, and worth
-  watching for.
+- **The price-list index holds ELEVEN, not eight.** This file said eight
+  for a long time and it was wrong: `rl/rlBolexPriceLists.htm` lists
+  eleven, one of which is a projector sheet. All ten Bolex ones are now
+  mined. The two found late were:
+  - `rl/04950` — **13 February 1970**, H-16 dealer list, two pages, one
+    Suggested Retail Price column. It fills the 1967 to 1972 gap, which
+    was the widest the chart had, and it is the densest single document
+    the archive holds: lenses, accessories, tripods, motors, cases, the
+    S-311 and S-321 projectors and the camera bodies, each with its
+    five-letter code. Its OCR corrupts the prices themselves, printing
+    48.00 as 4B.00 and 59.50 as 59_50, so every figure was read off the
+    rendered page.
+  - `rl/04946` — **Bolex/Hasselblad Federal Supply Schedule**, 30 March
+    to 30 November 1970, 16 pages. A GSA contract price list covering
+    Bolex cameras, Super 8 projectors, Hasselblad and **the Bolex 16
+    Pro**. Downloaded, not yet mined. Government contract prices are not
+    retail and would need saying so plainly if used.
+- **Three more price lists exist and are not on Pacific Rim.** Each is
+  named as the one its successor replaced:
+  - `rl/04950` (Feb 1970, 16mm) replaces a list dated **February 1969**.
+  - `rl/04932` (Feb 1972, 16mm) replaces one dated **July 1971**.
+  - `rl/04942` (Feb 1972, Super 8) replaces one dated **June 1971**.
+  The 1971 pair would be the earliest pricing the archive could hold for
+  the EBM and the Super 8 line. Worth watching for.
+- **The Feb 1970 list keys every row to the Bolex Reporter Product
+  Buying Guide**, by page number. Pacific Rim holds Bolex Reporter
+  issues 1967 to 1972 in its Misc section. That guide is therefore a
+  real document with a known structure, and finding the matching issue
+  would pair a picture and a description to each priced line.
 - **`rl/04932` holds camera bodies, not only lenses.** It was mined for
   lenses first and the bodies were missed: the EBM at $1,320.00 body
   only, the SBM at $720.00, the REX-5 and the M-5. It also has **no EL

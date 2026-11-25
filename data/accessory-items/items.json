@@ -571,6 +571,9 @@
       "decade": 1940,
       "year": null,
       "description": "The earliest model H cameras included this viewfinder which could be fitted at the top or on the side of the camera. The field of view is shown for lenses of 3 focal lengths. Field of view is changed by raising or lowering side levers which move magnifying prisms into place inside the viewer. When fitted to the side of the film door, the finder offers parallax correction by adjusting a dial which corresponds to the distance between the subject and lens. The H-16 version shows the angle of view for 15mm, 25mm and 75mm lenses; the H-8 version adjusts for 6.5, 12.5 and 35mm. A serial number is located on the rear of the viewfinder which, in most cases, matches the serial number of the camera to which it is attached.",
+      "codes": [
+        "VITOC"
+      ],
       "images": [
         {
           "src": "/images/accessories/view40_1a.jpg",
@@ -578,6 +581,14 @@
         }
       ],
       "sources": [],
+      "listings": [
+        {
+          "price": "$40.00",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Multifocal Viewfinder"
+        }
+      ],
       "catalogue": {
         "year": 1952,
         "month": "February",
@@ -951,6 +962,9 @@
       "decade": 1950,
       "year": null,
       "description": "Also known as the U-62 or MOVUM, this electric drive motor was introduced in the Spring 1954 issue of the Bolex Reporter. This version allows the H-16 to be filmed at 8-32 frames per second, and for the H-8 to be filmed at 16-48 frames per second. The motor came complete with a leather battery case, five batteries and 10 foot extension cord and switch.",
+      "codes": [
+        "MOSTE"
+      ],
       "images": [
         {
           "src": "/images/accessories/motor50_2.jpg",
@@ -958,6 +972,14 @@
         }
       ],
       "sources": [],
+      "listings": [
+        {
+          "price": "$97.50",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Unimotor Only"
+        }
+      ],
       "from": {
         "page": "motor50",
         "heading": "Camera Motors",
@@ -1224,6 +1246,12 @@
           "price": "$18.00",
           "date": "May 1967",
           "doc": "04933",
+          "asPrinted": "16mm Extension Tubes"
+        },
+        {
+          "price": "$26.00",
+          "date": "February 1970",
+          "doc": "04950",
           "asPrinted": "16mm Extension Tubes"
         },
         {
@@ -1623,7 +1651,8 @@
       "description": "This camera housing was introduced in 1955 to accommodate the H-16 for underwater filming. The unit was watertight down to depths of 330 ft. [1] Three controls were located on the outside for the operation of the lens diaphragm, motor winding and camera release. The device was equipped with a parallax corrected viewfinder and originally supplied with two diaphragm collars: one for a Switar 10mm f/1.6 and the other for either Switar 16mm f/1.8 or Yvar f/2.8 lenses. [2] Later versions were available with diaphram collars to support H-8 and RX lenses. Weight, out of water and without camera was 22lbs; 4 1/2 lbs while submerged. It sold for $430.00 US in a 1958 retail price list.",
       "codes": [
         "HETEX",
-        "HAMAR"
+        "HAMAR",
+        "HAPRE"
       ],
       "images": [
         {
@@ -1646,6 +1675,12 @@
           "price": "$525.00",
           "date": "May 1967",
           "doc": "04933",
+          "asPrinted": "Underwater Housing Complete H-16"
+        },
+        {
+          "price": "$580.00",
+          "date": "February 1970",
+          "doc": "04950",
           "asPrinted": "Underwater Housing Complete H-16"
         }
       ],
@@ -1849,6 +1884,12 @@
           "date": "May 1967",
           "doc": "04933",
           "asPrinted": "Tripod H (including panhead)"
+        },
+        {
+          "price": "$119.50",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Tripod H (including panhead)"
         }
       ],
       "from": {
@@ -1996,6 +2037,9 @@
       "decade": 1960,
       "year": null,
       "description": "The Electric pistol grip was designed for flat based H cameras with the Perfectone and MST motors attached. In the 1970s, a later version was produced to operate the EM and ESM motor, as well as the H-16 EL camera.",
+      "codes": [
+        "HAFEL"
+      ],
       "images": [
         {
           "src": "/images/accessories/support60_4.jpg",
@@ -2003,6 +2047,14 @@
         }
       ],
       "sources": [],
+      "listings": [
+        {
+          "price": "$50.00",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Electric Camera Grip"
+        }
+      ],
       "from": {
         "page": "support60",
         "heading": "Tripods & Grips",
@@ -2032,6 +2084,12 @@
           "date": "May 1967",
           "doc": "04933",
           "asPrinted": "H-20\" Cable Release"
+        },
+        {
+          "price": "$7.00",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "H-20in Cable Release"
         }
       ],
       "from": {
@@ -2063,6 +2121,12 @@
           "date": "May 1967",
           "doc": "04933",
           "asPrinted": "12 Volt Take-up Motor"
+        },
+        {
+          "price": "$99.50",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "12-Volt 400 Ft. Magazine Take-up Motor"
         }
       ],
       "listingNote": "Listed among the components for the 400ft Bolex, which is what the MM drives.",
@@ -2101,6 +2165,12 @@
           "date": "May 1967",
           "doc": "04933",
           "asPrinted": "Ball Joint only"
+        },
+        {
+          "price": "$29.00",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Ball Joint Only"
         }
       ],
       "from": {
@@ -2214,6 +2284,12 @@
           "date": "May 1967",
           "doc": "04933",
           "asPrinted": "16mm Zoom Camera Case B"
+        },
+        {
+          "price": "$69.50",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "16mm Zoom Camera Case B"
         }
       ],
       "from": {
@@ -2231,7 +2307,8 @@
       "description": "A sturdy, lightweight (11oz) monopod introduced in 1961. It was originally designed to be used with the smaller B, C and D models, but continued to be advertised throughout the 1960s as it was easily compatible with the later 8mm and super 8 Bolex cameras. Telescopic style extension; 23\" long when retracted and 61\" fully extended. A detachable wrist strap was included. It was also available with a ball-joint head.",
       "codes": [
         "MONOP",
-        "MONTO"
+        "MONTO",
+        "MONRA"
       ],
       "images": [
         {
@@ -2256,6 +2333,24 @@
           "date": "May 1967",
           "doc": "04933",
           "asPrinted": "Monopod with Ball Joint"
+        },
+        {
+          "price": "$14.50",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Monopod"
+        },
+        {
+          "price": "$18.50",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Monopod with Ball Joint"
+        },
+        {
+          "price": "$6.50",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Ball Joint Only f/Monopod"
         },
         {
           "price": "$15.30",
@@ -2318,6 +2413,12 @@
           "date": "May 1967",
           "doc": "04933",
           "asPrinted": "Automatic Selftimer Model \"A\""
+        },
+        {
+          "price": "$13.95",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Automatic Selftimer Model \"A\""
         }
       ],
       "from": {
@@ -2363,6 +2464,12 @@
           "date": "May 1967",
           "doc": "04933",
           "asPrinted": "Leather Carrying Case H-1B"
+        },
+        {
+          "price": "$59.50",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "H-1B Leather Carrying Case"
         }
       ],
       "from": {
@@ -2514,6 +2621,12 @@
           "date": "May 1967",
           "doc": "04933",
           "asPrinted": "Lightmeter for H Rex"
+        },
+        {
+          "price": "$48.00",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Lightmeter for H Rex"
         }
       ],
       "from": {
@@ -2560,6 +2673,12 @@
           "price": "$160.00",
           "date": "May 1967",
           "doc": "04933",
+          "asPrinted": "Lens and Accessory Support"
+        },
+        {
+          "price": "$175.00",
+          "date": "February 1970",
+          "doc": "04950",
           "asPrinted": "Lens and Accessory Support"
         }
       ],
@@ -2704,6 +2823,12 @@
           "price": "$110.00",
           "date": "May 1967",
           "doc": "04933",
+          "asPrinted": "Unimotor B"
+        },
+        {
+          "price": "$110.00",
+          "date": "February 1970",
+          "doc": "04950",
           "asPrinted": "Unimotor B"
         }
       ],

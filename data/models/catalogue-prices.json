@@ -392,6 +392,22 @@
           "price": "$330.00"
         }
       ]
+    },
+    {
+      "year": 1970,
+      "month": "February",
+      "doc": "04950",
+      "note": "The February 13, 1970 dealer list, one Suggested Retail Price column. It replaces a list dated February 1969 and keys every row to a page of the Bolex Reporter Product Buying Guide.",
+      "variants": [
+        {
+          "asPrinted": "H-16 M-5 w/viewfinder",
+          "price": "$330.00"
+        },
+        {
+          "asPrinted": "H-16 M-5 w/o viewfinder",
+          "price": "$290.00"
+        }
+      ]
     }
   ],
   "h16rex5": [
@@ -432,6 +448,22 @@
         {
           "asPrinted": "H-16 Rex-5 w/o VF, Rx-Turret",
           "price": "$750.00"
+        }
+      ]
+    },
+    {
+      "year": 1970,
+      "month": "February",
+      "doc": "04950",
+      "note": "The February 13, 1970 dealer list, one Suggested Retail Price column. It replaces a list dated February 1969 and keys every row to a page of the Bolex Reporter Product Buying Guide.",
+      "variants": [
+        {
+          "asPrinted": "H-16 Rex-5 complete",
+          "price": "$730.00"
+        },
+        {
+          "asPrinted": "H-16 Rex-5 w/o viewfinder",
+          "price": "$690.00"
         }
       ]
     }
@@ -662,6 +694,48 @@
         {
           "asPrinted": "H-16 EL/TV same as above, but with built-in TV frame in the viewfinder",
           "price": "$5,059.00"
+        }
+      ]
+    }
+  ],
+  "h16rex4": [
+    {
+      "year": 1970,
+      "month": "February",
+      "doc": "04950",
+      "note": "The February 13, 1970 dealer list, one Suggested Retail Price column. It replaces a list dated February 1969 and keys every row to a page of the Bolex Reporter Product Buying Guide.",
+      "variants": [
+        {
+          "asPrinted": "H-16 Rex-4 body only w/o viewfinder",
+          "price": "$630.00"
+        }
+      ]
+    }
+  ],
+  "s321": [
+    {
+      "year": 1970,
+      "month": "February",
+      "doc": "04950",
+      "note": "The February 13, 1970 dealer list, one Suggested Retail Price column. It replaces a list dated February 1969 and keys every row to a page of the Bolex Reporter Product Buying Guide.",
+      "variants": [
+        {
+          "asPrinted": "Bolex S-321 Optical/Magnetic Sound Projector Complete",
+          "price": "$1,500.00"
+        }
+      ]
+    }
+  ],
+  "s311": [
+    {
+      "year": 1970,
+      "month": "February",
+      "doc": "04950",
+      "note": "The February 13, 1970 dealer list, one Suggested Retail Price column. It replaces a list dated February 1969 and keys every row to a page of the Bolex Reporter Product Buying Guide.",
+      "variants": [
+        {
+          "asPrinted": "Bolex S-311 Optical Sound Projector",
+          "price": "$1,150.00"
         }
       ]
     }

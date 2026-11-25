@@ -77,8 +77,9 @@ export default function PricesPage() {
             How prices moved
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-[var(--fg-soft)]">
-            The five things the archive can follow across the most price lists. The matte box
-            is the fullest of them, in five of the seven: US$84.50 in 1965 and US$412.00 in
+            The five things the archive can follow across the most price lists. Several now
+            appear in five of the ten, the extension tubes reaching furthest of all: US$15.00
+            in 1952 and US$120.00 in 1979. The matte box went US$84.50 in 1965 to US$412.00 in
             1979, which looks like a thing getting five times dearer. Switch the reading to{" "}
             {base} money and it roughly doubles instead, the rest of the climb being the 1970s
             happening to everything at once. The Pan Cinor Compact, on the same switch, barely
@@ -156,13 +157,13 @@ export default function PricesPage() {
               the official ones.
             </p>
             <p>
-              <span className="text-[var(--fg)]">What is missing.</span> Nine of Paillard&rsquo;s
-              dated price lists have been read, together with the retail lists bound into both
-              1952 catalogues, and every one Pacific Rim holds has now been mined. There is
-              nothing before 1952: the 1946 catalogue names its lenses but tells the reader to
-              consult a price list that has not been found. The 1965 catalogue prices nothing
-              at all. And the H-16 EL, EBM and SBM are priced in the documents but absent here,
-              because the archive has no page for those three cameras to put a price on.
+              <span className="text-[var(--fg)]">What is missing.</span> Every Bolex price
+              list Pacific Rim holds has now been read, ten of them, together with the retail
+              lists bound into both 1952 catalogues. There is nothing before 1952: the 1946
+              catalogue names its lenses but tells the reader to consult a price list that has
+              not been found. The 1965 catalogue prices nothing at all. Three more lists are
+              known to exist and are not on the site, each named as the one its successor
+              replaced: February 1969 and July 1971 for 16mm, and June 1971 for Super 8.
             </p>
           </div>
         </section>

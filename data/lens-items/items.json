@@ -1562,8 +1562,15 @@
           "date": "May 1967",
           "doc": "04933",
           "asPrinted": "Switar 25mm f/1.4"
+        },
+        {
+          "price": "$168.00",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Switar 25mm f/1.4 RX"
         }
       ],
+      "listingNote": "The 1970 list prices the RX version, DAITA, which is this entry's code. The archive carries two entries for this designation and the earlier one takes the 1952 catalogue price; the 1967 and 1970 dealer prices are the later lens and belong here.",
       "from": {
         "page": "50kern",
         "heading": "C and RX Mount Lenses for H-16 Cameras",
@@ -2159,6 +2166,18 @@
         },
         {
           "price": "$99.50",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Switar 16mm f/1.8 RX"
+        },
+        {
+          "price": "$99.50",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Switar 16mm f/1.8"
+        },
+        {
+          "price": "$99.50",
           "date": "February 1972",
           "doc": "04932",
           "asPrinted": "Switar 16mm f/1.8"
@@ -2290,7 +2309,8 @@
       "aperture": "f/1.6",
       "codes": [
         "SWEDI",
-        "DAADI"
+        "DAADI",
+        "PRESE"
       ],
       "mount": "C or RX",
       "gauge": "16mm",
@@ -2316,6 +2336,18 @@
           "date": "May 1967",
           "doc": "04933",
           "asPrinted": "Switar 10mm f/1.6 RX"
+        },
+        {
+          "price": "$250.00",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Switar 10mm f/1.6 RX Preset"
+        },
+        {
+          "price": "$165.00",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Switar 10mm f/1.6"
         },
         {
           "price": "$165.00",
@@ -2920,7 +2952,8 @@
       "focalLength": "150mm",
       "aperture": "f/3.3",
       "codes": [
-        "HIONG"
+        "HIONG",
+        "PRERI"
       ],
       "mount": "C or RX",
       "gauge": "16mm",
@@ -2940,6 +2973,12 @@
           "date": "March 1965",
           "doc": "04929",
           "asPrinted": "Macro-Yvar 150mm f/3.3Rx"
+        },
+        {
+          "price": "$199.50",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Macro-Yvar 150mm f/3.3 Preset"
         },
         {
           "price": "$261.50",
@@ -3037,7 +3076,8 @@
       "focalLength": "100mm",
       "aperture": "f/2.8",
       "codes": [
-        "HIENT"
+        "HIENT",
+        "YREMO"
       ],
       "mount": "C or RX",
       "gauge": "16mm",
@@ -3057,6 +3097,12 @@
           "date": "March 1965",
           "doc": "04929",
           "asPrinted": "Macro-Yvar 100mm f/2.8Rx"
+        },
+        {
+          "price": "$109.50",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Macro-Yvar 100mm f/2.8"
         }
       ],
       "from": {
@@ -3131,6 +3177,12 @@
           "asPrinted": "Pan Cinor 85 Compact, 17-85mm f/3.8"
         },
         {
+          "price": "$250.00",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Pan Cinor 85 Compact, 17-85mm f/3.8"
+        },
+        {
           "price": "$399.00",
           "date": "October 1976",
           "doc": "02211",
@@ -3182,6 +3234,12 @@
           "price": "$420.00",
           "date": "May 1967",
           "doc": "04933",
+          "asPrinted": "Pan Cinor 85-2, 17-85mm f/2.0"
+        },
+        {
+          "price": "$480.00",
+          "date": "February 1970",
+          "doc": "04950",
           "asPrinted": "Pan Cinor 85-2, 17-85mm f/2.0"
         },
         {
@@ -3282,7 +3340,9 @@
       "series": "Macro",
       "focalLength": "26mm",
       "aperture": "f/1.1",
-      "codes": [],
+      "codes": [
+        "PRENO"
+      ],
       "mount": "C or RX",
       "gauge": "16mm",
       "decade": 1960,
@@ -3296,6 +3356,12 @@
       ],
       "sources": [],
       "listings": [
+        {
+          "price": "$300.00",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Macro-Switar 26mm f/1.1 RX Preset"
+        },
         {
           "price": "$321.50",
           "date": "February 1972",
@@ -3362,7 +3428,9 @@
       "series": "Vario-Switar",
       "focalLength": "18mm",
       "aperture": "f/2.5",
-      "codes": [],
+      "codes": [
+        "VAMOE"
+      ],
       "mount": "C or RX",
       "gauge": "16mm",
       "decade": 1960,
@@ -3375,6 +3443,14 @@
         }
       ],
       "sources": [],
+      "listings": [
+        {
+          "price": "$625.00",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Vario-Switar 86-OE"
+        }
+      ],
       "from": {
         "page": "60kern",
         "heading": "C and RX Mount Lenses for H-16 Cameras",
@@ -3388,7 +3464,9 @@
       "series": "Macro-Switar",
       "focalLength": "75mm",
       "aperture": "f/1.9",
-      "codes": [],
+      "codes": [
+        "PRELA"
+      ],
       "mount": "C or RX",
       "gauge": "16mm",
       "decade": 1960,
@@ -3402,6 +3480,12 @@
       ],
       "sources": [],
       "listings": [
+        {
+          "price": "$220.00",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Macro-Switar 75mm f/1.9 Preset"
+        },
         {
           "price": "$300.00",
           "date": "February 1972",
@@ -3434,7 +3518,9 @@
       "series": "Pan Cinor",
       "focalLength": null,
       "aperture": "f/3.3",
-      "codes": [],
+      "codes": [
+        "PAHUN"
+      ],
       "mount": null,
       "gauge": "16mm",
       "decade": 1960,
@@ -3447,6 +3533,14 @@
         }
       ],
       "sources": [],
+      "listings": [
+        {
+          "price": "$715.00",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Pan Cinor 12-120mm f/3.3"
+        }
+      ],
       "from": {
         "page": "60berthiot",
         "heading": "Lenses for H-16 Cameras",
@@ -3460,7 +3554,9 @@
       "series": "Vario",
       "focalLength": "16-100mm",
       "aperture": "f/1.9",
-      "codes": [],
+      "codes": [
+        "VAPOL"
+      ],
       "mount": "C or RX",
       "gauge": "16mm",
       "decade": 1960,
@@ -3474,6 +3570,12 @@
       ],
       "sources": [],
       "listings": [
+        {
+          "price": "$800.00",
+          "date": "February 1970",
+          "doc": "04950",
+          "asPrinted": "Vario-Switar 16-100mm POE f/1.9"
+        },
         {
           "price": "$800.00",
           "date": "February 1972",
