@@ -427,8 +427,39 @@
         "date": "May 1967",
         "doc": "04933",
         "asPrinted": "Monopod with Ball Joint"
+      },
+      {
+        "price": "$15.30",
+        "date": "February 1972",
+        "doc": "04942",
+        "asPrinted": "Monopod"
+      },
+      {
+        "price": "$19.90",
+        "date": "February 1972",
+        "doc": "04942",
+        "asPrinted": "Monopod w/Ball Joint"
+      },
+      {
+        "price": "$7.00",
+        "date": "February 1972",
+        "doc": "04942",
+        "asPrinted": "Ball Joint Only f/Monopod (#779)"
+      },
+      {
+        "price": "$39.00",
+        "date": "April 1979",
+        "doc": "02226",
+        "asPrinted": "Monopod"
+      },
+      {
+        "price": "$61.00",
+        "date": "April 1979",
+        "doc": "02226",
+        "asPrinted": "Monopod with Ball joint"
       }
-    ]
+    ],
+    "note": "Priced in the 16mm list and in both Super 8 lists, which fits the entry: an 11oz monopod sold from 1961 and still catalogued for the Super 8 cameras. The Pro Monopod of the 1976 and 1978 16mm lists, at ten times the money, is a different and much heavier thing and is not here."
   },
   "bellows-extension-unit": {
     "addCodes": [

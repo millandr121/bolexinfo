@@ -422,5 +422,74 @@
         }
       ]
     }
+  ],
+  "160": [
+    {
+      "year": 1972,
+      "month": "February",
+      "doc": "04942",
+      "note": "The February 1972 Super 8 list, headed confidential and sold to dealers, with one Suggested Retail column. The figures in brackets beside each row are the dealer's own cost, which is not what is shown here.",
+      "variants": [
+        {
+          "asPrinted": "160 Macrozoom",
+          "price": "$300.00"
+        }
+      ]
+    }
+  ],
+  "multimatic": [
+    {
+      "year": 1972,
+      "month": "February",
+      "doc": "04942",
+      "section": "projectors",
+      "note": "The February 1972 Super 8 list, headed confidential and sold to dealers, with one Suggested Retail column. The figures in brackets beside each row are the dealer's own cost, which is not what is shown here.",
+      "variants": [
+        {
+          "asPrinted": "Multimatic w/f/1.1 17-34mm Zoom Lens",
+          "price": "$319.50"
+        },
+        {
+          "asPrinted": "Multimatic w/f/1.1 23mm Lens",
+          "price": "$299.50"
+        },
+        {
+          "asPrinted": "Multimatic w/f/1.3 12-30mm Zoom",
+          "price": "$289.50"
+        },
+        {
+          "asPrinted": "Multimatic w/f/1.3 20mm Lens",
+          "price": "$269.50"
+        }
+      ]
+    }
+  ],
+  "185super": [
+    {
+      "year": 1972,
+      "month": "February",
+      "doc": "04942",
+      "note": "The February 1972 Super 8 list, headed confidential and sold to dealers, with one Suggested Retail column. The figures in brackets beside each row are the dealer's own cost, which is not what is shown here.",
+      "variants": [
+        {
+          "asPrinted": "18-5L SUPER w/f/1.3 15-27mm Zoom Lens",
+          "price": "$199.50"
+        }
+      ]
+    }
+  ],
+  "sm8": [
+    {
+      "year": 1972,
+      "month": "February",
+      "doc": "04942",
+      "note": "The February 1972 Super 8 list, headed confidential and sold to dealers, with one Suggested Retail column. The figures in brackets beside each row are the dealer's own cost, which is not what is shown here.",
+      "variants": [
+        {
+          "asPrinted": "SM8 SOUND w/f/1.3 12-30mm Zoom Lens",
+          "price": "$449.50"
+        }
+      ]
+    }
   ]
 }

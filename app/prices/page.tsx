@@ -156,12 +156,13 @@ export default function PricesPage() {
               the official ones.
             </p>
             <p>
-              <span className="text-[var(--fg)]">What is missing.</span> Seven of the eight
-              Bolex price lists Pacific Rim holds have been read, together with the retail
-              lists bound into both 1952 catalogues. There is nothing before 1952: the 1946
-              catalogue tells the reader to consult a price list that has not been found. And
-              nothing here is a Super 8 price, nor an H-16 EL, EBM or SBM, because the archive
-              has no page for those three cameras to put a price on.
+              <span className="text-[var(--fg)]">What is missing.</span> Nine of Paillard&rsquo;s
+              dated price lists have been read, together with the retail lists bound into both
+              1952 catalogues, and every one Pacific Rim holds has now been mined. There is
+              nothing before 1952: the 1946 catalogue names its lenses but tells the reader to
+              consult a price list that has not been found. The 1965 catalogue prices nothing
+              at all. And the H-16 EL, EBM and SBM are priced in the documents but absent here,
+              because the archive has no page for those three cameras to put a price on.
             </p>
           </div>
         </section>

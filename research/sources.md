@@ -112,6 +112,27 @@ Picked out of the Pacific Rim list because they close a known gap:
   - These two also price the **H-16 EL, EBM and SBM**, which the archive
     has no entries for at all. Three major production cameras with no
     page: the clearest gap the price lists have turned up.
+- **The two Super 8 price lists, downloaded and mined.** Both have a
+  single Suggested Retail column, so neither carries the 16mm lists' trap.
+  - `rl/04942` — **23 February 1972**, Paillard Inc., Linden NJ and Los
+    Angeles. Headed "BOLEX SUPER 8MM CONFIDENTIAL PRICE LIST,
+    MODIFICATION OF PRICE LIST DATED JUNE, 1971", so a **June 1971 list
+    exists** and is not on Pacific Rim. The bracketed number beside each
+    row is the dealer's cost, not a product code: the 160 Macrozoom reads
+    `(08200-00)` against a $300.00 retail, which is $200.00 to the dealer
+    and $190.00 at three or more.
+  - `rl/02226` — **1 April 1979**, Bolex (U.S.A.) Inc., list no. S1.
+  - **This is the manufacturer document for the SP8**, which the archive
+    has no entry for: "SP8 SOUND, product 2480, w/f/1.3 15-30mm Zoom
+    Lens, $299.50". The same page prices the SM8 Sound at $449.50 and the
+    18-5L Super at $199.50, both of which the archive had undated and
+    unpriced. An SP8 entry can now be written from a primary source.
+  - **A lead on the SP 80.** The April 1979 list has no SP 80. It has a
+    **SM-80 Programmatic** sound projector at $780.00, and refers to it
+    again as SM/80. Whether that is the SP 80 under an American name or a
+    sibling is not settled here, and the entry has not been changed. But
+    the SP 80 currently rests on dealer listings alone, and this is the
+    nearest a Bolex document has come to it.
 - "Bolex Sterero Instruction Book" (their spelling) — the Stereo/Triorama.
 - The SP 80 is **not on Pacific Rim**, despite an earlier note here saying
   an "SP8/SP80 Instruction Book" was listed. It is not. The SP59 to SP62
