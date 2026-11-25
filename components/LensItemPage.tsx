@@ -14,6 +14,24 @@ import { lensDateLabel, type LensItem } from "@/lib/lens-types";
  * and nothing else to go on. Then focal length and aperture, then the date,
  * which for most of these is only a decade and says so.
  */
+/** The brochure's own row names, in plain words. */
+const SPEC_LABELS: Record<string, string> = {
+  catalogueNumber: "Catalogue number",
+  designedFor: "Designed for",
+  maximumAperture: "Maximum aperture",
+  minimumDiaphragm: "Minimum diaphragm",
+  angleOfView: "Angle of view",
+  minimumFocus: "Minimum focusing distance",
+  areaAtMinimumFocus: "Area covered, closest",
+  areaAt20Feet: "Area covered at 20ft",
+  depthOfFieldScale: "Depth of field scale",
+  lengthAtInfinity: "Length at infinity",
+  frontDiameter: "Front diameter",
+  maximumDiameter: "Maximum diameter",
+  weight: "Weight",
+  filterAdapter: "Filter adapter",
+};
+
 export function LensItemPage({ item }: { item: LensItem }) {
   const archiveHref = originalArchiveHref(item.from.originalPath ?? undefined);
   const images = item.images.map((i) => ({ src: i.src, alt: i.alt || item.name }));
@@ -148,6 +166,51 @@ export function LensItemPage({ item }: { item: LensItem }) {
             prose of its own. Where it does not, the catalogue is already
             the description above and this would repeat it.
           */}
+          {/*
+            What Paillard measured. Shown as the brochure's own table
+            rather than folded into prose, because the useful thing about
+            a weight or a minimum focusing distance is being able to find
+            it and compare it, not read about it.
+          */}
+          {item.specs && (
+            <section className="rule mt-10 pt-4" aria-labelledby="specs">
+              <h2
+                id="specs"
+                className="font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.16em] text-[var(--accent)]"
+              >
+                Measured
+              </h2>
+              <dl className="mt-3 grid gap-x-6 gap-y-1.5 sm:grid-cols-[max-content_1fr]">
+                {Object.entries(item.specs).map(([label, value]) => (
+                  <div
+                    key={label}
+                    className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-0.5 border-b border-[var(--line)] pb-1.5 font-[family-name:var(--font-mono)] text-[0.72rem] leading-relaxed sm:contents"
+                  >
+                    <dt className="text-[var(--fg-soft)] sm:border-b sm:border-[var(--line)] sm:pb-1.5">
+                      {SPEC_LABELS[label] ?? label}
+                    </dt>
+                    <dd className="text-[var(--fg)] sm:border-b sm:border-[var(--line)] sm:pb-1.5">
+                      {value}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+              <p className="mt-3 font-[family-name:var(--font-mono)] text-[0.66rem] leading-relaxed text-[var(--fg-soft)]">
+                From Paillard&rsquo;s own{" "}
+                <a
+                  href="https://www.pacificrimcamera.com/rl/01992/01992.pdf"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                  className="text-[var(--accent)] underline underline-offset-4"
+                >
+                  Lenses for 16mm Motion Picture and Television Cameras ↗
+                </a>
+                , read off the page rather than the scan&rsquo;s text, which pairs every figure
+                with the wrong lens.
+              </p>
+            </section>
+          )}
+
           {item.catalogue && item.description && (
             <section className="rule mt-10 pt-4" aria-labelledby="catalogue">
               <h2

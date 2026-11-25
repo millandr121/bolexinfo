@@ -50,6 +50,14 @@ export interface LensItem {
     price?: string;
     note?: string;
   };
+  /**
+   * Measured specifications from Paillard's own lens brochure, where it
+   * covers this lens. Free-form label and value, in the order the
+   * brochure's own table reads, because the fields differ between the
+   * fixed lenses and the zooms and inventing a common shape would lose
+   * what the table actually says.
+   */
+  specs?: Record<string, string>;
   from: { page: string | null; heading: string | null; originalPath: string | null };
   /** True where the original site never listed this lens at all. */
   added?: boolean;

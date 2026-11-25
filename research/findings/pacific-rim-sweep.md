@@ -102,23 +102,37 @@ Written up from these documents, with prices where the lists carry them:
 
 ---
 
-## The largest seam still unmined
+## The lens brochure, mined
 
-**`01992`, Lenses for 16mm Motion Picture and Television Cameras.** Four
-pages, two of them a specification table of the whole Kern-Paillard and
-Som Berthiot range: 27 lenses, 10mm to 150mm, f/4 to f/0.95. Per lens it
-gives the catalogue number, what it is designed for, angle of view,
-minimum focusing distance, area covered at that distance and at 20ft,
-minimum diaphragm, depth-of-field scale type, length at infinity, front
-and maximum diameter, **weight**, and filter adapter number.
+**`01992`, Lenses for 16mm Motion Picture and Television Cameras.** Two
+of its four pages are specification tables. Ten lenses are in, each read
+off the rendered page because the OCR interleaves the columns and pairs
+every figure with the wrong lens: the Switar 10mm, 16mm and 25mm, the
+Yvar 16mm, the Cinor 25mm f/0.95, the Pizar 25mm, the Vario-Switar 86
+and the Pan Cinor 70, 85 and 100.
 
-The tables are on pages 2 and 4 and must be read off the rendered page;
-the OCR interleaves the columns completely. The catalogue numbers come
-in pairs, "34 & 5" meaning #34 for C mount and Vidicon and #5 for Bolex
-Reflex, which is itself a mapping the archive does not have.
+They are in `data/lens-items/specs.json` and show as a **Measured**
+table on the lens page.
 
-This would put physical specifications on a large part of the lens
-catalogue. It is a careful afternoon, not a quick pass.
+The **Pan Cinor 100** came out of it as a lens the original site never
+listed at all, and now has an entry.
+
+Two things the tables give that the archive had no way to record before:
+
+- **The catalogue-number pairs.** "34 & 5" means number 34 for C mount
+  and Vidicon and number 5 for the Bolex Reflex. The Pan Cinors pair a
+  "C" number with an "S" (Kodak) one instead.
+- **Weights and lengths**, which is what somebody carrying a camera
+  actually wants.
+
+One figure was left out on purpose. The Vario-Switar 86's area covered
+at 20 feet at its shortest focal length reads "17in x 84in" where every
+comparable lens is about 120 inches wide. The leading digit has not
+survived the scan, so the field is absent rather than wrong.
+
+**What remains in it:** the brochure says the two lines run to 27
+lenses, and these tables cover ten. The rest are named in the prose
+without a table, or are on pages whose tables were not reproduced.
 
 ---
 

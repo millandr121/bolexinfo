@@ -13,21 +13,27 @@
     "Merged into items.json by scripts/extract-lens-items.mjs and marked",
     "added: true, so the page can say plainly that this one is ours."
   ],
-
   "cinet": {
     "name": "Cinor 25mm f/1.8 (CINET)",
     "maker": "SOM Berthiot",
     "series": "Cinor",
     "focalLength": "25mm",
     "aperture": "f/1.8",
-    "codes": ["CINET"],
+    "codes": [
+      "CINET"
+    ],
     "mount": "C",
     "gauge": "16mm",
     "decade": 1960,
     "year": null,
     "description": "A standard focal length lens for the H-16, listed by Paillard under Standard Lenses at $70.00 in the dealer price list of May 1967. Nothing else about it has been established here. The archive holds a Cinor 25mm f/0.95 and a Cinor 25mm f/1.4 RX, and this is neither of them.",
     "listings": [
-      { "price": "$70.00", "date": "May 1967", "doc": "04933", "asPrinted": "Cinor 25mm f/1.8" }
+      {
+        "price": "$70.00",
+        "date": "May 1967",
+        "doc": "04933",
+        "asPrinted": "Cinor 25mm f/1.8"
+      }
     ]
   },
   "lyset": {
@@ -36,14 +42,21 @@
     "series": "Cinor",
     "focalLength": "16mm",
     "aperture": "f/2.8",
-    "codes": ["LYSET"],
+    "codes": [
+      "LYSET"
+    ],
     "mount": "C",
     "gauge": "16mm",
     "decade": 1960,
     "year": null,
     "description": "A wide angle lens for the H-16, listed by Paillard under Wide Angle Lenses at $59.50 in the dealer price list of May 1967, beside the Switar 10mm and 16mm. The archive has no other Cinor at this focal length.",
     "listings": [
-      { "price": "$59.50", "date": "May 1967", "doc": "04933", "asPrinted": "Cinor 16mm f/2.8" }
+      {
+        "price": "$59.50",
+        "date": "May 1967",
+        "doc": "04933",
+        "asPrinted": "Cinor 16mm f/2.8"
+      }
     ]
   },
   "pizar-12-5mm-f-1-9-1952": {
@@ -66,5 +79,18 @@
       "asPrinted": "Pizar 12.5mm (½\") F:1.9, Standard A.S.A. mount",
       "price": "$95.75"
     }
+  },
+  "pan-cinor-100": {
+    "name": "Pan Cinor 100 (25mm-100mm f/3.4)",
+    "maker": "SOM Berthiot",
+    "series": "Pan Cinor",
+    "focalLength": "25mm",
+    "aperture": "f/3.4",
+    "codes": [],
+    "mount": "C",
+    "gauge": "16mm",
+    "decade": 1960,
+    "year": null,
+    "description": "The long end of the Pan Cinor range, 25 to 100mm at f/3.4, and the only one of the four zooms in Paillard's lens brochure that the original site never listed. It is the tightest of them: 5½ by 4 degrees at the long end against the Pan Cinor 85's 6½ by 5, and at twenty feet it frames 20 by 15 inches where the 85 frames 24 by 15. Like the Pan Cinor 70 it offers viewing only, so focusing is done on the camera's groundglass or by measuring the distance, where the 85's finder has a split-image rangefinder. Sold under two catalogue numbers, 55 for C mount and Vidicon and 57 for the \"S\" Kodak mount, and available without the finder for vidicon cameras."
   }
 }
