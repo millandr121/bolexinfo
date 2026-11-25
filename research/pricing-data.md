@@ -7,7 +7,7 @@ out to be the better plan all along.
 
 The replacement is two things, both built:
 
-- **`/worth`** — a page that teaches a reader to value their own
+- **`/articles/what-one-is-worth`** — an article that teaches a reader to value their own
   equipment, from what collectors who actually trade it report. Sold
   listings over asking prices, auctions as the fairest figures, the
   user groups next, Marketplace as luck.

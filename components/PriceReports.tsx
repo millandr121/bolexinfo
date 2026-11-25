@@ -162,7 +162,7 @@ export function PriceReports({
           Add what you paid
         </button>
         {" · "}
-        <a href="/worth" className="underline underline-offset-2 hover:text-[var(--accent)]">
+        <a href="/articles/what-one-is-worth" className="underline underline-offset-2 hover:text-[var(--accent)]">
           How to value one
         </a>
       </p>
@@ -373,7 +373,7 @@ export function PriceReports({
             Add what you paid
           </button>
           {" · "}
-          <a href="/worth" className="underline underline-offset-2 hover:text-[var(--accent)]">
+          <a href="/articles/what-one-is-worth" className="underline underline-offset-2 hover:text-[var(--accent)]">
             How to value one
           </a>
         </p>

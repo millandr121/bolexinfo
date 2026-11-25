@@ -59,7 +59,7 @@ export default function PricesPage() {
             sells for today turns far more on condition than on model &mdash; a recently
             serviced H-16 and a seized one are the same entry here and several times apart in
             price.{" "}
-            <Link href="/worth" className="text-[var(--accent)] underline underline-offset-4">
+            <Link href="/articles/what-one-is-worth" className="text-[var(--accent)] underline underline-offset-4">
               How to work out what yours is worth
             </Link>{" "}
             is its own page, and every item page takes what you paid so the archive can

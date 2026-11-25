@@ -154,7 +154,7 @@ for (const [section, prefix] of [
 
 for (const [title, href, keywords] of [
   ["Prices", "/prices", "what it cost new price list paillard dealer 1952 1965 1967 1972 1979 dollars"],
-  ["What one is worth", "/worth", "value valuation worth sold listings ebay auction resale second hand how much"],
+  ["What one is worth", "/articles/what-one-is-worth", "value valuation worth sold listings ebay auction resale second hand how much"],
   ["Glossary", "/glossary", "terminology terms definitions filmmaking"],
   ["Ephemera", "/ephemera", "advertising catalogs brochures bolex reporter"],
   ["Links", "/links", "resources directory repair film stock cinema history recommended sites"],
