@@ -173,11 +173,7 @@ export function PriceFinder({
                   aria-expanded={isOpen}
                   className="mb-3 font-[family-name:var(--font-mono)] text-[0.62rem] uppercase tracking-[0.12em] text-[var(--fg-soft)] underline underline-offset-4 hover:text-[var(--accent)]"
                 >
-                  {isOpen
-                    ? "Hide"
-                    : several
-                      ? `${item.prices.length} ${overTime ? "listings" : "versions"}, and where from`
-                      : "Where this comes from"}
+                  {isOpen ? "Hide price history" : "Price history"}
                 </button>
 
                 {isOpen && (

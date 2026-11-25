@@ -122,7 +122,7 @@ export function ImageGallery({
           <div className="relative">
           <ul
             ref={strip}
-            className="scroll-x flex snap-x snap-mandatory gap-3 pb-1 lg:grid lg:grid-cols-4 lg:gap-2 lg:overflow-visible lg:pb-0">
+            className="scroll-x-bare flex snap-x snap-mandatory gap-3 pb-1 lg:grid lg:grid-cols-4 lg:gap-2 lg:overflow-visible lg:pb-0">
             {images.map((img, i) => {
               const isLead = i === 0;
               return (

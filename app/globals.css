@@ -311,6 +311,22 @@ button,
  * no hint that more content exists off-screen. A soft right-edge fade signals
  * "keep swiping" without adding chrome; it disappears once scrolled to the end.
  */
+/*
+ * A strip that scrolls sideways with its own controls, so the scrollbar
+ * is noise. Only for places that give the reader another way through:
+ * the photograph strip has arrows at pointer sizes and swipe on touch.
+ * Never put this on something whose only affordance is the bar.
+ */
+.scroll-x-bare {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+.scroll-x-bare::-webkit-scrollbar {
+  display: none;
+}
+
 .scroll-x {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
