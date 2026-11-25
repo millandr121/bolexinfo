@@ -190,6 +190,51 @@
           "note": "Paillard's dealer list, one Suggested Retail column. The bracketed figure beside each row is the dealer's cost, not a product code. Read off the rendered page."
         }
       ]
+    },
+    {
+      "slug": "521",
+      "name": "521",
+      "format": "16mm",
+      "introduced": null,
+      "summary": "A 16mm sound projector that records as well as plays, and the most serious projector Bolex made. It takes any 16mm film, single or double perforated, silent or with an optical or a magnetic track, and will record on the magnetic stripe with direct mixing, superimposition and sound fading. Spools to 2000ft, automatic threading, a low-voltage motor under electronic regulation, and speeds of 18 and 24 with anything from 12 to 26 on a potentiometer, plus freezing on a frame and single-frame projection. The amplifier is fully transistorised in three plug-in units, 25W at 2 per cent distortion into 8 ohms, with a 3W monitor speaker in the body and a 10W one in the lid. Recording level is set on separate microphone and phono potentiometers and watched on a lit VU meter, with threshold compression, a variable-erasure control for dissolves, and a double lock so nothing is erased by accident. Magnetic response 100 to 12,000 cycles at 24 f.p.s., optical 50 to 7,000, wow under 0.3 per cent. A 24V 250W halogen lamp with a dichroic mirror and a choice of three lenses, 50mm f/1.3, 70mm f/1.6 or the 35-65mm f/1.6 zoom. Die-cast aluminium with a plastic lid that forms its case, 480 by 380 by 240mm, about 40lb. $3,727.00 in January 1978.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "The Bolex H16 range, Bolex International brochure",
+          "url": "https://www.pacificrimcamera.com/rl/00953/00953.pdf",
+          "note": "Bolex International's own range brochure, whose last pages describe the 16mm projectors. The source of every specification here. Undated. Scanned by Pacific Rim Camera. Its OCR interleaves the columns and misreads the model names, turning 501 into 507 and running factory codes into headings, so the models and their descriptions were read off the rendered page."
+        }
+      ]
+    },
+    {
+      "slug": "510",
+      "name": "510",
+      "format": "16mm",
+      "introduced": null,
+      "summary": "A 16mm projector for silent films and for sound films with either an optical or a magnetic track, which is the 521's range of playback without its recording. Bolex sold it on its speeds: several of them, with freezing on a frame and single-frame projection, which the brochure recommends to schools because movement can be taken apart and looked at phase by phase. Universal model for 118 to 240V at 50 or 60Hz, with the Kiptaron 50mm f/1.3 or the Bolex Hi-Fi 35-65mm f/1.6 zoom.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "The Bolex H16 range, Bolex International brochure",
+          "url": "https://www.pacificrimcamera.com/rl/00953/00953.pdf",
+          "note": "Bolex International's own range brochure, whose last pages describe the 16mm projectors. The source of every specification here. Undated. Scanned by Pacific Rim Camera. Its OCR interleaves the columns and misreads the model names, turning 501 into 507 and running factory codes into headings, so the models and their descriptions were read off the rendered page."
+        }
+      ]
+    },
+    {
+      "slug": "501",
+      "name": "501",
+      "format": "16mm",
+      "introduced": null,
+      "summary": "The plainest of the three, and sold as such: a 16mm projector for silent films and for sound films with an optical track only, meant for showing hired prints rather than making anything. Bolex's own pitch is ease of use and an attractive price, and its reasoning is that almost every hired film carries an optical track, the exceptions being originals and films that exist in only a few copies. Universal model for 118 to 240V at 50 or 60Hz, with the Kiptaron 50mm f/1.3 or the Bolex Hi-Fi 35-65mm f/1.6 zoom.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "The Bolex H16 range, Bolex International brochure",
+          "url": "https://www.pacificrimcamera.com/rl/00953/00953.pdf",
+          "note": "Bolex International's own range brochure, whose last pages describe the 16mm projectors. The source of every specification here. Undated. Scanned by Pacific Rim Camera. Its OCR interleaves the columns and misreads the model names, turning 501 into 507 and running factory codes into headings, so the models and their descriptions were read off the rendered page."
+        }
+      ]
     }
   ]
 }

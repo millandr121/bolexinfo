@@ -793,6 +793,23 @@
           "price": "$1,500.00"
         }
       ]
+    },
+    {
+      "year": 1972,
+      "month": "February",
+      "doc": "04932",
+      "section": "projectors",
+      "note": "The February 1972 16mm list, headed confidential and sold to dealers, with one Suggested Retail column.",
+      "variants": [
+        {
+          "asPrinted": "BOLEX S-321 Optical/Magnetic Sound Projector Complete w/Sound/Picture Standardization Unit",
+          "price": "$1,590.00"
+        },
+        {
+          "asPrinted": "BOLEX S-321 Optical/Magnetic Sound Projector",
+          "price": "$1,540.00"
+        }
+      ]
     }
   ],
   "s311": [
@@ -1012,6 +1029,42 @@
         {
           "asPrinted": "Bolex S-211 Optical Sound Projector (SOTOP)",
           "price": "$1,150.00"
+        }
+      ]
+    }
+  ],
+  "521": [
+    {
+      "year": 1978,
+      "month": "January",
+      "doc": "02210",
+      "section": "projectors",
+      "note": "The suggested retail price. This list prints suggested retail first and dealer net second.",
+      "variants": [
+        {
+          "asPrinted": "Bolex 521 Sound Projector w/f1.6 35-65MM zoom lens - complete",
+          "price": "$3,727.00"
+        },
+        {
+          "asPrinted": "Bolex 521 Sound Projector w/f. 50MM 1:1.3 ISCO Kiptaron lens - complete",
+          "price": "$3,567.00"
+        }
+      ]
+    },
+    {
+      "year": 1979,
+      "month": "November",
+      "doc": "02209",
+      "section": "projectors",
+      "note": "The November 1979 list, price list no. P2, one Suggested Retail column.",
+      "variants": [
+        {
+          "asPrinted": "Bolex 521 Sound Projector w/f1.6 35-65 MM zoom lens - complete",
+          "price": "$3,472.00"
+        },
+        {
+          "asPrinted": "Bolex 521 Sound Projector with 50mm f/1.3 ISCO Kiptaron lens - complete",
+          "price": "$3,258.00"
         }
       ]
     }
