@@ -466,6 +466,22 @@
           "price": "$690.00"
         }
       ]
+    },
+    {
+      "year": 1979,
+      "month": "November",
+      "doc": "02209",
+      "note": "The November 1979 list, price list no. P2, one Suggested Retail column. Its product numbers carry an 8 where the 1976 and 1978 lists carry a 4, the last four digits being the same part: 81900 here is 41900 there.",
+      "variants": [
+        {
+          "asPrinted": "H-16 REX 5 Three-lens Turret, w/o Multifocal Viewfinder",
+          "price": "$3,090.00"
+        },
+        {
+          "asPrinted": "H-16 REX 5/TV, Three-lens Turret, w/o Multifocal VF with built-in TV mask in the viewfinder",
+          "price": "$3,445.00"
+        }
+      ]
     }
   ],
   "stereo": [
@@ -543,6 +559,19 @@
     }
   ],
   "sm8": [
+    {
+      "year": 1967,
+      "month": "May",
+      "doc": "04933",
+      "section": "projectors",
+      "note": "The May 1967 dealer list, one Price column, with a five-letter code on every row.",
+      "variants": [
+        {
+          "asPrinted": "SM8 Super 8 Sound Projector w/14-25mm f/1.3 Zoom Lens",
+          "price": "$390.00"
+        }
+      ]
+    },
     {
       "year": 1972,
       "month": "February",
@@ -628,6 +657,18 @@
           "price": "$3,499.00"
         }
       ]
+    },
+    {
+      "year": 1979,
+      "month": "November",
+      "doc": "02209",
+      "note": "The November 1979 list, price list no. P2, one Suggested Retail column. Its product numbers carry an 8 where the 1976 and 1978 lists carry a 4, the last four digits being the same part: 81900 here is 41900 there.",
+      "variants": [
+        {
+          "asPrinted": "H-16 EBM Camera Complete - Bay. Mt. w/Power Grip (#80834), Battery (#81766) and Charger (#81768)",
+          "price": "$3,075.00"
+        }
+      ]
     }
   ],
   "h16sbm": [
@@ -666,6 +707,18 @@
           "price": "$1,493.00"
         }
       ]
+    },
+    {
+      "year": 1979,
+      "month": "November",
+      "doc": "02209",
+      "note": "The November 1979 list, price list no. P2, one Suggested Retail column. Its product numbers carry an 8 where the 1976 and 1978 lists carry a 4, the last four digits being the same part: 81900 here is 41900 there.",
+      "variants": [
+        {
+          "asPrinted": "H-16 SBM/TV Bayonet Mount w/o Multifocal VF with built-in TV mask in the viewfinder",
+          "price": "$3,445.00"
+        }
+      ]
     }
   ],
   "h16el": [
@@ -694,6 +747,22 @@
         {
           "asPrinted": "H-16 EL/TV same as above, but with built-in TV frame in the viewfinder",
           "price": "$5,059.00"
+        }
+      ]
+    },
+    {
+      "year": 1979,
+      "month": "November",
+      "doc": "02209",
+      "note": "The November 1979 list, price list no. P2, one Suggested Retail column. Its product numbers carry an 8 where the 1976 and 1978 lists carry a 4, the last four digits being the same part: 81900 here is 41900 there.",
+      "variants": [
+        {
+          "asPrinted": "H-16 EL Camera Body with Battery (#81920), Charger (#81928), Remote Control Cable (#81925), Filter mounts (#80090) and Gelatin Filters (#80093)",
+          "price": "$4,800.00"
+        },
+        {
+          "asPrinted": "H-16 EL/TV same as above, but with built-in TV mask in the viewfinder, X-sync, LED battery test indicator",
+          "price": "$5,885.00"
         }
       ]
     }
@@ -913,6 +982,36 @@
         {
           "asPrinted": "Lens f/18-5 Projector, 15mm (DUWID)",
           "price": "$25.00"
+        }
+      ]
+    }
+  ],
+  "s221": [
+    {
+      "year": 1967,
+      "month": "May",
+      "doc": "04933",
+      "section": "projectors",
+      "note": "The May 1967 dealer list, one Price column, with a five-letter code on every row.",
+      "variants": [
+        {
+          "asPrinted": "Bolex S-221 Optical/Magnetic Sound Projector Complete (SONOR)",
+          "price": "$1,400.00"
+        }
+      ]
+    }
+  ],
+  "s211": [
+    {
+      "year": 1967,
+      "month": "May",
+      "doc": "04933",
+      "section": "projectors",
+      "note": "The May 1967 dealer list, one Price column, with a five-letter code on every row.",
+      "variants": [
+        {
+          "asPrinted": "Bolex S-211 Optical Sound Projector (SOTOP)",
+          "price": "$1,150.00"
         }
       ]
     }
