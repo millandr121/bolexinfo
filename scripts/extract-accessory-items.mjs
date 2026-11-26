@@ -71,6 +71,14 @@ const listingsUsed = new Set();
 /** Prices from a dated catalogue, which reach back further than the
  *  dealer price lists do: the earliest here is February 1952. */
 const CATALOGUES = readReview(path.join(OUT_DIR, "catalogues.json"));
+
+/*
+ * Photographs this archive went and found, keyed by slug, exactly as
+ * the lenses do it. items.json is regenerated from Michael's pages
+ * every run, so an image written into it by hand would not survive;
+ * it goes here instead and is merged in below.
+ */
+const PHOTOS = readReview(path.join(OUT_DIR, "photos.json"));
 const cataloguesUsed = new Set();
 const used = new Set();
 const seen = new Map();
@@ -124,6 +132,23 @@ const items = raw.map((entry) => {
     },
   };
 });
+
+const photosUsed = new Set();
+for (const item of items) {
+  const photos = PHOTOS[item.slug];
+  if (!photos) continue;
+  item.images = [
+    ...photos.map((p) => ({
+      src: `/sourced/accessories/${item.slug}/${p.file}`,
+      alt: p.alt,
+      credit: p.credit,
+    })),
+    ...item.images,
+  ];
+  photosUsed.add(item.slug);
+}
+const strayPhotos = Object.keys(PHOTOS).filter((slug) => !photosUsed.has(slug));
+if (strayPhotos.length) console.log(`  STRAY photos, no such accessory: ${strayPhotos.join(", ")}`);
 
 items.sort(
   (a, b) =>

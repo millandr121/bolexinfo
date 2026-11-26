@@ -26,6 +26,13 @@
           "title": "Still wanted",
           "note": "A Paillard instruction sheet has since been read and is cited above, which covers fitting and projection. Pacific Rim also lists a \"Bolex Sterero Instruction Book\" (their spelling); whether that is the same document under another name is not settled. The end of production is also unsettled: about 1954 is the Film Atlas reading, and how many were sold at that price is not recorded anywhere found so far."
         }
+      ],
+      "images": [
+        {
+          "src": "/sourced/accessories/stereo/stereo-manual-cover.webp",
+          "alt": "The Bolex Stereo system fitted to an H-16 De Luxe, from the cover of Paillard's own instruction manual",
+          "credit": "Bolex Stereo Movies instruction manual, Paillard Products Inc."
+        }
       ]
     },
     {
@@ -46,6 +53,13 @@
           "url": "https://www.pacificrimcamera.com/rl/02210/02210.pdf",
           "note": "Where the prices come from. The January 1978 list sells it twice, product 40301 for the EBM with a battery container and connection cable and 40300 for the EL with a lever for switching the photocell, at the same $2,534.00."
         }
+      ],
+      "images": [
+        {
+          "src": "/sourced/accessories/underwater-housing-electric/underwater-housing.webp",
+          "alt": "The underwater housing from the front, its port ring reading UNDERWATER HOUSING FOR BOLEX H16 EBM CAMERAS, MADE IN SWITZERLAND, with a handle either side",
+          "credit": "Bolex Underwater Housing brochure, Bolex International S.A."
+        }
       ]
     },
     {
@@ -60,6 +74,13 @@
           "title": "Information booklet on the Pellegrini-Piek variable shutter units for Bolex H16, H8 and H16 Reflex",
           "url": "https://www.pacificrimcamera.com/rl/02988/02988.pdf",
           "note": "The firm's own booklet, seventh edition, Pellegrini-Piek of 634 Hearst Avenue, San Francisco, formerly 1545 Lombard Street. Every figure above is theirs and none of it is independently checked: it is a sales booklet, and the performance claims are claims. The dates come from letters reproduced in it, the latest August 1961. Scanned by Pacific Rim Camera."
+        }
+      ],
+      "images": [
+        {
+          "src": "/sourced/accessories/pellegrini-piek-variable-shutter/pellegrini-piek-leaflet.webp",
+          "alt": "Pellegrini-Piek's own leaflet, showing an H camera with the shutter fitted manually at the left and one with the automatic dissolve attachment at the right",
+          "credit": "Pellegrini-Piek variable shutter units leaflet, San Francisco"
         }
       ]
     }

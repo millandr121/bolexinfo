@@ -74,6 +74,32 @@ export function getSerialDataset(): SerialDataset {
   );
 }
 
+/**
+ * A number the manufacturer itself printed as a dividing line.
+ *
+ * Separate from the range table because it is a different kind of
+ * fact: not "numbers in this band were built in this year" but "at
+ * this number the camera changed, and here is the document that says
+ * so". One of them falls past the end of the range table, which is
+ * the only thing the archive holds about Bolex numbering after 1976.
+ */
+export interface SerialLandmark {
+  serial: number;
+  model: string;
+  /** From the 1977 bulletin's table, where it reaches that far. */
+  year: number | null;
+  what: string;
+  sources: Array<{ title: string; url?: string }>;
+}
+
+export function getSerialLandmarks(): { note: string; landmarks: SerialLandmark[] } {
+  return (
+    readJson<{ note: string; landmarks: SerialLandmark[] }>(
+      dataPath("serials", "landmarks.json"),
+    ) ?? { note: "", landmarks: [] }
+  );
+}
+
 export interface Article {
   slug: string;
   title: string;

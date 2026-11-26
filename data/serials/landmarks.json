@@ -1,0 +1,51 @@
+{
+  "note": "Individual serial numbers that Paillard, EPOI or Bolex printed in their own documents as the point where something about a camera changed. They are not a dating table and they do not replace one: they are the handful of numbers the manufacturer itself committed to paper, each read off the rendered page of the scan rather than its text layer. Where the September 1977 bulletin's table covers the number, the year it gives is recorded too; one of them falls past the end of that table and is the only evidence here for Bolex numbering after 1976.",
+  "landmarks": [
+    {
+      "serial": 97800,
+      "model": "H-8",
+      "year": 1954,
+      "what": "The H-8 changes to what Bolex calls the new type of H body. The prismatic focuser is a different part either side of this number: #691 above it, #690 below.",
+      "sources": [
+        { "title": "Bolex catalogue, February 1965", "url": "https://www.pacificrimcamera.com/rl/04916/04916.pdf" },
+        { "title": "H-8 Rex brochure", "url": "https://www.pacificrimcamera.com/rl/04923/04923.pdf" }
+      ]
+    },
+    {
+      "serial": 100400,
+      "model": "H-16 M and the other H-16s without reflex viewing",
+      "year": 1954,
+      "what": "The same change on the 16mm side, 2,600 numbers later. Prismatic focuser #691 above, #690 below.",
+      "sources": [
+        { "title": "Bolex catalogue, February 1965", "url": "https://www.pacificrimcamera.com/rl/04916/04916.pdf" }
+      ]
+    },
+    {
+      "serial": 172201,
+      "model": "H-16 Rex",
+      "year": 1959,
+      "what": "The release button becomes grooved and knurled. Below this number a cable release will not hold in it, so the Rexofader cannot be used for single frames until the button is swapped for the new one.",
+      "sources": [
+        { "title": "Paillard technical bulletin", "url": "https://www.pacificrimcamera.com/rl/03223/03223.pdf" }
+      ]
+    },
+    {
+      "serial": 262000,
+      "model": "H-16 Rex-5",
+      "year": 1975,
+      "what": "The top of the original Rex-5 run, as the last American price list draws the line: one set of sync accessories is for a Rex-5 up to this number and another for the camera that followed. Printed on the page as #262.00, in a list that writes its thousands with a dot.",
+      "sources": [
+        { "title": "Bolex 16mm price list, 1 November 1979", "url": "https://www.pacificrimcamera.com/rl/02209/02209.pdf" }
+      ]
+    },
+    {
+      "serial": 350001,
+      "model": "H-16 Rex-5, the later one",
+      "year": null,
+      "what": "Where the new Rex-5 starts. The September 1977 bulletin's table stops at 264,230 in 1976, so nothing in the archive dates this block; what the price list does prove is that by November 1979 Bolex had moved its numbering to 350,001 and above.",
+      "sources": [
+        { "title": "Bolex 16mm price list, 1 November 1979", "url": "https://www.pacificrimcamera.com/rl/02209/02209.pdf" }
+      ]
+    }
+  ]
+}

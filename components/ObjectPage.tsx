@@ -52,7 +52,6 @@ export function ObjectPage({
   const { glance, detail } = partitionSpecs(model.specs);
   const hasImages = model.images.length > 0;
   /* The right-hand column earns its place if it has either thing to carry. */
-  const hasRail = hasImages || model.serialRows.length > 0;
   /* Photographers of anything not recovered from the archive. */
   const credits = [...new Set(model.images.map((i) => i.credit).filter((c): c is string => Boolean(c)))];
 
@@ -114,12 +113,10 @@ export function ObjectPage({
        * grid collapses and `order` puts the photograph first — you see the
        * object, then read about it.
        */}
-      <div
-        className={`mt-10 grid items-start gap-8 ${
-          hasRail ? "lg:grid-cols-[minmax(0,1fr)_20rem] lg:gap-12" : ""
-        }`}
-      >
-        {hasRail && (
+      {/* The rail is unconditional: with no photographs and no serial
+          table it still carries the note saying why there is no table. */}
+      <div className="mt-10 grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_20rem] lg:gap-12">
+        {
           /*
            * The rail sticks while the specifications scroll past it, so the
            * object stays in view for the whole description instead of being
@@ -143,9 +140,9 @@ export function ObjectPage({
              * notes to reach it. Up here it is visible from the top and
              * stays in view while the rest of the page scrolls under it.
              */}
-            {model.serialRows.length > 0 && <SerialRail model={model} />}
+            {model.serialRows.length > 0 ? <SerialRail model={model} /> : <SerialNote model={model} />}
           </Reveal>
-        )}
+        }
 
         <div className="order-2 min-w-0 lg:order-1">
           {model.summary && (
@@ -268,7 +265,10 @@ export function ObjectPage({
             {credits.length > 0 && (
               <>
                 {" "}
-                Photographs by{" "}
+                {/* Not "photographs by": most of these are the
+                    manufacturer's own brochure figures, and a document
+                    does not take a photograph. */}
+                Photographs:{" "}
                 <span className="text-[var(--fg)]">{credits.join(", ")}</span>.
               </>
             )}
@@ -366,6 +366,60 @@ function Fact({ label, children }: { label: string; children: React.ReactNode })
       <dt className="text-[0.62rem] uppercase tracking-[0.2em] text-[var(--fg-soft)]">{label}</dt>
       <dd className="mt-0.5">{children}</dd>
     </div>
+  );
+}
+
+/**
+ * What to say when a model has no serial table of its own.
+ *
+ * Twenty-nine cameras and fourteen projectors are in that position, and
+ * until now their pages said nothing at all, which reads as though the
+ * question had never been asked. It has, and there are three different
+ * answers to it.
+ *
+ * The Bolex International bulletin of 1 September 1977 numbers the
+ * Swiss-built H, B, C, D and L cameras in one continuous series, so a
+ * model without a table of its own is usually still datable: the
+ * general lookup is the answer, not a shrug. What falls outside it is
+ * the Super 8 line, which Eumig and Chinon built and which the bulletin
+ * does not cover, and the earliest cameras, because the bulletin's
+ * table opens at 7510 in 1936 and the Auto Cine came first.
+ */
+function SerialNote({ model }: { model: ModelRecord }) {
+  const superEight = model.format === "Super 8";
+  const beforeTheTable = model.introduced !== null && model.introduced < 1936;
+
+  const body = superEight ? (
+    <>
+      Bolex published no serial table for the Super 8 cameras and projectors. The
+      September 1977 bulletin numbers the Swiss-built H, B, C, D and L machines only,
+      and these were built by Eumig and by Chinon.
+    </>
+  ) : beforeTheTable ? (
+    <>
+      The September 1977 bulletin opens its table at 7510 in 1936, so this one is
+      older than the record. Nothing the archive holds dates it by its number.
+    </>
+  ) : (
+    <>
+      No table of its own. The September 1977 bulletin numbers the H, B, C, D and L
+      cameras in one series, so a number from this one can still be dated.{" "}
+      <Link href="/serials" className="text-[var(--accent)] underline underline-offset-2">
+        Look up a serial
+      </Link>
+    </>
+  );
+
+  return (
+    <section
+      aria-label="Serial numbers"
+      className="mt-8 border border-[var(--line)] lg:mt-6"
+    >
+      <h2 className="border-b border-[var(--line)] bg-[var(--bg-raised)] px-3 py-2 font-[family-name:var(--font-mono)] text-[0.6rem] uppercase tracking-[0.18em] text-[var(--accent)]">
+        Serial numbers
+      </h2>
+      <p className="px-3 py-2.5 text-[0.65rem] leading-relaxed text-[var(--fg-soft)]">{body}</p>
+    </section>
   );
 }
 

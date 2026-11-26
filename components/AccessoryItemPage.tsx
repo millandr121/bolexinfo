@@ -20,6 +20,10 @@ import { dateLabel, type AccessoryItem } from "@/lib/accessory-items";
 export function AccessoryItemPage({ item }: { item: AccessoryItem }) {
   const archiveHref = originalArchiveHref(item.from.originalPath);
   const images = item.images.map((i) => ({ src: i.src, alt: i.alt || item.name }));
+  /* Anything this archive went and found says where it came from; a
+     photograph recovered from Michael's page carries no credit, because
+     the provenance section already credits the whole page to him. */
+  const photoCredits = [...new Set(item.images.map((i) => i.credit).filter(Boolean))] as string[];
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -110,6 +114,11 @@ export function AccessoryItemPage({ item }: { item: AccessoryItem }) {
         {images.length > 0 && (
           <Reveal>
             <ImageGallery images={images} caption={item.name} layout="feature" />
+            {photoCredits.length > 0 && (
+              <p className="mt-3 font-[family-name:var(--font-mono)] text-[0.62rem] leading-relaxed text-[var(--fg-soft)]">
+                Photographs: <span className="text-[var(--fg)]">{photoCredits.join(", ")}</span>.
+              </p>
+            )}
           </Reveal>
         )}
       </div>

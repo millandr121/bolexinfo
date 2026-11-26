@@ -124,7 +124,7 @@ function NavMenu({
       {open && (
         <div
           id={id}
-          className="absolute left-0 top-full z-50 mt-1 min-w-[17rem] border border-[var(--line)] bg-[var(--bg-raised)] p-2 shadow-[0_12px_28px_rgba(0,0,0,0.10)]"
+          className="absolute left-0 top-full z-50 mt-1 min-w-[13rem] border border-[var(--line)] bg-[var(--bg-raised)] p-2 shadow-[0_12px_28px_rgba(0,0,0,0.10)]"
         >
           <ul>
             {group.items.map((item) => {
@@ -139,11 +139,6 @@ function NavMenu({
                     }`}
                   >
                     <span className="block text-[0.95rem] font-[520]">{item.label}</span>
-                    {item.blurb && (
-                      <span className="mt-0.5 block font-[family-name:var(--font-mono)] text-[0.68rem] text-[var(--fg-soft)]">
-                        {item.blurb}
-                      </span>
-                    )}
                   </Link>
                 </li>
               );
@@ -351,11 +346,6 @@ export function SectionMenu() {
                             <span className="block text-[0.82rem] uppercase tracking-[0.1em]">
                               {item.label}
                             </span>
-                            {item.blurb && (
-                              <span className="mt-0.5 block text-xs normal-case tracking-normal text-[var(--fg-soft)]">
-                                {item.blurb}
-                              </span>
-                            )}
                           </Link>
                         </li>
                       ))}

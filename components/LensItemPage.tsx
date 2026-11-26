@@ -35,6 +35,10 @@ const SPEC_LABELS: Record<string, string> = {
 export function LensItemPage({ item }: { item: LensItem }) {
   const archiveHref = originalArchiveHref(item.from.originalPath ?? undefined);
   const images = item.images.map((i) => ({ src: i.src, alt: i.alt || item.name }));
+  /* Anything this archive went and found says where it came from. A
+     photograph recovered from Michael's page carries no credit, because
+     the provenance section below already credits the whole page to him. */
+  const photoCredits = [...new Set(item.images.map((i) => i.credit).filter(Boolean))] as string[];
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -217,6 +221,11 @@ export function LensItemPage({ item }: { item: LensItem }) {
         {images.length > 0 && (
           <Reveal>
             <ImageGallery images={images} caption={item.name} layout="feature" />
+            {photoCredits.length > 0 && (
+              <p className="mt-3 font-[family-name:var(--font-mono)] text-[0.62rem] leading-relaxed text-[var(--fg-soft)]">
+                Photographs: <span className="text-[var(--fg)]">{photoCredits.join(", ")}</span>.
+              </p>
+            )}
           </Reveal>
         )}
       </div>

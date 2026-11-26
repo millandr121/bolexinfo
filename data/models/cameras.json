@@ -83,6 +83,13 @@
           "url": "https://my16mm.com/cameras/bolex16hebm.php",
           "note": "Several collector sources give 1971 and agree with each other; no Bolex document read here dates it. The earliest primary evidence the archive holds is the February 1972 price list, which sells the body at $1,320.00, so 1971 is at least consistent with it."
         }
+      ],
+      "images": [
+        {
+          "src": "/sourced/cameras/h16ebm/h16ebm-with-zoom.webp",
+          "alt": "Bolex H-16 EBM with a zoom and lens hood fitted and the power grip below, the remote cord trailing",
+          "credit": "Bolex H-16 Professional 16mm Motion Picture Systems brochure, EPOI"
+        }
       ]
     },
     {
@@ -103,6 +110,18 @@
           "url": "https://www.pacificrimcamera.com/rl/02211/02211.pdf",
           "note": "No year is given here because no source consulted gives one, and the archive would rather say nothing than guess. What the documents do settle is a bracket: the February 1972 list (rl/04932) sells the EBM, SBM, REX-5 and M-5 and has no EL in it at all, and the October 1976 list has the EL as product 41900 at $3,300.00. So it arrived between those two dates. Collector sources date the later EL Series 3 to 1980 and none of them date the first."
         }
+      ],
+      "images": [
+        {
+          "src": "/sourced/cameras/h16el/h16el-with-zoom.webp",
+          "alt": "Bolex H-16 EL with a Vario-Switar zoom fitted, seen from the right",
+          "credit": "Bolex H-16 Professional 16mm Motion Picture Systems brochure, EPOI"
+        },
+        {
+          "src": "/sourced/cameras/h16el/h16el-body-left.webp",
+          "alt": "Bolex H-16 EL body with the eyecup fitted, the nameplate reading BOLEX H16 EL, MADE IN SWITZERLAND",
+          "credit": "Bolex H-16 Professional 16mm Motion Picture Systems brochure, EPOI"
+        }
       ]
     },
     {
@@ -122,6 +141,13 @@
           "title": "Dated in collector sources to 1970",
           "url": "http://bolexh16user.net/H16SBAndSBM.htm",
           "note": "Collector sources agree on 1970 for the SB and SBM, and on this being the first Bolex to carry the bayonet mount that the EBM and EL then took. No Bolex document read here dates it. The archive's earliest primary evidence is the February 1972 price list at $720.00."
+        }
+      ],
+      "images": [
+        {
+          "src": "/sourced/cameras/h16sbm/h16sbm-left.webp",
+          "alt": "Bolex H-16 SBM from the left, the single bayonet mount in place of the old three-lens turret",
+          "credit": "Bolex H-16 Professional 16mm Motion Picture Systems brochure, EPOI"
         }
       ]
     },
@@ -292,6 +318,13 @@
           "url": "https://www.pacificrimcamera.com/rl/04942/04942.pdf",
           "note": "Paillard's dealer list, one Suggested Retail column. The bracketed figure beside each row is the dealer's cost, not a product code. Read off the rendered page."
         }
+      ],
+      "images": [
+        {
+          "src": "/sourced/cameras/280/280-macrozoom.webp",
+          "alt": "Bolex 280 Macrozoom from the left, the zoom at the front and the pistol grip folded below",
+          "credit": "Bolex Super 8 movie cameras and projectors brochure, Bolex International S.A."
+        }
       ]
     },
     {
@@ -336,6 +369,13 @@
           "title": "Bolex Super 8mm Confidential Price List, 23 February 1972",
           "url": "https://www.pacificrimcamera.com/rl/04942/04942.pdf",
           "note": "Paillard's dealer list, one Suggested Retail column. The bracketed figure beside each row is the dealer's cost, not a product code. Read off the rendered page."
+        }
+      ],
+      "images": [
+        {
+          "src": "/sourced/cameras/233-compact/233-compact.webp",
+          "alt": "Bolex 233 Compact from three-quarters front, the nameplate reading BOLEX 233 COMPACT",
+          "credit": "Bolex Super 8 movie cameras and projectors brochure, Bolex International S.A."
         }
       ]
     },
@@ -425,6 +465,58 @@
           "title": "Not a projector",
           "note": "This archive's own backlog had the 5120 down as a projector. The dealer sheet settles it: it is a camera, and the line it heads is called Sound-8."
         }
+      ],
+      "images": [
+        {
+          "src": "/sourced/cameras/5120/5120-colour.webp",
+          "alt": "Bolex 5120 Sound Macrozoom in colour, microphone beside it, from Bolex's own advertisement",
+          "credit": "Bolex 5120 advertisement, Ehrenreich Photo-Optical Industries"
+        },
+        {
+          "src": "/sourced/cameras/5120/5120-macrozoom.webp",
+          "alt": "Bolex 5120 Sound Macrozoom from three-quarters front, nameplate reading BOLEX 5120 SOUND",
+          "credit": "Bolex H-16 Professional 16mm Motion Picture Systems brochure, EPOI"
+        }
+      ]
+    },
+    {
+      "slug": "5122",
+      "name": "5122 Sound Macrozoom",
+      "format": "Super 8",
+      "introduced": 1977,
+      "summary": "The 5120's successor and the last of the Sound-8 flagships. A 6 to 72mm f/1.8 Macrozoom, twelve to one like the 5120 before it, focusing into macro. Three speeds at 18, 24 and 36 frames a second plus single frame, a 120 degree shutter, exposure automatic or manual on a through-the-lens cell with compensation, film speed read from the cartridge, and both an 85A conversion filter and a neutral density filter built in. Fades run themselves in and out, and an interval timer covers one second to sixty. Sound is recorded single-system onto the film's own stripe, levelled automatically or by hand against a meter. 2400g, and 75 by 225 by 230mm. $887.00 in April 1979, the dearest Super 8 camera Bolex sold.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "Bolex Super 8 Cameras and Projectors, price list no. S1, 1 April 1979",
+          "url": "https://www.pacificrimcamera.com/rl/02226/02226.pdf",
+          "note": "Bolex (U.S.A.) Inc.'s own list, one Suggested Retail column, read off the rendered page. The scan's text layer runs neighbouring model numbers into their lens specifications and invents models that never existed, so it cannot be used here."
+        },
+        {
+          "title": "Super8Data",
+          "url": "https://www.filmkorn.org/super8data/database/cameras_list/cameras_bolex/bolex_5122.htm",
+          "note": "A collector database, so secondary, and the source of everything here except the price. It dates the camera to 1977 and says it was made in Japan by Chinon, which is worth knowing: the Sainte-Croix cameras and the Austrian projectors are the Bolex story people tell, and by the late 1970s the Super 8 cameras were being built somewhere else again."
+        }
+      ]
+    },
+    {
+      "slug": "564xl",
+      "name": "564 XL Auto Focus Sound",
+      "format": "Super 8",
+      "introduced": 1979,
+      "summary": "The 563 XL with autofocus and no macro, which is how Super8Data puts it and how the price list bears it out: the two sat four dollars apart in April 1979. An 8 to 48mm f/1.2 zoom, six to one, focusing itself in about a second or by hand on a split image. Speeds of 18, 24 and 36 plus single frame, a 220 degree shutter, through-the-lens metering automatic or manual with compensation, an 85A filter built in, automatic fades and a lap dissolve, an interval timer from one second to sixty, and two microphone inputs. Sound goes on the film's own stripe. 1500g. $823.00 in April 1979.",
+      "recovery": "pending",
+      "sources": [
+        {
+          "title": "Bolex Super 8 Cameras and Projectors, price list no. S1, 1 April 1979",
+          "url": "https://www.pacificrimcamera.com/rl/02226/02226.pdf",
+          "note": "Bolex (U.S.A.) Inc.'s own list, one Suggested Retail column, read off the rendered page. The scan's text layer runs neighbouring model numbers into their lens specifications and invents models that never existed, so it cannot be used here."
+        },
+        {
+          "title": "Super8Data",
+          "url": "https://www.filmkorn.org/super8data/database/cameras_list/cameras_bolex/bolex_564xl_af.htm",
+          "note": "A collector database, so secondary. It dates the camera to 1979, calls it the same as the 563 XL but with auto focusing and without the macro lens, and says it was made in Japan by Chinon. The archive's 563 XL entry is written from Bolex's own brochure, which says nothing about where either was built, so that last point rests on this source alone."
+        }
       ]
     },
     {
@@ -444,6 +536,13 @@
           "title": "Bolex Super 8 Cameras and Projectors, price list no. S1, 1 April 1979",
           "url": "https://www.pacificrimcamera.com/rl/02226/02226.pdf",
           "note": "Bolex (U.S.A.) Inc.'s own list, one Suggested Retail column. Read off the rendered page: the scan's text layer runs neighbouring model numbers into their lens specifications."
+        }
+      ],
+      "images": [
+        {
+          "src": "/sourced/cameras/563xl/563xl-and-583.webp",
+          "alt": "The Bolex 563 XL Sound Macro-Zoom in front and the 583 Sound Macro-Zoom behind, both with microphones fitted",
+          "credit": "Bolex 583 & 563 XL Sound Macro Zoom brochure, Bolex (U.S.A.) Inc."
         }
       ]
     },
@@ -465,6 +564,18 @@
           "url": "https://www.pacificrimcamera.com/rl/02226/02226.pdf",
           "note": "Bolex (U.S.A.) Inc.'s own list, one Suggested Retail column. Read off the rendered page: the scan's text layer runs neighbouring model numbers into their lens specifications."
         }
+      ],
+      "images": [
+        {
+          "src": "/sourced/cameras/583/583-sound-macro-zoom.webp",
+          "alt": "Bolex 583 Sound Macro-Zoom, nameplate legible, with the 563 XL standing behind it",
+          "credit": "Bolex 583 and 563 XL Sound Macro-Zoom brochure, Bolex International S.A."
+        },
+        {
+          "src": "/sourced/cameras/583/583-and-563xl.webp",
+          "alt": "The Bolex 563 XL Sound Macro-Zoom in front and the 583 Sound Macro-Zoom behind, both with microphones fitted",
+          "credit": "Bolex 583 & 563 XL Sound Macro Zoom brochure, Bolex (U.S.A.) Inc."
+        }
       ]
     },
     {
@@ -484,6 +595,13 @@
           "title": "Bolex Super 8 Cameras and Projectors, price list no. S1, 1 April 1979",
           "url": "https://www.pacificrimcamera.com/rl/02226/02226.pdf",
           "note": "Bolex (U.S.A.) Inc.'s own list, one Suggested Retail column. Read off the rendered page: the scan's text layer runs neighbouring model numbers into their lens specifications."
+        }
+      ],
+      "images": [
+        {
+          "src": "/sourced/cameras/680/680-macro-zoom.webp",
+          "alt": "Bolex 680 Macro Zoom from three-quarters front, the zoom and the pistol grip in view",
+          "credit": "Bolex 680 Macro Zoom brochure, Bolex (U.S.A.) Inc."
         }
       ]
     }

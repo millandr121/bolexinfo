@@ -8,9 +8,9 @@ source rather than from dealer listings.
 
 This is a shopping list, not a plan. Nothing here has been added.
 
-Five of the fifteen have been done since this file was written: the SP 8
-and SM 80 Programmatic as worked examples at the bottom, and the H-16
-EL, EBM and SBM. **Ten remain, all Super 8.**
+**All fifteen are done.** This file is now a record of where each one
+came from rather than a list of work outstanding. The figures are kept
+because they are the citation for every entry written from them.
 
 ---
 

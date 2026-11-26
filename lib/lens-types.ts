@@ -10,6 +10,14 @@
 export interface LensImage {
   src: string;
   alt: string;
+  /**
+   * Who the picture belongs to, when it was not recovered from
+   * Michael's page. Its presence is what tells the two apart, the same
+   * way it does for a camera: a recovered photograph has no credit
+   * because the whole page is credited to him, and anything this
+   * archive went and found says where it came from.
+   */
+  credit?: string;
 }
 
 export interface LensItem {
