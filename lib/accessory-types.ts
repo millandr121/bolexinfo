@@ -11,6 +11,11 @@
 export interface AccessoryImage {
   src: string;
   alt: string;
+  /**
+   * Who the picture belongs to, when it was not recovered from
+   * Michael's page. Its presence is what tells the two apart.
+   */
+  credit?: string;
 }
 
 export interface AccessoryItem {

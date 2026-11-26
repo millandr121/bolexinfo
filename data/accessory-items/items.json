@@ -1378,7 +1378,13 @@
       "codes": [
         "CADIL"
       ],
-      "images": [],
+      "images": [
+        {
+          "src": "/sourced/accessories/prismatic-focuser/prismatic-focuser.webp",
+          "alt": "The Bolex prismatic focuser beside an open camera gate, the pressure plate removed as the caption says it must be before fitting",
+          "credit": "Bolex catalogue, February 1952, Paillard Products Inc."
+        }
+      ],
       "sources": [],
       "listings": [
         {
@@ -2215,7 +2221,13 @@
       "codes": [
         "FADOM"
       ],
-      "images": [],
+      "images": [
+        {
+          "src": "/sourced/accessories/rexofader-40/rexofader-40.webp",
+          "alt": "The Bolex Rex-O-Fader, its lever arm and ball knob on the covered plate that clamps to the camera",
+          "credit": "Bolex H-16 Professional 16mm Motion Picture Systems brochure, EPOI"
+        }
+      ],
       "sources": [
         "Bolex H8-H16 Catalogue (New Jersey: Paillard Incorporated, July 1964), 18."
       ],
