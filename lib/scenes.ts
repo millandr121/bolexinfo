@@ -103,8 +103,8 @@ export const SCENES: Scene[] = [
   },
   {
     src: `${base}/crew-on-a-building-site.webp`,
-    alt: "Four people filming on a building site, one behind an H-16 on a tripod, a tower crane overhead",
-    title: "A crew on a building site",
+    alt: "Four people filming on a building site, one behind an H-16 EL on a tripod, a tower crane overhead",
+    title: "An H-16 EL on a building site",
     document: "16mm Bolex: the H16 range brochure",
     doc: "00953",
   },
@@ -225,6 +225,30 @@ export const SCENES: Scene[] = [
     document: "Bolex Stereo Movies instruction manual, Paillard Products Inc.",
     doc: "01392",
   },
+  {
+    src: `${base}/tops-in-its-field.webp`,
+    alt: "An advertisement: an H-16 at the left against a misty field, the word Tops set in script across it above the word BOLEX",
+    title: "Tops in its field",
+    when: "1946",
+    document: "Bolex: The World's Finest Movie Cameras, 1946 catalog, American Bolex Company",
+    doc: "02027",
+  },
+  {
+    src: `${base}/catalogue-1952-cover.webp`,
+    alt: "A grey catalogue cover with an H-16 on a red panel and a B-8 below it, headed Bolex Catalog in script",
+    title: "The 1952 catalogue",
+    when: "November 1952",
+    document: "Bolex catalogue, November 1952, Paillard Products Inc.",
+    doc: "01859",
+  },
+  {
+    src: `${base}/catalogue-1965-in-use.webp`,
+    alt: "A catalogue cover tiled with thirty small photographs of Bolexes at work: football, basketball, an underwater housing, a deer, a fawn, a running track, laboratory benches, time-lapse rigs",
+    title: "Thirty ways to use one",
+    when: "February 1965",
+    document: "Bolex H8-H16 catalogue, February 1965, Paillard Incorporated",
+    doc: "04916",
+  },
 ];
 
 /**
@@ -270,7 +294,15 @@ export type PlateKind = "cover" | "band" | "portrait" | "split" | "inset";
  * run off the reader's own scrolling and reverse when they scroll
  * back. None of them is a timer and none of them plays twice.
  */
-export type PlateMotion = "zoom-out" | "zoom-in" | "rise" | "wipe";
+export type PlateMotion =
+  | "zoom-out"
+  | "zoom-in"
+  | "rise"
+  | "wipe"
+  /** A long pull back, for a close-up whose frame is worth revealing. */
+  | "pull-back"
+  /** A slow tilt down the frame, to arrive on something low in it. */
+  | "tilt-down";
 
 export interface Plate {
   src: string;
@@ -364,6 +396,10 @@ const ar = (slug: string, setting: Setting) => () => fromArchival(slug, setting)
 
 const BEHIND: Setting = { kind: "cover", motion: "zoom-out" };
 const BEHIND_IN: Setting = { kind: "cover", motion: "zoom-in" };
+/** Starts tight on the face and opens out to the whole photograph. */
+const BEHIND_BACK: Setting = { kind: "cover", motion: "pull-back" };
+/** Starts high in the frame and tilts down on to the subject. */
+const BEHIND_TILT: Setting = { kind: "cover", motion: "tilt-down" };
 const BESIDE_L: Setting = { kind: "split", motion: "rise", side: "left" };
 const BESIDE_R: Setting = { kind: "split", motion: "wipe", side: "right" };
 
@@ -379,26 +415,34 @@ const BY_YEAR: Record<string, Placement> = {
   "1941": { plate: sc("b8-portrait-1946", BESIDE_L), mode: "beside" },
 
   /* The entry announces the first Bolex Reporter. */
+  "1947": { plate: sc("tops-in-its-field", BEHIND_IN), mode: "behind" },
+
   "1950": { plate: sc("reporter-1967-projector", BESIDE_L), mode: "beside" },
   "1952": { plate: sc("stereo-manual-1952", BESIDE_R), mode: "beside" },
+  "1953": { plate: sc("catalogue-1952-cover", BESIDE_L), mode: "beside" },
   /* The entry is about dealers and franchises; these are the dealers,
      arriving at Sainte-Croix by coach. */
   "1955": { plate: ar("usine-paillard-visite-2", BEHIND_IN), mode: "behind" },
-  "1957": { plate: sc("boy-with-a-whistle", BEHIND), mode: "behind" },
+  /* A tight close-up. It pulls back as it arrives, so the frame opens
+     out from the face to the whole photograph. */
+  "1957": { plate: sc("boy-with-a-whistle", BEHIND_BACK), mode: "behind" },
   /* A new factory, and the only photograph of a visit to the old one. */
   "1959": { plate: ar("usine-paillard-visite-1", BEHIND), mode: "behind" },
 
-  /* Two projectors, and a projector threaded. */
-  "1960": { plate: sc("projector-and-boy", BEHIND), mode: "behind" },
+  /* Two projectors, and a projector threaded. It starts on the faces
+     and tilts down the frame on to the machine, which is what the
+     entry is actually about. */
+  "1960": { plate: sc("projector-and-boy", BEHIND_TILT), mode: "behind" },
   /* The entry records the Reporter ceasing quarterly publication. */
   "1961": { plate: sc("reporter-1972-paillard", BESIDE_L), mode: "beside" },
-  "1962": { plate: sc("crew-on-a-building-site", BEHIND_IN), mode: "behind" },
   /* Already tagged to this year in lib/archival: a K2 in Trafalgar
      Square the year the K2 Automatic appears. Shown whole and not
      cropped, because its licence forbids derivative works and a
      full-screen crop is one. tests/archival.test.ts enforces this. */
   "1964": { plate: ar("k2-trafalgar-square", BESIDE_L), mode: "beside" },
-  "1965": { plate: sc("reporter-1970-square", BESIDE_R), mode: "beside" },
+  /* A cover tiled with thirty small photographs of Bolexes at work,
+     printed in February of this very year. */
+  "1965": { plate: sc("catalogue-1965-in-use", BESIDE_R), mode: "beside" },
   "1966": { plate: sc("students-at-the-window", BEHIND_IN), mode: "behind" },
   /* Likewise tagged: the 150 Super, photographed in 1967. */
   "1967": { plate: ar("bolex-150-super-1967", BEHIND), mode: "behind" },
@@ -437,7 +481,13 @@ export function interludes(): Plate[] {
   return [
     fromScene("reporter-eyes-cover", { kind: "inset", motion: "rise" }),
     fromScene("ebm-on-the-shoulder", { kind: "band", motion: "zoom-in" }),
+    /* The camera on the tripod is an H-16 EL, which did not exist until
+       somewhere between February 1972 and October 1976 — the two price
+       lists that bracket it. It sat on the 1962 entry for a while,
+       which was ten years early; here it is in period. */
+    fromScene("crew-on-a-building-site", { kind: "cover", motion: "pull-back" }),
     fromScene("lake-and-boat", { kind: "cover", motion: "zoom-out" }),
+    fromScene("reporter-1970-square", { kind: "inset", motion: "rise" }),
     fromScene("reporter-1971-frames", { kind: "split", motion: "wipe", side: "left" }),
     fromScene("diver-surfacing", { kind: "cover", motion: "zoom-in" }),
     fromScene("reporter-1971-orange", { kind: "split", motion: "rise", side: "right" }),

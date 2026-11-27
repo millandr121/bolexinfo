@@ -1022,6 +1022,77 @@ html:has(.cinema .entry) {
   }
 }
 
+
+/*
+ * A long pull back, ending on the whole photograph.
+ *
+ * The ordinary zoom-out only ever shows the cover crop: scaling down
+ * to 1 still fills the window, so a tall photograph in a wide frame
+ * stays cut off at the top and bottom however far it settles. This
+ * one fits rather than fills, and starts at nearly twice size, so it
+ * opens from a face that overflows the screen to the frame entire.
+ *
+ * What is left over at the edges is a matte, not a mistake, which is
+ * why the panel takes a ground of its own. Hence `--matte` on the
+ * element below rather than a plain background: the fit leaves black
+ * where the photograph is not, and that only reads as deliberate if
+ * it is dark on every theme.
+ */
+.entry[data-motion="pull-back"],
+.plate[data-motion="pull-back"] { background: #15120f; }
+
+.entry[data-motion="pull-back"] .entry-image,
+.plate[data-motion="pull-back"] .plate-image {
+  object-fit: contain;
+  transform: scale(calc(1.85 - 0.85 * var(--t)));
+  filter: saturate(calc(0.76 + 0.24 * var(--t)));
+}
+
+/* With the photograph fitted there is no bright ground under the
+   words at the foot, so the scrim has less to do and should not
+   darken the matte any further. */
+.entry[data-motion="pull-back"] .entry-scrim,
+.plate[data-motion="pull-back"] .plate-scrim {
+  background: linear-gradient(
+    to top,
+    rgb(0 0 0 / 0.62) 0%,
+    rgb(0 0 0 / 0.3) 22%,
+    transparent 48%
+  );
+}
+
+/*
+ * A tilt down the frame.
+ *
+ * `object-position` rather than a transform, so the crop itself moves
+ * and the picture never leaves the edges of its box. Held a little
+ * over-size so there is frame above and below to travel through. It
+ * arrives low, which is where the thing the entry is about tends to
+ * be: the machine under the faces.
+ */
+.entry[data-motion="tilt-down"] .entry-image,
+.plate[data-motion="tilt-down"] .plate-image {
+  transform: scale(1.12);
+  object-position: 50% calc(14% + var(--t) * 48%);
+  transition: object-position 900ms cubic-bezier(0.33, 0.1, 0.25, 1),
+              filter 420ms linear;
+  filter: saturate(calc(0.82 + 0.18 * var(--t)));
+}
+
+/* A photograph that names its own focus still gets the tilt, around
+   that point rather than around the middle of the frame. */
+.entry[data-motion="tilt-down"] .entry-image[style],
+.plate[data-motion="tilt-down"] .plate-image[style] { object-position: inherit; }
+
+@media (max-width: 640px) {
+  /* A phone's frame is tall enough that the tilt has further to go
+     and less to show; shorten its travel. */
+  .entry[data-motion="tilt-down"] .entry-image,
+  .plate[data-motion="tilt-down"] .plate-image {
+    object-position: 50% calc(18% + var(--t) * 34%);
+  }
+}
+
 /*
  * Motion off, and printing.
  *
