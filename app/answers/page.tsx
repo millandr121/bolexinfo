@@ -44,9 +44,7 @@ export default function AnswersPage() {
           What people worked out
         </h1>
         <p className="mt-4 max-w-2xl leading-relaxed text-[var(--fg-soft)]">
-          Everything else here is about the objects. This is the part that is not written on
-          any of them: what goes wrong, what it costs, what to do about it, and who to
-          believe. Describe the problem in your own words.
+          Describe your problem in your own words.
         </p>
       </Reveal>
 

@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import {
   prepare,
   search,
+  archiveUrl,
   sourceName,
   withoutTitleEcho,
   type AnswerIndex,
@@ -137,6 +138,7 @@ export function AnswersSearch() {
 }
 
 function AnswerCard({ answer }: { answer: Answer }) {
+  const mirror = archiveUrl(answer.url, answer.source);
   return (
     <li className="border border-[var(--line)] bg-[var(--bg-raised)] p-5">
       <a
@@ -159,6 +161,17 @@ function AnswerCard({ answer }: { answer: Answer }) {
         <span className="text-[var(--fg)]">{answer.author}</span>
         {answer.date && <span>{answer.date}</span>}
         <span className="text-[var(--accent)]">{sourceName(answer.source)}</span>
+        {/* The copy that outlives the thread. See archiveUrl. */}
+        {mirror && (
+          <a
+            href={mirror}
+            target="_blank"
+            rel="noreferrer"
+            className="underline underline-offset-4 decoration-[color-mix(in_srgb,currentColor_35%,transparent)] hover:text-[var(--accent)]"
+          >
+            Archived copy
+          </a>
+        )}
       </p>
     </li>
   );

@@ -118,3 +118,31 @@ test("sources are named the way a reader would say them", () => {
   assert.equal(sourceName("cinematography.com/forum78"), "cinematography.com");
   assert.equal(sourceName("reddit.com/r/bolex"), "r/bolex");
 });
+
+/**
+ * The second link, and only where it leads somewhere.
+ *
+ * Every result points at a live page on somebody else's site, and
+ * those go: a third of the Bolex forum's threads are already gone
+ * and the live site is behind a challenge page. A forum result
+ * therefore carries a Wayback link as well, because that corpus was
+ * read through Wayback and a capture is known to exist for all of
+ * it.
+ *
+ * Reddit deliberately gets none. It was read live, its coverage is
+ * patchy — the availability API has no snapshot for the first thread
+ * tried — and a link landing on "page not in the archive" tells the
+ * reader a quotation is unverifiable when it is merely un-mirrored.
+ */
+test("a forum quotation has a copy that outlives the thread", async () => {
+  const { archiveUrl } = await import("../lib/answers");
+  const thread = "https://cinematography.com/index.php?/forums/topic/72750-x/";
+  assert.equal(
+    archiveUrl(thread, "cinematography.com/forum78"),
+    `https://web.archive.org/web/2/${thread}`,
+  );
+  assert.equal(
+    archiveUrl("https://www.reddit.com/r/bolex/comments/abc/", "reddit.com/r/bolex"),
+    null,
+  );
+});

@@ -263,6 +263,34 @@ export function withoutTitleEcho(text: string, thread: string): string {
   return rest.length > 60 ? rest : text;
 }
 
+/**
+ * The same thread in the Wayback Machine.
+ *
+ * Every link here points at a live page on somebody else's site, and
+ * those go. The Bolex forum is the reason this corpus exists: a third
+ * of its threads are already gone, and the live site is behind a
+ * challenge page that an ordinary reader can get past and an archive
+ * cannot. A quotation whose link has rotted is an unverifiable claim,
+ * which is the one thing this whole page must not produce.
+ *
+ * So a forum result carries a second link. `/web/2/<url>` is the
+ * Wayback Machine's own shorthand for "the closest capture to now",
+ * so it needs no timestamp stored per thread and cannot go stale as
+ * new captures are made.
+ *
+ * Only the forum, though. That corpus was read through Wayback in the
+ * first place, so a capture is known to exist for every thread in it;
+ * Reddit was read live and its coverage is patchy — the availability
+ * API has no snapshot at all for the first Reddit thread tried. An
+ * "archived copy" link that lands on "page not in the archive" is
+ * worse than no link, because it tells the reader the quotation is
+ * unverifiable when it is merely un-mirrored.
+ */
+export function archiveUrl(url: string, source: string): string | null {
+  if (!source.startsWith("cinematography.com")) return null;
+  return `https://web.archive.org/web/2/${url}`;
+}
+
 /** "cinematography.com/forum78" → "cinematography.com" */
 export function sourceName(source: string): string {
   if (source.startsWith("reddit.com/")) return source.slice("reddit.com/".length);
