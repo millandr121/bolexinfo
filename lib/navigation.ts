@@ -46,6 +46,7 @@ export const NAVIGATION: readonly NavEntry[] = [
   {
     label: "Library",
     items: [
+      { href: "/answers", label: "Answers" },
       { href: "/technicians", label: "Repair & service" },
       { href: "/articles", label: "Articles" },
       { href: "/ephemera", label: "Ephemera" },

@@ -4,6 +4,14 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { useRouter } from "next/navigation";
 import Fuse from "fuse.js";
+import {
+  prepare,
+  search as searchAnswers,
+  sourceName,
+  withoutTitleEcho,
+  type AnswerIndex,
+  type Answer,
+} from "@/lib/answers";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 
 export interface SearchDoc {
@@ -63,6 +71,7 @@ function Palette({ onClose }: { onClose: () => void }) {
   const [active, setActive] = useState(0);
   const [mounted, setMounted] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
+  const answers = useAnswers(query);
 
   useEffect(() => setMounted(true), []);
 
@@ -110,13 +119,42 @@ function Palette({ onClose }: { onClose: () => void }) {
         ],
         threshold: 0.38,
         ignoreLocation: true,
+        /* Needed by the question filter below: without it Fuse
+           returns no score at all and every hit looks like a perfect
+           one. */
+        includeScore: true,
       }),
     [docs],
   );
 
+  /*
+   * Fewer pages when the query is a sentence.
+   *
+   * Fuse is tuned for "h16 rex" — a name being typed, where a loose
+   * threshold is what makes it forgiving of a typo. Give it "light
+   * leak in the door" and that same looseness returns Lileks,
+   * Filmshooting and Solid!, which are ephemera titles sharing a few
+   * letters with the words and answering nothing. A question is not a
+   * page title, so past three words the page list is cut to the few
+   * that might really be meant, and the forum passages below get the
+   * room they deserve.
+   */
   const results = useMemo(() => {
-    if (!query.trim()) return docs.slice(0, 8).map((item) => ({ item }));
-    return fuse.search(query, { limit: 12 });
+    const words = query.trim().split(/\s+/).filter(Boolean);
+    if (words.length === 0) return docs.slice(0, 8).map((item) => ({ item }));
+    /*
+     * Sliced here rather than through Fuse's `limit`, which this
+     * version ignores: a limit of twelve returned seventeen hits.
+     *
+     * Three words or more is a question rather than a name being
+     * typed, and a question is what the forum passages below are for.
+     * Fuse is tuned to be forgiving of a typo in "h16 rex", and that
+     * same looseness answers "light leak in the door" with Lileks and
+     * Filmshooting — ephemera titles sharing a few letters and
+     * nothing else. So a question gets a short list of pages and the
+     * quotations get the room.
+     */
+    return fuse.search(query).slice(0, words.length >= 3 ? 4 : 12);
   }, [query, fuse, docs]);
 
   const go = useCallback(
@@ -205,19 +243,31 @@ function Palette({ onClose }: { onClose: () => void }) {
             Esc
           </button>
         </div>
+        <div className="flex-1 sm:flex-none sm:max-h-[60vh] overflow-y-auto overscroll-contain safe-bottom">
         <ul
           id="search-results"
           role="listbox"
           aria-label="Search results"
-          className="flex-1 sm:flex-none sm:max-h-[50vh] overflow-y-auto overscroll-contain py-1 safe-bottom sm:pb-1"
+          className="py-1"
         >
-          {results.length === 0 && (
+          {results.length === 0 && answers.length === 0 && (
             <li className="px-5 py-6 text-sm text-[var(--fg-soft)]">
               Nothing found{query ? ` for “${query}”` : ""}.
             </li>
           )}
           {results.map(({ item }, i) => (
-            <li key={item.href} id={`result-${i}`} role="option" aria-selected={i === active}>
+            /*
+              Keyed by position, not by href.
+              
+              193 of the 806 indexed pages share an href with another
+              — /projectors alone is in there 28 times — and a
+              duplicate key stops React reconciling the list. It left
+              seventeen rows on screen for a result set of none,
+              which looked like the filter below failing and was
+              really the list never being emptied. The builder
+              deduplicates now as well; this is the belt.
+            */
+            <li key={`${item.href}-${i}`} id={`result-${i}`} role="option" aria-selected={i === active}>
               <button
                 type="button"
                 onMouseEnter={() => setActive(i)}
@@ -238,8 +288,110 @@ function Palette({ onClose }: { onClose: () => void }) {
             </li>
           ))}
         </ul>
+
+        {/*
+          What people worked out, under what the archive wrote.
+          Pages first, always: somebody typing "h16 rex 5" wants the
+          model page, not an argument about one from 2011. These are
+          the answer to the other kind of query, the one phrased as a
+          problem, and they are quotations rather than destinations —
+          so they are listed apart rather than mixed into the keyboard
+          run above.
+        */}
+        {answers.length > 0 && (
+          <div className="border-t border-[var(--line)]">
+            <p className="px-5 pt-3.5 font-[family-name:var(--font-mono)] text-[0.6rem] uppercase tracking-[0.18em] text-[var(--fg-soft)]">
+              What people worked out
+            </p>
+            <ul className="py-1">
+              {answers.map((a, i) => (
+                <li key={`${a.url}-${i}`}>
+                  <a
+                    href={a.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="block px-5 py-3 hover:bg-[var(--bg)]"
+                  >
+                    <span className="line-clamp-2 text-sm leading-snug text-[var(--fg-soft)]">
+                      &ldquo;{withoutTitleEcho(a.text, a.thread)}&rdquo;
+                    </span>
+                    <span className="mt-1.5 flex flex-wrap items-baseline gap-x-2.5 font-[family-name:var(--font-mono)] text-[0.6rem] uppercase tracking-[0.12em] text-[var(--fg-soft)]">
+                      <span className="text-[var(--fg)]">{a.author}</span>
+                      {a.date && <span>{a.date}</span>}
+                      <span className="text-[var(--accent)]">{sourceName(a.source)}</span>
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <button
+              type="button"
+              onClick={() => go(`/answers?q=${encodeURIComponent(query)}`)}
+              className="w-full px-5 py-3 text-left font-[family-name:var(--font-mono)] text-[0.65rem] uppercase tracking-[0.14em] text-[var(--accent)] hover:bg-[var(--bg)]"
+            >
+              Search all of it →
+            </button>
+          </div>
+        )}
+        </div>
       </motion.div>
     </motion.div>,
     document.body,
   );
+}
+
+/**
+ * The forum corpus, fetched once and only when it is wanted.
+ *
+ * The index is the better part of a megabyte, which is the right
+ * weight for a page built around it and quite wrong for a palette
+ * somebody opened to jump to /cameras. So nothing is fetched until a
+ * query is long enough to be a question rather than the beginning of
+ * a model name, and once fetched it is kept for the life of the tab.
+ *
+ * The cache lives outside the component on purpose: the palette
+ * unmounts every time it closes, and a reader who opens it twice
+ * should not download the corpus twice.
+ */
+let cached: AnswerIndex | null = null;
+let inFlight: Promise<AnswerIndex | null> | null = null;
+
+function loadAnswers(): Promise<AnswerIndex | null> {
+  if (cached) return Promise.resolve(cached);
+  if (!inFlight) {
+    inFlight = fetch("/answers-index.json")
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data: AnswerIndex | null) => (cached = data))
+      .catch(() => null);
+  }
+  return inFlight;
+}
+
+/** Long enough to be a question. Below this it is a model name being
+ *  typed, and the pages above already answer that. */
+const MIN_QUERY = 5;
+
+function useAnswers(query: string): Answer[] {
+  const [index, setIndex] = useState<AnswerIndex | null>(cached);
+
+  useEffect(() => {
+    if (query.trim().length < MIN_QUERY || index) return;
+    /* A short wait so a fast typist does not start the download on
+       the way past five characters. */
+    const timer = setTimeout(() => {
+      let cancelled = false;
+      void loadAnswers().then((data) => !cancelled && data && setIndex(data));
+      return () => {
+        cancelled = true;
+      };
+    }, 180);
+    return () => clearTimeout(timer);
+  }, [query, index]);
+
+  const prepared = useMemo(() => (index ? prepare(index) : null), [index]);
+
+  return useMemo(() => {
+    if (!prepared || query.trim().length < MIN_QUERY) return [];
+    return searchAnswers(prepared, query, { limit: 3, perThread: 1 });
+  }, [prepared, query]);
 }
