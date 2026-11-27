@@ -451,534 +451,684 @@ html:not([data-featured]) .featured-slot[data-slot="0"] {
   transition: opacity 120ms linear;
 }
 
-.cinema [data-beat]:not(.timeline-panel) {
+.cinema [data-beat]:not(.entry):not(.plate) {
   transform: translateY(calc((1 - var(--lit, 1)) * 6px));
 }
 
 /*
- * The film.
+ * One year, one screen.
  *
- * Each year holds the screen on its own. `100svh` rather than `100vh`
- * because a phone's address bar makes `vh` taller than what you can
- * actually see, which would cut the bottom off every panel until the bar
- * retracts. `justify-center` keeps the content clear of the sticky header
- * without having to know how tall it is.
+ * `100svh` rather than `100vh` because a phone's address bar makes
+ * `vh` taller than what you can actually see, which would cut the
+ * bottom off every panel until the bar retracts.
  */
-.timeline-panel {
+.entry {
+  position: relative;
+  /* Out of the page's reading container, the same way a plate is: the
+     photographs want the window even though the words want a measure.
+     `vw` and not `dvw`, so a desktop scrollbar does not leave a sliver
+     of paper down one side. */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
   min-height: 100svh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   /*
-   * `start`, not `centre`. A panel is exactly one screen tall, so a centre
-   * snap sits half a screen away from where a `#year-1935` anchor jump
-   * lands — the browser would then snap on to the *next* year, and every
-   * deep link pointed at the wrong panel. Aligning to the start puts the
-   * snap position and the anchor position in the same place. The content
-   * is centred inside the panel, so the sticky header still clears it.
+   * `start`, not `centre`. A panel is about one screen tall, so a
+   * centre snap sits half a screen away from where a `#year-1935`
+   * anchor jump lands — the browser would then snap on to the next
+   * year, and every deep link pointed at the wrong panel.
    */
   scroll-snap-align: start;
-  padding: 3rem 0;
+  overflow: clip;
+  isolation: isolate;
 }
 
-.timeline-panel__inner {
-  max-width: 46rem;
+.entry-words {
+  position: relative;
+  width: min(72rem, 100% - 3rem);
+  margin: 0 auto;
+  /* Clear of the playback control, which is fixed to the foot of the
+     window and would otherwise sit on the last line. */
+  padding-bottom: 6rem;
 }
 
-/*
- * Snapping, scoped to this page.
- *
- * `:has()` keeps it off every other page without a second stylesheet or a
- * class on <html>. `proximity` rather than `mandatory` on purpose:
- * mandatory refuses to leave a panel until it has committed to the next,
- * which fights a reader trying to move a little and reads as the page
- * grabbing the scroll. Proximity settles panels for anyone drifting and
- * lets anyone deliberate go where they like.
- */
-html:has(.cinema .timeline-panel) {
-  scroll-snap-type: y proximity;
+.entry-era {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  text-transform: uppercase;
+  letter-spacing: 0.26em;
+  opacity: 0.72;
+  margin-bottom: 1rem;
 }
 
 /*
  * The year, as a title card.
  *
- * Bigger than a heading has any business being, because on a screen that
- * holds one year at a time it is the title of the shot, not a label on a
- * list item. The rule under it draws itself as the panel arrives, which
- * is what makes the date feel struck rather than printed.
+ * Bigger than a heading has any business being, because on a screen
+ * that holds one year at a time it is the title of the shot, not a
+ * label on a list item.
  */
-.timeline-year {
+.entry-year {
   font-family: var(--font-mono);
-  font-size: clamp(3.2rem, 11vw, 6.5rem);
+  font-size: clamp(3rem, 9vw, 5.6rem);
   line-height: 0.95;
   letter-spacing: -0.045em;
   color: var(--accent);
   font-variant-numeric: tabular-nums;
 }
 
-.timeline-year::after {
-  content: "";
-  display: block;
-  height: 2px;
-  margin-top: 1rem;
-  background: var(--accent);
-  transform-origin: left center;
-  transform: scaleX(var(--lit, 1));
-  transition: transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1) 120ms;
-  opacity: 0.55;
-}
-
-.timeline-event {
-  margin-top: 1.6rem;
-  font-size: clamp(1.1rem, 2.2vw, 1.5rem);
-  line-height: 1.55;
-  max-width: 38rem;
+.entry-event {
+  margin-top: 1.25rem;
+  max-width: 34rem;
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  line-height: 1.6;
   text-wrap: pretty;
 }
 
-/* ——————————————————————————————————————————————————————————————
-   The stage: photographs as part of the composition, not attached to it
-   —————————————————————————————————————————————————————————————— */
-
-/*
- * The photographs sit behind the words rather than after them, so a
- * feature can run the full width of the screen without the text column
- * having to make room. They are `aria-hidden`; each one is named and
- * linked in the line beneath the text, so nothing is lost to a reader who
- * cannot see them.
- *
- * No borders. A frame around every photograph turned the page into a
- * contact sheet; the archive's product shots were taken on white, and the
- * plate multiply blends that white into the paper so a camera appears to
- * be sitting on the page itself.
- */
-/*
- * The stage fills the panel, and the panel now fills the page — the
- * timeline's wrapper no longer imposes a reading width, because the film
- * wants the whole frame while only the words want a measure.
- *
- * Offsets are percentages of the panel rather than `vw`. An earlier
- * version mixed the two: the stage was confined to a 944px column while
- * `right: 26vw` was computed against a 1440px window, which put a camera
- * squarely on top of the text. Percentages of the thing you are
- * positioning inside cannot drift apart from it.
- */
-/*
- * The stage is a band no taller than the window, centred on the panel —
- * not the panel itself.
- *
- * `inset: 0` tied it to the panel's box, and a panel with three lines of
- * text is taller than the screen. A photograph centred in *that* is centred
- * somewhere off the top of the window, which is why features arrived with
- * their heads cut off.
- */
-.timeline-stage {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  height: min(100%, 100svh);
-  translate: 0 -50%;
-  pointer-events: none;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.timeline-stage li {
-  position: absolute;
-  mix-blend-mode: multiply;
-}
-
-/*
- * A scan with a ground of its own.
- *
- * Multiply only disappears a background that is white; a camera
- * photographed against near-black multiplies into a solid dark
- * rectangle. These few are shown unblended and feathered instead — the
- * edges dissolve into the paper over a generous margin, so the picture
- * still has no frame and still sits in the composition rather than on
- * top of it.
- */
-.timeline-stage li[data-plate="soft"] {
-  mix-blend-mode: normal;
-  -webkit-mask-image: radial-gradient(ellipse 72% 72% at 50% 50%, #000 48%, transparent 100%);
-  mask-image: radial-gradient(ellipse 72% 72% at 50% 50%, #000 48%, transparent 100%);
-}
-
-.timeline-stage img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  /*
-   * A small lift so a scan that is *nearly* white becomes white.
-   *
-   * Multiply makes a 255 background vanish into the paper exactly, but
-   * a scan that measures 242 lands a few percent darker than the page
-   * and draws a faint rectangle around the camera — a frame by
-   * accident, which is the one thing these are not meant to have.
-   * 1.05 closes that gap and is far too small to touch the subject:
-   * the darkest tones move by a point or two.
-   *
-   * Scans with a real ground of their own are not rescued by this and
-   * are not shown here at all; see data/unblendable-plates.json.
-   */
-  filter: brightness(1.05);
-}
-
-/* Dark mode has no white to multiply away, so the shots are lightened
-   instead of blended — the same trick the .plate rule uses on model pages. */
-:root[data-theme="dark"] .timeline-stage li[data-plate="blend"] {
-  mix-blend-mode: screen;
-  filter: invert(1) hue-rotate(180deg) brightness(1.4);
-}
-
-/* A feathered plate is a real photograph, not a white-ground product
-   shot, so inverting it in dark mode would turn the subject itself
-   inside out. It only loses a little brightness. */
-:root[data-theme="dark"] .timeline-stage li[data-plate="soft"] {
-  filter: brightness(0.9);
-}
-
-/*
- * — feature: one photograph, large, holding its own half of the frame —
- *
- * It used to be pulled 8% off the page edge, which did nothing it was
- * meant to. These are `object-fit: contain`, so a box hanging off the
- * edge is not a photograph bleeding past it — the picture simply
- * letterboxes inside the part still on screen and looks shoved out of
- * frame. A real bleed needs `cover`, which crops the camera. Neither is
- * wanted here: the subject is the whole object, so the frame holds it
- * whole, and the drama comes from scale and movement instead.
- */
-[data-layout="feature"] .timeline-stage li {
-  top: 50%;
-  width: 44%;
-  height: min(64svh, 30rem);
-  translate: 0 -50%;
-}
-[data-layout="feature"][data-side="right"] .timeline-stage li { right: 3%; }
-[data-layout="feature"][data-side="left"] .timeline-stage li { left: 3%; }
-
-/* — side: beside the text, entering from the margin — */
-[data-layout="side"] .timeline-stage li {
-  top: 50%;
-  width: 32%;
-  height: min(44svh, 21rem);
-  translate: 0 -50%;
-}
-[data-layout="side"][data-side="right"] .timeline-stage li { right: 4%; }
-[data-layout="side"][data-side="left"] .timeline-stage li { left: 4%; }
-
-/*
- * — scatter: two or three at different sizes —
- *
- * Deliberately unequal. Three photographs at one size read as a row of
- * thumbnails however they are animated; staggering the size and the
- * baseline makes them a group.
- */
-/*
- * Placed from the left so every one of them clears the reading column,
- * which ends around half the window. Written as `right:` offsets they
- * only stayed clear at one window width.
- */
-/*
- * All three sit in the right-hand half, clear of the reading column at
- * any width, at three different sizes so they read as a group rather
- * than a row of thumbnails.
- */
-[data-layout="scatter"] .timeline-stage li:nth-child(1) {
-  left: 52%;
-  top: 10%;
-  width: 29%;
-  height: min(36svh, 17rem);
-}
-[data-layout="scatter"] .timeline-stage li:nth-child(2) {
-  left: 80%;
-  top: 44%;
-  width: 18%;
-  height: min(25svh, 12rem);
-}
-[data-layout="scatter"] .timeline-stage li:nth-child(3) {
-  left: 55%;
-  top: 62%;
-  width: 15%;
-  height: min(21svh, 10rem);
-}
-
-/*
- * The text column holds its own width against a feature running behind it,
- * and gets a little air from the photograph on the side layouts.
- */
-[data-layout="feature"] .timeline-panel__inner { max-width: min(32rem, 43%); }
-[data-layout="feature"][data-side="left"] .timeline-panel__inner { margin-left: auto; }
-[data-layout="side"] .timeline-panel__inner { max-width: min(34rem, 48%); }
-[data-layout="side"][data-side="left"] .timeline-panel__inner { margin-left: auto; }
-[data-layout="scatter"] .timeline-panel__inner { max-width: min(30rem, 46%); }
-
-/* What the pictures are, named once under the text. */
-.timeline-names {
-  margin-top: 1.5rem;
+.entry-credit {
+  margin-top: 1.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.3rem 0.9rem;
   font-family: var(--font-mono);
-  font-size: 0.64rem;
+  font-size: 0.62rem;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: var(--fg-soft);
+  opacity: 0.8;
 }
-.timeline-names a {
+.entry-credit__when {
+  border: 1px solid currentColor;
+  padding: 0.08rem 0.45rem;
+  letter-spacing: 0.1em;
+  opacity: 0.7;
+}
+.entry-credit a {
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: 0.7rem;
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
 }
-.timeline-names a:hover { color: var(--accent); }
-.timeline-credit { text-transform: none; letter-spacing: normal; opacity: 0.75; }
+.entry-credit a:hover { text-decoration-color: currentColor; }
 
-/*
- * Below `lg` the stage is abandoned: a photograph behind the text is
- * unreadable on a phone, and absolutely positioning three of them into a
- * 390px column is worse. They return to the flow, in a row that scrolls.
+/* —— bare: type on paper ———————————————————————————————— */
+
+.entry[data-mode="bare"] { justify-content: center; }
+.entry[data-mode="bare"] .entry-words { padding-bottom: 0; }
+
+/* —— behind: the photograph fills the screen ————————————— */
+
+.entry[data-mode="behind"] { color: #fff; }
+.entry[data-mode="behind"] .entry-frame { position: absolute; inset: 0; overflow: clip; }
+.entry[data-mode="behind"] .entry-year { color: #fff; }
+.entry[data-mode="behind"] .entry-event { text-shadow: 0 1px 18px rgb(0 0 0 / 0.45); }
+
+.entry-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgb(0 0 0 / 0.84) 0%,
+    rgb(0 0 0 / 0.62) 28%,
+    rgb(0 0 0 / 0.22) 56%,
+    rgb(0 0 0 / 0.05) 82%,
+    transparent 100%
+  );
+}
+
+/* —— beside: the picture whole, the words next to it ——————— */
+
+.entry[data-mode="beside"] {
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  grid-template-columns: 1fr;
+  padding: 5rem 0 2rem;
+  /* Not the flat foreground colour: a near-black ground under a
+     photograph that is itself mostly black loses the picture. */
+  background: color-mix(in srgb, var(--fg) 88%, #6b5f52);
+  color: var(--bg);
+}
+.entry[data-mode="beside"] .entry-frame {
+  justify-self: center;
+  height: 58svh;
+  width: min(34rem, 86vw);
+}
+.entry[data-mode="beside"] .entry-image {
+  object-fit: contain;
+  filter: drop-shadow(0 22px 44px rgb(0 0 0 / 0.5));
+}
+.entry[data-mode="beside"] .entry-words {
+  /* Against the column and not the window: a fixed 34rem overflowed a
+     narrower column and pushed the date off the side of the screen. */
+  width: min(34rem, 100%);
+  margin: 0;
+  justify-self: center;
+  padding-bottom: 0;
+}
+.entry[data-mode="beside"] .entry-year { color: var(--bg); opacity: 0.95; }
+
+@media (min-width: 64rem) {
+  .entry[data-mode="beside"] {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    padding-inline: clamp(2rem, 6vw, 6rem);
+  }
+  .entry[data-mode="beside"] .entry-frame { height: 72svh; width: 100%; justify-self: end; }
+  .entry[data-mode="beside"] .entry-words { justify-self: start; }
+  .entry[data-mode="beside"][data-side="right"] .entry-frame { order: 2; justify-self: start; }
+  .entry[data-mode="beside"][data-side="right"] .entry-words { order: 1; justify-self: end; }
+}
+
+.entry-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 38%;
+}
+
+/* —— how an entry's picture arrives ——————————————————————
+ *
+ * The same four movements the standalone plates use, off the same
+ * `--lit`, so an illustrated year and a held shot move alike.
  */
-@media (max-width: 1023px) {
-  .timeline-stage {
-    position: static;
-    display: flex;
-    gap: 1rem;
-    margin-top: 1.75rem;
-    overflow-x: auto;
-    scrollbar-width: none;
+.entry { --t: var(--lit, 1); }
+.entry .entry-image,
+.entry .entry-frame {
+  transition: transform 520ms cubic-bezier(0.22, 0.61, 0.36, 1),
+              clip-path 520ms cubic-bezier(0.22, 0.61, 0.36, 1),
+              filter 420ms linear;
+}
+.entry[data-motion="zoom-out"] .entry-image {
+  transform: scale(calc(1.12 - 0.12 * var(--t)));
+  filter: saturate(calc(0.78 + 0.22 * var(--t)));
+}
+.entry[data-motion="zoom-in"] .entry-image {
+  transform: scale(calc(1 + 0.09 * var(--t)));
+  filter: saturate(calc(0.8 + 0.2 * var(--t)));
+}
+.entry[data-motion="rise"] .entry-frame {
+  transform: translateY(calc((1 - var(--t)) * 30px));
+}
+.entry[data-motion="wipe"] .entry-frame {
+  clip-path: inset(0 0 calc((1 - var(--t)) * 100%) 0);
+}
+.entry .entry-words {
+  transform: translateY(calc((1 - var(--t)) * 12px));
+  transition: transform 520ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* An illustrated year is a photograph the size of the window; fading
+   it to a fifth as it leaves turns the screen to paper and back. */
+.cinema .entry[data-mode="behind"] { opacity: calc(0.62 + 0.38 * var(--lit, 1)); }
+.cinema .entry[data-mode="beside"] { opacity: calc(0.78 + 0.22 * var(--lit, 1)); }
+
+@media (prefers-reduced-motion: reduce) {
+  .entry .entry-image,
+  .entry .entry-frame,
+  .entry .entry-words {
+    transform: none;
+    clip-path: none;
+    filter: none;
+    transition: none;
   }
-  .timeline-stage::-webkit-scrollbar { display: none; }
-  .timeline-stage li {
-    position: static;
-    flex: 0 0 auto;
-    width: min(58vw, 15rem);
-    height: min(30svh, 11rem);
-    inset: auto;
-    translate: none;
-  }
-  [data-layout] .timeline-panel__inner { max-width: none; margin-left: 0; }
+}
+
+@media (max-width: 640px) {
+  .entry[data-mode="behind"] .entry-image { object-position: 50% 30%; }
+  .entry[data-mode="beside"] .entry-frame { height: 44svh; }
 }
 
 /*
- * The entrance.
+ * Snapping, scoped to this page.
  *
- * Everything keys off the same `--lit` the script already writes per
- * panel, so there is no second observer and the parts cannot disagree
- * about where a panel is. It is a position, not an animation, which also
- * means it simply runs backwards when the reader scrolls up — an
- * @keyframes entrance would have to be reversed by hand.
- *
- * `--in` is how far from settled the panel is, 1 at the edges and 0 at the
- * focal line. Writing the movements against it keeps every rule reading
- * the same way round.
+ * `:has()` keeps it off every other page without a second stylesheet
+ * or a class on <html>. `proximity` rather than `mandatory` on
+ * purpose: mandatory refuses to leave a panel until it has committed
+ * to the next, which fights a reader trying to move a little.
  */
-.cinema .timeline-panel {
-  --in: calc(1 - var(--lit, 1));
+html:has(.cinema .entry) {
+  scroll-snap-type: y proximity;
+}
+
+/* ————————————————————————————————————————————————————————————
+ * Plates: the timeline's photographs, set five ways.
+ *
+ * Every one of these is one `data-beat`, so the cinema layer paints
+ * `--lit` on it from its distance to the focal line, and every piece of
+ * movement below is a function of that one number. Nothing runs on a
+ * timer, nothing plays once, and everything reverses when the reader
+ * scrolls back up.
+ * ———————————————————————————————————————————————————————————— */
+
+.plate {
   position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  overflow: clip;
+  scroll-snap-align: start;
+  isolation: isolate;
 }
 
-/*
- * Transform only. The panel itself already fades, with a floor, in the
- * `.cinema [data-beat]` rule — fading the parts again on raw `--lit`
- * multiplied the two and took the words to genuine zero at the edges of
- * the screen, where they were meant to be dim but legible. One rule owns
- * opacity; these own movement.
- */
-.cinema .timeline-panel [data-part] {
-  transition: transform 560ms cubic-bezier(0.2, 0.8, 0.2, 1);
+.plate-frame { position: relative; overflow: clip; }
+
+.plate-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Faces sit above the middle in most of this photography and a
+     cover crop takes from the bottom, so the frame is biased upward
+     unless a photograph names its own focus. */
+  object-position: 50% 38%;
 }
 
-.cinema .timeline-panel [data-part="year"] {
-  transform: translateY(calc(var(--in) * 20px));
+.plate-words { position: relative; }
+
+/* The title, where it is the only thing in its half of the screen. */
+.plate-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3.1vw, 2.5rem);
+  font-weight: 560;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
 }
-.cinema .timeline-panel [data-part="text"] {
-  transform: translateY(calc(var(--in) * 30px));
-  transition-delay: 70ms;
+.plate-title + .plate-caption { margin-top: 1rem; }
+
+.plate-caption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
 }
-.cinema .timeline-panel [data-part="names"] {
-  transform: translateY(calc(var(--in) * 16px));
-  transition-delay: 150ms;
+.plate-caption__when {
+  border: 1px solid currentColor;
+  padding: 0.1rem 0.5rem;
+  letter-spacing: 0.1em;
+  opacity: 0.6;
+}
+.plate-caption a {
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: 0.72rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+}
+.plate-caption a:hover { text-decoration-color: currentColor; }
+
+/* —— cover: the picture takes the window ———————————————————— */
+
+.plate[data-kind="cover"] { min-height: 100svh; display: flex; align-items: flex-end; }
+.plate[data-kind="cover"] .plate-frame { position: absolute; inset: 0; }
+.plate[data-kind="cover"] .plate-words,
+.plate[data-kind="band"] .plate-words {
+  width: min(72rem, 100% - 3rem);
+  margin: 0 auto;
+  /* Clear of the playback control, which is fixed to the foot of the
+     window and would otherwise sit on the credit. */
+  padding: 0 0 5.75rem;
+  color: #fff;
+}
+.plate[data-kind="cover"] .plate-caption,
+.plate[data-kind="band"] .plate-caption {
+  margin-top: 1.75rem;
+  color: rgb(255 255 255 / 0.74);
+}
+.plate[data-kind="cover"] .plate-caption__title,
+.plate[data-kind="band"] .plate-caption__title { color: #fff; }
+
+.plate-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgb(0 0 0 / 0.78) 0%,
+    rgb(0 0 0 / 0.45) 26%,
+    rgb(0 0 0 / 0.08) 58%,
+    transparent 86%
+  );
 }
 
-/*
- * The photographs. Each layout arrives differently, which is the point:
- * a film that cuts the same way every time is a slideshow.
- */
-.cinema .timeline-stage li {
-  /* A constant, not a fade: the dissolve comes from the panel's own
-     opacity, which has a floor. A feature is held back so the words stay
-     readable over it. */
-  opacity: var(--max-opacity, 1);
-  transition: transform 900ms cubic-bezier(0.22, 0.75, 0.2, 1);
-  transition-delay: calc(var(--n, 0) * 110ms);
-}
+/* —— band: a letterbox strip, shorter than a screen ———————————— */
 
+.plate[data-kind="band"] { min-height: 62svh; display: flex; align-items: flex-end; }
+.plate[data-kind="band"] .plate-frame { position: absolute; inset: 0; }
+
+/* —— portrait: the picture whole, the words beside it ——————————— */
+
+.plate[data-kind="portrait"] {
+  min-height: 100svh;
+  display: grid;
+  align-items: center;
+  gap: clamp(1.5rem, 5vw, 4rem);
+  grid-template-columns: 1fr;
+  padding: 4rem 0 6rem;
+  /* Not `--fg`: a near-black ground under a photograph that is itself
+     mostly black (the moon, for one) loses the picture altogether.
+     A warm charcoal keeps the print floating on something. */
+  background: color-mix(in srgb, var(--fg) 88%, #6b5f52);
+  color: var(--bg);
+}
 /*
- * A feature pushes in — a slow dolly toward the subject, held back behind
- * the words so the text stays legible over it. The scale is larger than
- * anywhere else because it is the whole shot, and a 2% move on something
- * this size would not read at all.
- */
-/*
- * 0.5 was a ghost. It was held back so words could be read over it, but
- * the text column now clears the photograph instead of sitting on it, so
- * the shot can be a photograph rather than a watermark.
+ * An explicit height, not a max-height.
  *
- * These carry no `translateY(-50%)`. The layout rules centre the figure
- * with the `translate` property, and `translate` and `transform` compose
- * rather than override — repeating the centring here applied it twice and
- * lifted every feature a full frame off the top of the screen, which is
- * exactly the decapitated camera that prompted this.
+ * These images are lazy and shown whole, so with `height: auto` the
+ * frame is nought pixels tall until the file arrives and the whole
+ * page jumps when it does. Fixing the frame and fitting the picture
+ * inside it means the layout is the same before and after the load.
  */
-.cinema [data-layout="feature"] .timeline-stage li {
-  --max-opacity: 0.92;
-  transform: translateX(calc(var(--in) * 40px)) scale(calc(1.06 - 0.06 * var(--lit, 1)));
+.plate[data-kind="portrait"] .plate-frame {
+  justify-self: center;
+  height: 76svh;
+  width: min(44rem, 88vw);
+  overflow: visible;
 }
-.cinema [data-layout="feature"][data-side="left"] .timeline-stage li {
-  transform: translateX(calc(var(--in) * -40px)) scale(calc(1.06 - 0.06 * var(--lit, 1)));
+.plate[data-kind="portrait"] .plate-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 24px 48px rgb(0 0 0 / 0.5));
+}
+.plate[data-kind="portrait"] .plate-words {
+  width: min(28rem, 88vw);
+  justify-self: center;
+}
+.plate[data-kind="portrait"] .plate-caption { margin-top: 1.5rem; opacity: 0.78; }
+
+@media (min-width: 64rem) {
+  .plate[data-kind="portrait"] {
+    grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.85fr);
+    padding-inline: clamp(2rem, 7vw, 7rem);
+  }
+  .plate[data-kind="portrait"] .plate-words { justify-self: start; }
 }
 
-/* A side photograph pans in from its own margin. */
-.cinema [data-layout="side"][data-side="right"] .timeline-stage li {
-  transform: translateX(calc(var(--in) * 70px));
+/* —— split: half picture, half paper ——————————————————————— */
+
+.plate[data-kind="split"] {
+  min-height: 86svh;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: stretch;
 }
-.cinema [data-layout="side"][data-side="left"] .timeline-stage li {
-  transform: translateX(calc(var(--in) * -70px));
+.plate[data-kind="split"] .plate-frame { min-height: 46svh; }
+.plate[data-kind="split"] .plate-words {
+  align-self: center;
+  padding: 2.5rem clamp(1.5rem, 6vw, 5rem) 6rem;
+  max-width: 34rem;
+}
+.plate[data-kind="split"] .plate-caption { margin-top: 1.25rem; color: var(--fg-soft); }
+.plate[data-kind="split"] .plate-caption__title { color: var(--fg); }
+
+@media (min-width: 64rem) {
+  .plate[data-kind="split"] { grid-template-columns: 1fr 1fr; }
+  .plate[data-kind="split"] .plate-frame { min-height: 86svh; }
+  .plate[data-kind="split"][data-side="right"] .plate-frame { order: 2; }
+  .plate[data-kind="split"][data-side="right"] .plate-words { order: 1; justify-self: end; }
 }
 
-/* A scattered group settles one photograph at a time, each drifting up. */
-.cinema [data-layout="scatter"] .timeline-stage li {
-  transform: translateY(calc(var(--in) * 46px)) scale(calc(0.94 + 0.06 * var(--lit, 1)));
+/* —— inset: a card on the paper ————————————————————————— */
+
+.plate[data-kind="inset"] {
+  min-height: 86svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  /* Clear of the sticky header, which a centred card would otherwise
+     slide under on the way past. */
+  padding: 7rem 1.5rem 6rem;
+}
+.plate[data-kind="inset"] .plate-frame {
+  height: 56svh;
+  width: min(26rem, 82vw);
+  overflow: visible;
+}
+.plate[data-kind="inset"] .plate-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 18px 40px rgb(0 0 0 / 0.26));
+}
+.plate[data-kind="inset"] .plate-words { max-width: 32rem; text-align: center; }
+.plate[data-kind="inset"] .plate-caption {
+  justify-content: center;
+  color: var(--fg-soft);
+}
+.plate[data-kind="inset"] .plate-caption__title { color: var(--fg); }
+
+/* —— the chapter titles set on a plate ——————————————————— */
+
+.plate[data-kind="cover"] .plate-words h2,
+.plate[data-kind="band"] .plate-words h2 {
+  color: #fff;
+  text-shadow: 0 1px 24px rgb(0 0 0 / 0.5);
+}
+.plate[data-kind="cover"] .plate-words > p:first-child,
+.plate[data-kind="band"] .plate-words > p:first-child { color: #fff; opacity: 0.86; }
+
+/* —— how each one arrives ——————————————————————————————
+ *
+ * `--t` is nought while the plate is away from the focal line and one
+ * when it has arrived, which is the only input any of these take.
+ */
+
+.plate { --t: var(--lit, 1); }
+.plate .plate-image,
+.plate .plate-frame { transition: transform 520ms cubic-bezier(0.22, 0.61, 0.36, 1),
+                                  clip-path 520ms cubic-bezier(0.22, 0.61, 0.36, 1),
+                                  filter 420ms linear; }
+
+/* Settles out of an over-large frame: the classic one, used where the
+   picture should feel like it is coming to rest. */
+.plate[data-motion="zoom-out"] .plate-image {
+  transform: scale(calc(1.12 - 0.12 * var(--t)));
+  filter: saturate(calc(0.78 + 0.22 * var(--t)));
 }
 
-/* On a phone the stage is a plain row, so the motion is a plain one too. */
-@media (max-width: 1023px) {
-  .cinema .timeline-stage li,
-  .cinema [data-layout] .timeline-stage li {
-    --max-opacity: 1;
-    transform: translateY(calc(var(--in) * 26px));
+/* Pushes in as it arrives, which suits a wide photograph with its
+   subject in the middle distance. */
+.plate[data-motion="zoom-in"] .plate-image {
+  transform: scale(calc(1 + 0.09 * var(--t)));
+  filter: saturate(calc(0.8 + 0.2 * var(--t)));
+}
+
+/* Lifts into place, for the ones shown whole rather than cropped,
+   where scaling would mean the picture changing size on the page. */
+.plate[data-motion="rise"] .plate-frame {
+  transform: translateY(calc((1 - var(--t)) * 34px));
+}
+.plate[data-motion="rise"] .plate-image {
+  filter: saturate(calc(0.84 + 0.16 * var(--t)));
+}
+
+/* Opens from one edge. The frame is the thing clipped, not the
+   picture, so the photograph never moves while it is uncovered. */
+.plate[data-motion="wipe"] .plate-frame {
+  clip-path: inset(0 0 calc((1 - var(--t)) * 100%) 0);
+}
+@media (min-width: 64rem) {
+  .plate[data-motion="wipe"][data-side="left"] .plate-frame {
+    clip-path: inset(0 calc((1 - var(--t)) * 100%) 0 0);
+  }
+  .plate[data-motion="wipe"][data-side="right"] .plate-frame {
+    clip-path: inset(0 0 0 calc((1 - var(--t)) * 100%));
+  }
+}
+
+/* The words follow a few pixels behind the picture on every kind, the
+   same distance the other beats move, so a plate joins the rhythm
+   rather than sitting still while the page breathes around it. */
+.plate .plate-words {
+  transform: translateY(calc((1 - var(--t)) * 14px));
+  transition: transform 520ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/*
+ * A plate that fills the window is already a photograph the size of
+ * the screen; dimming it to a fifth as it leaves turns the page to
+ * paper and back, which is too much. The ones set on paper fade with
+ * everything else, because there the paper is the page.
+ */
+.cinema .plate[data-kind="cover"],
+.cinema .plate[data-kind="band"] {
+  opacity: calc(0.62 + 0.38 * var(--lit, 1));
+}
+/* A portrait plate is a print on a dark ground, so the usual fade
+   takes it to nothing twice over. It holds almost all of its light
+   and lets the lift do the arriving. */
+.cinema .plate[data-kind="portrait"] { opacity: calc(0.78 + 0.22 * var(--lit, 1)); }
+
+@media (prefers-reduced-motion: reduce) {
+  .plate .plate-image,
+  .plate .plate-frame,
+  .plate .plate-words {
+    transform: none;
+    clip-path: none;
+    filter: none;
+    transition: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .plate[data-kind="cover"] { min-height: 86svh; }
+  .plate[data-kind="band"] { min-height: 48svh; }
+  .plate[data-kind="cover"] .plate-words,
+  .plate[data-kind="band"] .plate-words { padding-bottom: 5rem; }
+  /* A phone is a tall frame holding a tall scan, so the crop takes
+     from the foot of the picture and the subject rides higher. */
+  .plate[data-kind="cover"] .plate-image,
+  .plate[data-kind="band"] .plate-image { object-position: 50% 30%; }
+  .plate-scrim {
+    background: linear-gradient(
+      to top,
+      rgb(0 0 0 / 0.82) 0%,
+      rgb(0 0 0 / 0.62) 30%,
+      rgb(0 0 0 / 0.18) 62%,
+      transparent 88%
+    );
+  }
+}
+
+
+/*
+ * A long pull back, ending on the whole photograph.
+ *
+ * The ordinary zoom-out only ever shows the cover crop: scaling down
+ * to 1 still fills the window, so a tall photograph in a wide frame
+ * stays cut off at the top and bottom however far it settles. This
+ * one fits rather than fills, and starts at nearly twice size, so it
+ * opens from a face that overflows the screen to the frame entire.
+ *
+ * What is left over at the edges is a matte, not a mistake, which is
+ * why the panel takes a ground of its own. Hence `--matte` on the
+ * element below rather than a plain background: the fit leaves black
+ * where the photograph is not, and that only reads as deliberate if
+ * it is dark on every theme.
+ */
+.entry[data-motion="pull-back"],
+.plate[data-motion="pull-back"] { background: #15120f; }
+
+.entry[data-motion="pull-back"] .entry-image,
+.plate[data-motion="pull-back"] .plate-image {
+  object-fit: contain;
+  transform: scale(calc(1.85 - 0.85 * var(--t)));
+  filter: saturate(calc(0.76 + 0.24 * var(--t)));
+}
+
+/* With the photograph fitted there is no bright ground under the
+   words at the foot, so the scrim has less to do and should not
+   darken the matte any further. */
+.entry[data-motion="pull-back"] .entry-scrim,
+.plate[data-motion="pull-back"] .plate-scrim {
+  background: linear-gradient(
+    to top,
+    rgb(0 0 0 / 0.62) 0%,
+    rgb(0 0 0 / 0.3) 22%,
+    transparent 48%
+  );
+}
+
+/*
+ * A tilt down the frame.
+ *
+ * `object-position` rather than a transform, so the crop itself moves
+ * and the picture never leaves the edges of its box. Held a little
+ * over-size so there is frame above and below to travel through. It
+ * arrives low, which is where the thing the entry is about tends to
+ * be: the machine under the faces.
+ */
+.entry[data-motion="tilt-down"] .entry-image,
+.plate[data-motion="tilt-down"] .plate-image {
+  transform: scale(1.12);
+  object-position: 50% calc(14% + var(--t) * 48%);
+  transition: object-position 900ms cubic-bezier(0.33, 0.1, 0.25, 1),
+              filter 420ms linear;
+  filter: saturate(calc(0.82 + 0.18 * var(--t)));
+}
+
+/* A photograph that names its own focus still gets the tilt, around
+   that point rather than around the middle of the frame. */
+.entry[data-motion="tilt-down"] .entry-image[style],
+.plate[data-motion="tilt-down"] .plate-image[style] { object-position: inherit; }
+
+@media (max-width: 640px) {
+  /* A phone's frame is tall enough that the tilt has further to go
+     and less to show; shorten its travel. */
+  .entry[data-motion="tilt-down"] .entry-image,
+  .plate[data-motion="tilt-down"] .plate-image {
+    object-position: 50% calc(18% + var(--t) * 34%);
   }
 }
 
 /*
- * The slow drift, once a panel is holding the screen.
+ * Motion off, and printing.
  *
- * The entrance above is a position, so it is over the moment a panel
- * settles and the shot then sits perfectly still for the whole dwell —
- * which is why the film read as a slideshow with no motion in it. This is
- * the other half: a continuous, barely-perceptible push and pan across the
- * photograph itself for as long as its year is the one being read.
- *
- * It lives on the `img`, not the `li`, because the li already owns the
- * entrance transform and an animation would simply overwrite it. Two
- * elements, two jobs, no fight.
- *
- * It runs only on the live panel — `data-live` is written by the same
- * paint pass that writes `--lit`, so there is no second observer — which
- * keeps forty simultaneous animations off the compositor.
- */
-@keyframes timeline-drift {
-  from {
-    transform: scale(1.02) translate3d(0, 0, 0);
-  }
-  to {
-    transform: scale(1.1) translate3d(var(--pan-x, -2%), var(--pan-y, -1.5%), 0);
-  }
-}
-
-.cinema .timeline-panel[data-live="on"] .timeline-stage img {
-  animation: timeline-drift calc(13s + var(--n, 0) * 4s) ease-in-out infinite alternate;
-}
-
-/* Alternating directions, so a scattered group does not drift as a block. */
-.timeline-stage li:nth-child(2n) img { --pan-x: 2.5%; --pan-y: 1.5%; }
-.timeline-stage li:nth-child(3n) img { --pan-x: -1%; --pan-y: 2%; }
-
-/*
- * Motion off: no fading, no drift, nothing moving under the reader. The
- * script does not autoplay in this case either, so this is the whole
- * experience and it has to be a complete one.
+ * Everything on this page keys off `--lit`, a position rather than an
+ * animation, so turning the movement off is a matter of pinning the
+ * transforms rather than cancelling keyframes. Without the film there
+ * is no reason for a year to own a whole screen either: flattened,
+ * the page is an ordinary chronology, which is what it has to be for
+ * anyone who asked not to be moved and for anyone printing it.
  */
 @media (prefers-reduced-motion: reduce) {
-  .cinema [data-beat],
-  .cinema [data-beat] [data-figure],
-  .cinema .timeline-stage li,
-  .cinema .timeline-panel [data-part] {
+  .cinema [data-beat] {
     opacity: 1;
     transform: none;
     transition: none;
-  }
-
-  /* The drift is the one thing here that moves on its own, with no
-     scrolling to ask for it, so it is the first thing to go. */
-  .cinema .timeline-panel[data-live="on"] .timeline-stage img,
-  .timeline-year::after {
-    animation: none;
-    transform: none;
-    transition: none;
-  }
-
-  /* A feature photograph is held at half strength so words can be read
-     over it; flattened to full opacity it would bury them, so the stage
-     returns to the flow instead of sitting behind the text. */
-  .timeline-stage {
-    position: static;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 1.5rem;
-  }
-  .timeline-stage li {
-    position: static;
-    width: min(44vw, 14rem);
-    height: 10rem;
-    inset: auto;
-    translate: none;
   }
 
   /* Snapping is motion the reader did not ask for, and on a page of
      full-height panels it is the most noticeable kind. */
-  html:has(.cinema .timeline-panel) {
+  html:has(.cinema .entry) {
     scroll-snap-type: none;
   }
 
-  /* Without the film there is no reason for a year to own a whole screen;
-     flattened, the page is an ordinary chronology again. */
-  .timeline-panel {
-    min-height: 0;
-    padding: 1.75rem 0;
-  }
+  .entry { min-height: 0; padding: 2rem 0; }
+  .entry[data-mode="beside"] .entry-frame { height: auto; max-height: 60svh; }
+  .plate[data-kind="cover"],
+  .plate[data-kind="band"],
+  .plate[data-kind="portrait"],
+  .plate[data-kind="split"],
+  .plate[data-kind="inset"] { min-height: 0; }
 }
 
-/*
- * Printing, and any context without the script, gets the plain chronology.
- */
 @media print {
-  .cinema [data-beat],
-  .cinema [data-beat] [data-figure],
-  .cinema .timeline-stage li,
-  .cinema .timeline-panel [data-part] {
-    opacity: 1;
-    transform: none;
-  }
-  .cinema .timeline-panel[data-live="on"] .timeline-stage img,
-  .timeline-year::after {
-    animation: none;
-    transform: none;
-  }
-
-  .timeline-stage {
-    position: static;
-    display: flex;
-    gap: 0.75rem;
-    margin-top: 1rem;
-  }
-  .timeline-stage li { position: static; width: 9rem; height: 7rem; inset: auto; translate: none; }
-
+  .cinema [data-beat] { opacity: 1; transform: none; }
   /* A screen-tall panel per year would print forty-five near-empty pages. */
-  .timeline-panel {
-    min-height: 0;
-    padding: 0.75rem 0;
-  }
+  .entry { min-height: 0; padding: 0.75rem 0; }
+  .entry-frame { display: none; }
+  .plate { display: none; }
 }
