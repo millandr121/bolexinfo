@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArchiveCompare } from "@/components/ArchiveCompare";
 import { TimelineCinema } from "@/components/TimelineCinema";
+import { TimelinePlate } from "@/components/TimelinePlate";
 import { getTimeline } from "@/lib/timeline";
 import { getTimelineMedia, timelineLayout, timelineSide } from "@/lib/timeline-media";
 import { originalArchiveHref } from "@/lib/archive";
+import { closingPlate, interludes, openingPlate, plateForEra } from "@/lib/scenes";
 
 export const metadata: Metadata = {
   title: "Timeline",
@@ -36,12 +38,23 @@ export default function TimelinePage() {
   const first = timeline.eras[0]?.entries[0]?.year;
   const lastEra = timeline.eras[timeline.eras.length - 1];
   const last = lastEra?.entries[lastEra.entries.length - 1]?.year;
+  const opening = openingPlate();
+  const closing = closingPlate();
+  const interlude = interludes();
 
   return (
     <TimelineCinema>
       {/* Full width: the film wants the page, the words want a measure.
           The reading column is set on .timeline-panel__inner instead. */}
       <div className="pb-8">
+        {/*
+          The picture before the words. Paillard's own 1946 cover, given
+          the screen on its own, so the chronology opens on a face rather
+          than on a heading — and so the first thing a reader meets is the
+          thing this page is actually about.
+        */}
+        <TimelinePlate plate={opening} />
+
         {/* Opening title. Tall enough to hold the screen for a moment before
             the first date arrives, so the piece starts rather than lurches. */}
         <header data-beat className="min-h-[46vh] flex flex-col justify-center py-14">
@@ -102,17 +115,36 @@ export default function TimelinePage() {
             .reduce((n, e) => n + e.entries.length, 0);
           return (
           <section key={era.era} aria-label={era.era}>
-            {/* Era cards break the chronology into chapters. They get a
-                screen of their own while playing, which is what gives the
-                piece its rhythm. */}
-            <div data-beat className="min-h-[26vh] flex flex-col justify-center border-t border-[var(--line)] py-12">
-              <p className="font-[family-name:var(--font-mono)] text-[0.68rem] uppercase tracking-[0.25em] text-[var(--accent)]">
-                {era.entries.length} entries
-              </p>
-              <h2 className="mt-2 font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-[560]">
-                {era.era}
-              </h2>
-            </div>
+            {/*
+              Era cards break the chronology into chapters. Three of the
+              four are set over a photograph of the company in those years
+              and hold the screen; the first is not, because it ends in
+              1927 and the oldest photograph here is from the 1940s. A
+              chapter card with nothing behind it is the honest answer to
+              that, not a failure of the design.
+            */}
+            {(() => {
+              const plate = plateForEra(era.era);
+              const title = (
+                <>
+                  <p className="font-[family-name:var(--font-mono)] text-[0.68rem] uppercase tracking-[0.25em] text-[var(--accent)]">
+                    {era.entries.length} entries
+                  </p>
+                  <h2 className="mt-2 font-[family-name:var(--font-display)] text-3xl sm:text-5xl font-[560]">
+                    {era.era}
+                  </h2>
+                </>
+              );
+              return plate ? (
+                <TimelinePlate plate={plate} height="tall">
+                  {title}
+                </TimelinePlate>
+              ) : (
+                <div data-beat className="min-h-[26vh] flex flex-col justify-center border-t border-[var(--line)] py-12">
+                  {title}
+                </div>
+              );
+            })()}
 
             <ol>
               {era.entries.map((entry, i) => {
@@ -197,6 +229,23 @@ export default function TimelinePage() {
               The timeline page has not yet been recovered from the archive.
             </p>
           </div>
+        )}
+
+        {/*
+          After the last dated entry, three held shots and nothing else on
+          them. The recovered chronology stops in 1970 and the brochure
+          photography is strongest just after it, so these are what the
+          years past the record look like: a lake, a diver, a man with a
+          Super 8 camera on his knee in 1979.
+        */}
+        {total > 0 && interlude.map((plate) => <TimelinePlate key={plate.src} plate={plate} />)}
+
+        {total > 0 && closing && (
+          <TimelinePlate plate={closing} height="tall">
+            <p className="font-[family-name:var(--font-mono)] text-[0.68rem] uppercase tracking-[0.25em] text-[var(--accent)]">
+              Still standing
+            </p>
+          </TimelinePlate>
         )}
 
         {/*

@@ -717,6 +717,156 @@ html:has(.cinema .timeline-panel) {
 [data-layout="side"][data-side="left"] .timeline-panel__inner { margin-left: auto; }
 [data-layout="scatter"] .timeline-panel__inner { max-width: min(30rem, 46%); }
 
+/*
+ * A photograph given the whole screen.
+ *
+ * Full bleed means escaping the page's reading container, which is what
+ * the width/margin pair does: 100vw wide, pulled back by half the
+ * difference. `vw` and not `dvw` deliberately — `dvw` would exclude the
+ * scrollbar and leave a sliver of paper down one side on a desktop.
+ * `overflow: clip` on the section keeps the oversized image from
+ * widening the document.
+ *
+ * The movement is all on `--lit`, which the cinema layer paints on
+ * every beat from its distance to the focal line. The picture sits a
+ * few per cent large and a little flat while it is away and settles as
+ * it arrives. Because it is driven by scroll position rather than by a
+ * timer, it runs backwards when the reader scrolls back, which is what
+ * keeps it from feeling like an animation playing at you.
+ */
+.timeline-plate {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  overflow: clip;
+  display: flex;
+  align-items: flex-end;
+  scroll-snap-align: start;
+  isolation: isolate;
+  background: var(--fg);
+}
+
+.timeline-plate--full { min-height: 100svh; }
+.timeline-plate--tall { min-height: 78svh; }
+
+.timeline-plate__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /*
+   * Faces sit above the middle in most of this photography, and a
+   * cover-fit crop of a tall scan on a wide screen cuts from the
+   * bottom, so bias the frame upward rather than centring it.
+   */
+  object-position: 50% 38%;
+  transform: scale(calc(1.055 - 0.055 * var(--lit, 1)));
+  filter: saturate(calc(0.82 + 0.18 * var(--lit, 1)));
+  transition: transform 420ms cubic-bezier(0.22, 0.61, 0.36, 1), filter 420ms linear;
+  will-change: transform;
+}
+
+/*
+ * The scrim. Dark at the foot where the caption sits, clear at the top
+ * where the picture is, so the words have something to sit on without
+ * the photograph being flattened under a grey wash.
+ */
+.timeline-plate__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgb(0 0 0 / 0.78) 0%,
+    rgb(0 0 0 / 0.45) 26%,
+    rgb(0 0 0 / 0.08) 58%,
+    transparent 86%
+  );
+}
+
+.timeline-plate__body {
+  position: relative;
+  width: min(72rem, 100% - 3rem);
+  margin: 0 auto;
+  /* Clear of the playback control, which is fixed to the foot of the
+     window and would otherwise sit on top of the credit. */
+  padding: 0 0 5.75rem;
+  color: #fff;
+  /* Rises a little as the plate settles, the same few pixels the other
+     beats move, so a plate joins the rhythm instead of sitting still
+     while everything around it breathes. */
+  transform: translateY(calc((1 - var(--lit, 1)) * 14px));
+  transition: transform 420ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* A chapter title over a photograph: white, and the accent still reads. */
+.timeline-plate__body h2 { color: #fff; text-shadow: 0 1px 24px rgb(0 0 0 / 0.5); }
+.timeline-plate__body > p:first-child { color: #fff; opacity: 0.86; }
+
+.timeline-plate__caption {
+  margin-top: 1.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: rgb(255 255 255 / 0.74);
+}
+.timeline-plate__title { color: #fff; }
+.timeline-plate__when {
+  border: 1px solid rgb(255 255 255 / 0.4);
+  padding: 0.1rem 0.5rem;
+  letter-spacing: 0.1em;
+}
+.timeline-plate__caption a {
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: 0.72rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgb(255 255 255 / 0.35);
+}
+.timeline-plate__caption a:hover { color: #fff; text-decoration-color: #fff; }
+
+/*
+ * A plate is already a photograph the size of the window; dimming it to
+ * a fifth as it leaves the focal band turns the screen to paper and
+ * back, which is too much. It keeps most of its light and lets the
+ * scale and the scrim do the work instead.
+ */
+.cinema .timeline-plate { opacity: calc(0.62 + 0.38 * var(--lit, 1)); }
+
+@media (prefers-reduced-motion: reduce) {
+  .timeline-plate__image,
+  .timeline-plate__body {
+    transform: none;
+    transition: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .timeline-plate--full { min-height: 86svh; }
+  .timeline-plate--tall { min-height: 62svh; }
+  .timeline-plate__body { padding-bottom: 5rem; }
+  /* A phone is a tall frame holding a tall scan, so the crop takes from
+     the foot of the picture and the subject rides higher in it. */
+  .timeline-plate__image { object-position: 50% 30%; }
+  /* The caption sits further up the frame here, clear of the playback
+     control, so the dark has to reach further up with it. */
+  .timeline-plate__scrim {
+    background: linear-gradient(
+      to top,
+      rgb(0 0 0 / 0.82) 0%,
+      rgb(0 0 0 / 0.62) 30%,
+      rgb(0 0 0 / 0.18) 62%,
+      transparent 88%
+    );
+  }
+}
+
 /* What the pictures are, named once under the text. */
 .timeline-names {
   margin-top: 1.5rem;
