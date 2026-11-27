@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "predev": "npm run stage:archive",
-    "prebuild": "npm run build:serials && npm run stage:archive && npm run search:index",
+    "prebuild": "npm run build:serials && npm run stage:archive && npm run search:index && npm run answers:index",
     "build": "next build",
     "build:serials": "tsx scripts/build-serials.ts",
     "stage:archive": "tsx scripts/stage-archive.ts",
@@ -20,7 +20,8 @@
     "pipeline:extract": "tsx scripts/extract.ts",
     "pipeline:verify": "tsx scripts/verify.ts",
     "pipeline:report": "tsx scripts/report.ts",
-    "search:index": "tsx scripts/build-search-index.ts"
+    "search:index": "tsx scripts/build-search-index.ts",
+    "answers:index": "tsx scripts/build-answers-index.ts"
   },
   "dependencies": {
     "@fontsource-variable/archivo": "^5.2.5",

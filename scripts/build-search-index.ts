@@ -215,8 +215,26 @@ if (fs.existsSync(articlesDir)) {
   }
 }
 
+/*
+ * One entry per destination.
+ *
+ * 193 of the 806 entries shared an href with another, and /projectors
+ * was in there twenty-eight times: the index is assembled from
+ * several passes over the catalogue and some pages are reachable from
+ * more than one of them. A duplicate costs more than its bytes — the
+ * palette keys its list by href, and a duplicate key stops React
+ * reconciling the list at all, so rows from an old query were still
+ * on screen under the results of a new one.
+ *
+ * The first entry for a destination wins, because the passes run from
+ * most specific to least.
+ */
+const byHref = new Map<string, Doc>();
+for (const doc of docs) if (!byHref.has(doc.href)) byHref.set(doc.href, doc);
+const unique = [...byHref.values()];
+
 fs.mkdirSync(path.join(ROOT, "public"), { recursive: true });
-fs.writeFileSync(path.join(ROOT, "public/search-index.json"), JSON.stringify(docs));
+fs.writeFileSync(path.join(ROOT, "public/search-index.json"), JSON.stringify(unique));
 
 const escapeXml = (s: string) =>
   s.replace(/[<>&'"]/g, (c) => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;", "'": "&apos;", '"': "&quot;" })[c]!);
@@ -240,4 +258,8 @@ ${feedItems
 `;
 fs.writeFileSync(path.join(ROOT, "public/feed.xml"), rss);
 
-console.log(`Search index: ${docs.length} documents. RSS: ${feedItems.length} items.`);
+console.log(
+  `Search index: ${unique.length} documents` +
+    `${docs.length !== unique.length ? ` (${docs.length - unique.length} duplicates dropped)` : ""}` +
+    `. RSS: ${feedItems.length} items.`,
+);
