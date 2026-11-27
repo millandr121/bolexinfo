@@ -3,7 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { test } from "node:test";
 import { ARCHIVAL_PHOTOGRAPHS, archivalFor, creditLine } from "../lib/archival";
-import { getTimelineMedia } from "../lib/timeline-media";
+import { plateForYear, openingPlate, closingPlate, interludes } from "../lib/scenes";
 import { getTimeline } from "../lib/timeline";
 
 /*
@@ -76,25 +76,52 @@ test(
 );
 
 /*
- * The licences on these range from public domain to share-alike, and
- * two of the collections publish photographs we are explicitly not
- * allowed to alter. Blending a picture into the page background is an
- * alteration. None of these may be blended, whatever the plate audit
- * says about their backgrounds.
+ * A photograph whose licence forbids derivative works is never cropped.
+ *
+ * Two of the collections publish under CC BY-NC-ND, and a full-screen
+ * `object-fit: cover` crop is a derivative as surely as a tonal
+ * adjustment is. Those photographs may appear on the timeline, but
+ * only in a composition that shows them whole. This caught the K2 in
+ * Trafalgar Square, which had been placed behind a year's text.
  */
-test("no outside photograph is blended into the page", () => {
-  const media = getTimelineMedia();
-  const byHref = new Map(ARCHIVAL_PHOTOGRAPHS.map((p) => [`/photographs#${p.slug}`, p]));
+test("a no-derivatives photograph is never cropped to fit", () => {
+  const byHref = new Map(
+    ARCHIVAL_PHOTOGRAPHS.map((p) => [`/photographs#${p.slug}`, p]),
+  );
+  const cropping = new Set(["cover", "band"]);
   let found = 0;
-  for (const pictures of media.values()) {
-    for (const picture of pictures) {
-      if (!byHref.has(picture.href)) continue;
-      found++;
-      assert.equal(picture.blend, false, `${picture.href} must not be blended`);
-      assert.ok(picture.credit, `${picture.href} must carry its credit onto the timeline`);
+
+  for (const entry of getTimeline().eras.flatMap((e) => e.entries)) {
+    const placed = plateForYear(entry.year);
+    const source = placed && byHref.get(placed.plate.href);
+    if (!source) continue;
+    found++;
+    assert.ok(
+      placed.plate.when,
+      `${source.slug} must carry its own date onto the timeline`,
+    );
+    if (source.licence.noDerivatives) {
+      assert.equal(
+        placed.mode,
+        "beside",
+        `${source.slug} forbids derivative works, so it cannot be cropped behind ${entry.year}`,
+      );
     }
   }
-  assert.ok(found > 0, "at least one archival photograph should reach the timeline");
+
+  for (const plate of [openingPlate(), closingPlate(), ...interludes()]) {
+    const source = plate && byHref.get(plate.href);
+    if (!source) continue;
+    found++;
+    if (source.licence.noDerivatives) {
+      assert.ok(
+        !cropping.has(plate.kind),
+        `${source.slug} forbids derivative works, so it cannot be shown as a ${plate.kind}`,
+      );
+    }
+  }
+
+  assert.ok(found > 0, "expected some outside photographs on the timeline");
 });
 
 /*
@@ -120,22 +147,28 @@ test("a photograph placed on the timeline uses a year the timeline has", () => {
 });
 
 /*
- * A photograph with no year is page-only, and must stay off the timeline.
- * The Expo 64 prospectus is the case this protects: it is from 1964 and
- * the 1964 entry is a list of camera models that says nothing about the
- * exhibition, so putting it there would be decoration standing in for a
- * connection — the exact habit the matcher rewrite removed.
+ * A photograph placed on a year it does not belong to says so.
+ *
+ * The old rule was that a photograph with no `year` never reached the
+ * chronology at all, which kept a picture from standing in for a
+ * connection it did not have. The placements are made by hand now and
+ * a few are deliberately out of period — the Sainte-Croix works on
+ * the 1875 entry is the same works photographed in 1996 — so the rule
+ * that replaces it is that every one of them carries its real date on
+ * to the slide, where the reader can see it beside the year.
  */
-test("a photograph with no year never reaches the timeline", () => {
-  const pageOnly = ARCHIVAL_PHOTOGRAPHS.filter((p) => p.year === undefined);
-  assert.ok(pageOnly.length > 0, "expected some page-only photographs");
-  const placed = new Set(
-    [...getTimelineMedia().values()].flat().map((picture) => picture.href),
+test("every outside photograph carries its own date onto the timeline", () => {
+  const byHref = new Map(
+    ARCHIVAL_PHOTOGRAPHS.map((p) => [`/photographs#${p.slug}`, p]),
   );
-  for (const p of pageOnly) {
-    assert.ok(
-      !placed.has(`/photographs#${p.slug}`),
-      `${p.slug} has no year but appears on the timeline`,
+  for (const entry of getTimeline().eras.flatMap((e) => e.entries)) {
+    const placed = plateForYear(entry.year);
+    const source = placed && byHref.get(placed.plate.href);
+    if (!source) continue;
+    assert.equal(
+      placed.plate.when,
+      source.when,
+      `${source.slug} should show "${source.when}" on the ${entry.year} slide`,
     );
   }
 });
@@ -162,11 +195,6 @@ test("a timeline placement is backed by the entry's own words", () => {
   }
 });
 
-/*
- * The 1967 entry introduces the 150 Super by name and the photograph is
- * of a 150 Super. That pairing is the reason this photograph is on the
- * timeline at all rather than only on its own page.
- */
 test("the 150 Super photograph lands on the year that announces it", () => {
   const entry = getTimeline()
     .eras.flatMap((era) => era.entries)
@@ -174,10 +202,11 @@ test("the 150 Super photograph lands on the year that announces it", () => {
   assert.ok(entry, "the chronology should still have 1967");
   assert.match(entry.event, /150 Super/i, "1967 should still name the 150 Super");
 
-  const pictures = getTimelineMedia().get("1967") ?? [];
-  assert.ok(
-    pictures.some((p) => p.href === "/photographs#bolex-150-super-1967"),
-    "the 1967 photograph should appear on the 1967 panel",
+  const placed = plateForYear("1967");
+  assert.equal(
+    placed?.plate.href,
+    "/photographs#bolex-150-super-1967",
+    "the 1967 photograph should carry the 1967 entry",
   );
 });
 
