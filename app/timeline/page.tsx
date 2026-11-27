@@ -136,7 +136,7 @@ export default function TimelinePage() {
                 </>
               );
               return plate ? (
-                <TimelinePlate plate={plate} height="tall">
+                <TimelinePlate plate={plate}>
                   {title}
                 </TimelinePlate>
               ) : (
@@ -241,7 +241,7 @@ export default function TimelinePage() {
         {total > 0 && interlude.map((plate) => <TimelinePlate key={plate.src} plate={plate} />)}
 
         {total > 0 && closing && (
-          <TimelinePlate plate={closing} height="tall">
+          <TimelinePlate plate={closing}>
             <p className="font-[family-name:var(--font-mono)] text-[0.68rem] uppercase tracking-[0.25em] text-[var(--accent)]">
               Still standing
             </p>

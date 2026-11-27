@@ -717,62 +717,99 @@ html:has(.cinema .timeline-panel) {
 [data-layout="side"][data-side="left"] .timeline-panel__inner { margin-left: auto; }
 [data-layout="scatter"] .timeline-panel__inner { max-width: min(30rem, 46%); }
 
-/*
- * A photograph given the whole screen.
+/* ————————————————————————————————————————————————————————————
+ * Plates: the timeline's photographs, set five ways.
  *
- * Full bleed means escaping the page's reading container, which is what
- * the width/margin pair does: 100vw wide, pulled back by half the
- * difference. `vw` and not `dvw` deliberately — `dvw` would exclude the
- * scrollbar and leave a sliver of paper down one side on a desktop.
- * `overflow: clip` on the section keeps the oversized image from
- * widening the document.
- *
- * The movement is all on `--lit`, which the cinema layer paints on
- * every beat from its distance to the focal line. The picture sits a
- * few per cent large and a little flat while it is away and settles as
- * it arrives. Because it is driven by scroll position rather than by a
- * timer, it runs backwards when the reader scrolls back, which is what
- * keeps it from feeling like an animation playing at you.
- */
-.timeline-plate {
+ * Every one of these is one `data-beat`, so the cinema layer paints
+ * `--lit` on it from its distance to the focal line, and every piece of
+ * movement below is a function of that one number. Nothing runs on a
+ * timer, nothing plays once, and everything reverses when the reader
+ * scrolls back up.
+ * ———————————————————————————————————————————————————————————— */
+
+.plate {
   position: relative;
   width: 100vw;
   margin-left: calc(50% - 50vw);
   overflow: clip;
-  display: flex;
-  align-items: flex-end;
   scroll-snap-align: start;
   isolation: isolate;
-  background: var(--fg);
 }
 
-.timeline-plate--full { min-height: 100svh; }
-.timeline-plate--tall { min-height: 78svh; }
+.plate-frame { position: relative; overflow: clip; }
 
-.timeline-plate__image {
-  position: absolute;
-  inset: 0;
+.plate-image {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /*
-   * Faces sit above the middle in most of this photography, and a
-   * cover-fit crop of a tall scan on a wide screen cuts from the
-   * bottom, so bias the frame upward rather than centring it.
-   */
+  /* Faces sit above the middle in most of this photography and a
+     cover crop takes from the bottom, so the frame is biased upward
+     unless a photograph names its own focus. */
   object-position: 50% 38%;
-  transform: scale(calc(1.055 - 0.055 * var(--lit, 1)));
-  filter: saturate(calc(0.82 + 0.18 * var(--lit, 1)));
-  transition: transform 420ms cubic-bezier(0.22, 0.61, 0.36, 1), filter 420ms linear;
-  will-change: transform;
 }
 
-/*
- * The scrim. Dark at the foot where the caption sits, clear at the top
- * where the picture is, so the words have something to sit on without
- * the photograph being flattened under a grey wash.
- */
-.timeline-plate__scrim {
+.plate-words { position: relative; }
+
+/* The title, where it is the only thing in its half of the screen. */
+.plate-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3.1vw, 2.5rem);
+  font-weight: 560;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+.plate-title + .plate-caption { margin-top: 1rem; }
+
+.plate-caption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+.plate-caption__when {
+  border: 1px solid currentColor;
+  padding: 0.1rem 0.5rem;
+  letter-spacing: 0.1em;
+  opacity: 0.6;
+}
+.plate-caption a {
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: 0.72rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+}
+.plate-caption a:hover { text-decoration-color: currentColor; }
+
+/* —— cover: the picture takes the window ———————————————————— */
+
+.plate[data-kind="cover"] { min-height: 100svh; display: flex; align-items: flex-end; }
+.plate[data-kind="cover"] .plate-frame { position: absolute; inset: 0; }
+.plate[data-kind="cover"] .plate-words,
+.plate[data-kind="band"] .plate-words {
+  width: min(72rem, 100% - 3rem);
+  margin: 0 auto;
+  /* Clear of the playback control, which is fixed to the foot of the
+     window and would otherwise sit on the credit. */
+  padding: 0 0 5.75rem;
+  color: #fff;
+}
+.plate[data-kind="cover"] .plate-caption,
+.plate[data-kind="band"] .plate-caption {
+  margin-top: 1.75rem;
+  color: rgb(255 255 255 / 0.74);
+}
+.plate[data-kind="cover"] .plate-caption__title,
+.plate[data-kind="band"] .plate-caption__title { color: #fff; }
+
+.plate-scrim {
   position: absolute;
   inset: 0;
   background: linear-gradient(
@@ -784,79 +821,218 @@ html:has(.cinema .timeline-panel) {
   );
 }
 
-.timeline-plate__body {
-  position: relative;
-  width: min(72rem, 100% - 3rem);
-  margin: 0 auto;
-  /* Clear of the playback control, which is fixed to the foot of the
-     window and would otherwise sit on top of the credit. */
-  padding: 0 0 5.75rem;
-  color: #fff;
-  /* Rises a little as the plate settles, the same few pixels the other
-     beats move, so a plate joins the rhythm instead of sitting still
-     while everything around it breathes. */
-  transform: translateY(calc((1 - var(--lit, 1)) * 14px));
-  transition: transform 420ms cubic-bezier(0.22, 0.61, 0.36, 1);
+/* —— band: a letterbox strip, shorter than a screen ———————————— */
+
+.plate[data-kind="band"] { min-height: 62svh; display: flex; align-items: flex-end; }
+.plate[data-kind="band"] .plate-frame { position: absolute; inset: 0; }
+
+/* —— portrait: the picture whole, the words beside it ——————————— */
+
+.plate[data-kind="portrait"] {
+  min-height: 100svh;
+  display: grid;
+  align-items: center;
+  gap: clamp(1.5rem, 5vw, 4rem);
+  grid-template-columns: 1fr;
+  padding: 4rem 0 6rem;
+  /* Not `--fg`: a near-black ground under a photograph that is itself
+     mostly black (the moon, for one) loses the picture altogether.
+     A warm charcoal keeps the print floating on something. */
+  background: color-mix(in srgb, var(--fg) 88%, #6b5f52);
+  color: var(--bg);
+}
+/*
+ * An explicit height, not a max-height.
+ *
+ * These images are lazy and shown whole, so with `height: auto` the
+ * frame is nought pixels tall until the file arrives and the whole
+ * page jumps when it does. Fixing the frame and fitting the picture
+ * inside it means the layout is the same before and after the load.
+ */
+.plate[data-kind="portrait"] .plate-frame {
+  justify-self: center;
+  height: 76svh;
+  width: min(44rem, 88vw);
+  overflow: visible;
+}
+.plate[data-kind="portrait"] .plate-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 24px 48px rgb(0 0 0 / 0.5));
+}
+.plate[data-kind="portrait"] .plate-words {
+  width: min(28rem, 88vw);
+  justify-self: center;
+}
+.plate[data-kind="portrait"] .plate-caption { margin-top: 1.5rem; opacity: 0.78; }
+
+@media (min-width: 64rem) {
+  .plate[data-kind="portrait"] {
+    grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.85fr);
+    padding-inline: clamp(2rem, 7vw, 7rem);
+  }
+  .plate[data-kind="portrait"] .plate-words { justify-self: start; }
 }
 
-/* A chapter title over a photograph: white, and the accent still reads. */
-.timeline-plate__body h2 { color: #fff; text-shadow: 0 1px 24px rgb(0 0 0 / 0.5); }
-.timeline-plate__body > p:first-child { color: #fff; opacity: 0.86; }
+/* —— split: half picture, half paper ——————————————————————— */
 
-.timeline-plate__caption {
-  margin-top: 1.75rem;
+.plate[data-kind="split"] {
+  min-height: 86svh;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: stretch;
+}
+.plate[data-kind="split"] .plate-frame { min-height: 46svh; }
+.plate[data-kind="split"] .plate-words {
+  align-self: center;
+  padding: 2.5rem clamp(1.5rem, 6vw, 5rem) 6rem;
+  max-width: 34rem;
+}
+.plate[data-kind="split"] .plate-caption { margin-top: 1.25rem; color: var(--fg-soft); }
+.plate[data-kind="split"] .plate-caption__title { color: var(--fg); }
+
+@media (min-width: 64rem) {
+  .plate[data-kind="split"] { grid-template-columns: 1fr 1fr; }
+  .plate[data-kind="split"] .plate-frame { min-height: 86svh; }
+  .plate[data-kind="split"][data-side="right"] .plate-frame { order: 2; }
+  .plate[data-kind="split"][data-side="right"] .plate-words { order: 1; justify-self: end; }
+}
+
+/* —— inset: a card on the paper ————————————————————————— */
+
+.plate[data-kind="inset"] {
+  min-height: 86svh;
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.35rem 1rem;
-  font-family: var(--font-mono);
-  font-size: 0.66rem;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: rgb(255 255 255 / 0.74);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  /* Clear of the sticky header, which a centred card would otherwise
+     slide under on the way past. */
+  padding: 7rem 1.5rem 6rem;
 }
-.timeline-plate__title { color: #fff; }
-.timeline-plate__when {
-  border: 1px solid rgb(255 255 255 / 0.4);
-  padding: 0.1rem 0.5rem;
-  letter-spacing: 0.1em;
+.plate[data-kind="inset"] .plate-frame {
+  height: 56svh;
+  width: min(26rem, 82vw);
+  overflow: visible;
 }
-.timeline-plate__caption a {
-  text-transform: none;
-  letter-spacing: normal;
-  font-size: 0.72rem;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-color: rgb(255 255 255 / 0.35);
+.plate[data-kind="inset"] .plate-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 18px 40px rgb(0 0 0 / 0.26));
 }
-.timeline-plate__caption a:hover { color: #fff; text-decoration-color: #fff; }
+.plate[data-kind="inset"] .plate-words { max-width: 32rem; text-align: center; }
+.plate[data-kind="inset"] .plate-caption {
+  justify-content: center;
+  color: var(--fg-soft);
+}
+.plate[data-kind="inset"] .plate-caption__title { color: var(--fg); }
+
+/* —— the chapter titles set on a plate ——————————————————— */
+
+.plate[data-kind="cover"] .plate-words h2,
+.plate[data-kind="band"] .plate-words h2 {
+  color: #fff;
+  text-shadow: 0 1px 24px rgb(0 0 0 / 0.5);
+}
+.plate[data-kind="cover"] .plate-words > p:first-child,
+.plate[data-kind="band"] .plate-words > p:first-child { color: #fff; opacity: 0.86; }
+
+/* —— how each one arrives ——————————————————————————————
+ *
+ * `--t` is nought while the plate is away from the focal line and one
+ * when it has arrived, which is the only input any of these take.
+ */
+
+.plate { --t: var(--lit, 1); }
+.plate .plate-image,
+.plate .plate-frame { transition: transform 520ms cubic-bezier(0.22, 0.61, 0.36, 1),
+                                  clip-path 520ms cubic-bezier(0.22, 0.61, 0.36, 1),
+                                  filter 420ms linear; }
+
+/* Settles out of an over-large frame: the classic one, used where the
+   picture should feel like it is coming to rest. */
+.plate[data-motion="zoom-out"] .plate-image {
+  transform: scale(calc(1.12 - 0.12 * var(--t)));
+  filter: saturate(calc(0.78 + 0.22 * var(--t)));
+}
+
+/* Pushes in as it arrives, which suits a wide photograph with its
+   subject in the middle distance. */
+.plate[data-motion="zoom-in"] .plate-image {
+  transform: scale(calc(1 + 0.09 * var(--t)));
+  filter: saturate(calc(0.8 + 0.2 * var(--t)));
+}
+
+/* Lifts into place, for the ones shown whole rather than cropped,
+   where scaling would mean the picture changing size on the page. */
+.plate[data-motion="rise"] .plate-frame {
+  transform: translateY(calc((1 - var(--t)) * 34px));
+}
+.plate[data-motion="rise"] .plate-image {
+  filter: saturate(calc(0.84 + 0.16 * var(--t)));
+}
+
+/* Opens from one edge. The frame is the thing clipped, not the
+   picture, so the photograph never moves while it is uncovered. */
+.plate[data-motion="wipe"] .plate-frame {
+  clip-path: inset(0 0 calc((1 - var(--t)) * 100%) 0);
+}
+@media (min-width: 64rem) {
+  .plate[data-motion="wipe"][data-side="left"] .plate-frame {
+    clip-path: inset(0 calc((1 - var(--t)) * 100%) 0 0);
+  }
+  .plate[data-motion="wipe"][data-side="right"] .plate-frame {
+    clip-path: inset(0 0 0 calc((1 - var(--t)) * 100%));
+  }
+}
+
+/* The words follow a few pixels behind the picture on every kind, the
+   same distance the other beats move, so a plate joins the rhythm
+   rather than sitting still while the page breathes around it. */
+.plate .plate-words {
+  transform: translateY(calc((1 - var(--t)) * 14px));
+  transition: transform 520ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
 
 /*
- * A plate is already a photograph the size of the window; dimming it to
- * a fifth as it leaves the focal band turns the screen to paper and
- * back, which is too much. It keeps most of its light and lets the
- * scale and the scrim do the work instead.
+ * A plate that fills the window is already a photograph the size of
+ * the screen; dimming it to a fifth as it leaves turns the page to
+ * paper and back, which is too much. The ones set on paper fade with
+ * everything else, because there the paper is the page.
  */
-.cinema .timeline-plate { opacity: calc(0.62 + 0.38 * var(--lit, 1)); }
+.cinema .plate[data-kind="cover"],
+.cinema .plate[data-kind="band"] {
+  opacity: calc(0.62 + 0.38 * var(--lit, 1));
+}
+/* A portrait plate is a print on a dark ground, so the usual fade
+   takes it to nothing twice over. It holds almost all of its light
+   and lets the lift do the arriving. */
+.cinema .plate[data-kind="portrait"] { opacity: calc(0.78 + 0.22 * var(--lit, 1)); }
 
 @media (prefers-reduced-motion: reduce) {
-  .timeline-plate__image,
-  .timeline-plate__body {
+  .plate .plate-image,
+  .plate .plate-frame,
+  .plate .plate-words {
     transform: none;
+    clip-path: none;
+    filter: none;
     transition: none;
   }
 }
 
 @media (max-width: 640px) {
-  .timeline-plate--full { min-height: 86svh; }
-  .timeline-plate--tall { min-height: 62svh; }
-  .timeline-plate__body { padding-bottom: 5rem; }
-  /* A phone is a tall frame holding a tall scan, so the crop takes from
-     the foot of the picture and the subject rides higher in it. */
-  .timeline-plate__image { object-position: 50% 30%; }
-  /* The caption sits further up the frame here, clear of the playback
-     control, so the dark has to reach further up with it. */
-  .timeline-plate__scrim {
+  .plate[data-kind="cover"] { min-height: 86svh; }
+  .plate[data-kind="band"] { min-height: 48svh; }
+  .plate[data-kind="cover"] .plate-words,
+  .plate[data-kind="band"] .plate-words { padding-bottom: 5rem; }
+  /* A phone is a tall frame holding a tall scan, so the crop takes
+     from the foot of the picture and the subject rides higher. */
+  .plate[data-kind="cover"] .plate-image,
+  .plate[data-kind="band"] .plate-image { object-position: 50% 30%; }
+  .plate-scrim {
     background: linear-gradient(
       to top,
       rgb(0 0 0 / 0.82) 0%,

@@ -48,6 +48,15 @@ export interface Scene {
   doc: string;
   /** Which chapter of the chronology it may carry, if any. */
   era?: string;
+  /**
+   * Where the subject sits in the frame, as an `object-position`.
+   *
+   * Only read by the compositions that crop. The default centres
+   * horizontally and sits a little above the middle, which suits most
+   * of this photography; a picture whose subject is off to one side
+   * says so here rather than being cropped through the face.
+   */
+  focus?: string;
 }
 
 const base = "/sourced/scenes";
@@ -114,6 +123,30 @@ export const SCENES: Scene[] = [
     document: "Bolex 583 and 563 XL Sound Macro-Zoom brochure",
     doc: "02232",
   },
+  {
+    src: `${base}/apollo-11.webp`,
+    alt: "An astronaut in a white suit standing on the moon, his long shadow across the dust, the lander reflected in his visor",
+    title: "Apollo 11, and the lenses that went with it",
+    when: "July 1969",
+    document:
+      "NASA, reproduced in the Bolex Reporter, Vol 19 No 2, 1969-70, which reports that Kern-Switar lenses were made at Sainte-Croix to NASA's order",
+    doc: "03040",
+  },
+  {
+    src: `${base}/reporter-eyes-cover.webp`,
+    alt: "A black magazine cover with two stylised eyes, one iris red and one a mass of green, under the words BOLEX REPORTER and above the line one inch to infinity",
+    title: "One inch to infinity",
+    when: "1968-69",
+    document: "Bolex Reporter, Vol 18 No 2, Paillard Incorporated",
+    doc: "02689",
+  },
+  {
+    src: `${base}/students-at-the-window.webp`,
+    alt: "Three students silhouetted against a tall bright window, one with an arm raised, one reaching along the glass",
+    title: "A film workshop, against the window",
+    document: "Bolex Reporter, Vol 20 No 2, Paillard Incorporated",
+    doc: "02810",
+  },
 ];
 
 /**
@@ -127,6 +160,40 @@ export const SCENES: Scene[] = [
  * not have to care which it is holding, and both carry a credit, because
  * the credit is the whole basis on which either may be shown.
  */
+/**
+ * How a photograph is set on the page.
+ *
+ * One shape used eleven times is a slideshow, and a slideshow is what
+ * the first version of this was: every picture the full width of the
+ * window, the same height, moving the same way. These are five
+ * different ideas about what a photograph can do to a page, and the
+ * deck below uses each of them.
+ *
+ *  `cover`    the whole window, cropped to fill, the picture behind
+ *             everything. For the two or three that can carry a screen
+ *             on their own.
+ *  `band`     a letterbox strip across the page. Shorter than a
+ *             screen, so it reads as a beat rather than a stop.
+ *  `portrait` the picture whole and uncropped on a dark ground, the
+ *             words in the space beside it. The answer for a tall scan,
+ *             which a cover crop ruins.
+ *  `split`    half picture, half paper, the words set in the paper
+ *             half. Alternates which side the picture takes.
+ *  `inset`    a framed card on the paper, smaller than the column is
+ *             wide, with its caption under it. The quiet one.
+ */
+export type PlateKind = "cover" | "band" | "portrait" | "split" | "inset";
+
+/**
+ * How it arrives.
+ *
+ * All four are driven by `--lit`, the figure the cinema layer already
+ * paints on every beat from its distance to the focal line, so they
+ * run off the reader's own scrolling and reverse when they scroll
+ * back. None of them is a timer and none of them plays twice.
+ */
+export type PlateMotion = "zoom-out" | "zoom-in" | "rise" | "wipe";
+
 export interface Plate {
   src: string;
   alt: string;
@@ -136,6 +203,11 @@ export interface Plate {
   credit: string;
   /** Where the original can be seen. */
   href: string;
+  kind: PlateKind;
+  motion: PlateMotion;
+  focus?: string;
+  /** Which side the picture takes, for `split`. */
+  side?: "left" | "right";
 }
 
 /*
@@ -150,18 +222,23 @@ function scene(file: string): Scene {
   return found;
 }
 
-function fromScene(scene: Scene): Plate {
+type Setting = Pick<Plate, "kind" | "motion" | "side">;
+
+function fromScene(file: string, setting: Setting): Plate {
+  const s = scene(file);
   return {
-    src: scene.src,
-    alt: scene.alt,
-    title: scene.title,
-    when: scene.when,
-    credit: scene.document,
-    href: `https://www.pacificrimcamera.com/rl/${scene.doc}/${scene.doc}.pdf`,
+    src: s.src,
+    alt: s.alt,
+    title: s.title,
+    when: s.when,
+    credit: s.document,
+    href: `https://www.pacificrimcamera.com/rl/${s.doc}/${s.doc}.pdf`,
+    focus: s.focus,
+    ...setting,
   };
 }
 
-function fromArchival(slug: string): Plate | undefined {
+function fromArchival(slug: string, setting: Setting): Plate | undefined {
   const p = ARCHIVAL_PHOTOGRAPHS.find((a) => a.slug === slug);
   if (!p) return undefined;
   return {
@@ -171,6 +248,7 @@ function fromArchival(slug: string): Plate | undefined {
     when: p.when,
     credit: creditLine(p),
     href: `/photographs#${p.slug}`,
+    ...setting,
   };
 }
 
@@ -184,13 +262,21 @@ function fromArchival(slug: string): Plate | undefined {
  * photograph in this archive is from the 1940s.
  */
 const ERA_PLATE: Record<string, () => Plate | undefined> = {
-  "1928 - 1949": () => fromScene(scene("b8-portrait-1946")),
-  "1950s": () => fromArchival("usine-paillard-visite-2"),
-  "1960s": () => fromScene(scene("projector-and-boy")),
+  /* A tall studio portrait, shown whole rather than cropped through
+     the face, with the chapter title in the space beside it. */
+  "1928 - 1949": () =>
+    fromScene("b8-portrait-1946", { kind: "portrait", motion: "rise" }),
+  /* A wide group photograph that wants the width and not the height. */
+  "1950s": () =>
+    fromArchival("usine-paillard-visite-2", { kind: "cover", motion: "zoom-in" }),
+  /* The one that works as a cover: faces at the edges, the projector
+     dead centre, and it holds a title without fighting it. */
+  "1960s": () =>
+    fromScene("projector-and-boy", { kind: "cover", motion: "zoom-out" }),
 };
 
 export function openingPlate(): Plate {
-  return fromScene(scene("catalogue-1946-cover"));
+  return fromScene("catalogue-1946-cover", { kind: "cover", motion: "zoom-out" });
 }
 
 export function plateForEra(era: string): Plate | undefined {
@@ -198,7 +284,7 @@ export function plateForEra(era: string): Plate | undefined {
 }
 
 export function closingPlate(): Plate | undefined {
-  return fromArchival("sainte-croix-works-1996");
+  return fromArchival("sainte-croix-works-1996", { kind: "band", motion: "zoom-in" });
 }
 
 /**
@@ -214,10 +300,18 @@ export function closingPlate(): Plate | undefined {
  */
 export function interludes(): Plate[] {
   return [
-    "lake-and-boat",
-    "crew-on-a-building-site",
-    "ebm-on-the-shoulder",
-    "diver-surfacing",
-    "563xl-on-the-knee",
-  ].map((f) => fromScene(scene(f)));
+    /* A graphic cover, not a photograph, so it is shown whole and
+       small: a magazine on a table rather than a wall. */
+    fromScene("reporter-eyes-cover", { kind: "inset", motion: "rise" }),
+    fromScene("crew-on-a-building-site", { kind: "split", motion: "wipe", side: "left" }),
+    fromScene("ebm-on-the-shoulder", { kind: "band", motion: "zoom-in" }),
+    fromScene("students-at-the-window", { kind: "split", motion: "rise", side: "right" }),
+    fromScene("lake-and-boat", { kind: "cover", motion: "zoom-out" }),
+    fromScene("diver-surfacing", { kind: "cover", motion: "zoom-in" }),
+    /* Shown whole: it is a NASA frame reproduced in a magazine, and
+       cropping somebody else's photograph of the moon to fit a web
+       page is not a liberty this archive needs to take. */
+    fromScene("apollo-11", { kind: "portrait", motion: "zoom-out" }),
+    fromScene("563xl-on-the-knee", { kind: "split", motion: "wipe", side: "left" }),
+  ];
 }
